@@ -1,0 +1,20 @@
+# -*- mode: gitignore; -*-
+
+## Emacs
+*~
+\#*\#
+.\#*
+# projectiles files
+.projectile
+
+
+## Common Lisp
+*.FASL
+*.fasl
+*.lisp-temp
+
+
+## OSX
+*.DS_Store
+.AppleDouble
+.LSOverride

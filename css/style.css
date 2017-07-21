@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0
+}
+html {
+  font-size: 62.5%
+}
+body {
+  color: #3a4145
+}
+a {
+  text-decoration: none
+}
+ul, li {
+  list-style: none
+}
+.side-header {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  margin: 20px auto;
+  padding-bottom: 20px
+}
+.side-header .logo {
+  position: absolute;
+  right: 50%;
+  width: 40%;
+  height: 100%;
+  max-width: 350px;
+  display: inline-block
+}
+.side-header .logo img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 5px
+}
+.side-header .contact {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: inline-block;
+  width: 40%;
+  max-width: 350px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right
+}
+.side-header .contact li {
+  display: inline;
+  margin-left: 20px
+}
+.side-header .contact li a {
+  color: #bdbdbd
+}
+.content {
+  width: 100%
+}
+.content .post {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  width: 80%;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding-bottom: 3rem;
+  border-bottom: #a7abb3 1px solid;
+  word-break: break-word
+}
+.content .post-meta {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #9eabb3
+}
+.content .post-title a {
+  color: black
+}
+.content .post-title a:hover {
+  color: #3f51b5
+}
+.content .post-excerpt p {
+  margin: 1.6rem 0;
+  font-size: 1.5rem;
+  line-height: 1.5em
+}
+.content .pagination {
+  position: relative;
+  width: 80%;
+  height: 41px;
+  max-width: 700px;
+  margin: 4rem auto;
+  font-size: 1.5rem;
+  color: #93abb3;
+  text-align: center
+}
+.content .pagination .page-number {
+  position: relative;
+  top: 8px;
+  display: inline-block;
+  padding: 5px
+}
+.content .pagination .older-posts {
+  position: absolute;
+  right: 0;
+  padding: 8px 15px;
+  display: inline-block;
+  border: #ebf2f6 2px solid;
+  border-radius: 30px;
+  color: #9eabb3
+}
+.content .pagination .older-posts:hover {
+  color: black;
+  border-color: black
+}
+.side-footer {
+  margin: 4rem 0 0 0;
+  padding: 3rem 0;
+  text-align: center;
+  color: #bbc7cc;
+  background-color: #f9f9f9;
+  border-top: #ebf2f6 1px solid;
+  font-size: 1.6rem;
+  line-height: 1.6em
+}
+.side-footer .twitter, .email {
+  padding: auto 10px;
+  display: block
+}
