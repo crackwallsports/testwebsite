@@ -124,7 +124,10 @@ ul, li {
   font-size: 1.6rem;
   line-height: 1.6em
 }
-.side-footer .twitter, .email {
-  padding: auto 10px;
+.side-footer .twitter, .email, .github {
+  color: black;
   display: block
+}
+.side-footer a:hover {
+  font-size: 2rem
 }

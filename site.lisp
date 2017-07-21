@@ -64,6 +64,8 @@
     (footer (:class "side-footer")
             (a (:class "twitter" :href "https://twitter.com/iamnotXt3")
                (i (:class "fa fa-twitter" :aria-hidden "true") "@iamnotXt3"))
+            (a (:class "github" :href "https://github.com/crackwallsports")
+               (i (:class "fa fa-github" :aria-hidden "true") "crackwallsports"))
             (span (:class "email")
                   (i (:class "fa fa-envelope" :aria-hidden "true")
                      "crackwallsports@gmail.com"))
@@ -124,6 +126,9 @@
                             :color "#bbc7cc" :background-color "#f9f9f9"
                             :border-top "#ebf2f6 1px solid"
                             :font-size "1.6rem" :line-height "1.6em")
-                   (".twitter, .email" (:padding "auto 10px" :display "block")))))
+                   (".twitter, .email, .github" (:color "black"
+                                                 :display "block"
+                                                 ))
+                   ("a:hover" (:font-size "2rem")))))
 
 
