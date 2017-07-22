@@ -79,9 +79,9 @@
 (->file
  #P"./css/style.css" 
  #'->css
- `((* (;; :border "1px dashed red"
+ `((* ( ;; :border "1px dashed red"
        :box-sizing "border-box"
-                   :padding 0 :margin 0))
+       :padding 0 :margin 0))
    (html (:font-size "62.5%"))
    (body (:color "#3a4145" ))
    (a (:text-decoration "none"))
