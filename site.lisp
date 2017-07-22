@@ -108,7 +108,7 @@
                                    (a (:color ,(css-color :grey))))))
    ;; Main-Content
    (".content" (:width "100%")
-               (".post" (:font-size "1.6rem" :line-height "1.6rem"
+               (".post" (:font-size "1.6rem" 
                                     :width "80%" :max-width "700px" :margin "3rem auto" :padding-bottom "3rem"
                                     :border-bottom "#a7abb3 1px solid"
                                     :word-break "break-word"))
