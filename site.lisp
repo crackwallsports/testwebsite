@@ -60,15 +60,17 @@
           ;; pageination
           (nav (:class "pagination" :role "navigation")
                (span (:class "page-number") "Page 1 of 9")
-               (a (:class "older-posts" :href "/page/2/") "时光倒流->")))
+               (a (:class "older-posts" :href "/page/2/")
+                  
+                  (i (:class "fa fa-arrow-down" :aria-hidden "true")))))
     (footer (:class "side-footer")
             (a (:class "twitter" :href "https://twitter.com/iamnotXt3")
-               (i (:class "fa fa-twitter" :aria-hidden "true") "@iamnotXt3"))
+               (i (:class "fa fa-twitter" :aria-hidden "true") "@iamnotXt3")) (br)
             (a (:class "github" :href "https://github.com/crackwallsports")
-               (i (:class "fa fa-github" :aria-hidden "true") "crackwallsports"))
+               (i (:class "fa fa-github" :aria-hidden "true") "crackwallsports")) (br)
             (span (:class "email")
                   (i (:class "fa fa-envelope" :aria-hidden "true")
-                     "crackwallsports@gmail.com"))
+                     "crackwallsports@gmail.com")) (br)
             (p (:class "copyright") "All content copyright © 2017 Xt3")))))
 
 
@@ -79,19 +81,25 @@
  #'->css
  `((* (;; :border "1px dashed red"
        :box-sizing "border-box"
-       :padding 0 :margin 0))
+                   :padding 0 :margin 0))
    (html (:font-size "62.5%"))
-   (body (:color "#3a4145"))
+   (body (:color "#3a4145" ))
    (a (:text-decoration "none"))
    ("ul, li" (:list-style "none"))
    ;; Header
-   (".side-header" (:position "relative" :width "100%" :height "130px"
-                              :margin "20px auto" :padding-bottom "20px")
-                   (".logo" (:position "absolute" :right "50%"
-                                       :width "40%" :height "100%" :max-width "350px"
+   (".side-header" (:position "relative"
+                              :width "100%" :height "130px"
+                              :margin "20px auto" :padding-left "80px"
+                              )
+                   (".logo" (:position "absolute" :right "50%" 
+                                       :width "40%" :height "100%"
+                                       :max-width "350px"
                                        :display "inline-block")
-                            (img (:position "relative" :width "120px" :height "120px"
-                                            :position "absolute" :bottom "5px"))) ;; :border-radius "50% 50%" :box-shadow "2px 3px 3px black"
+                            (img (:position "absolute"
+                                            :width "120px" :height "120px"
+                                            :vertical-align "middle"
+                                            :bottom "3px"
+                                            ))) ;; :border-radius "50% 50%" :box-shadow "2px 3px 3px black"
                    (".contact" (:position "absolute" :left "50%" :bottom 0
                                           :display "inline-block"
                                           :width "40%" :max-width "350px"
@@ -111,24 +119,24 @@
                (".post-title a" (:color "black"))
                (".post-title a:hover" (:color ,(css-color :indigo)))
                (".post-excerpt p" (:margin "1.6rem 0" :font-size "1.5rem" :line-height "1.5em"))
-               (".pagination" (:position "relative" :width "80%" :height "41px" :max-width "700px" :margin "4rem auto"
-                                         :font-size "1.5rem" :color "#93abb3"
-                                         :text-align "center")
-                              (".page-number" (:position "relative"
-                                                         :top "8px" :display "inline-block" :padding "5px"))
-                              (".older-posts" (:position "absolute" :right 0 :padding "8px 15px"
-                                                         :display "inline-block"
-                                                         :border "#ebf2f6 2px solid" :border-radius "30px"
-                                                         :color "#9eabb3"))
+               (".pagination" (:width "80%" :max-width "700px" :margin "4rem auto"
+                                      :font-size "1.5rem" :color "#93abb3"
+                                      :text-align "center")
+                              (".page-number" (:display "block"))
+                              (".older-posts" (:padding "5px 15px" :margin "10px auto"
+                                                        :display "inline-block"
+                                                        :border "#ebf2f6 2px solid" :border-radius "6px"
+                                                        :color "#9eabb3")
+                                              (i (:font-size "2em")))
                               (".older-posts:hover" (:color "black" :border-color "black"))))
+   ;; Footer
    (".side-footer" (:margin "4rem 0 0 0" :padding "3rem 0"
                             :text-align "center"
                             :color "#bbc7cc" :background-color "#f9f9f9"
                             :border-top "#ebf2f6 1px solid"
                             :font-size "1.6rem" :line-height "1.6em")
                    (".twitter, .email, .github" (:color "black"
-                                                 :display "block"
-                                                 ))
+                                                        :display "inline-block"))
                    ("a:hover" (:font-size "2rem")))))
 
 
