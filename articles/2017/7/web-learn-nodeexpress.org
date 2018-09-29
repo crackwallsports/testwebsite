@@ -1,11 +1,16 @@
 #+TITLE: Web 开发学习笔记 - SbyS: Node.js Express MongoDB
 #+AUTHOR: Xt3
-#+OPTIONS: html-postamble:nil
-#+INFOJS_OPT: view:t toc:t ltoc:nil mouse:underline buttons:0
-#+HTML_HEAD:<link href="../css/org.css" rel="stylesheet"></link>
+#+OPTIONS: html-postamble:nil html-style:nil tex:nil
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD:<link href="../../../css/org.css" rel="stylesheet"></link>
+#+INFOJS_OPT: path:../../../js/org-info.js view:t toc:t ltoc:nil mouse:underline buttons:0
+
 
 #+BEGIN_EXPORT html
-<a href="../index.html" style="position:absolute; top:3px; left:3px;"><img src="../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"></img></a>
+<a href="../../../index.html" style="position:fixed; left:10px;">
+<img src="../../../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"/>
+返回
+</a>
 #+END_EXPORT
 
 * Note
@@ -32,10 +37,10 @@
       "serve-favicon": "~2.3.2"
   }  
     #+END_EXAMPLE
-  - Install: $nodetest1>npm install  (-> =node_modules/=)
+  - Install: $nodetest1> npm install  (-> =node_modules/=)
     - still have to install the actual module inside this one particular project
-- Database: $nodetest1>mkdir data
-- Test web server: $nodetest1>npm start  (-> http://localhost:3000)
+- Database: $nodetest1> mkdir data
+- Test web server: $nodetest1> npm start  (-> http://localhost:3000)
 
 ** Hello World!
 - app.js
