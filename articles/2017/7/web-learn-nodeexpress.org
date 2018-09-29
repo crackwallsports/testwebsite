@@ -1,0 +1,246 @@
+#+TITLE: Web 开发学习笔记 - SbyS: Node.js Express MongoDB
+#+AUTHOR: Xt3
+#+OPTIONS: html-postamble:nil
+#+INFOJS_OPT: view:t toc:t ltoc:nil mouse:underline buttons:0
+#+HTML_HEAD:<link href="../css/org.css" rel="stylesheet"></link>
+
+#+BEGIN_EXPORT html
+<a href="../index.html" style="position:absolute; top:3px; left:3px;"><img src="../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"></img></a>
+#+END_EXPORT
+
+* Note
+学习笔记 :
+[[https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb%0A%0A][The Dead-Simple Step-By-Step Guide for Front-End Developers to Getting Up and Running With Node.JS, Express, and MongoDB]]
+
+
+** Install
+- Node.js
+- Express Generator: npm install -g express-generator
+- Express Project: express nodetest1
+- Dependencies
+  - Edit: package.json
+    #+BEGIN_EXAMPLE json
+  "dependencies": {
+      "body-parser": "~1.16.0",
+      "cookie-parser": "~1.4.3",
+      "debug": "~2.6.0",
+      "express": "~4.14.1",
+      "jade": "~1.11.0",
+      "mongodb": "^2.2.25",
+      "monk": "^4.0.0",
+      "morgan": "~1.7.0",
+      "serve-favicon": "~2.3.2"
+  }  
+    #+END_EXAMPLE
+  - Install: $nodetest1>npm install  (-> =node_modules/=)
+    - still have to install the actual module inside this one particular project
+- Database: $nodetest1>mkdir data
+- Test web server: $nodetest1>npm start  (-> http://localhost:3000)
+
+** Hello World!
+- app.js
+  #+BEGIN_SRC js
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+var app = express();
+// view engine setup
+app.set('views', path.join(dirname, 'views'));
+app.set('view engine', 'jade');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', routes);
+app.use('/users', users);  
+
+
+/// catch 404 and forwarding to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+/// error handlers
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
+});
+
+module.exports = app;  
+  #+END_SRC
+- >> routes\index.js
+  #+BEGIN_SRC js
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res) {
+    res.render('index', { title: 'Express' });
+});
+
+/* GET Hello World page. */
+router.get('/helloworld', function(req, res) {
+    res.render('helloworld', { title: 'Hello, World!' });
+});
+
+module.exports = router;  
+  #+END_SRC
+- + \views\helloworld.jade  (-> http://localhost:3000/helloworld)
+  #+BEGIN_SRC pug
+extends layout
+
+block content
+  h1= title
+  // p Welcome to #{title}
+  p Hello, World! Welcome to #{title}
+  #+END_SRC
+
+** DB
+- Data form
+  #+BEGIN_EXAMPLE json
+{
+    "_id" : 1234,
+    "username" : "cwbuecheler",
+    "email" : "cwbuecheler@nospam.com"
+}  
+  #+END_EXAMPLE
+- MongoDB
+  - Install: http://mongodb.org/
+  - Run:
+    - mongod --dbpath nodetest1\data\
+    - mongo
+      - use nodetest1
+      - db.usercollection.insert({ "username" : "testuser1", "email" : "testuser1@testdomain.com" })
+      - db.usercollection.find().pretty()
+      - ---
+      - newstuff = [{ "username" : "testuser2", "email" : "testuser2@testdomain.com" }, { "username" : "testuser3", "email" : "testuser3@testdomain.com" }]
+      - db.usercollection.insert(newstuff);
+- DB->
+  - >> app.js
+    #+BEGIN_SRC js
+  // after: var bodyParser = require('body-parser');
+  var mongo = require('mongodb');
+  var monk = require('monk');
+  var db = monk('localhost:27017/nodetest1');
+
+  // Make our db accessible to our router
+  app.use(function(req,res,next){
+      req.db = db;
+      next();
+  });
+  // above: app.use('/', routes);
+    #+END_SRC
+  - >> routes\index.js
+    #+BEGIN_SRC js
+  /* GET Userlist page. */
+  router.get('/userlist', function(req, res) {
+      var db = req.db;
+      var collection = db.get('usercollection');
+      collection.find({},{},function(e,docs){
+          res.render('userlist', {
+              "userlist" : docs
+          });
+      });
+  });  
+    #+END_SRC
+  - + \view\userlist.jade  (-> http://localhost:3000/userlist)
+    #+BEGIN_SRC pug
+  extends layout
+
+  block content
+    h1.
+      User List
+    ul
+      each user, i in userlist
+        li
+          a(href="mailto:#{user.email}")= user.username  
+    #+END_SRC
+- DB<-
+  - >> routes/index.js 
+    #+BEGIN_SRC js
+  /* GET New User page. */
+  router.get('/newuser', function(req, res) {
+      res.render('newuser', { title: 'Add New User' });
+  });
+  // above: module.exports  
+    #+END_SRC
+  - + views\newuser.jade  (-> http://localhost:3000/newuser)
+    #+BEGIN_SRC pug 
+  extends layout
+
+  block content
+      h1= title
+      form#formAddUser(name="adduser",method="post",action="/adduser")
+          input#inputUserName(type="text", placeholder="username", name="username")
+          input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+          button#btnSubmit(type="submit") submit  
+    #+END_SRC
+  - >> routes\index.js
+    #+BEGIN_SRC js
+  /* POST to Add User Service */
+  router.post('/adduser', function(req, res) {
+
+      // Set our internal DB variable
+      var db = req.db;
+
+      // Get our form values. These rely on the "name" attributes
+      var userName = req.body.username;
+      var userEmail = req.body.useremail;
+
+      // Set our collection
+      var collection = db.get('usercollection');
+
+      // Submit to the DB
+      collection.insert({
+          "username" : userName,
+          "email" : userEmail
+      }, function (err, doc) {
+          if (err) {
+              // If it failed, return error
+              res.send("There was a problem adding the information to the database.");
+          }
+          else {
+              // And forward to success page
+              res.redirect("userlist");
+          }
+      });
+  });
+  // above: moudle.exports  
+    #+END_SRC
+
+* Next
+- [[http://mongoosejs.com/][Mongoose]]
+  - tutorial: https://www.kompulsa.com/introduction-mongoose-storing-data-mongodb/
+

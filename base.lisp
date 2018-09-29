@@ -1,22 +1,69 @@
+(in-package :cl-user)
+(ql:quickload :plump)
+(defpackage xt3.web.base
+  (:use :cl)
+  (:export :concat
+           :join-string-list
+           :case-str
+           :make-keyword
+           :->file
+           :html-template
+           :->html
+           :->css
+           :random-color
+           :css-color
+           :layout-template
+           :doctype))
+(in-package :xt3.web.base)
 
 ;; Help
+(defmacro ppmace (macro)
+  (pprint (macroexpand-1 macro)))
+
 (defun concat (&rest rest)
   (join-string-list rest :join ""))
-
 
 (defun join-string-list (ls &key (join " "))
   "list -(Concat by str)-> strings"
   (let ((str (concatenate 'string "~{~A~^" join "~}")))
     (format nil str ls)))
 
+(defmacro case-str (str &body body)
+  `(cond
+     ,@(loop for pair in body
+          collect
+            (let ((s (car pair))
+                  (e (cadr pair)))
+              (cond
+                ((stringp s)
+                 (list `(string-equal ,str ,s) e))
+                ((listp s)
+                 (list
+                  `(or ,@(loop for i in s
+                            collect `(string-equal ,str ,i)))
+                  e))
+                ((eql s 't)
+                 (list 't e))
+                (t (error "is not a string or list")))))))
+
 (defun make-keyword (name)
   (values (intern (string-upcase name) "KEYWORD")))  
 
-(defun ->file (path f2str obj)
+;; File
+(defun ->file (path str)
   (with-open-file (stream path
                           :direction :output
-                          :if-exists :supersede)
-    (format stream (funcall f2str obj))))
+                          :if-exists :supersede
+                          :external-format :utf-8)
+    (format stream str)))
+
+
+(defmacro html-template (html &optional args)
+  `(let* ,(loop for (key value) on args by #'cddr
+            collect (list (intern (symbol-name key)) value))
+     ,html))
+
+
 
 ;; Format
 (defun attribute-format
@@ -35,11 +82,11 @@
                                 :result " ~A"
                                 :att-val "~(~A~)=\"~A\""
                                 :separator " ")))
-    (case tag
-      ((meta br link)
-       (format nil "~&<~(~A~)~A>~%~A" tag fatt "~A"))
+    (case-str (symbol-name tag)
+      (("meta" "br" "link" "input")
+       (format nil "<~(~A~)~A>~A~%" tag fatt "~A"))
       (t
-       (format nil "~&<~(~A~)~A>~%~A~&</~(~A~)>~%" tag fatt "~A" tag)))))
+       (format nil "<~(~A~)~A>~A</~(~A~)>~%" tag fatt "~A" tag)))))
 
 (defun css-format (sel att)
   (if (null att)
@@ -96,7 +143,6 @@
 
 
 ;; ->Lisp
-(ql:quickload :plump)
 (defun html->lisp (str)
   (let ((*print-case* :downcase))
     (pprint (loop for i across (plump:children (plump:strip (plump:parse str)))
@@ -131,4 +177,6 @@
 
 (defun css-color (color-key)
   (second (assoc color-key *css-palette*)))
+
+  
 

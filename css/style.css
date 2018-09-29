@@ -124,6 +124,6 @@ ul, li {
   color: black;
   display: inline-block
 }
-.side-footer a:hover {
+.side-footer a:hover, span:hover {
   font-size: 2rem
 }
