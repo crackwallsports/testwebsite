@@ -38,8 +38,8 @@
 
 (defun site-header ()
   '(header (:class "side-header")
-    (a (:class "logo" :href "/index.html")
-     (img (:src "./resource/carrot.PNG")))
+    (a (:class "logo" :href "/testwebsite/index.html")
+     (img (:src "/testwebsite/resource/carrot.PNG")))
     (nav (:class "contact" :role "navigation")
      (ul ()
       (li () (a (:href "#") "Twitter"))

@@ -15,8 +15,8 @@
   (layout-template
    nil
    :title "Guo News"
-   :links `((link (:rel "stylesheet" :href "../css/style.css"))
-            (link (:rel "stylesheet" :href "../css/font-awesome.min.css")))
+   :links `((link (:rel "stylesheet" :href "/testwebsite/css/style.css"))
+            (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css")))
    :content
    `(,(site-header)
       (main (:class "content")
