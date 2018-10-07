@@ -38,12 +38,13 @@
 
 (defun site-header ()
   '(header (:class "side-header")
-    (div (:class "logo")
+    (a (:class "logo" :href "/index.html")
      (img (:src "./resource/carrot.PNG")))
     (nav (:class "contact" :role "navigation")
      (ul ()
       (li () (a (:href "#") "Twitter"))
-      (li () (a (:href "#") "Email"))))))
+      (li () (a (:href "#") "Email"))))
+    (hr (:class "divider"))))
 
 (defun site-footer ()
   '(footer (:class "side-footer")
@@ -65,7 +66,6 @@
               (link (:rel "stylesheet" :href "./css/font-awesome.min.css")))
      :content
      `(,(site-header)
-       (hr (:class "divider"))
        (main (:class "content")
              ;; articles
              ,@(let ((posts (with-open-file (stream #P"posts.lisp")
@@ -79,13 +79,7 @@
                                                 (h2 (:class "post-title")
                                                     (a (:href ,ref) ,title)))
                                         (section (:class "post-excerpt")
-                                                 (p () ,excerpt))))))
-             ;; pageination
-             (nav (:class "pagination" :role "navigation")
-                  (span (:class "page-number") "Page 1 of 9")
-                  (a (:class "older-posts" :href "/page/2/")
-                  
-                     (i (:class "fa fa-arrow-down" :aria-hidden "true")))))
+                                                 (p () ,excerpt)))))))
         ,(site-footer)))))
 
 (defun css ()
@@ -114,7 +108,9 @@
                                             :width "40%" :max-width "350px"
                                             :font-size "2rem" :font-weight "bold" :text-align "right")
                                  (li (:display "inline" :margin-left "20px")
-                                     (a (:color ,(css-color :grey))))))
+                                     (a (:color ,(css-color :grey)))))
+                     (".divider" (:position "absolute" :bottom "-10px" :left "0px"
+                                            :width "100%")))
      ;; Main-Content
      (".content" (:width "100%")
                  (".post" (:font-size "1.6rem"
@@ -127,17 +123,7 @@
                                          :color "#9eabb3"))
                  (".post-title a" (:color "black"))
                  (".post-title a:hover" (:color ,(css-color :indigo)))
-                 (".post-excerpt p" (:margin "1.6rem 0" :font-size "1.5rem" :line-height "1.5em"))
-                 (".pagination" (:width "80%" :max-width "700px" :margin "4rem auto"
-                                        :font-size "1.5rem" :color "#93abb3"
-                                        :text-align "center")
-                                (".page-number" (:display "block"))
-                                (".older-posts" (:padding "5px 15px" :margin "10px auto"
-                                                          :display "inline-block"
-                                                          :border "#ebf2f6 2px solid" :border-radius "6px"
-                                                          :color "#9eabb3")
-                                                (i (:font-size "2em")))
-                                (".older-posts:hover" (:color "black" :border-color "black"))))
+                 (".post-excerpt p" (:margin "1.6rem 0" :font-size "1.5rem" :line-height "1.5em")))
      ;; Footer
      (".side-footer" (:margin "4rem 0 0 0" :padding "3rem 0"
                               :text-align "center"

@@ -55,6 +55,12 @@ ul, li {
 .side-header .contact li a {
   color: #bdbdbd
 }
+.side-header .divider {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 100%
+}
 .content {
   width: 100%
 }
@@ -83,32 +89,6 @@ ul, li {
   margin: 1.6rem 0;
   font-size: 1.5rem;
   line-height: 1.5em
-}
-.content .pagination {
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  font-size: 1.5rem;
-  color: #93abb3;
-  text-align: center
-}
-.content .pagination .page-number {
-  display: block
-}
-.content .pagination .older-posts {
-  padding: 5px 15px;
-  margin: 10px auto;
-  display: inline-block;
-  border: #ebf2f6 2px solid;
-  border-radius: 6px;
-  color: #9eabb3
-}
-.content .pagination .older-posts i {
-  font-size: 2em
-}
-.content .pagination .older-posts:hover {
-  color: black;
-  border-color: black
 }
 .side-footer {
   margin: 4rem 0 0 0;

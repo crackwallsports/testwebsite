@@ -1,17 +1,19 @@
 #+TITLE: Web 开发学习笔记 - SbyS: Node.js Express MongoDB
+
 #+AUTHOR: Xt3
 #+OPTIONS: html-postamble:nil html-style:nil tex:nil
 #+HTML_DOCTYPE: html5
 #+HTML_HEAD:<link href="../../../css/org.css" rel="stylesheet"></link>
-#+INFOJS_OPT: path:../../../js/org-info.js view:t toc:t ltoc:nil mouse:underline buttons:0
 
 
 #+BEGIN_EXPORT html
-<a href="../../../index.html" style="position:fixed; left:10px;">
+<a href="../../../index.html" style="position:fixed; left:10px; bottom:10px">
 <img src="../../../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"/>
 返回
 </a>
 #+END_EXPORT
+
+
 
 * Note
 学习笔记 :

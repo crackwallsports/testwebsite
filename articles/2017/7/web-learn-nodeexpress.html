@@ -1,85 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2018-09-29 Sat 21:01 -->
+<!-- 2018-09-30 Sun 12:34 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Web 开发学习笔记 - SbyS: Node.js Express MongoDB</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Xt3">
 <link href="../../../css/org.css" rel="stylesheet"></link>
-
-<script type="text/javascript" src="../../../js/org-info.js">
-/**
- *
- * @source: ../../../js/org-info.js
- *
- * @licstart  The following is the entire license notice for the
- *  JavaScript code in ../../../js/org-info.js.
- *
- * Copyright (C) 2012-2017 Free Software Foundation, Inc.
- *
- *
- * The JavaScript code in this tag is free software: you can
- * redistribute it and/or modify it under the terms of the GNU
- * General Public License (GNU GPL) as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option)
- * any later version.  The code is distributed WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
- *
- * As additional permission under GNU GPL version 3 section 7, you
- * may distribute non-source (e.g., minimized or compacted) forms of
- * that code without the copy of the GNU GPL normally required by
- * section 4, provided you include this license notice and a URL
- * through which recipients can access the Corresponding Source.
- *
- * @licend  The above is the entire license notice
- * for the JavaScript code in ../../../js/org-info.js.
- *
- */
-</script>
-
-<script type="text/javascript">
-
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-
-<!--/*--><![CDATA[/*><!--*/
-org_html_manager.set("TOC_DEPTH", "3");
-org_html_manager.set("LINK_HOME", "");
-org_html_manager.set("LINK_UP", "");
-org_html_manager.set("LOCAL_TOC", "0");
-org_html_manager.set("VIEW_BUTTONS", "0");
-org_html_manager.set("MOUSE_HINT", "underline");
-org_html_manager.set("FIXED_TOC", "0");
-org_html_manager.set("TOC", "1");
-org_html_manager.set("VIEW", "1");
-org_html_manager.setup();  // activate after the parameters are set
-/*]]>*///-->
-</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -134,24 +62,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org433ef44">1. Note</a>
+<li><a href="#orgdcbd450">1. Note</a>
 <ul>
-<li><a href="#org54e4beb">1.1. Install</a></li>
-<li><a href="#org6d68680">1.2. Hello World!</a></li>
-<li><a href="#org7a48a22">1.3. DB</a></li>
+<li><a href="#orgad0c0a8">1.1. Install</a></li>
+<li><a href="#org7dec025">1.2. Hello World!</a></li>
+<li><a href="#org98de135">1.3. DB</a></li>
 </ul>
 </li>
-<li><a href="#orgf9a8122">2. Next</a></li>
+<li><a href="#orgf5eeb93">2. Next</a></li>
 </ul>
 </div>
 </div>
-<a href="../../../index.html" style="position:fixed; left:10px;">
+<a href="../../../index.html" style="position:fixed; left:10px; bottom:10px">
 <img src="../../../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"/>
 返回
 </a>
 
-<div id="outline-container-org433ef44" class="outline-2">
-<h2 id="org433ef44"><span class="section-number-2">1</span> Note</h2>
+
+
+<div id="outline-container-orgdcbd450" class="outline-2">
+<h2 id="orgdcbd450"><span class="section-number-2">1</span> Note</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 学习笔记 :
@@ -160,8 +90,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org54e4beb" class="outline-3">
-<h3 id="org54e4beb"><span class="section-number-3">1.1</span> Install</h3>
+<div id="outline-container-orgad0c0a8" class="outline-3">
+<h3 id="orgad0c0a8"><span class="section-number-3">1.1</span> Install</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Node.js</li>
@@ -196,8 +126,8 @@ Edit: package.json
 </div>
 </div>
 
-<div id="outline-container-org6d68680" class="outline-3">
-<h3 id="org6d68680"><span class="section-number-3">1.2</span> Hello World!</h3>
+<div id="outline-container-org7dec025" class="outline-3">
+<h3 id="org7dec025"><span class="section-number-3">1.2</span> Hello World!</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li><p>
@@ -301,8 +231,8 @@ module.exports = router;
 </div>
 </div>
 
-<div id="outline-container-org7a48a22" class="outline-3">
-<h3 id="org7a48a22"><span class="section-number-3">1.3</span> DB</h3>
+<div id="outline-container-org98de135" class="outline-3">
+<h3 id="org98de135"><span class="section-number-3">1.3</span> DB</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li><p>
@@ -451,8 +381,8 @@ Data form
 </div>
 </div>
 
-<div id="outline-container-orgf9a8122" class="outline-2">
-<h2 id="orgf9a8122"><span class="section-number-2">2</span> Next</h2>
+<div id="outline-container-orgf5eeb93" class="outline-2">
+<h2 id="orgf5eeb93"><span class="section-number-2">2</span> Next</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="http://mongoosejs.com/">Mongoose</a>
