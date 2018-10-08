@@ -1,0 +1,119 @@
+#+TITLE: News
+#+AUTHOR: Xt3
+
+
+* Load
+#+BEGIN_SRC lisp
+;; Load
+(load "base")
+#+END_SRC
+* Htm
+#+BEGIN_SRC lisp
+(->file
+ #P"./articles/News.html" 
+ (->html
+  (layout-template
+   nil
+   :title "News 新鲜事"
+   :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
+            (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
+            (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
+   :content
+   `(,(site-header)
+      (main (:class "content")
+            (div (:class "list-group" :style "width: 80%; font-size: 150%")
+                 (div (:class "topic list-group-item flex-column align-items-start")
+                      (div (:class "d-flex w-100 justify-content-between")
+                           (h2 () "郭文贵")
+                           (small () "更新时间: 2018.10.08 20:55:26"))
+                      (p ()))
+                 (div (:class "topic list-group-item flex-column align-items-start")
+                      (div (:class "d-flex w-100 justify-content-between")
+                           (h2 () "中共国")
+                           (small () "更新时间: 2018.10.08 20:55:26"))
+                      (p () ""))
+                 (div (:class "topic list-group-item flex-column align-items-start")
+                      (div (:class "d-flex w-100 justify-content-between")
+                           (h2 () "美国")
+                           (small () "更新时间: 2018.10.08 20:55:26"))
+                      (p () ""))
+                 (div (:class "topic list-group-item flex-column align-items-start")
+                      (div (:class "d-flex w-100 justify-content-between")
+                           (h2 () "中共国 供应链 恶意芯片植入 事件")
+                           (small () "更新时间: 2018.10.08 23:01:57"))
+                      (p ()
+                         (ul ()
+                             (li () "主"
+                                 (ul ()
+                                     ,(topic-list
+                                       "2018.10.8"
+                                       "https://9to5mac.com/2018/10/08/chinese-spy-chip-2/"
+                                       "Comment: Four more reasons it’s now inconceivable Apple lied about Chinese spy chips"
+                                       '(ul () 
+                                         (li () "Reasons:"
+                                          (ul () 
+                                           (li ()
+                                               "1. "
+                                               (a (:href "https://9to5mac.com/2018/10/05/spy-chip/")
+                                                  "GCHQ statement"))
+                                           (li ()
+                                               "2. "
+                                               (a (:href "https://9to5mac.com/2018/10/07/department-of-homeland-security-apple-spy-chip/")
+                                                  "Department Homeland Security echoed"))
+                                           (li ()
+                                               "3. "
+                                               (a (:href "https://www.reuters.com/article/us-china-cyber-apple/apple-tells-congress-it-found-no-signs-of-hacking-attack-idUSKCN1MH0YQ")
+                                                  "Reuters reports"))
+                                           (li ()
+                                               "4. "
+                                               (a (:href "https://krebsonsecurity.com/2018/10/supply-chain-security-is-the-whole-enchilada-but-whos-willing-to-pay-for-it/")
+                                                  "security researcher  Brian Krebs said")))) ))
+                                     ,(topic-list
+                                       "2018.10.4"
+                                       "https://www.apple.com/newsroom/2018/10/what-businessweek-got-wrong-about-apple/"
+                                       "What Businessweek got wrong about Apple"
+                                       '(p () "Apple has never found malicious chips
+\“hardware manipulations\” or vulnerabilities purposely planted in any server. Apple never had any contact with the FBI or any other agency about such an incident. We are not aware of any investigation by the FBI, nor are our contacts in law enforcement.
+"))
+                                     ,(topic-list
+                                       "2018.10.4"
+                                       "https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies"
+                                       "The Big Hack: How China Used a Tiny Chip to Infiltrate U.S. Companies")))
+                             (li () "相关"
+                                 (ul ()
+                                     ,(topic-list
+                                       "2017.2.23"
+                                       "https://www.theinformation.com/articles/apple-severed-ties-with-server-supplier-after-security-concern?jwt=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYWR4dDNAZ21haWwuY29tIiwiZXhwIjoxNTcwMjIwNzkyLCJuIjoiR3Vlc3QiLCJzY29wZSI6WyJzaGFyZSJdfQ.ls8yD0SpK1SYLoC7TAaPBL8GPEu9Nd8mutWz0EEdU6o&unlock=ac889c2a9c7ed1fa
+"
+                                       "Apple Severed Ties with Server Supplier After Security Concern")))
+                             (li () "补充"
+                                 (ul ()
+                                     ,(topic-list
+                                       "2018.10.4"
+                                       "https://www.lawfareblog.com/china-supermicro-hack-about-bloomberg-report"
+                                       "The China SuperMicro Hack: About That Bloomberg Report"))))))))
+      ,(site-footer)))))
+
+(format nil "更新时间: ~a" (human-date (get-universal-time)))
+
+
+(defun topic-list (date link title &rest rest)
+  `(li ()
+       (small () ,date)
+       (a (:href ,link) ,title)
+       ,@rest))
+(topic-list
+ "2018.10.8"
+ "https://9to5mac.com/2018/10/08/chinese-spy-chip-2/"
+ "Comment: Four more reasons it’s now inconceivable Apple lied about Chinese spy chips"
+ '(p () "d"
+   (ul () "dn"))
+ '(ul () "dn")
+ )
+
+
+
+
+
+#+END_SRC
+

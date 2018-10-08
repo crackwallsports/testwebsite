@@ -42,9 +42,9 @@
      (img (:src "/testwebsite/resource/carrot.PNG")))
     (nav (:class "contact" :role "navigation")
      (ul ()
-      (li () (a (:href "#") "Twitter"))
-      (li () (a (:href "#") "Email"))))
-    (hr (:class "divider"))))
+      (li () (a (:href "https://www.guo.media/xt3") "GUO.MEDIA"))
+      (li () (a (:href "https://twitter.com/iamnotXt3") "Twitter"))
+      (li () (a (:href "mailto:crackwallsports@gmail.com") "Email"))))))
 
 (defun site-footer ()
   '(footer (:class "side-footer")
@@ -54,7 +54,7 @@
      (i (:class "fa fa-github" :aria-hidden "true") "crackwallsports")) (br)
     (span (:class "email")
      (i (:class "fa fa-envelope" :aria-hidden "true")
-      "crackwallsports@gmail.com")) (br)
+      "")) (br)
     (p (:class "copyright") "All content copyright © 2017 Xt3")))
 
 (defun index (args)
@@ -62,8 +62,8 @@
     (layout-template
      args
      :title (or (getf args :title) "Xt3 Blog")
-     :links `((link (:rel "stylesheet" :href "./css/style.css"))
-              (link (:rel "stylesheet" :href "./css/font-awesome.min.css")))
+     :links `((link (:rel "stylesheet" :href "/testwebsite/css/style.css"))
+              (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css")))
      :content
      `(,(site-header)
        (main (:class "content")
@@ -88,33 +88,25 @@
          :box-sizing "border-box"
          :padding 0 :margin 0))
      (html (:font-size "62.5%"))
-     (body (:color "#3a4145"))
+     (body (:color "#3a4145" :font-family "Georgia, STSong"))
      (a (:text-decoration "none"))
-     ("ul, li" (:list-style "none"))
+     ("ul, li" (:list-style "none"
+                :padding-left "5px" :list-style-position "inside"))
      ;; Header
-     (".side-header" (:position "relative"
-                                :width "100%" :height "130px"
-                                :margin "20px auto" :padding-left "80px")
-                     (".logo" (:position "absolute" :right "50%"
-                                         :width "40%" :height "100%"
-                                         :max-width "350px"
-                                         :display "inline-block")
-                              (img (:position "absolute"
-                                              :width "120px" :height "120px"
-                                              :vertical-align "middle"
-                                              :bottom "3px"))) ;; :border-radius "50% 50%" :box-shadow "2px 3px 3px black"
-                     (".contact" (:position "absolute" :left "50%" :bottom 0
-                                            :display "inline-block"
-                                            :width "40%" :max-width "350px"
-                                            :font-size "2rem" :font-weight "bold" :text-align "right")
-                                 (li (:display "inline" :margin-left "20px")
-                                     (a (:color ,(css-color :grey)))))
-                     (".divider" (:position "absolute" :bottom "-10px" :left "0px"
-                                            :width "100%")))
+     (".side-header" (:position "fixed" :margin "20px auto"
+                                :width "200px" :height "200px")
+                     (".logo" (:position "relative" :left "30px"
+                                         :display "block")
+                              (img (:width "120px" :height "120px")))
+                     (".contact" (:font-size "2rem"  :padding-left "20%")
+                                 (li ()
+                                     (a (:color "rgba(30, 30, 30, 0.92)")))))
      ;; Main-Content
-     (".content" (:width "100%")
+     (".content" ( :padding-left "20%" :padding-top "30px")
                  (".post" (:font-size "1.6rem"
-                                      :width "80%" :max-width "700px" :margin "3rem auto" :padding-bottom "3rem"
+                                      :width "80%"
+                                      :margin-top "3rem" :margin-left "2rem"
+                                      :padding-bottom "3rem"
                                       :border-bottom "#a7abb3 1px solid"
                                       :word-break "break-word"))
                  (".post-meta" (:display "block"
@@ -123,7 +115,12 @@
                                          :color "#9eabb3"))
                  (".post-title a" (:color "black"))
                  (".post-title a:hover" (:color ,(css-color :indigo)))
-                 (".post-excerpt p" (:margin "1.6rem 0" :font-size "1.5rem" :line-height "1.5em")))
+                 (".post-excerpt p" (:margin "1.6rem 0" :font-size "1.5rem" :line-height "1.5em"))
+                 ;; Topic
+
+                 (".topic" ()
+                           ("li p" (:padding-left "16px" :margin "auto"))
+                           ("li::before" (:content "\"-\"" :padding-right "8px"))))
      ;; Footer
      (".side-footer" (:margin "4rem 0 0 0" :padding "3rem 0"
                               :text-align "center"
