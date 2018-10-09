@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="/testwebsite/css/bootstrap.min.css">
 <link rel="stylesheet" href="/testwebsite/css/font-awesome.min.css">
 <link rel="stylesheet" href="/testwebsite/css/style.css">
+<style>
+.btn-link {color: #0f175d }
+.btn-link:hover {text-decoration:none}</style>
 </head>
 <body><header class="side-header"><a class="logo" href="/testwebsite/index.html"><img src="/testwebsite/resource/carrot.PNG"></img>
 </a>
@@ -18,40 +21,49 @@
 </ul>
 </nav>
 </header>
-<main class="content"><div class="list-group" style="width: 80%; font-size: 150%"><div class="topic list-group-item flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h2>郭文贵</h2>
+<main class="content"><div class="accordion" id="topic-accordion" style="width: 80%; font-size: 150%"><div class="topic card"><div class="card-header d-flex w-100 justify-content-between"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2177"><h2>郭文贵</h2>
+</button>
 <small>更新时间: 2018.10.08 20:55:26</small>
 </div>
-<p></p>
+<div class="collapse show" id="collapse2177" data-parent="#topic-accordion"><div class="card-body"></div>
 </div>
-<div class="topic list-group-item flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h2>中美</h2>
+</div>
+<div class="topic card"><div class="card-header d-flex w-100 justify-content-between"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4772"><h2>中美</h2>
+</button>
 <small>更新时间: 2018.10.09 19:03:05</small>
 </div>
-<p><ul><li><small>2018.11</small>
+<div class="collapse" id="collapse4772" data-parent="#topic-accordion"><div class="card-body"><ul><li><small>2018.11</small>
 川普 联大演讲</li>
 <li><small>2018.10.8</small>
 美国国务卿 蓬佩奥 访问中共国</li>
 <li><small>2018.10.4</small>
 美国副总统 彭斯 哈德逊演讲</li>
 </ul>
-</p>
 </div>
-<div class="topic list-group-item flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h2>中共国</h2>
+</div>
+</div>
+<div class="topic card"><div class="card-header d-flex w-100 justify-content-between"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse317"><h2>中共国</h2>
+</button>
 <small>更新时间: 2018.10.08 20:55:26</small>
 </div>
-<p></p>
+<div class="collapse" id="collapse317" data-parent="#topic-accordion"><div class="card-body"></div>
 </div>
-<div class="topic list-group-item flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h2>美国</h2>
+</div>
+<div class="topic card"><div class="card-header d-flex w-100 justify-content-between"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse9856"><h2>美国</h2>
+</button>
 <small>更新时间: 2018.10.09 19:03:05</small>
 </div>
-<p><ul><li><small>2018.9.26</small>
+<div class="collapse" id="collapse9856" data-parent="#topic-accordion"><div class="card-body"><ul><li><small>2018.9.26</small>
 川普 联大演讲</li>
 </ul>
-</p>
 </div>
-<div class="topic list-group-item flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h2>中共国 供应链 恶意芯片植入 事件</h2>
+</div>
+</div>
+<div class="topic card"><div class="card-header d-flex w-100 justify-content-between"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2675"><h2>中共国 供应链 恶意芯片植入 事件</h2>
+</button>
 <small>更新时间: 2018.10.08 23:01:57</small>
 </div>
-<p><ul><li>主<ul><li><small>2018.10.8</small>
+<div class="collapse" id="collapse2675" data-parent="#topic-accordion"><div class="card-body"><ul><li>主<ul><li><small>2018.10.8</small>
 <a href="https://9to5mac.com/2018/10/08/chinese-spy-chip-2/">Comment: Four more reasons it’s now inconceivable Apple lied about Chinese spy chips</a>
 <ul><li>Reasons:<ul><li>1. <a href="https://9to5mac.com/2018/10/05/spy-chip/">GCHQ statement</a>
 </li>
@@ -84,7 +96,8 @@
 </ul>
 </li>
 </ul>
-</p>
+</div>
+</div>
 </div>
 </div>
 </main>
@@ -94,10 +107,12 @@
 <a class="github" href="https://github.com/crackwallsports"><i class="fa fa-github" aria-hidden="true">crackwallsports</i>
 </a>
 <br>
-<span class="email"><i class="fa fa-envelope" aria-hidden="true">crackwallsports@gmail.com</i>
+<span class="email"><i class="fa fa-envelope" aria-hidden="true"></i>
 </span>
 <br>
 <p class="copyright">All content copyright © 2017 Xt3</p>
 </footer>
+<script src="/testwebsite/js/jquery-3.2.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

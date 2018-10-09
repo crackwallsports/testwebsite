@@ -11,12 +11,28 @@
 (defun news-add-topic (topic)
   (push topic *news-topics*))
 
-(defun news-topic (title time &rest content)
-  `(div (:class "topic list-group-item flex-column align-items-start")
-        (div (:class "d-flex w-100 justify-content-between")
-             (h2 () ,title)
-             (small () ,(format nil "更新时间: ~a" time)))
-        (p () ,@content)))
+(let ((show t))
+  (defun news-topic (title time &rest content)
+    (let ((id (format nil "collapse~a" (random 10000))))
+      `(div (:class "topic card")
+            (div (:class "card-header d-flex w-100 justify-content-between")
+                 (button (:class ,(concat "btn btn-link" (if show
+                                                             ""
+                                                             " collapsed"))
+                                 :type "button"
+                                 :data-toggle "collapse"
+                                 :data-target ,(concat "#" id))
+                         (h2 () ,title))
+                 (small () ,(format nil "更新时间: ~a" time)))
+            (div (:class ,(concat "collapse"
+                                  (if show
+                                      (progn (setf show nil)
+                                             " show")
+                                      ""))
+                         :id ,id
+                         :data-parent "#topic-accordion")
+                 (div (:class "card-body")
+                      ,@content))))))
 
 
 ;; (defun news-to-topic (title time &rest content)
@@ -42,14 +58,23 @@
     :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
              (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
              (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
+    :head-rest `((style () "
+.btn-link {color: #0f175d }
+.btn-link:hover {text-decoration:none}"))
     :content
     `(,(site-header)
        (main (:class "content")
-             (div (:class "list-group" :style "width: 80%; font-size: 150%")
+             ;; 
+             (div (:class "accordion" :id "topic-accordion"
+                          :style "width: 80%; font-size: 150%")
                   ;; ,@(loop for v being the hash-values of *news-topics*
                   ;;      collect v)
                   ,@(nreverse *news-topics*)))
-       ,(site-footer)))))
+       ,(site-footer))
+    :scripts `((script (:src "/testwebsite/js/jquery-3.2.1.min.js"))
+               (script (:src "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                             :integrity "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                             :crossorigin "anonymous"))))))
 
 (news-to-topic "郭文贵" "2018.10.08 20:55:26" "")
 
