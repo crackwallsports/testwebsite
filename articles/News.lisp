@@ -1,27 +1,5 @@
-#+TITLE: News
-#+AUTHOR: Xt3
-
-
-* Use
-#+BEGIN_SRC lisp
-;; Load
-(load "./articles/News")
-;; Generate
-(->file #P"./articles/News.html" (news-index))
-
-;; Date
-(format nil "更新时间: ~a" (human-date (get-universal-time)))
-
-
-
-#+END_SRC
-
-* Package
-#+BEGIN_SRC lisp :tangle yes
 (in-package :twb)
-#+END_SRC
-* Helper
-#+BEGIN_SRC lisp :tangle yes
+
 ;; (defvar *news-topics* (make-hash-table :test 'equal))
 ;; (defun news-set-topic (topic value)
 ;;   (setf (gethash topic *news-topics*) value))
@@ -56,12 +34,6 @@
 (defun :- (&rest rest)
   `(li () ,@rest))
 
-
-
-
-#+END_SRC
-* Htm
-#+BEGIN_SRC lisp :tangle yes
 (defun news-index ()
   (->html
    (layout-template
@@ -78,34 +50,9 @@
                   ;;      collect v)
                   ,@(nreverse *news-topics*)))
        ,(site-footer)))))
-#+END_SRC
-* Topics
-** 郭文贵
-- 2018.10.9
-  - 海航王健事件
-    - 王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！
-  - 台湾问题 (等有时间将向大家报告)
-    - 中共是否会转移压力 去打台湾 ?
-    - 美国上层的态度 ? 
-- 中共国经济
-  - 港币 CCP币 要完
-- 郭七条
-  - 
-  - 修订: 增加 反对以假治国
-- 相关
-  - Kyle bass
-  - 白邦瑞
 
-#+BEGIN_SRC lisp :tangle yes
 (news-to-topic "郭文贵" "2018.10.08 20:55:26" "")
-#+END_SRC
-** 中美
-- 2018.11 南海军演
-- 2018.10.8 美国国务卿 蓬佩奥 访问中共国
-- 2018.10.4 美国副总统 彭斯 哈德逊演讲
 
-
-#+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中美" "2018.10.09 19:03:05"
  (u (:- '(small () "2018.11")
@@ -114,28 +61,14 @@
         "美国国务卿 蓬佩奥 访问中共国")
     (:- '(small () "2018.10.4")
         "美国副总统 彭斯 哈德逊演讲")))
-#+END_SRC
 
-** 中共国
-- 2018. 孟宏伟
-  - 中共 发布信息 说孟宏伟正接受调查
-  - 孟宏伟妻子报警 丈夫失踪
-
-#+BEGIN_SRC lisp :tangle yes
 (news-to-topic "中共国" "2018.10.08 20:55:26" "")
-#+END_SRC
 
-** 美国
-- 2018.9.26 川普 联大演讲
-#+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "美国" "2018.10.09 19:03:05"
  (u (:- '(small () "2018.9.26")
         "川普 联大演讲")))
-#+END_SRC
 
-** 中共国 供应链 恶意芯片植入 事件
-#+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中共国 供应链 恶意芯片植入 事件" "2018.10.08 23:01:57"
  (u (:- "主"
@@ -161,4 +94,3 @@
         (u (:- '(small () "2018.10.4")
                (@ "The China SuperMicro Hack: About That Bloomberg Report"
                   "https://www.lawfareblog.com/china-supermicro-hack-about-bloomberg-report"))))))
-#+END_SRC
