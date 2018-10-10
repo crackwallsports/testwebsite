@@ -52,9 +52,8 @@
      (i (:class "fa fa-twitter" :aria-hidden "true") "@iamnotXt3")) (br)
     (a (:class "github" :href "https://github.com/crackwallsports")
      (i (:class "fa fa-github" :aria-hidden "true") "crackwallsports")) (br)
-    (span (:class "email")
-     (i (:class "fa fa-envelope" :aria-hidden "true")
-      "")) (br)
+    (a (:class "email" :href "mailto:crackwallsports@gmail.com")
+     (i (:class "fa fa-envelope" :aria-hidden "true") "crackwallsports@gmail.com")) (br)
     (p (:class "copyright") "All content copyright © 2017 Xt3")))
 
 (defun index (args)
@@ -62,8 +61,9 @@
     (layout-template
      args
      :title (or (getf args :title) "Xt3 Blog")
-     :links `((link (:rel "stylesheet" :href "/testwebsite/css/style.css"))
-              (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css")))
+     :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
+              (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
+              (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
      :content
      `(,(site-header)
        (main (:class "content")
@@ -102,7 +102,7 @@
                                  (li ()
                                      (a (:color "rgba(30, 30, 30, 0.92)")))))
      ;; Main-Content
-     (".content" ( :padding-left "20%" :padding-top "30px")
+     (".content" ( :padding-left "20%" :padding-right "10%" :padding-top "30px" :min-height "600px")
                  (".post" (:font-size "1.6rem"
                                       :width "80%"
                                       :margin-top "3rem" :margin-left "2rem"
@@ -129,6 +129,7 @@
                               :font-size "1.6rem" :line-height "1.6em")
                      (".twitter, .email, .github" (:color "black"
                                                           :display "inline-block"))
-                     ("a:hover, span:hover" (:font-size "2rem"))))))
+                     ;; ("a:hover, span:hover" (:font-size "2rem"))
+                     ))))
 
 (defun js () "")

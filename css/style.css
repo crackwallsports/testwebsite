@@ -42,7 +42,9 @@ ul, li {
 }
 .content {
   padding-left: 20%;
-  padding-top: 30px
+  padding-right: 10%;
+  padding-top: 30px;
+  min-height: 600px
 }
 .content .post {
   font-size: 1.6rem;
@@ -91,7 +93,4 @@ ul, li {
 .side-footer .twitter, .email, .github {
   color: black;
   display: inline-block
-}
-.side-footer a:hover, span:hover {
-  font-size: 2rem
 }
