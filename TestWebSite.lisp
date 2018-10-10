@@ -88,10 +88,11 @@
          :box-sizing "border-box"
          :padding 0 :margin 0))
      (html (:font-size "62.5%"))
-     (body (:color "#3a4145" :font-family "Georgia, STSong"))
+     (body (:color "#3a4145" ;; :font-family "Georgia, STSong"
+                   ))
      (a (:text-decoration "none"))
      ("ul, li" (:list-style "none"
-                :padding-left "5px" :list-style-position "inside"))
+                :padding-left "8px" :list-style-position "inside"))
      ;; Header
      (".side-header" (:position "fixed" :margin "20px auto"
                                 :width "200px" :height "200px")
