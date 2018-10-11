@@ -1,11 +1,13 @@
 ;; (Date Ref Title Intro)
-(("2018 10 11"
+(("2018 10 12"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div () (span (:class "badge badge-success") "每日追踪") (span () "郭文贵"))
      (div () ;; (span (:class "badge badge-success") "更新")
-          (span () "中共国 供应链 恶意芯片植入 事件"))))
+          (span () "中共国 供应链 恶意芯片植入 事件"))
+     (div () (span (:class "badge badge-success") "新")
+          (span () "川普总统 联合国演讲"))))
  ("2017 7 22"
    "/testwebsite/articles/2017/7/web-learn-nodeexpress.html"
    "Web 开发学习笔记 - SbyS: Node.js Express MongoDB"
