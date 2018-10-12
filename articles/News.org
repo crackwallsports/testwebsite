@@ -158,8 +158,8 @@ z-index:100;
   
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "郭文贵" ;; (human-date (get-universal-time))
- "2018.10.12 00:02:18"
+ "郭文贵"  ;; (human-date (get-universal-time))
+ "2018.10.12 22:34:03"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -169,14 +169,40 @@ z-index:100;
            (:- "不反国家 不反民族 不反习主席")
            (:- '(span (:class "badge badge-secondary") "修改增加: ") "反对以假治国")))
     (:- "海航王健事件"
-        (u (:- "王健之死发布会 时间地点: 2018.11.19 纽约曼哈顿 "
-               (@ "https://www.thepierreny.com" "The Pierre Hotel")
-               `(small () (span (:class "badge badge-light" :style "position: absolute;")
-                                ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))
+        (u (:- "郭媒体新闻发布会：海航与王健之死"
+               (u (:- "时间: 2018年11月19日 美国东部时间 早上10点")
+                  (:- "地点: 纽约"
+                      (@ "https://www.thepierreny.com" "The Pierre Hotel")
+                      `(small () (span (:class "badge badge-light" :style "position: absolute;")
+                                ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
            (:- '(small () "2018.10.9")
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.12")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/135383")
+                      '(q ()
+                        (pre () "
+Guo Media Press Conference: NHA and Wang Jian's Death
+郭媒体新闻发布会：海航与王健之死
+
+November 19th, 2018, 10am EST
+2018年11月19日 美国东部时间 早上10点
+
+The Pierre Hotel, New York
+纽约 Pierre酒店 
+"))))
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/135158")
+                      '(small () "(大连法院宣判: 政泉公司强迫交易罪 处罚金600亿RMB 相关人缓刑)")
+                      '(q ()
+                        (pre () "
+10月12日：这是一个伟大的具有重大历史意义的一天！我提出的中共在我中华大地的统治手段是盗国．……以黑治国．以警治国．以贪反贪．以假治国！今天的审判是一个国家政权．体制．倾尽盗国之全力．证明了郭七条在中国存在的真实性！及危害性！这也是最好的向全中国全世界人民展示的铁证！大连法院．的朋友们你们辛苦了！文贵仅仅代表文贵本人向你们致以＂不＂衷心的感谢！一切都是刚刚开始！
+"))))
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/135006")
+                      '(small () "(我: 我看到翻领 还以为只是美国国旗 看路德视频 约翰小哥说是特勤局USSS 不过因为看不清 还不能确定 倒是通过搜索 搞明白这东西的英文怎么说了 lapel hat pin)")
+                      '(q ()
+                        (video (:src "https://d57iplyuvntm7.cloudfront.net/uploads/videos/2018/10/vid_1539294684_44803.MOV"
+                                :controls "controls" :preload "metadata" :style "width: 150px; background-color:black")))))))
         (u (:- '(small () "2018.10.11")
                (u (:- "视频: "
                       (@ "https://www.youtube.com/watch?v=EDb7nJMyLGw"
