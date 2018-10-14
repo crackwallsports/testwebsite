@@ -118,7 +118,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.12 22:34:03"
+ "2018.10.14 14:11:50"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -138,6 +138,26 @@ z-index:100;
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.14")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/135879")
+                      '(q () (pre () "10月13日：王岐山将出席以色列科技创新高峰论坛．访问埃及．沙特……等国家！他此次窜访是醉翁之意……伟大的智慧的战友们．你们懂的！一切都是刚刚开始！"))))))
+        (u (:- '(small () "2018.10.13")
+               (u (:- "视频: " (@ "https://www.youtube.com/watch?v=7aKh_vP4vQo"
+                                  "10月12日：反盗国贼第一招第一式！(隔山杀盗)美国基金将抽回．不再．投资中国150家银行．金融机构！整个世界将开始调查．查封．中国高官洗钱．藏钱！")
+                      (u (:- '(pre () "大连法院 判罚600亿人民币 约130亿美元 看到 中共国依法治国的虚假和荒唐"))
+                         (:- '(pre () "(22:30) 第一招第一式"))
+                         (:- '(pre () "快准狠"))
+                         (:- '(pre () "发起 以美国 教育基金 和 各种国家基金 为基础的 一个 反对 中共国CCP 让相关中共国企业和在美上市的公司 的资产归0 的制裁行动"))
+                         (:- '(pre () "行动伊始: 德州大学基金 正领头打击 被美国制裁的公司 和 针对中共国所有的金融机构 并提倡 所有美国基金不再投资中共国的金融机构")
+                             (u (:- '(pre () "相关企业1700多家 有关金融机构150多个"))
+                                (:- '(pre () "将抽回投入的所有资金"))
+                                (:- '(pre () "通过全世界的对伊朗和独裁国家的制裁法规 延伸出了此次制裁"))))
+                         (:- '(pre () "接下来的 第二式 第三式")
+                             (u (:- '(pre () "提议 清算中共在西方的负债 包括国债"))
+                                (:- '(pre () "提议 所有基金和投资者 需公布曾经合作过的 中共国 官员 政府 及其家人 的合作关系"))
+                                (:- '(pre () "要求 通过法律系统 查封中共国持有的 美国和其它国家 的国债 包括 海外所有非法盗用的中共国资产"))))
+                         (:- '(pre () "第二招 暂时不说 但到时将看到 会上升到另外一个层次"))
+                         (:- '(pre () "是你们逼的")))))))
         (u (:- '(small () "2018.10.12")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/135383")
                       '(q ()
@@ -210,9 +230,13 @@ The Pierre Hotel, New York
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.10.12 16:16:31"
+ "2018.10.14 13:22:56"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.10.12")
+        (@ "https://freebeacon.com/national-security/bolton-warns-chinese-military-halt-dangerous-naval-encounters/"
+           "Bolton Warns Chinese Military to Halt Dangerous Naval Encounters")
+        '(p () (small () "White House National Security Adviser John Bolton says Navy rules allow response to threatening Chinese actions")))
     (:- '(small () "2018.10.11")
         "首次 中共国 情报官员 被引渡至 美国 公开受审"
         (u (:- "源自: "
