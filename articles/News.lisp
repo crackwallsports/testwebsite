@@ -118,7 +118,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.14 14:11:50"
+ "2018.10.16 13:42:00"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -138,6 +138,13 @@ z-index:100;
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.16")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/136387")
+                      ''(small () "(PPT还未完全公开)")
+                      '(q () (pre () "
+10月15日：这份30页的中共经济的真相的PPT在过去的两个月里，我在不同的场合与不同的人做了多次的演讲。可以说，每次演讲都极为震撼！赢得无数掌声👏毫不夸张的说．这是一个打开中共经济侵略西方骗局的第一把钥匙🔑！这绝对是一个史无前例的伟大的演讲稿之一！而这个所有的资料都是由挺郭会的战友们和我的律师．媒体团队共同完成！文贵在此表示衷心的感谢！ 文华负责GDP视频数据整理 文之．小老虎．负责制作视频 Skinner整理国内军费维稳费等数据 大卫小哥．负责数据整理并与彭博社（Bloomberg）和路透社（Reuters）比对 合理安排使用内部绝密信息 大卫还负责一带一路战略分析 令狐负责历史资料收集．外部联系．组织专家团队核对数据 Sarawei：CCPB．PPT项目总导．负责沟通郭先生．及他的团队．与所有的团队紧密工作！ 很快大家会知道这个PPT的力量！🙏🙏🙏🙏🙏🙏🙏🙏🙏"))))
+               (u (:- "郭文(1分钟报平安视频): " (@ "https://www.guo.media/posts/136322" "10月15日：尊敬的战友们好：你们健身了吗！一切都是刚刚开始！")
+                      '(p () (small () "疯狂洗脑 挡不住 土崩瓦解; 关注欧美正发生的大事; 港币 汇率 外汇储备的变化; 孟宏伟事后 又有好几人被抓; 让子弹飞一会"))))))
         (u (:- '(small () "2018.10.14")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/135879")
                       '(q () (pre () "10月13日：王岐山将出席以色列科技创新高峰论坛．访问埃及．沙特……等国家！他此次窜访是醉翁之意……伟大的智慧的战友们．你们懂的！一切都是刚刚开始！"))))))
@@ -178,7 +185,7 @@ The Pierre Hotel, New York
 10月12日：这是一个伟大的具有重大历史意义的一天！我提出的中共在我中华大地的统治手段是盗国．……以黑治国．以警治国．以贪反贪．以假治国！今天的审判是一个国家政权．体制．倾尽盗国之全力．证明了郭七条在中国存在的真实性！及危害性！这也是最好的向全中国全世界人民展示的铁证！大连法院．的朋友们你们辛苦了！文贵仅仅代表文贵本人向你们致以＂不＂衷心的感谢！一切都是刚刚开始！
 "))))
                (u (:- "郭文: " (@ "https://www.guo.media/posts/135006")
-                      '(small () "(我: 我看到翻领 还以为只是美国国旗 看路德视频 约翰小哥说是特勤局USSS 不过因为看不清 还不能确定 倒是通过搜索 搞明白这东西的英文怎么说了 lapel hat pin)")
+                      '(small () "(我: 我看到翻领 还以为只是美国国旗 看路德视频 约翰小哥说是特勤局USSS 不过因为看不清 还不能确定 倒是通过搜索 搞明白这东西的英文怎么说了 lapel  pin)")
                       '(q ()
                         (video (:src "https://d57iplyuvntm7.cloudfront.net/uploads/videos/2018/10/vid_1539294684_44803.MOV"
                                 :controls "controls" :preload "metadata" :style "width: 150px; background-color:black")))))))
@@ -299,7 +306,14 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
                              '(q () (pre () "
 “Men see only the present, but heaven sees the future.”")))))))))))
 
-(news-to-topic "中共国" "2018.10.08 20:55:26" "")
+(news-to-topic
+ "中共国" ;; (human-date (get-universal-time) )
+ "2018.10.16 13:05:19"
+ (u (:- "关注"
+        (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
+                  "路德社"))
+           (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
+                  "战友之声"))))))
 
 (news-to-topic
  "美国" ;; (human-date (get-universal-time))
