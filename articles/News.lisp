@@ -118,7 +118,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.16 13:42:00"
+ "2018.10.17 16:51:36"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -138,9 +138,38 @@ z-index:100;
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.17")
+               (u (:- "视频: " (@ "https://www.youtube.com/watch?v=-f6N_NFGuF8"
+                                  "中共政法委专案小组．及大连法院以法盗劫780亿意味着什么！")
+                      (u (:- '(pre () "对大连审判的看法 : 以黑治国最好的证明 上天给暴力革命的最好的礼物"))
+                         (:- '(pre () "大连审判 背后的详情 : 正在准备一个视频 待到 上诉期走完 执行破产重组 后发布"))
+                         (:- '(pre () "(我: 活着被肢解 真的很痛 我想起了美剧&lt;Dexter 嗜血法医&gt;)"))
+                         (:- '(pre () "专案组的流氓行径"))
+                         (:- '(pre () "把 我 嫂子的 姐姐的 女儿的 正谈恋爱的 对象的 爸爸妈妈 都给边控"))
+                         (:- '(pre () "判决书 荒唐至极"))
+                         (:- '(pre () "关于 戴的USSS勋章 : 文贵 不加入任何组织 不会成立任何组织 不从政没兴趣; 勋章是USSS给的 但并没有加入"))
+                         (:- '(pre () "不要关注琐碎的事 别被转移视线 真正要去关注 : 港币 人民币 国内经济; 孟宏伟怎么回的国 怎么消失的 与其相关的爆料; 王健的死因"))
+                         (:- '(pre () "王岐山 为什么去 以色列 ?: 去掏美国的肛 去弄技术 顺带去沙特弄油 并想要用人民币结算"))
+                         (:- '(pre () "王岐山 说 千万要小心 美国在 香港澳门 台湾 问题上有动作 (担心制裁 它们的钱的问题 家人私生子女的问题)"))
+                         (:- '(pre () "把 共产党 和 中国人民 分开  共产党不能代表中国人民 它不能也不配"))
+                         (:- '(pre () "因为 文贵 提前爆料 让 德州大学基金行动 被推迟 一周  看来不能乱报啊 (我: 哈哈哈)")))))
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/136557")
+                      `(small ()
+                              "(我: 从 咖啡杯 -> "
+                              (span (:style "display: inline-block; text-align: center;")
+                                    (span (:style "font-size: 50%;") "逦媛纳")
+                                    (span (:style "display: grid;")
+                                          ,(@ "https://leonardparis.com/en/" "Leonard")))
+                              " -> " (span (:style "display: inline-block; text-align: center;")
+                                           (span (:style "font-size: 50%;") "The art of flowers and prints")
+                                           (span (:style "display: grid") "印花艺术"))
+                              " -> " (span (:style "display: inline-block; text-align: center;")
+                                           (span (:style "font-size: 50%;") "orchid")
+                                           (span (:style "display: grid") "兰花"))
+                              ")")))))
         (u (:- '(small () "2018.10.16")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/136387")
-                      ''(small () "(PPT还未完全公开)")
+                      '(small () "(PPT还未完全公开)")
                       '(q () (pre () "
 10月15日：这份30页的中共经济的真相的PPT在过去的两个月里，我在不同的场合与不同的人做了多次的演讲。可以说，每次演讲都极为震撼！赢得无数掌声👏毫不夸张的说．这是一个打开中共经济侵略西方骗局的第一把钥匙🔑！这绝对是一个史无前例的伟大的演讲稿之一！而这个所有的资料都是由挺郭会的战友们和我的律师．媒体团队共同完成！文贵在此表示衷心的感谢！ 文华负责GDP视频数据整理 文之．小老虎．负责制作视频 Skinner整理国内军费维稳费等数据 大卫小哥．负责数据整理并与彭博社（Bloomberg）和路透社（Reuters）比对 合理安排使用内部绝密信息 大卫还负责一带一路战略分析 令狐负责历史资料收集．外部联系．组织专家团队核对数据 Sarawei：CCPB．PPT项目总导．负责沟通郭先生．及他的团队．与所有的团队紧密工作！ 很快大家会知道这个PPT的力量！🙏🙏🙏🙏🙏🙏🙏🙏🙏"))))
                (u (:- "郭文(1分钟报平安视频): " (@ "https://www.guo.media/posts/136322" "10月15日：尊敬的战友们好：你们健身了吗！一切都是刚刚开始！")
