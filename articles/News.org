@@ -158,8 +158,8 @@ z-index:100;
 
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.18 13:37:36"
+ "郭文贵"   ;; (human-date (get-universal-time))
+ "2018.10.22 17:36:06"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -179,19 +179,38 @@ z-index:100;
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.22")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/138116")
+                      '(q () (pre () "
+... 这个林小姐是瑞银的私人银行狠角色！爸爸是个人物！她和她的老板王贯中！都是过去近二十年来为国内盗国贼洗钱几千亿美元💵以上的人物！她与多个常委家族有极深的关系！ ..."))
+                      (u (:- '(pre () "瑞银 林小姐(Rebecca Lin) "))
+                         (:- `(pre ()
+                                   ,(@ "https://www.reuters.com/article/us-ubs-group-china-banker/ubs-warns-staff-over-china-travel-after-banker-held-in-beijing-source-idUSKCN1MU067"
+                                       "UBS warns staff over China travel after banker held in Beijing: source")
+                                   " (瑞银集团(UBS) 和 瑞士宝盛银行(Julius baer) 对 部分员工发出警告 禁止前往中共国的 因可能被莫名拘留或限制离境)")))))
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/138078")
+                      '(q () (pre () "
+路徳先生说的对．他与史地夫蚊．孙力军一起操作的所谓的习给川的亲笔信！听说习主席非常恼火！ 美国前FBl高官曾告诉我：澳门郑晓松．孙力军．是操纵这个事件的关键人之一！这位官员说他认为郑晓松．孙力军．会被灭掉！现在己经灭了一个了！看来美国的情报分析能力还中！
+"))))
+               (u (:- "视频: " (@ "https://www.youtube.com/watch?v=xoND9qNE7g0"
+                                  "战友之声 20181021郭文贵报平安 澳门中联办主任郑晓松被杀是因为孟宏伟！接着排队跳楼的会更多 ，大家拭目以待！！")
+                      (u (:- '(pre () "郑晓松是被杀 他和孟宏伟是好哥们"))
+                         (:- '(pre () "香港中联办的王某 也快了"))
+                         (:- '(pre () "利益的清洗 轮换")))))))
         (u (:- '(small () "2018.10.21")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/137840")
                       '(q () (pre () "
 战友们团结一致的力量！已经在传播文贵爆料！捍卫美国中期选举！揭开盗国贼罪行！集结一切力量！我们已经形成了真正的无万敌当的巨大的力量！迎接CCP倒下的那一刻！下周将会在港币．CCPB．港股．A股．因各种制栽！联合行动后产生……戏剧性的变化！南海方面将有一糸列的行动！一切都是刚刚开始！
 "))))
                (u (:- "郭文: " (@ "https://www.guo.media/posts/137585")
-                      '(q () (pre () "... 一魔长寿．亿人枯！这才是真真正正的供血党的本质！..."))))))
+                      '(q () (pre () "... 一魔长寿．亿人枯！这才是真真正正的供血党的本质！..."))
+                      (u (:- '(pre () "朱镕基")))))))
         (u (:- '(small () "2018.10.20")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/137471")
                       '(q () (pre () "
 看看卢比奥先生的言讲：他反对是中共👍及中共政府🙏中国人民过去现在都是伟大的！中国人民的利益就是美国人民的核心利益！感谢磨镜霸加上的中文字幕！否则文贵会听成为．王岐山．和海外民运的利益！就是美国的核心利益！😹😹😹一切都是刚刚开始🌹🌹🌹
 "))
-                      (u (:- `(small () "卢比奥议员的演讲: "
+                      (u (:- `(pre () "卢比奥议员的演讲: "
                                      ,(@ "https://www.youtube.com/watch?v=Kowkt19f4hU"
                                         "（听译17）参议员卢比奥再谈中国人权：中国人民的利益也是美国的核心利益"))))))
                (u (:- "郭文: " (@ "https://www.guo.media/posts/137403")
@@ -444,12 +463,18 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中共国" ;; (human-date (get-universal-time) )
- "2018.10.16 13:05:19"
+ "2018.10.22 17:46:20"
  (u (:- "关注"
         (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
                   "路德社"))
            (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
-                  "战友之声"))))))
+                  "战友之声")))))
+ (u (:- "事件"
+        (u (:- '(small () "2018.10.20")
+               "澳门中联办主任 郑晓松 死亡"
+               (u (:- '(pre () "郭文贵: 是被杀 他与孟宏伟是好哥们"))
+                  (:- '(pre () "中共官方: 中央人民政府驻澳门特别行政区联络办公室主任 郑晓松同志 因患抑郁症 于2018年10月20日晚 在其澳门住所 坠楼身亡")))))
+        (u (:- "孟宏伟")))))
 #+END_SRC
 
 ** 美国
