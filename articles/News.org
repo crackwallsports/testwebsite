@@ -6,6 +6,7 @@
 #+BEGIN_SRC lisp
 ;; Load
 (load "./articles/News")
+
 ;; Generate
 (->file #P"./articles/News.html" (news-index))
 
@@ -159,7 +160,7 @@ z-index:100;
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"   ;; (human-date (get-universal-time))
- "2018.10.22 17:36:06"
+ "2018.10.23 12:21:54"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -179,6 +180,21 @@ z-index:100;
                "郭文: " (@ "https://www.guo.media/posts/134471")
                '(q () (pre () "王岐山已经做了放弃陈峰．和＂必须搞回王健夫人儿子．弟弟王伟的决定！＂而且是要求不惜一切代价不限任何方式！")))))
     (:- "主要内容跟踪"
+        (u (:- '(small () "2018.10.23")
+               (u (:- "视频: "
+                      (u (:- (@ "https://www.youtube.com/watch?v=1YxD5ltrSdw"
+                                "……文贵的以神助攻．！打中CCP靶标两次！赢得第一！"))
+                         (:- (@ "https://www.youtube.com/watch?v=AofDsfkeHtw"
+                         "oct 22nd 2018加林枪射击CCP！")))))
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/138415")
+                      '(q () (pre () "
+10月22日：这几个一起处理马航事件的关键人物．孟建柱．杨晖．公安部国际合作局局长．廖进荣．孙力军．安全部部长耿惠昌．副部长马健．还有已经被控制的孟宏伟等人……逐渐浮出水面！马航事件和当年的湄公河控制以及泛亚和e租宝的资金去向！以及马来西亚刘特佐等人！在湄公河及东南亚．港澳台．为基地！建立的以江．王．朱．孟……家族权力为核心的(东亚共荣圏)计划野心开始真正浮出水面！在这些地方所有的势力只买孟建柱的帐！没有人在乎和讨论习近平！大家可以了解一下……一切都是刚刚开始！
+"))
+                      (u (:- '(pre () "马航事件 关键人物: 孟建柱 杨晖 廖进荣(公安部国际合作局局长) 孙力军 耿惠昌(安全部部长) 马健(安全部副部长) 孟宏伟 等人"))
+                         (:- '(pre () "湄公河"))
+                         (:- '(pre () "马来西亚 刘特佐"))
+                         (:- '(pre () "泛亚 和 e租宝"))
+                         (:- '(pre () "东亚共荣圈 计划 : 在 湄公河 东南亚 港澳台 为基地 建立以 江王朱孟 等家族 权力为核心的势力")))))))
         (u (:- '(small () "2018.10.22")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/138116")
                       '(q () (pre () "
@@ -369,6 +385,9 @@ The Pierre Hotel, New York
                          (:- '(pre () "(P2 10:40) : 太多消息没法回 少发无关信息 请给文贵更多时间去和CCP对抗"))))))))))
 
 #+END_SRC
+*** 2018
+**** 11
+**** 10
 ** 中美
 - 2018.11 南海军演
 - 2018.10.12 White House National Security Adviser John Bolton
@@ -378,10 +397,14 @@ The Pierre Hotel, New York
 
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "中美" ;; (human-date (get-universal-time))
- "2018.10.14 13:22:56"
+ "中美" (human-date (get-universal-time))
+ "2018.10.23 12:32:26"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.10.22")
+        (@ "https://freebeacon.com/national-security/u-s-warships-transit-taiwan-strait/"
+           "U.S. Warships Transit Taiwan Strait")
+        '(p () (small () "Two Navy warships transited the Taiwan Strait on Monday in a show of force in Pentagon efforts to push back against China's expansive claims to control waters near the communist mainland.")))
     (:- '(small () "2018.10.12")
         (@ "https://freebeacon.com/national-security/bolton-warns-chinese-military-halt-dangerous-naval-encounters/"
            "Bolton Warns Chinese Military to Halt Dangerous Naval Encounters")
@@ -576,8 +599,18 @@ Thank you. God bless you. And God bless the nations of the world.")))))))
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中共国 供应链 恶意芯片植入 事件" ;; (human-date (get-universal-time))
- "2018.10.21 10:45:34"
+ "2018.10.23 14:58:05"
  (u (:- "主"
+        (u (:- '(small () "2018.10.22")
+               (@ "https://www.reuters.com/article/us-china-cyber-super-micro-comp/super-micro-to-review-hardware-for-malicious-chips-idUSKCN1MW1GK?feedType=RSS&feedName=technologyNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+reuters%2FtechnologyNews+%28Reuters+Technology+News%29"
+                  "Super Micro to review hardware for malicious chips")
+               '(q () (pre () "
+“Despite the lack of any proof that a malicious hardware chip exists, we are undertaking a complicated and time-consuming review to further address the article,” the server and storage manufacturer said in a letter to its customers, dated Oct. 18.
+...
+Super Micro denied the allegations made in the report.
+
+The company said the design complexity makes it practically impossible to insert a functional, unauthorized component onto a motherboard without it being caught by the checks in its manufacturing and assembly process.
+"))))
         (u (:- '(small () "2018.10.19")
                (@ "https://www.buzzfeednews.com/article/johnpaczkowski/apple-tim-cook-bloomberg-retraction"
                   "Apple CEO Tim Cook Is Calling For Bloomberg To Retract Its Chinese Spy Chip Story")

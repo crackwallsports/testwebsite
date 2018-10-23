@@ -1,5 +1,5 @@
 ;; (Date Ref Title Intro)
-(("2018 10 22"
+(("2018 10 23"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
@@ -11,7 +11,7 @@
           (span () "美国副总统 彭斯 哈德逊研究所演讲"))
      (div ()
           (span () "中共国 供应链 恶意芯片植入 事件")
-          ;; (span (:class "badge badge-success") "更新")
+          (span (:class "badge badge-success") "更新")
           )
      (div ()
           (span () "美国 川普总统 联合国演讲"))))
