@@ -1,18 +1,20 @@
 ;; (Date Ref Title Intro)
-(("2018 10 23"
+(("2018 10 25"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪")
-          (small () "反盗国贼 第一招 第一式 : 隔山杀盗"))
+          (span (:class "badge badge-success") "每日追踪-10.25")
+          (pre () (small () "反盗国贼 第一招 第一式 : 隔山杀盗")))
      (div ()
-          (span () "美国副总统 彭斯 哈德逊研究所演讲"))
+          (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
+          (span (:class "badge badge-success") "新-10.23"))
      (div ()
           (span () "中共国 供应链 恶意芯片植入 事件")
-          (span (:class "badge badge-success") "更新")
-          )
+          (span (:class "badge badge-success") "更新-10.24"))
+     (div ()
+          (span () "美国副总统 彭斯 哈德逊研究所演讲"))
      (div ()
           (span () "美国 川普总统 联合国演讲"))))
  ("2017 7 22"
