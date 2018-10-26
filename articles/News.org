@@ -4,11 +4,13 @@
 
 * Use
 #+BEGIN_SRC lisp
-;; Load
-(load "./articles/News")
+(progn
+  ;; Load
+  (load "./articles/News")
 
-;; Generate
-(->file #P"./articles/News.html" (news-index))
+  ;; Generate
+  (->file #P"./articles/News.html" (news-index))
+  nil)
 
 ;; Date
 (format nil "更新时间: ~a" (human-date (get-universal-time)))
@@ -169,8 +171,8 @@ z-index:100;
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2018..")
-        (u (:- "视频: " (@ "" "")))
-        (u (:- "郭文: " (@ "")
+        (u (:- "视频: " (@ "" ""))
+           (:- "郭文: " (@ "")
                '(q () (pre () ""))
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
@@ -178,6 +180,46 @@ z-index:100;
 
 **** 11
 **** 10
+- 26
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.10.26")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/139541")
+            '(q () (pre () "
+10月26日：这些软件第一大第一个使用者都是中ccp……这些软件及硬件设备都是通过两个私人公司获取！过去二十年从未改变过渠道！从未被人报道过！这是我见过中国最牛最有钱……活的最明白的人之一！因为我们多年前有约定！所以我不能公开他．她的信息！ #surveillance #humanrights"))
+            (u (:- `(small () "" ,(@ "https://steemit.com/tech/@iyouport/130-lgbt"
+                                     "以色列间谍软件公司出售监视技术和知识在130个国家针对记者、异议和LGBT人群")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/139508")
+            '(q () (pre () "10月25日：胡锡进这个畜生……必将受到上天的严惩！既然这个地方那么好！应该将胡锡进的全部家人按排在这个地方！让新彊的人民好好照顾一下！"))
+            (u (:- `(small () "胡锡进拍的视频(YouTube自己搜索)" " 震惊我的是 他居然有YouTube的频道 这段关于新疆集中营的评论 舔的..."
+                           (p () ,(@ "https://www.youtube.com/watch?v=uOZafUar6uQ"
+                                  "【胡锡进】新疆开展职教培训被西方称为宗教迫害，他们才不关心新疆人的福祉"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/139432")
+               '(q () (pre () "10月25日：这个报纸的今天这篇文章是谦虚的说法！接下来他们还会有更多的报道！他们会有更多的报道证明！王岐山与马云窜访以色列真正的角色和目的！"))
+               (u (:- `(small () "文章: " ,(@ "https://www.haaretz.com/.premium-how-close-to-china-is-too-close-for-israel-1.6576714"
+                                             "How Close to China Is Too Close for Israel?")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/139417")
+            '(q () (pre () "
+10月25日：一系列的冤假错案！打飞机死．躲猫猫死．抑郁证死！喝水死！……全人类只有CCP这样的组织干的出来！而且还一直干！边吃边说边干！越干越大！事实中国每时每刻都在发生着一个个如刘希泳先生的事件！我们民族的沉默．各扫门前雪的自私文化……成就了CCP的暴行！也让我们都会可能成为下一个刘希泳！再看看这几天关于新疆集中营的低级谎言！我们还能信他们什么！我为此感到丢脸！愤怒！可我更知道！只有行动才有机会！才可能改变！才能赢！"))
+            (u (:- '(pre () "刘希泳事件"))
+               (:- `(small () "新疆集中营的低级谎言 (参考:" ,(@ "https://zh.wikipedia.org/zh-cn/新疆再教育营#中国政府的反应") ")"
+                           (p () "大致意思就是 从否认 不存在 到 说这是合法的 是对新疆好的 是在开展职业技能教育培训")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/139408")
+            '(q () (pre () "看看这篇文章……是多么搞笑和荒唐！中国私人企业主的可怜与悲哀！http://www.jpolrisk.com/"))
+            (u (:- `(small () "文章: " ,(@ "https://www.jpolrisk.com/how-china-interferes-in-u-s-elections/"
+                                           "How China Interferes in U.S. Elections")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=BDSHoECggCs"
+                           "Oct 25th 2018 10月25日：刚刚在以色列科技创新论坛上的王岐山．马云．言讲为什么状态这么不好！以色列人如何看他们的窜访！")
+               (u (:- '(pre () "以色列人 明白 中共要干什么 但是呢 不骗白不骗 送上门的钱不赚白不赚 同时不会帮它们对抗美国 "))
+                  (:- '(pre () "此次 以色列 创新论坛 和 Google的关系"))
+                  (:- '(pre () "海外对 王健事件 787 范冰冰 都知道  关注裴楠楠超过王岐山"))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/139328")
+               '(q () (pre () "为什么海航集团要卖王岐山的专机787！"))
+               (u (:- `(small () ,(@ "https://cn.reuters.com/article/china-hna-sell-business-jet-2-deer-1025-idCNKCS1MZ149"
+                                   "独家：海航集团挂牌出售旗下波音787“梦想”公务机“2-DEER”")
+                            (small () "2018.10.25 路透社"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 25
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -502,7 +544,7 @@ The Pierre Hotel, New York
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.25 14:42:05"
+ "2018.10.26 15:42:27"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -533,7 +575,7 @@ The Pierre Hotel, New York
 
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "中美" (human-date (get-universal-time))
+ "中美" ;; (human-date (get-universal-time))
  "2018.10.23 12:32:26"
  (u (:- '(small () "2018.11")
         "南海军演")
@@ -640,7 +682,7 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "美国" ;; (human-date (get-universal-time))
- "2018.10.25 15:02:24"
+ "2018.10.26 14:22:17"
  (u (:- '(small () "2018.10.23")
         "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资"
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=aCdDjXTrgTQ"
@@ -650,7 +692,9 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
         (u (:- "相关"
                (u (:- '(samll () "2018.10.23")
                       (@ "https://www.zerohedge.com/news/2018-10-23/kyle-bass-trump-has-strongest-negotiating-position-weve-ever-had-against-china"
-                  "Kyle Bass: Trump Has \"Strongest Negotiating Position We've Ever Had\" Against China")))
+                         "Kyle Bass: Trump Has \"Strongest Negotiating Position We've Ever Had\" Against China")
+                      (u (:- "中文翻译: " (@ "https://littleantvoice.blogspot.com/2018/10/kyle-bass-trump-has-strongest.html?m=1"
+                                             "翻译：凯尔巴斯：特朗普有和中国谈判的最强“筹 码”")))))
                (u (:- '(samll () "2018.10.23")
                       (@ "https://www.bloombergquint.com/markets/university-of-texas-to-impose-new-rules-as-iran-sanctions-loom#gs.cQuj904"
                          "University of Texas Endowment to Impose New Rules for Iran Ties")))))
