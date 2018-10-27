@@ -27,7 +27,8 @@
   (:use :cl 
         :xt3.web.base)
   (:nicknames :twb)
-  (:export :generate))
+  (:export :generate
+           :gen-with-frame))
 (in-package :test-website)
 
 #+END_SRC
@@ -37,6 +38,28 @@
   (->file #P"./index.html" (index ()))
   (->file #P"./css/style.css" (css))
   (->file #P"./js/main.js" (js)))
+
+(defun gen-with-frame (title path)
+  (->file (merge-pathnames (concat "box-" (pathname-name path) ".html")
+                           path)
+          (->html
+           (layout-template
+            nil
+            :title title
+            :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
+                     (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
+                     (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
+            :content
+            `(,(site-header)
+               (main (:class "content" :style "display: flex")
+                     (iframe (:src ,(merge-pathnames path
+                                                     #P"/testwebsite/")
+                                   :style "width:100%; border:none; box-shadow: 0px 0px 20px; border-radius: 20px;")))
+               ,(site-footer))
+            :scripts `((script (:src "/testwebsite/js/jquery-3.2.1.min.js"))
+                       (script (:src "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                                     :integrity "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                                     :crossorigin "anonymous")))))))
 
 (defun human-date (date)
   (and date

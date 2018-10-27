@@ -1,0 +1,16 @@
+#+TITLE: 学习 C 语言笔记
+#+AUTHOR: Xt3
+#+OPTIONS: html-postamble:nil html-style:nil tex:nil
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+
+
+* COMMENT Generate
+#+BEGIN_SRC lisp
+(gen-with-frame "Learn C"
+                #P"articles/learn-c.html")
+
+
+#+END_SRC
+
+* 学习 C 语言笔记
