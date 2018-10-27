@@ -180,6 +180,19 @@ z-index:100;
 
 **** 11
 **** 10
+- 27
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.10.27")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=PDHGqbrtXNI"
+                           "10⽉月26⽇日：尊敬的战友们好：你们健身了吗！一切都是刚开始！谈港币和人⺠币 的汇率。")
+               (u (:- '(pre () "香港港币外汇较量激烈 超出原来想象(3-6个月政策维持力) 到时港币会政策调整(讨论美元和港币挂钩) 显现港币真正的价值"))
+                  (:- '(pre () "CCP 接下来 会转义视线 转移国内经济问题 对 香港澳门台湾 会更嚣张 澳门已经完了 香港会有各种死法死各种人 台湾会有内乱(蓝金黄内鬼对经济打击)"))))
+           (:- "视频(需订阅): " (@ "https://www.realvision.com/tv/shows/the-kyle-bass-interviews/videos/the-kyle-bass-interviews-the-billionaire-chinese-dissident?utm_campaign=43399_BNSAB_KA_SMT_RV_W1_BNS&utm_content=78982956&utm_medium=social&utm_source=twitter"
+                                   `(span () "THE KYLE BASS INTERVIEWS: THE BILLIONAIRE CHINESE DISSIDENT"
+                                         (small () " Featuring Miles Kwok")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 26
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -544,7 +557,7 @@ The Pierre Hotel, New York
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.10.26 15:42:27"
+ "2018.10.27 13:05:25"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -793,7 +806,7 @@ Thank you. God bless you. And God bless the nations of the world.")))))))
 ** 中共国 供应链 恶意芯片植入 事件
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "中共国 供应链 恶意芯片植入 事件" (human-date (get-universal-time))
+ "中共国 供应链 恶意芯片植入 事件" ;; (human-date (get-universal-time))
  "2018.10.24 12:51:54"
  (u (:- "主"
         (u (:- '(small () "2018.10.22")
