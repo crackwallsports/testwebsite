@@ -1,5 +1,5 @@
 ;; (Date Ref Title Intro)
-(("2018 10 27"
+(("2018 10 28"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
@@ -19,8 +19,14 @@
           (span () "美国 川普总统 联合国演讲"))))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
-  "学习 C语言 笔记 - Learn C Programming Note"
-  "")
+  "学习 C 语言 - 笔记整理 (草稿)"
+  (div ()
+     (span (:class "badge badge-success") "更新-10.28")
+     (pre () "
+C 语言学习的笔记整理 不是单纯的修剪笔记 而是 重构
+重新思考 如何一点点引导 将整个知识串接在一起
+目前只是试验阶段 
+")))
  ("2017 7 22"
   "/testwebsite/articles/2017/7/box-web-learn-nodeexpress.html"
   "Web 开发学习笔记 - SbyS: Node.js Express MongoDB"

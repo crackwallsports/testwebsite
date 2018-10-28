@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2018-10-27 Sat 20:38 -->
+<!-- 2018-10-28 Sun 23:12 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>学习 C 语言笔记</title>
+<title>学习 C 语言 - 笔记整理 (草稿)</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Xt3">
 <link href="/testwebsite/css/org.css" rel="stylesheet"></link>
@@ -57,45 +57,306 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">学习 C 语言笔记</h1>
+<h1 class="title">学习 C 语言 - 笔记整理 (草稿)</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org89eea1b">1. 基础</a></li>
+<li><a href="#org3752e5d">1. 开始前</a>
+<ul>
+<li><a href="#orgbce0320">1.1. 我们要做什么?</a></li>
+<li><a href="#org4935cff">1.2. 准备</a></li>
+</ul>
+</li>
+<li><a href="#orgbadf2b2">2. 开始</a></li>
+<li><a href="#org216852a">3. 基础</a>
+<ul>
+<li><a href="#org586dd4c">3.1. 类型</a></li>
+<li><a href="#org9531da3">3.2. 数</a></li>
+<li><a href="#org5ff6153">3.3. 字符</a></li>
+<li><a href="#orgf46e0f3">3.4. 数组</a></li>
+<li><a href="#org40e0c59">3.5. 指针</a></li>
+<li><a href="#orgc0ffe1c">3.6. 字符串</a></li>
+<li><a href="#orgcb5f1ae">3.7. 函数</a></li>
+<li><a href="#org2ca44f3">3.8. IO</a>
+<ul>
+<li><a href="#org8d3727f">3.8.1. 标准输入输出</a></li>
+<li><a href="#org0ebbee4">3.8.2. 文件</a></li>
+</ul>
+</li>
+<li><a href="#org4fbb246">3.9. 控制流程</a></li>
+<li><a href="#orgc3560d4">3.10. 结构 共用 枚举</a></li>
+<li><a href="#orgf61d659">3.11. 动态内存分配</a></li>
+<li><a href="#org2b630b1">3.12. 概念</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-org89eea1b" class="outline-2">
-<h2 id="org89eea1b"><span class="section-number-2">1</span> 基础</h2>
+<div id="outline-container-org3752e5d" class="outline-2">
+<h2 id="org3752e5d"><span class="section-number-2">1</span> 开始前</h2>
 <div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgbce0320" class="outline-3">
+<h3 id="orgbce0320"><span class="section-number-3">1.1</span> 我们要做什么?</h3>
+<div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
+<li>将 脑子里想的东西 和 解决问题的方法 翻译成 程序</li>
+<li>程序 <code>?:</code> 计算机可以运行的 机器指令 (二进制代码 类似100000111100000100000001)
+<ul class="org-ul">
+<li>我们直接写机器指令 <code>?:</code> bang&#x2026; 脑袋炸了</li>
+<li>使用对应的 汇编指令 (addl $1, %ecx) <code>?:</code> 好一点 但还是不要</li>
+<li>自然语言 <code>?:</code> 喜欢 爱死了 <code>!:</code> 目前还不可能达到</li>
+<li>类似自然语言(高级语言) 限定的少量的词汇和语法 <code>?:</code> OK</li>
+</ul></li>
+<li>三个问题
+<ul class="org-ul">
+<li>? 用什么写程序
+<ul class="org-ul">
+<li>IDE (集成开发环境)</li>
+<li>Editor (编辑器)</li>
+</ul></li>
+<li>? 怎么翻译 (高级语言 -&gt; 机器指令)
+<ul class="org-ul">
+<li>翻译(编译 或 解释) 
+<ul class="org-ul">
+<li>编译器</li>
+<li>编译流程自动化</li>
+</ul></li>
+</ul></li>
+<li>? 如何运行
+<ul class="org-ul">
+<li>运行</li>
+<li>输入 输出</li>
+</ul></li>
+</ul></li>
+<li>脑子里的东西 和 解决问题的方法 怎么用 编程语言 写出来(表示) ?
+<ul class="org-ul">
+<li>把 所想的东西 转换成 计算(算法, 步骤, 菜谱)</li>
+<li>How?</li>
+</ul></li>
+<li>计算机技术 基础知识 等等 (不在此笔记中啰嗦)</li>
+<li>这里不关心 底层(计算机具体实现) 把它抽象掉(仅仅使用一些词语来代表)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4935cff" class="outline-3">
+<h3 id="org4935cff"><span class="section-number-3">1.2</span> 准备</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>开发环境
+<ul class="org-ul">
+<li>编辑器或IDE</li>
+<li>编译器 : gcc, clang</li>
+<li>编译流程自动化 : make, Makefile</li>
+</ul></li>
+<li>流程示范: [OS:MacOS]
+<ul class="org-ul">
+<li>打开 终端(Terminal)</li>
 <li><p>
-Hello World
+准备工作
 </p>
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
+<pre class="src src-shell">mkdir test <span style="color: #8B8989; font-style: italic;"># </span><span style="color: #8B8989; font-style: italic;">&#24314;&#31435; &#39033;&#30446;&#30446;&#24405;</span>
+<span style="color: #4c83ff;">cd</span> test <span style="color: #8B8989; font-style: italic;"># </span><span style="color: #8B8989; font-style: italic;">&#36827;&#20837; &#39033;&#30446;&#30446;&#24405;</span>
+touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span style="color: #8B8989; font-style: italic;">&#26032;&#24314; &#28304;&#25991;&#20214;</span>
+</pre>
+</div></li>
+<li><p>
+用编辑器 打开源文件 写代码
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #8B8989; font-style: italic;">/* </span><span style="color: #8B8989; font-style: italic;">code.c </span><span style="color: #8B8989; font-style: italic;">*/</span>
+
+<span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
 <span style="color: #afd8af;">int</span> <span style="color: #ff1493;">main</span>(){
   printf(<span style="color: #61CE3C;">"hello world"</span>);
 }
 </pre>
+</div></li>
+<li><p>
+编译 和 运行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">cc code.c -o code
+./code
+</pre>
+</div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbadf2b2" class="outline-2">
+<h2 id="orgbadf2b2"><span class="section-number-2">2</span> 开始</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>? 我想让程序 输出 一些文字
+<ul class="org-ul">
+<li><p>
+文字 怎么表达 <code>?:</code> 用 字符串
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #61CE3C;">"&#23383;&#31526;&#20018;"</span>
+</pre>
+</div></li>
+<li><p>
+输出 <code>?:</code> 输出函数 这里使用puts函数
+</p>
+<div class="org-src-container">
+<pre class="src src-C">puts(<span style="color: #61CE3C;">"&#23383;&#31526;&#20018;"</span>);
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+<code>!:</code> puts不是我们定义的 需要导入头文件 (放在开头)
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+写在哪 <code>?:</code> main函数里 main()是程序执行的起点 这是约定
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
+
+<span style="color: #afd8af;">int</span> <span style="color: #ff1493;">main</span>(){
+  puts(<span style="color: #61CE3C;">"&#23383;&#31526;&#20018;"</span>);
+  
+  <span style="color: #4c83ff;">return</span> 0;
+}    
+</pre>
+</div></li>
+</ul></li>
+</ul>
+</div>
 </div>
 
-<pre class="example">
-hello world
-
-</pre>
-
-<p>
-输出:
+<div id="outline-container-org216852a" class="outline-2">
+<h2 id="org216852a"><span class="section-number-2">3</span> 基础</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org586dd4c" class="outline-3">
+<h3 id="org586dd4c"><span class="section-number-3">3.1</span> 类型</h3>
+</div>
+<div id="outline-container-org9531da3" class="outline-3">
+<h3 id="org9531da3"><span class="section-number-3">3.2</span> 数</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><p>
+整数
 </p>
-<pre class="example">
-hello world
+<div class="org-src-container">
+<pre class="src src-C">123
+-789
 
-</pre></li>
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#36827;&#21046;&#34920;&#31034;&#27861;</span>
+31 <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#21313;&#36827;&#21046;</span>
+025 <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#20843;&#36827;&#21046; 0&#24320;&#22836;</span>
+0x19 <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#21313;&#20845;&#36827;&#21046; 0x&#24320;&#22836;</span>
+</pre>
+</div></li>
+<li><p>
+浮点数(小数)
+</p>
+<div class="org-src-container">
+<pre class="src src-C">123.3
+.3, 3. <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#30465;&#30053;&#37096;&#20998;</span>
+1.2e2, 1.2e-2 <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#31185;&#23398;&#35745;&#25968;&#27861;</span>
+</pre>
+</div></li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org5ff6153" class="outline-3">
+<h3 id="org5ff6153"><span class="section-number-3">3.3</span> 字符</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>字符</li>
+<li>内部表示 : 整数
+<ul class="org-ul">
+<li>ASCII编码 ?
+<ul class="org-ul">
+<li>编码 ?</li>
+</ul></li>
+</ul></li>
+<li>特殊字符(转义)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf46e0f3" class="outline-3">
+<h3 id="orgf46e0f3"><span class="section-number-3">3.4</span> 数组</h3>
+</div>
+<div id="outline-container-org40e0c59" class="outline-3">
+<h3 id="org40e0c59"><span class="section-number-3">3.5</span> 指针</h3>
+</div>
+<div id="outline-container-orgc0ffe1c" class="outline-3">
+<h3 id="orgc0ffe1c"><span class="section-number-3">3.6</span> 字符串</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>字符串</li>
+<li><p>
+如何表示 <code>?:</code> 字符数组 或 字符指针
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #afd8af;">char</span> <span style="color: #ff69b4;">str</span>[] = {<span style="color: #61CE3C;">'\a'</span>, <span style="color: #61CE3C;">'\b'</span>, <span style="color: #61CE3C;">'\c'</span>, <span style="color: #61CE3C;">'\0'</span>};
+<span style="color: #afd8af;">char</span>* <span style="color: #ff69b4;">str</span> = <span style="color: #61CE3C;">"abc"</span>; 
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb5f1ae" class="outline-3">
+<h3 id="orgcb5f1ae"><span class="section-number-3">3.7</span> 函数</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li>把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用</li>
+<li>定义</li>
+<li>调用</li>
+<li>返回值</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ca44f3" class="outline-3">
+<h3 id="org2ca44f3"><span class="section-number-3">3.8</span> IO</h3>
+<div class="outline-text-3" id="text-3-8">
+</div><div id="outline-container-org8d3727f" class="outline-4">
+<h4 id="org8d3727f"><span class="section-number-4">3.8.1</span> 标准输入输出</h4>
+</div>
+<div id="outline-container-org0ebbee4" class="outline-4">
+<h4 id="org0ebbee4"><span class="section-number-4">3.8.2</span> 文件</h4>
+</div>
+</div>
+<div id="outline-container-org4fbb246" class="outline-3">
+<h3 id="org4fbb246"><span class="section-number-3">3.9</span> 控制流程</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>顺序 分支 循环(递归)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc3560d4" class="outline-3">
+<h3 id="orgc3560d4"><span class="section-number-3">3.10</span> 结构 共用 枚举</h3>
+</div>
+<div id="outline-container-orgf61d659" class="outline-3">
+<h3 id="orgf61d659"><span class="section-number-3">3.11</span> 动态内存分配</h3>
+</div>
+<div id="outline-container-org2b630b1" class="outline-3">
+<h3 id="org2b630b1"><span class="section-number-3">3.12</span> 概念</h3>
+<div class="outline-text-3" id="text-3-12">
+<ul class="org-ul">
+<li>头文件
+<ul class="org-ul">
+<li>导入</li>
+</ul></li>
+<li>字面量</li>
+<li>作用域 生命周期</li>
+<li>变量</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

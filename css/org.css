@@ -248,7 +248,9 @@ textarea{overflow:auto}
 .org-variable-name{color:sienna}
 .org-warning{color:#ff8c00;font-weight:700}
 .org-warning-1{color:red;font-weight:700}
-body{width:95%;margin:2%;font:normal normal normal 16px/1.6em Helvetica,sans-serif;color:#333}
+body{width:95%;margin:2%;font:normal normal normal 16px/1.6em; /*Helvetica,sans-serif;*/
+    color:#333}
+body{font-size: 13px}
 @media (min-width:769px){body{width:700px;margin:5vw auto;}
 }::-moz-selection{background:#d6edff}
 ::selection{background:#d6edff}
@@ -323,5 +325,19 @@ pre.src-makefile:before{content:"Makefile"}
 #bibliography{font-size:90%}
 #bibliography table{width:100%}
 .creator{display:block}
-@media (min-width:769px){.creator{display:inline;float:right}
+@media (min-width:769px){.creator{display:inline;float:right}}
+/* My */
+ul, li {
+/*list-style: none;*/
+padding-left: 16px;
+list-style-position: inside;
 }
+li {
+    padding: 5px 0px 0px 0px;
+}
+/*
+li::before {
+    content: "-";
+    padding-right: 8px
+}
+*/
