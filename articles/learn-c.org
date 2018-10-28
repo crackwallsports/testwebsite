@@ -9,8 +9,22 @@
 #+BEGIN_SRC lisp
 (gen-with-frame "Learn C"
                 #P"articles/learn-c.html")
-
-
 #+END_SRC
 
-* 学习 C 语言笔记
+* 基础
+- 计算机技术 基础知识
+  - 二进制 内存表示(地址) 编译 链接
+- 语法 知道程序长什么样子 各个部分是什么 什么对应什么
+  - 主函数
+  - 导入 头文件
+- 思维映射 脑子里想的东西 怎么翻译成程序 相互之间的对应关系是什么
+- 顺序 分支 循环(递归)
+- 例子
+  #+BEGIN_SRC C 
+#include <stdio.h>
+int main(){
+  printf("hello world");
+}
+  #+END_SRC
+
+

@@ -22,12 +22,21 @@
             :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
                      (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
                      (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
+            :head-rest `("
+<script>
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+</script>
+")
             :content
             `(,(site-header)
-               (main (:class "content" :style "display: flex")
+               (main (:class "content")
                      (iframe (:src ,(merge-pathnames path
                                                      #P"/testwebsite/")
-                                   :style "width:100%; border:none; box-shadow: 0px 0px 20px; border-radius: 20px;")))
+                                   :onload "resizeIframe(this)"
+                                   ;; :scrolling "no"
+                                   :style "width:100% ; border:none; box-shadow: 0px 0px 20px; border-radius: 20px;")))
                ,(site-footer))
             :scripts `((script (:src "/testwebsite/js/jquery-3.2.1.min.js"))
                        (script (:src "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
