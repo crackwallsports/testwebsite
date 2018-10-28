@@ -3,16 +3,14 @@
 #+AUTHOR: Xt3
 #+OPTIONS: html-postamble:nil html-style:nil tex:nil
 #+HTML_DOCTYPE: html5
-#+HTML_HEAD:<link href="../../../css/org.css" rel="stylesheet"></link>
+#+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
 
 
-#+BEGIN_EXPORT html
-<a href="../../../index.html" style="position:fixed; left:10px; bottom:10px">
-<img src="../../../resource/carrot.PNG" style="width:60px;height:60px;" title="Go back?"/>
-返回
-</a>
-#+END_EXPORT
-
+* COMMENT Generate
+#+BEGIN_SRC lisp
+(gen-with-frame "Web 开发学习笔记 - SbyS: Node.js Express MongoDB"
+                #P"articles/2017/7/web-learn-nodeexpress.html")
+#+END_SRC
 
 
 * Note
