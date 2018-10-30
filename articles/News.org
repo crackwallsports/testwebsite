@@ -180,6 +180,24 @@ z-index:100;
 
 **** 11
 **** 10
+- 30
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.10.30")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/140840")
+               '(q () (pre () "
+10🈷️30日：关于重庆市坠江事件发生的真正原因是P2P受害者无奈的情况下的错误的选择……同归于尽……这不应该带上无辜的人呀……悲哀悲痛……CCP种下的毒！"))
+               (u (:- '(pre () "10.28 10pm 重庆市万州区 一辆公交车 行驶至长江二桥时 与一辆小轿车相撞后 坠江  初步事故现场调查 系公交客车在行驶中突然越过中心实线 撞击对向正常行驶的小轿车后冲上路沿 撞断护栏 坠入江中 -sohu(搜狐)" ))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/140744")
+               '(q () (pre () "
+尊敬的战友们好！这是班农先生制作的特朗普总统和他的战争的纪录片。班农先生不仅是一个超级政治家、金融家，他还是一个电影的制作天才。他用最简单的语言告诉了我们想知道的事情的答案，给我们制定未来的方向。一切都是刚刚开始的！"))
+               (u (:- `(pre () "纪录片(1h16m): "
+                              ,(@ "https://www.youtube.com/watch?v=ezs67gVtKKY"
+                                  "班农先生制作的特朗普总统和他的战争的纪录片")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=qsp8kDaEc5U"
+                           "郭文贵10月29日:多名CCP座上客对中共态度的转变.在文贵家开“反CCP联盟大会”")))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 29
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -600,7 +618,7 @@ The Pierre Hotel, New York
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"    ;; (human-date (get-universal-time))
- "2018.10.29 13:27:37"
+ "2018.10.30 12:40:03"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -650,9 +668,15 @@ The Pierre Hotel, New York
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.10.23 12:32:26"
+ "2018.10.30 12:44:36"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.10.26")
+        (@ "https://www.state.gov/secretary/remarks/2018/10/286926.htm"
+           "Interview With Hugh Hewitt of the Hugh Hewitt Show")
+        (u (:- "中文参考: " (@ "https://www.voachinese.com/a/pompeo-china-2018-10-26/4631048.html"
+                               "蓬佩奥：中国的每一个挑衅都会得到美国强有力的回应")
+               '(small () "2018.10.27 VOA"))))
     (:- '(small () "2018.10.22")
         (@ "https://freebeacon.com/national-security/u-s-warships-transit-taiwan-strait/"
            "U.S. Warships Transit Taiwan Strait")
@@ -726,10 +750,6 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 #+END_SRC
 
 ** 中共国
-- 关注
-  - Youbube
-    - 路德社
-    - 战友之声
 - 孟宏伟
   - 孟宏伟妻子 接受采访
   - 中共 发布信息 说孟宏伟正接受调查
@@ -738,18 +758,18 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中共国" ;; (human-date (get-universal-time) )
- "2018.10.22 17:46:20"
- (u (:- "关注"
-        (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
-                  "路德社"))
-           (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
-                  "战友之声")))))
+ "2018.10.30 12:02:11"
  (u (:- "事件"
         (u (:- '(small () "2018.10.20")
                "澳门中联办主任 郑晓松 死亡"
                (u (:- '(pre () "郭文贵: 是被杀 他与孟宏伟是好哥们"))
                   (:- '(pre () "中共官方: 中央人民政府驻澳门特别行政区联络办公室主任 郑晓松同志 因患抑郁症 于2018年10月20日晚 在其澳门住所 坠楼身亡")))))
-        (u (:- "孟宏伟")))))
+        (u (:- "孟宏伟")))
+    (:- "国外"
+        (u (:- '(small () "2018.10.26")
+               (@ "https://www.cbc.ca/news/politics/mcccallum-china-trade-human-rights-1.4878455"
+                  "Canada prepared to stall trade deal with China until its behaviour is 'more reasonable'")
+               '(small () "CBC"))))))
 #+END_SRC
 
 ** 美国
@@ -944,4 +964,22 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
                    ,(@ "https://www.lawfareblog.com/china-supermicro-hack-about-bloomberg-report"
                        "The China SuperMicro Hack: About That Bloomberg Report")
                    (small () "2018.10.4")))))))
+#+END_SRC
+** 当前关注自媒体
+- 关注
+  - Youbube
+    - 路德社
+    - 战友之声
+#+BEGIN_SRC lisp :tangle yes
+(news-to-topic
+ "当前关注自媒体" ;; (human-date (get-universal-time) )
+ "2018.10.30 12:52:07"
+ '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
+ (u (:- "Youtube"
+        (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
+                  "路德社"))
+           (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
+                  "战友之声"))
+           (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
+                  "政事直播(政事小哥)"))))))
 #+END_SRC
