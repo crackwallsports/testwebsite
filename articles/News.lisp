@@ -119,6 +119,30 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.10.31")
+        (u (:- "视频: " (@ "" ""))
+           (:- "郭文: " (@ "https://www.guo.media/posts/141074") "和" (@ "https://www.guo.media/posts/141160")
+               '(q () (pre () "
+10月30日：伟大的智慧的战友们！真正的高手！你们太历害！文贵太佩服太感谢了！
+
+10月30日：破7了……到底破了……"))
+               (u (:- '(pre () "人民币汇率破7 ?: (引用 后面一条郭文中图片中网友解释 ) 这是银行换汇价格 不是外汇交易市场价格(当前还在6.97) 这是大鳄在引导市场 之后等待时机而爆破"))
+                  (:- `(small () "最新法国官方调查报告: "
+                              ,(@ "https://freebeacon.com/national-security/french-court-rules-chinese-tycoon-died-accident/"
+                                  "French Court Rules Chinese Tycoon Died in Accident")
+                              (small () "2018.10.30 FreeBeacon"))
+                      (u (:- `(small () "中文翻译: "
+                                     ,(@ "https://littleantvoice.blogspot.com/2018/10/bill.html?m=1"
+                                         "翻译：自由灯塔Bill 法国法院裁定中国大亨死于意外 海航联合创始人王建的死亡之谜")
+                                     (small () "2018.10.30 战友之声")) )))))
+            (:- "郭文(2条 照片展示): " (@ "https://www.guo.media/posts/141038") "..."
+               '(q () (pre () "
+10月30日：这是郭战装冬装的上衣！和休闲裤的样板！随便照的照片！展示给大家分享！一切都是刚刚开始！")))
+           (:- "郭文(保平安短视频): " (@ "https://www.guo.media/posts/141022")
+               (u (:- '(pre () "俄罗斯朋友办公室开发 有洛克希德马丁和雷神公司的独立决策专业顾问(股东) ")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.10.30")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/140840")
                '(q () (pre () "
@@ -514,7 +538,7 @@ The Pierre Hotel, New York
 
 (news-to-topic
  "郭文贵"    ;; (human-date (get-universal-time))
- "2018.10.30 12:40:03"
+ "2018.10.31 11:57:02"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -531,6 +555,14 @@ The Pierre Hotel, New York
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.10.30")
+               "最新法国官方调查结果"
+               (u (:- (@ "https://freebeacon.com/national-security/french-court-rules-chinese-tycoon-died-accident/" 
+                         "French Court Rules Chinese Tycoon Died in Accident")
+                      '(small () "2018.10.30 FreeBeacon"))
+                (:- "中文翻译: " (@ "https://littleantvoice.blogspot.com/2018/10/bill.html?m=1"
+                                    "翻译：自由灯塔Bill 法国法院裁定中国大亨死于意外 海航联合创始人王建的死亡之谜")
+                    '(small () "2018.10.30 战友之声") )))
            (:- '(small () "2018.10.29")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/140349")
                       '(q () (pre () "
@@ -539,7 +571,7 @@ The Pierre Hotel, New York
                       '(q () (pre () "
 10月28日：法国司法部决定．高院和普罗旺死法院里昂法院联合做出一个判决．王健被杀案很多关键的事实否定．并通过法院来坐实建属于自己杀自己．自己找死……法院判决结果！并没有任何证人和杀手在现场！法国版的大连法院审判！一切都是刚刚开始！")))
                   (:- "视频: " (@ "https://www.youtube.com/watch?v=1O8D-gWQD7o"
-                           "战友之声 20181028 郭文贵直播（完整版） 中美将进入全面金融贸易战 新疆集中营问题将得到国际社会的关注，法国内政部被绿了？")
+                                  "战友之声 20181028 郭文贵直播（完整版） 中美将进入全面金融贸易战 新疆集中营问题将得到国际社会的关注，法国内政部被绿了？")
                       (u (:- '(pre () "(32:00) 王健之死的进展 法国新的调查报告 中共为掩盖事实的无耻行径 法国蓝金黄的程度可见一斑"))
                          (:- '(pre () "(46:50) 官方人说: 孟宏伟被抓 很大程度上与王健之死有关 因为孟被抓 好几人中共国人也在法国消失"))
                          (:- '(pre () "(52:00) 王健之死新闻发布会 会 异常的精彩 异常的平淡 也会..."))))))
