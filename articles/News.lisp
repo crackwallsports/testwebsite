@@ -62,6 +62,8 @@
     :head-rest `((style () "
 .btn-link {color: black }
 .btn-link:hover {text-decoration:none}
+cite {
+font-size: 88% }
 q {
 border-left: 5px rgb(210, 212, 212) solid;
 display: block;
@@ -119,6 +121,27 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.2")
+        (u (:- "视频(华盛顿报平安): "
+               (@ "https://www.youtube.com/watch?v=qhnw2-Dv8X8"
+                  "Nov 1st 2018")
+               (u (:- '(pre () "一位牛人 讲述其过去的经历 和王岐山见面的一些细节"))
+                  (:- '(pre () "王认为川普只关心钱 不会在意人权宗教等 故希望他们帮助川普当选"))
+                  (:- '(pre () "刘鹤")
+                      (u (:- '(pre () "牛人们都关心 刘鹤 还能活多久 会不会被免职 进监狱 因为他的想法执行不下去 可能被其它人干掉"))
+                         (:- '(pre () "刘鹤 在美国有很多朋友 他表面上和私底下是不同的 他是亲美的亲西方的 反对私企国有化 反对打击宗教 反对搞个人崇拜 认为世界贸易应该更加公平 且在可执行的法律基础之上"))))
+                  (:- '(pre () "台湾 被控被蓝金黄 比大家想象的要严重的多得多"))
+                  (:- '(pre () "香港 已经变得更像大陆了 无法之地"))
+                  (:- '(pre () "美国 在全面觉醒 不会有交易 是生死之战 "))
+                  (:- '(pre () "巴西"))
+                  (:- '(pre () "关于CCP的 演讲 和 会议"))
+                  (:- '(pre () "CCP不仅要你的钱 它们更要你的命 你的信仰 你的文化"))
+                  (:- '(pre () "蓝金黄  巴西 某军方人士 被蓝金黄的例子 愉悦的被下套"))
+                  (:- '(pre () "3年  2017爆料革命开明智 2018-2019.5与西方互动团结 感受到威胁 形成战斗力 2020结束"))
+                  (:- '(pre () "我们一定会赢 而且 会赢的非常精彩")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.1")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=1UqJoXbbdx0"
                            "10月31日：郭文贵在华盛顿直播 关于今天参加反共大联盟会议的详情和报告 世界正在巨变！")
@@ -141,8 +164,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"    ;; (human-date (get-universal-time))
- "2018.11.01 14:16:28"
+ "郭文贵"     ;; (human-date (get-universal-time))
+ "2018.11.02 12:54:05"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -195,9 +218,28 @@ z-index:100;
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.10.30 12:44:36"
+ "2018.11.02 11:59:11"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.11.1")
+        "Attorney General Jeff Sessions Announces New Initiative to Combat Chinese Economic Espionage"
+        '(small () " -U.S. DOJ : ")
+        (@ "https://www.youtube.com/watch?v=zHi1iTjQ_FQ&feature=youtu.be"
+           "视频")
+        " "
+        (@ "https://www.justice.gov/opa/speech/attorney-general-jeff-sessions-announces-new-initiative-combat-chinese-economic-espionage"
+           "文本")
+        '(q () (pre () "
+As the cases I’ve discussed have shown, Chinese economic espionage against the United States has been increasing—and it has been increasing rapidly.
+
+We are here today to say: enough is enough.  We’re not going to take it anymore.
+
+It is unacceptable.  It is time for China to join the community of lawful nations.  International trade has been good for China, but the cheating must stop. And we must have more law enforcement cooperation; China cannot be a safe haven for criminals who run to China when they are in trouble, never to be extradited. China must accept the repatriation of Chinese citizens who break U.S. immigration law and are awaiting return.
+...
+This Department of Justice—and the Trump administration—have already made our decision: we will not allow our sovereignty to be disrespected, our intellectual property to be stolen, or our people to be robbed of their hard-earned prosperity.  We want fair trade and good relationships based on honest dealing.  We will enforce our laws—and we will protect America’s national interests."))
+        (u (:- `(cite () "中文参考: "
+                      ,(@ "https://www.voachinese.com/a/chinese-criminal-20181101/4638912.html?utm_source=dlvr.it&utm_medium=twitter"
+                          "针对中国经济间谍活动美司法部长宣布新行动")))))
     (:- '(small () "2018.10.26")
         (@ "https://www.state.gov/secretary/remarks/2018/10/286926.htm"
            "Interview With Hugh Hewitt of the Hugh Hewitt Show")
