@@ -121,6 +121,39 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.4")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/142652")
+               '(q () (pre () "
+11月3日：这些勤劳的．智慧的．伟大的．战友是CCP的天敌！上天的天使！他们的愚蠢与疯狂从末遇到挑战！现在该是结束他们的时候了！"))
+               (u (:- '(pre () "班农 与 David Forum 的辩论")
+                      (u (:- `(cite () "(含视频) " ,(@ "https://www.munkdebates.com/The-Debates/The-Rise-of-Populism"
+                                                       "The Rise of Populism")
+                                    (small () "2018.11.2 munkdebates")))
+                         (:- `(cite () "视频: " ,(@ "https://www.youtube.com/watch?v=poq5ZrAc7pk&feature=youtu.beThe Rise of Populism"
+                                                    "Munk Debate: The Rise of Populism")
+                                    (small () "Youtube")))
+                         (:- `(small () (table (:class "table" :style "display:inline")
+                                               (thead () (tr (:scope "row")
+                                                             (th (:score "col") "辩论")
+                                                             (th (:score "col") "正方: Stephen K. Bannon")
+                                                             (th (:score "col") "反方: David Frum")))
+                                               (tbody ()
+                                                      (tr () (th (:scope "row") "开始前")
+                                                          (td () "28%")
+                                                          (td () "72%"))
+                                                      (tr () (th (:scope "row") "结束后")
+                                                          (td () "57%")
+                                                          (td () "43%"))))))
+                         (:- '(pre () "(我: 视频还没看 我只想说 让精英管理政府没问题 但不要把 精英和其他民众割离开来 精英也是民众 也来源于民众 不能割离开来 不能让管理阶层形成小圈子 成为只有那些家族和利益集团的所有物 这不民主 我是希望提升整个社群每一个人的智力 让更多人能够自主并选择参与 而不是 仅仅培养一些人"))))
+                  (:- '(pre () "重庆公交坠江事件 对 官方放出的车内视频 的 质疑")))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.11.3")
+        (u (:- "郭文(多条包含在华盛顿的照片): " (@ "https://www.guo.media/posts/142297") "..."))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.2")
         (u (:- "视频(华盛顿报平安): "
                (@ "https://www.youtube.com/watch?v=qhnw2-Dv8X8"
@@ -164,8 +197,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"     ;; (human-date (get-universal-time))
- "2018.11.02 12:54:05"
+ "郭文贵"  ;; (human-date (get-universal-time))
+ "2018.11.04 14:18:14"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
