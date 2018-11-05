@@ -121,6 +121,21 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.5")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=Zux_BvcWRGI"
+                           "11月4日郭文贵先生报平安视频，纽约马拉松。。。")
+               '(small () "Youtube")
+               (u (:- '(pre () "等待中期选举的结果"))
+                  (:- '(pre () "从以色列回来的朋友 关于王岐山和裴楠楠 过几天再说"))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/142997")
+               '(q () (pre () "11月4日:共产党最爱的床上运动.与西方的马拉松活动有什么不同！周末一笑！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/142901")
+               '(q () (pre () "
+11月4日：孩子．老人切勿点这个视频！这不是黄色视频．但是这些人随时可以让我们没有性能力！或者没有命．没有子孙！仅仅是给一些年轻的有良知的人看的！自私与冷漠会让我们每一个家人都会有如此的下场！"))
+               (u (:- '(pre () "视频是关于中共国暴力执法")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.4")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/142652")
                '(q () (pre () "
@@ -144,7 +159,7 @@ z-index:100;
                                                       (tr () (th (:scope "row") "结束后")
                                                           (td () "57%")
                                                           (td () "43%"))))))
-                         (:- '(pre () "(我: 视频还没看 我只想说 让精英管理政府没问题 但不要把 精英和其他民众割离开来 精英也是民众 也来源于民众 不能割离开来 不能让管理阶层形成小圈子 成为只有那些家族和利益集团的所有物 这不民主 我是希望提升整个社群每一个人的智力 让更多人能够自主并选择参与 而不是 仅仅培养一些人"))))
+                         (:- '(pre () "(我: 视频还没看 我只想说 让精英管理政府没问题 但不要把 精英和其他民众割离开来 精英也是民众 也来源于民众 不能割离开来 不能让管理阶层形成小圈子 成为只有那些家族和利益集团的所有物 这不民主 我是希望提升整个社群每一个人的智力 让更多人能够自主并选择参与 而不是 仅仅培养一些人)"))))
                   (:- '(pre () "重庆公交坠江事件 对 官方放出的车内视频 的 质疑")))))))
  *news-topics-guo*)
 
@@ -198,7 +213,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.11.04 14:18:14"
+ "2018.11.05 11:24:30"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -366,8 +381,9 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 
 (news-to-topic
  "美国" ;; (human-date (get-universal-time))
- "2018.10.26 14:22:17"
- (u (:- '(small () "2018.10.23")
+ "2018.11.05 11:29:23"
+ (u (:- '(small () "2018.11.6") "美国中期选举")
+    (:- '(small () "2018.10.23")
         "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资"
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=aCdDjXTrgTQ"
                            "Watch CNBC's full interview with Hayman Capital's Kyle Bass"))
@@ -554,7 +570,7 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
 
 (news-to-topic
  "当前关注自媒体" ;; (human-date (get-universal-time) )
- "2018.10.30 12:52:07"
+ "2018.11.05 11:24:53"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
  (u (:- "Youtube"
         (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
@@ -562,4 +578,6 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
            (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
                   "战友之声"))
            (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
-                  "政事直播(政事小哥)"))))))
+                  "政事直播(政事小哥)"))
+           (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
+                  "木蘭訪談"))))))

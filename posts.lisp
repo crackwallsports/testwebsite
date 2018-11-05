@@ -1,14 +1,17 @@
 ;; (Date Ref Title Intro)
-(("2018 11 4"
+(("2018 11 5"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.4")
+          (span (:class "badge badge-success") "每日追踪-11.5")
           (pre ()
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
                (small () "反CCP联盟")))
+     (div ()
+          (span () "美国中期选举")
+          (span (:class "badge badge-success") "等待结果"))
      (div ()
           (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
           (span (:class "badge badge-success") "更新-10.23"))
