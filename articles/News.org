@@ -181,6 +181,25 @@ z-index:100;
 #+END_SRC
 
 **** 11
+- 6
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.11.6")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/143368")
+               '(q () (pre () "
+11月5日：这个时间点来对话！而且被推迟了几次之后再来！这回真的会有事发生了！这回没有刘鹤先生了！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/143354")
+               '(q () (pre () "
+11月5日：大连法院130亿美元罚款．香港警方的绑架……捏造证据．虚构刑案……查封千亿资产．边控香港基金正常合作的律师．会计师……无关员工及家属几千人！包括小到三个月刚刚出生的孩子至93岁患重病的老人！在回东莞探亲．等从深圳回港时扣留至今！香港警察与大陆警察在大陆一家一家的抓捕……强迫．威胁做伪证……耍流氓！ 现在经济下行了．高法出来喝话了……＂不抓了．少判吧．快继续为共产党卖命挣钱吧＂这是从共产党强奸中国人民70年历史中第几次这样愚弄港人……和中国人民了！不是共产党太坏太黑……是我们太自私太懦弱了！这次我们不会再让他们得逞了！"))
+               (u (:- '(pre () "11月5日 最高法: \"充分运用司法手段为民营经济发展提供司法服务和保障\" (我: 哈哈哈 宰不开心的猪牛羊前 要做好心理工作 这样出来的肉质才好)"))))
+           (:- "郭文(多条 照片): " (@ "https://www.guo.media/posts/143276")
+               '(q () (pre () "
+11月5日：11月19日．将是一个什么样的结果！什么样的情况！一个又一个的威胁向我冲来……我现在收到的劝说！利诱……前所没有！我现在正在向有关人介绍发布会的情况！")))
+           (:- "视频(短视频): " (@ "https://www.youtube.com/watch?v=F7JiKORDyYI"
+                                   "郭文贵11月5日:王健发布会前夕,收到的威胁利诱前所未有! 中美高层对话,刘鹤缺席,这回会有事情发生!")
+               '(small () "Youtube")))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 5
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -289,8 +308,8 @@ z-index:100;
 *** 基本
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "郭文贵"  ;; (human-date (get-universal-time))
- "2018.11.05 11:24:30"
+ "郭文贵"   ;; (human-date (get-universal-time))
+ "2018.11.06 12:44:32"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -307,6 +326,10 @@ z-index:100;
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.11.6")
+               (u (:- "郭文(多条 照片): " (@ "https://www.guo.media/posts/143276")
+               '(q () (pre () "
+11月5日：11月19日．将是一个什么样的结果！什么样的情况！一个又一个的威胁向我冲来……我现在收到的劝说！利诱……前所没有！我现在正在向有关人介绍发布会的情况！")))))
            (:- '(small () "2018.11.1")
                (u (:- "郭文: " (@ "https://www.guo.media/posts/141318")
                    '(q () (pre () "
