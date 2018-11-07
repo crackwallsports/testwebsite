@@ -440,8 +440,13 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
 
 (news-to-topic
  "美国" ;; (human-date (get-universal-time))
- "2018.11.05 11:29:23"
- (u (:- '(small () "2018.11.6") "美国中期选举")
+ "2018.11.07 17:37:40"
+ (u (:- '(small () "2018.11.7") "Midterm elections 2018 美国中期选举"
+        '(q () (pre () "
+    结果      | Republican 共和党 | Democratic 民主党 |
+Senate 参议院 |  Win:  51        |         43       |
+House  众议院 |       193        |   Win: 219       |
+")))
     (:- '(small () "2018.10.23")
         "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资"
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=aCdDjXTrgTQ"
