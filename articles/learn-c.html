@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2018-10-28 Sun 23:12 -->
+<!-- 2018-11-08 Thu 00:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>学习 C 语言 - 笔记整理 (草稿)</title>
@@ -62,43 +62,50 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3752e5d">1. 开始前</a>
+<li><a href="#org7532431">1. 开始前</a>
 <ul>
-<li><a href="#orgbce0320">1.1. 我们要做什么?</a></li>
-<li><a href="#org4935cff">1.2. 准备</a></li>
+<li><a href="#orgdedaf0d">1.1. 我们要做什么?</a></li>
+<li><a href="#org689d321">1.2. 准备</a></li>
 </ul>
 </li>
-<li><a href="#orgbadf2b2">2. 开始</a></li>
-<li><a href="#org216852a">3. 基础</a>
+<li><a href="#orge5e4ce0">2. 开始</a>
 <ul>
-<li><a href="#org586dd4c">3.1. 类型</a></li>
-<li><a href="#org9531da3">3.2. 数</a></li>
-<li><a href="#org5ff6153">3.3. 字符</a></li>
-<li><a href="#orgf46e0f3">3.4. 数组</a></li>
-<li><a href="#org40e0c59">3.5. 指针</a></li>
-<li><a href="#orgc0ffe1c">3.6. 字符串</a></li>
-<li><a href="#orgcb5f1ae">3.7. 函数</a></li>
-<li><a href="#org2ca44f3">3.8. IO</a>
-<ul>
-<li><a href="#org8d3727f">3.8.1. 标准输入输出</a></li>
-<li><a href="#org0ebbee4">3.8.2. 文件</a></li>
+<li><a href="#org869d00e">2.1. 第一步</a></li>
+<li><a href="#org5b51e9b">2.2. 稍息</a></li>
+<li><a href="#orga6d561c">2.3. 第二步</a></li>
 </ul>
 </li>
-<li><a href="#org4fbb246">3.9. 控制流程</a></li>
-<li><a href="#orgc3560d4">3.10. 结构 共用 枚举</a></li>
-<li><a href="#orgf61d659">3.11. 动态内存分配</a></li>
-<li><a href="#org2b630b1">3.12. 概念</a></li>
+<li><a href="#orgfc5f71f">3. 基础</a>
+<ul>
+<li><a href="#org12da98d">3.1. 类型</a></li>
+<li><a href="#org881f1bb">3.2. 数</a></li>
+<li><a href="#orgdc7e263">3.3. 字符</a></li>
+<li><a href="#orgd3f9d10">3.4. 数组</a></li>
+<li><a href="#orge44292b">3.5. 指针</a></li>
+<li><a href="#org976c1d6">3.6. 字符串</a></li>
+<li><a href="#org7569a41">3.7. 函数</a></li>
+<li><a href="#org2ea95f9">3.8. IO</a>
+<ul>
+<li><a href="#org178fb14">3.8.1. 标准输入输出</a></li>
+<li><a href="#org7482fe3">3.8.2. 文件</a></li>
+</ul>
+</li>
+<li><a href="#org2b77ea0">3.9. 控制流程</a></li>
+<li><a href="#org3f2e38c">3.10. 结构 共用 枚举</a></li>
+<li><a href="#org08c06f1">3.11. 动态内存分配</a></li>
+<li><a href="#org0597efa">3.12. 概念</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3752e5d" class="outline-2">
-<h2 id="org3752e5d"><span class="section-number-2">1</span> 开始前</h2>
+
+<div id="outline-container-org7532431" class="outline-2">
+<h2 id="org7532431"><span class="section-number-2">1</span> 开始前</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgbce0320" class="outline-3">
-<h3 id="orgbce0320"><span class="section-number-3">1.1</span> 我们要做什么?</h3>
+</div><div id="outline-container-orgdedaf0d" class="outline-3">
+<h3 id="orgdedaf0d"><span class="section-number-3">1.1</span> 我们要做什么?</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>将 脑子里想的东西 和 解决问题的方法 翻译成 程序</li>
@@ -141,14 +148,14 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org4935cff" class="outline-3">
-<h3 id="org4935cff"><span class="section-number-3">1.2</span> 准备</h3>
+<div id="outline-container-org689d321" class="outline-3">
+<h3 id="org689d321"><span class="section-number-3">1.2</span> 准备</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>开发环境
 <ul class="org-ul">
-<li>编辑器或IDE</li>
-<li>编译器 : gcc, clang</li>
+<li>编辑器或IDE : Emacs or Xcode</li>
+<li>编译器 : gcc or clang</li>
 <li>编译流程自动化 : make, Makefile</li>
 </ul></li>
 <li>流程示范: [OS:MacOS]
@@ -188,9 +195,12 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </div>
 </div>
 </div>
-<div id="outline-container-orgbadf2b2" class="outline-2">
-<h2 id="orgbadf2b2"><span class="section-number-2">2</span> 开始</h2>
+<div id="outline-container-orge5e4ce0" class="outline-2">
+<h2 id="orge5e4ce0"><span class="section-number-2">2</span> 开始</h2>
 <div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org869d00e" class="outline-3">
+<h3 id="org869d00e"><span class="section-number-3">2.1</span> 第一步</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>? 我想让程序 输出 一些文字
 <ul class="org-ul">
@@ -234,15 +244,226 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </ul>
 </div>
 </div>
+<div id="outline-container-org5b51e9b" class="outline-3">
+<h3 id="org5b51e9b"><span class="section-number-3">2.2</span> 稍息</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+基础 就像是一块块不同的积木 我们要做的就是 把它们组合成 我们所希望的样子
+</p>
 
-<div id="outline-container-org216852a" class="outline-2">
-<h2 id="org216852a"><span class="section-number-2">3</span> 基础</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-org586dd4c" class="outline-3">
-<h3 id="org586dd4c"><span class="section-number-3">3.1</span> 类型</h3>
+<p>
+一块积木是积木 两块积木组和起来也可被当作一个积木
+给每块不同积木 或 组合后的积木 一个名字 就可以被方便的重复使用
+我们编程就是 从符合规则的组合中 找到 能够解决待定问题的 一种最优的路径
+</p>
+
+<p>
+已经准备好的积木 它们长啥样 怎么使用:
+</p>
+<ul class="org-ul">
+<li>数字 : 整数 浮点数</li>
+<li>简单的数学计算过程 : 四则运算符</li>
+<li>名字 : 变量 指针</li>
+<li>组合
+<ul class="org-ul">
+<li>过程(按执行顺序) 
+<ul class="org-ul">
+<li>顺序 : 一块接一块</li>
+<li>分支 : 每一块积木 可以和其它积木进行组合 产生的每一种符合规则的可能 就只一条分支</li>
+<li>循环 : 重复积木</li>
+<li>跳转 (很少用) : 往回等同于循环 往后就像是选择了不同的分支</li>
+</ul></li>
+<li>聚合 : 数组 结构 共用 枚举</li>
+</ul></li>
+<li>封装过程(把组合起来的积木 给个名字 打包起来) : 函数 参数</li>
+</ul>
 </div>
-<div id="outline-container-org9531da3" class="outline-3">
-<h3 id="org9531da3"><span class="section-number-3">3.2</span> 数</h3>
+</div>
+
+
+<div id="outline-container-orga6d561c" class="outline-3">
+<h3 id="orga6d561c"><span class="section-number-3">2.3</span> 第二步</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>? 输入温度(华氏 或 摄氏) -转换- 输出结果
+<ul class="org-ul">
+<li>把问题分解为更小的部分 可以理解 甚至是可以直接求解 一个个解决 最后组合在一起</li>
+<li>分成三部分: 输入 转换 输出 
+<ul class="org-ul">
+<li>输入 <code>?:</code> 从终端 形如: 30C</li>
+<li>转换 <code>?:</code> 公式: C = (5/9)(F-32) 和 F = (9C)/5+32</li>
+<li>输出 <code>?:</code> 到终端 形如: 30C 是 86F</li>
+</ul></li>
+<li>继续 (程序名为: C52F)
+<ul class="org-ul">
+<li>输入 <code>?:</code> 从终端 形如: 30C
+<ul class="org-ul">
+<li><p>
+从终端 <code>?:</code> 程序执行时
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">C52F 30C        
+</pre>
+</div></li>
+<li><p>
+程序内部如何处理 <code>?:</code> 运行程序提供的参数 将作为参数交给 main函数
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">int argc, char *argv[]  : &#21442;&#25968;&#20010;&#25968; &#21644; &#23384;&#20648;&#21442;&#25968;&#30340;&#25968;&#32452;</span>
+<span style="color: #afd8af;">int</span> <span style="color: #ff1493;">main</span>(<span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">argc</span>, <span style="color: #afd8af;">char</span> *<span style="color: #ff69b4;">argv</span>[]){
+  <span style="color: #4c83ff;">return</span> 0;
+}
+</pre>
+</div></li>
+<li><p>
+处理参数
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
+<span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdlib.h&gt;</span>
+<span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;string.h&gt;</span>
+
+<span style="color: #afd8af;">int</span> <span style="color: #ff1493;">main</span>(<span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">argc</span>, <span style="color: #afd8af;">char</span> *<span style="color: #ff69b4;">argv</span>[]){
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#26816;&#26597;&#21442;&#25968;</span>
+  <span style="color: #4c83ff;">if</span>(argc == 1){
+    printf(<span style="color: #61CE3C;">"&#35831;&#37325;&#26032;&#36816;&#34892; &#24182;&#25552;&#20379;&#38656;&#35201;&#36716;&#25442;&#30340;&#28201;&#24230;(&#24418;&#22914; 30C &#25110; 89F)\n"</span>);
+    <span style="color: #4c83ff;">return</span> 1;
+  }
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#33719;&#24471;&#21442;&#25968;</span>
+  <span style="color: #afd8af;">char</span>* <span style="color: #ff69b4;">tempStr</span> = argv[1];
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#36716;&#25442;&#21442;&#25968; ?: &#22240;&#20026;&#21442;&#25968;&#26159;&#23383;&#31526;&#20018; &#20026;&#20102;&#35745;&#31639; &#38656;&#35201;&#36716;&#25442;&#20026; &#28014;&#28857;&#25968;</span>
+  <span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">loct</span> = strlen(tempStr) - 1;
+  <span style="color: #afd8af;">char</span> <span style="color: #ff69b4;">type</span> = tempStr[loct];
+  tempStr[loct] = <span style="color: #61CE3C;">'\0'</span>;
+  <span style="color: #afd8af;">double</span> <span style="color: #ff69b4;">temp</span> = atof(tempStr);
+  
+  <span style="color: #4c83ff;">return</span> 0;
+  
+}
+</pre>
+</div></li>
+</ul></li>
+<li>转换 <code>?:</code> 
+<ul class="org-ul">
+<li><p>
+公式: C = (5/9)*(F-32) 和 F = (9C)*/5+32
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">C = (5/9)*(F-32)</span>
+C = (5.0/9)*(F-32);
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">F = (9*C)/5+32</span>
+F = (9*C)/5+32;
+</pre>
+</div></li>
+<li><p>
+分发温度
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #4c83ff;">switch</span> (type) {
+  <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'F'</span>: 
+    <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">C =</span>
+    <span style="color: #4c83ff;">break</span>;
+  <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'C'</span>: 
+    <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">F =</span>
+    <span style="color: #4c83ff;">break</span>;
+  <span style="color: #4c83ff;">default</span>:
+    printf(<span style="color: #61CE3C;">"&#35831;&#37325;&#26032;&#36816;&#34892; &#24182;&#25552;&#20379;&#38656;&#35201;&#36716;&#25442;&#30340;&#28201;&#24230;(&#24418;&#22914; 30C &#25110; 89F)\n"</span>);
+    <span style="color: #4c83ff;">return</span> 1;
+  }        
+</pre>
+</div></li>
+<li><p>
+结合
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #afd8af;">char</span> <span style="color: #ff69b4;">cvType</span> = <span style="color: #61CE3C;">' '</span>;
+<span style="color: #4c83ff;">switch</span> (type) {
+ <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'F'</span>:
+   cvTemp = (5.0/9)*(temp-32);
+   cvType = <span style="color: #61CE3C;">'C'</span>;
+   <span style="color: #4c83ff;">break</span>;
+ <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'C'</span>:
+   cvTemp = (9*temp)/5+32;
+   cvType = <span style="color: #61CE3C;">'F'</span>;
+   <span style="color: #4c83ff;">break</span>;
+ <span style="color: #4c83ff;">default</span>:
+   printf(<span style="color: #61CE3C;">"&#35831;&#37325;&#26032;&#36816;&#34892; &#24182;&#25552;&#20379;&#38656;&#35201;&#36716;&#25442;&#30340;&#28201;&#24230;(&#24418;&#22914; 30C &#25110; 89F)\n"</span>);
+   <span style="color: #4c83ff;">return</span> 1;
+ }
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+输出 <code>?:</code> 到终端 形如: 30C = 86F
+</p>
+<div class="org-src-container">
+<pre class="src src-c">printf(<span style="color: #61CE3C;">"%s%c = %f%c\n"</span>, inTemp, intype, cvTemp, cvType);
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+完成
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdio.h&gt;</span>
+<span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;stdlib.h&gt;</span>
+<span style="color: #919191;">#include</span> <span style="color: #61CE3C;">&lt;string.h&gt;</span>
+
+<span style="color: #afd8af;">int</span> <span style="color: #ff1493;">main</span>(<span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">argc</span>, <span style="color: #afd8af;">char</span> *<span style="color: #ff69b4;">argv</span>[]){
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#26816;&#26597;&#21442;&#25968;</span>
+  <span style="color: #4c83ff;">if</span>(argc == 1){
+    printf(<span style="color: #61CE3C;">"&#35831;&#37325;&#26032;&#36816;&#34892; &#24182;&#25552;&#20379;&#38656;&#35201;&#36716;&#25442;&#30340;&#28201;&#24230;(&#24418;&#22914; 30C &#25110; 89F)\n"</span>);
+    <span style="color: #4c83ff;">return</span> 1;
+  }
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#33719;&#24471;&#21442;&#25968;</span>
+  <span style="color: #afd8af;">char</span>* <span style="color: #ff69b4;">tempStr</span> = argv[1];
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#36716;&#25442;&#21442;&#25968; ?: &#22240;&#20026;&#21442;&#25968;&#26159;&#23383;&#31526;&#20018; &#20026;&#20102;&#35745;&#31639; &#38656;&#35201;&#36716;&#25442;&#20026; &#28014;&#28857;&#25968;</span>
+  <span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">loct</span> = strlen(tempStr) - 1;
+  <span style="color: #afd8af;">char</span> <span style="color: #ff69b4;">type</span> = tempStr[loct];
+  tempStr[loct] = <span style="color: #61CE3C;">'\0'</span>;
+  <span style="color: #afd8af;">double</span> <span style="color: #ff69b4;">temp</span> = atof(tempStr);
+
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">C = (5/9)(F-32) &#21644; F = (9C)/5+32</span>
+  <span style="color: #afd8af;">double</span> <span style="color: #ff69b4;">cvTemp</span> = 0;
+  <span style="color: #afd8af;">char</span> <span style="color: #ff69b4;">cvType</span> = <span style="color: #61CE3C;">' '</span>;
+  <span style="color: #4c83ff;">switch</span> (type) {
+  <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'F'</span>:
+    cvTemp = (5.0/9)*(temp-32);
+    cvType = <span style="color: #61CE3C;">'C'</span>;
+    <span style="color: #4c83ff;">break</span>;
+  <span style="color: #4c83ff;">case</span> <span style="color: #61CE3C;">'C'</span>:
+    cvTemp = (9*temp)/5+32;
+    cvType = <span style="color: #61CE3C;">'F'</span>;
+    <span style="color: #4c83ff;">break</span>;
+  <span style="color: #4c83ff;">default</span>:
+    printf(<span style="color: #61CE3C;">"&#35831;&#37325;&#26032;&#36816;&#34892; &#24182;&#25552;&#20379;&#38656;&#35201;&#36716;&#25442;&#30340;&#28201;&#24230;(&#24418;&#22914; 30C &#25110; 89F)\n"</span>);
+    <span style="color: #4c83ff;">return</span> 1;
+  }
+  printf(<span style="color: #61CE3C;">"%d%c = %f%c\n"</span>, (<span style="color: #afd8af;">int</span>)temp, type, cvTemp, cvType);
+  <span style="color: #4c83ff;">return</span> 0;
+
+}
+</pre>
+</div></li>
+</ul></li>
+</ul>
+
+
+<p>
+!!! 干脆做视频 动态的表示 会更好 写出来太麻烦了 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc5f71f" class="outline-2">
+<h2 id="orgfc5f71f"><span class="section-number-2">3</span> 基础</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org12da98d" class="outline-3">
+<h3 id="org12da98d"><span class="section-number-3">3.1</span> 类型</h3>
+</div>
+<div id="outline-container-org881f1bb" class="outline-3">
+<h3 id="org881f1bb"><span class="section-number-3">3.2</span> 数</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><p>
@@ -270,8 +491,8 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </ul>
 </div>
 </div>
-<div id="outline-container-org5ff6153" class="outline-3">
-<h3 id="org5ff6153"><span class="section-number-3">3.3</span> 字符</h3>
+<div id="outline-container-orgdc7e263" class="outline-3">
+<h3 id="orgdc7e263"><span class="section-number-3">3.3</span> 字符</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>字符</li>
@@ -287,14 +508,14 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </div>
 </div>
 
-<div id="outline-container-orgf46e0f3" class="outline-3">
-<h3 id="orgf46e0f3"><span class="section-number-3">3.4</span> 数组</h3>
+<div id="outline-container-orgd3f9d10" class="outline-3">
+<h3 id="orgd3f9d10"><span class="section-number-3">3.4</span> 数组</h3>
 </div>
-<div id="outline-container-org40e0c59" class="outline-3">
-<h3 id="org40e0c59"><span class="section-number-3">3.5</span> 指针</h3>
+<div id="outline-container-orge44292b" class="outline-3">
+<h3 id="orge44292b"><span class="section-number-3">3.5</span> 指针</h3>
 </div>
-<div id="outline-container-orgc0ffe1c" class="outline-3">
-<h3 id="orgc0ffe1c"><span class="section-number-3">3.6</span> 字符串</h3>
+<div id="outline-container-org976c1d6" class="outline-3">
+<h3 id="org976c1d6"><span class="section-number-3">3.6</span> 字符串</h3>
 <div class="outline-text-3" id="text-3-6">
 <ul class="org-ul">
 <li>字符串</li>
@@ -309,8 +530,8 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcb5f1ae" class="outline-3">
-<h3 id="orgcb5f1ae"><span class="section-number-3">3.7</span> 函数</h3>
+<div id="outline-container-org7569a41" class="outline-3">
+<h3 id="org7569a41"><span class="section-number-3">3.7</span> 函数</h3>
 <div class="outline-text-3" id="text-3-7">
 <ul class="org-ul">
 <li>把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用</li>
@@ -320,32 +541,32 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </ul>
 </div>
 </div>
-<div id="outline-container-org2ca44f3" class="outline-3">
-<h3 id="org2ca44f3"><span class="section-number-3">3.8</span> IO</h3>
+<div id="outline-container-org2ea95f9" class="outline-3">
+<h3 id="org2ea95f9"><span class="section-number-3">3.8</span> IO</h3>
 <div class="outline-text-3" id="text-3-8">
-</div><div id="outline-container-org8d3727f" class="outline-4">
-<h4 id="org8d3727f"><span class="section-number-4">3.8.1</span> 标准输入输出</h4>
+</div><div id="outline-container-org178fb14" class="outline-4">
+<h4 id="org178fb14"><span class="section-number-4">3.8.1</span> 标准输入输出</h4>
 </div>
-<div id="outline-container-org0ebbee4" class="outline-4">
-<h4 id="org0ebbee4"><span class="section-number-4">3.8.2</span> 文件</h4>
+<div id="outline-container-org7482fe3" class="outline-4">
+<h4 id="org7482fe3"><span class="section-number-4">3.8.2</span> 文件</h4>
 </div>
 </div>
-<div id="outline-container-org4fbb246" class="outline-3">
-<h3 id="org4fbb246"><span class="section-number-3">3.9</span> 控制流程</h3>
+<div id="outline-container-org2b77ea0" class="outline-3">
+<h3 id="org2b77ea0"><span class="section-number-3">3.9</span> 控制流程</h3>
 <div class="outline-text-3" id="text-3-9">
 <ul class="org-ul">
 <li>顺序 分支 循环(递归)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc3560d4" class="outline-3">
-<h3 id="orgc3560d4"><span class="section-number-3">3.10</span> 结构 共用 枚举</h3>
+<div id="outline-container-org3f2e38c" class="outline-3">
+<h3 id="org3f2e38c"><span class="section-number-3">3.10</span> 结构 共用 枚举</h3>
 </div>
-<div id="outline-container-orgf61d659" class="outline-3">
-<h3 id="orgf61d659"><span class="section-number-3">3.11</span> 动态内存分配</h3>
+<div id="outline-container-org08c06f1" class="outline-3">
+<h3 id="org08c06f1"><span class="section-number-3">3.11</span> 动态内存分配</h3>
 </div>
-<div id="outline-container-org2b630b1" class="outline-3">
-<h3 id="org2b630b1"><span class="section-number-3">3.12</span> 概念</h3>
+<div id="outline-container-org0597efa" class="outline-3">
+<h3 id="org0597efa"><span class="section-number-3">3.12</span> 概念</h3>
 <div class="outline-text-3" id="text-3-12">
 <ul class="org-ul">
 <li>头文件

@@ -40,8 +40,8 @@
 
 ** 准备
 - 开发环境
-  - 编辑器或IDE
-  - 编译器 : gcc, clang
+  - 编辑器或IDE : Emacs or Xcode
+  - 编译器 : gcc or clang
   - 编译流程自动化 : make, Makefile
 - 流程示范: [OS:MacOS]
   - 打开 终端(Terminal)
@@ -66,6 +66,8 @@ cc code.c -o code
 ./code
     #+END_SRC
 * 开始
+
+** 第一步
 - ? 我想让程序 输出 一些文字
   - 文字 怎么表达 ~?:~ 用 字符串
     #+BEGIN_SRC C
@@ -89,6 +91,158 @@ int main(){
   return 0;
 }    
     #+END_SRC
+** 稍息
+基础 就像是一块块不同的积木 我们要做的就是 把它们组合成 我们所希望的样子
+
+一块积木是积木 两块积木组和起来也可被当作一个积木
+给每块不同积木 或 组合后的积木 一个名字 就可以被方便的重复使用
+我们编程就是 从符合规则的组合中 找到 能够解决待定问题的 一种最优的路径
+
+已经准备好的积木 它们长啥样 怎么使用:
+- 数字 : 整数 浮点数
+- 简单的数学计算过程 : 四则运算符
+- 名字 : 变量 指针
+- 组合
+  - 过程(按执行顺序) 
+    - 顺序 : 一块接一块
+    - 分支 : 每一块积木 可以和其它积木进行组合 产生的每一种符合规则的可能 就只一条分支
+    - 循环 : 重复积木
+    - 跳转 (很少用) : 往回等同于循环 往后就像是选择了不同的分支
+  - 聚合 : 数组 结构 共用 枚举
+- 封装过程(把组合起来的积木 给个名字 打包起来) : 函数 参数
+
+
+** 第二步
+- ? 输入温度(华氏 或 摄氏) -转换- 输出结果
+  - 把问题分解为更小的部分 可以理解 甚至是可以直接求解 一个个解决 最后组合在一起
+  - 分成三部分: 输入 转换 输出 
+    - 输入 ~?:~ 从终端 形如: 30C
+    - 转换 ~?:~ 公式: C = (5/9)(F-32) 和 F = (9C)/5+32
+    - 输出 ~?:~ 到终端 形如: 30C 是 86F
+  - 继续 (程序名为: C52F)
+    - 输入 ~?:~ 从终端 形如: 30C
+      - 从终端 ~?:~ 程序执行时
+        #+BEGIN_SRC shell
+C52F 30C        
+        #+END_SRC
+      - 程序内部如何处理 ~?:~ 运行程序提供的参数 将作为参数交给 main函数
+        #+BEGIN_SRC c
+// int argc, char *argv[]  : 参数个数 和 存储参数的数组
+int main(int argc, char *argv[]){
+  return 0;
+}
+        #+END_SRC
+      - 处理参数
+        #+BEGIN_SRC c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char *argv[]){
+  // 检查参数
+  if(argc == 1){
+    printf("请重新运行 并提供需要转换的温度(形如 30C 或 89F)\n");
+    return 1;
+  }
+  // 获得参数
+  char* tempStr = argv[1];
+  // 转换参数 ?: 因为参数是字符串 为了计算 需要转换为 浮点数
+  int loct = strlen(tempStr) - 1;
+  char type = tempStr[loct];
+  tempStr[loct] = '\0';
+  double temp = atof(tempStr);
+  
+  return 0;
+  
+}
+        #+END_SRC
+    - 转换 ~?:~ 
+      - 公式: C = (5/9)*(F-32) 和 F = (9C)*/5+32
+        #+BEGIN_SRC c
+// C = (5/9)*(F-32)
+C = (5.0/9)*(F-32);
+// F = (9*C)/5+32
+F = (9*C)/5+32;
+        #+END_SRC
+      - 分发温度
+        #+BEGIN_SRC c
+switch (type) {
+  case 'F': 
+    // C =
+    break;
+  case 'C': 
+    // F =
+    break;
+  default:
+    printf("请重新运行 并提供需要转换的温度(形如 30C 或 89F)\n");
+    return 1;
+  }        
+        #+END_SRC
+      - 结合
+        #+BEGIN_SRC c
+char cvType = ' ';
+switch (type) {
+ case 'F':
+   cvTemp = (5.0/9)*(temp-32);
+   cvType = 'C';
+   break;
+ case 'C':
+   cvTemp = (9*temp)/5+32;
+   cvType = 'F';
+   break;
+ default:
+   printf("请重新运行 并提供需要转换的温度(形如 30C 或 89F)\n");
+   return 1;
+ }
+        #+END_SRC
+    - 输出 ~?:~ 到终端 形如: 30C = 86F
+      #+BEGIN_SRC c
+printf("%s%c = %f%c\n", inTemp, intype, cvTemp, cvType);
+      #+END_SRC
+  - 完成
+    #+BEGIN_SRC c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char *argv[]){
+  // 检查参数
+  if(argc == 1){
+    printf("请重新运行 并提供需要转换的温度(形如 30C 或 89F)\n");
+    return 1;
+  }
+  // 获得参数
+  char* tempStr = argv[1];
+  // 转换参数 ?: 因为参数是字符串 为了计算 需要转换为 浮点数
+  int loct = strlen(tempStr) - 1;
+  char type = tempStr[loct];
+  tempStr[loct] = '\0';
+  double temp = atof(tempStr);
+
+  // C = (5/9)(F-32) 和 F = (9C)/5+32
+  double cvTemp = 0;
+  char cvType = ' ';
+  switch (type) {
+  case 'F':
+    cvTemp = (5.0/9)*(temp-32);
+    cvType = 'C';
+    break;
+  case 'C':
+    cvTemp = (9*temp)/5+32;
+    cvType = 'F';
+    break;
+  default:
+    printf("请重新运行 并提供需要转换的温度(形如 30C 或 89F)\n");
+    return 1;
+  }
+  printf("%d%c = %f%c\n", (int)temp, type, cvTemp, cvType);
+  return 0;
+
+}
+    #+END_SRC
+
+
+!!! 干脆做视频 动态的表示 会更好 写出来太麻烦了 
 
 * 基础
 ** 类型
@@ -146,21 +300,3 @@ char* str = "abc";
 
 
 * COMMENT Test
-Org
-#+BEGIN_SRC lisp :results output html  :exports results
-(format t "~a"
-     (->html
-      (u (:- '(small () "我们直接写机器指令 ?: bang... 脑袋炸了"))
-         (:- '(small () "使用对应的 汇编指令 (addl $1, %ecx) ?: 有进步 但还是不要 "))
-         (:- '(small () "自然语言 ?: 喜欢 爱死了 !: 目前还不可能达到"))
-         (:- '(small () "类似自然语言(高级语言) 限定的少量的词汇和语法 ?: 我看行")))))
- #+END_SRC
-
-use
-#+BEGIN_SRC lisp
-(format nil "~x" #o31)
-
-#+END_SRC
-
-#+RESULTS:
-: 19
