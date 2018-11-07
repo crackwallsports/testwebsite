@@ -305,7 +305,10 @@ kbd{background-color:#f7f7f7;font-size:80%;margin:0 .1em;padding:.1em .6em}
 #postamble p,#preamble p{font-size:90%;margin:.2em}
 p.verse{margin-left:3%}
 pre{border:1px solid #ccc;box-shadow:3px 3px 3px #eee;font-family:Lucida Console,monospace;margin:1.2em;padding:8pt;font-size:80%}
-pre.src{overflow:auto;padding-top:1.2em;position:relative}
+pre.src{overflow:auto;padding-top:1.2em;position:relative;
+    background-color: #333;
+    color: white;
+}
 pre.src:before{display:block;position:absolute;background-color:#b3b3b3;top:0;right:0;padding:.25em .5em;border-bottom-left-radius:8px;border:0;color:#fff;font-size:80%}
 pre.src:hover:before{display:inline}
 pre.src-sh:before{content:"sh"}
