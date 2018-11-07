@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-11-07 Wed 16:24 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emacs - 笔记整理 (草稿)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Xt3">
+<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Emacs - 笔记整理 (草稿)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9c7e2b5">1. Setup 安装</a></li>
+<li><a href="#org22b7137">2. Coonfig 配置</a></li>
+<li><a href="#org9ec1230">3. Basic 基础</a>
+<ul>
+<li><a href="#orgf60c19c">3.1. UI 用户界面</a></li>
+<li><a href="#orga8b4585">3.2. Keybinding 键绑定</a></li>
+<li><a href="#orgb167875">3.3. Command 命令</a></li>
+<li><a href="#org640e804">3.4. Help 帮助</a></li>
+<li><a href="#org6a69cde">3.5. Mode 模式</a></li>
+<li><a href="#org5a7d8bc">3.6. Buffer Window Frame</a></li>
+</ul>
+</li>
+<li><a href="#org688f408">4. Begining 开始</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org9c7e2b5" class="outline-2">
+<h2 id="org9c7e2b5"><span class="section-number-2">1</span> Setup 安装</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>OSX : <a href="http://emacsformacosx.com">Emacs For Mac OS X</a></li>
+<li>Linux : 用包管理器安装</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org22b7137" class="outline-2">
+<h2 id="org22b7137"><span class="section-number-2">2</span> Coonfig 配置</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>个人喜好 : ~/.emacs.d/init.el -(org-babel)-&gt; ~/.emacs.d/config.org</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9ec1230" class="outline-2">
+<h2 id="org9ec1230"><span class="section-number-2">3</span> Basic 基础</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-orgf60c19c" class="outline-3">
+<h3 id="orgf60c19c"><span class="section-number-3">3.1</span> UI 用户界面</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Menu 菜单栏 : 屏幕顶部突出显示的条</li>
+<li>Frame 框架
+<ul class="org-ul">
+<li>Window 窗口
+<ul class="org-ul">
+<li>Buffer 缓冲区 : 关联文件</li>
+</ul></li>
+</ul></li>
+<li>Mode Line 模式行 (状态栏) : 每个窗口中 横贯底部的高亮条 提供当前缓冲区的信息</li>
+<li>Echo Area : 模式行下面 底部的区域 显示相关信息</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga8b4585" class="outline-3">
+<h3 id="orga8b4585"><span class="section-number-3">3.2</span> Keybinding 键绑定</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+组合键
+</p>
+<ul class="org-ul">
+<li>Ctrl (C)</li>
+<li>Meta (M) 
+<ul class="org-ul">
+<li>输入 Meta
+<ul class="org-ul">
+<li>Alt</li>
+<li>Esc (按下 Esc, 松开, 再按其它键)</li>
+<li>Ctrl-[ 代替 Esc (通过网络运行 Emacs, 无法使用 Esc 和 Alt 键时)</li>
+</ul></li>
+</ul></li>
+<li><p>
+For Mac
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Fn -&gt; hyper : H</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">setq</span> ns-function-modifier 'hyper<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Cmd -&gt; meta : M</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">setq</span> ns-command-modifier 'meta<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Opt -&gt; super : S</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">setq</span> ns-option-modifier 'super<span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+</ul>
+
+<p>
+常用的缺省按键前缀
+</p>
+<ul class="org-ul">
+<li>当前编辑模式特有的命令 : C-c</li>
+<li>文件和缓冲区命令 : C-x</li>
+<li>帮助命令 : C-h</li>
+<li>命令 : M-x</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb167875" class="outline-3">
+<h3 id="orgb167875"><span class="section-number-3">3.3</span> Command 命令</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+每一个命令 == 一个功能(Elisp函数) 
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">退出 Emacs</td>
+<td class="org-left">C-x C-c (confirm-kill-emacs)</td>
+</tr>
+
+<tr>
+<td class="org-left">取消</td>
+<td class="org-left">C-g == keyboard-quit 或 ESC ESC ESC</td>
+</tr>
+
+<tr>
+<td class="org-left">执行 命令</td>
+<td class="org-left">M-x == execute-extended-command</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org640e804" class="outline-3">
+<h3 id="org640e804"><span class="section-number-3">3.4</span> Help 帮助</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Tutorial : C-h t</li>
+<li>Manual : C-h r == info-emacs-manual
+<ul class="org-ul">
+<li>Online : <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">Emacs manual</a></li>
+</ul></li>
+<li><p>
+当前模式|变量|函数|键绑定|符号
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-h m</td>
+<td class="org-left">describe-mode</td>
+</tr>
+
+<tr>
+<td class="org-left">C-h v</td>
+<td class="org-left">describe-varible</td>
+</tr>
+
+<tr>
+<td class="org-left">C-h f</td>
+<td class="org-left">describe-function</td>
+</tr>
+
+<tr>
+<td class="org-left">C-h b</td>
+<td class="org-left">describe-bindings</td>
+</tr>
+
+<tr>
+<td class="org-left">C-h o</td>
+<td class="org-left">describe-symbol</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>
+通过键盘 输入一个键绑定
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-h c</td>
+<td class="org-left">describe-key-briefly</td>
+</tr>
+
+<tr>
+<td class="org-left">C-h k</td>
+<td class="org-left">describe-key</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6a69cde" class="outline-3">
+<h3 id="org6a69cde"><span class="section-number-3">3.5</span> Mode 模式</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式</li>
+<li>次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5a7d8bc" class="outline-3">
+<h3 id="org5a7d8bc"><span class="section-number-3">3.6</span> Buffer Window Frame</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>创建</li>
+<li>关闭</li>
+<li>切换</li>
+<li>Buffer 和 File
+<ul class="org-ul">
+<li>不对文件内容直接操作 而是 把内容的副本 读取到 编辑的缓冲区 保存时写入文件</li>
+<li><p>
+操作
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">打开 File</td>
+<td class="org-left">C-x C-f == find-file</td>
+</tr>
+
+<tr>
+<td class="org-left">保存</td>
+<td class="org-left">C-x s (所有未保存)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">C-x C-s == save-buffer (当前)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org688f408" class="outline-2">
+<h2 id="org688f408"><span class="section-number-2">4</span> Begining 开始</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 <br>
+所以呢 我不打算 做一些重复的工作 <br>
+换个角度来试试看 <br>
+</p>
+
+<p>
+编辑器 用来做什么? 编辑文本 写代码 写书 收发邮件 浏览网页 看图片 看视频 &#x2026;
+</p>
+
+<p>
+从 编辑文本 开始 : 需要什么?
+</p>
+
+<ul class="org-ul">
+<li>Move|Jump 移动或跳转 :
+<ul class="org-ul">
+<li>要在 Buffer中移动</li>
+<li>跳到 不同的 Window中 或 Frame中</li>
+</ul></li>
+<li>Edit 编辑
+<ul class="org-ul">
+<li>选中 : 选择需要编辑的部分文本</li>
+<li>插入</li>
+<li>删除</li>
+<li>复制 粘贴 剪切</li>
+<li>撤销 重做</li>
+<li>处理 : 执行一些特定的功能 如 转换大小写</li>
+</ul></li>
+<li>Search 搜索</li>
+<li>Repeat 重复</li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

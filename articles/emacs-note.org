@@ -1,0 +1,124 @@
+#+TITLE: Emacs - 笔记整理 (草稿)
+#+AUTHOR: Xt3
+#+OPTIONS: html-postamble:nil html-style:nil tex:nil
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+
+#+version: 0.1
+
+
+* COMMENT Generate
+#+BEGIN_SRC lisp
+(gen-with-frame "Emacs Note"
+                #P"articles/emacs-note.html")
+#+END_SRC
+
+* Setup 安装
+- OSX : [[http://emacsformacosx.com][Emacs For Mac OS X]]
+- Linux : 用包管理器安装
+
+* Coonfig 配置
+- 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
+
+* Basic 基础
+  
+** UI 用户界面
+- Menu 菜单栏 : 屏幕顶部突出显示的条
+- Frame 框架
+  - Window 窗口
+    - Buffer 缓冲区 : 关联文件
+- Mode Line 模式行 (状态栏) : 每个窗口中 横贯底部的高亮条 提供当前缓冲区的信息
+- Echo Area : 模式行下面 底部的区域 显示相关信息
+** Keybinding 键绑定
+组合键
+- Ctrl (C)
+- Meta (M) 
+  - 输入 Meta
+    - Alt
+    - Esc (按下 Esc, 松开, 再按其它键)
+    - Ctrl-[ 代替 Esc (通过网络运行 Emacs, 无法使用 Esc 和 Alt 键时)
+- For Mac
+  #+BEGIN_SRC emacs-lisp
+;; Fn -> hyper : H
+(setq ns-function-modifier 'hyper)
+;; Cmd -> meta : M
+(setq ns-command-modifier 'meta)
+;; Opt -> super : S
+(setq ns-option-modifier 'super)
+  #+END_SRC
+
+常用的缺省按键前缀
+- 当前编辑模式特有的命令 : C-c
+- 文件和缓冲区命令 : C-x
+- 帮助命令 : C-h
+- 命令 : M-x
+
+** Command 命令
+每一个命令 == 一个功能(Elisp函数) 
+
+| 退出 Emacs | C-x C-c (confirm-kill-emacs)        |
+| 取消       | C-g == keyboard-quit 或 ESC ESC ESC |
+| 执行 命令  | M-x == execute-extended-command     |
+
+** Help 帮助
+- Tutorial : C-h t
+- Manual : C-h r == info-emacs-manual
+  - Online : [[https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html][Emacs manual]]
+- 当前模式|变量|函数|键绑定|符号
+  | C-h m | describe-mode|
+  | C-h v | describe-varible|
+  | C-h f | describe-function |
+  | C-h b | describe-bindings|
+  | C-h o | describe-symbol|
+- 通过键盘 输入一个键绑定
+  | C-h c | describe-key-briefly|
+  | C-h k | describe-key|
+
+** Mode 模式
+- 主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式 
+- 次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个
+
+** Buffer Window Frame
+- 创建
+- 关闭
+- 切换
+- Buffer 和 File
+  - 不对文件内容直接操作 而是 把内容的副本 读取到 编辑的缓冲区 保存时写入文件
+  - 操作
+    | 打开 File | C-x C-f == find-file          |
+    | 保存      | C-x s (所有未保存)           |
+    |           | C-x C-s == save-buffer (当前) |
+    |           |                               |
+
+
+
+* Begining 开始
+入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 \\
+所以呢 我不打算 做一些重复的工作 \\
+换个角度来试试看 \\
+
+编辑器 用来做什么? 编辑文本 写代码 写书 收发邮件 浏览网页 看图片 看视频 ...
+
+从 编辑文本 开始 : 需要什么?
+
+- Move|Jump 移动或跳转 :
+  - 要在 Buffer中移动
+  - 跳到 不同的 Window中 或 Frame中
+- Edit 编辑
+  - 选中 : 选择需要编辑的部分文本
+  - 插入
+  - 删除
+  - 复制 粘贴 剪切
+  - 撤销 重做
+  - 处理 : 执行一些特定的功能 如 转换大小写
+- Search 搜索
+- Repeat 重复
+- 
+
+
+
+
+
+
+
+  
