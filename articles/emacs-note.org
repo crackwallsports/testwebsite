@@ -78,17 +78,16 @@
 - 主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式 
 - 次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个
 
-** Buffer Window Frame
-- 创建
-- 关闭
-- 切换
-- Buffer 和 File
-  - 不对文件内容直接操作 而是 把内容的副本 读取到 编辑的缓冲区 保存时写入文件
-  - 操作
-    | 打开 File | C-x C-f == find-file          |
-    | 保存      | C-x s (所有未保存)           |
-    |           | C-x C-s == save-buffer (当前) |
-    |           |                               |
+** Daemon (Server)
+- 开启服务 : M-x server-start
+  - 初始文件 <<
+    #+BEGIN_SRC emacs-lisp
+(server-start)
+    #+END_SRC
+- 客服端 : emacsclient    
+  - -t <filename>  : open a new frame on the terminal
+  - -c : open a new X frame
+  - -n, --no-wait	: Don't wait for the server to return
 
 
 
@@ -102,7 +101,7 @@
 从 编辑文本 开始 : 需要什么?
 
 - Move|Jump 移动或跳转 :
-  - 要在 Buffer中移动
+  - 要在 Buffer中移动 : 字符 单词 行 
   - 跳到 不同的 Window中 或 Frame中
 - Edit 编辑
   - 选中 : 选择需要编辑的部分文本
@@ -113,7 +112,97 @@
   - 处理 : 执行一些特定的功能 如 转换大小写
 - Search 搜索
 - Repeat 重复
-- 
+- Assist
+  - Manipulating pairs : smartparens
+  - Narrowing
+  - Folding
+
+Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然后根据特定的需要 使用不同的模式 提供更多的功能
+- 主模式
+  - Org
+  - Dired
+- 次要模式
+  - abbrew
+
+再到 我要写代码 建立开发环境 需要什么?
+- Completion : company
+- Syntax Checking : flycheck
+- Format (style, highlight, indent )
+- Navigation (tag, definition, symbols)
+- Code Templates & Snippets : yasnippet
+- Project : progectile, Speedbar
+- Doc
+- Enhancement Edit
+- Assist
+- Compilation
+- Debugging
+
+特定的语言 又需要什么?
+- Common lisp
+  - Slime
+  - Enhancement Edit : paredit, lispy
+  - Completion : company-slime
+- C
+
+* Hydra
+聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
+
+** Window
+#+BEGIN_SRC emacs-lisp
+(global-set-key
+ (kbd "<f2>")
+ (defhydra f2-fun (:color pink :hint nil)
+   "
+Window
+^ Resize ^         ^ Move ^       ^Split^      ^Delete
+^^^^^^^^-----------------------------------------------------------------
+_e_: enlarge         ^_i_^          _v_:|      _dw_:del-current
+_s_: shrink       _j_     _l_       _x_:-      _da_:ace-del
+_E_: enlarge-<>      ^_k_^          _|_:>move  _do_:del-other
+_S_: shrink-<>     _ws_:swap      ___:Vmove ^ ^_db_:kill-buf
+_bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame 
+^ ^                _a_:ace _of_:to-frame
+"
+
+   ("e" #'enlarge-window)
+   ("s" #'shrink-window)
+   ("E" #'enlarge-window-horizontally)
+   ("S" #'shrink-window-horizontally)
+   ("bw" #'balance-windows)
+   ;; Move
+   ("j" #'windmove-left)
+   ("i" #'windmove-up)
+   ("l" #'windmove-right)
+   ("k" #'windmove-down)
+   ("ws" ace-swap-window)
+   ;; Jump
+   ("a" ace-window :exit t)
+   ("of" #'switch-to-buffer-other-frame :exit t)
+   ;; Spilt
+   ("|" (lambda ()
+          (interactive)
+          (split-window-right)
+          (windmove-right)))
+   ("_" (lambda ()
+          (interactive)
+          (split-window-below)
+          (windmove-down)))
+   ("v" #'split-window-right)
+   ("x" #'split-window-below)
+   ;; Delete
+   ("da" ace-delete-window)
+   ("dw" delete-window)
+   ("do" delete-other-windows :exit t)
+   ("db" kill-this-buffer)
+   ("df" delete-frame :exit t)
+   ;; Misc
+   ("t" transpose-frame "-<->|")
+   ("f" new-frame "New-frame" :exit t)
+   ("z" #'text-scale-adjust "Zoom" :exit t)
+   ;;
+   ("q" nil "Quit" :color blue)))
+
+#+END_SRC
 
 
 
