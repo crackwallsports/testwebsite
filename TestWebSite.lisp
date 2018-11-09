@@ -96,22 +96,66 @@ function resizeIframe(obj) {
      :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
               (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
               (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))
+     :head-rest `((style () "
+.btn-link {color: black }
+.btn-link:hover {text-decoration:none}
+cite {
+font-size: 88% }
+q {
+border-left: 5px rgb(210, 212, 212) solid;
+display: block;
+padding: 5px 10px 5px 10px;
+text-align: justify;
+}
+q::before, q::before {
+display: block;
+content: \"\";
+}
+li pre {
+display: inline;
+margin: 0;
+white-space: pre-wrap;
+}
+li q {
+margin-left: 16px;
+}
+
+.zoom {      
+-webkit-transition: all 0.35s ease-in-out;    
+-moz-transition: all 0.35s ease-in-out;    
+transition: all 0.35s ease-in-out;     
+cursor: -webkit-zoom-in;      
+cursor: -moz-zoom-in;      
+cursor: zoom-in;  
+}     
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+-ms-transform: scale(7);    
+-moz-transform: scale(7);  
+-webkit-transform: scale(7);  
+-o-transform: scale(7);  
+transform: scale(7);    
+position:relative;      
+z-index:100;  
+}
+"))
      :content
      `(,(site-header)
-       (main (:class "content")
-             ;; articles
-             ,@(let ((posts (with-open-file (stream #P"posts.lisp")
-                              (read stream))))
-                 (loop for i in posts
-                    collect (destructuring-bind (time ref title excerpt) i
-                              `(article (:class "post")
-                                        (header (:class "post-header")
-                                                (span (:class "post-meta")
-                                                      (time () ,time))
-                                                (h2 (:class "post-title")
-                                                    (a (:href ,ref) ,title)))
-                                        (section (:class "post-excerpt")
-                                                 (p () ,excerpt)))))))
+        (main (:class "content")
+              ;; articles
+              ,@(let ((posts (with-open-file (stream #P"posts.lisp")
+                               (read stream))))
+                  (loop for i in posts
+                     collect (destructuring-bind (time ref title excerpt) i
+                               `(article (:class "post")
+                                         (header (:class "post-header")
+                                                 (span (:class "post-meta")
+                                                       (time () ,time))
+                                                 (h2 (:class "post-title")
+                                                     (a (:href ,ref) ,title)))
+                                         (section (:class "post-excerpt")
+                                                  (p () ,excerpt)))))))
         ,(site-footer)))))
 
 (defun css ()
