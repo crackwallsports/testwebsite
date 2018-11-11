@@ -121,6 +121,32 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.11")
+        (u (:- "郭文(多条 短视频): " (@ "https://www.guo.media/posts/144806")
+               (u (:- '(pre () "快艇 火锅 蓝天 白云 美丽的纽约岸边风景"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/144756")
+               '(q () (pre () "
+1月10日：这是中国．反共．草根．私人企业……有史以来第一个正式．公开反共……在世界的核心举行的第一次发布会……1119号以后这个1……后面将有无数个00000000000…………或✊️✊️✊️✊️✊️✊️✊️✊️或👊👊👊🤟🤟🤟🤟这一切的一切都将是中国14亿人民真正站起来……脱离外来邪恶势力统治压榨……的开天劈地的大日子！中国人病不起．死不起！住不起……没有宗教．言论自由……一切都是党的一切都听党的党比爹娘亲的荒唐可笑时代将终结！"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.11.10")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/144505")
+               '(q () (pre () "
+11月9日：纳瓦罗正在进行的言讲会让CCP启动一切的沉默力量攻击他……他危险了⚠️"))
+               (u (:- `(cite () ,(@ "https://youtu.be/g3rxjaOPQD4"
+                                    "Economic Security as National Security: A Discussion with Dr. Peter Navarro")
+                             (small () "2018.11.9 Youtube")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/144488")
+               '(q () (pre () "
+11月9日：昨晚上我6点多睡觉．一大早班8点钟突然到来……他昨晚上也一夜没睡．开车从华盛顿过来！为了我们的新闻发布会！为了接下来的几天按排！😹😹😹😹😹😹"))
+               (u (:- '(pre () "短视频: 班农和郭先生 两个中共认为最危险的人 在喝咖啡"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/144370")
+               '(q () (pre () "
+刚刚一个朋友告诉我．我们的曾经的合伙人．让她转话给我！某大领导说．＂文贵如果能……主动的．聪明的……停止这个新闻发布会．我们会让他人财两全．＂我的答案是．过去的文贵．与文贵的钱已经死了！现在的郭文贵是个我死去的八弟．同胞杨改兰．……等冤魂野鬼的使者．忘掉那些所谓的人．财．吧……咱们到2020年就都明白了！一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.9")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/144245")
                '(q () (pre () "
@@ -321,7 +347,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"     ;; (human-date (get-universal-time))
- "2018.11.08 13:41:51"
+ "2018.11.11 13:28:37"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

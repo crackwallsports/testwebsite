@@ -1,12 +1,13 @@
 ;; (Date Ref Title Intro)
-(("2018 11 9"
+(("2018 11 11"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.9")
+          (span (:class "badge badge-success") "每日追踪-11.11")
           (pre ()
+               (small () "海航与王健之死 2018.11.19 新闻发布会  倒计时: 8 天")
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
                (small () "反CCP联盟")))
      (div ()
@@ -22,12 +23,12 @@ House  众议院 |       193        |   Win: 219       |
           (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
           (span (:class "badge badge-success") "更新-10.23"))
      (div ()
-          (span () "中共国 供应链 恶意芯片植入 事件")
-          (span (:class "badge badge-success") "更新-10.24"))
-     (div ()
           (span () "美国副总统 彭斯 哈德逊研究所演讲"))
      (div ()
-          (span () "美国 川普总统 联合国演讲"))))
+          (span () "美国 川普总统 联合国演讲"))
+     (div ()
+          (span () "中共国 供应链 恶意芯片植入 事件")
+          (span (:class "badge badge-success") "更新-10.24"))))
  ("2018 11 7"
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
