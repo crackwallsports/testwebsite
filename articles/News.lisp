@@ -121,6 +121,20 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.12")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/145120")
+               '(q () (pre () "现在再看这个报道！太荒谬了！"))
+               (u (:- '(pre () "报道: 海航陈峰 去年六月说 郭先生关于海航的爆料全是假的"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/145041")
+               '(q () (pre () "
+11月11日：凯尔巴斯．包括德州大学基金．美国等多个基金组织的对共经济惩罸法案……也会一个又一个的到来！这与那个党派执政没任何关糸……这关糸美国人民的生死！世界的未来！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/145036")
+               '(q () (pre () "
+11月11日：班农先生的这个建议已经被釆纳！更多的比这更严厉的惩罚会一个又一个的到来！"))
+               (u (:- '(pre () "建议: 给中共72小时 拆除南海岛礁上的军事设施 它们不拆 美军就帮它们拆")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.11")
         (u (:- "郭文(多条 短视频): " (@ "https://www.guo.media/posts/144806")
                (u (:- '(pre () "快艇 火锅 蓝天 白云 美丽的纽约岸边风景"))))
@@ -346,8 +360,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"     ;; (human-date (get-universal-time))
- "2018.11.11 13:28:37"
+ "郭文贵"  ;; (human-date (get-universal-time))
+ "2018.11.12 10:49:58"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -404,9 +418,13 @@ z-index:100;
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.11.07 11:40:14"
+ "2018.11.12 10:52:20"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.11.9")
+        (@ "https://youtu.be/g3rxjaOPQD4"
+           "Economic Security as National Security: A Discussion with Dr. Peter Navarro")
+        '(small () "Youtube"))
     (:- '(small () "2018.11.7")
         (@ "https://cn.wsj.com/articles/CN-BGH-20181105071808"
            "美国正式重启对伊制裁 中国入豁免名单")
@@ -452,7 +470,7 @@ This Department of Justice—and the Trump administration—have already made ou
                (@ "https://www.justice.gov/opa/pr/chinese-intelligence-officer-charged-economic-espionage-involving-theft-trade-secrets-leading"
                   "DOJ: Chinese Intelligence Officer Charged with Economic Espionage Involving Theft of Trade Secrets from Leading U.S. Aviation Companies"))
            (:- "中文参考: " (@ "https://www.bbc.com/zhongwen/simp/world-45819520"
-                           "BBC: 涉嫌盗取美国航空业机密　中国籍男子面临“间谍”检控"))
+                               "BBC: 涉嫌盗取美国航空业机密　中国籍男子面临“间谍”检控"))
            (:- '(pre () "美司法部: 以经济间谍罪起诉 涉嫌窃取美国航空和航天公司商业机密的 中国情报官员 Xu Yanjun"))
            (:- '(pre () "4.1 在比利时被捕"))
            (:- '(pre () "10.9 被引渡至美国"))

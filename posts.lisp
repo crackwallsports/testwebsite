@@ -1,13 +1,13 @@
 ;; (Date Ref Title Intro)
-(("2018 11 11"
+(("2018 11 12"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.11")
+          (span (:class "badge badge-success") "每日追踪-11.12")
           (pre ()
-               (small () "海航与王健之死 2018.11.19 新闻发布会  倒计时: 8 天")
+               (small () "海航与王健之死 2018.11.19 新闻发布会  倒计时: 7 天")
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
                (small () "反CCP联盟")))
      (div ()
