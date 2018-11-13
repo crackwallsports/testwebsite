@@ -1,13 +1,13 @@
 ;; (Date Ref Title Intro)
-(("2018 11 12"
+(("2018 11 13"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.12")
+          (span (:class "badge badge-success") "每日追踪-11.13")
           (pre ()
-               (small () "海航与王健之死 2018.11.19 新闻发布会  倒计时: 7 天")
+               (small () "海航与王健之死 2018.11.19 新闻发布会  倒计时: 6 天")
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
                (small () "反CCP联盟")))
      (div ()
@@ -16,9 +16,7 @@
     结果      | Republican 共和党 | Democratic 民主党 |
 Senate 参议院 |  Win:  51        |         43       |
 House  众议院 |       193        |   Win: 219       |
-"))
-          ;; (span (:class "badge badge-success") "等待结果")
-          )
+")))
      (div ()
           (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
           (span (:class "badge badge-success") "更新-10.23"))
