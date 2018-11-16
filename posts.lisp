@@ -1,22 +1,15 @@
 ;; (Date Ref Title Intro)
-(("2018 11 15"
+(("2018 11 16"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.15")
+          (span (:class "badge badge-success") "每日追踪-11.16")
           (pre ()
-               (small () "2018.11.19 发布会  倒计时: 4~~5 天")
+               (small () "王健之死 与 海航集团背后的真相 发布会 2018.11.20  倒计时: 4 天")
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
                (small () "反CCP联盟")))
-     (div ()
-          (span () "美国中期选举")
-          (q () (pre () "
-    结果      | Republican 共和党 | Democratic 民主党 |
-Senate 参议院 |  Win:  51        |         43       |
-House  众议院 |       193        |   Win: 219       |
-")))
      (div ()
           (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
           (span (:class "badge badge-success") "更新-10.23"))

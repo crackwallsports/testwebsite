@@ -181,6 +181,26 @@ z-index:100;
 #+END_SRC
 
 **** 11
+- 16
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.11.16")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/146216")
+               '(q () (pre () "
+11月15日：这是我们最终确定的王健之死发布会的时间．地点．内容．时间表……这里的每一个字都是经过律师团队及安保团队．班农先生几十次修改后的结果！这是一个前所未有的发布会！我们开始了以法灭共的新篇章！一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片: 邀请函"))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=cqjWOczCby0" "2018．11月15日：11月20日在纽约举行巜王健之死．海航背后的真相发布会》的正式公告！")
+               (u (:- '(pre () "开启 以法灭共的新纪元"))
+                  (:- '(pre () "(19:30) 台湾的命运"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146196")
+               '(q () (pre () "
+月15日：CCP耍流氓……就是用这种低级的手段……工具永远是公检法！这是全人类唯一一个国家政府．70年如一日的骗．抢．人民屡试屡爽的！这到底是谁的错！我们14亿人民真的没有好儿男！"))
+               (u (:- '(pre () "郭文图片内容: \"最高检明确规范办理涉民营企业案件执法司法标准\" (我: 哈哈哈 法律啊法律 你怎么有好几个标准啊)"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146140")
+               '(q () (pre () "
+11月15日：中国私人企业三十年成就的功夫．被十八大十九大以来的共产宪党．打回了国民党时期……这是一次经济大革命……一次对民营企业先奸后后杀的集体犯罪！现在又来培养下一波猎物来了！……中国人的．中国私人企业悲剧！一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 15
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -540,7 +560,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.11.15 13:35:12"
+ "2018.11.16 15:11:37"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -551,12 +571,20 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
            (:- '(span (:class "badge badge-secondary") "修改增加: ") "反对以假治国")))
     (:- "蓝金黄 3F计划")
     (:- "海航王健事件"
-        (u (:- "郭媒体新闻发布会：海航与王健之死"
-               (u (:- "时间: 2018年11月19日 美国东部时间 早上10点")
+        (u (:- "王健之死 与 海航集团背后的真相 发布会"
+               (u (:- "时间: 2018年11月20日 美国东部时间 早上10-12点")
                   (:- "地点: 纽约"
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.11.16")
+               (u (:- "视频: " (@ "https://www.youtube.com/watch?v=cqjWOczCby0" "2018．11月15日：11月20日在纽约举行巜王健之死．海航背后的真相发布会》的正式公告！"))))
+           (:- '(small () "2018.11.15")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/145989")
+               '(q () (pre () "
+11月14日：尊敬的战友们好！我刚刚收到律师团队的通知！明天中午前才能得到法院最后的批准！ 所以会议是19号还是20号．要等到明天中午12点前才能决定！文贵再次致以万分的歉意！")))
+                (:- "视频: " (@ "https://www.youtube.com/watch?v=0VE05drVdz8"
+			                    "2018．11月19号的王健之死的发布会．可能导致股市波动．及其他重大政治事件！要从19号改至20号！"))))
            (:- '(small () "2018.11.6")
                (u (:- "郭文(多条 照片): " (@ "https://www.guo.media/posts/143276")
                       '(q () (pre () "
