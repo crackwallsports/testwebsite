@@ -121,6 +121,55 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.18")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/147141")
+               '(q () (pre () "
+11月17日：台湾人民不知道这位彭斯副总统对台湾有多重要……多重要……！九合一选举不能再让卖台贼当选了！让美国人民看看．台湾人民不可收买不可征服！有决心有智慧对付CCP的威胁！台湾绝对不能失去这个唯一的一次机会了！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147133")
+               '(q () (pre () "
+11月17日：彭斯副总统．非常的关心．港澳台的一切事件！而且是从骨子里反CCP……他是一个伟大的人！百分百信仰的捍卫者……关于＂上吊带．断头路！＂的精准定义概念．这个说法是来自一个台湾的宗教界高人……是他给某位大人物的一封私信里写的！不知道是什么大事件发生了．这个概念会出现在这里！上次在DC时有人说给我这个人．这个概念的时候快把我笑晕了！台湾色是生龙造虎的华人世界的核心！"))
+               (u (:- '(pre () "彭斯副总统的推文: \"a constricting belt or a one-way road\" (上吊带 断头路 🤣)")
+                      (u (:- `(cite () ,(@ "https://twitter.com/VP/status/1063652156635402240"))
+                             '(q () (pre () "
+The United States deals openly and fairly – and we don’t offer a constricting belt or a one-way road. When you partner with us, we partner with you, and we all prosper. #APEC2018")))))))
+           (:- "郭文(照片和视频): "
+               (@ "https://www.guo.media/posts/147013")
+               ".."
+               (@ "https://www.guo.media/posts/147016")
+               '(q () (pre () "
+11月17日：凯琳在为她们翻译．她们说王健百分之百的是没有自拍．不是……警察封锁了一切真相！威胁人们不要讲话……
+
+11月17日：他来了．她也来了．太不容易了！凯琳正在翻译！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146999")
+               '(q () (pre () "
+看了下面这个战友们发的信息．我必须说你们是伟大的智慧的战友．多少人多少蓝金黄力量要分化曹先生与我们战友！我们的战友们一次又一次的识破了他们的鬼岐俩！曹先生是我们的好兄弟好榜样！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146976")
+               '(q () (pre () "
+11月17日：我刚刚又被团队拉去皮埃尔酒店现场！告诉我那里我可以去那里我不可以去……因为去年我突然冲到楼下见美东的战友．他们已经都不相信我会遵守承诺．和规矩了……这就是美国文化！千万別不守规则不守规矩不守承诺！否则一生都会为此付出代价！真的让我很不舒服😭但我完全接受！")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=D9ggVuylclY"
+                           "2018年11月17日：11月20号的新闻发布会进展报告，遇到了巨大的困难，但是一定会照常进行。")
+               (u (:- '(pre () "座位的纷争 要战友还是要媒体记者"))
+                  (:- '(pre () "感恩节假期"))
+                  (:- '(pre () "律师的问题 蓝金黄 江朱王家对西方的影响程度"))
+                  (:- '(pre () "天塌下来都不变"))
+                  (:- '(pre () "参会战友安排"))
+                  (:- '(pre () "该吃吃该喝喝 啥事不往心里搁  岳文海失踪了 估计被抓了"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146943")
+               '(q () (pre () "
+11月．17日：这是咋回事呀……死了的蹦出来了……活着的被弄死了！真真假假假假真真……CCP快被发布会吓傻了吓疯了！搞的俺健身都不能保持正常的关注！😹😹😹✊️✊️✊️"))
+               (u (:- '(pre () "美国 华文媒体 <侨报> 发生枪击案 董事长谢一宁不幸中枪身亡 当地时间:11.16 上午 地点:洛杉矶圣盖博谷阿罕布拉市")))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.11.17")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/146799")
+               '(q () (pre () "
+1月16日：中国的私人企业．在过去的这6年．遭到的剥削．压榨……是绝对的一场惨绝人寰的……经济抢劫大革命……该让共产党为此付出代价了……！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/146788")
+               '(q () (pre () "1月16日：我与Snow一起听京剧！"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.16")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/146216")
                '(q () (pre () "
@@ -460,8 +509,8 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"  ;; (human-date (get-universal-time))
- "2018.11.16 15:11:37"
+ "郭文贵"   ;; (human-date (get-universal-time))
+ "2018.11.18 14:13:49"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -478,6 +527,17 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.11.18")
+               (u (:- "视频: " (@ "https://www.youtube.com/watch?v=D9ggVuylclY"
+                                  "2018年11月17日：11月20号的新闻发布会进展报告，遇到了巨大的困难，但是一定会照常进行。"))
+                  (:- "郭文(照片和视频): "
+                      (@ "https://www.guo.media/posts/147013")
+                      ".."
+                      (@ "https://www.guo.media/posts/147016")
+                      '(q () (pre () "
+11月17日：凯琳在为她们翻译．她们说王健百分之百的是没有自拍．不是……警察封锁了一切真相！威胁人们不要讲话……
+
+11月17日：他来了．她也来了．太不容易了！凯琳正在翻译！")))))
            (:- '(small () "2018.11.16")
                (u (:- "视频: " (@ "https://www.youtube.com/watch?v=cqjWOczCby0" "2018．11月15日：11月20日在纽约举行巜王健之死．海航背后的真相发布会》的正式公告！"))))
            (:- '(small () "2018.11.15")
