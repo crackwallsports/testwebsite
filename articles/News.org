@@ -181,6 +181,28 @@ z-index:100;
 #+END_SRC
 
 **** 11
+- 19
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.11.19")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/147483")
+               '(q () (pre () "
+11月18日：律师又要求修改文件．全部加班呢……以法治国．的确让人很累．很花钱．但是我感觉很幸福很开心！因为能让我感觉我是在一个安全的公平的环境里生存！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147429")
+               '(q () (pre () "
+11月18日：小蔡多干点这事．能让台湾少死很多人……很多人不会被抓到大陆去．少花很多冤枉钱．10月4日那天能改变台湾命运的决定就不会被删去！……我特别特别尊重蔡大总统……但是台湾人民需要一个不被蓝金黄的总统！台湾是我们华人世界精神．与文化……的诺亚方舟！！！台湾不能输也不能倒！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/147317")
+               '(q () (pre () "
+11月18日：尊敬的战友们好．你们健身了吗……今天的纽约天气有点冷……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147262")
+               '(q () (pre () "
+11月18日：亲爱的战友们好．纽约欢迎您．文贵期盼您．盗国贼恐惧您．欺民贼妒嫉您……这就是我们过去一年所有的战友们用生命时间．勇气．正义．信仰……奋斗的想要的结果！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147230")
+               '(q () (pre () "
+11月18日：Inty先生好．感谢．尊敬．您能为新疆人民的世纪性大劫难面前．勇敢的表现！欢迎您参加11月20日的在纽约的皮埃尔酒店．我们的发布会！详情请与我的助理凯琳联系！下面您发出的这个信息．的确是她发给您的！一切都是刚刚开始！"))
+               (u (:- '(pre () "(我: 哈哈哈 Inty还以为那是骗人的 被你共害得大家第一反应不是高兴 而是不相信)")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 18
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -613,7 +635,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"   ;; (human-date (get-universal-time))
- "2018.11.18 14:13:49"
+ "2018.11.19 12:06:48"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -630,6 +652,10 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.11.19")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/147483")
+                      '(q () (pre () "
+11月18日：律师又要求修改文件．全部加班呢……以法治国．的确让人很累．很花钱．但是我感觉很幸福很开心！因为能让我感觉我是在一个安全的公平的环境里生存！一切都是刚刚开始！")))))
            (:- '(small () "2018.11.18")
                (u (:- "视频: " (@ "https://www.youtube.com/watch?v=D9ggVuylclY"
                                   "2018年11月17日：11月20号的新闻发布会进展报告，遇到了巨大的困难，但是一定会照常进行。"))
@@ -698,9 +724,15 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.11.12 10:52:20"
+ "2018.11.19 11:54:37"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.11.14")
+        (@ "https://www.washingtontimes.com/news/2018/nov/14/inside-the-ring-remove-chinese-missiles/"
+           "Trump demands China remove missiles in the South China Sea")
+        '(small () "The Washington Times")
+        '(q () (pre () "
+The Trump administration is demanding that China remove all advanced missiles deployed on disputed islands in the South China Sea, the first time such a demand has been made public.")))
     (:- '(small () "2018.11.9")
         (@ "https://youtu.be/g3rxjaOPQD4"
            "Economic Security as National Security: A Discussion with Dr. Peter Navarro")
