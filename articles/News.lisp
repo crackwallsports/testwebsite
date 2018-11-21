@@ -121,6 +121,29 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.21")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=yriFORxHGjQ"
+                           "11/20/2018 路德访谈班农、文贵先生：谈谈未来制裁中共王岐山盗国贼的一系列行为"))
+           (:- "王健之死 与 海航集团 背后的真相 发布会 (视频)"
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=G1pUdtkF8PM"
+                                    "11月20日:「王健之死与海航背后真相发布会」 主讲:郭文贵,班农. (录播版)")
+                             (small () "Youtube")
+                             (small () "(这个版本流畅 但看不到开始的一部分PPT 后面没有法国证人的采访)")))
+                  (:- '(pre () "(我: 所有 班农先生的发言 因为我英文不好 暂时不记录 怕误解 之后再补上)" ))
+                  (:- '(pre () "海航爆发式的发展 与 王岐山家族 与 中共国家战略 之间的关系 "))
+                  (:- '(pre () "海航 大肆收购的目的"))
+                  (:- '(pre () "海航 是 中共的国家战略 意图通过资本运作 获取技术 并在国外执行谍报任务"))
+                  (:- '(pre () "海航 虽然是国家战略 但被 王岐山家族私用 用于将国内盗取的财富 以国家战略的名义而 转入私人名下"))
+                  (:- '(pre () "王健之死的疑点 结合海航背景与中共情报战略 以及当时陪同人员 中共国政府的干预 还有被删除的监视器录像 证人证词 等 怀疑王健不是意外死亡 而是 被谋杀灭口"))
+                  (:- '(pre () "王健是美国绿卡 家人是美国公民 其大量涉及到美国的利益 美国政府应该管 已经向FBI申请立案调查"))
+                  (:- '(pre () "海航 不是单一的 还有大量在美国投资的中共国企业  很可能成为下一个海航 下一个王健"))
+                  (:- '(pre () "1亿美元 成立 中国法治基金会 并希望班农先生出任主席 为寻找真相 和 维护正义"))
+                  (:- '(pre () "反诉海航 (海航对郭先生有诽谤诉讼) 并包括 对 王岐山等中共国官员发起法院调查配合令 申请FBI对中共在西方的渗透和威胁"))
+                  (:- '(pre () "法院调查令名单 包括 海航相关利益人(王岐山 贯军 等) 和 企业(高盛 黑石 等)"))
+                  (:- '(pre () "(1:10:00) 回答问题")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.20")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=u_q3LMSabok"
                            "18年：11月19日．20日的发布会的准备．开启了N个中国人的第一次……")
@@ -542,7 +565,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 
 (news-to-topic
  "郭文贵"   ;; (human-date (get-universal-time))
- "2018.11.20 13:45:09"
+ "2018.11.21 14:19:10"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -947,7 +970,7 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
 
 (news-to-topic
  "当前关注自媒体" ;; (human-date (get-universal-time) )
- "2018.11.05 11:24:53"
+ "2018.11.21 13:29:22"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
  (u (:- "Youtube"
         (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
@@ -957,4 +980,10 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
            (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
                   "政事直播(政事小哥)"))
            (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
-                  "木蘭訪談"))))))
+                  "木蘭訪談"))
+           (:- (@ "https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g"
+                  "南十字星"))
+           (:- (@ "https://www.youtube.com/channel/UCyDCC5CcIqMqBbzMVENoKVQ"
+                  "赵岩"))
+           (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
+                  "Inty"))))))
