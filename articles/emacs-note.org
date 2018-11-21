@@ -22,7 +22,7 @@
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
 
-* Basic 基础  
+* Basic 基础
 ** UI 用户界面
 - Menu 菜单栏 : 屏幕顶部突出显示的条
 - Frame 框架
@@ -91,7 +91,6 @@
   - -n, --no-wait	: Don't wait for the server to return
 
 
-
 * Begining 开始
 入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 \\
 所以呢 我不打算 做一些重复的工作 \\
@@ -145,21 +144,21 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
   - Completion : company-slime
 - C
 
-* Move&Jump
+* Move & Jump
 Buffer
 - 左|右
-  - C-b|f == Left|Right == back|forward-char
+  - C-b|f == Left|Right | back|forward-char
   - M-b|f == backward|forward-word 
 - 上|下
-  - C-p|n == Up|Down == previous|next-line
+  - C-p|n == Up|Down | previous|next-line
 - 行-首|尾
   - C-a|e == beginning|end-of-line       
 - 翻页-上|下
-  - M|C-v == PgUp|PgDn == scroll-up|down-command
+  - M|C-v == PgUp|PgDn | scroll-up|down-command
 - 缓冲区-首|尾
   - M-<|> == beginning|end-of-buffer
 - N-行 | 第N个字符
-  - M-g g == M-g M-g == goto-line
+  - M-g g | M-g M-g == goto-line
   - M-g c == goto-char
 - Tab|center|bottom-当前缓冲区可视区域
   - M-r == move-to-window-line-top-bottom
