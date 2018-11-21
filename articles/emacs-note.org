@@ -4,8 +4,6 @@
 #+HTML_DOCTYPE: html5
 #+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
 
-#+version: 0.1
-
 
 * COMMENT Generate
 #+BEGIN_SRC lisp
@@ -17,11 +15,14 @@
 - OSX : [[http://emacsformacosx.com][Emacs For Mac OS X]]
 - Linux : 用包管理器安装
 
+* Package Manager
+- package-list-packages
+- [[https://github.com/jwiegley/use-package/blob/master/bind-key.el][use-package]]
+
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
 
-* Basic 基础
-  
+* Basic 基础  
 ** UI 用户界面
 - Menu 菜单栏 : 屏幕顶部突出显示的条
 - Frame 框架
@@ -101,7 +102,7 @@
 从 编辑文本 开始 : 需要什么?
 
 - Move|Jump 移动或跳转 :
-  - 要在 Buffer中移动 : 字符 单词 行 
+  - 要在 Buffer中移动 : 字符 单词 行
   - 跳到 不同的 Window中 或 Frame中
 - Edit 编辑
   - 选中 : 选择需要编辑的部分文本
@@ -144,6 +145,30 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
   - Completion : company-slime
 - C
 
+* Move&Jump
+Buffer
+- 左|右
+  - C-b|f == Left|Right == back|forward-char
+  - M-b|f == backward|forward-word 
+- 上|下
+  - C-p|n == Up|Down == previous|next-line
+- 行-首|尾
+  - C-a|e == beginning|end-of-line       
+- 翻页-上|下
+  - M|C-v == PgUp|PgDn == scroll-up|down-command
+- 缓冲区-首|尾
+  - M-<|> == beginning|end-of-buffer
+- N-行 | 第N个字符
+  - M-g g == M-g M-g == goto-line
+  - M-g c == goto-char
+- Tab|center|bottom-当前缓冲区可视区域
+  - M-r == move-to-window-line-top-bottom
+- [[https://github.com/abo-abo/avy][Avy]]
+
+Frame
+- M-x select-frame-by-name
+
+Window Frame : [[https://github.com/abo-abo/ace-window][Ace window]]
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -161,7 +186,7 @@ _s_: shrink       _j_     _l_       _x_:-      _da_:ace-del
 _E_: enlarge-<>      ^_k_^          _|_:>move  _do_:del-other
 _S_: shrink-<>     _ws_:swap      ___:Vmove ^ ^_db_:kill-buf
 _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame 
-^ ^                _a_:ace _of_:to-frame
+^ ^                _a_:ace _f_:to-frame
 "
 
    ("e" #'enlarge-window)
@@ -177,7 +202,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
    ("ws" ace-swap-window)
    ;; Jump
    ("a" ace-window :exit t)
-   ("of" #'switch-to-buffer-other-frame :exit t)
+   ("f" #'select-frame-by-name :exit t)
    ;; Spilt
    ("|" (lambda ()
           (interactive)
@@ -197,7 +222,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
    ("df" delete-frame :exit t)
    ;; Misc
    ("t" transpose-frame "-<->|")
-   ("f" new-frame "New-frame" :exit t)
+   ("nf" new-frame "New-frame" :exit t)
    ("z" #'text-scale-adjust "Zoom" :exit t)
    ;;
    ("q" nil "Quit" :color blue)))

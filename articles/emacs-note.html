@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2018-11-07 Wed 17:20 -->
+<!-- 2018-11-21 Wed 17:15 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emacs - 笔记整理 (草稿)</title>
@@ -62,22 +62,24 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0d3c1a5">1. Setup 安装</a></li>
-<li><a href="#org41c644c">2. Coonfig 配置</a></li>
-<li><a href="#orgdca4c67">3. Basic 基础</a>
+<li><a href="#org04eafcb">1. Setup 安装</a></li>
+<li><a href="#org7742e94">2. Package Manager</a></li>
+<li><a href="#org91ca094">3. Coonfig 配置</a></li>
+<li><a href="#orgd4d69ee">4. Basic 基础</a>
 <ul>
-<li><a href="#orgd90c357">3.1. UI 用户界面</a></li>
-<li><a href="#org04a73cc">3.2. Keybinding 键绑定</a></li>
-<li><a href="#org5deebab">3.3. Command 命令</a></li>
-<li><a href="#orga6ad1f9">3.4. Help 帮助</a></li>
-<li><a href="#org95f4837">3.5. Mode 模式</a></li>
-<li><a href="#org6361221">3.6. Daemon (Server)</a></li>
+<li><a href="#org5038e8d">4.1. UI 用户界面</a></li>
+<li><a href="#org36b4005">4.2. Keybinding 键绑定</a></li>
+<li><a href="#orgc687af3">4.3. Command 命令</a></li>
+<li><a href="#org1e54193">4.4. Help 帮助</a></li>
+<li><a href="#orgc61ae0f">4.5. Mode 模式</a></li>
+<li><a href="#org16d84b3">4.6. Daemon (Server)</a></li>
 </ul>
 </li>
-<li><a href="#org6a13f9d">4. Begining 开始</a></li>
-<li><a href="#orgc5853b3">5. Hydra</a>
+<li><a href="#org1842b79">5. Begining 开始</a></li>
+<li><a href="#org7efb690">6. Move&amp;Jump</a></li>
+<li><a href="#orgda2bd01">7. Hydra</a>
 <ul>
-<li><a href="#orgffcc229">5.1. Window</a></li>
+<li><a href="#org2b7ed0d">7.1. Window</a></li>
 </ul>
 </li>
 </ul>
@@ -85,8 +87,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org0d3c1a5" class="outline-2">
-<h2 id="org0d3c1a5"><span class="section-number-2">1</span> Setup 安装</h2>
+<div id="outline-container-org04eafcb" class="outline-2">
+<h2 id="org04eafcb"><span class="section-number-2">1</span> Setup 安装</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>OSX : <a href="http://emacsformacosx.com">Emacs For Mac OS X</a></li>
@@ -95,21 +97,31 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org41c644c" class="outline-2">
-<h2 id="org41c644c"><span class="section-number-2">2</span> Coonfig 配置</h2>
+<div id="outline-container-org7742e94" class="outline-2">
+<h2 id="org7742e94"><span class="section-number-2">2</span> Package Manager</h2>
 <div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>package-list-packages</li>
+<li><a href="https://github.com/jwiegley/use-package/blob/master/bind-key.el">use-package</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org91ca094" class="outline-2">
+<h2 id="org91ca094"><span class="section-number-2">3</span> Coonfig 配置</h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>个人喜好 : ~/.emacs.d/init.el -(org-babel)-&gt; ~/.emacs.d/config.org</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdca4c67" class="outline-2">
-<h2 id="orgdca4c67"><span class="section-number-2">3</span> Basic 基础</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgd90c357" class="outline-3">
-<h3 id="orgd90c357"><span class="section-number-3">3.1</span> UI 用户界面</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-orgd4d69ee" class="outline-2">
+<h2 id="orgd4d69ee"><span class="section-number-2">4</span> Basic 基础</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-org5038e8d" class="outline-3">
+<h3 id="org5038e8d"><span class="section-number-3">4.1</span> UI 用户界面</h3>
+<div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Menu 菜单栏 : 屏幕顶部突出显示的条</li>
 <li>Frame 框架
@@ -124,9 +136,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org04a73cc" class="outline-3">
-<h3 id="org04a73cc"><span class="section-number-3">3.2</span> Keybinding 键绑定</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org36b4005" class="outline-3">
+<h3 id="org36b4005"><span class="section-number-3">4.2</span> Keybinding 键绑定</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 组合键
 </p>
@@ -167,9 +179,9 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org5deebab" class="outline-3">
-<h3 id="org5deebab"><span class="section-number-3">3.3</span> Command 命令</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orgc687af3" class="outline-3">
+<h3 id="orgc687af3"><span class="section-number-3">4.3</span> Command 命令</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 每一个命令 == 一个功能(Elisp函数) 
 </p>
@@ -202,9 +214,9 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-orga6ad1f9" class="outline-3">
-<h3 id="orga6ad1f9"><span class="section-number-3">3.4</span> Help 帮助</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org1e54193" class="outline-3">
+<h3 id="org1e54193"><span class="section-number-3">4.4</span> Help 帮助</h3>
+<div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li>Tutorial : C-h t</li>
 <li>Manual : C-h r == info-emacs-manual
@@ -276,9 +288,9 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org95f4837" class="outline-3">
-<h3 id="org95f4837"><span class="section-number-3">3.5</span> Mode 模式</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-orgc61ae0f" class="outline-3">
+<h3 id="orgc61ae0f"><span class="section-number-3">4.5</span> Mode 模式</h3>
+<div class="outline-text-3" id="text-4-5">
 <ul class="org-ul">
 <li>主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式</li>
 <li>次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个</li>
@@ -286,9 +298,9 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org6361221" class="outline-3">
-<h3 id="org6361221"><span class="section-number-3">3.6</span> Daemon (Server)</h3>
-<div class="outline-text-3" id="text-3-6">
+<div id="outline-container-org16d84b3" class="outline-3">
+<h3 id="org16d84b3"><span class="section-number-3">4.6</span> Daemon (Server)</h3>
+<div class="outline-text-3" id="text-4-6">
 <ul class="org-ul">
 <li>开启服务 : M-x server-start
 <ul class="org-ul">
@@ -313,9 +325,9 @@ For Mac
 
 
 
-<div id="outline-container-org6a13f9d" class="outline-2">
-<h2 id="org6a13f9d"><span class="section-number-2">4</span> Begining 开始</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org1842b79" class="outline-2">
+<h2 id="org1842b79"><span class="section-number-2">5</span> Begining 开始</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 <br>
 所以呢 我不打算 做一些重复的工作 <br>
@@ -402,17 +414,69 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
 </div>
 </div>
 
-<div id="outline-container-orgc5853b3" class="outline-2">
-<h2 id="orgc5853b3"><span class="section-number-2">5</span> Hydra</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org7efb690" class="outline-2">
+<h2 id="org7efb690"><span class="section-number-2">6</span> Move&amp;Jump</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Buffer
+</p>
+<ul class="org-ul">
+<li>左|右
+<ul class="org-ul">
+<li>C-b|f <code>= Left|Right =</code> back|forward-char</li>
+<li>M-b|f == backward|forward-word</li>
+</ul></li>
+<li>上|下
+<ul class="org-ul">
+<li>C-p|n <code>= Up|Down =</code> previous|next-line</li>
+</ul></li>
+<li>行-首|尾
+<ul class="org-ul">
+<li>C-a|e == beginning|end-of-line</li>
+</ul></li>
+<li>翻页-上|下
+<ul class="org-ul">
+<li>M|C-v <code>= PgUp|PgDn =</code> scroll-up|down-command</li>
+</ul></li>
+<li>缓冲区-首|尾
+<ul class="org-ul">
+<li>M-&lt;|&gt; == beginning|end-of-buffer</li>
+</ul></li>
+<li>N-行 | 第N个字符
+<ul class="org-ul">
+<li>M-g g <code>= M-g M-g =</code> goto-line</li>
+<li>M-g c == goto-char</li>
+</ul></li>
+<li>Tab|center|bottom-当前缓冲区可视区域
+<ul class="org-ul">
+<li>M-r == move-to-window-line-top-bottom</li>
+</ul></li>
+<li><a href="https://github.com/abo-abo/avy">Avy</a></li>
+</ul>
+
+<p>
+Frame
+</p>
+<ul class="org-ul">
+<li>M-x select-frame-by-name</li>
+</ul>
+
+<p>
+Window Frame : <a href="https://github.com/abo-abo/ace-window">Ace window</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgda2bd01" class="outline-2">
+<h2 id="orgda2bd01"><span class="section-number-2">7</span> Hydra</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 </p>
 </div>
 
-<div id="outline-container-orgffcc229" class="outline-3">
-<h3 id="orgffcc229"><span class="section-number-3">5.1</span> Window</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org2b7ed0d" class="outline-3">
+<h3 id="org2b7ed0d"><span class="section-number-3">7.1</span> Window</h3>
+<div class="outline-text-3" id="text-7-1">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span>global-set-key
  <span style="color: #006400;">(</span>kbd <span style="color: #61CE3C;">"&lt;f2&gt;"</span><span style="color: #006400;">)</span>
@@ -426,7 +490,7 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
 <span style="color: #FBDE2D;">_E_: enlarge-&lt;&gt;      ^_k_^          _|_:&gt;move  _do_:del-other</span>
 <span style="color: #FBDE2D;">_S_: shrink-&lt;&gt;     _ws_:swap      ___:Vmove ^ ^_db_:kill-buf</span>
 <span style="color: #FBDE2D;">_bw_: balance      ^&lt;Jump&gt;^         ^^^^       _df_:del-frame </span>
-<span style="color: #FBDE2D;">^ ^                _a_:ace _of_:to-frame</span>
+<span style="color: #FBDE2D;">^ ^                _a_:ace _f_:to-frame</span>
 <span style="color: #FBDE2D;">"</span>
 
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"e"</span> #'enlarge-window<span style="color: #ff1493;">)</span>
@@ -442,7 +506,7 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"ws"</span> ace-swap-window<span style="color: #ff1493;">)</span>
    <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Jump</span>
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"a"</span> ace-window <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
-   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"of"</span> #'switch-to-buffer-other-frame <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"f"</span> #'select-frame-by-name <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
    <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Spilt</span>
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"|"</span> <span style="color: #ffff00;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #00ff00;">()</span>
           <span style="color: #00ff00;">(</span><span style="color: #4c83ff;">interactive</span><span style="color: #00ff00;">)</span>
@@ -462,7 +526,7 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"df"</span> delete-frame <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
    <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Misc</span>
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"t"</span> transpose-frame <span style="color: #61CE3C;">"-&lt;-&gt;|"</span><span style="color: #ff1493;">)</span>
-   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"f"</span> new-frame <span style="color: #61CE3C;">"New-frame"</span> <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"nf"</span> new-frame <span style="color: #61CE3C;">"New-frame"</span> <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"z"</span> #'text-scale-adjust <span style="color: #61CE3C;">"Zoom"</span> <span style="color: #4c83ff;">:exit</span> t<span style="color: #ff1493;">)</span>
    <span style="color: #8B8989; font-style: italic;">;;</span>
    <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"q"</span> nil <span style="color: #61CE3C;">"Quit"</span> <span style="color: #4c83ff;">:color</span> blue<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
