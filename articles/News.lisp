@@ -121,6 +121,61 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.21")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=yriFORxHGjQ"
+                           "11/20/2018 路德访谈班农、文贵先生：谈谈未来制裁中共王岐山盗国贼的一系列行为"))
+           (:- "王健之死 与 海航集团 背后的真相 发布会 (视频)"
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=G1pUdtkF8PM"
+                                    "11月20日:「王健之死与海航背后真相发布会」 主讲:郭文贵,班农. (录播版)")
+                             (small () "Youtube")
+                             (small () "(这个版本流畅 但看不到开始的一部分PPT 后面没有法国证人的采访)")))
+                  (:- '(pre () "(我: 所有 班农先生的发言 因为我英文不好 暂时不记录 怕误解 之后再补上)" ))
+                  (:- '(pre () "海航爆发式的发展 与 王岐山家族 与 中共国家战略 之间的关系 "))
+                  (:- '(pre () "海航 大肆收购的目的"))
+                  (:- '(pre () "海航 是 中共的国家战略 意图通过资本运作 获取技术 并在国外执行谍报任务"))
+                  (:- '(pre () "海航 虽然是国家战略 但被 王岐山家族私用 用于将国内盗取的财富 以国家战略的名义而 转入私人名下"))
+                  (:- '(pre () "王健之死的疑点 结合海航背景与中共情报战略 以及当时陪同人员 中共国政府的干预 还有被删除的监视器录像 证人证词 等 怀疑王健不是意外死亡 而是 被谋杀灭口"))
+                  (:- '(pre () "王健是美国绿卡 家人是美国公民 其大量涉及到美国的利益 美国政府应该管 已经向FBI申请立案调查"))
+                  (:- '(pre () "海航 不是单一的 还有大量在美国投资的中共国企业  很可能成为下一个海航 下一个王健"))
+                  (:- '(pre () "1亿美元 成立 中国法治基金会 并希望班农先生出任主席 为寻找真相 和 维护正义"))
+                  (:- '(pre () "反诉海航 (海航对郭先生有诽谤诉讼) 并包括 对 王岐山等中共国官员发起法院调查配合令 申请FBI对中共在西方的渗透和威胁"))
+                  (:- '(pre () "法院调查令名单 包括 海航相关利益人(王岐山 贯军 等) 和 企业(高盛 黑石 等)"))
+                  (:- '(pre () "(1:10:00) 回答问题")))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.11.20")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=u_q3LMSabok"
+                           "18年：11月19日．20日的发布会的准备．开启了N个中国人的第一次……")
+               (u (:- '(pre () "据说17号 王岐山就拿到来发布会的ppt和议程大纲 不以为然 有啥了不起的  但是很多人来说情 第5页和第九页可不可以拿下去啊"))
+                  (:- '(pre () "战友注意礼仪"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147661")
+               '(q () (pre () "
+1月19日：尊敬的战友们好！今天我不健身．休息日！港币一定会完蛋的！过一段时间大家就会用港币当墙纸用了！一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片内容: \"金融界忧港府无力抗大鳄\"")))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.11.19")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/147483")
+               '(q () (pre () "
+11月18日：律师又要求修改文件．全部加班呢……以法治国．的确让人很累．很花钱．但是我感觉很幸福很开心！因为能让我感觉我是在一个安全的公平的环境里生存！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147429")
+               '(q () (pre () "
+11月18日：小蔡多干点这事．能让台湾少死很多人……很多人不会被抓到大陆去．少花很多冤枉钱．10月4日那天能改变台湾命运的决定就不会被删去！……我特别特别尊重蔡大总统……但是台湾人民需要一个不被蓝金黄的总统！台湾是我们华人世界精神．与文化……的诺亚方舟！！！台湾不能输也不能倒！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/147317")
+               '(q () (pre () "
+11月18日：尊敬的战友们好．你们健身了吗……今天的纽约天气有点冷……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147262")
+               '(q () (pre () "
+11月18日：亲爱的战友们好．纽约欢迎您．文贵期盼您．盗国贼恐惧您．欺民贼妒嫉您……这就是我们过去一年所有的战友们用生命时间．勇气．正义．信仰……奋斗的想要的结果！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/147230")
+               '(q () (pre () "
+11月18日：Inty先生好．感谢．尊敬．您能为新疆人民的世纪性大劫难面前．勇敢的表现！欢迎您参加11月20日的在纽约的皮埃尔酒店．我们的发布会！详情请与我的助理凯琳联系！下面您发出的这个信息．的确是她发给您的！一切都是刚刚开始！"))
+               (u (:- '(pre () "(我: 哈哈哈 Inty还以为那是骗人的 被你共害得大家第一反应不是高兴 而是不相信)")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.18")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/147141")
                '(q () (pre () "
@@ -510,7 +565,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 
 (news-to-topic
  "郭文贵"   ;; (human-date (get-universal-time))
- "2018.11.18 14:13:49"
+ "2018.11.21 14:19:10"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -527,6 +582,10 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
                       (@ "https://www.thepierreny.com" "The Pierre Hotel")
                       `(small () (span (:class "badge badge-light" :style "position: absolute;")
                                        ,(@ "https://en.wikipedia.org/wiki/The_Pierre" "Wiki"))))))
+           (:- '(small () "2018.11.19")
+               (u (:- "郭文: " (@ "https://www.guo.media/posts/147483")
+                      '(q () (pre () "
+11月18日：律师又要求修改文件．全部加班呢……以法治国．的确让人很累．很花钱．但是我感觉很幸福很开心！因为能让我感觉我是在一个安全的公平的环境里生存！一切都是刚刚开始！")))))
            (:- '(small () "2018.11.18")
                (u (:- "视频: " (@ "https://www.youtube.com/watch?v=D9ggVuylclY"
                                   "2018年11月17日：11月20号的新闻发布会进展报告，遇到了巨大的困难，但是一定会照常进行。"))
@@ -586,9 +645,15 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.11.12 10:52:20"
+ "2018.11.19 11:54:37"
  (u (:- '(small () "2018.11")
         "南海军演")
+    (:- '(small () "2018.11.14")
+        (@ "https://www.washingtontimes.com/news/2018/nov/14/inside-the-ring-remove-chinese-missiles/"
+           "Trump demands China remove missiles in the South China Sea")
+        '(small () "The Washington Times")
+        '(q () (pre () "
+The Trump administration is demanding that China remove all advanced missiles deployed on disputed islands in the South China Sea, the first time such a demand has been made public.")))
     (:- '(small () "2018.11.9")
         (@ "https://youtu.be/g3rxjaOPQD4"
            "Economic Security as National Security: A Discussion with Dr. Peter Navarro")
@@ -905,7 +970,7 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
 
 (news-to-topic
  "当前关注自媒体" ;; (human-date (get-universal-time) )
- "2018.11.05 11:24:53"
+ "2018.11.21 13:29:22"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
  (u (:- "Youtube"
         (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
@@ -915,4 +980,10 @@ The stories published by Bloomberg in October 2018 had a significant impact. For
            (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
                   "政事直播(政事小哥)"))
            (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
-                  "木蘭訪談"))))))
+                  "木蘭訪談"))
+           (:- (@ "https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g"
+                  "南十字星"))
+           (:- (@ "https://www.youtube.com/channel/UCyDCC5CcIqMqBbzMVENoKVQ"
+                  "赵岩"))
+           (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
+                  "Inty"))))))
