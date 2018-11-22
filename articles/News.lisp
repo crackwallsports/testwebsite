@@ -121,14 +121,55 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.22")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/148459")
+               '(q () (pre () "
+11月22日：尊敬的战友们好：感恩节快乐！文贵感恩所有的战友们……我们一起走过的岁月！是们一起的奋斗．1⃣️样的目标一样的理想！一切都是刚刚开始！")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=vYc9mSeVg1E"
+                           "郭文贵11月21日:发布会媒体反响剧烈!!民主法制基金会为受CCP迫害的官员和家人提供各方面保障!!")
+               '(small () "Youtube")
+               (u (:- '(pre () "纽约时报 要成立小组做一些报道"))
+                  (:- '(pre () "法律基金 的 相关信息"))
+                  (:- '(pre () "媒体记者的对发布会的评价和关注点"))
+                  (:- '(pre () "张阳 房峰辉 王立军  投诚 庇护"))
+                  (:- '(pre () "(21:45) 法律基金 ")
+                      (u (:- '(pre () "为 任何 中共的 官员及其家人 私人企业家 等所有受到迫害的人 提供庇护 帮助他们有自由说话的机会"))
+                         (:- '(pre () "形成国际法 正与20个(未来要超过150个)国家合作 提供 庇护"))
+                         (:- '(pre () "发起诉讼 对海航相关利益人 新疆官员 香港官员"))
+                         (:- '(pre () "2019.1.1 正式运作"))))
+                  (:- '(pre () "搞笑的法院禁止令 想要阻止举行发布会 (我: 恶心人的名字就不提了 历史耻辱柱会记住它们的)"))
+                  (:- '(pre () "王岐山 拿到了ppt 被骗了"))
+                  (:- '(pre () "台湾错失的机会 : 美国放弃一中政策"))
+                  (:- '(pre () "英国 将对香港出台政策 香港是世界的 香港是自由法治的"))
+                  (:- '(pre () "保护 海外资产家人 的安全"))
+                  (:- '(pre () "媒体联盟 : 盯住中共国发生的所有事件"))
+                  (:- '(pre () "袖扣 棒棒棒"))
+                  (:- '(pre () "(58:00) 丢掉幻想 切实行动 (我: 最后这段 感动哭了)"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/148168")
+               '(q () (pre () "
+11月21日：一个小时后就要接受媒体的一个又一个的专访！昨天晚上与Sara路德先生一起晚餐喝醉了！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/148092")
+               '(q () (pre () "
+11日21日：今天有76家世界TV．及媒体要求单独的釆访……一切都是刚刚开始"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.21")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=yriFORxHGjQ"
-                           "11/20/2018 路德访谈班农、文贵先生：谈谈未来制裁中共王岐山盗国贼的一系列行为"))
+                           "11/20/2018 路德访谈班农、文贵先生：谈谈未来制裁中共王岐山盗国贼的一系列行为")
+               '(small () "Youtube"))
            (:- "王健之死 与 海航集团 背后的真相 发布会 (视频)"
                (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=G1pUdtkF8PM"
                                     "11月20日:「王健之死与海航背后真相发布会」 主讲:郭文贵,班农. (录播版)")
                              (small () "Youtube")
                              (small () "(这个版本流畅 但看不到开始的一部分PPT 后面没有法国证人的采访)")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=0mNIkyNq0Aw"
+                                    "郭文贵2018年11月20日信息发布会 : Miles Guo Press Briefing on 11/20/2018")
+                             (small () "Youtube")
+                             (small () "(看不到PPT)")))
+                  (:- "法国证人的采访: " `(cite () ,(@ "https://www.youtube.com/watch?v=N3JKSGOwGMU"
+                                    "郭文贵2018年11月20日信息发布会: Miles Guo Press Briefing on 11/20/2018")
+                             (small () "Youtube")))
                   (:- '(pre () "(我: 所有 班农先生的发言 因为我英文不好 暂时不记录 怕误解 之后再补上)" ))
                   (:- '(pre () "海航爆发式的发展 与 王岐山家族 与 中共国家战略 之间的关系 "))
                   (:- '(pre () "海航 大肆收购的目的"))
@@ -565,7 +606,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 
 (news-to-topic
  "郭文贵"   ;; (human-date (get-universal-time))
- "2018.11.21 14:19:10"
+ "2018.11.22 20:55:44"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
