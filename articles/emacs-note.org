@@ -145,29 +145,59 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
 - C
 
 * Move & Jump
+光标的定位 (屏幕可视范围内)
+
 Buffer
-- 左|右
-  - C-b|f == Left|Right | back|forward-char
-  - M-b|f == backward|forward-word 
+- 左右
+  - C-b|f == (backward|forward)-char 
+  - M-b|f == (backward|forward)-word 
 - 上|下
-  - C-p|n == Up|Down | previous|next-line
+  - C-p|n == (previous|next)-line
 - 行-首|尾
-  - C-a|e == beginning|end-of-line       
+  - C-a|e == (beginning|end)-of-line
+- 句子-首|尾
+  - M-a|e == (backward|forward)-sentence
+- 段落-首|尾
+  - M-{|} == (backward|forward)-paragraph
 - 翻页-上|下
-  - M|C-v == PgUp|PgDn | scroll-up|down-command
+  - M|C-v == PgUp|PgDn | scroll-(up|down)-command
 - 缓冲区-首|尾
-  - M-<|> == beginning|end-of-buffer
-- N-行 | 第N个字符
-  - M-g g | M-g M-g == goto-line
-  - M-g c == goto-char
-- Tab|center|bottom-当前缓冲区可视区域
+  - M-<|> == (beginning|end)-of-buffer
+- 到本行第一个非空字符
+  - M-m == back-to-indentation
+- N-行 : M-g g | M-g M-g == goto-line
+- (Top|Center|Bottom)-当前缓冲区可视区域
   - M-r == move-to-window-line-top-bottom
-- [[https://github.com/abo-abo/avy][Avy]]
+
+Window  
+- C-x o == other-window
 
 Frame
 - M-x select-frame-by-name
 
-Window Frame : [[https://github.com/abo-abo/ace-window][Ace window]]
+Assist
+- Wind Move
+  - M-x windmove-(left|right|up|down)
+- [[https://github.com/abo-abo/ace-window][Ace window]]
+  - M-x ace-window (Me: == S-o)
+- [[https://github.com/abo-abo/avy][Avy]]
+  - M-x avy-goto-(char|word-1|line)
+
+Supplement
+#+BEGIN_SRC emacs-lisp
+;; 设置 sentence-end 可以识别中文标点
+(setq sentence-end
+      "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
+#+END_SRC
+
+* Edit
+- 选中 : 选择需要编辑的部分文本
+- 插入
+- 删除
+- 复制 粘贴 剪切
+- 撤销 重做
+- 处理 : 执行一些特定的功能 如 转换大小写
+
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -235,3 +265,4 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 
   
+ 
