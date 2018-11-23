@@ -4,8 +4,6 @@
 #+HTML_DOCTYPE: html5
 #+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
 
-#+version: 0.1
-
 
 * COMMENT Generate
 #+BEGIN_SRC lisp
@@ -17,11 +15,14 @@
 - OSX : [[http://emacsformacosx.com][Emacs For Mac OS X]]
 - Linux : 用包管理器安装
 
+* Package Manager
+- package-list-packages
+- [[https://github.com/jwiegley/use-package/blob/master/bind-key.el][use-package]]
+
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
 
 * Basic 基础
-  
 ** UI 用户界面
 - Menu 菜单栏 : 屏幕顶部突出显示的条
 - Frame 框架
@@ -90,7 +91,6 @@
   - -n, --no-wait	: Don't wait for the server to return
 
 
-
 * Begining 开始
 入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 \\
 所以呢 我不打算 做一些重复的工作 \\
@@ -101,7 +101,7 @@
 从 编辑文本 开始 : 需要什么?
 
 - Move|Jump 移动或跳转 :
-  - 要在 Buffer中移动 : 字符 单词 行 
+  - 要在 Buffer中移动 : 字符 单词 行
   - 跳到 不同的 Window中 或 Frame中
 - Edit 编辑
   - 选中 : 选择需要编辑的部分文本
@@ -144,6 +144,60 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
   - Completion : company-slime
 - C
 
+* Move & Jump
+光标的定位 (屏幕可视范围内)
+
+Buffer
+- 左右
+  - C-b|f == (backward|forward)-char 
+  - M-b|f == (backward|forward)-word 
+- 上|下
+  - C-p|n == (previous|next)-line
+- 行-首|尾
+  - C-a|e == (beginning|end)-of-line
+- 句子-首|尾
+  - M-a|e == (backward|forward)-sentence
+- 段落-首|尾
+  - M-{|} == (backward|forward)-paragraph
+- 翻页-上|下
+  - M|C-v == PgUp|PgDn | scroll-(up|down)-command
+- 缓冲区-首|尾
+  - M-<|> == (beginning|end)-of-buffer
+- 到本行第一个非空字符
+  - M-m == back-to-indentation
+- N-行 : M-g g | M-g M-g == goto-line
+- (Top|Center|Bottom)-当前缓冲区可视区域
+  - M-r == move-to-window-line-top-bottom
+
+Window  
+- C-x o == other-window
+
+Frame
+- M-x select-frame-by-name
+
+Assist
+- Wind Move
+  - M-x windmove-(left|right|up|down)
+- [[https://github.com/abo-abo/ace-window][Ace window]]
+  - M-x ace-window (Me: == S-o)
+- [[https://github.com/abo-abo/avy][Avy]]
+  - M-x avy-goto-(char|word-1|line)
+
+Supplement
+#+BEGIN_SRC emacs-lisp
+;; 设置 sentence-end 可以识别中文标点
+(setq sentence-end
+      "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
+#+END_SRC
+
+* Edit
+- 选中 : 选择需要编辑的部分文本
+- 插入
+- 删除
+- 复制 粘贴 剪切
+- 撤销 重做
+- 处理 : 执行一些特定的功能 如 转换大小写
+
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -161,7 +215,7 @@ _s_: shrink       _j_     _l_       _x_:-      _da_:ace-del
 _E_: enlarge-<>      ^_k_^          _|_:>move  _do_:del-other
 _S_: shrink-<>     _ws_:swap      ___:Vmove ^ ^_db_:kill-buf
 _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame 
-^ ^                _a_:ace _of_:to-frame
+^ ^                _a_:ace _f_:to-frame
 "
 
    ("e" #'enlarge-window)
@@ -177,7 +231,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
    ("ws" ace-swap-window)
    ;; Jump
    ("a" ace-window :exit t)
-   ("of" #'switch-to-buffer-other-frame :exit t)
+   ("f" #'select-frame-by-name :exit t)
    ;; Spilt
    ("|" (lambda ()
           (interactive)
@@ -197,7 +251,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
    ("df" delete-frame :exit t)
    ;; Misc
    ("t" transpose-frame "-<->|")
-   ("f" new-frame "New-frame" :exit t)
+   ("nf" new-frame "New-frame" :exit t)
    ("z" #'text-scale-adjust "Zoom" :exit t)
    ;;
    ("q" nil "Quit" :color blue)))
@@ -211,3 +265,4 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 
   
+ 
