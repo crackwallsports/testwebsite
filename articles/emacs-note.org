@@ -17,7 +17,7 @@
 
 * Package Manager
 - package-list-packages
-- [[https://github.com/jwiegley/use-package/blob/master/bind-key.el][use-package]]
+- [[https://github.com/jwiegley/use-package][use-package]]
 
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
