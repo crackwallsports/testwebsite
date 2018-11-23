@@ -26,8 +26,8 @@
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
   (div ()
-       ;; (span (:class "badge badge-success") "更新-10.28")
-       ;; (pre () "")
+       "Emacs - 基础 - 移动和跳转 (Move&Jump) "
+        (span (:class "badge badge-success") "更新-11.23")
        ))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
