@@ -1,0 +1,55 @@
+#+TITLE: Common Lisp - 笔记整理 (草稿)
+#+AUTHOR: Xt3
+#+OPTIONS: html-postamble:nil html-style:nil tex:nil
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+
+
+* COMMENT Generate
+#+BEGIN_SRC lisp
+(gen-with-frame "Common Lisp Note"
+                #P"articles/common-lisp-note.html")
+#+END_SRC
+
+* 准备
+- 实现
+  - CCL
+  - SBCL
+- 编辑器 : Emacs
+  - Slime
+  - lispy
+
+* Strart
+Live 活着的
+- 交互能力 实时修改 快速反馈
+- REPL : 读 求值 打印 循环
+
+** 自身
+- 语法 : S-表达式 : 原子 列表
+- 求值
+  - 控制求值 : quote
+  - 求值规则 返回值
+    - 函数 特殊形式 宏
+** 表示 和 操作
+- 表示
+  - 数字 : 1 -1 3.14159 3/2 #b1001 #o777 #xAC53
+    - 12345678901012345678902012345678903012345678901
+  - 字符串 : "我们彼此看着对方" "Hello World"
+    - 字符 : #\x #\云  (编码: ASCII Unicode UTF-8)
+    - "Hello" == #(#\H #\e #\l #\l #\o)
+  - 真值 : t nil
+    - 非nil 都为真
+  - 名字(变量) : 关联一个对象
+    - 比起使用变量这个术语 我更喜欢用名字或标签
+    - 变量和常量 : 可不可以修改 名字与对象的关联 (是否可以把名字用到别的对象上) 
+    - 符号
+  - 过程 : 函数
+    - 匿名函数(深藏功与名) : lambda
+    - 关联一个名字 : defun
+    - 返回值
+  - 控制流程 : 顺序 条件分支if cond 循环
+  - 复杂对象 : list array hash-table structure class(CLOS)
+- 操作
+  - 数学计算 : + - * / sin
+  - 等等
+
