@@ -181,6 +181,30 @@ z-index:100;
 #+END_SRC
 
 **** 11
+- 26
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.11.26")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149659")
+               '(q () (pre () "
+11月25日：我问班农先生如何看待即将在G20的川普会！一切都是刚刚开始！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149655")
+               '(q () (pre () "
+11月25日：我与班农先生正在晚餐．我问班农先生怎么看1120发布会！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149576")
+               '(q () (pre () "
+11月25日：这是田丁在8月2日左右．在西雅图王健先生家的时候！你们猜猜他在干啥呢！…… 王健先生的尸体远回西雅图后．田丁强迫性的要求陪伴着王健夫人…… 这是为什么呢…… 另U盘里的秘密择期我将全部公开！我将律师与顾问团队不允许用在发布会上的资料放U盘里的目的就是不妥协．就是为了发动一场全民找杀害王健证据的运动……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/149562")
+               '(q () (pre () "
+11月25日：法国女版的政事小哥来了……这个节目真是太棒了👏👏👏看来路德．小哥．大卫．先生们需要学习学习了……律政悟空这期节目是解读1120发布会节目中最好的！……期待着她能找到更多我埋下的宝藏……盼望有更多这样的战友们把握住这个机会……一切都是刚刚开始！"))
+               (u (:- `(cite () "律政悟空: "
+                             ,(@ "https://www.youtube.com/watch?v=BCRfSPibe5w"
+                                 "20181124-1#郭文贵- #班农 信息发布会之五-【😱核弹级爆料😱！】#海航 #王健 还活着的时候，新闻已出笼？！")
+                             (smaill () "Youtube")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=mjPWYQiGR50"
+                           "11/20 信息发布会 PPT（英文版）11/20 Press Briefing PPT (English)")))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 25
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -791,7 +815,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"    ;; (human-date (get-universal-time))
- "2018.11.25 20:26:23"
+ "2018.11.26 11:18:30"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
