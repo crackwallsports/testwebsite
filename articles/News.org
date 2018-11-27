@@ -181,13 +181,40 @@ z-index:100;
 #+END_SRC
 
 **** 11
+- 27
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.11.27")
+        (u (:- "郭文: "
+               (@ "https://www.guo.media/posts/149904")
+               " .. "
+               (@ "https://www.guo.media/posts/149844")
+               '(q () (pre () "
+11月26日：尊敬的战友们好．郭媒体的直播功能现在已经被盗国贼黑客．骇断了．不能进行直播……万分抱歉！一切都是刚刚开始！
+
+11月26日，这是今天下午6:00到8:00在美国的福克斯电视现场直播的节目！《川普总统和他的敌人》这本书的现场发布会！郭媒体将现场直播！并可为战友们去问你问题，请战友们关注．并将想问的问题在郭媒体给我留言！请注意全程都是英文对话！英文演讲！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/149840")
+               '(q () (pre () "
+11月26日：我咪着眼看着我即将打击👊的敌人！虽然下着雨！我信心满满！接下来的言讲．将是面对N个关心中国经济人权的美国重要重要的朋友！并回答他们的问题……刚刚下飞机就收到通知．从特定60人要改成120人了……有些人是为此会从亚洲．欧洲赶回来的！一切都是刚刚开始！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149829")
+               '(q () (pre () "
+11月26日：马上就要起飞🛫️去几个智库去言讲！会后再向战友们汇报！一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 26
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2018.11.26")
-        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149659")
+        (u (:- "郭文" (@ "https://www.guo.media/posts/149693")
                '(q () (pre () "
-11月25日：我问班农先生如何看待即将在G20的川普会！一切都是刚刚开始！")))
+文贵的U盘里不存在任何技术上的秘密！更没有密档！稍后我会解释我现在不能说的秘密！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149659")
+               '(q () (pre () "
+11月25日：我问班农先生如何看待即将在G20的川普会！一切都是刚刚开始！"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=YV6GbNIHxZQ"
+                                 "战友之声 20181125 (中文字幕版)郭文贵先生客串记者英文采访班农先生G20和1120发布会")
+                             (small () "Youtube")))))
            (:- "郭文(短视频): " (@ "https://www.guo.media/posts/149655")
                '(q () (pre () "
 11月25日：我与班农先生正在晚餐．我问班农先生怎么看1120发布会！")))
@@ -815,7 +842,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"    ;; (human-date (get-universal-time))
- "2018.11.26 11:18:30"
+ "2018.11.27 11:49:53"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
