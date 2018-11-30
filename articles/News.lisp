@@ -121,6 +121,35 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.30")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/151413")
+               '(q () (pre () "11月30日：这位战友的观点真诚……客观！文贵万分支持！高手呀……伟大的战友！"))
+               (u (:- '(pre () "郭文图片: 关于 美国加大审查中共国留学生的看法"))
+                  (:- '(pre () "(我: 我认为 美国政府不应把焦点都集中在留学生本人上 真正的问题 不是他们是不是间谍 而是 他们会受到中共的威逼利诱 迫使他们在现在或将来成为 间谍 美国应对中共释放强烈信号 让它们不能威胁留学生 要有应对措施 要为留学生提供保护 他们可以此为由 拒绝帮助中共 能受到保护和鼓励 就能够减少出卖自己的可能性)"))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=Z5cS1rBLhBc"
+                           "1129 郭文贵先生直播 郭战装到了！")
+               '(small () "Youtube")
+               (u (:- '(pre () "郭战装 展示"))
+                  (:- '(pre () "(26:30) 法治基金 参与"))
+                  (:- '(pre () "各国将有行动"))
+                  (:- '(pre () "德意志银行被查就是查海航"))
+                  (:- '(pre () "王岐山 鬼才 (我: 有才就见鬼了 有财倒是真的)"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/150967")
+               '(q () (pre () "11月29日：尊敬的战友们好．马上就要在郭媒体直播！我好兴奋！郭战装到了！"))
+               (u (:- '(pre () "郭文图片: 海航控股 向 银行 申请75亿元贷款"))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=pcpno3I8eLs"
+                           "11/20 信息发布会 PPT（中文版）11/20 Press Briefing PPT (Chinese)")
+               '(small () "Youtube"))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/150897")
+               '(q () (pre () "
+11月29日：这是那位伟大的战友挖出来的！这是真的吗！😹😹😹😯这可咋办呢！文贵要失业了！"))
+               (u (:- '(pre () "郭文图片: 昨天 大卫小哥揭示真实裴南南后 网上出现的 裴南南 个人信息和照片 不知真假"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/150851")
+               '(q () (pre () "
+11月29日：SNOW解除双规了！今天早上恢复自由回家了！看来嗨了一整夜……真是不可思议的传奇狗生！尊敬的战友们你们健身了吗！一切都是刚刚开始……"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.11.29")
         (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/150685")
                '(q () (pre () "
@@ -787,7 +816,7 @@ ECONOMIC and SECURITY REVIEW COMMISSION (Chapter 3 Section 4- China and Hong Kon
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.11.29 14:04:09"
+ "2018.11.30 14:52:21"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
