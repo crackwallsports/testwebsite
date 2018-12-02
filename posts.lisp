@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2018 11 30"
+(("2018 12 2"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-11.30")
+          (span (:class "badge badge-success") "每日追踪-12.2")
           (pre ()
                (small () "王健之死 与 海航集团 背后的真相 发布会 2018.11.20")
                (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
@@ -19,9 +19,10 @@
           (span () "美国副总统 彭斯 哈德逊研究所演讲"))
      (div ()
           (span () "美国 川普总统 联合国演讲"))
-     (div ()
-          (span () "中共国 供应链 恶意芯片植入 事件")
-          (span (:class "badge badge-success") "更新-10.24"))))
+     ;; (div ()
+     ;;      (span () "中共国 供应链 恶意芯片植入 事件")
+     ;;      (span (:class "badge badge-success") "更新-10.24"))
+     ))
  ("2018 11 7"
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
