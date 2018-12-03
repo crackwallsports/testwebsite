@@ -180,6 +180,39 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 12
+- 3
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.12.3")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=8yJ0o-IPbKA"
+                           "杨澜找钥匙和G20会议的背后真相，开棺验王健的尸，谈谈王岐山，孟建柱，吴征。")
+               '(small () "Youtube")
+               (u (:- '(pre () "少儿不宜 杨澜 找钥匙 咬舌头 (道听途说)"))
+                  (:- '(pre () "中共外交部长G20新闻发布会 \"请文贵发言\""))
+                  (:- '(pre () "刘特佐 背景 "))
+                  (:- '(pre () "星期天早上直播"))
+                  (:- '(pre () "(32:00) G20"))
+                  (:- '(pre () "1 三个月能解决它们的腐败 黑恶?"))
+                  (:- '(pre () "2 17年的世贸规则破坏 一张合同能解决吗?"))
+                  (:- '(pre () "3 美国还会给中共国下一个17年吗?"))
+                  (:- '(pre () "4 习若推行桌面上桌面下的声明 能做到吗?"))
+                  (:- '(pre () "5 若做到了 谁是最大受益者 ?: 所有人 "))
+                  (:- '(pre () "6 若做不到 谁是赢家 ?: 我们 ?: 美国会拉倒吗!"))
+                  (:- '(pre () "7 3个月长吗?"))
+                  (:- '(pre () "川普总统G20之前 去了哪? 西边加州马里布 见了谁?"))
+                  (:- '(pre () "纳瓦罗G20前两周在做什么?"))
+                  (:- '(pre () "未来3个月 美国在 军事上 国家政策调整上 台湾香港问题上 知识产权上 货币政策上 会有什么举措"))
+                  (:- '(pre () "共产党没了 中国不会乱 (我: 我认为不会乱 它们没了 我们哪还有时间陪着它们瞎折腾 早该干嘛干嘛去了 ...) "))
+                  (:- '(pre () "马云 私营企业 国有化"))
+                  (:- '(pre () "(57:00) 王健 开棺验尸 FBI立案调查 停尸房 司机 现场人的通话记录 王健的钱 死前的通话记录"))
+                  (:- '(pre () "中共国政府 拒绝以国家名义 施压美国 禁止 11.20发布会 岐山同志不开心 亲自给华尔街朋友打电话 给白宫抗议 : 家人照片 贯军是私生子(但是发布会没有说 只说是神秘人) 飞行记录里有真有假(哪些是真的啊? 劳烦岐山同志指一指)"))
+                  (:- '(pre () "王伟不让他的妻儿看尸体"))
+                  (:- '(pre () "(1:19:00) 模仿问问题 后戴帽子 "))
+                  (:- '(pre () "中国的现在的问题 就是那几个人的问题 解决它们 中国就能走向法治"))
+                  (:- '(pre () "留学生的问题 反中共 不要反中国人"))
+                  (:- '(pre () "英国朋友 香港回归 中国必将改变 西方对中共的看法已经大转弯")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 2
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -194,11 +227,16 @@ z-index:100;
                                  "@Xiaoli11032018")) )))
            (:- "郭文: " (@ "https://www.guo.media/posts/152871")
                '(q () (pre () "
-12月1日：President Trump. Vice President Pence. And there is justice all over the world. People of conscience should take a look at this video! Our children are going to have this misery, too. There is no humane treatment! Please pay attention to all this!……为了我们的孩子！文贵拜请所有的战友！🙏🙏🙏🙏🙏🙏🙏😘😘尽一切力量转发给西方领导人！所有看过这个视频的西方朋友都很难过😫很愤怒😡因为这让任何人都无法接受！这是对所有人的威胁！")))
+12月1日：President Trump. Vice President Pence. And there is justice all over the world. People of conscience should take a look at this video! Our children are going to have this misery, too. There is no humane treatment! Please pay attention to all this!……为了我们的孩子！文贵拜请所有的战友！🙏🙏🙏🙏🙏🙏🙏😘😘尽一切力量转发给西方领导人！所有看过这个视频的西方朋友都很难过😫很愤怒😡因为这让任何人都无法接受！这是对所有人的威胁！"))
+               `(cite () "视频: " ,(@ "https://www.youtube.com/watch?v=31UkYwhfC2s"
+                                      "President Trump. Vice President Pence. And there is justice")
+                      (small () "Youtube")))
            (:- "郭文(短视频): " (@ "https://www.guo.media/posts/152865")
                '(q () (pre () "
 12月1日：我们伟大的战友将这个视频加上字幕后！我发给了很多重要的人！让他们知道！这就是比爹和娘还亲的CCP政府！每时每刻都在中国发生这样的事情！所有的回复都是＂FK＂CCP……")))
            (:- "郭文: " (@ "https://www.guo.media/posts/152780")
+               (@ "https://www.guo.media/posts/152873")
+               (@ "https://www.guo.media/posts/153121")
                '(q () (pre () "
 亲爱的战友们：这是美国司法部对刘特佐JHO LOW的起诉书
 1:中国的政府和孟建柱为什么将刘特佐使用国家领导人的级别在上海被保护。
@@ -253,7 +291,7 @@ z-index:100;
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.12.02 15:07:14"
+ "2018.12.03 20:13:14"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
