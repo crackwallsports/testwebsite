@@ -121,6 +121,16 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.11.4")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/154541")
+               '(q () (pre () "
+12月3日：我生气啦！我痛苦不堪……因为我的SNOW自从吸了大麻被双规后！茶饭不思寝食难安……我担心……天到处闻来闻去！……不就是找大麻吗……就像……孟维参〈韦石＞屎偌．夏夜凉．李宏宽．家宝胜……欺民贼一样！肛毛里找屎吃……天哪我特别受不了！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/154167")
+               '(q () (pre () "
+12月3日：尊敬的战友们好．你们健身了吗！我手机里看到的信息都是．找钥匙钓舍头！大家都别被我们自己的周末快乐的直播．将我们的重点忘了！王健之死．海航真相！王岐山．孙力军．1120……拜托了战友们！一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.3")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=8yJ0o-IPbKA"
                            "杨澜找钥匙和G20会议的背后真相，开棺验王健的尸，谈谈王岐山，孟建柱，吴征。")
@@ -216,7 +226,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (human-date (get-universal-time))
- "2018.12.03 20:13:14"
+ "2018.12.04 20:05:17"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -296,9 +306,9 @@ z-index:100;
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
- "2018.11.19 11:54:37"
- (u (:- '(small () "2018.11")
-        "南海军演")
+ "2018.12.04 20:10:20"
+ (u (:- '(small () "2018.11.30-12.1")
+        "G20 (2018 G20 Buenos Aires summit)")
     (:- '(small () "2018.11.14")
         (@ "https://www.washingtontimes.com/news/2018/nov/14/inside-the-ring-remove-chinese-missiles/"
            "Trump demands China remove missiles in the South China Sea")
