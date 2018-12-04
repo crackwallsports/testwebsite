@@ -238,7 +238,7 @@ Special
   - C-M-h == mark-defun
 
 Assist
-- 标记环列表: [[Helm]]
+- 标记环列表: [[https://github.com/emacs-helm/helm][Helm]]
   - M-x helm-mark-all-rings | helm-[global]-mark-ring
 
 Supplement
