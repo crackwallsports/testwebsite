@@ -15,9 +15,9 @@
 - OSX : [[http://emacsformacosx.com][Emacs For Mac OS X]]
 - Linux : 用包管理器安装
 
-* Package Manager
+* Package Manager 包管理器
 - package-list-packages
-- [[https://github.com/jwiegley/use-package/blob/master/bind-key.el][use-package]]
+- [[https://github.com/jwiegley/use-package][use-package]]
 
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
@@ -30,6 +30,10 @@
     - Buffer 缓冲区 : 关联文件
 - Mode Line 模式行 (状态栏) : 每个窗口中 横贯底部的高亮条 提供当前缓冲区的信息
 - Echo Area : 模式行下面 底部的区域 显示相关信息
+
+** Mode 模式
+- 主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式 
+- 次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个
 ** Keybinding 键绑定
 组合键
 - Ctrl (C)
@@ -75,11 +79,7 @@
   | C-h c | describe-key-briefly|
   | C-h k | describe-key|
 
-** Mode 模式
-- 主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式 
-- 次要模式 minor-mode : 提供了一些与任何特定的主要模式无关的特性或功能 可多个
-
-** Daemon (Server)
+** Server 服务
 - 开启服务 : M-x server-start
   - 初始文件 <<
     #+BEGIN_SRC emacs-lisp
@@ -89,7 +89,6 @@
   - -t <filename>  : open a new frame on the terminal
   - -c : open a new X frame
   - -n, --no-wait	: Don't wait for the server to return
-
 
 * Begining 开始
 入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 \\
@@ -165,8 +164,9 @@ Buffer
   - M-<|> == (beginning|end)-of-buffer
 - 到本行第一个非空字符
   - M-m == back-to-indentation
-- N-行 : M-g g | M-g M-g == goto-line
-- (Top|Center|Bottom)-当前缓冲区可视区域
+- N-行
+  - M-g (g|M-g) == goto-line
+- 当前缓冲区可视区域-(Top|Center|Bottom)
   - M-r == move-to-window-line-top-bottom
 
 Window  
@@ -178,7 +178,7 @@ Frame
 Assist
 - Wind Move
   - M-x windmove-(left|right|up|down)
-- [[https://github.com/abo-abo/ace-window][Ace window]]
+- [[https://github.com/abo-abo/ace-window][Ace Window]]
   - M-x ace-window (Me: == S-o)
 - [[https://github.com/abo-abo/avy][Avy]]
   - M-x avy-goto-(char|word-1|line)
@@ -191,13 +191,66 @@ Supplement
 #+END_SRC
 
 * Edit
-- 选中 : 选择需要编辑的部分文本
+- 选中 (标记) : 选择需要编辑的部分文本
 - 插入
-- 删除
-- 复制 粘贴 剪切
+- 删除 剪切 复制 粘贴
 - 撤销 重做
 - 处理 : 执行一些特定的功能 如 转换大小写
+- 特性 : 矩形区块
 
+** Mark 标记
+选中 需要编辑的部分文本
+
+- 标记
+  - 点
+    - C-(<SPC>|@) == set-mark-command (激活) 
+    - C-<SPC> C-<SPC> (不激活 但进入标记环)
+  - 字符-右|左
+    - C-F|B
+  - 单词-右|左
+    - M-@ == mark-word (@: 插入点不动)
+    - M-F|B
+  - 行-首|尾
+    - C-A|E
+    - 整行
+  - 句子-首|尾
+    - M-A|E
+  - 段落
+    - M-h == mark-paragraph
+  - 缓冲区
+    - C-x h == mark-whole-buffer 
+  - Shift select
+    - Mouse shift-selection
+      - Shift-<Mouse>
+- 标记环 (Mark Ring : 标记的点 进入 标记环) [Global|Local]
+  - 最后标记点
+    - C-u C-<SPC> (当前缓冲) 
+    - C-x C-<SPC> == pop-global-mark
+  - 列表
+    - M-x helm-mark-all-rings | helm-[global]-mark-ring
+- 互换位置-插入点和标记点
+  - C-x C-x == exchange-point-and-mark
+
+Special
+- 标记 表达式
+  - C-M-@ == mark-sexp
+- 标记 定义
+  - C-M-h == mark-defun
+
+Assist
+- 标记环列表: [[Helm]]
+  - M-x helm-mark-all-rings | helm-[global]-mark-ring
+
+Supplement
+- 整行
+  #+BEGIN_SRC emacs-lisp
+(defun xt3/sel-cur-line ()
+  (interactive)
+  (set-mark (line-end-position))
+  (beginning-of-line))
+(bind-key "C-x M-h" #'xt3/sel-cur-line)
+#+END_SRC
+** Insert 插入
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -258,9 +311,27 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 #+END_SRC
 
+* Mode
 
+** Ace Window
+#+BEGIN_SRC emacs-lisp
+(use-package ace-window
+  :config
+  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  (ace-window-display-mode)
+  :bind ("S-o" . ace-window))
+#+END_SRC
 
-
+** Avy
+#+BEGIN_SRC emacs-lisp
+(use-package avy
+  :bind
+  (("C-;" . 'avy-goto-char)
+   ;; ("C-'" . 'avy-goto-char-2)
+   ("M-g g" . 'avy-goto-line)
+   ;; ("M-g e" . 'avy-goto-word-0)
+   ("M-g w" . 'avy-goto-word-1)))
+#+END_SRC
 
 
 
