@@ -180,6 +180,44 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 12
+- 6
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.12.6")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/155836")
+               '(q () (pre () "
+巛周恬恬（鲁艳丽）报案以后，教堂底下死了个人，在中午的小镇上还是会沸沸扬扬的。华镔、维亚克跟王健都算有头脸的生意人、年岁大资格老、亲密喝酒的一拨，无论出于情分还是装模作样，也该去现场，之所以根本不去现场，看都不看一眼尸体，就赶紧找警察、找媒体，就是知道王健必死、己死，赶紧善后……》鲁艳丽是酒店登记的名字．周恬恬是一这个翻译可以确定的！她俩是一个人吗！如果是一个人．为什么有两个完全不同姓氏的名字呢……伟大的战友们已经快挖出真相了！🙏🙏🙏🙏🙏🙏😘😘😘😘😘😘")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/155683")
+               '(q () (pre () "
+12月5日：伟大的战友伟大的智慧！虽然这个答案还不能确定……但是凡是！关注深挖王健之死的真相的！都是我们最伟大的战友！"))
+               (u (:- '(pre () "这个答案(郭文图片): 死的是王宁 墓地里埋得不是王健")))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 5
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.12.5")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/155546")
+               '(q () (pre () "
+12月5日：这股票咋又绿了……这经济都脱裤子了！下一步呢……一切都是刚刚开始！"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.nytimes.com/2018/12/04/business/stephen-bannon-guo-wengui-china.html#click=https://t.co/1wvvS3QTaX"
+                                 "Steve Bannon and a Fugitive Billionaire Target a Common Enemy: China")
+                             (small () "2018.12.4 The New York Times")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/155089")
+               '(q () (pre () "
+12月4日：正在研究设计的郭战友领导是如何的特别！让凯琳及设计师．法毕奥告诉大家！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/155078")
+               '(q () (pre () "
+12月4日：CCP的经济无法阻止下行也无法阻止人民币．港币的贬值．崩溃…………就像所谓的海外民运永无做为……永远骗捐……永不团结……永远让人看不起一样！没救！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/154917")
+               '(q () (pre () "
+12月4日：里根总统当时问军方．我们需要多少年干掉苏联！答案是40年！里根总统说我只能干8年！而且我必须在8年内干掉他们……结果美国用了9年干掉了苏联……解放了14亿东欧人民！"))
+               (u (:- `(cite () "视频: "
+                             ,(@ "https://d57iplyuvntm7.cloudfront.net/uploads/videos/2018/12/vid_1543940403_62131.MOV")
+                             (small () "GUO.MEDIA"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 4
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -302,8 +340,8 @@ z-index:100;
 *** 基本
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "郭文贵"  ;; (human-date (get-universal-time))
- "2018.12.04 20:05:17"
+ "郭文贵"   ;; (human-date (get-universal-time))
+ "2018.12.06 20:22:46"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
