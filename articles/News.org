@@ -180,6 +180,36 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 12
+- 7
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2018.12.7")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/156428")
+               '(q () (pre () "
+🙏🙏🙏12月6日：对上了．对上了．找着两个钥匙了🔑伟大的天使．战友西行小宝！视频里的5个大秘密㊙️一个小秘密……已经被！大卫小哥．政事小哥．西行小宝．解了两个了……伟大伟大！")))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/156291")
+               '(q () (pre () "12月6日：新款．美国第一辆劳斯莱斯SUV！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/156275")
+               '(q () (pre () "12月6日：任正菲先生的女儿．90％的可能不会被引渡到美国！因为这是美国的战略……也是现实！千万千万别低估了B．G．Y．在美国的力量！"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.theglobeandmail.com/canada/article-canada-has-arrested-huaweis-global-chief-financial-officer-in/"
+                                 "Canada arrests Huawei’s global chief financial officer in Vancouver")
+                             (small () "2018.12.5 The Global and Mail"))
+                      (u (:- `(cite () "中文参考: "
+                                           ,(@ "https://www.voachinese.com/a/REPORT-CANADA-HUAWEI-ARREST-20181205/4688446.html"
+                                               "加拿大应美国要求逮捕华为首席财务官 中国外交部：立即放人")
+                                           (small () "2018.12.6 美国之音")))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/156238")
+               '(q () (fpre () "
+12月6日：每次回到这个教堂⛪️都让我感慨万千……我现在感觉到了上天众神已经回到了！被抛弃的14亿中国人民心中！没有信仰的人民．国家！什么都不是！什么都不会拥有！12月6日：每次回到这个教堂⛪️都让我感慨万千……我现在感觉到了上天众神已经回到了！被抛弃的14亿中国人民心中！没有信仰的人民．国家！什么都不是！什么都不会拥有！"))
+               (u (:- '(pre () "郭先生 到了 佛罗里达州的海湖庄园"))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/156195")
+               '(q () (pre () "
+12月2日一4日：因为雾霾多少孩子．老人👵住进了医院🏥她们．他们．付的起医药费吗？那些药都是真的吗？"))
+               (u (:- '(pre () "华北地区 遭遇 严重雾霾")))))))
+ ,*news-topics-guo*)
+
+#+END_SRC
 - 6
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -340,8 +370,8 @@ z-index:100;
 *** 基本
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "郭文贵"   ;; (human-date (get-universal-time))
- "2018.12.06 20:22:46"
+ "郭文贵"   ;; (twb::human-date (get-universal-time))
+ "2018.12.07 20:56:46"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
