@@ -280,7 +280,10 @@ There is an easy beginning to negotiations. Chinese theft of US IP is estimated 
                            "11/20/2018 路德访谈班农、文贵先生：谈谈未来制裁中共王岐山盗国贼的一系列行为")
                '(small () "Youtube"))
            (:- "王健之死 与 海航集团 背后的真相 发布会 (视频)"
-               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=G1pUdtkF8PM"
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=7cy30C__raA"
+                                    "郭文贵2018年11月20日信息发布会（中英文版）Miles Guo Press Briefing on 11/20/2018 (English & Mandarin)")
+                             (small () "Youtube")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=G1pUdtkF8PM"
                                     "11月20日:「王健之死与海航背后真相发布会」 主讲:郭文贵,班农. (录播版)")
                              (small () "Youtube")
                              (small () "(这个版本流畅 但看不到开始的一部分PPT 后面没有法国证人的采访)")))
