@@ -121,6 +121,24 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.12")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/159853")
+               '(q () (pre () "
+12月11日：没钱了！只能委屈的让自己抽1945年的拉图．大卫雪茄．坐一个6000万美元的飞机．几千万美元的荷兰的船．去一个总统的俱乐部……开一个百万美元的发布会……吃着青菜．没有常委的背景．也不是党员．也不会量震．更没有AG6的车牌．没有任何党派．组织……外交部的特殊保护……穷的只有几亿战友……我这活的太那个了……一切都是刚刚开始！")))
+           (:- "郭文(短视频): "
+               (@ "https://www.guo.media/posts/159848")
+               (@ "https://www.guo.media/posts/159800")
+               '(q () (pre () "
+12月10日：回到了美丽的蓝天白云的纽约！
+12月11日：文贵出发啦！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/159617")
+               '(q () (pre () "12月10日：文贵简单的早餐！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/159612")
+               '(q () (pre () "
+12月11日：尊敬的战友们好你！们健身了吗！千万不要忘了关注王建之死的真相！和海航背后的故事！千万不要被盗国贼转移了话题！谢谢伟大亲爱的战友们！一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.11")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/159405")
                '(q () (pre () "
@@ -487,7 +505,7 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
 
 (news-to-topic
  "郭文贵"    ;; (twb::human-date (get-universal-time))
- "2018.12.11 20:44:34" 
+ "2018.12.12 19:54:25"
 (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
