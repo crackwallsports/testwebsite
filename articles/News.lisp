@@ -121,6 +121,32 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.14")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/160757")
+               '(q () (pre () "
+EX-10.5 6 exhibit10-5.htm EXHIBIT 10.5 Spousal Consent The undersigned, Bruno Zheng Wu, a United States of America (“USA”) citizen with Passport No.: 530914122, is the lawful spouse of Yang Lan, a PRC citizen with PRC ID Card No.: 110108196803315727. I hereby unconditionally and irrevocably agree to the execution of the following documents by Yang Lan on April 1, 2016, and the disposal of the equity interests of Tianjin Sevenstarflix Network Technology Limited (“Company”) held by Yang Lan and registered inhername according to the following documents: (a) The Equity Pledge Agreement ent"))
+               (u (:- '(pre () "吴征  杨澜"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/160677")
+               '(q () (pre () "
+12月13日：尊敬的战友们好．你们健身了吗！ 谢谢大家发给我的信息．我最喜欢的就是真实反映国内政治社会壮态的实时信息．不太喜欢代有强烈个人观点的意见和建议！列如下面这个封群信息就特别的喜欢😘这可以与我掌握的信息核对后．就更加坚信明白了 CCP最近将有一系列的重大政治事件发生！除了控制媒体．还要最严厉的惩罚打击抗议的老兵行动！并得知上面已经不相信警察．将前所未有的调整抓捕公检法……他们终于知道刀把子要执行南菩陀计划了！腥风血雨即将到来！上海与北京的暗争将变成死斗……一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2018.12.13")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/160537")
+               '(q () (pre () "
+12月12日：看了这视频我真的吃不下饭了……心里难受：堵的慌……老婆婆苦苦哀求警察别毁掉她的一年的辛苦种下的菜……江绵恒．江志成．孟建柱．孙力军的娘们．用的着种白菜吗？他们的娘在公安部．天安门．种白菜……警察敢管吗？你们还要派武警部队帮助站岗吧！邪恶到这个程度还不算！还要让我们的子女天天喝．爹亲娘亲不如党亲！ 你们的爹娘肾玩坏了．喝百万一瓶的酒喝坏了肝……换我们的兄弟姐妹的肝和肾！然后连人➕医生都杀掉灭口！我们的爹娘种白菜．卖土豆都不可以……然后你们称之为这是法律！在任何一个正常的国家．任何一个需要老百性尊守的法律必须是绝大部份老百姓投票认可的！你们让一个中国人投过票吗？谁制定的法律？这法律是否可以法任何人．律任何人？中国共产党所有的党员们你们扪心自问．你们的父母家人某一天会不会也这样的被逼死！秦城监狱的设计建造者最后都进了秦城监狱！中纪委官园大楼就是北京副市长刘志华一手抓的重点工程．大楼刚刚投入使用双规的第一个．正部级官员．十八大政治新星就是刘志华！……咱们看看这个警察和他爹娘家人怎么死吧！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/160431")
+               '(q () (pre () "
+12月12日：拜托战友们要观看这一期节目！将非常精彩！")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=fHTKLBDB-ew"
+                           "12月12日：文贵报平安！")
+               '(small () "Youtube")
+               (u (:- '(pre () "张志强  香港某富豪 给江家5000万 解决张"))
+                  (:- '(pre () "香港 护照问题 孟晚舟护照")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.12")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/159853")
                '(q () (pre () "
@@ -505,7 +531,7 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
 
 (news-to-topic
  "郭文贵"    ;; (twb::human-date (get-universal-time))
- "2018.12.12 19:54:25"
+ "2018.12.14 19:39:39"
 (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
