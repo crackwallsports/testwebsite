@@ -121,6 +121,22 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.18")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/162061")
+               '(q () (pre () "
+尊敬的战友们好：这是美国著名媒体政评人士roger stone先生在过去一年多里受Bruno Wu吴征，造谣、诬陷文贵……被文贵起诉后的百分之百的道歉及合解书！roger stone先生受Bruno 吴征的影响传播百分之百的假信息，在媒体上说我给希拉里女士送钱，克林顿先生送钱！等一系列的虚假信息！并说我是罪犯，犯罪分子。造成了极为恶劣的影响，后来文贵釆取法律行动，对roger stone先生！进行诉讼追求他法律责任！roger stone先生！通过律师多次找文贵，要求和解，并愿意公开道歉，并愿意在华盛顿邮报、华尔街日报、纽约时报、登报公开道歉，我相信roger stone先生先生的道歉是真实的，是真诚的，我接受了他的道歉！但是他百分之百的造谣！来自于百分之百的共产党的间谍特务吴征，我将对吴征追偿更多的损失和伤害赔偿！并揭开为CCP做间谍工作的真相！用事实证明吴征是为中共效忠的间谍特务！郭文贵永远不会在任何事任何人面前甘受欺辱，同样也不会恶对任何人！一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/roger-stone-admits-spreading-lies-on-infowars-11545093097"
+                                    "Roger Stone Admits Spreading Lies on InfoWars")
+                             (small () "2018.12.17 The Wall Street Journal")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=jN6mBqbxx8M"
+                           "2018年12月17号文贵报平安直播，关于昨天被删除的视频和路德Sara女")
+               '(small () "Youtube")
+               (u (:- '(pre () "路德 和 Sara 是真战友 良言建议很好 不要被挑拨离间"))
+                  (:- '(pre () "昨天视频被删是 因为版权问题 不是盗国贼干的 此处更正"))
+                  (:- '(pre () "新款郭先生设计的西装")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.17")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/161837")
                '(q () (pre () "
@@ -627,7 +643,7 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
 
 (news-to-topic
  "郭文贵"    ;; (twb::human-date (get-universal-time))
- "2018.12.17 23:50:22"
+ "2018.12.18 20:26:23"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

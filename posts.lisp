@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2018 12 17"
+(("2018 12 18"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-12.17")
+          (span (:class "badge badge-success") "每日追踪-12.18")
           (pre ()
                (small () "G20中美峰會的真相 孟晚舟女士在加拿大被抓与华为公司的背后真相 張首晟先生是自杀还是被杀")
                (small () "王健之死")
