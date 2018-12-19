@@ -197,7 +197,7 @@ Supplement
 - 撤销 重做
 - 处理 : 执行一些特定的功能 如 转换大小写
 - 特性 : 矩形区块
-
+  
 ** Mark 标记
 选中 需要编辑的部分文本
 
@@ -205,34 +205,22 @@ Supplement
   - 点
     - C-(<SPC>|@) == set-mark-command (激活) 
     - C-<SPC> C-<SPC> (不激活 但进入标记环)
-  - 字符-右|左
-    - C-F|B
-  - 单词-右|左
-    - M-@ == mark-word (@: 插入点不动)
-    - M-F|B
-  - 行-首|尾
-    - C-A|E
-    - 整行
-  - 句子-首|尾
-    - M-A|E
   - 段落
     - M-h == mark-paragraph
   - 缓冲区
     - C-x h == mark-whole-buffer 
-  - Shift select
-    - Mouse shift-selection
-      - Shift-<Mouse>
+  - Mouse shift-selection
+    - Shift-<Mouse>
 - 标记环 (Mark Ring : 标记的点 进入 标记环) [Global|Local]
   - 最后标记点
     - C-u C-<SPC> (当前缓冲) 
     - C-x C-<SPC> == pop-global-mark
   - 列表
-    - M-x helm-mark-all-rings | helm-[global]-mark-ring
 - 互换位置-插入点和标记点
   - C-x C-x == exchange-point-and-mark
 
 Special
-- 标记 表达式
+- 标记 表达式 
   - C-M-@ == mark-sexp
 - 标记 定义
   - C-M-h == mark-defun
@@ -240,6 +228,7 @@ Special
 Assist
 - 标记环列表: [[https://github.com/emacs-helm/helm][Helm]]
   - M-x helm-mark-all-rings | helm-[global]-mark-ring
+- [[https://github.com/magnars/expand-region.el][expand-region]] : er/expand-region == C-=
 
 Supplement
 - 整行
@@ -251,6 +240,115 @@ Supplement
 (bind-key "C-x M-h" #'xt3/sel-cur-line)
 #+END_SRC
 ** Insert 插入
+- 键盘输入
+- 引用插入
+  - C-q == quoted-insert
+    - C-q C-l 	// 分页符
+    - C-q 033 Enter
+- Unicode
+  - C-x 8 RET 
+- 文件的内容
+  - C-x i == insert-file
+- Input Method
+  - 触发 : toggle-input-medthod == C-\
+  - 切换 : select-input-medthod == C-u C-\ | C-x Ret C-\
+  - 示例 :
+    - Tex
+      #+BEGIN_EXAMPLE
+  \alpha α
+  \Gamma Γ
+  \rightarrow →
+  \Leftarrow ⇐
+  \oplus ⊕
+  \int ∫
+  x_3 x₃
+  M^-^1 M⁻¹
+  v^x vˣ
+  #+END_EXAMPLE
+    - greek-babel
+      #+BEGIN_EXAMPLE
+    Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω
+    Aa Bb Gg Dd Ee Zz Hh Jj Ii Kk Ll Mm Nn Xx Oo Pp Rr Ssc Tt Uu Ff Qq Yy Ww
+    #+END_EXAMPLE
+** 删除 剪切 复制 粘贴
+- 删除(delete) | 剪切(kill)
+  - 字符|词 - 左|右
+    - <Del> == delete-backward-char 
+    - M-<Del> == C-<Del> == backward-kill-word
+    - C-Del == delete-forward-char
+    - ---
+    - C-d == delete-char 
+    - M-d == kill-word
+  - 行 - 右|整行
+    - 右: C-k == kill-line
+    - 整: C-S-<Del> == kill-whole-line
+    - ---
+    - M-- C-k
+    - C-M-Del	  // customize : 行 光标左
+  - 到字符之前
+    - M-z [char] == zap-to-char
+  - 连续-空格
+    - M-\ == delete-horizontal-space 
+  - 句
+    - M-k == kill-sentence
+    - C-x <DEL> == backward-kill-sentence
+  - 区域
+    - C-w == kill-region
+  - 表达式
+    - C-M-k == kill-sexp
+  - 空白行 (位置相关: 一个到无 | 多个到一个 | 跟随的全部)
+    - C-x C-o == delete-blank-lines
+  - 重复行
+    - delete-duplicate-lines  (keeps first)
+      - C-u : keeps last
+      - C-u C-u : only adjacent lines
+      - C-u C-u C-u : retains repeated blank lines
+- 复制-区域
+  - M-w == kill-ring-save
+- 粘贴
+  - C-y == yank
+  - M-y == yank-pop
+  - (N) C-y //  剪切环中指定槽位的内容
+
+Assist
+- [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]]
+- Move | Copy
+  - [[https://github.com/wyuenho/move-dup][move-dup]] (行|区域)
+    - md/move-lines-[up|down]
+    - md/duplicate-[up|down]
+  - Avy : avy-copy-[line|region] (单行|行范围)
+
+** Undo/Redo 撤销 重做
+- 撤销
+  - C-x u == advertised-undo
+- 重做
+  - C-_|/ == undo
+
+Assist
+- [[http://www.emacswiki.org/emacs/UndoTree][undo-tree]]
+
+** Multiple 多重
+- Rectangle 矩形区块
+  - 插入-空格|字符串|行号
+    - C-x r o == open-rectangle  
+    - M-x string-insert-rectangle
+    - C-x r N == rectangle-number-lines
+      - C-u : set start number
+  - 删除 | 清除(用空格字符替换整个区域) | 每行空格
+    - C-x r d == delete-rectangle
+    - C-x r c == clear-rectangle
+    - M-x delete-whitespace-rectangle (前面的空格)
+  - 剪切 | 复制 | 粘贴
+    - C-x r k == kill-rectangle
+    - C-x r M-w == copy-rectangle-as-kill
+    - C-x r y == yank-rectangle
+  - 替代-字符串
+    - C-x r t == string-rectangle
+- Keyboard Macro 键盘宏
+
+Assst
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] : Mark, edit multiple lines at once
+
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
