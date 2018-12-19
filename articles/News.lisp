@@ -121,6 +121,18 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.19")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/162377")
+               '(q () (pre () "
+12月18日：关于美国之音不恰当的报道的警告：👉👉👉On December 18, 2108, the Chinese website of Voice of America reported my settlement agreement with Roger Stone. The article titles “Trump’s former advisor admitted that he spread false statement by Guo Wengui on line”. It implies that I was the one who gave false statement. In fact, Stone admitted that he made the false statement and publicly apologized to me. I demand that Voice of America apologize to me in public. I retain my right to solve the issue via legal channels."))
+               (u (:- '(pre () "哈哈哈 已经改了 加了针对 \"特朗普前顾问承认散布针对郭文贵的不实之言\"
+ 从Google的缓存页来看 原来是 \"特朗普前顾问承认在网上散布郭文贵的不实之言\""))))
+           (:- "视频(短视频): " (@ "https://www.youtube.com/watch?v=JkkvE5Un3r0"
+                                   "郭文贵12月18日:美国将会对某些人进行全面调查.")
+               '(small () "Youtube")))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.18")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/162061")
                '(q () (pre () "
@@ -643,7 +655,7 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
 
 (news-to-topic
  "郭文贵"    ;; (twb::human-date (get-universal-time))
- "2018.12.18 20:26:23"
+ "2018.12.19 20:58:56"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
