@@ -121,6 +121,26 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.20")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/162936")
+               '(q () (pre () "
+12月19日：像李一平及一帮所谓的民运欺民贼们！或几十年没工作．或一生搞募捐．或开大会！与袁鸿兵．假牧师郭宝胜．博讯孟维参．吴健民．夏业良．腾彪．李红宽．搏讯熊宪民．李伟东．陈军．……等等一边为共产党在海外小骂大帮忙！一边想尽一切办法坑害从国内刚刚逃出共产党魔掌的私营企业家们……具我掌握的信息．大部分老牌的以民运．8964……为幌子．搞了几十年假政庇的畜生们．像叶宁骗子律师等！现在都将骗标瞄准了逃离中共的私营企业家们！悲哀呀．警醒吧……可怜的同行们……我郭文贵过去一年用前所未发生捐献的．金钱．热情．信任．风险．尊重这些人换来的就是．比共产党还狠的威胁．欺骗．谣言中伤……最后他们都将会给私营企业家戴上一个．土豪．同流合污……没一分钱是干净的一个个大帽子！珍惜生命．为了家人．运离这些畜生！不要将我的痛苦的昨天变成你们的今天！同行们！！！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/162773")
+               '(q () (pre () "
+https://dailycaller.com/2018/12/09/elliott-broidy-1mdb/每日电讯证实，郭文贵先生关于”北京“用30亿美金作赏金，企图遣返他的信息！"))
+               (u (:- `(cite () ,(@ "https://dailycaller.com/2018/12/09/elliott-broidy-1mdb/"
+                                    "OPINION: A FORMER RNC FINANCE CHAIR AND HIS ROLE IN MALAYSIA’S DEVELOPMENT FUND SCANDAL")
+                             (small () "2018.12.9 The Daily Caller")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/162768")
+               '(q () (pre () "
+12月19日：这位战友说的．一些欺民赇在西方这几十年来的骗狷．CCP的疯狂的金钱至上的现实主义！快让人家叫我们＂Moneynese＂钱尼斯了！不能再丢中国人的脸了……不过战友们会看到另一个大战略的实现！一切都是刚刚开始！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/162711")
+               '(q () (pre () "
+12月19日：尊敬的战友们好！你们健身了吗！一切都是刚刚开始！(今天报平安视频中说成20号了……报歉说错了)一切都是刚刚开始！"))
+               (u (:- '(pre () "中共纪念改革开放40周年发言")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.19")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/162377")
                '(q () (pre () "
@@ -654,8 +674,8 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"    ;; (twb::human-date (get-universal-time))
- "2018.12.19 20:58:56"
+ "郭文贵"     ;; (twb::human-date (get-universal-time))
+ "2018.12.20 20:52:01"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
