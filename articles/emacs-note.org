@@ -240,36 +240,55 @@ Supplement
 (bind-key "C-x M-h" #'xt3/sel-cur-line)
 #+END_SRC
 ** Insert 插入
-- 键盘输入
+Input 输入
+- 可见的(图形字符) : a..z , 1..0, !..?  
+- 控制字符 : <SPC>, <RET>, <TAB>, <DEL>, <ESC>, <F1>, <Home>, <LEFT>
+  - 插入空白行 : <RET> | C-j | C-o 
+- 修饰键 : <Control>, <META>
+- 输入 对应 命令 
+- 非键盘 : mouse(鼠标) (一般作为定位 特殊模式 拖拽绘制字符)
 - 引用插入
   - C-q == quoted-insert
-    - C-q C-l 	// 分页符
-    - C-q 033 Enter
+  - 不可见(非图形字符)
+    - <Ret>, C-l(分页符)
+    - 033 Enter (Ascii 八进制) = f
 - Unicode
-  - C-x 8 RET 
-- 文件的内容
+  - C-x 8 RET
+  - 速记 : C-x 8 C-h £
+  - ∑ (2211) ⤶ (2936)
+
+Assist
+- Input Method 输入法
+  - 内置
+    - 触发 : toggle-input-medthod == C-\
+    - 切换 : select-input-medthod == C-u C-\ | C-x Ret C-\
+    - 示例 :
+      - Tex α x₃ X³
+        #+BEGIN_EXAMPLE
+        \alpha α  \Gamma Γ
+        \rightarrow →  \Leftarrow ⇐ 
+        \oplus ⊕  \int ∫
+        x_3 x₃  v^x vˣ
+        #+END_EXAMPLE
+      - greek-babel αΑ Γγ η 
+        #+BEGIN_EXAMPLE
+        Αα Ββ Γγ Δδ Εε Ζζ  Ηη Θθ Ιι Κκ Λλ Μμ 
+        Aa Bb Gg Dd Ee Zz  Hh Jj Ii Kk Ll Mm 
+      
+        Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω
+        Nn Xx Oo Pp Rr Ssc Tt Uu Ff Qq Yy Ww
+      #+END_EXAMPLE
+- 使用操作系统的 输入法 或 其它工具 
+- Abbrev mode
+  - zhw -> hello world hello world 
+- 补全 
+  - [[https://company-mode.github.io/][company]]
+  - [[https://github.com/auto-complete/auto-complete][auto-complete]]
+  - [[https://github.com/joaotavora/yasnippet][yasnippet]]
+    - yas-insert-snippet == s-i
+- 来源 : 文件 | 其它缓冲
   - C-x i == insert-file
-- Input Method
-  - 触发 : toggle-input-medthod == C-\
-  - 切换 : select-input-medthod == C-u C-\ | C-x Ret C-\
-  - 示例 :
-    - Tex
-      #+BEGIN_EXAMPLE
-  \alpha α
-  \Gamma Γ
-  \rightarrow →
-  \Leftarrow ⇐
-  \oplus ⊕
-  \int ∫
-  x_3 x₃
-  M^-^1 M⁻¹
-  v^x vˣ
-  #+END_EXAMPLE
-    - greek-babel
-      #+BEGIN_EXAMPLE
-    Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω
-    Aa Bb Gg Dd Ee Zz Hh Jj Ii Kk Ll Mm Nn Xx Oo Pp Rr Ssc Tt Uu Ff Qq Yy Ww
-    #+END_EXAMPLE
+  - insert-buffer
 ** 删除 剪切 复制 粘贴
 - 删除(delete) | 剪切(kill)
   - 字符|词 - 左|右
