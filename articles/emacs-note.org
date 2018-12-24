@@ -291,52 +291,57 @@ Assist
   - insert-buffer
 ** 删除 剪切 复制 粘贴
 - 删除(delete) | 剪切(kill)
+  - 区别 : kill 会把kill掉内容放到 kill ring 里
   - 字符|词 - 左|右
-    - <Del> == delete-backward-char 
-    - M-<Del> == C-<Del> == backward-kill-word
-    - C-Del == delete-forward-char
+    - delete-backward-char == <Del>
+    - delete-char == C-d
     - ---
-    - C-d == delete-char 
-    - M-d == kill-word
-  - 行 - 右|整行
-    - 右: C-k == kill-line
-    - 整: C-S-<Del> == kill-whole-line
-    - ---
-    - M-- C-k
-    - C-M-Del	  // customize : 行 光标左
-  - 到字符之前
-    - M-z [char] == zap-to-char
-  - 连续-空格
-    - M-\ == delete-horizontal-space 
+    - backward-kill-word == (C|M)-<Del>
+    - kill-word == M-d 
+  - 行 - 右|左|整行
+    - 右: kill-line == C-k
+    - 左: M-0 C-k
+    - 整: kill-whole-line  (-> [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]] == C-w)
   - 句
-    - M-k == kill-sentence
-    - C-x <DEL> == backward-kill-sentence
+    - kill-sentence == M-k
+    - backward-kill-sentence == C-x <DEL>
   - 区域
-    - C-w == kill-region
-  - 表达式
-    - C-M-k == kill-sexp
-  - 空白行 (位置相关: 一个到无 | 多个到一个 | 跟随的全部)
-    - C-x C-o == delete-blank-lines
-  - 重复行
-    - delete-duplicate-lines  (keeps first)
-      - C-u : keeps last
-      - C-u C-u : only adjacent lines
-      - C-u C-u C-u : retains repeated blank lines
-- 复制-区域
-  - M-w == kill-ring-save
-- 粘贴
-  - C-y == yank
-  - M-y == yank-pop
-  - (N) C-y //  剪切环中指定槽位的内容
+    - kill-region == C-w  (-> [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]])
+- 复制-区域 
+  - kill-ring-save == M-w (-> [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]])
+- 粘贴 (从 Kill ring (剪切环))
+  - 最近一个: yank == C-y
+  - yank-pop == M-y
+  - 指定位置: (C-u|M-) [Num] C-y
+
+Special
+- 表达式 (exp) "exp" exp
+  - C-M-k == kill-sexp
 
 Assist
-- [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]]
-- Move | Copy
+- Kill Ring :  [[https://github.com/emacs-helm/helm][Helm]]
+  - helm-show-kill-ring == M-y
+- [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]] : 区域激活 则应用到区域 否则 应用到当前行
+- Copy Kill Move(Kill-[Goto]-Paste)
   - [[https://github.com/wyuenho/move-dup][move-dup]] (行|区域)
     - md/move-lines-[up|down]
     - md/duplicate-[up|down]
-  - Avy : avy-copy-[line|region] (单行|行范围)
-
+  - [[https://github.com/abo-abo/avy][Avy]]
+    - avy-copy-[line|region] (单行|行范围)
+    - avy-kill-[line|region]
+    - avy-move-[line|region]
+- 到字符之前
+  - 右: M-z [char] == zap-to-char
+  - 左: M-- M-z
+- 连续-空格
+  - delete-horizontal-space == M-\
+- 空白行 (位置相关: 一个到无 | 多个到一个 | 跟随的全部)
+  - delete-blank-lines == C-x C-o
+- 重复行
+  - delete-duplicate-lines  (keeps first)
+    - C-u : keeps last
+    - C-u C-u : only adjacent lines (邻近)
+    - C-u C-u C-u : retains repeated blank lines
 ** Undo/Redo 撤销 重做
 - 撤销
   - C-x u == advertised-undo
