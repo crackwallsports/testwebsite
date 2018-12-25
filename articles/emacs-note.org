@@ -343,13 +343,15 @@ Assist
     - C-u C-u : only adjacent lines (邻近)
     - C-u C-u C-u : retains repeated blank lines
 ** Undo/Redo 撤销 重做
-- 撤销
-  - C-x u == advertised-undo
-- 重做
-  - C-_|/ == undo
+- 撤销/重做
+  - Undo: undo == C-/
+  - Redo: C-u C-/
 
 Assist
-- [[http://www.emacswiki.org/emacs/UndoTree][undo-tree]]
+- [[http://www.emacswiki.org/emacs/UndoTree][undo-tree]] [[Undo Tree][config]]
+  - undo-tree-visualize == C-x u
+  - Undo: undo-tree-undo == C-/
+  - Redo: undo-tree-redo == C-?
 
 ** Multiple 多重
 - Rectangle 矩形区块
@@ -454,8 +456,11 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
    ;; ("M-g e" . 'avy-goto-word-0)
    ("M-g w" . 'avy-goto-word-1)))
 #+END_SRC
-
-
-
-  
  
+** Undo Tree
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+  :diminish undo-tree-mode
+  :config
+  (global-undo-tree-mode))
+#+END_SRC
