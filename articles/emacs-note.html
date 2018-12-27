@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2018-12-25 Tue 15:50 -->
+<!-- 2018-12-27 Thu 20:36 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emacs - 笔记整理 (草稿)</title>
@@ -62,40 +62,43 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3e5c32a">1. Setup 安装</a></li>
-<li><a href="#org1075fc9">2. Package Manager 包管理器</a></li>
-<li><a href="#org4de118f">3. Coonfig 配置</a></li>
-<li><a href="#org26c6101">4. Basic 基础</a>
+<li><a href="#orge5df67a">1. Setup 安装</a></li>
+<li><a href="#orgdfbfd0c">2. Package Manager 包管理器</a></li>
+<li><a href="#org66632a9">3. Coonfig 配置</a></li>
+<li><a href="#orgca07078">4. Basic 基础</a>
 <ul>
-<li><a href="#orgb97d877">4.1. UI 用户界面</a></li>
-<li><a href="#org4ba7c07">4.2. Mode 模式</a></li>
-<li><a href="#org752e2cf">4.3. Keybinding 键绑定</a></li>
-<li><a href="#org0bb1151">4.4. Command 命令</a></li>
-<li><a href="#org1a3a0df">4.5. Help 帮助</a></li>
-<li><a href="#org70c5bfa">4.6. Server 服务</a></li>
+<li><a href="#org1a14b5e">4.1. UI 用户界面</a></li>
+<li><a href="#org0d32db6">4.2. Mode 模式</a></li>
+<li><a href="#org1ae85ae">4.3. Keybinding 键绑定</a></li>
+<li><a href="#org5d7d98c">4.4. Command 命令</a></li>
+<li><a href="#org856f545">4.5. Help 帮助</a></li>
+<li><a href="#orgb7aeb2a">4.6. Server 服务</a></li>
 </ul>
 </li>
-<li><a href="#org1ad8967">5. Begining 开始</a></li>
-<li><a href="#orgac4ddb9">6. Move &amp; Jump</a></li>
-<li><a href="#org7959b90">7. Edit</a>
+<li><a href="#orgfa8c42d">5. Begining 开始</a></li>
+<li><a href="#org06b7972">6. Move &amp; Jump</a></li>
+<li><a href="#orgb7e9fd7">7. Edit</a>
 <ul>
-<li><a href="#org694504f">7.1. Mark 标记</a></li>
-<li><a href="#org51431bf">7.2. Insert 插入</a></li>
-<li><a href="#org683f7d4">7.3. 删除 剪切 复制 粘贴</a></li>
-<li><a href="#orge82b31d">7.4. Undo/Redo 撤销 重做</a></li>
-<li><a href="#org537df89">7.5. Multiple 多重</a></li>
+<li><a href="#orgba161d6">7.1. Mark 标记</a></li>
+<li><a href="#org52a3b70">7.2. Insert 插入</a></li>
+<li><a href="#org91777d9">7.3. 删除 剪切 复制 粘贴</a></li>
+<li><a href="#org3c2e4e7">7.4. Undo/Redo 撤销 重做</a></li>
+<li><a href="#orge5e4e08">7.5. Multiple 多重</a></li>
 </ul>
 </li>
-<li><a href="#orgb58b930">8. Hydra</a>
+<li><a href="#org0acf556">8. hydra</a>
 <ul>
-<li><a href="#org84206eb">8.1. Window</a></li>
+<li><a href="#orge0fea33">8.1. Window</a></li>
+<li><a href="#orgc8b0c53">8.2. hydra mc</a></li>
 </ul>
 </li>
-<li><a href="#org8d6d90d">9. Mode</a>
+<li><a href="#orgb4e6075">9. Mode</a>
 <ul>
-<li><a href="#org3d3442d">9.1. Ace Window</a></li>
-<li><a href="#org30155af">9.2. Avy</a></li>
-<li><a href="#org9bbbf25">9.3. Undo Tree</a></li>
+<li><a href="#org675afed">9.1. Ace Window</a></li>
+<li><a href="#orgf4523de">9.2. Avy</a></li>
+<li><a href="#org3512f34">9.3. Undo Tree</a></li>
+<li><a href="#org8e3f464">9.4. whole line or region</a></li>
+<li><a href="#orgd6a5bc0">9.5. Mutiple cursors</a></li>
 </ul>
 </li>
 </ul>
@@ -103,8 +106,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org3e5c32a" class="outline-2">
-<h2 id="org3e5c32a"><span class="section-number-2">1</span> Setup 安装</h2>
+<div id="outline-container-orge5df67a" class="outline-2">
+<h2 id="orge5df67a"><span class="section-number-2">1</span> Setup 安装</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>OSX : <a href="http://emacsformacosx.com">Emacs For Mac OS X</a></li>
@@ -113,8 +116,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org1075fc9" class="outline-2">
-<h2 id="org1075fc9"><span class="section-number-2">2</span> Package Manager 包管理器</h2>
+<div id="outline-container-orgdfbfd0c" class="outline-2">
+<h2 id="orgdfbfd0c"><span class="section-number-2">2</span> Package Manager 包管理器</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>package-list-packages</li>
@@ -123,8 +126,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org4de118f" class="outline-2">
-<h2 id="org4de118f"><span class="section-number-2">3</span> Coonfig 配置</h2>
+<div id="outline-container-org66632a9" class="outline-2">
+<h2 id="org66632a9"><span class="section-number-2">3</span> Coonfig 配置</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>个人喜好 : ~/.emacs.d/init.el -(org-babel)-&gt; ~/.emacs.d/config.org</li>
@@ -132,11 +135,11 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org26c6101" class="outline-2">
-<h2 id="org26c6101"><span class="section-number-2">4</span> Basic 基础</h2>
+<div id="outline-container-orgca07078" class="outline-2">
+<h2 id="orgca07078"><span class="section-number-2">4</span> Basic 基础</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgb97d877" class="outline-3">
-<h3 id="orgb97d877"><span class="section-number-3">4.1</span> UI 用户界面</h3>
+</div><div id="outline-container-org1a14b5e" class="outline-3">
+<h3 id="org1a14b5e"><span class="section-number-3">4.1</span> UI 用户界面</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Menu 菜单栏 : 屏幕顶部突出显示的条</li>
@@ -153,8 +156,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org4ba7c07" class="outline-3">
-<h3 id="org4ba7c07"><span class="section-number-3">4.2</span> Mode 模式</h3>
+<div id="outline-container-org0d32db6" class="outline-3">
+<h3 id="org0d32db6"><span class="section-number-3">4.2</span> Mode 模式</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式</li>
@@ -162,8 +165,8 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org752e2cf" class="outline-3">
-<h3 id="org752e2cf"><span class="section-number-3">4.3</span> Keybinding 键绑定</h3>
+<div id="outline-container-org1ae85ae" class="outline-3">
+<h3 id="org1ae85ae"><span class="section-number-3">4.3</span> Keybinding 键绑定</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 组合键
@@ -205,8 +208,8 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org0bb1151" class="outline-3">
-<h3 id="org0bb1151"><span class="section-number-3">4.4</span> Command 命令</h3>
+<div id="outline-container-org5d7d98c" class="outline-3">
+<h3 id="org5d7d98c"><span class="section-number-3">4.4</span> Command 命令</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 每一个命令 == 一个功能(Elisp函数) 
@@ -240,8 +243,8 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org1a3a0df" class="outline-3">
-<h3 id="org1a3a0df"><span class="section-number-3">4.5</span> Help 帮助</h3>
+<div id="outline-container-org856f545" class="outline-3">
+<h3 id="org856f545"><span class="section-number-3">4.5</span> Help 帮助</h3>
 <div class="outline-text-3" id="text-4-5">
 <ul class="org-ul">
 <li>Tutorial : C-h t</li>
@@ -314,8 +317,8 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org70c5bfa" class="outline-3">
-<h3 id="org70c5bfa"><span class="section-number-3">4.6</span> Server 服务</h3>
+<div id="outline-container-orgb7aeb2a" class="outline-3">
+<h3 id="orgb7aeb2a"><span class="section-number-3">4.6</span> Server 服务</h3>
 <div class="outline-text-3" id="text-4-6">
 <ul class="org-ul">
 <li>开启服务 : M-x server-start
@@ -339,8 +342,8 @@ For Mac
 </div>
 </div>
 
-<div id="outline-container-org1ad8967" class="outline-2">
-<h2 id="org1ad8967"><span class="section-number-2">5</span> Begining 开始</h2>
+<div id="outline-container-orgfa8c42d" class="outline-2">
+<h2 id="orgfa8c42d"><span class="section-number-2">5</span> Begining 开始</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 入门 Emacs 是很简单的事 网络上能够搜索出大量的入门文章和视频 <br>
@@ -428,8 +431,8 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
 </div>
 </div>
 
-<div id="outline-container-orgac4ddb9" class="outline-2">
-<h2 id="orgac4ddb9"><span class="section-number-2">6</span> Move &amp; Jump</h2>
+<div id="outline-container-org06b7972" class="outline-2">
+<h2 id="org06b7972"><span class="section-number-2">6</span> Move &amp; Jump</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 光标的定位 (屏幕可视范围内)
@@ -526,8 +529,8 @@ Supplement
 </div>
 </div>
 
-<div id="outline-container-org7959b90" class="outline-2">
-<h2 id="org7959b90"><span class="section-number-2">7</span> Edit</h2>
+<div id="outline-container-orgb7e9fd7" class="outline-2">
+<h2 id="orgb7e9fd7"><span class="section-number-2">7</span> Edit</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>选中 (标记) : 选择需要编辑的部分文本</li>
@@ -539,8 +542,8 @@ Supplement
 </ul>
 </div>
 
-<div id="outline-container-org694504f" class="outline-3">
-<h3 id="org694504f"><span class="section-number-3">7.1</span> Mark 标记</h3>
+<div id="outline-container-orgba161d6" class="outline-3">
+<h3 id="orgba161d6"><span class="section-number-3">7.1</span> Mark 标记</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 选中 需要编辑的部分文本
@@ -625,8 +628,8 @@ Supplement
 </ul>
 </div>
 </div>
-<div id="outline-container-org51431bf" class="outline-3">
-<h3 id="org51431bf"><span class="section-number-3">7.2</span> Insert 插入</h3>
+<div id="outline-container-org52a3b70" class="outline-3">
+<h3 id="org52a3b70"><span class="section-number-3">7.2</span> Insert 插入</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 Input 输入
@@ -713,8 +716,8 @@ greek-babel αΑ Γγ η
 </ul>
 </div>
 </div>
-<div id="outline-container-org683f7d4" class="outline-3">
-<h3 id="org683f7d4"><span class="section-number-3">7.3</span> 删除 剪切 复制 粘贴</h3>
+<div id="outline-container-org91777d9" class="outline-3">
+<h3 id="org91777d9"><span class="section-number-3">7.3</span> 删除 剪切 复制 粘贴</h3>
 <div class="outline-text-3" id="text-7-3">
 <ul class="org-ul">
 <li>删除(delete) | 剪切(kill)
@@ -774,7 +777,7 @@ Assist
 <ul class="org-ul">
 <li>helm-show-kill-ring == M-y</li>
 </ul></li>
-<li><a href="https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el">whole-line-or-region</a> : 区域激活 则应用到区域 否则 应用到当前行</li>
+<li><a href="https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el">whole-line-or-region</a> <a href="#org8e3f464">config</a> : 区域激活 则应用到区域 否则 应用到当前行</li>
 <li>Copy Kill Move(Kill-[Goto]-Paste)
 <ul class="org-ul">
 <li><a href="https://github.com/wyuenho/move-dup">move-dup</a> (行|区域)
@@ -814,8 +817,8 @@ Assist
 </ul>
 </div>
 </div>
-<div id="outline-container-orge82b31d" class="outline-3">
-<h3 id="orge82b31d"><span class="section-number-3">7.4</span> Undo/Redo 撤销 重做</h3>
+<div id="outline-container-org3c2e4e7" class="outline-3">
+<h3 id="org3c2e4e7"><span class="section-number-3">7.4</span> Undo/Redo 撤销 重做</h3>
 <div class="outline-text-3" id="text-7-4">
 <ul class="org-ul">
 <li>撤销/重做
@@ -829,7 +832,7 @@ Assist
 Assist
 </p>
 <ul class="org-ul">
-<li><a href="http://www.emacswiki.org/emacs/UndoTree">undo-tree</a> <a href="#org9bbbf25">config</a>
+<li><a href="http://www.emacswiki.org/emacs/UndoTree">undo-tree</a> <a href="#org3512f34">config</a>
 <ul class="org-ul">
 <li>undo-tree-visualize == C-x u</li>
 <li>Undo: undo-tree-undo == C-/</li>
@@ -839,26 +842,30 @@ Assist
 </div>
 </div>
 
-<div id="outline-container-org537df89" class="outline-3">
-<h3 id="org537df89"><span class="section-number-3">7.5</span> Multiple 多重</h3>
+<div id="outline-container-orge5e4e08" class="outline-3">
+<h3 id="orge5e4e08"><span class="section-number-3">7.5</span> Multiple 多重</h3>
 <div class="outline-text-3" id="text-7-5">
 <ul class="org-ul">
-<li>Rectangle 矩形区块
+<li>rectangle 矩形区块
 <ul class="org-ul">
-<li>插入-空格|字符串|行号
+<li>插入
 <ul class="org-ul">
-<li>C-x r o == open-rectangle</li>
-<li>M-x string-insert-rectangle</li>
-<li>C-x r N == rectangle-number-lines
+<li>空格: open-rectangle == C-x r o</li>
+<li>字符串: M-x string-insert-rectangle</li>
+<li>行号: rectangle-number-lines == C-x r N
 <ul class="org-ul">
-<li>C-u : set start number</li>
+<li>C-u : set start number and format</li>
 </ul></li>
 </ul></li>
-<li>删除 | 清除(用空格字符替换整个区域) | 每行空格
+<li>替代
 <ul class="org-ul">
-<li>C-x r d == delete-rectangle</li>
-<li>C-x r c == clear-rectangle</li>
-<li>M-x delete-whitespace-rectangle (前面的空格)</li>
+<li>空格: clear-rectangle == C-x r c</li>
+<li>字符串: string-rectangle == C-x r t</li>
+</ul></li>
+<li>删除
+<ul class="org-ul">
+<li>delete-rectangle == C-x r d</li>
+<li>空格: M-x delete-whitespace-rectangle</li>
 </ul></li>
 <li>剪切 | 复制 | 粘贴
 <ul class="org-ul">
@@ -866,34 +873,44 @@ Assist
 <li>C-x r M-w == copy-rectangle-as-kill</li>
 <li>C-x r y == yank-rectangle</li>
 </ul></li>
-<li>替代-字符串
+</ul></li>
+<li>Keyboard Macro 键盘宏
 <ul class="org-ul">
-<li>C-x r t == string-rectangle</li>
+<li>开始|结束
+<ul class="org-ul">
+<li>start|end-kbd-macro <code>= C-x (|) =</code> &lt;F3&gt;|&lt;F4&gt;</li>
+</ul></li>
+<li>执行 
+<ul class="org-ul">
+<li>call-last-kbd-macro <code>= C-x e =</code> &lt;F4&gt;</li>
+</ul></li>
+<li>终止
+<ul class="org-ul">
+<li>C-g</li>
 </ul></li>
 </ul></li>
-<li>Keyboard Macro 键盘宏</li>
 </ul>
 
 <p>
-Assst
+Assist
 </p>
 <ul class="org-ul">
-<li><a href="https://github.com/magnars/multiple-cursors.el">Multiple cursors</a> : Mark, edit multiple lines at once</li>
+<li><a href="https://github.com/magnars/multiple-cursors.el">Multiple cursors</a> <a href="#orgd6a5bc0">config</a> <a href="#orgc8b0c53">kbd</a></li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb58b930" class="outline-2">
-<h2 id="orgb58b930"><span class="section-number-2">8</span> Hydra</h2>
+<div id="outline-container-org0acf556" class="outline-2">
+<h2 id="org0acf556"><span class="section-number-2">8</span> hydra</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 </p>
 </div>
 
-<div id="outline-container-org84206eb" class="outline-3">
-<h3 id="org84206eb"><span class="section-number-3">8.1</span> Window</h3>
+<div id="outline-container-orge0fea33" class="outline-3">
+<h3 id="orge0fea33"><span class="section-number-3">8.1</span> Window</h3>
 <div class="outline-text-3" id="text-8-1">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span>global-set-key
@@ -953,13 +970,52 @@ Assst
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgc8b0c53" class="outline-3">
+<h3 id="orgc8b0c53"><span class="section-number-3">8.2</span> hydra mc</h3>
+<div class="outline-text-3" id="text-8-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span>global-set-key
+ <span style="color: #006400;">(</span>kbd <span style="color: #61CE3C;">"C-S-c"</span><span style="color: #006400;">)</span>
+ <span style="color: #006400;">(</span><span style="color: #4c83ff;">defhydra</span> hydra-mc  <span style="color: #ff1493;">(</span><span style="color: #4c83ff;">:columns</span> 5<span style="color: #ff1493;">)</span>
+   <span style="color: #FBDE2D;">"multiple-cursors"</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"ll"</span> mc/edit-lines <span style="color: #61CE3C;">"lines"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"le"</span> mc/edit-ends-of-lines <span style="color: #61CE3C;">"end-lines"</span><span style="color: #ff1493;">)</span>
+   
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"j"</span> mc/mark-next-like-this <span style="color: #61CE3C;">"next"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"uj"</span> mc/unmark-next-like-this <span style="color: #61CE3C;">"un-n"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"J"</span> mc/skip-to-next-like-this <span style="color: #61CE3C;">"skip-n"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"s"</span> #'mc/mark-next-like-this-symbol <span style="color: #61CE3C;">"symbols-n"</span><span style="color: #ff1493;">)</span>
+
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"k"</span> mc/mark-previous-like-this <span style="color: #61CE3C;">"prev"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"uk"</span> mc/unmark-previous-like-this <span style="color: #61CE3C;">"un-p"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"K"</span> mc/skip-to-previous-like-this <span style="color: #61CE3C;">"skip-p"</span><span style="color: #ff1493;">)</span>
+   
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"aa"</span> mc/mark-all-like-this <span style="color: #61CE3C;">"all"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"A"</span> mc/mark-all-dwim <span style="color: #61CE3C;">"dwim"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"aw"</span> #'mc/mark-all-words-like-this <span style="color: #61CE3C;">"word"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"as"</span> mc/mark-all-symbols-like-this-in-defun <span style="color: #61CE3C;">"symbols-in-def"</span><span style="color: #ff1493;">)</span>
+   
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"r"</span> #'mc/mark-all-in-region-regexp <span style="color: #61CE3C;">"region-regexp"</span><span style="color: #ff1493;">)</span>
+   <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Quit</span>
+   <span style="color: #ff1493;">(</span><span style="color: #61CE3C;">"q"</span> nil <span style="color: #61CE3C;">"Quit"</span> <span style="color: #4c83ff;">:color</span> blue<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">("i" mc/insert-numbers)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">( "h" mc-hide-unmatched-lines-mode)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">( "dr" mc/reverse-regions)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">( "ds" mc/sort-regions)</span>
+
+</pre>
+</div>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org8d6d90d" class="outline-2">
-<h2 id="org8d6d90d"><span class="section-number-2">9</span> Mode</h2>
+<div id="outline-container-orgb4e6075" class="outline-2">
+<h2 id="orgb4e6075"><span class="section-number-2">9</span> Mode</h2>
 <div class="outline-text-2" id="text-9">
-</div><div id="outline-container-org3d3442d" class="outline-3">
-<h3 id="org3d3442d"><span class="section-number-3">9.1</span> Ace Window</h3>
+</div><div id="outline-container-org675afed" class="outline-3">
+<h3 id="org675afed"><span class="section-number-3">9.1</span> Ace Window</h3>
 <div class="outline-text-3" id="text-9-1">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">use-package</span> <span style="color: #96CBFE;">ace-window</span>
@@ -972,8 +1028,8 @@ Assst
 </div>
 </div>
 
-<div id="outline-container-org30155af" class="outline-3">
-<h3 id="org30155af"><span class="section-number-3">9.2</span> Avy</h3>
+<div id="outline-container-orgf4523de" class="outline-3">
+<h3 id="orgf4523de"><span class="section-number-3">9.2</span> Avy</h3>
 <div class="outline-text-3" id="text-9-2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">use-package</span> <span style="color: #96CBFE;">avy</span>
@@ -988,14 +1044,43 @@ Assst
 </div>
 </div>
 
-<div id="outline-container-org9bbbf25" class="outline-3">
-<h3 id="org9bbbf25"><span class="section-number-3">9.3</span> Undo Tree</h3>
+<div id="outline-container-org3512f34" class="outline-3">
+<h3 id="org3512f34"><span class="section-number-3">9.3</span> Undo Tree</h3>
 <div class="outline-text-3" id="text-9-3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">use-package</span> <span style="color: #96CBFE;">undo-tree</span>
   <span style="color: #4c83ff;">:diminish</span> undo-tree-mode
   <span style="color: #4c83ff;">:config</span>
   <span style="color: #006400;">(</span>global-undo-tree-mode<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8e3f464" class="outline-3">
+<h3 id="org8e3f464"><span class="section-number-3">9.4</span> whole line or region</h3>
+<div class="outline-text-3" id="text-9-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">use-package</span> <span style="color: #96CBFE;">whole-line-or-region</span>
+  <span style="color: #4c83ff;">:diminish</span> whole-line-or-region-mode
+  <span style="color: #4c83ff;">:config</span>
+  <span style="color: #006400;">(</span>whole-line-or-region-mode t<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>make-variable-buffer-local 'whole-line-or-region-mode<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6a5bc0" class="outline-3">
+<h3 id="orgd6a5bc0"><span class="section-number-3">9.5</span> Mutiple cursors</h3>
+<div class="outline-text-3" id="text-9-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">use-package</span> <span style="color: #96CBFE;">multiple-cursors</span>
+  <span style="color: #4c83ff;">:config</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">setq</span> mc/always-run-for-all t<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">bind-key</span> <span style="color: #61CE3C;">"M-&lt;down-mouse-1&gt;"</span> 'mc/add-cursor-on-click<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">unbind-key</span> <span style="color: #61CE3C;">"M-&lt;down-mouse-1&gt;"</span> redshank-mode-map<span style="color: #8b0000;">)</span>
 </pre>
 </div>
 </div>
