@@ -321,7 +321,7 @@ Special
 Assist
 - Kill Ring :  [[https://github.com/emacs-helm/helm][Helm]]
   - helm-show-kill-ring == M-y
-- [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]] : 区域激活 则应用到区域 否则 应用到当前行
+- [[https://github.com/purcell/whole-line-or-region/blob/master/whole-line-or-region.el][whole-line-or-region]] [[whole line or region][config]] : 区域激活 则应用到区域 否则 应用到当前行
 - Copy Kill Move(Kill-[Goto]-Paste)
   - [[https://github.com/wyuenho/move-dup][move-dup]] (行|区域)
     - md/move-lines-[up|down]
@@ -354,28 +354,34 @@ Assist
   - Redo: undo-tree-redo == C-?
 
 ** Multiple 多重
-- Rectangle 矩形区块
-  - 插入-空格|字符串|行号
-    - C-x r o == open-rectangle  
-    - M-x string-insert-rectangle
-    - C-x r N == rectangle-number-lines
-      - C-u : set start number
-  - 删除 | 清除(用空格字符替换整个区域) | 每行空格
-    - C-x r d == delete-rectangle
-    - C-x r c == clear-rectangle
-    - M-x delete-whitespace-rectangle (前面的空格)
+- rectangle 矩形区块
+  - 插入
+    - 空格: open-rectangle == C-x r o
+    - 字符串: M-x string-insert-rectangle
+    - 行号: rectangle-number-lines == C-x r N
+      - C-u : set start number and format
+  - 替代
+    - 空格: clear-rectangle == C-x r c
+    - 字符串: string-rectangle == C-x r t
+  - 删除
+    - delete-rectangle == C-x r d
+    - 空格: M-x delete-whitespace-rectangle
   - 剪切 | 复制 | 粘贴
     - C-x r k == kill-rectangle
     - C-x r M-w == copy-rectangle-as-kill
     - C-x r y == yank-rectangle
-  - 替代-字符串
-    - C-x r t == string-rectangle
 - Keyboard Macro 键盘宏
+  - 开始|结束
+    - start|end-kbd-macro == C-x (|) == <F3>|<F4>
+  - 执行 
+    - call-last-kbd-macro == C-x e == <F4>
+  - 终止
+    - C-g
 
-Assst
-- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] : Mark, edit multiple lines at once
+Assist
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
-* Hydra
+* hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
 ** Window
@@ -435,6 +441,40 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 #+END_SRC
 
+** hydra mc
+#+BEGIN_SRC emacs-lisp
+(global-set-key
+ (kbd "C-S-c")
+ (defhydra hydra-mc  (:columns 5)
+   "multiple-cursors"
+   ("ll" mc/edit-lines "lines")
+   ("le" mc/edit-ends-of-lines "end-lines")
+   
+   ("j" mc/mark-next-like-this "next")
+   ("uj" mc/unmark-next-like-this "un-n")
+   ("J" mc/skip-to-next-like-this "skip-n")
+   ("s" #'mc/mark-next-like-this-symbol "symbols-n")
+
+   ("k" mc/mark-previous-like-this "prev")
+   ("uk" mc/unmark-previous-like-this "un-p")
+   ("K" mc/skip-to-previous-like-this "skip-p")
+   
+   ("aa" mc/mark-all-like-this "all")
+   ("A" mc/mark-all-dwim "dwim")
+   ("aw" #'mc/mark-all-words-like-this "word")
+   ("as" mc/mark-all-symbols-like-this-in-defun "symbols-in-def")
+   
+   ("r" #'mc/mark-all-in-region-regexp "region-regexp")
+   ;; Quit
+   ("q" nil "Quit" :color blue)))
+
+;; ("i" mc/insert-numbers)
+;; ( "h" mc-hide-unmatched-lines-mode)
+;; ( "dr" mc/reverse-regions)
+;; ( "ds" mc/sort-regions)
+
+#+END_SRC
+
 * Mode
 
 ** Ace Window
@@ -464,3 +504,24 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
   :config
   (global-undo-tree-mode))
 #+END_SRC
+
+** whole line or region
+#+BEGIN_SRC emacs-lisp
+(use-package whole-line-or-region
+  :diminish whole-line-or-region-mode
+  :config
+  (whole-line-or-region-mode t)
+  (make-variable-buffer-local 'whole-line-or-region-mode))
+#+END_SRC
+
+** Mutiple cursors
+#+begin_src emacs-lisp
+(use-package multiple-cursors
+  :config
+  (setq mc/always-run-for-all t))
+
+(bind-key "M-<down-mouse-1>" 'mc/add-cursor-on-click)
+(unbind-key "M-<down-mouse-1>" redshank-mode-map)
+#+end_src
+
+
