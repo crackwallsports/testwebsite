@@ -121,6 +121,17 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2018.12.31")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/166422")
+               '(q () (pre () "
+12月30日：在马阿拉哥庄园对面河上有一个船上放着丑化总统的雕塑……但是N个特勤局人员只远远的看着！什么也没有做！如果这是在北京！这个船的人可能已经被打飞机死……躲猫猫死！这就是美国为什么伟大！川普先生能成为川普总统的原因！你不尊重不服都不行！天佑美国！天佑美国的人民！")))
+           (:- "郭文(Snow 超短视频): " (@ "https://www.guo.media/posts/166418")
+               '(q () (pre () "12月30日：SNOW 在马阿拉哥庄园㪚步！")))
+           (:- "郭文(报平安视频): " (@ "https://www.guo.media/posts/166385")
+               '(q () (pre () "12月30日：报平安视频！川普总统将向CCP要求中国人必须有宗教的自由．信仰的自由！这是一个巨大的胜利✌️✌️✌️伟大的美国总统．伟大的美国！✊✊✊"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2018.12.30")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/166146")
                '(q () (pre () "
@@ -925,7 +936,7 @@ https://twitter.com/ae888ea/status/1071180691558277120?s=12 这一天马上就�
 
 (news-to-topic
  "郭文贵" ;; (twb::human-date (get-universal-time))
- "2018.12.30 17:15:39"
+ "2018.12.31 19:35:29"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
