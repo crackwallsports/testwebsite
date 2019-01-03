@@ -121,6 +121,18 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.3")
+        (u (:- "郭文(Snow 短视频 照片): "
+               (@ "https://www.guo.media/posts/167120")
+               (@ "https://www.guo.media/posts/167106")
+               '(q () (pre () "风中的Snow"))
+               (u (:- '(pre () "(我: 风中的棉花糖)"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/167085")
+               '(q () (pre () "
+尊敬的战友们：这是我们正式起诉 BSF 律师事务所 Josh Schiller 的起诉书！Josh. 不管你是谁，不管你是什么背景，我们不接受任何人的威胁！🔥我们崇敬的美国法律一定会给我们尊严和安全！💪💪💪"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.2")
         (u (:- "郭文(短视频 照片): "
                (@ "https://www.guo.media/posts/166929")
@@ -180,7 +192,7 @@ z-index:100;
                       (u (:- '(pre () "2018 超额完成 即在意料之中 也有意料之外"))
                          (:- '(pre () "2019 让国际战场发生实质性转变 让世界各国和我们一起 只反共 不反中 更不能反中国人 更多意识到中共的影响和威胁 团结一起 消灭中共 "))
                          (:- '(pre () "更多的传播爆料 让国人能够清醒过来 和我们一起 迎接阳光照耀大地"))))
-                  (:- '(pre () "对CCP政权说的话"))
+                  (:- '(pre () "对CCP政权说的话 (我: 我也没听出来啊 看到路德说才发现 郭先生的藏头诗 \"回头是岸\")"))
                   (:- '(pre () "盗二代没有回炉的可能性 中国有太多能人能够管理国家 不用操心 让我们消灭中共 改变中国 让真正的能人能够真正管理国家 这些人现在就在屏幕前看着我们的视频"))
                   (:- '(pre () "没有中共 中国不会乱")
                       (u (:- '(pre () "问过曾经的最高领导人四次 中共没了 中国会不会乱 会不会军阀割据 他第四次时回答了我 (我: 这人应该是 胡)"))
@@ -235,8 +247,8 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵" ;; (twb::human-date (get-universal-time))
- "2019.01.02 22:36:01"
+ "郭文贵"  ;; (twb::human-date (get-universal-time))
+ "2019.01.03 19:53:21"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
