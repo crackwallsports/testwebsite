@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-08 Tue 17:05 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ImageMagick - 笔记整理 (草稿)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Xt3">
+<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">ImageMagick - 笔记整理 (草稿)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org89c30ab">1. ImageMagick</a></li>
+<li><a href="#orge22286e">2. 信息 : identify</a></li>
+<li><a href="#orgcf8ad18">3. 格式转换</a></li>
+<li><a href="#org1b44831">4. 缩放 修改尺寸</a></li>
+<li><a href="#orgb9e7c1e">5. 剪切</a></li>
+<li><a href="#org91122f9">6. 拼接</a></li>
+<li><a href="#org97b4b9e">7. 合成</a></li>
+<li><a href="#orgc6b2396">8. 旋转 翻转</a></li>
+<li><a href="#orgf5ae06c">9. 添加: 边框 文字</a></li>
+<li><a href="#org8222708">10. 效果</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org89c30ab" class="outline-2">
+<h2 id="org89c30ab"><span class="section-number-2">1</span> ImageMagick</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Office: <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a>
+</p>
+
+<p>
+演示: display
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert ... png:- | display
+</pre>
+</div>
+
+<p>
+内部图像: logo:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge22286e" class="outline-2">
+<h2 id="orge22286e"><span class="section-number-2">2</span> 信息 : identify</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-sh">identify Tachikoma.gif
+<span style="color: #8B8989; font-style: italic;"># </span><span style="color: #8B8989; font-style: italic;">identify -verbose Tachikoma.gif</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcf8ad18" class="outline-2">
+<h2 id="orgcf8ad18"><span class="section-number-2">3</span> 格式转换</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.gif Tachikoma.png
+display Tachikoma.png
+identify Tachikoma.png
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org1b44831" class="outline-2">
+<h2 id="org1b44831"><span class="section-number-2">4</span> 缩放 修改尺寸</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+-resize WxH
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png -resize 200x100! Tachikoma.resize.png
+display Tachikoma.resize.png
+identify Tachikoma.resize.png
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb9e7c1e" class="outline-2">
+<h2 id="orgb9e7c1e"><span class="section-number-2">5</span> 剪切</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+-crop | -trim | -shave  (WxH+x+y)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png -crop 200x200+300+300 png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org91122f9" class="outline-2">
+<h2 id="org91122f9"><span class="section-number-2">6</span> 拼接</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+纵向 : -append
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png -crop 200x200+300+300 <span style="color: #61CE3C;">\</span>
+        tachikoma.png <span style="color: #61CE3C;">\</span>
+        -append png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+
+<p>
+横向 +append
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert tachikoma.png -crop 300x300+300+0  <span style="color: #61CE3C;">\</span>
+        <span style="color: #61CE3C;">\(</span> tachikoma.png -crop 300x300+0+0 <span style="color: #61CE3C;">\)</span>  <span style="color: #61CE3C;">\</span>
+        +append png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org97b4b9e" class="outline-2">
+<h2 id="org97b4b9e"><span class="section-number-2">7</span> 合成</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+-composite
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
+        <span style="color: #61CE3C;">\(</span> smileman.png -geometry 100x100+10+10 <span style="color: #61CE3C;">\)</span> <span style="color: #61CE3C;">\</span>
+        -composite png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc6b2396" class="outline-2">
+<h2 id="orgc6b2396"><span class="section-number-2">8</span> 旋转 翻转</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+-rotate Degree 和 -flip(上下) -flop(左右)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.resize.png <span style="color: #61CE3C;">\</span>
+        -rotate 45 <span style="color: #61CE3C;">\</span>
+        -flip <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf5ae06c" class="outline-2">
+<h2 id="orgf5ae06c"><span class="section-number-2">9</span> 添加: 边框 文字</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+边框 : -frame WxH | -bordercolor gray -border WxH
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
+        -bordercolor gray -border 50x5 <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+
+<p>
+文字 : -draw "&#x2026;" | -annotate +x+y "&#x2026;"
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
+        -font <span style="color: #61CE3C;">"/System/Library/Fonts/PingFang.ttc"</span> <span style="color: #61CE3C;">\</span>
+        -fill pink -pointsize 30 <span style="color: #61CE3C;">\</span>
+        -draw <span style="color: #61CE3C;">"text 10,50 '&#32472;&#21046;&#30340;&#25991;&#23383;'"</span> <span style="color: #61CE3C;">\</span>
+        -fill yellow -pointsize 60 <span style="color: #61CE3C;">\</span>
+        -annotate +100+150 <span style="color: #61CE3C;">"&#22612;&#22855;&#20811;&#39532;"</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8222708" class="outline-2">
+<h2 id="org8222708"><span class="section-number-2">10</span> 效果</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+特效
+</p>
+<ul class="org-ul">
+<li>加噪声 -noise 3</li>
+<li>油画 ： -paint 4</li>
+<li>内爆 : -implode 1</li>
+<li>胶片曝光 : -solarize 42</li>
+<li>铅笔 :   -charcoal 2</li>
+<li>散射 (毛玻璃) : -spread 30</li>
+<li>高斯模糊 : -blur 80 (80x5: 5 : Sigma )</li>
+<li>漩涡 : -swirl 67</li>
+<li>[凸起|凹陷] : [-|+]raise 5x5 ()</li>
+<li>锐化 : -sharpen 2</li>
+<li><p>
+示例
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
+        -swirl 80 <span style="color: #61CE3C;">\</span>
+        -frame 30x30 +raise 10x10 <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+</ul>
+
+<p>
+颜色
+</p>
+<ul class="org-ul">
+<li>反色 ： -negate</li>
+<li>黑白 ： -monochrome</li>
+<li>着色 ： -colorize [255 | 100/0/125]</li>
+<li>填色 :  -opaque khaki</li>
+<li>透明 : -transparent
+<ul class="org-ul">
+<li>移除 : -flatten</li>
+</ul></li>
+<li>-modulate  brightness,saturation,hue</li>
+<li><p>
+示例
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
+        -transparent white  <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

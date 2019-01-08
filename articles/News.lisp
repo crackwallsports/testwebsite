@@ -121,6 +121,89 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.8")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/168261")
+               '(q () (pre () "
+马来西亚Jho Low的事件将成为世界上前所未有的共同关注的一个巨大的腐败案子，也是打开CCP腐败控制其他国家的最有代表性的案子,拭目以待！"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/how-china-flexes-its-political-muscle-to-expand-power-overseas-11546890449"
+                                    "WSJ Investigation: China Offered to Bail Out Troubled Malaysian Fund in Return for Deals")
+                             (small () "2019.1.7 The Wall Street Journal")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=nxbowZWGrYo"
+                           "郭文贵1月7日(两段):谈马云的爱情观和被双规的成钢.跟战友聊天.")
+               '(small () "Youtube")
+               (u (:- '(pre () "战友发的信息 干休所 广东"))
+                  (:- '(pre () "原北京副市长陈刚被抓  栽赃郭先生 今年还会继续栽"))
+                  (:- '(pre () "蚊子和大象"))
+                  (:- '(pre () "预测 中共干的事"))
+                  (:- '(pre () "让海航再飞会"))
+                  (:- '(pre () "美国朋友春节要来点猛的 中美贸易将有戏剧性变化 对台 对新疆西藏基督教等 有一系列政策  两党间就一件事是统一的 就是 反共"))
+                  (:- '(pre () "马云 被抢了"))
+                  (:- '(pre () "美证监会 调查中共国在美上市公司财务问题 任何人有关键信息提供 会有15%-30%回报"))
+                  (:- '(pre () "刘特佐 美国认为是打开自己司法腐败的钥匙 是打开中共东南亚情报系统等的钥匙"))
+                  (:- '(pre () "庄烈宏先生 不要上当 不要理那些无理的问题"))
+                  (:- '(pre () "下周去华盛顿作证 宗教相关 感谢新疆朋友发的视频 有证据视频的都发给郭先生"))
+                  (:- '(pre () "依法治国 信仰中国"))
+                  (:- '(pre () "器官移植"))
+                  (:- '(pre () "祈福"))
+                  (:- '(pre () "(熬骇客部分)"))
+                  (:- '(pre () "背影好看"))
+                  (:- '(pre () "潘功胜"))
+                  (:- '(pre () "昨天 打电话声音太大 惹太太不高兴"))
+                  (:- '(pre () "感激战友的支票 不能收 寄回去 不要再寄了"))
+                  (:- '(pre () "朱云来 周小川"))
+                  (:- '(pre () "回头是岸 怙恶不悛"))
+                  (:- '(pre () "凯琳女士 美女帅哥同时直播 春晚节目 中西恋爱观等"))
+                  (:- '(pre () "多运动 少吃"))
+                  (:- '(pre () "台湾 已经深深影响大陆 在精神上 台湾已经统一大陆了 心早跟台湾走了"))
+                  (:- '(pre () "回头是岸 是 即兴发挥"))
+                  (:- '(pre () "要说服西方没那么容易 郭先生做了很多很多 这两年影响最大"))
+                  (:- '(pre () "陈全国"))
+                  (:- `(cite () "推荐视频: "
+                             ,(@ "https://www.youtube.com/watch?v=dg4AI4DauyE"
+                                 "1/6/2019 路德访谈（邱岳首、安红）：2018年海外欺民贼、砸锅人士如何的一地鸡毛？")
+                             (small () "Youtube")))
+                  (:- '(pre () "郭媒体 软件 未来一定做到"))
+                  (:- '(pre () "媒体采访 长篇报道"))
+                  (:- '(pre () "西班牙 麦优卡(音) 火腿 富豪 美女 海手指 瓷器"))
+                  (:- '(pre () "郭先生的爱情 私奔 炸药包"))
+                  (:- '(pre () "爱情 就是感觉 汽油和打火机的关系"))
+                  (:- '(pre () "时髦 小时候 当时是 长头发 瘦 喇叭裤 高跟鞋 女式衣服 女朋友多 成天写情书"))
+                  (:- '(pre () "刺激 不重复 讨厌守规矩"))
+                  (:- '(pre () "女人千万别嫁错"))
+                  (:- '(pre () "是书就看"))
+                  (:- '(pre () "缘分 心善"))
+                  (:- '(pre () "不要到老 人生要活得精彩 有质量"))
+                  (:- '(pre () "70生 70后 5.10"))
+                  (:- '(pre () "依法惩罚恶心人"))
+                  (:- '(pre () "郭媒体的反骇客功能 希望计算机高手 懂中国和国际法律的加入法治基金"))
+                  (:- '(pre () "达沃斯 会非常热闹 一定要看"))
+                  (:- '(pre () "鬼六的战略 骗拖川普总统"))
+                  (:- '(pre () "2019 风起云涌 看结果"))
+                  (:- '(pre () "祈福"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/168213")
+               '(q () (pre () "
+1月7日：尊敬的战友们好，我刚刚到办公室才知道！刚才的郭媒体直播被共产党给黑客掉了！压根就没发出去！哇塞！太不可思议了，我现在正在让我的工程师上传至郭媒体！和YOUTB！我刚才在直播中事实上没讲什么，怎么把共产党吓成这个样王岐山那孟孙力军孟建柱真的快被吓死了🤯文贵没那么可怕吧！没那么可怕！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/168199")
+               '(q () (pre () "
+1月7日：尊敬的战友们好！二十分钟内！在郭媒体报平安直播！一切都是刚刚开始！"))
+               (u (:- `(cite () "郭文图片: DW中文-德国之声 @dw_chinese : "
+                             ,(@ "https://twitter.com/dw_chinese/status/1082275751574016000"
+                                 "看这个架势，难道距离文贵\"回家\"也不远了？")
+                             (small () "2019.1.8 Twitter"))
+                      `(cite () ,(@ "https://www.dw.com/zh/原北京副市长成新年首虎-曾协助郭文贵/a-46983082"
+                                 "原北京副市长成新年\"首虎\" 曾协助郭文贵")
+                             (small () "2019.1.7 德国之声中文网")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/168192")
+               '(q () (pre () "
+2018年12月30日 纽约邮报采访郭文贵 在中国，我有200名保镖，还有很多财产，但我从来没有自由过。 在美国，我有自由，因为我信任这个国家和这里的制度。 所以我在这里自由多了 https://spark.adobe.com/page/vBrfomtuMXuRm/"))
+               (u (:- `(cite () ,(@ "https://nypost.com/2018/12/30/fugitive-chinese-billionaire-guo-wengui-flees-to-posh-fifth-ave-penthouse/"
+                                    "Fugitive Chinese billionaire Guo Wengui flees to posh Fifth Ave. penthouse")
+                             (small () "2018.12.30 New York Post")
+                             ,(@ "https://spark.adobe.com/page/vBrfomtuMXuRm/"
+                                 "中文翻译"))))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.7")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/168049")
                '(q () (pre () "
@@ -363,7 +446,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.07 22:58:52"
+ "2019.01.08 21:00:52"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

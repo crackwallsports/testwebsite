@@ -1,0 +1,152 @@
+#+TITLE: ImageMagick - 笔记整理 (草稿)
+#+AUTHOR: Xt3
+#+OPTIONS: html-postamble:nil html-style:nil tex:nil
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD:<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+
+
+* COMMENT Generate
+#+BEGIN_SRC lisp
+(gen-with-frame "ImageMagick Note"
+                #P"articles/ImageMagick-note.html")
+#+END_SRC
+* ImageMagick
+Office: [[https://www.imagemagick.org/script/index.php][ImageMagick]]
+
+演示: display
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert ... png:- | display
+#+END_SRC
+
+内部图像: logo:
+
+* 信息 : identify
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results verbatim
+identify Tachikoma.gif
+# identify -verbose Tachikoma.gif
+#+END_SRC
+
+#+RESULTS:
+: Tachikoma.gif GIF 600x600 600x600+0+0 8-bit sRGB 64c 40774B 0.000u 0:00.000
+
+* 格式转换
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results verbatim
+convert Tachikoma.gif Tachikoma.png
+display Tachikoma.png
+identify Tachikoma.png
+#+END_SRC
+
+#+RESULTS:
+: Tachikoma.png PNG 600x600 600x600+0+0 8-bit sRGB 64c 38000B 0.000u 0:00.000
+
+
+
+* 缩放 修改尺寸
+-resize WxH
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results verbatim
+convert Tachikoma.png -resize 200x100! Tachikoma.resize.png
+display Tachikoma.resize.png
+identify Tachikoma.resize.png
+#+END_SRC
+
+#+RESULTS:
+: Tachikoma.resize.png PNG 200x100 200x100+0+0 8-bit sRGB 19042B 0.000u 0:00.009
+
+* 剪切
+-crop | -trim | -shave  (WxH+x+y)
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png -crop 200x200+300+300 png:- \
+    | display
+#+END_SRC
+* 拼接
+纵向 : -append
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png -crop 200x200+300+300 \
+        tachikoma.png \
+        -append png:- \
+    | display
+#+END_SRC
+
+横向 +append
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert tachikoma.png -crop 300x300+300+0  \
+        \( tachikoma.png -crop 300x300+0+0 \)  \
+        +append png:- \
+    | display
+#+END_SRC
+
+
+* 合成
+-composite
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png \
+        \( smileman.png -geometry 100x100+10+10 \) \
+        -composite png:- \
+    | display
+#+END_SRC
+* 旋转 翻转
+-rotate Degree 和 -flip(上下) -flop(左右)
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.resize.png \
+        -rotate 45 \
+        -flip \
+        png:- \
+    | display
+#+END_SRC
+
+* 添加: 边框 文字
+边框 : -frame WxH | -bordercolor gray -border WxH
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png \
+        -bordercolor gray -border 50x5 \
+        png:- \
+    | display
+#+END_SRC
+
+文字 : -draw "..." | -annotate +x+y "..."
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png \
+        -font "/System/Library/Fonts/PingFang.ttc" \
+        -fill pink -pointsize 30 \
+        -draw "text 10,50 '绘制的文字'" \
+        -fill yellow -pointsize 60 \
+        -annotate +100+150 "塔奇克马" \
+        png:- \
+    | display
+#+END_SRC
+* 效果
+特效
+- 加噪声 -noise 3 
+- 油画 ： -paint 4
+- 内爆 : -implode 1
+- 胶片曝光 : -solarize 42
+- 铅笔 :   -charcoal 2
+- 散射 (毛玻璃) : -spread 30
+- 高斯模糊 : -blur 80 (80x5: 5 : Sigma )
+- 漩涡 : -swirl 67
+- [凸起|凹陷] : [-|+]raise 5x5 () 
+- 锐化 : -sharpen 2
+- 示例
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png \
+        -swirl 80 \
+        -frame 30x30 +raise 10x10 \
+        png:- \
+    | display
+#+END_SRC
+
+颜色
+- 反色 ： -negate
+- 黑白 ： -monochrome
+- 着色 ： -colorize [255 | 100/0/125]
+- 填色 :  -opaque khaki
+- 透明 : -transparent
+  - 移除 : -flatten
+- -modulate  brightness,saturation,hue
+- 示例
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert Tachikoma.png \
+        -transparent white  \
+        png:- \
+    | display
+#+END_SRC
