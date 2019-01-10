@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-01-08 Tue 17:05 -->
+<!-- 2019-01-10 Thu 15:30 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ImageMagick - 笔记整理 (草稿)</title>
@@ -62,26 +62,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org89c30ab">1. ImageMagick</a></li>
-<li><a href="#orge22286e">2. 信息 : identify</a></li>
-<li><a href="#orgcf8ad18">3. 格式转换</a></li>
-<li><a href="#org1b44831">4. 缩放 修改尺寸</a></li>
-<li><a href="#orgb9e7c1e">5. 剪切</a></li>
-<li><a href="#org91122f9">6. 拼接</a></li>
-<li><a href="#org97b4b9e">7. 合成</a></li>
-<li><a href="#orgc6b2396">8. 旋转 翻转</a></li>
-<li><a href="#orgf5ae06c">9. 添加: 边框 文字</a></li>
-<li><a href="#org8222708">10. 效果</a></li>
+<li><a href="#org6c72f8a">1. ImageMagick</a></li>
+<li><a href="#org2a181ae">2. 信息 : identify</a></li>
+<li><a href="#org27827fd">3. 格式转换</a></li>
+<li><a href="#org2a8af5d">4. 缩放 修改尺寸</a></li>
+<li><a href="#orge5f77dd">5. 剪切</a></li>
+<li><a href="#orgf2a73c0">6. 拼接</a></li>
+<li><a href="#orgeac2516">7. 合成</a></li>
+<li><a href="#org524bc49">8. 旋转 翻转</a></li>
+<li><a href="#org83b22d4">9. 添加: 边框 文字</a></li>
+<li><a href="#org28b0cd4">10. 效果</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org89c30ab" class="outline-2">
-<h2 id="org89c30ab"><span class="section-number-2">1</span> ImageMagick</h2>
+<div id="outline-container-org6c72f8a" class="outline-2">
+<h2 id="org6c72f8a"><span class="section-number-2">1</span> ImageMagick</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Office: <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a>
+Office: <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> Example: <a href="https://www.imagemagick.org/Usage/">Usage</a>
 </p>
 
 <p>
@@ -98,8 +98,8 @@ Office: <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a>
 </div>
 </div>
 
-<div id="outline-container-orge22286e" class="outline-2">
-<h2 id="orge22286e"><span class="section-number-2">2</span> 信息 : identify</h2>
+<div id="outline-container-org2a181ae" class="outline-2">
+<h2 id="org2a181ae"><span class="section-number-2">2</span> 信息 : identify</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-sh">identify Tachikoma.gif
@@ -109,8 +109,8 @@ Office: <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a>
 </div>
 </div>
 
-<div id="outline-container-orgcf8ad18" class="outline-2">
-<h2 id="orgcf8ad18"><span class="section-number-2">3</span> 格式转换</h2>
+<div id="outline-container-org27827fd" class="outline-2">
+<h2 id="org27827fd"><span class="section-number-2">3</span> 格式转换</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-sh">convert Tachikoma.gif Tachikoma.png
@@ -123,8 +123,8 @@ identify Tachikoma.png
 
 
 
-<div id="outline-container-org1b44831" class="outline-2">
-<h2 id="org1b44831"><span class="section-number-2">4</span> 缩放 修改尺寸</h2>
+<div id="outline-container-org2a8af5d" class="outline-2">
+<h2 id="org2a8af5d"><span class="section-number-2">4</span> 缩放 修改尺寸</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 -resize WxH
@@ -138,8 +138,8 @@ identify Tachikoma.resize.png
 </div>
 </div>
 
-<div id="outline-container-orgb9e7c1e" class="outline-2">
-<h2 id="orgb9e7c1e"><span class="section-number-2">5</span> 剪切</h2>
+<div id="outline-container-orge5f77dd" class="outline-2">
+<h2 id="orge5f77dd"><span class="section-number-2">5</span> 剪切</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 -crop | -trim | -shave  (WxH+x+y)
@@ -151,8 +151,8 @@ identify Tachikoma.resize.png
 </div>
 </div>
 </div>
-<div id="outline-container-org91122f9" class="outline-2">
-<h2 id="org91122f9"><span class="section-number-2">6</span> 拼接</h2>
+<div id="outline-container-orgf2a73c0" class="outline-2">
+<h2 id="orgf2a73c0"><span class="section-number-2">6</span> 拼接</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 纵向 : -append
@@ -179,8 +179,8 @@ identify Tachikoma.resize.png
 </div>
 
 
-<div id="outline-container-org97b4b9e" class="outline-2">
-<h2 id="org97b4b9e"><span class="section-number-2">7</span> 合成</h2>
+<div id="outline-container-orgeac2516" class="outline-2">
+<h2 id="orgeac2516"><span class="section-number-2">7</span> 合成</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 -composite
@@ -194,8 +194,8 @@ identify Tachikoma.resize.png
 </div>
 </div>
 </div>
-<div id="outline-container-orgc6b2396" class="outline-2">
-<h2 id="orgc6b2396"><span class="section-number-2">8</span> 旋转 翻转</h2>
+<div id="outline-container-org524bc49" class="outline-2">
+<h2 id="org524bc49"><span class="section-number-2">8</span> 旋转 翻转</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 -rotate Degree 和 -flip(上下) -flop(左右)
@@ -211,8 +211,8 @@ identify Tachikoma.resize.png
 </div>
 </div>
 
-<div id="outline-container-orgf5ae06c" class="outline-2">
-<h2 id="orgf5ae06c"><span class="section-number-2">9</span> 添加: 边框 文字</h2>
+<div id="outline-container-org83b22d4" class="outline-2">
+<h2 id="org83b22d4"><span class="section-number-2">9</span> 添加: 边框 文字</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 边框 : -frame WxH | -bordercolor gray -border WxH
@@ -226,7 +226,11 @@ identify Tachikoma.resize.png
 </div>
 
 <p>
-文字 : -draw "&#x2026;" | -annotate +x+y "&#x2026;"
+文字
+</p>
+<ul class="org-ul">
+<li><p>
+Draw Text on Existing Canvas : -draw "&#x2026;"
 </p>
 <div class="org-src-container">
 <pre class="src src-sh">convert Tachikoma.png <span style="color: #61CE3C;">\</span>
@@ -234,15 +238,144 @@ identify Tachikoma.resize.png
         -fill pink -pointsize 30 <span style="color: #61CE3C;">\</span>
         -draw <span style="color: #61CE3C;">"text 10,50 '&#32472;&#21046;&#30340;&#25991;&#23383;'"</span> <span style="color: #61CE3C;">\</span>
         -fill yellow -pointsize 60 <span style="color: #61CE3C;">\</span>
-        -annotate +100+150 <span style="color: #61CE3C;">"&#22612;&#22855;&#20811;&#39532;"</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+Graphy
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">    convert -size 320x120 xc:lightblue <span style="color: #61CE3C;">\</span>
+            -draw <span style="color: #61CE3C;">"fill tomato  circle 250,30 310,30 \</span>
+<span style="color: #61CE3C;">                   fill limegreen  circle 55,75 15,80 \</span>
+<span style="color: #61CE3C;">                   font Candice  font-size 72  decorate UnderLine \</span>
+<span style="color: #61CE3C;">                   fill dodgerblue  stroke navy  stroke-width 2 \</span>
+<span style="color: #61CE3C;">                   translate 10,110 rotate -15 text 0,0 ' Anthony '"</span> <span style="color: #61CE3C;">\</span>
+            png:- <span style="color: #61CE3C;">\</span>
+        | display
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+Annotate : -annotate {SlewX}x{SlewY}+{X}+{Y} "&#x2026;"
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -size 320x100 xc:lightblue -undercolor dodgerblue <span style="color: #61CE3C;">\</span>
+        -font Candice -pointsize 72 <span style="color: #61CE3C;">\</span>
+        -tile gradient:blue-red <span style="color: #61CE3C;">\</span>
+        -annotate 350x350+20+90 <span style="color: #61CE3C;">'Anthony'</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+<li><p>
+Label : label:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -background lightblue -fill blue  -font Candice <span style="color: #61CE3C;">\</span>
+        -size 300x200 -pointsize 30 <span style="color: #61CE3C;">\</span>
+        -gravity center <span style="color: #61CE3C;">\</span>
+        -strokewidth 10 -stroke white <span style="color: #61CE3C;">\</span>
+        label:<span style="color: #61CE3C;">'Label\nHello Label'</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+<li><p>
+Caption : Word Wrapped
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -background lightblue -undercolor blue <span style="color: #61CE3C;">\</span>
+        -fill white  -font Candice <span style="color: #61CE3C;">\</span>
+        -size 300x -pointsize 30 <span style="color: #61CE3C;">\</span>
+        -gravity center <span style="color: #61CE3C;">\</span>
+        caption:<span style="color: #61CE3C;">'This is a very long caption line.'</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+<li>Text Attributes
+<ul class="org-ul">
+<li>-pointsize
+<ul class="org-ul">
+<li>1 point is 1/72 inches</li>
+<li>不指定 则 Auto fit size</li>
+</ul></li>
+<li>-density 90 (ppi)</li>
+<li>-size Wx 则 Auto fit height 反之亦然</li>
+<li>-fill | -tile</li>
+<li>从文件 : label:@/path</li>
+<li>从标准输入 : label:@-
+<ul class="org-ul">
+<li>Ex. echo "Anthony" | convert label:@-</li>
+</ul></li>
+<li><p>
+-strokewidth 2 -stroke blue
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -background black -fill white -font Candice <span style="color: #61CE3C;">\</span>
+        -size x200 <span style="color: #61CE3C;">\</span>
+        -strokewidth 8 -stroke white <span style="color: #61CE3C;">\</span>
+        label:<span style="color: #61CE3C;">'A'</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div></li>
+<li>Inter-character Kerning : -kerning 1</li>
+<li>Inter-Word Spacing : -interword-spacing 1</li>
+<li>Inter-Line Spacing : -interline-spacing 5</li>
+</ul></li>
+<li><p>
+Pango : Basic Formatted Text
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -background lightblue -size 150 <span style="color: #61CE3C;">\</span>
+        -define <span style="color: #61CE3C;">"pango:justify=true"</span> <span style="color: #61CE3C;">\</span>
+        pango:<span style="color: #61CE3C;">"Contributions to IM Examples are welcome."</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+<ul class="org-ul">
+<li>Auto word wrap (or char wrap for chinese)</li>
+<li>-define pango:justify=true</li>
+</ul></li>
+</ul>
+
+
+<p>
+generate barcodes (font: <a href="http://www.idautomation.com/fonts/free/">http://www.idautomation.com/fonts/free/</a>)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -pointsize 16 <span style="color: #61CE3C;">\</span>
+        -font IDAutomationHC39M <span style="color: #61CE3C;">\</span>
+        -bordercolor white -border 5x5 <span style="color: #61CE3C;">\</span>
+        label:<span style="color: #61CE3C;">'*314-76*'</span> <span style="color: #61CE3C;">\</span>
+        png:- <span style="color: #61CE3C;">\</span>
+    | display
+</pre>
+</div>
+
+<p>
+Yin Yang
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">convert -pointsize 72 -density 288 <span style="color: #61CE3C;">\</span>
+        -font Symbola <span style="color: #61CE3C;">\</span>
+        label:<span style="color: #61CE3C;">'&#9775;'</span> <span style="color: #61CE3C;">\</span>
+        -rotate 270 <span style="color: #61CE3C;">\</span>
         png:- <span style="color: #61CE3C;">\</span>
     | display
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8222708" class="outline-2">
-<h2 id="org8222708"><span class="section-number-2">10</span> 效果</h2>
+
+
+<div id="outline-container-org28b0cd4" class="outline-2">
+<h2 id="org28b0cd4"><span class="section-number-2">10</span> 效果</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 特效

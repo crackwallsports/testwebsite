@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2018 1 8"
+(("2018 1 10"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-1.8")
+          (span (:class "badge badge-success") "每日追踪-1.10")
           (pre ()
                (small () "G20中美峰會的真相 孟晚舟女士在加拿大被抓与华为公司的背后真相 張首晟先生是自杀还是被杀")
                (small () "王健之死")
@@ -28,7 +28,9 @@
  ("2019 1 8"
   "/testwebsite/articles/box-ImageMagick-note.html"
   "ImageMagick Note - 笔记整理 (草稿)"
-  "")
+  (div ()
+       ""
+       (span (:class "badge badge-success") " 更新-1.10")))
  ("2018 11 7"
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
