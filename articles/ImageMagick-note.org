@@ -11,7 +11,7 @@
                 #P"articles/ImageMagick-note.html")
 #+END_SRC
 * ImageMagick
-Office: [[https://www.imagemagick.org/script/index.php][ImageMagick]]
+Office: [[https://www.imagemagick.org/script/index.php][ImageMagick]] Example: [[https://www.imagemagick.org/Usage/][Usage]]
 
 演示: display
 #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
@@ -103,17 +103,112 @@ convert Tachikoma.png \
     | display
 #+END_SRC
 
-文字 : -draw "..." | -annotate +x+y "..."
-#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+文字
+- Draw Text on Existing Canvas : -draw "..."
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
 convert Tachikoma.png \
         -font "/System/Library/Fonts/PingFang.ttc" \
         -fill pink -pointsize 30 \
         -draw "text 10,50 '绘制的文字'" \
         -fill yellow -pointsize 60 \
-        -annotate +100+150 "塔奇克马" \
+        png:- \
+    | display
+  #+END_SRC
+  - Graphy
+    #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+    convert -size 320x120 xc:lightblue \
+            -draw "fill tomato  circle 250,30 310,30 \
+                   fill limegreen  circle 55,75 15,80 \
+                   font Candice  font-size 72  decorate UnderLine \
+                   fill dodgerblue  stroke navy  stroke-width 2 \
+                   translate 10,110 rotate -15 text 0,0 ' Anthony '" \
+            png:- \
+        | display
+    #+END_SRC
+- Annotate : -annotate {SlewX}x{SlewY}+{X}+{Y} "..."
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -size 320x100 xc:lightblue -undercolor dodgerblue \
+        -font Candice -pointsize 72 \
+        -tile gradient:blue-red \
+        -annotate 350x350+20+90 'Anthony' \
+        png:- \
+    | display
+  #+END_SRC
+- Label : label:
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -background lightblue -fill blue  -font Candice \
+        -size 300x200 -pointsize 30 \
+        -gravity center \
+        -strokewidth 10 -stroke white \
+        label:'Label\nHello Label' \
+        png:- \
+    | display
+  #+END_SRC
+- Caption : Word Wrapped
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -background lightblue -undercolor blue \
+        -fill white  -font Candice \
+        -size 300x -pointsize 30 \
+        -gravity center \
+        caption:'This is a very long caption line.' \
         png:- \
     | display
 #+END_SRC
+- Text Attributes
+  - -pointsize
+    - 1 point is 1/72 inches
+    - 不指定 则 Auto fit size
+  - -density 90 (ppi)
+  - -size Wx 则 Auto fit height 反之亦然
+  - -fill | -tile
+  - 从文件 : label:@/path
+  - 从标准输入 : label:@-
+    - Ex. echo "Anthony" | convert label:@-
+  - -strokewidth 2 -stroke blue
+    #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -background black -fill white -font Candice \
+        -size x200 \
+        -strokewidth 8 -stroke white \
+        label:'A' \
+        png:- \
+    | display
+  #+END_SRC
+  - Inter-character Kerning : -kerning 1
+  - Inter-Word Spacing : -interword-spacing 1
+  - Inter-Line Spacing : -interline-spacing 5
+- Pango : Basic Formatted Text
+  #+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -background lightblue -size 150 \
+        -define "pango:justify=true" \
+        pango:"Contributions to IM Examples are welcome." \
+        png:- \
+    | display
+  #+END_SRC
+  - Auto word wrap (or char wrap for chinese)
+  - -define pango:justify=true
+
+
+generate barcodes (font: http://www.idautomation.com/fonts/free/)
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -pointsize 16 \
+        -font IDAutomationHC39M \
+        -bordercolor white -border 5x5 \
+        label:'*314-76*' \
+        png:- \
+    | display
+#+END_SRC
+
+Yin Yang
+#+BEGIN_SRC sh :dir ~/test/ghost-in-shell :results silent
+convert -pointsize 72 -density 288 \
+        -font Symbola \
+        label:'☯' \
+        -rotate 270 \
+        png:- \
+    | display
+  #+END_SRC
+
+
 * 效果
 特效
 - 加噪声 -noise 3 
