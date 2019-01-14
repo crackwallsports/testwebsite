@@ -381,6 +381,125 @@ Assist
 Assist
 - [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
+** Other 其它
+- 缩进
+  - 区域: indent-rigidly == C-x Tab == C-x C-i
+  - 按上一行的格式: indent-region == M-C-\ == Tab
+- 行操作
+  - 开新
+    - open-line == C-o
+    - newline-and-maybe-indent == C-j
+  - 分割
+    - split-line == M-C-o
+  - 连接-前|后
+    - delete-indentation == M-^  (反向: C-u ..)
+- 调换-前|后
+  - transpose-(chars|words) == (C|M)-t
+  - transpose-lines == C-x C-t
+- 转换-大小写
+  - (capitalize|uppercase|downcase)-word == M-(c|u|l) (反向: M-- ..)
+  - upcase|downcase-region C-x C-u|l
+- Narrowing : 当前缓冲 进入部分编辑 不影响缓冲其它部分 
+  - 进入: narrow-to-(region|page|defun) == C-x n (n|p|d)
+    - org-narrow-to-(subtree|block|element) == C-x n (s|b|e)
+  - 退出: widen == C-x n w
+**** Align 对齐
+- align
+- align-(current|entire|newline-and-indent)
+- align-regexp
+- [[https://github.com/mkcms/interactive-align][ialign]]
+
+**** Sort 排序
+- 按-行|列|段|页
+  - sort-(lines|columns|paragraph|pages) 
+    - paragraph <- paragraph-start, paragraph-separate
+    - 反序: C-u ..
+- sort-numeric-fields     (base: sort-numeric-base)
+- sort-fields (第几字段: C-u [N] | M-[N])
+- 正则表达式 : sort-regexp-fields
+- 反序
+  - M-x reverse-region
+- 忽略大小写 : sort-fold-case = t
+    
+
+** Search 搜索
+- isearch (Incremental search)
+  - 前|后 (重复-切换搜索到的词)
+    - isearch-(forward|backward) == C-(s|r)
+    - isearch-(forward|backward)-regexp == C-M-(s|r)
+    - isearch-forward-(word|symbol) == M-s (w|_)
+    - isearch-forward-symbol-at-point == M-s .
+  - Activated (C-s ..)
+    - Paste : C-y
+    - History : M-n|p
+    - 大小写敏感 : M-c
+    - C-w  (光标处到下一个词的词尾) 
+    - C-(s|r) ( 同向: 重复上一次搜索; 反向: 切换搜索方向)
+    - 非增量 : RET
+    - Regex : M-r
+- grep
+  - M-x grep
+  - asynchronously : M-x lgrep
+  - M-x grep-find | find-grep
+- occor
+  - M-s o == occur
+    - -> *Occur* buffer
+    - e : occur-edit-mode : Edit current *Occur* buffer
+      - exit : C-c C-c
+    - next|previous : M-g (n|p)
+    - repeat : C-x z
+    - next|previous line : C-n|p
+    - beginning|end of buffer : <|>
+    - refresh : g 
+    - Jump to match : o
+    - Jump to match but point remainon *Occur* : C-o
+    - help : h 
+    -  quit : q
+  - multi-occur (multiple buffers)
+    - M-x multi-occur		
+    - M-x multi-occur-in-matching-buffers
+
+Assist
+- Swiper : [[https://github.com/abo-abo/swiper][Ivy]]-Swiper [[https://github.com/abo-abo/swiper-helm][Swiper-helm]]
+  - C-s ..
+    - Paste : C-y | M-y(Kill Ring)
+    - Next|Previous : C-(n|p)
+- [[https://github.com/ShingoFukuyama/helm-swoop][helm-swoop]] == M-i
+- [[https://github.com/Wilfred/ag.el][Ag]] : [[https://github.com/syohex/emacs-helm-ag][helm-ag]]
+- multi-cursors
+
+Special
+- imenu : helm-imenu
+  - helm-semantic-or-imenu == C-c h i
+- Search engines : helm-surfraw == C-c h s
+  - brew install surfraw
+  
+** Replace 替换
+- replace-(string|regexp)
+- 问询
+  - M-% == query-replace 
+  - C-M-% == query-replace-regexp
+  - 选项
+    - 退出 : <Enter>|q
+    - 替换当前 : <Spc>|y
+    - 跳过 : <Del>|n
+    - 替换当前 且 退出 : .
+    - 替换当前 且 光标移动到此处 且 退出 : ,
+    - 递归编辑 : C-r
+    - C-w      : 删除-这个匹配+递归编辑
+    - C-]      : 退出-递归编辑&问询
+    - C-l      : 重绘屏幕+这一行位于屏幕正中
+    - !        : 替换-所有+无需再询
+    - E        : 编辑-替换的字符串
+    - ^        : 退回-到前一次替换
+  - 递归编辑 
+    - M-x recursive-edit
+    - 退出 : M-C-c
+    - 退出到最外层 : M-x top-level
+
+
+
+
 * hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
