@@ -121,6 +121,24 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.15")
+        (u (:- "视频: " (@ "" ""))
+           (:- "郭文: " (@ "https://www.guo.media/posts/169807")
+               '(q () (pre () "
+1月14日： 热闹了……这比什么都让西方国家明白什么叫共产主义！https://www.google.com/amp/s/udn.com/news/amp/story/7332/3593189"))
+               (u (:- '(pre () "加拿大人 罗伯特·劳埃德·谢伦伯格(Robert Lloyd Schellenberg) 经过一天的重审后 因走私毒品罪当庭判其死刑"))
+                  (u (:- '(pre () "2014.12.1 被捕"))
+                     (:- '(pre () "间隔: 16个月"))
+                     (:- '(pre () "2016.3.15 开庭审理"))
+                     (:- '(pre () "间隔: 32个月"))
+                     (:- '(pre () "2018.11.20 一审 宣判15年 上诉"))
+                     (:- '(pre () "间隔: 39天"))
+                     (:- '(pre () "2018.12.29 二审 裁定发回重审"))
+                     (:- '(pre () "间隔: 15天"))
+                     (:- '(pre () "2019.1.14 重审一天后 一审 宣判死刑"))))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.14")
         (u (:- "郭文(报平安 视频): " (@ "https://www.guo.media/posts/169785")
                '(q () (pre () "
@@ -623,7 +641,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.14 21:00:40"
+ "2019.01.15 21:03:09"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
