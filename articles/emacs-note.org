@@ -383,8 +383,8 @@ Assist
 
 ** Other 其它
 - 缩进
-  - 区域: indent-rigidly == C-x Tab == C-x C-i
   - 按上一行的格式: indent-region == M-C-\ == Tab
+  - 区域: indent-rigidly == C-x Tab == C-x C-i    
 - 行操作
   - 开新
     - open-line == C-o
@@ -403,13 +403,16 @@ Assist
   - 进入: narrow-to-(region|page|defun) == C-x n (n|p|d)
     - org-narrow-to-(subtree|block|element) == C-x n (s|b|e)
   - 退出: widen == C-x n w
-**** Align 对齐
+
+*** Align 对齐
 - align
 - align-(current|entire|newline-and-indent)
 - align-regexp
+
+Assist
 - [[https://github.com/mkcms/interactive-align][ialign]]
 
-**** Sort 排序
+*** Sort 排序
 - 按-行|列|段|页
   - sort-(lines|columns|paragraph|pages) 
     - paragraph <- paragraph-start, paragraph-separate
