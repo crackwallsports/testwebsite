@@ -179,15 +179,78 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 1
+- 22
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.1.22")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/171549")
+               '(q () (pre () "
+1月21日：希望战友及大家能够多多指教．要求．建议文贵看春晚的节目！一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/171494")
+               '(q () (pre () "
+1月21日，文贵报平安视频！共产党大肆宣传王阳明先生的心学！是对他的侮辱！现在的王岐山就是明朝的太监刘谨！今天的中国共产党完全不能和当年明朝500年前的封建帝国相提并论！这是我们中国人的悲哀，当年的明朝文化开放！对少数民族的帮助！和当时对知识．文化人的尊重才诞生了明朝的几个大思想家！文人．如唐伯虎．王阳明．今天的共产党的统治！不会出现任何一个王阳明和唐伯虎……因为他们如果有那样的才华．就会被躲猫猫死被打飞机死！双规……这个学王阳明的政治运动将是一个中国的历史的政治．文化笑话……今天的中国没有知行合一！只有知行合黑！没有致良知！只有灭良知！这是中国人一个最黑暗的时代！")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=2MtRmwKRKqM"
+                           "2019年1月21日：共产党号召学习王阳明的心学是对圣人的巨大侮辱……")
+               '(small () "Youtube")
+               (u (:- '(pre () "昨晚 3小时 与国内老领导们 通电话PK 王阳明心学"))
+                  (:- '(pre () "致良知"))
+                  (:- '(pre () "知行合黑 贪 骗"))
+                  (:- '(pre () "共产党这个黑社会 教人学心学 不荒唐嘛"))
+                  (:- '(pre () "王阳明"))
+                  (:- '(pre () "就是洗脑 忠心"))
+                  (:- '(pre () "老领导 嘴歪 国内的药吃了不行 美国原厂药吃了才好"))
+                  (:- '(pre () "法治基金 大家留住证据 获取有效信息 卧底"))
+                  (:- '(pre () "好人不会成为我的敌人 坏人才会"))
+                  (:- '(pre () "祈福")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 21
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019..")
-        (u (:- "视频: " (@ "" ""))
-           (:- "郭文: " (@ "")
-               '(q () (pre () ""))
-               (u (:- '(pre () "")))))))
+ (u (:- '(small () "2019.1.21")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=qWfUTqS-5fI" "2019年1月20日王岐山，孟建柱．是如何执行南普陀计划！美国人是如何看待……对待！中国新的发誓我这一系列的奇怪的事情！")
+               '(small () "Youtube")
+               (u (:- '(pre () "法治基金 班农 认真 影响力 战略 宗教 中美贸易扯王八犊子 (我: 犊子 意为 孙子) "))
+                  (:- '(pre () "一屋子 美金 金砖 钻石 的视频 盗国贼要那么多钱干嘛? "))
+                  (:- '(pre () "中共国拿了十诫第一诫 孟建柱出的主意")
+                      (u (:- `(cite () ,(@ "https://www.christianheadlines.com/contributors/michael-foust/china-bans-one-of-the-ten-commandments-as-part-of-national-policy.html"
+                                           "China Bans One of the Ten Commandments as Part of ‘National Policy’")
+                                    (small () "2019.1.9 ChristianHeadlines.com")))))
+                  (:- '(pre () "习 临时演员 当了导演 还把剧本改了"))
+                  (:- '(pre () "一尊 一党 一教"))
+                  (:- '(pre () "不反习 还是 不敢反习? "))
+                  (:- '(pre () "王岐山 西方为啥不报王岐山?"))
+                  (:- '(pre () "刘特佐 孟建柱 孙立军"))
+                  (:- '(pre () "华尔街听谁的? 王岐山 投中共国最多 (我: 华尔街 听钱的 谁给它们撒狗粮 它们就听谁的)"))
+                  (:- '(pre () "春节文贵看春晚 班农 讲述 吴征 白宫遣返郭文贵事件 王岐山见面"))
+                  (:- '(pre () "都恨习"))
+                  (:- '(pre () "大伯说 要想害死谁 : 让他多吃 撑死他  买不动产 把现金都套进去  使劲夸 夸成神 天天给他磕头 磕死他"))
+                  (:- '(pre () "美国人 太多喜欢中国人了"))
+                  (:- '(pre () "体制恶 大部分都是好人"))
+                  (:- `(cite () "班农 费城演讲: "
+                             ,(@ "https://www.youtube.com/watch?v=j1RerUHtTIw&app=desktop"
+                                 "America Fights Back: Our Economic War with China")))
+                  (:- '(pre () "谁是美国的敌人 ? 中共一小撮坏人"))
+                  (:- '(pre () "法治基金 为提供信息的人 提供庇护"))
+                  (:- '(pre () "上周 一个对中最友好的基金 要捐楼 他们现在明白 中共一小撮坏人 绑架了国家人民 造成巨大威胁 他们就希望中国变好"))
+                  (:- '(pre () "外国人对中共国完全不理解 完全懵XX"))
+                  (:- `(cite () "战友之声翻译的 美国对中国全球持续扩张的 国防意义评估 2018.12 : "
+                             ,(@ "https://cdn.discordapp.com/attachments/455062882992914434/535603678170578945/2018.pdf"
+                                 "PDF下载链接")))
+                  (:- '(pre () "昨天 路德和sara的节目 班农提到王岐山  节目才结束一会 北京就打电话来说 能不能别老提王岐山  控制着实权呢"))
+                  (:- '(pre () "政事小哥的事 西方影响 既生政事小哥何生郭叔呢"))
+                  (:- '(pre () "王健 法国着急了 下周有人来见面"))
+                  (:- '(pre () "(42:00) 四大事件 : 刘特佐 海航 王健之死 吴征"))
+                  (:- '(pre () "遣返郭文贵的信 假的"))
+                  (:- '(pre () "吴征 与 郭先生 通话 涉及到习的部分  哪天放出来 就可能是潘多拉盒子开个小口"))
+                  (:- '(pre () "别人不相信 你证明了 他相信了 这才是能力"))
+                  (:- '(pre () "一个国家在保刘特佐"))
+                  (:- '(pre () "祈福"))
+                  (:- '(pre () "提供有效的相关信息 赚大钱 同时 受保护")))))))
  ,*news-topics-guo*)
+
+
+
 #+END_SRC
 - 20
   #+BEGIN_SRC lisp :tangle yes
@@ -914,7 +977,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.21 20:03:26"
+ "2019.01.22 21:09:47"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

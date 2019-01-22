@@ -382,9 +382,9 @@ Assist
 - [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
 ** Other 其它
-- 缩进
-  - 按上一行的格式: indent-region == M-C-\ == Tab
-  - 区域: indent-rigidly == C-x Tab == C-x C-i    
+- 缩进    
+  - 按上一行的格式: indent-region == M-C-\ == <Tab>
+  - 区域: indent-rigidly == C-x <Tab> == C-x C-i    
 - 行操作
   - 开新
     - open-line == C-o
@@ -395,19 +395,18 @@ Assist
     - delete-indentation == M-^  (反向: C-u ..)
 - 调换-前|后
   - transpose-(chars|words) == (C|M)-t
-  - transpose-lines == C-x C-t
 - 转换-大小写
   - (capitalize|uppercase|downcase)-word == M-(c|u|l) (反向: M-- ..)
-  - upcase|downcase-region C-x C-u|l
+  - (upcase|downcase)-region == C-x C-(u|l)
 - Narrowing : 当前缓冲 进入部分编辑 不影响缓冲其它部分 
   - 进入: narrow-to-(region|page|defun) == C-x n (n|p|d)
     - org-narrow-to-(subtree|block|element) == C-x n (s|b|e)
   - 退出: widen == C-x n w
 
 *** Align 对齐
-- align
+- align (align-rules-list)
 - align-(current|entire|newline-and-indent)
-- align-regexp
+- align-regexp (C-u ..)
 
 Assist
 - [[https://github.com/mkcms/interactive-align][ialign]]
@@ -420,10 +419,11 @@ Assist
 - sort-numeric-fields     (base: sort-numeric-base)
 - sort-fields (第几字段: C-u [N] | M-[N])
 - 正则表达式 : sort-regexp-fields
+  - word : (\w) \1
+  - words : (\w+) \1    
 - 反序
   - M-x reverse-region
 - 忽略大小写 : sort-fold-case = t
-    
 
 ** Search 搜索
 - isearch (Incremental search)
