@@ -121,6 +121,19 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.23")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/171663")
+               '(q () (pre () "
+1月22日：文贵在战斗途中！正在完成战友希望我完成的任务中！一切都是刚刚开始！"))
+               (u (:- '(pre () "机场 纽约万里无云 猜猜去哪 去做什么"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/171647")
+               '(q () (pre () "
+1月22日： 伟大战友真的太有才了！ 只想最后那天，在喜马拉雅迎接第一道曙光！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/171640")
+               '(q () (pre () "1月22号尊敬的战友们好：你们健身了吗！今天的纽约阳光明媚万里无云，但是非常非常的冷！也非常非常的舒服！我喜欢万里晴空又嘎嘎的冷的感觉……一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.22")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/171549")
                '(q () (pre () "
@@ -859,7 +872,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.22 21:09:47"
+ "2019.01.23 19:42:23"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
