@@ -425,7 +425,8 @@ Assist
   - M-x reverse-region
 - 忽略大小写 : sort-fold-case = t
 
-** Search 搜索
+** Search 搜索 & Replace 替换
+Search
 - isearch (Incremental search)
   - 前|后 (重复-切换搜索到的词)
     - isearch-(forward|backward) == C-(s|r)
@@ -442,7 +443,7 @@ Assist
     - Regex : M-r
 - grep
   - M-x grep
-  - asynchronously : M-x lgrep
+  - Asynchronously : M-x lgrep
   - M-x grep-find | find-grep
 - occor
   - M-s o == occur
@@ -457,31 +458,16 @@ Assist
     - Jump to match : o
     - Jump to match but point remainon *Occur* : C-o
     - help : h 
-    -  quit : q
+    - quit : q
   - multi-occur (multiple buffers)
     - M-x multi-occur		
     - M-x multi-occur-in-matching-buffers
 
-Assist
-- Swiper : [[https://github.com/abo-abo/swiper][Ivy]]-Swiper [[https://github.com/abo-abo/swiper-helm][Swiper-helm]]
-  - C-s ..
-    - Paste : C-y | M-y(Kill Ring)
-    - Next|Previous : C-(n|p)
-- [[https://github.com/ShingoFukuyama/helm-swoop][helm-swoop]] == M-i
-- [[https://github.com/Wilfred/ag.el][Ag]] : [[https://github.com/syohex/emacs-helm-ag][helm-ag]]
-- multi-cursors
-
-Special
-- imenu : helm-imenu
-  - helm-semantic-or-imenu == C-c h i
-- Search engines : helm-surfraw == C-c h s
-  - brew install surfraw
-  
-** Replace 替换
-- replace-(string|regexp)
+Replace
+- 所有: replace-(string|regexp)
 - 问询
-  - M-% == query-replace 
-  - C-M-% == query-replace-regexp
+  - query-replace == M-%
+  - query-replace-regexp == C-M-%
   - 选项
     - 退出 : <Enter>|q
     - 替换当前 : <Spc>|y
@@ -495,13 +481,26 @@ Special
     - !        : 替换-所有+无需再询
     - E        : 编辑-替换的字符串
     - ^        : 退回-到前一次替换
-  - 递归编辑 
-    - M-x recursive-edit
-    - 退出 : M-C-c
-    - 退出到最外层 : M-x top-level
 
+Assist
+- Swiper : [[https://github.com/abo-abo/swiper][Ivy]]-Swiper [[https://github.com/abo-abo/swiper-helm][Swiper-helm]]
+  - C-s ..
+    - Paste : C-y | M-y(Kill Ring)
+    - Next|Previous : C-(n|p)
+- [[https://github.com/ShingoFukuyama/helm-swoop][helm-swoop]] == M-i
+  - (M-[N] 显示周围行)
+  - 多缓冲: helm-multi-swoop == C-c M-i
+  - 所有缓冲: helm-multi-swoop-all
+  - Edit mode : C-c C-e
+- [[https://github.com/Wilfred/ag.el][Ag]] : [[https://github.com/syohex/emacs-helm-ag][helm-ag]]
+- multi-cursors
 
-
+Special
+- imenu : helm-imenu
+  - helm-semantic-or-imenu == C-c h i
+- Search engines : helm-surfraw == C-c h s
+  - brew install surfraw
+- Project : [[http://batsov.com/projectile/][Projectile]]
 
 * hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
