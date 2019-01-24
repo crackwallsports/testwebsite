@@ -143,7 +143,7 @@ Emacs 是基于文本的 所以 对文本的操作 可以贯穿各种场景 然�
   - Completion : company-slime
 - C
 
-* Move & Jump
+* Move 移动 & Jump 跳转
 光标的定位 (屏幕可视范围内)
 
 Buffer
@@ -190,7 +190,7 @@ Supplement
       "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
 #+END_SRC
 
-* Edit
+* Edit 编辑
 - 选中 (标记) : 选择需要编辑的部分文本
 - 插入
 - 删除 剪切 复制 粘贴
@@ -425,9 +425,9 @@ Assist
   - M-x reverse-region
 - 忽略大小写 : sort-fold-case = t
 
-** Search 搜索 & Replace 替换
+* Search 搜索 & Replace 替换
 Search
-- isearch (Incremental search)
+- isearchn (Incremental search)
   - 前|后 (重复-切换搜索到的词)
     - isearch-(forward|backward) == C-(s|r)
     - isearch-(forward|backward)-regexp == C-M-(s|r)
@@ -441,10 +441,6 @@ Search
     - C-(s|r) ( 同向: 重复上一次搜索; 反向: 切换搜索方向)
     - 非增量 : RET
     - Regex : M-r
-- grep
-  - M-x grep
-  - Asynchronously : M-x lgrep
-  - M-x grep-find | find-grep
 - occor
   - M-s o == occur
     - -> *Occur* buffer
@@ -462,6 +458,10 @@ Search
   - multi-occur (multiple buffers)
     - M-x multi-occur		
     - M-x multi-occur-in-matching-buffers
+- grep
+  - M-x grep
+  - Asynchronously : M-x lgrep
+  - M-x grep-find | find-grep
 
 Replace
 - 所有: replace-(string|regexp)
@@ -471,16 +471,18 @@ Replace
   - 选项
     - 退出 : <Enter>|q
     - 替换当前 : <Spc>|y
+    - 替换-所有 : !
     - 跳过 : <Del>|n
+    - 退回-到前一次替换 : ^
     - 替换当前 且 退出 : .
     - 替换当前 且 光标移动到此处 且 退出 : ,
+    - 撤销-前一个|所有 : u|U 
     - 递归编辑 : C-r
-    - C-w      : 删除-这个匹配+递归编辑
-    - C-]      : 退出-递归编辑&问询
-    - C-l      : 重绘屏幕+这一行位于屏幕正中
-    - !        : 替换-所有+无需再询
-    - E        : 编辑-替换的字符串
-    - ^        : 退回-到前一次替换
+      - 退出 : C-M-c
+    - 删除-这个匹配 并 进入递归编辑 : C-w
+    - 退出-递归编辑 和 问询 : C-]
+    - 编辑-替换的字符串 : E
+
 
 Assist
 - Swiper : [[https://github.com/abo-abo/swiper][Ivy]]-Swiper [[https://github.com/abo-abo/swiper-helm][Swiper-helm]]
@@ -501,6 +503,20 @@ Special
 - Search engines : helm-surfraw == C-c h s
   - brew install surfraw
 - Project : [[http://batsov.com/projectile/][Projectile]]
+
+* Repeat 重复
+- 多次运行同一个命令
+  - universal-argument == C-u [Num] (缺省次数: 4)
+  - digit-argument == (C|M)-[Num]
+  - C-u [C-u]*  (4^n)
+- 上一条命令-=一次或多次 
+  - repeat == C-x z ... z
+- 复杂命令(使用 lisp 函数)
+  - repeat-complex-command == C-x ESC ESC | C-x M-:
+
+Assist
+- Keyboard Macro 键盘宏
+- Multiple Cursor
 
 * hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我

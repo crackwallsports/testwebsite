@@ -121,6 +121,34 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.24")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=H7YOA9eGiBY"
+                           "1月23日文贵报平安直播")
+               '(small () "Youtube")
+               (u (:- '(pre () "在华盛顿"))
+                  (:- '(pre () "刚刚接了战友电话 比较激动"))
+                  (:- '(pre () "要去律师事务所 做庭外问话"))
+                  (:- '(pre () "反共的气氛 共识 共产党不代表中国人 只有几个大坏蛋必须清除"))
+                  (:- '(pre () "出主意 一招就破它们 以后说"))
+                  (:- '(pre () "老百姓 太软弱 太容易被洗脑了"))
+                  (:- '(pre () "美国人总问 为什么14亿人的国家 这些知识分子全都被打趴下 没人敢说话 为什么允许这几个这么折腾 被绑到它们的战车上 为什么对瞪着眼说谎的中共 每次说它都赢"))
+                  (:- '(pre () "黑社会教人致良知"))
+                  (:- '(pre () "国人在这方面需要改变"))
+                  (:- '(pre () "1120后 好多中共官员 向美方反应 说 他们想干嘛 还想灭共产党 灭它们的几个领导人"))
+                  (:- '(pre () "中共所做的反应 证明了它们的恶"))
+                  (:- '(pre () "爆料革命被华盛顿高度关注"))
+                  (:- '(pre () "大时代 大趋势 谁也挡不住 也别想挡 中国的世纪大变革 灭共"))
+                  (:- '(pre () "好消息太多 怕大家麻木 接下来还有几个企业 慢慢说"))
+                  (:- '(pre () "祈福"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/171797")
+               '(q () (pre () "
+1月23日：尊敬的战友们好，马上再过媒体报平安直播，一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片:")
+                      (u (:- '(pre () "华盛顿邮报驻华记者 施家㬢 Twitter:@gerryshih"))
+                         (:- '(pre () "杨恒均 与 染香袁小靓")))))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.23")
         (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/171663")
                '(q () (pre () "
@@ -872,7 +900,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.23 19:42:23"
+ "2019.01.24 19:54:25"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
