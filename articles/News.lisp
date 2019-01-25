@@ -121,6 +121,31 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.25")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=6YhMGzFlHv8"
+                           "1月24日：文贵已经在大风大雨中飞回了纽约！")
+               '(small () "Youtube"))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=pAQ4Kmq7oFU"
+                           "01 24 2019：委内瑞拉的民主反独裁的运动对中国人民的意义与影响重大！")
+               '(small () "Youtube")
+               (u (:- '(pre () "深刻思考 委内瑞拉 启发 和平改变"))
+                  (:- '(pre () "知行合一 磨 坚持"))
+                  (:- '(pre () "美官员认为 一定在中共国发生 一定得到美国支持"))
+                  (:- '(pre () "美国 要求的 结构性改革 就是政治改革"))
+                  (:- '(pre () "新疆 消失的村落  西藏消失的人  云南少数民族"))
+                  (:- '(pre () "美国 美元 责任"))
+                  (:- '(pre () "王岐山达沃斯演讲 骗人的手段 转移视线 流氓"))
+                  (:- '(pre () "莘县阳谷县搭县 兑现 不兑现就惩罚"))
+                  (:- '(pre () "中东害怕中共威胁"))
+                  (:- '(pre () "挑战美元地位"))
+                  (:- '(pre () "中美贸易战 让美国试出了中共的底牌 强弱之处"))
+                  (:- '(pre () "老虎苍蝇一起打 过街老鼠"))
+                  (:- '(pre () "春节后 大家去渗透中共 政府 公司 等等 拿到相关信息 给法治基金 让你们挣大钱"))
+                  (:- '(pre () "文贵看春晚 怎么安排"))
+                  (:- '(pre () "祈福")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.24")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=H7YOA9eGiBY"
                            "1月23日文贵报平安直播")
@@ -900,7 +925,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.24 19:54:25"
+ "2019.01.25 20:30:36"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
