@@ -516,6 +516,12 @@ Special
 
 Assist
 - Keyboard Macro 键盘宏
+  - 开始|结束
+    - (start|end)-kbd-macro == C-x (|) | <F3>|<F4>
+  - 执行 
+    - call-last-kbd-macro == C-x e | <F4>
+  - 终止
+    - C-g
 - Multiple Cursor
 
 * hydra
