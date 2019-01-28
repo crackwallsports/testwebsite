@@ -121,6 +121,86 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.28")
+        (u (:- "郭文(短视频 班农): " (@ "https://www.guo.media/posts/172679")
+               '(q () (pre () "
+1月27日：班农谈共产党如果侵略台湾美国会怎么办！"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=g3gMFElJjJQ" "台湾如果被共产党侵略，美国会做什么请看这里。")
+                             (small () "Youtube")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=woduv4-C2hY" "美国会对共产党在香港的统治会做什么全香港人，一定要看这一段半农现场的视频。")
+                             (small () "Youtube")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=UqoqBTkIQVs" "香港被共产党的侵略和沦陷，美国会做什么，请看班农先生这个视频。")
+                             (small () "Youtube")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=9oimP4kXEiA" "王岐山，孟建柱孙立军要出大事儿了，美国将采用反黑法䅁收拾他们！")
+                             (small () "Youtube"))
+                      (u (:- '(pre () "美国RICO法案 : The Racketeer Influenced and Corrupt Organizations Act 反有组织诈骗与贪污法案"))
+                         (:- '(pre () "郭先生在班农后面调皮 给 文贵看春晚 做广告"))))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=efZo9c1jyH4" "2019年1月27日：王岐山在达沃斯的讲话已经开始了世界的反习运动！")
+               '(small () "Youtube")
+               (u (:- `(citte () "王岐山 达沃斯 讲话" ,(@ "https://www.youtube.com/watch?v=x_6FB1inzYY"
+                                     "Chinese Vice President Wang Qishan Gives Speech in Davos")
+                              (small () "2019.1.23 Youtube")))
+                  (:- '(pre () "供上 王岐山"))
+                  (:- '(pre () "西方 都恨习近平 喜欢王岐山 (我: 都是钱 都是狗粮 变好没人 变坏一窝疯 就是不对自己对钱承担责任)"))
+                  (:- '(pre () "委内瑞拉 查韦斯 美国 现金"))
+                  (:- '(pre () "美国 要下决心 金融制裁 委内瑞拉就会改变"))
+                  (:- '(pre () "如何对付中共"))
+                  (:- '(pre () "致良知 善恶 真假"))
+                  (:- '(pre () "最近几周 又有大动静"))
+                  (:- '(pre () "祈福")))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.1.27")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/172451")
+               '(q () (pre () "
+1月26日：衷心感谢卡丽熙！（还记得2017年的今天，文贵先生横空出世，我还在直播里跟着起哄，文贵直播说：“我要不要继续讲，大家愿意听吗”我说讲讲讲！恍若昨天，两年后成为文贵的战友🙏🙏🙏天佑文贵天佑中华！)")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/172426")
+               '(q () (pre () "
+1月26日：衷心地感谢战友们对今天的日子的记挂！和纪念！这就是战友的情！战友的力量！说实话，今天不直播有一半的原因就是担心自己控制不住！但是收到这么多战友的让我感动的信息！非常非常感动！一切都是刚刚开始！🙏🙏🙏🙏🙏🙏😘😘😘😍😍😍☺️☺️☺️👍👍👍🦅🦅🦅🦅🦅🦅❤️❤️❤️❤️❤️❤️❤️😂☺️☺️☺️❤️❤️")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/172399")
+               '(q () (pre () "
+1月26号：尊敬的战友们好！由于今天我就很早就要等重要的朋友吃早餐！开会！今天大家周末睡懒觉好好休息！文贵今天没有直播！在这里向大家报平安了，谢谢，一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/172395")
+               '(q () (pre () "
+1月26号：尊敬的战友们好！你们健身了吗！一切都是刚刚开始！这位战友玩笑开得太可爱了，谢谢你们的夸奖！这都是上天给我们的力量！没有战友文贵什么都不是！ (我的天啊！老郭真的预言委内瑞拉会突然脆断掉的！文贵先生真神人也！)"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.1.26")
+        (u (:- "郭文(图片): "
+               (@ "https://www.guo.media/posts/172258")
+               (@ "https://www.guo.media/posts/172257")
+               '(q () (pre () "
+罗杰斯通（Roger Stone）是一名美国政治顾问，一直与特朗普（“特朗普竞选团队”）保持着密切关系。2016年美国总统大选后，美国众议院情报常设委员会（“HPSCI”），美国参议院情报特别委员会（“SSCI”）和联邦调查局（“FBI”）各自宣布开始调查俄罗斯干预2016年美国总统大选，其中包括调查斯通与某安保公司的联系。之后斯通多次向HPSCI撒谎并提供伪证，并试图说服相关两个证人做假证并隐瞒涉案相关信息，企图采取措施阻挠调查。美国时间2019年1月25日，美国最高法院因妨碍法律程序，行贿，阻碍行使调查权，作伪证，未响应法庭取证，及撺掇证人作伪证等罪名，对罗杰斯通其进行起诉并逮捕。(1)
+... (2)")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=soFqPodi-MQ"
+                           "01 .25 .19委内瑞拉的推翻一小部分的盗国贼革命形势适合中！")
+               '(small () "Youtube")
+               (u (:- '(pre () "(我: 头发少会变秃子 不会变兔子)"))
+                  (:- '(pre () "罗杰斯通 被捕  吴征  战略"))
+                  (:- '(pre () "华盛顿 庭外问话"))
+                  (:- '(pre () "诉讼的战略 背后的中共的蓝金黄"))
+                  (:- '(pre () "秋风扫落叶 欺民賊"))
+                  (:- '(pre () "委内瑞拉 中共国大使馆 巴西 安哥拉"))
+                  (:- '(pre () "刘特佐 将有实质性进展"))
+                  (:- '(pre () "索罗斯 习近平")
+                      (u (:- `(cite () "演讲视频: "
+                                    ,(@ "https://www.youtube.com/watch?v=7ZGoXP-BWoc"
+                                        "Bloomberg Live George Soros Speaks at Davos")
+                                    (small () "2019.1.24 Youtube")))
+                         (:- `(cite () "演讲全文(英文): "
+                                    ,(@ "https://www.georgesoros.com/2019/01/24/remarks-delivered-at-the-world-economic-forum-2/"
+                                        "Remarks delivered at the World Economic Forum")
+                                    (small () "2019.1.24 George Soros")))))
+                  (:- '(pre () "习近平 要有大智慧的话 借中美贸易战 把该干的都干了 让中共转型  不天真"))
+                  (:- '(pre () "王岐山 发展优于公平"))
+                  (:- '(pre () "文贵看春晚 给班农先生更多时间"))
+                  (:- '(pre () "西方人 关心 中国有法治 公平 人权"))
+                  (:- '(pre () "祈福")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.25")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=6YhMGzFlHv8"
                            "1月24日：文贵已经在大风大雨中飞回了纽约！")
@@ -925,7 +1005,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.25 20:30:36"
+ "2019.01.28 21:16:49"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
