@@ -21,7 +21,7 @@
 
 * Coonfig 配置
 - 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
-
+  
 * Basic 基础
 ** UI 用户界面
 - Menu 菜单栏 : 屏幕顶部突出显示的条
@@ -30,6 +30,9 @@
     - Buffer 缓冲区 : 关联文件
 - Mode Line 模式行 (状态栏) : 每个窗口中 横贯底部的高亮条 提供当前缓冲区的信息
 - Echo Area : 模式行下面 底部的区域 显示相关信息
+
+Mode Line  
+- [[https://github.com/Malabarba/smart-mode-line][smart-mode-line]]
 
 ** Mode 模式
 - 主要模式 major-mode : 主要的编辑行为 仅用于当前缓冲区 仅有一个活动的主模式 
@@ -370,14 +373,8 @@ Assist
     - C-x r k == kill-rectangle
     - C-x r M-w == copy-rectangle-as-kill
     - C-x r y == yank-rectangle
-- Keyboard Macro 键盘宏
-  - 开始|结束
-    - start|end-kbd-macro == C-x (|) == <F3>|<F4>
-  - 执行 
-    - call-last-kbd-macro == C-x e == <F4>
-  - 终止
-    - C-g
-
+- [[Keyboard Macro 键盘宏][Keyboard Macro 键盘宏]]
+ 
 Assist
 - [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
@@ -495,7 +492,7 @@ Assist
   - 所有缓冲: helm-multi-swoop-all
   - Edit mode : C-c C-e
 - [[https://github.com/Wilfred/ag.el][Ag]] : [[https://github.com/syohex/emacs-helm-ag][helm-ag]]
-- multi-cursors
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
 Special
 - imenu : helm-imenu
@@ -515,15 +512,127 @@ Special
   - repeat-complex-command == C-x ESC ESC | C-x M-:
 
 Assist
-- Keyboard Macro 键盘宏
-  - 开始|结束
-    - (start|end)-kbd-macro == C-x (|) | <F3>|<F4>
-  - 执行 
-    - call-last-kbd-macro == C-x e | <F4>
-  - 终止
-    - C-g
-- Multiple Cursor
+- [[Keyboard Macro 键盘宏][Keyboard Macro 键盘宏]]
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
 
+
+* Assist 辅助
+** Information 信息
+- 词数
+  - count-words-region ~==~ M-=  (缓冲: C-u ..)
+  - M-x count-words (缓冲|区域)
+- 行数: M-x count-lines-region
+- 字符信息
+  - what-cursor-position ~==~ C-x =  (编码 第几个字符 第几列)
+  - M-x describe-char  (详细信息)
+
+** Keyboard Macro 键盘宏
+- 开始|结束
+  - start|end-kbd-macro == C-x (|) | <F3>|<F4>
+  - 追加: C-u C-x (
+- 执行 
+  - call-last-kbd-macro == C-x e | <F4>
+  - M-x (Macro Name) | helm-execute-kmacro
+- 终止
+  - C-g
+- 命名 
+  - M-x name-last-kbd-macro
+- 保存 
+  - M-x insert-kbd-kbd-macro RET macroname
+** Abbrev 缩写
+- 添加
+  - 全局: add-global-abbrev == C-x a g
+  - 当前主要模式: C-x a l == add-mode-abbrev
+  - inverse-add-(global|mode)-abbrev == C-x a i (g|l)
+  - M-x define-(global|mode)-abbrev
+  - 前缀
+    - 0 : region as expansion
+    - C-u [N] : N words
+- 删除
+  - Arg: C-u -
+  - 全部: M-x kill-all-abbrevs
+- 扩展
+  - abbrev-prefix-mark == M-'  (Ex. cnst -expands-into-> construction)
+  - expand-abbrev == C-x a e 
+  - M-x expand-region-abbrevs
+  - M-x unexpand-abbrev
+- 查看和编辑
+  - M-x list-abbrevs (C-u [N] .. : local, N:次数)
+  - M-x edit-abbrevs
+- 保存
+  - M-x write-abbrev-file <RET> file <RET>
+  - M-x read-abbrev-file <RET> file <RET>
+  - M-x define-abbrevs
+  - M-x insert-abbrevs
+
+** Register 寄存器
+- 寄存器 : 存储 文本 矩形区块 位置 值 设置
+- View
+  - M-x view-register <RET>
+- Jump
+  - jump-to-register == C-x r j
+- Position
+  - Save: point-to-register == C-x r <SPC>
+- Text|Rectangle
+  - Save: copy-[rectangle]-to-register == C-x r (s|r)  (C-u .. : copy-to and del)
+  - Insert: insert-register == C-x r i
+- Text
+  - Append: M-x append-to-register <RET>
+    - increment-register == C-x r +
+  - Prepend: M-x prepend-to-register <RET>
+- Frame&Window Configuration
+  - Save
+    - window-configuration-to-register == C-x r w
+    - frameset-to-register == C-x r f
+  - Restore: C-x r j  (C-u .. : del frame invisible)
+- Number
+  - Save: number-to-register ==  C-u [N] C-x r n
+  - Increment: C-u [N] C-x r +
+  - Insert: insert-register == C-x r i
+- Keyboard Macro
+  - Save: kmacro-to-register ==  C-x C-k x
+  - Exe: C-x r j
+** Bookmark 书签
+- 书签 : 保存缓冲区中位置
+- 设置-光标位置
+  - bookmark-set == C-x r m
+  - bookmark-set-no-overwrite == C-x r M
+- 移动到-指示的位置
+  - bookmark-jump == C-x r b
+- 显示-书签列表
+  - list-bookmarks == C-x r l
+- 删除
+  - M-x bookmark-delete
+- 重命名
+  - M-x bookmark-rename
+- 保存 加载
+  - 到默认文件: bookmark-save
+  - 新文件: bookmark-write
+  - 加载: bookmark-load
+- 插入
+  - 文件内容: bookmark-insert
+  - 文件名字: bookmark-insert-location
+** Other
+Highlight 高亮
+- 光标所在行
+  - hl-line-mode (当前缓冲)  [[Highlight Line][config]]
+
+自动加载外部修改过的文件
+- global-auto-revert-mode
+
+Key bindings
+- [[https://github.com/kai2nenobu/guide-key][guide-key]]
+
+* Special Mode
+** Dired
+** Org
+** Shell
+** Git
+- [[http://magit.github.io/][Magit]]
+
+* Programming
+** C
+** Lisp
 * hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -618,7 +727,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 #+END_SRC
 
-* Mode
+* Config
 
 ** Ace Window
 #+BEGIN_SRC emacs-lisp
@@ -667,4 +776,8 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 (unbind-key "M-<down-mouse-1>" redshank-mode-map)
 #+end_src
 
+** Highlight Line
 
+#+BEGIN_SRC emacs-lisp
+(global-hl-line-mode 1)
+#+END_SRC
