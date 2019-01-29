@@ -121,6 +121,16 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.1.29")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=AS5BCrlCcWI" "1月28号尊敬的战友们好，你们健身了吗？你们往身上浇水了吗？一切都是刚刚开始。")
+               '(small () "Youtube")
+               (u (:- '(pre () "浇水运动 浇热水 滚烫的开水"))
+                  (:- '(pre () "看央视春晚 只会 猪年更猪"))
+                  (:- '(pre () "委内瑞拉 世界局势转变 西方会更多的关注 中国 台湾 香港 新疆 西藏 中共盗国贼对百姓的欺压和打压 中国即将迎来美好的明天"))
+                  (:- '(pre () "祈福")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.1.28")
         (u (:- "郭文(短视频 班农): " (@ "https://www.guo.media/posts/172679")
                '(q () (pre () "
@@ -343,6 +353,11 @@ z-index:100;
 
 1月19日：法治基金会议中！"))
                (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=NBPlY8mL530"
+                                 "US-China trade deal and Rule of Law Foundation by Steve Bannon")
+                             "(有 中文字幕)"
+                             (small () "Youtube")))
+                  (:- `(cite ()
                              ,(@ "https://www.youtube.com/watch?v=tMSWOGPNtz8"
                                  "1/19/2019 路德SARA时评：独家采访班农先生，法治基金到底是否接受捐款，关注哪些方面？中美双方的冲突到底在哪里？川普团队到底是怎么看中共？")
                              (small () "Youtube")))
@@ -1005,7 +1020,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.28 21:16:49"
+ "2019.01.29 20:14:43"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
