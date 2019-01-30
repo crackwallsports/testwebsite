@@ -181,6 +181,73 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 1
+- 30
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.1.30")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/173127")
+               '(q () (pre () "
+1月29日：文贵看春晚特别定制的八套西装，11件衬衣，今天已经全部到了，这是劳．瑞奇特别为我们定做的！文贵将以非常特别的方式展示给大家！一切都是刚刚开始！")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=KGR0R3uxmc4"
+                           "2019年1月29日 郭文贵向北朝鲜领导人金正恩先生及金与正女士发出的警告视频，对北朝鲜国家安全和两位个人安全有重大爆料")
+               '(small () "Youtube")
+               (u (:- '(pre () "2.4日 7pm 文贵看春晚直播中 会有 5-10分钟 重大信息公布"))
+                  (:- '(pre () "涉及到 北朝鲜所有人民的安全和未来 访华中的隐藏的个人重大安全问题 过去一两年内对你们国家和家族埋下的巨大安全隐患 正面临一个巨大的阴谋 你们国家和你们的安全 在一小撮人控制之中 "))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/173098")
+               '(q () (pre () "
+1月29号：文贵看春晚关于要播出的．圣者．达赖喇嘛视频的预告🙏🙏🙏🙏🙏🙏🙏🙏🙏（1月29号视频三）")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/173097")
+               '(q () (pre () "
+1月29号：请王岐山．孟建柱．孙立军先生．告诉14亿中国人……这是谁的钱！(1月29日视频二)这是真的假的呀……😂😂😂"))
+               (u (:- '(pre () "美钞 目测估计有8000万 全新 堆在一起"))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/173093")
+               '(q () (pre () "
+1月29号：请王岐山．孟建柱．孙立军先生．告诉14亿中国人……这是谁的金砖！（1月29日视频一)"))
+               (u (:- '(pre () "非洲某国 装满保险箱的金砖"))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=HbaDGgSypx8"
+                           "1月29日：文贵报平安直播！下一个打击目标，将是阿里巴巴！和腾讯！一切都是刚刚开始！")
+               '(small () "Youtube")
+               (u (:- '(pre () "美司法部 宣布 起诉 华为 23项刑事指控 并 向加拿大提出引渡 孟晚舟")
+                      (u (:- `(cite () ,(@ "https://www.justice.gov/opa/pr/chinese-telecommunications-conglomerate-huawei-and-huawei-cfo-wanzhou-meng-charged-financial"
+                                           "Chinese Telecommunications Conglomerate Huawei and Huawei CFO Wanzhou Meng Charged With Financial Fraud")
+                                    (small () "2019.1.28 DOJ")))
+                         (:- `(cite () "DOJ新闻发布会: " ,(@ "https://www.youtube.com/watch?v=YXdkWoOUOR0&feature=youtu.be"
+                                                             "Acting Attorney General Whitaker Announces National Security Related Criminal Charges")
+                                    (small () "2019.1.28 Youtube")))))
+                  (:- '(pre () "美司法部新闻发布会 台上的 都是支持爆料革命的战友 "))
+                  (:- '(pre () "老领导 听 中央台 说 美国干涉 委内瑞拉 内政  流氓台"))
+                  (:- '(pre () "马杜罗查韦斯在委内瑞拉干的是灭良知 美国和西方是致良知 帮助人民"))
+                  (:- '(pre () "董卿不上春晚不是好事 (我: 你党真是的 应该让她上啊 上了就有话题 就把舆论给引导开了 怎么这时候就不用这招了呢)"))
+                  (:- '(pre () "孟晚舟 引渡  抓加拿大人 判死刑 反倒让引渡成为了可能"))
+                  (:- '(pre () "抓 罗杰斯通 是 冲着 班农 去的? 哪个王八蛋在胡说八道呢 跟班农没关系 抓他就是为了吴征 为中共在美的蓝金黄"))
+                  (:- '(pre () "何平 吴征 陈军  钱"))
+                  (:- '(pre () "最近江湖躁动 很多人给郭先生说 只要他愿意 就绝对跟随他 封他为王  砸了两年没弄到多大油水 现在有来这个 去你大爷 (我: 是骚动吧 一堆恶心人 左扭扭 右捏捏 眼里只有钱 不要脸 不要原则)"))
+                  (:- '(pre () "不成立组织 不加入任何组织 不搞政治"))
+                  (:- '(pre () "接下来 会看到 以美国为中心的 世界上有法治的 各国国家 没选择 一定反抗中共的威胁"))
+                  (:- '(pre () "刚刚的中美谈判 刘鹤  示弱再示弱  再创中美关系辉煌一百年 (我: 哈哈哈 在创伤中 美国会惶恐 一百年)"))
+                  (:- '(pre () "崔天凯 出门前获得北京来的最新消息 战略有调整 因为昨天司法部的事"))
+                  (:- '(pre () "委内瑞拉 为什么拖拖拉拉那么久  因为 美国利益集团在那有石油利益 俄罗斯 和 中共 的利益集团的较量 以及 几十年形成的寡头政治 军阀势力"))
+                  (:- '(pre () "军权 枪把子 中共国 没军阀 都给习王给灭了 大家都不高兴 军队没人愿意跟随"))
+                  (:- '(pre () "经济 钱袋子 中共国 有钱人都被它们灭了 没人相信它们"))
+                  (:- '(pre () "再加上 知识分子 背离 人心已去  它们就忘了 "))
+                  (:- '(pre () "中共国 不会拖拖拉拉 几天就完 不会有大量百姓上街 它们身边人就搞定了"))
+                  (:- '(pre () "美国政府上层 白宫老不稳 但整个美国系统是稳的 该干啥干啥"))
+                  (:- '(pre () "中共国 上面看着稳 下面全不稳 金字塔式 就上面那几个人 坍塌后 一下就完 迅速形成扁平式的 居中制衡"))
+                  (:- '(pre () "司法部的行动 将打开下一个 微信 阿里巴巴 平安集团 凤凰卫视 保利集团 北方工业集团 中船 中海外 中石油 中石化 民生银行 国开行 亚洲基础银行 等等 百度"))
+                  (:- '(pre () "智库的朋友 过去也认识王 但现在认为 王岐山 是 世界上 最坏的 最聪明的 坏蛋  达沃斯讲话 认识到它就是大流氓 (我: 被夸奖了 要来劲了 加油)"))
+                  (:- '(pre () "为预祝刘鹤和中共贸易代表团在美国诈骗成功 助助兴 放2到4个小视频"))
+                  (:- '(pre () "王岐山 说 繁华的罗马 也是最腐败的罗马   怎么不说后一句呢  罗马盛于腐败 败于腐败 灭于腐败  你要把你们给灭了吗"))
+                  (:- '(pre () "班农先生 说服美国 (lobbying 游说) 关于RICO法案(反黑法案 反有组织欺诈和腐败法)  ")
+                      (u (:- `(cite () ,(@ "https://en.wikipedia.org/wiki/Racketeer_Influenced_and_Corrupt_Organizations_Act"
+                                           "RICO - Racketeer Influenced and Corrupt Organizations Act")
+                                    (small () "Wiki")))))
+                  (:- '(pre () "祈福"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/173076")
+               '(q () (pre () "
+尊敬的战友们好：马上开始直播，一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片: 吴征 吴凯声 帮助犹太难民?")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 29
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -1155,7 +1222,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.01.29 20:14:43"
+ "2019.01.30 20:03:06"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

@@ -503,12 +503,12 @@ Special
 
 * Repeat 重复
 - 多次运行同一个命令
-  - universal-argument == C-u [Num] (缺省次数: 4)
-  - digit-argument == (C|M)-[Num]
+  - universal-argument == C-u [N] (缺省次数: 4)
+  - digit-argument == (C|M)-[N]
   - C-u [C-u]*  (4^n)
-- 上一条命令-=一次或多次 
+- 上一条命令 (一次或多次)
   - repeat == C-x z ... z
-- 复杂命令(使用 lisp 函数)
+- 复杂命令
   - repeat-complex-command == C-x ESC ESC | C-x M-:
 
 Assist
@@ -528,7 +528,7 @@ Assist
 
 ** Keyboard Macro 键盘宏
 - 开始|结束
-  - start|end-kbd-macro == C-x (|) | <F3>|<F4>
+  - (start|end)-kbd-macro == C-x (|) | <F3>|<F4>
   - 追加: C-u C-x (
 - 执行 
   - call-last-kbd-macro == C-x e | <F4>
@@ -537,8 +537,6 @@ Assist
   - C-g
 - 命名 
   - M-x name-last-kbd-macro
-- 保存 
-  - M-x insert-kbd-kbd-macro RET macroname
 ** Abbrev 缩写
 - 添加
   - 全局: add-global-abbrev == C-x a g

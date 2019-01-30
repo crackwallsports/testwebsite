@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-30 Wed 21:59 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Common Lisp - 笔记整理 (草稿)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Xt3">
+<link href="/testwebsite/css/org.css" rel="stylesheet"></link>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Common Lisp - 笔记整理 (草稿)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc0954b9">1. 准备</a></li>
+<li><a href="#orgf9908a1">2. 开始</a>
+<ul>
+<li><a href="#org314bb07">2.1. 自身</a>
+<ul>
+<li><a href="#org3cb8446">2.1.1. Comment</a></li>
+</ul>
+</li>
+<li><a href="#org2bc7f34">2.2. 表示 和 操作</a></li>
+</ul>
+</li>
+<li><a href="#org68fc1b8">3. 函数</a></li>
+<li><a href="#orgc674b7c">4. 特殊操作符</a></li>
+<li><a href="#org25f7ff7">5. 宏</a></li>
+<li><a href="#org3a5408d">6. 控制流</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgc0954b9" class="outline-2">
+<h2 id="orgc0954b9"><span class="section-number-2">1</span> 准备</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>实现
+<ul class="org-ul">
+<li>CCL</li>
+<li>SBCL</li>
+</ul></li>
+<li>编辑器 : Emacs
+<ul class="org-ul">
+<li>Slime</li>
+<li>lispy</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgf9908a1" class="outline-2">
+<h2 id="orgf9908a1"><span class="section-number-2">2</span> 开始</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Live 活着的
+</p>
+<ul class="org-ul">
+<li>交互能力 实时修改 快速反馈</li>
+<li>REPL : 读 求值 打印 循环</li>
+</ul>
+</div>
+
+<div id="outline-container-org314bb07" class="outline-3">
+<h3 id="org314bb07"><span class="section-number-3">2.1</span> 自身</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>语法 : S-表达式 :
+<ul class="org-ul">
+<li>原子 (列表以外的)</li>
+<li>列表 (括号括起来的)</li>
+</ul></li>
+<li>求值
+<ul class="org-ul">
+<li>求值规则
+<ul class="org-ul">
+<li>函数 : 参数从左到右先求值 再传入函数求值</li>
+<li>特殊形式 : 各自特定的规则
+<ul class="org-ul">
+<li>不求值 : quote</li>
+</ul></li>
+<li>宏 : 参数不求值</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org3cb8446" class="outline-4">
+<h4 id="org3cb8446"><span class="section-number-4">2.1.1</span> Comment</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+风格
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;;; </span><span style="color: #8B8989; font-style: italic;">File header</span>
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Paragraph</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x<span style="color: #006400;">)</span>
+  <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Follow multiple lines</span>
+  <span style="color: #006400;">(</span>bar<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>ted i<span style="color: #006400;">)</span>                             <span style="color: #8B8989; font-style: italic;">; Current line</span>
+  <span style="color: #006400;">(</span>baz<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">#| </span><span style="color: #8B8989; font-style: italic;">Multiple lines</span>
+<span style="color: #8B8989; font-style: italic;">    #|</span>
+<span style="color: #8B8989; font-style: italic;">       Nested</span>
+<span style="color: #8B8989; font-style: italic;">    |#</span>
+<span style="color: #8B8989; font-style: italic;">|#</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2bc7f34" class="outline-3">
+<h3 id="org2bc7f34"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>表示
+<ul class="org-ul">
+<li>数字 : 1 -1 3.14159 3/2 #b1001 #o777 #xAC53
+<ul class="org-ul">
+<li>12345678901012345678902012345678903012345678901</li>
+</ul></li>
+<li>字符串 : "我们彼此看着对方" "Hello World"
+<ul class="org-ul">
+<li>字符 : ##\云  (编码: ASCII Unicode UTF-8)</li>
+<li>"Hello" == #(#####)</li>
+</ul></li>
+<li>真值 : t nil
+<ul class="org-ul">
+<li>非nil 都为真</li>
+</ul></li>
+<li>名字(变量) : 关联一个对象
+<ul class="org-ul">
+<li>比起使用变量这个术语 我更喜欢用名字或标签</li>
+<li>变量和常量 : 可不可以修改 名字与对象的关联 (是否可以把名字用到别的对象上)</li>
+<li>符号</li>
+</ul></li>
+<li>过程 : 函数
+<ul class="org-ul">
+<li>匿名函数(深藏功与名) : lambda</li>
+<li>关联一个名字 : defun</li>
+<li>返回值</li>
+</ul></li>
+<li>控制流程 : 顺序 条件分支if cond 循环</li>
+<li>复杂对象 : list array hash-table structure class(CLOS)</li>
+</ul></li>
+<li>操作
+<ul class="org-ul">
+<li>数学计算 : + - * / sin</li>
+<li>等等</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org68fc1b8" class="outline-2">
+<h2 id="org68fc1b8"><span class="section-number-2">3</span> 函数</h2>
+</div>
+<div id="outline-container-orgc674b7c" class="outline-2">
+<h2 id="orgc674b7c"><span class="section-number-2">4</span> 特殊操作符</h2>
+</div>
+<div id="outline-container-org25f7ff7" class="outline-2">
+<h2 id="org25f7ff7"><span class="section-number-2">5</span> 宏</h2>
+</div>
+<div id="outline-container-org3a5408d" class="outline-2">
+<h2 id="org3a5408d"><span class="section-number-2">6</span> 控制流</h2>
+</div>
+</div>
+</body>
+</html>
