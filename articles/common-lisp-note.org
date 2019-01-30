@@ -7,7 +7,7 @@
 
 * COMMENT Generate
 #+BEGIN_SRC lisp
-(gen-with-frame "Common Lisp Note"
+(twb::gen-with-frame "Common Lisp Note"
                 #P"articles/common-lisp-note.html")
 #+END_SRC
 
@@ -19,17 +19,42 @@
   - Slime
   - lispy
 
-* Strart
+
+* 开始
 Live 活着的
 - 交互能力 实时修改 快速反馈
 - REPL : 读 求值 打印 循环
 
 ** 自身
-- 语法 : S-表达式 : 原子 列表
+- 语法 : S-表达式 :
+  - 原子 (列表以外的)
+  - 列表 (括号括起来的)
 - 求值
-  - 控制求值 : quote
-  - 求值规则 返回值
-    - 函数 特殊形式 宏
+  - 求值规则
+    - 函数 : 参数从左到右先求值 再传入函数求值 
+    - 特殊形式 : 各自特定的规则
+      - 不求值 : quote
+    - 宏 : 参数不求值
+
+*** Comment
+风格
+#+BEGIN_SRC lisp
+;;;; File header
+
+;;; Paragraph
+(defun foo (x)
+  ;; Follow multiple lines
+  (bar)
+  (ted i)                             ; Current line
+  (baz))
+
+#| Multiple lines
+    #|
+       Nested
+    |#
+|#
+#+END_SRC
+
 ** 表示 和 操作
 - 表示
   - 数字 : 1 -1 3.14159 3/2 #b1001 #o777 #xAC53
@@ -53,3 +78,7 @@ Live 活着的
   - 数学计算 : + - * / sin
   - 等等
 
+* 函数
+* 特殊操作符
+* 宏
+* 控制流
