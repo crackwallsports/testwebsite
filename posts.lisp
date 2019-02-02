@@ -1,30 +1,16 @@
 ;; (Date Ref Title Intro)
-(("2019 1 30"
+(("2019 2 2"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-1.30")
+          (span (:class "badge badge-success") "每日追踪-2.2")
           (pre ()
-               (small () "G20中美峰會的真相 孟晚舟女士在加拿大被抓与华为公司的背后真相 張首晟先生是自杀还是被杀")
-               (small () "王健之死")
+               (small () "距离 中共国时间 2.4 7pm 文贵看春晚 还有 2 天")
                (small () "法治基金")
-               ;; (small () "反盗国贼 第一招 第一式 : 隔山杀盗")
-               ))
-     ;; (div ()
-     ;;      (span () "王健之死 与 海航集团 背后的真相 发布会 2018.11.20"))
-     ;; (div ()
-     ;;      (span () "德州大学基金 引领 新规则 将从被美国制裁的实体中撤资")
-     ;;      (span (:class "badge badge-success") "更新-10.23"))
-     ;; (div ()
-     ;;      (span () "美国副总统 彭斯 哈德逊研究所演讲"))
-     ;; (div ()
-     ;;      (span () "美国 川普总统 联合国演讲"))
-     ;; (div ()
-     ;;      (span () "中共国 供应链 恶意芯片植入 事件")
-     ;;      (span (:class "badge badge-success") "更新-10.24"))
-     ))
+               (small () "王健之死")
+               ))))
  ("2019 1 30"
   "/testwebsite/articles/box-common-lisp-note.html"
   "Common Lisp Note - 笔记整理 (草稿)"
