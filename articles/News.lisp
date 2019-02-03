@@ -121,6 +121,24 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.2.3")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/173924")
+               '(q () (pre () "
+2月2号．文贵衷心的感谢所有的战友发给文贵的各种信息－这些七律诗词！万分感激！一切都是刚刚开始！
+")))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=BtYvR4MW8U8"
+                           "2月2号尊敬的战友们好：你们健身了吗？文贵正在准备着文贵看春晚的节！正在高度关注委内瑞拉的局势变化！和3月20号习近平先生的访问梵蒂冈！川金会川习会！一切都是刚刚开始！")
+               '(small () "Youtube")
+               (u (:- '(pre () "2,3月 是 大日子  川金会  川习会(会不会发生呢?)"))
+                  (:- '(pre () "宗教 3.20 习近平访问梵蒂冈"))
+                  (:- '(pre () "欧洲某国总理 说 以个人担保 政府担保 要接郭先生去 他们国家和梵蒂冈演讲"))
+                  (:- '(pre () "美国某地的天主教聚会 想让郭先生去 2月底 连续3,4天"))
+                  (:- '(pre () "委内瑞拉 变化 内部在讲数 勾兑  值得借鉴的经验"))
+                  (:- '(pre () "中美贸易 原来预测的戏剧性 但还没结束"))
+                  (:- '(pre () "每逢佳节倍思亲  保重身体")))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.2.2")
         (u (:- "郭文(图片): "
                (@ "https://www.guo.media/posts/173796")
@@ -1163,7 +1181,7 @@ Official Statement of Guo Wengui Regarding the Trial of Chinas Former Deputy Min
 
 (news-to-topic
  "郭文贵"   ;; (twb::human-date (get-universal-time))
- "2019.02.02 20:07:36"
+ "2019.02.03 21:21:40"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
