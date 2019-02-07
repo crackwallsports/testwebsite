@@ -245,7 +245,9 @@ int main(int argc, char *argv[]){
 !!! 干脆做视频 动态的表示 会更好 写出来太麻烦了 
 
 * 基础
-** 类型
+- ? 类型 : 代表 分配的内存空间大小 将实际大小进行抽象
+- ? 变量 : 内存地址 编译时将变量名替换为地址
+
 ** 数
 - 整数
   #+BEGIN_SRC C
@@ -262,6 +264,8 @@ int main(int argc, char *argv[]){
 123.3
 .3, 3. // 省略部分
 1.2e2, 1.2e-2 // 科学计数法
+1.32 // 默认 double类型
+1.32f // 指明是 float类型 
   #+END_SRC
 ** 字符
 - 字符
@@ -269,16 +273,25 @@ int main(int argc, char *argv[]){
   - ASCII编码 ?
     - 编码 ?
 - 特殊字符(转义)
+  - \a(alert), \b(backspace), \t(horizontal tab), \n(new line), \v(vertical tab), \f(form feed), \r(carriage return)
+  - \[n](八进制), \x[n](十六进制)
+- 例
+  #+BEGIN_SRC C
+printf("%d\n", 'n');       //-> 110
+printf("%d\n", '\n');      //-> 10
+printf("%c\n", '\156'); //-> n
+
+  #+END_SRC
 
 ** 数组
-** 指针
 ** 字符串
-- 字符串
-- 如何表示 ~?:~ 字符数组 或 字符指针
+- 字符串 : '\0' 结尾的字符序列
+- 如何表示 ~?:~ 字符数组 或 字面量(读入自动转换)
   #+BEGIN_SRC C
-char str[] = {'\a', '\b', '\c', '\0'};
-char* str = "abc"; 
+char str[] = {'a', 'b', 'c', '\0'};
+char str[] = "abc";
   #+END_SRC
+** 指针
 ** 函数
 - 把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用
 - 定义
