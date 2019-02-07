@@ -16,12 +16,13 @@
 - Linux : 用包管理器安装
 
 * Package Manager 包管理器
-- package-list-packages
+- M-x package-list-packages
 - [[https://github.com/jwiegley/use-package][use-package]]
 
 * Coonfig 配置
-- 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org 
-  
+- 个人喜好 : ~/.emacs.d/init.el -(org-babel)-> ~/.emacs.d/config.org
+- 配置文件(下载): [[file:Emacs/init.el][init.el]] [[file:Emacs/config.org][config.org]]
+
 * Basic 基础
 ** UI 用户界面
 - Menu 菜单栏 : 屏幕顶部突出显示的条
