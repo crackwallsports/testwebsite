@@ -181,6 +181,99 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 2
+- 12
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.2.12")
+        (u (:- "郭文: "
+               (@ "https://www.guo.media/posts/175843") " "
+               (@ "https://www.guo.media/posts/175766") " "
+               (@ "https://www.guo.media/posts/175753") " "
+               (@ "https://www.guo.media/posts/175663") " "
+               '(q () (pre () "
+2月12日：尊敬的战友们好．感谢战友们对赵丽贞的挖掘！太厉害了！你们就是正义的护法！赵丽珍这个女人不简单，大家可能又要开始猜爹的游戏了！她爹和呈成杰！贯军的爹似的鬼秘……都是盗国贼的重要成员！一切皆开之时，大家会发现很多不可思议的事情．一切都是刚刚开始！
+
+2月11号：郑祺．这个黑白两道的玩家还真和王岐山．海航．关系不浅，大家查查，这个公司！这个〈赵丽珍〉Li zhao．zhen……大家会发现另一个大鱼！一切都是刚刚开始
+
+2月11日： 可能是郑祺干掉的又一个律师……这个就是带着郑祺……拉一车现金买房的其中一个人！ 长https://www.christopherfountain.com/blog/2017/8/11/stamford-attorney-burt-hoffman-arrested
+
+
+2月11日：原来郑祺这个混子！黑社会！是白道黑道通吃！看着他抱着这个女人的样子一脸的淫荡！还拍了美国之音张晶他爹的电视剧．这是真的吗？请大家提供一下郑祺这个家伙一车一车的暂新的美金现钞！应该是哪里来的？美国政府相关部门的如果能提供在美国销售或！提供毒品！芬太尼销售渠道！和供应商的各种信息的所有证据将有重大奖励，请战友们高度关注对美国进行毒害的毒丸计划之一，也就是芬太尼相关的任何证据！这是CCP、3F计划的重要环节之一，美国人民和美国政府还没有看到这件事情的威胁的严重性！我们应该提供更有力的相关证据，那就是在美国的销售渠道！分销商！和洗钱当事人的证据！不能让这些人毁了我们华人的形象！和我们华人在世界的未来！那将是更大的灭顶之灾！如果任何海外华人或国内朋友能提供郑祺．梁贯军等……他们的犯罪证据，文贵将马上根据信息价值！给予1百万美元和1千万美元不等的现金奖励！有意者，请直接和我联系！或路德先生，sara女士联系！我将用一切方式保证你们提供信息的安全，并且会协调当地政府（除中国外）给予你们特别的保护！我的律师会马上和信息提供者签署相关保密及安全支付的协议！一切都是刚刚开始【人物串聯：張晶—》鄭棋 記錄張晶父親張彥的紀錄片《飞虎奇缘》主办单位:美中影视文化传媒集团的總裁赵丽贞(jenny zhao)女士,协办单位:美国侨商联合会的主席鄭棋】"))
+               (u (:- '(pre () "郭文图片内容: ")
+                      (u (:- `(cite () "@DTinLosAngeles : 对美国自杀律师Gabriel Macconaill 加布里.马克康奈尔 与Sidley Austin LLP 盛德.奥斯汀律所和海航集团(HNA)案例的挖掘 "
+                                    ,(@ "https://twitter.com/DTinLosAngeles/status/1094156610736410624")
+                                    (small () "2019.2.9 Twitter")))
+                         (:- '(pre () "赵丽珍 USC-CIF,CORP."))
+                         (:- `(cite () ,(@ "https://www.christopherfountain.com/blog/2018/10/12/just-caught-up-with-this-news-stamford-real-estate-attorney-burt-hoffman-crook-committed-suicide-on-june-8-2018"
+                                           "Just caught up with this news: Stamford real estate attorney Burt Hoffman, crook, committed suicide on June 8, 2018")
+                                    (small () "2018.10.12 Christopher Fountain")))
+                         (:- `(cite () ,(@ "https://www.christopherfountain.com/blog/2017/8/11/stamford-attorney-burt-hoffman-arrested"
+                                           "Stamford attorney Burt Hoffman arrested")
+                                    (small () "2017.8.11 Christopher Fountain")))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/175767")
+               '(q () (pre () "
+2月11号：看看法治基金对盗国贼．欺民贼造成的恐惧！看看他们用这种卑鄙的手段！制造虚假的文贵声明！来阻止捐款！这就是法制基金未来的价值！因为C C P和欺民贼最恐惧！这就是我们这几天看到的一系列的谣言！怀疑！和根本不存在的所谓的问题！根本原因，这些流氓！低级下流，他们的恐惧就是我们的武器！所以法治基金必须接受任何方式！任何货币．任何数额的捐款，而且法冶基金将因为他们的制造的谣言！会采取一系列的措施来让他们所有过去造的谣的目的！我们没钱革命！没钱干C C P的谣言破产！这才是法治基金的重要价值之一！ 【这是在微信各群传播的一个文件，不知道是谁做的。用的视频看题目是2月7号的春晚视频，但是我打不开，需要有Telegram。这就是让大家不要捐款，许多原本要捐的也改成了观望态度。】"))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 11
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.2.11")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/175640")
+               '(q () (pre () "
+2月10号：尊敬的战友们好！今天去耐克！还有阿迪达斯！去给自己置办了三个月的运动的新运动鞋！加在一起的费用还没有打官司一个小时的律师费贵呢……但是非常喜欢今年的款式！分享图片给战友们！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/175570")
+               '(q () (pre () "
+2月10号：刚刚到St. Patrick's Cathedral大教堂为14亿同胞！和战友们祈福！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/175551")
+               '(q () (pre () "
+亲爱的支持者们：法治基金官网更多功能正在上线中，目前借助“郭媒体置顶”及时发布信息。一切请以法治基金官网（英文版）、“郭媒体置顶”协助发布的信息为准，感谢关注！ ❤ 法制基金官网如下： https://rolsociety.org https://rolfoundation.org ❤ 法治基金接受捐款的PayPal账户两个如下： https://www.paypal.com/donate/?token=-SedWTxv01s4rpmj9XWi8BHIPDpO57OHMhvfonemzeYHjQoo12Wii1kSyRzcIYxIz3W_Wm&country.x=US&locale.x=US&Z3JncnB0= https://www.paypal.com/donate/?token=1KDMnJmAh9PVcphSs9VZhbP4-7FvQztwYuKA1rNRFZgX18N-NMJ0vHp2h0P5XLca0F_L3W&country.x=US&locale.x=US ❤ 法制基金接受捐款的银行账户信息两个如图！"))
+               (u (:- `(cite () ,(@ "https://rolsociety.org")))
+                  (:- `(cite () ,(@ "https://rolfoundation.org")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/175544")
+               '(q () (pre () "
+2月10号，这是世界上第一架交付的全球快车7500型．可以从纽约飞到北京．香港不用停！7500空里直飞……非常非常的棒，我的林宝坚尼SUV已经重新喷漆完毕，相当的漂亮！一切都是刚刚开始！"))
+               (u (:- `(cite () "庞巴迪 全球快车7500型 : "
+                             ,(@ "https://businessaircraft.bombardier.com/en/aircraft/global-7500#!#bba-pdp-section-1"
+                                 "Global 7500")
+                             (small () "Bombardier")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/175533") " "
+               (@ "https://www.guo.media/posts/175407") " "
+               (@ "https://www.guo.media/posts/175406") " "
+               (@ "https://www.guo.media/posts/175400")
+               '(q () (pre () "
+2月10日：一切都会查清楚：并受到美国法律的严惩😡！ Kenneth Chen(中美贸易协会)买通一位美国大银行家的律师Gabe MacConaill 哄骗银行家想办法以海航的名义购买美国的金融牌照！目的是让银行家变成海航股东及实际控制人！王岐山是他老板等等 律师Gabe帮助王，海航用巨额现金贿赂美银行家 Gabe和Chen涉嫌洗钱被抓,保释期在停车场莫名其妙自杀了
+
+2月9号：这是郑祺这孙子，2017年来我楼下！还带着一个女的！试图杀害我的最好的证据！与刘延平到纽约我家！和我见面，几乎同一个时间！这就当时的三招之一！其中的一招！黑社会杀掉文贵！感恩上天的帮助！我们一个都不会放过！害我们的郑祺孙子，还有梁贯军孙子！一定要为他们在美国的所有一切付出代价！到了买单的时候了！一切都是刚刚开始！
+
+2月9号：伟大的战友们好！衷心地感谢你们！短短的几分钟，你们就查到了这个孙子！真没想到原来就是郑祺！这孙子！绝对是杀手！这是为什么某些有关部门一直在问我知不知道郑祺和梁冠君的真实背景！现在更加明白了！没想到他竟然．敢对美国最伟大的金融家下手！而且是2017年九月份拉了一整车的全新的美元去贿很美国最伟大的金融家！足可见这个孙子！多么的无知！美国不会放过这些狗东西！咱们走着看！王岐山！孟建柱！孙立军！养的这样的走狗！你可见他他们的以黑治国黑遍国际的这些不可思议的犯罪行为！这样的中共的反腐更是实在可笑！你信吗！一切都是刚刚开始！
+
+2月9号：尊敬的战友们．这两张手机的截屏．就是几天前与我一起吃晚餐的美国最伟大的银行家XX，他提供给我的这个人的通信信息与名称！就是这个人买通了他的律师！欺骗他想办法以海航的名义购买美国具有百年以上历史的金融牌照！并说他是海航的股东及实际控制人！王岐山是他老板等等……后来他的律师因为与这个人一起涉嫌洗钱被抓，后来被自杀！也是这个人带着一整车的美元现金去要买他家的房子．一个私人岛屿……被这位银行家轟了出去！请战友们Google去查这个人到底是谁！伟大的战友们会找到答案的！海航的疯狂！和在世界的骗抢杀偷！远远超出了人们的想象……一切都是刚刚开始！"))
+               (u (:- '(pre () "Kenneth Cheng"))))
+           (:- "郭文(报平安 照片): " (@ "https://www.guo.media/posts/175520")
+               '(q () (pre () "
+2月10号．尊敬的战友们好：你们健身了吗！往身上泼水了吗！一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 10
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.2.10")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/175380")
+               '(q () (pre () "
+2月9号：衷心地感谢文鸡战友做的这个视频！文贵不敢当！文贵将不惜一切的努力实现我们喜马拉雅目标来回报所有战友的关心和关爱！一切都是刚刚开始！")))
+           (:- "郭文(报平安 照片): " (@ "https://www.guo.media/posts/175332")
+               '(q () (pre () "
+2月9号：尊敬的战友们好．你们健身了吗！今天的纽约晴空万里！非常非常的冷！但是特别特别的舒服，一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/175259")
+               '(q () (pre () "
+2月9日：这就是法治基金未来的目标！ 【Kyle Bass: 美国必须制裁王岐山和所有负责新疆集中营的中国ccp成员。 为什么其他美国参议员和国会议员不像卢比奥那样有力地提出这个问题？问题来了，其它参议员和国会议员你们有什么痛点吗？】"))
+               (u (:- `(cite () "@Jkylebass : " ,(@ "https://twitter.com/Jkylebass/status/1094111121189920769")
+                             (small () "2019.2.8 Twitter"))
+                      '(q () (pre () "
+The United States must sanction wang qishan and all chinese ccp members responsible for The Xinjiang concentration camps. Why aren’t other US Senators and Members of Congress raising the issue as forcefully as Rubio? #china @SecPompeo @SenatorRubio"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 9
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -677,7 +770,7 @@ DOJ George Higginbotham Indictment"))
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"   ;; (twb::human-date (get-universal-time))
- "2019.02.09 19:45:16"
+ "2019.02.12 21:17:06"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
