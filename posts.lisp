@@ -1,14 +1,15 @@
 ;; (Date Ref Title Intro)
-(("2019 2 13"
+(("2019 2 18"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2.13")
+          (span (:class "badge badge-success") "每日追踪-2.18")
           (pre ()
                (small () "法治基金")
                (small () "王健之死")
+               (small () "梵蒂冈 教宗")
                ))))
  ("2019 1 30"
   "/testwebsite/articles/box-common-lisp-note.html"
