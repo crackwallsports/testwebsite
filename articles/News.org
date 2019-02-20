@@ -181,6 +181,104 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 2
+- 20
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.2.20")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/177451")
+               '(q () (pre () "
+2月19日： 看看这些与吴征及盗国贼同案犯的名单吧！！ 吴征．帮孟建柱孙立军持有脏钱．及洗钱的资产离岸公司．还有e租宝．泛亚．钱被转移的公司！这家公司是关键的公司之一！量子挖掘机的战友们查查，这家公司的个签名人是谁！神秘的背后往往就是肮脏，一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片: Ideanomics, Inc  Ownership Information"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177449")
+               '(q () (pre () "
+2月19日：吴征．帮孟建柱孙立军持有脏钱．及洗钱的资产离岸公司．还有e租宝．泛亚．钱被转移的公司！这家公司是关键的公司之一！量子挖掘机的战友们查查，这家公司的个签名人是谁！神秘的背后往往就是肮脏，一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片: Advantech Capital Investment II Limited,  Wong Kok Wai"))
+                  (:- `(cite () ,(@ "https://fintel.io/doc/sec/1728716/000110465919007729/a19-4671_1sc13ga.htm"
+                                    "IDEX / Ideanomics, Inc. / Advantech Capital Ii L.p. - SC 13G/A")
+                             (small () "2019.2.13 Fintel")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177447")
+               '(q () (pre () "
+2月19日：看来全世界的宗教信仰都在行动中！CARDINAL SINS Steve Bannon and the Pope’s Sex-Abuse Circus Are Coming to Rome"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.thedailybeast.com/steve-bannon-and-the-popes-sex-abuse-circus-are-coming-to-rome"
+                                 "Steve Bannon and the Pope’s Sex-Abuse Circus Are Coming to Rome")
+                             (small () "2019.2.19 The Daily Beast"))
+                      (u (:- `(cite () "中文翻译: "
+                                    ,(@ "https://spark.adobe.com/page/EKAehsv7vJgDm/"
+                                        "红衣主教的罪 史蒂夫·班农和教皇的性虐待马戏团即将来到罗马")))))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/177432")
+               '(q () (pre () "
+2月19号！看看伟大的鲍彤鲍老和马云吴征这个流氓天地之差别……一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文视频: 战友捐款留言 ")
+                      (u (:- '(pre () "马云说\"钱是世界上 最容易得到的事情\" XXXX  国贸大厦外哭"))
+                         (:- `(cite () "鲍彤 Bao Tong @baotong1932 : 最强烈关注美国总统昨天的演说——论社会主义。 "
+                                    ,(@ "https://twitter.com/baotong1932/status/1097852900317978624")
+                                    (small () "2019.2.19 Twitter")))
+                         (:- '(pre () "吴征 七星云 改名 Ideanomics  辞去 康州大学 West Hartford 校园 科技中心 The fintech ideanomics CEO 职务  亏损  洗钱")
+                             (u (:- `(cite () "hotmoon @hotmoonliuye : "
+                                           ,(@ "https://twitter.com/hotmoonliuye/status/1097724637419454464")
+                                           " "
+                                           ,(@ "https://twitter.com/hotmoonliuye/status/1097722236117561350")
+                                           (small () "2019.2.18 Twitter")))))))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=Fn4nWc6idMQ"
+                           "02.19.19")
+               '(small () "Youtube")
+               (u (:- '(pre () "听说 中南坑 里 突然欢呼雀跃  不是元宵节的原因 参加中美谈判的人大喝酒 庆贺 (我: 壮行吗? 赴美前 先喝点酒 壮壮胆 打打气  风萧萧兮 易水寒 壮士一去兮 不复还  探虎穴兮 入蛟宫 仰天呼气兮 成白虹  哈哈哈哈哈哈哈哈哈) "))
+                  (:- '(pre () "日本 捐款 太多了 感谢"))
+                  (:- '(pre () "棺材之说 共产主义  没准备 灵感就这么来了"))
+                  (:- '(pre () "补看了视频 最震惊的就是Sara 战友之声的节目办的太好了 啸天点评 楚门看世界 墙头会  飞速提高 片头效果"))
+                  (:- '(pre () "郭宝胜 放出的 郭先生接受律师庭外问话的视频")
+                      (u (:- `(cite () "(我: 它放出的视频剪碎了 不在此列出 后面这个链接是完整版) "
+                                    ,(@ "https://www.youtube.com/watch?v=_pj1kLJfZug"
+                                        "02/19/2019郭文贵大BOSS 如何跟律师对答，特别推荐90后00后一定要看看学学，受益匪浅")
+                                    (small () "2019.2.19 Youtube")))
+                         (:- `(cite () "假牧师郭宝胜被文贵律师庭外审问视频（无删减版）"
+                                    ,(@ "https://www.youtube.com/watch?v=rlmCci0DncE"
+                                        "-1")
+                                    " "
+                                    ,(@ "https://www.youtube.com/watch?v=aPrMytTUJgA"
+                                        "-2")
+                                    " "
+                                    ,(@ "https://www.youtube.com/watch?v=vaaNspFTp6o"
+                                        "-3")
+                                    (small () "2019.2.19 Youtube")))))
+                  (:- '(pre () "有五毛跟 信息就有价值"))
+                  (:- '(pre () "有海外这些人 相关信息 请给郭先生  特别是它们 获取的美国身份 和 带到美国的钱 的合法性 相关的信息"))
+                  (:- '(pre () "什么都是中国老百姓出钱 最可怜"))
+                  (:- '(pre () "(33:50) 与董事的争执  法治基金 在7月1日前 如果给大家的目标 没有完成 谁动一分钱 谁就是郭先生的敌人  法治基金 有1块美金被任何人享受了 去吃喝了 天诛地灭"))
+                  (:- '(pre () "老领导 \"好言相劝\"  朋友的好心相劝"))
+                  (:- '(pre () "想想这两年发生太多事   纽约见刘彦平 孙立军在华盛顿 遣返  能相信中共?  骗贷罪 罚款130亿美元"))
+                  (:- '(pre () "法治基金 戳痛 中共了"))
+                  (:- '(pre () "昨天道歉 是 对 说话的方式和语气 特别是带了脏字  不包括 维护Sara和木兰的部分 这一点都不过 (我: Sara做了那么多事 一点错就被攻击 太过分了 纠正下不就完了  我们要去鼓励 去效仿 去做更多更多的事)"))
+                  (:- '(pre () "路德 现在多棒啊"))
+                  (:- '(pre () "老领导说 看你那些战友 要真把中南海的权力交给这些战友 那比这还烂 (我: 哇 老领导别光说啊 你们倒是交权啊 比比看 到底是更烂还是更好 不是说实践是检验真理的唯一标准嘛  无语啊 现在中国这样不就是你们滥权的结果吗 死守着权力 不被约束 享受着特权特供 无法无天)"))
+                  (:- '(pre () "没人是完美的"))
+                  (:- '(pre () "郭先生 夸人是非常真实的 真是不知道那些人是恶心人"))
+                  (:- '(pre () "任何 法治基金 的信息 以官网为主 以及 被委托的郭先生的郭媒体账号  不接受任何人 代收代付捐款"))
+                  (:- '(pre () "(1:02:00) 郑州 裕达国贸酒店  盘古 政泉  青峰看守所  吹牛也要看历史"))
+                  (:- '(pre () "法庭 展示个人的最佳舞台 让中国人走向法治 最好的教科书"))
+                  (:- `(cite () "比尔盖茨 当年(1998.8.27) 接受 律师庭外问话的视频: "
+                             ,(@ "https://www.youtube.com/watch?v=m_2m1qdqieE"
+                                 "United States v. Microsoft: Deposition by Bill Gates, part 1.")
+                             (small () "2012.5.3 Youtube")))
+                  (:- '(pre () "刘刚"))
+                  (:- '(pre () "谢谢翻译的文件 省了不少钱"))
+                  (:- '(pre () "玩假的必死无疑"))
+                  (:- '(pre () "郑祺 赵丽珍 一车钱 海航  刘特佐 美国司法部腐败 (我: 哈哈哈 摩根 实际上郭先生之前就点到了(当年 老人家 摩根中心 1.14视频里) 只是没直说 大家都已经知道了)"))
+                  (:- '(pre () "今天本来还有两个事要说"))
+                  (:- '(pre () "看了两部电影 女主角  肖建华 安排 领导 香港 睡 女明星 800万  王岐山设局"))
+                  (:- '(pre () "法治基金 法律上开始行动 "))
+                  (:- '(pre () "七哥的故事说不完"))
+                  (:- '(pre () "捐款 不要勉为其难 做你自己喜欢 又能做的事  不要做自己喜欢 不能做的事  不要做自己喜欢 做不到的事"))
+                  (:- '(pre () "祈福 战友"))
+                  (:- '(pre () "见过无数富豪 不就是白天打高尔夫 打地上的洞 晚上去玩女人 打人家身上的洞 喝点好酒 玩点好车 有啥呢 没啥了不起的"))
+                  (:- '(pre () "什么让自己最快乐 ? 信仰 理想 还有拥有这样 彼此信任支持的 战友们 .. 活的不平凡 不庸俗"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177407")
+               '(q () (pre () "
+2月19号：尊敬的战友们好！1小时内文贵在国媒体报平安直播，衷心感谢所有的留言和捐款的战友们！一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文图片: 捐款的留言")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 19
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -1064,7 +1162,7 @@ DOJ George Higginbotham Indictment"))
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"   ;; (twb::human-date (get-universal-time))
- "2019.02.19 22:53:28"
+ "2019.02.20 22:45:36"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
