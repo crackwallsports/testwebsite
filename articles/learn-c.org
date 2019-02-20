@@ -65,6 +65,15 @@ int main(){
 cc code.c -o code
 ./code
     #+END_SRC
+- 注释
+  #+BEGIN_SRC C
+// 单行 
+/*
+  多行
+,*/
+#+END_SRC
+
+
 * 开始
 
 ** 第一步
@@ -245,8 +254,102 @@ int main(int argc, char *argv[]){
 !!! 干脆做视频 动态的表示 会更好 写出来太麻烦了 
 
 * 基础
+
+** 类型
 - ? 类型 : 代表 分配的内存空间大小 将实际大小进行抽象
+- 类型
+  - 基本
+    - 整 : int (short, long) ([un]signed 默认有符号)
+    - 字符 : char ([un]signed 依实现)
+    - 浮点 : float, double (long double)
+    - 空 : void
+    - 枚举 : enum
+    - 指针
+    - 函数  
+  - 派生
+    - 数组
+    - 结构
+    - 共用
+- Modifiers 修饰符 : unsigned, signed, short, long
+
+*** 表示范围
+- <limit.h>
+  - char (编译器为 无|有符号)
+    - CHAR_MIN == 0|SCHAR_MIN 
+    - CHAR_MAX == UCHAR_MAX|SCHAR_MAX
+  - ...
+*** 定长整型
+- <stdint.h>
+- [u]int(BITS)_t : int8_t, uint8_t, ...
+- [U]INT(BITS)_MAX, ...
+- int_least(BITS)_t, ...
+*** 类型别名
+- Typedef 
+  #+BEGIN_SRC C
+typedef unsigned char byte;
+
+int* a[10];
+//
+typedef int* t; // t 代表 int *类型
+t a[10];
+
+int (*a)[10];
+typedef int t[10]; // t 代表 10个int组成的数组类型
+t *a;
+
+typedef struct {
+  int x;
+  int y;
+}point;
+point pa, pb;
+
+// 函数
+typedef void (*func)(int);
+void some(func f);
+
+// 不同之处
+#define iptr int*
+iptr a, b; // int* a, b; a和b不同类型
+typedef int* iptr;
+iptr a, b; // a和b 同型
+  #+END_SRC
+
+** 变量
 - ? 变量 : 内存地址 编译时将变量名替换为地址
+- Identifier 标识符 : 名字
+  - 数字:0~9 大小写:A~Za~z 下划线:_ (非数字开头)
+- 作用域 生命周期
+  - 作用域 : 全局 文件内静态 局部({}块内)
+    - 文件内静态 : 全局变量 前加上static 则作用域只在当前文件内
+  - 存储期 : 静态 自动 动态
+    - 静态 : 全局变量 指定static的变量 从程序开始到结束
+    - 自动 : 其它变量 生存在{}块内 (栈实现)
+    - 动态 : 从 malloc()分配 到 free()为止
+    - 存储类型修饰符
+      - auto (过时)
+      - static
+      - register
+      - extern : 使用 其它文件中定义的 变量或函数
+- 全局 和 静态 变量 自动初始化 为 0或NULL
+- Qualifiers 限定符
+  - const : 常量
+    - 指针
+      - 指向常量的 : const int *a; == int const *a; : 指向const int型的指针 *a不可 a可 : 指向的值不可变
+      - 指向非常量的常量 : int * const a; : 指向int型的const指针 *a可变 a不可 : 指向的值可变
+      - 指向常量的常量 : int const * const a; : 都不允许改写
+  - volatile : 不稳定 变量值可能被其它例程改变
+  - register : 强制变量存放到寄存器    
+  - restrict : 声明时 告诉编译器 指针没有别名
+    #+BEGIN_SRC C
+  void add(int size, double* restrict arr1, const double* restrict arr2)  {}
+  double v1[] = {1.0, 2.0};
+  double v2[] = {1.0, 2.0};
+  add(2, v1, v2);
+
+  double* v3 = v1;
+  add(2, v1, v3); // Error
+  
+    #+END_SRC
 
 ** 数
 - 整数
@@ -267,49 +370,399 @@ int main(int argc, char *argv[]){
 1.32 // 默认 double类型
 1.32f // 指明是 float类型 
   #+END_SRC
+** 真值
+- 非0即真
 ** 字符
-- 字符
+- 字符 : 'a'
 - 内部表示 : 整数
   - ASCII编码 ?
     - 编码 ?
 - 特殊字符(转义)
-  - \a(alert), \b(backspace), \t(horizontal tab), \n(new line), \v(vertical tab), \f(form feed), \r(carriage return)
-  - \[n](八进制), \x[n](十六进制)
+  | ~\a~   | alert           |
+  | ~\b~  | backspace       |
+  | ~\t~  | horizontal tab  |
+  | ~\n~  | new line        |
+  | ~\v~  | vertical tab    |
+  | ~\f~  | form feed       |
+  | ~\r~  | carriage return |
+  | ~\[n]~ | 八进制          |
+  | ~\x[n]~ | 十六进制        |
 - 例
   #+BEGIN_SRC C
 printf("%d\n", 'n');       //-> 110
 printf("%d\n", '\n');      //-> 10
 printf("%c\n", '\156'); //-> n
 
+printf("%d %d %d", '0', '\0', 0 ); //-> 48 0 0
   #+END_SRC
 
 ** 数组
+- 声明和初始化
+  #+BEGIN_SRC c
+/// 一维
+int c[3] = {1, 2, 3};
+int c[] = {1, 2, 3}; // 可省略 元素个数  
+int c[3] = {1}; // 整数自动补0 字符补\0
+
+/// 二维
+int a[2][2] = {1,2,3,4};
+int a[][2] = {1,2,3,4}; // 可省略第一维元素个数
+int a[][2] = { { 1, 2 },
+               { 3, 4 },
+               { 5, 6 } };
+int a[2][2] = {{1} {2}}; // 部分
+
+/// 更高维度 类似 : 数组的 数组的 数组 ...
+
+  #+END_SRC
+- 注意
+  #+BEGIN_SRC c
+// 声明后 大小 不可变  没有边界检查
+
+// 声明和初始化 不能分开, 不能通过 赋值 进行初始化
+int c[3];
+c = {1,2,3}; // Error
+
+// Memberwise Initialization (C99)
+int a[3][2] = { [0][1] = 9, [2][1] = 8 };  
+  #+END_SRC
+
 ** 字符串
 - 字符串 : '\0' 结尾的字符序列
-- 如何表示 ~?:~ 字符数组 或 字面量(读入自动转换)
+- 如何表示 ~?:~ 字符 数组|指针 或 字面量(读入自动转换)
   #+BEGIN_SRC C
 char str[] = {'a', 'b', 'c', '\0'};
 char str[] = "abc";
+char s[] = "a\0bc"; //-> a
+
+char* str = "abc";
+
+// 空字符串
+char str[] = ""  
+char str[] = {'\0'} //== {0}
   #+END_SRC
+
 ** 指针
+- 声明 定义 使用
+- 计算 : ptr+N == 当前指针的数据类型的长度 乘 N
+
+** 数组 与 指针
+- 数组名(数组变量) : 数组的起始地址 (使用&运算符 结果是其本身 &s == s)
+  - 不能指向其他地方 即不接受赋值操作
+    - 不分配任何空间 编译器在出现它的地方把它替换成数组的起始地址
+  - 不同维
+    - int a[10]
+      - a : int类型的指针
+      - &a : 10个int数组的指针
+    - int arr[rows][cols]
+      - arr : cols个 int数组的 指针
+      - &arr : rows*cols个 int数组的 指针
+- 退化(信息的丢失) : 数组赋给指针变量 指针变量只会包含数组的起始地址
+- 数组 还是 指针 ?: 函数参数的形式声明 则为指针
+
+Example
+#+BEGIN_SRC c
+#include <stdio.h>
+
+int main(){
+  int a[3] = {0, 1, 2};
+  printf("%p, %p\n", a, &a); 
+  printf("%p, %p\n", a+1, (&a)+1);
+  // | 0x7fff4fc1090c     | 0x7fff4fc1090c      |
+  // | 0x7fff4fc10910 | 4 | 0x7fff4fc10918 | 12 |
+
+  int (*p)[3] = a;
+  printf("%d, %d\n", p[0][0], p[0][1]); // == *((*p)+1)) == (*p)[1] 
+  p = &a;
+  printf("%d, %d\n", p[0][0], p[0][1]);
+  // 0 1
+  
+  int a2[2][3] = {{1, 3, 2}, {5, 6, 7}};
+  printf("%p, %p\n", a2, &a2); 
+  printf("%p, %p\n", a2+1, (&a2)+1);
+  // | 0x7fff5a5c68f0               | 0x7fff5a5c68f0                 |
+  // | 0x7fff5a5c68fc | 3x4(int)=12 | 0x7fff5a5c6908 | 2x3x4(int)=24 |
+  printf("%d, %d\n", 0xfc-0xf0, 0x908-0x8f0);
+  
+  p = a2;
+  printf("%d, %d\n", p[0][0], p[0][2]); // 1 2
+  printf("%d, %d\n", p[1][0], p[1][2]); // 5 7
+
+  p = &a2; 
+  printf("%d, %d\n", p[0][0], p[0][2]); // 1 2
+  printf("%d, %d\n", p[1][0], p[1][2]); // 5 7
+
+  return 0;
+}
+  #+END_SRC
+
+** Operators 运算符
+- , : 逗链的值 为 最后表达式的值
+  - a=(1+2, 3+3, 3+8); // a=11
+- Assignment 赋值
+  - = (Assign equal)
+  - 复合赋值 : +=(Assign equal) 等等
+- 二元操作符 注意: a<b<c 与 a<b && b<c 不同 
+    
+*** Arithmetic 算术
+- + Add
+- - Subtract
+- * Multiply
+- / Divide
+- % Modulus
+  - 正 % 正 -> 正 (其它取决于 编译器)
+- ++ Increment
+- -- Decrement
+*** Bitwise 位运算
+- 逻辑
+  - & (and 与)
+  - | (or 或)
+  - ^ (xor 异或)
+  - ~ (one's complement 取反) 
+- 位移
+  - << (shift left 左移)
+  - >> (shift right 右移)
+    - 算术右移: 补1
+    - 逻辑右移: 补0
+*** Logical 逻辑
+- && (And)
+- || (Or)
+- ! (Not)
+- ?: (Ternary)
+*** Relational 关系 (比较)
+- == (Equal)
+- != (Not equal)
+- >  (Greater than)
+- <  (Less than)
+- >= (Greater than equal)
+- <= (Less than equal)
+*** Data 数据
+- sizeof()
+- [] : array subscript
+- & : address
+- * : value of 解引用 (for pointer)
+- -> : Structure dereference (for pointer)
+- . : Structure reference
+
+**** sizeof
+- sizeof : 在存储器中占 多少字节 (编译器 根据 类型的大小 或 变量声明的类型的大小 来返回相应的值)
+  - 只是 向编译器询问 所以只在编译器知道对象大小的情况下使用
+- 参数: 类型名|变量名 Ex.(sizeof(char))
+- 返回值: size_t (unsigned int)
+- Ex.
+  #+BEGIN_SRC c
+sizeof(int) // 4 
+sizeof(3) // 4 (3 -> int)
+sizeof('a') // 4 int
+
+/// String
+sizeof("Turtles!") // 9 == 8个字符 + '\0'
+
+/// Array
+// sizeof(数组名) -> 数组的大小 包括'\0'
+char i[] = {1,2,3}; sizeof(i);    // 3
+char s[5] = "How?"; sizeof(s);    // 5 
+// sizeof(指针名) -> 4|8 (bit:32|64)
+char *t = s; sizeof(t);  
+
+char ssa[][4] = {"abc","def","ghi"};
+sizeof(ssa); // 12
+sizeof(ssa[0]); // 4
+sizeof(ssa)/sizeof(ssa[0]); // length == 3
+
+char **ss = {"abc","def","ghi"};
+sizeof(ss);     // 8
+sizeof(*ss);     // 8
+
+#+END_SRC
+** 控制流程
+- 顺序 分支 循环(递归)
+- 条件分支 : if switch
+  - switch
+    - 条件: 整型表达式(可包含: 运算符 函数调用)
+    - case : 整型常量(常量表达式 常量运算)
+    - break
+- 循环 : while do-while for
+- 跳转 : goto (label)
+
 ** 函数
 - 把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用
 - 定义
 - 调用
 - 返回值
+
+** 结构 共用 枚举
+*** Enum 枚举
+- 定义 声明 使用
+  #+BEGIN_SRC c
+enum animal { Dog, Cat, Monkey, Invalid }; // Dog == 0
+enum animal { Dog=3, Cat, Monkey, Invalid }; // Dog == 3, Cat == 4
+
+
+emu animal selected;
+
+switch (selected = select()){
+  case Dog : dog(); break;
+  case Cat : cat(); break;
+  case Monkey : monkey(); break;
+  default error();
+}
+  #+END_SRC
+*** Struct 结构
+- 值类型 : 赋值时拷贝
+- 声明 定义 初始化 使用
+  #+BEGIN_SRC c
+struct point {
+  int x;
+  int y;
+};
+struct point pa, pb;
+//
+struct point {
+  int x;
+  int y;
+}pa,pb;
+//  
+typedef struct {
+  int x;
+  int y;
+}point;
+point pa, pb;
+
+// 初始化
+struct point pa = {3, 5};
+struct point pa = {.x=3, .y=5}; // [C99]
+// 使用
+pa.x = 3;
+// 结构指针
+struct point *pc = &pa;
+(*pc).x
+pc->x
+
+  #+END_SRC
+
+**** 结构数组
+#+BEGIN_SRC c
+struct complex_struct {
+	double x, y;
+} a[4];
+#+END_SRC
+**** bitfield 位段(位域)
+#+BEGIN_SRC c
+struct Name {
+  unsigned vname1:bit1;
+  unsigned vname2:bit2;
+  // ...
+};
+
+//
+struct record{
+  char* name;
+  int refcount : 4;
+  unsigned dirty : 1;
+};
+#+END_SRC
+**** 包含自指向的指针
+#+BEGIN_SRC c
+// Errro
+typedef struct {
+  char* item;
+  Node next;
+}* Node;
+
+// ->
+typedef struct node {
+  char* item;
+  struct node* next;
+}* Node;
+// or
+struct node;
+typedef struct node* Node; 
+struct node {
+  char* item;
+  Nodenext;
+};
+// or
+struct node {
+  char* item;
+  struct node* next;
+};
+typedef struct node* Node;
+#+END_SRC
+**** 域 在 结构中的字节偏移量
+- <stddef.h> : offsetof() : offsetof(structs, f)
+- Imp
+  #+BEGIN_SRC c
+// (&0)->f - 0
+#define offsetof(type, f) ((size_t)             \
+  ((char*) &((type*)0)->f - (char*)(type*)0))
+#+END_SRC
+
+*** Union 共用
+- 声明 定义 初始化 使用
+  #+BEGIN_SRC c
+union Data {
+  int i;
+  char c;
+};
+union Data some = {88}; // 初始化 需要与第一个类型一致
+printf("Int:%d", some.i);
+printf("Char:%c", some.c);
+
+  #+END_SRC
+
+** 动态内存分配
+- 在堆上分配空间
+- 函数
+  - 分配: malloc, calloc, realloc,
+    - 一段空间 : void *malloc(size_t size);
+    - 一段空间 并 清零 : void *calloc(unsigned n, unsigned size); (空间长度: n*size)
+    - 重新分配 (变大或变小) : void *realloc(void *ptr, size_t size); (将ptr指向的空间大小 改为size)
+  - 释放: free
+    - void free(void *ptr);
+  - 填充: memset
+    - memset(ptr, n, size);
+- 示例
+  #+BEGIN_SRC C
+int *p = (int*)malloc(sizeof(int));
+free(p);
+
+int *array = (int*)calloc(3, sizeof(int));
+free(array);
+
+double *d = (double*)malloc(sizeof(double));
+int *i = (int*)realloc(d, sizeof(int));
+free(d);
+free(i);
+
+  #+END_SRC
+
+
+  
+
+
+
+* 高级
+
 ** IO
 *** 标准输入输出
 *** 文件
-** 控制流程
-- 顺序 分支 循环(递归)
-** 结构 共用 枚举
-** 动态内存分配
-** 概念
+
+* 概念
 - 头文件
   - 导入
 - 字面量
 - 作用域 生命周期
+- 声明 定义
+- 关键字 保留字
 - 变量
 
 
 * COMMENT Test
+#+BEGIN_SRC C
+printf("a %d %d %d", '0', '\0', 0 );
+
+#+END_SRC
+
+#+RESULTS:
+: a 48 0 0

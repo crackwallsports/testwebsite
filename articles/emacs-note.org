@@ -56,32 +56,112 @@ Mode Line
 (setq ns-option-modifier 'super)
   #+END_SRC
 
-常用的缺省按键前缀
-- 当前编辑模式特有的命令 : C-c
-- 文件和缓冲区命令 : C-x
-- 帮助命令 : C-h
-- 命令 : M-x
+设置
+- Global : global-(set|unset)-key
+- Local : local-(set|unset)-key
 
+Assist
+- [[https://github.com/jwiegley/use-package/blob/master/bind-key.el][bind-key]]
+  - Config
+    #+BEGIN_SRC emacs-lisp
+(require 'bind-key)
+    #+END_SRC
+  - Example
+    #+BEGIN_SRC emacs-lisp
+(bind-key "C-c x" 'my-ctrl-c-x-command)
+;; override all minor modes
+(bind-key* "<C-return>" 'other-window)
+
+;; Unbind
+(unbind-key "C-c x" some-other-mode-map)
+
+;; Keymap
+(bind-key "C-c x" 'my-ctrl-c-x-command some-other-mode-map)
+    
+;; Multiple bind
+(bind-keys*
+ ("C-o" . other-window)
+ ("C-M-n" . forward-page)
+ ("C-M-p" . backward-page))
+;;-| add keys into a specific map
+(bind-keys :map dired-mode-map
+           ("o" . dired-omit-mode)
+           ("a" . some-custom-dired-function))
+;;-| set up a prefix map
+(bind-keys :prefix-map my-customize-prefix-map
+           :prefix "C-c c"
+           ("f" . customize-face)
+           ("v" . customize-variable))
+    #+END_SRC
 ** Command 命令
 每一个命令 == 一个功能(Elisp函数) 
 
-| 退出 Emacs | C-x C-c (confirm-kill-emacs)        |
-| 取消       | C-g == keyboard-quit 或 ESC ESC ESC |
-| 执行 命令  | M-x == execute-extended-command     |
+| 退出 Emacs | confirm-kill-emacssave-buffers-kill-terminal | C-x C-c |
+| 取消       | keyboard-quit            | C-g 或 ESC ESC ESC |
+| 执行 命令  | execute-extended-command | M-x                |
+| 求值 Elisp   | eval-expression | M-: (C-u .. : 结果插入缓冲 |
+
+Buffer 缓冲区 (?? 待整理)
+- 打开-文件
+  - C-x C-f == find-file
+  - C-x C-r == find-file-read-only
+- 替换-打开的错误文件
+  - C-x C-v == find-alternate-file
+- 切换
+  - C-x b
+  - C-x C-b  // 列出全部
+  - C-x <left|right> == [previous next]-buffer
+- 杀死
+  - C-x k == kill-buffer
+  - M-x kill-[some matching]-buffers
+  - M-x clean-buffer-list (未修改>=3天)
+- Forget that the current buffer has been changed 
+  - M-~ == not-modified
+- 保存
+  - C-x s  // 所有未保存 
+  - C-x C-s == save-buffer  // 当前
+- 另存为
+  - C-x C-w == write-file
+- 重命名
+  - M-x set-visited-file-name
+  - M-x rename-[buffer uniquely]
+- 只读
+  - C-x C-q == vc-toggle-read-only
+- 恢复
+  - M-x revert-buffer  // 恢复到上一次存盘时
+  - M-x recover-file  // 从自动保存恢复
+  - M-x recover-session
+- 更新绘制屏幕+当前行放到中间
+  - C-l == recenter- (recenter-positions)
+- 不自动选择编码和转换换行符
+  - M-x find-file-literally
+- 编辑缓存区列表
+  - M-x buffer-menu-[other-window]
+- Indirect Buffers : shares the text of some other buffer
+  - M-x [make clone]-indirect-buffer
+  - C-x 4 c == clone-indirect-buffer-other-window
+
+
 
 ** Help 帮助
 - Tutorial : C-h t
-- Manual : C-h r == info-emacs-manual
+- Manual : info-emacs-manual ~==~ C-h r
   - Online : [[https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html][Emacs manual]]
 - 当前模式|变量|函数|键绑定|符号
-  | C-h m | describe-mode|
-  | C-h v | describe-varible|
-  | C-h f | describe-function |
-  | C-h b | describe-bindings|
-  | C-h o | describe-symbol|
+  | describe-mode     | C-h m |
+  | describe-varible  | C-h v |
+  | describe-function | C-h f |
+  | describe-bindings | C-h b |
+  | describe-symbol   | C-h o |
 - 通过键盘 输入一个键绑定
-  | C-h c | describe-key-briefly|
-  | C-h k | describe-key|
+  | describe-key-briefly | C-h c |
+  | describe-key         | C-h k |
+- 命令历史
+  - M-x list-command-history
+
+
+Key bindings
+- [[https://github.com/kai2nenobu/guide-key][guide-key]]
 
 ** Server 服务
 - 开启服务 : M-x server-start
@@ -377,7 +457,7 @@ Assist
 - [[Keyboard Macro 键盘宏][Keyboard Macro 键盘宏]]
  
 Assist
-- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[MC][kbd]]
 
 ** Other 其它
 - 缩进    
@@ -493,7 +573,7 @@ Assist
   - 所有缓冲: helm-multi-swoop-all
   - Edit mode : C-c C-e
 - [[https://github.com/Wilfred/ag.el][Ag]] : [[https://github.com/syohex/emacs-helm-ag][helm-ag]]
-- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[MC][kbd]]
 
 Special
 - imenu : helm-imenu
@@ -514,7 +594,7 @@ Special
 
 Assist
 - [[Keyboard Macro 键盘宏][Keyboard Macro 键盘宏]]
-- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[hydra mc][kbd]]
+- [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]] [[Mutiple cursors][config]] [[MC][kbd]]
 
 
 * Assist 辅助
@@ -619,8 +699,9 @@ Highlight 高亮
 自动加载外部修改过的文件
 - global-auto-revert-mode
 
-Key bindings
-- [[https://github.com/kai2nenobu/guide-key][guide-key]]
+自动保存
+- M-x auto-save
+  - 重开: M-1 ..
 
 * Special Mode
 ** Dired
@@ -692,7 +773,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 
 #+END_SRC
 
-** hydra mc
+** MC
 #+BEGIN_SRC emacs-lisp
 (global-set-key
  (kbd "C-S-c")

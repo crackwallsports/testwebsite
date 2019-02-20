@@ -28,13 +28,13 @@
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
   (div ()
-       "Emacs - 基础 - Edit(编辑) - Other "
-       (span (:class "badge badge-success") " 更新-2019.2.7")))
+       "Emacs - 基础"
+       (span (:class "badge badge-success") " 更新-2019.2.20")))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
   "学习 C 语言 - 笔记整理 (草稿)"
   (div ()
-     (span (:class "badge badge-success") "更新-2019.2.7")
+     (span (:class "badge badge-success") "更新-2019.2.20")
      (pre () "
 C 语言学习的笔记整理 不是单纯的修剪笔记 而是 重构
 重新思考 如何一点点引导 将整个知识串接在一起
