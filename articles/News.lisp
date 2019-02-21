@@ -121,6 +121,49 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.2.21")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/177696")
+               '(q () (pre () "
+2月20号：只要有真情只要有真爱，只要坚定自己的信念！没有什么敌人可以打败你！这就是永远不变的法则！是最大的力量！一切都是刚刚开始！"))
+               (u (:- '(pre () "郭文视频: 斑马从豹口中救出同类"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177672")
+               '(q () (pre () "
+2月20号：每一个战友的捐款和对文贵的热情留言，都让文贵感激万分！这是信任。这也是责任！这也是文贵的动力。今天的捐款一直就没停过！这个一笔笔地捐款，我更是感慨万千，我们中国人实在是太可怜了，我们没有希望！没有安全！没有公平，没有未来！活在恐惧里的日子将一去不复返！法治基金是属于14亿中国人民我们共同的家！和共同走向未来的舞台！每一分钱都会使用到与中国实现法治信仰自由有关！一定以最高效的的行动，最高质量的结果！干倒CCP！为奋斗目标！希望战友们！能量力而行！千万不要勉强！一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177641")
+               '(q () (pre () "从质询视频中看到的郭文贵起诉郭宝胜的七个原因"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=H2Fn3xDU8ew"
+                                    "从质询视频中看到的郭文贵起诉郭宝胜的七个原因")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/177638")
+               '(q () (pre () "
+2月20日：共产党与海外欺民贼的所谓民主民运人士的战友情都是一样的结果！背叛．欺骗．利用．出卖．灭口．灭九族……")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177632")
+               '(q () (pre () "
+2月20号：这个卑鄙可耻的．假牧师郭宝胜．竟然将我的庭讯视频剪辑后才发出！像我指正过宝盛的最关键的部分剪掉，这是何等的龌龊以可耻！文贵从来不干那个卑鄙的事情！百分之百推出郭宝的的视频， 不管郭宝剩说什么，我都将法庭提供的视频百分之百的真实地推动出，这是做人和对社会尊重的起码的底线！就这一点．宝盛大骗子都做不到！ 这就是高低之分，好坏只别！我深信伟大的战友们．和有良知的人呢们！能分出这是何等的性质，在这方面郭宝胜假牧师都造假．他还有什么能是真的！在视频中．几乎都是在撒谎，任何有良知的人随便一看就知道郭宝盛是谎言狂！卑鄙可耻的牧师！更不要谈民主，这样的人竞然能上视频能给别人上课……上天一定会惩罚这种可悲的小人，一切都是刚刚开始！"))
+               (u (:- `(cite () "文贵接受郭宝胜律师庭外问询视频（无删减版）"
+                             ,(@ "https://www.youtube.com/watch?v=mINxRPaiL0o"
+                                 "-1")
+                             " "
+                             ,(@ "https://www.youtube.com/watch?v=qOQ_68KiDoQ"
+                                 "-2")))
+                  (:- `(cite () "假牧师郭宝胜被文贵律师庭外审问视频（无删减版）"
+                             ,(@ "https://www.youtube.com/watch?v=rlmCci0DncE"
+                                 "-1")
+                             " "
+                             ,(@ "https://www.youtube.com/watch?v=aPrMytTUJgA"
+                                 "-2")
+                             " "
+                             ,(@ "https://www.youtube.com/watch?v=vaaNspFTp6o"
+                                 "-3")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/177608")
+               '(q () (pre () "
+2月20号：尊敬的战友们好．UBS是与CCP合作的巨大的国际犯罪组织！他今天的出事儿，只是刚刚开始，法国将有CCP贿赂法国政客重大政治丑闻！法国政府也将有重大变化，CCP在法国制造的腐败以经深度影响法国政局的详细信息将被公布出来！海航在法国的犯罪以及王建被杀的真相即将曝光！咱们拭目以待！一切都是刚刚开始！"))
+               (u (:- `(cite () 
+                             ,(@ "https://www.reuters.com/article/us-ubs-trial-fraud/ubs-to-appeal-after-fined-4-5-billion-euros-in-french-tax-fraud-case-idUSKCN1Q91DR"
+                                 "UBS to appeal after fined 4.5 billion euros in French tax fraud case")
+                             (small () "2019.2.20 Reuters"))))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.2.20")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/177451")
                '(q () (pre () "
@@ -166,9 +209,12 @@ z-index:100;
                   (:- '(pre () "补看了视频 最震惊的就是Sara 战友之声的节目办的太好了 啸天点评 楚门看世界 墙头会  飞速提高 片头效果"))
                   (:- '(pre () "郭宝胜 放出的 郭先生接受律师庭外问话的视频")
                       (u (:- `(cite () "(我: 它放出的视频剪碎了 不在此列出 后面这个链接是完整版) "
-                                    ,(@ "https://www.youtube.com/watch?v=_pj1kLJfZug"
-                                        "02/19/2019郭文贵大BOSS 如何跟律师对答，特别推荐90后00后一定要看看学学，受益匪浅")
-                                    (small () "2019.2.19 Youtube")))
+                                    "文贵接受郭宝胜律师庭外问询视频（无删减版）"
+                                    ,(@ "https://www.youtube.com/watch?v=mINxRPaiL0o"
+                                        "-1")
+                                    " "
+                                    ,(@ "https://www.youtube.com/watch?v=qOQ_68KiDoQ"
+                                        "-2")))
                          (:- `(cite () "假牧师郭宝胜被文贵律师庭外审问视频（无删减版）"
                                     ,(@ "https://www.youtube.com/watch?v=rlmCci0DncE"
                                         "-1")
@@ -1041,7 +1087,7 @@ DOJ George Higginbotham Indictment"))
 
 (news-to-topic
  "郭文贵"   ;; (twb::human-date (get-universal-time))
- "2019.02.20 22:45:36"
+ "2019.02.21 21:28:57"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))

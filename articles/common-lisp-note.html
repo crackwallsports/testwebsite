@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-01-30 Wed 21:59 -->
+<!-- 2019-02-21 Thu 23:39 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Common Lisp - 笔记整理 (草稿)</title>
@@ -62,28 +62,35 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc0954b9">1. 准备</a></li>
-<li><a href="#orgf9908a1">2. 开始</a>
+<li><a href="#orgabcb1a8">1. 准备</a></li>
+<li><a href="#org229be13">2. 开始</a>
 <ul>
-<li><a href="#org314bb07">2.1. 自身</a>
+<li><a href="#orgfda2aba">2.1. 自身</a>
 <ul>
-<li><a href="#org3cb8446">2.1.1. Comment</a></li>
+<li><a href="#orgac65a8b">2.1.1. Comment 注释</a></li>
 </ul>
 </li>
-<li><a href="#org2bc7f34">2.2. 表示 和 操作</a></li>
+<li><a href="#org6392722">2.2. 表示 和 操作</a></li>
 </ul>
 </li>
-<li><a href="#org68fc1b8">3. 函数</a></li>
-<li><a href="#orgc674b7c">4. 特殊操作符</a></li>
-<li><a href="#org25f7ff7">5. 宏</a></li>
-<li><a href="#org3a5408d">6. 控制流</a></li>
+<li><a href="#org76b3cfe">3. 函数</a>
+<ul>
+<li><a href="#orgb699169">3.1. Call</a></li>
+<li><a href="#orga139935">3.2. Paramater list</a></li>
+<li><a href="#org7a1a3a2">3.3. Return Value</a></li>
+<li><a href="#orgbd94d26">3.4. Closures</a></li>
+</ul>
+</li>
+<li><a href="#org9410d2e">4. 特殊操作符</a></li>
+<li><a href="#orgb4f58f5">5. 宏</a></li>
+<li><a href="#org4f4de29">6. 控制流</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgc0954b9" class="outline-2">
-<h2 id="orgc0954b9"><span class="section-number-2">1</span> 准备</h2>
+<div id="outline-container-orgabcb1a8" class="outline-2">
+<h2 id="orgabcb1a8"><span class="section-number-2">1</span> 准备</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>实现
@@ -101,8 +108,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-orgf9908a1" class="outline-2">
-<h2 id="orgf9908a1"><span class="section-number-2">2</span> 开始</h2>
+<div id="outline-container-org229be13" class="outline-2">
+<h2 id="org229be13"><span class="section-number-2">2</span> 开始</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Live 活着的
@@ -113,8 +120,8 @@ Live 活着的
 </ul>
 </div>
 
-<div id="outline-container-org314bb07" class="outline-3">
-<h3 id="org314bb07"><span class="section-number-3">2.1</span> 自身</h3>
+<div id="outline-container-orgfda2aba" class="outline-3">
+<h3 id="orgfda2aba"><span class="section-number-3">2.1</span> 自身</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>语法 : S-表达式 :
@@ -137,12 +144,9 @@ Live 活着的
 </ul>
 </div>
 
-<div id="outline-container-org3cb8446" class="outline-4">
-<h4 id="org3cb8446"><span class="section-number-4">2.1.1</span> Comment</h4>
+<div id="outline-container-orgac65a8b" class="outline-4">
+<h4 id="orgac65a8b"><span class="section-number-4">2.1.1</span> Comment 注释</h4>
 <div class="outline-text-4" id="text-2-1-1">
-<p>
-风格
-</p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;;; </span><span style="color: #8B8989; font-style: italic;">File header</span>
 
@@ -164,8 +168,8 @@ Live 活着的
 </div>
 </div>
 
-<div id="outline-container-org2bc7f34" class="outline-3">
-<h3 id="org2bc7f34"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
+<div id="outline-container-org6392722" class="outline-3">
+<h3 id="org6392722"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>表示
@@ -208,17 +212,335 @@ Live 活着的
 </div>
 </div>
 
-<div id="outline-container-org68fc1b8" class="outline-2">
-<h2 id="org68fc1b8"><span class="section-number-2">3</span> 函数</h2>
+<div id="outline-container-org76b3cfe" class="outline-2">
+<h2 id="org76b3cfe"><span class="section-number-2">3</span> 函数</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><p>
+Lambda : 匿名函数
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #006400;">(</span>n<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>/ n 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>                   
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; #&lt;Anonymous Function #x302000DB47EF&gt;</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Call</span>
+<span style="color: #8b0000;">(</span>funcall #'<span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">(</span>x y<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>+ x y<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> 2 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">(</span>x y<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>+ x y<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> 2 3<span style="color: #8b0000;">)</span>           <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span> 42<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>                       <span style="color: #8B8989; font-style: italic;">;-&gt; 42</span>
+</pre>
+</div></li>
+<li>Name 命名
+<ul class="org-ul">
+<li><p>
+Global: defun
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">name</span> <span style="color: #006400;">(</span>arguments<span style="color: #006400;">)</span>
+  <span style="color: #FBDE2D;">"Optional document string"</span>
+  body-form<span style="color: #8b0000;">)</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">six</span> <span style="color: #006400;">()</span> <span style="color: #006400;">(</span>+ 3 3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>six<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+</pre>
+</div></li>
+<li><p>
+Local: flet labels(call another|recursion)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">flet</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>f <span style="color: #ffff00;">(</span>n<span style="color: #ffff00;">)</span>
+         <span style="color: #ffff00;">(</span>+ n 10<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+       <span style="color: #ff1493;">(</span>g <span style="color: #ffff00;">(</span>n<span style="color: #ffff00;">)</span>
+         <span style="color: #ffff00;">(</span>- n 3<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>g <span style="color: #ff1493;">(</span>f 5<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 12</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">labels</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a <span style="color: #ffff00;">(</span>n<span style="color: #ffff00;">)</span>
+           <span style="color: #ffff00;">(</span>+ n 5<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+         <span style="color: #ff1493;">(</span>b <span style="color: #ffff00;">(</span>n<span style="color: #ffff00;">)</span>
+           <span style="color: #ffff00;">(</span>+ <span style="color: #00ff00;">(</span>a n<span style="color: #00ff00;">)</span> 6<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>b 10<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 21</span>
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+Function Object: function (sugar:#')
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#24341;&#29992; &#31526;&#21495;&#21629;&#21517;&#30340;&#20989;&#25968; (&#36890;&#24120;&#20026; defun&#20840;&#23616;&#23450;&#20041;&#30340;)</span>
+<span style="color: #8b0000;">(</span>function car<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Compiled-function CAR #x3000000FC18F&gt;</span>
+#'car          <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Compiled-function CAR #x3000000FC18F&gt;</span>
+</pre>
+</div></li>
+<li>函数 既可以作为 定义抽象的方式 来产生抽象 也可以 作为一个抽象来使用
+<ul class="org-ul">
+<li>Higher-Order (first-class fun) : as paramater or return-value</li>
+</ul></li>
+</ul>
 </div>
-<div id="outline-container-orgc674b7c" class="outline-2">
-<h2 id="orgc674b7c"><span class="section-number-2">4</span> 特殊操作符</h2>
+
+<div id="outline-container-orgb699169" class="outline-3">
+<h3 id="orgb699169"><span class="section-number-3">3.1</span> Call</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><p>
+apply | funcall
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(&#26368;&#21518;&#19968;&#20010;&#21442;&#25968;&#38656;&#35201;&#26159;&#19968;&#20010;&#21015;&#34920;)</span>
+<span style="color: #8b0000;">(</span>apply <span style="color: #006400;">(</span>function car<span style="color: #006400;">)</span> '<span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x y<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; X</span>
+<span style="color: #8b0000;">(</span>apply #'+ '<span style="color: #006400;">(</span>1 2 3 4 8<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>        <span style="color: #8B8989; font-style: italic;">;-&gt; 18</span>
+<span style="color: #8b0000;">(</span>apply #'+ 1 2 '<span style="color: #006400;">(</span>3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>            <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+
+<span style="color: #8b0000;">(</span>funcall #'+ 1 3 5<span style="color: #8b0000;">)</span>    <span style="color: #8B8989; font-style: italic;">;-&gt; 9</span>
+<span style="color: #8b0000;">(</span>funcall #'car '<span style="color: #006400;">(</span>x y<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; X</span>
+
+</pre>
+</div></li>
+<li>局部函数的调用问题
+<ul class="org-ul">
+<li>先局部(FLET LABELS) 后全局(DEFUN)</li>
+<li>若使用 符号 而不是#' 则 引用全局函数</li>
+<li><p>
+Ex.
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>+ x 42<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; FOO</span>
+  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">flet</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>foo <span style="color: #ffff00;">(</span>x<span style="color: #ffff00;">)</span> <span style="color: #ffff00;">(</span>1+ x<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+    <span style="color: #006400;">(</span>list <span style="color: #ff1493;">(</span>funcall 'foo 0<span style="color: #ff1493;">)</span> <span style="color: #8B8989; font-style: italic;">; &#20840;&#23616;</span>
+          <span style="color: #ff1493;">(</span>funcall #'foo 0<span style="color: #ff1493;">)</span> <span style="color: #8B8989; font-style: italic;">; &#23616;&#37096;</span>
+  <span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+  <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (42 1)</span>
+  <span style="color: #8b0000;">(</span>funcall #'foo 0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 42 </span>
+
+</pre>
+</div></li>
+</ul></li>
+</ul>
 </div>
-<div id="outline-container-org25f7ff7" class="outline-2">
-<h2 id="org25f7ff7"><span class="section-number-2">5</span> 宏</h2>
 </div>
-<div id="outline-container-org3a5408d" class="outline-2">
-<h2 id="org3a5408d"><span class="section-number-2">6</span> 控制流</h2>
+<div id="outline-container-orga139935" class="outline-3">
+<h3 id="orga139935"><span class="section-number-3">3.2</span> Paramater list</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><p>
+&amp;optional
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Optional</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>a b <span style="color: #afd8af;">&amp;optional</span> c d<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list a b c d<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 1 2<span style="color: #8b0000;">)</span>     <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 NIL NIL) </span>
+<span style="color: #8b0000;">(</span>foo 1 2 3<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3 NIL)</span>
+<span style="color: #8b0000;">(</span>foo 1 2 3 4<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3 4)  </span>
+</pre>
+</div></li>
+<li><p>
+&amp;key
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Keyword </span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;key</span> a b <span style="color: #ff1493;">(</span>c 3<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list a b c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo<span style="color: #8b0000;">)</span>                <span style="color: #8B8989; font-style: italic;">;-&gt; (NIL NIL 3)</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:b</span> 1<span style="color: #8b0000;">)</span>           <span style="color: #8B8989; font-style: italic;">;-&gt; (NIL 1 3)</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 1 <span style="color: #4c83ff;">:b</span> 2 <span style="color: #4c83ff;">:c</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#21306;&#20998;&#22806;&#37096;&#21644;&#20869;&#37096;&#35843;&#29992;&#21517;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;key</span> <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span><span style="color: #4c83ff;">:apple</span> a<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span><span style="color: #4c83ff;">:box</span> b<span style="color: #ffff00;">)</span> 0<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:apple</span> 1 <span style="color: #4c83ff;">:box</span> 2<span style="color: #8b0000;">)</span>  
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#20851;&#38190;&#23383;&#21517; &#21487;&#19981;&#20026; &#20851;&#38190;&#23383;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">baz</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;key</span> <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span>foo bar<span style="color: #ffff00;">)</span> 42<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+           <span style="color: #006400;">(</span>list bar<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>baz 'foo 23<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (23)</span>
+</pre>
+</div></li>
+<li><p>
+Default value
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Default Value</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>a <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>b 10<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 1 2<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2)</span>
+<span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 10)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">value &#21487;&#20197;&#26159;&#20219;&#20309; lisp &#34920;&#36798;&#24335;</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">? &#21487;&#20381;&#36182;&#21069;&#38754;&#30340;&#21442;&#25968;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">make-rectangle</span> <span style="color: #006400;">(</span>width <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>height width<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> ...<span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+supplied-p : 用于判断是否提供了实参
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">supplied-p</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>a <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>c 3 c-supplied-p<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> 
+  <span style="color: #006400;">(</span>list a c c-supplied-p<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; (1 3 NIL)</span>
+<span style="color: #8b0000;">(</span>foo 1 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 3 T)  </span>
+</pre>
+</div></li>
+<li><p>
+&amp;rest
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">rest </span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my+</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> nums<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>apply #'+ nums<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+</pre>
+</div></li>
+<li><p>
+&amp;aux : define auxiliary local variables
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">auxiliary</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">average</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> args
+                <span style="color: #afd8af;">&amp;aux</span> <span style="color: #ff1493;">(</span>len <span style="color: #ffff00;">(</span>length args<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>/ <span style="color: #ff1493;">(</span>reduce #'+ args<span style="color: #ff1493;">)</span> len 1.0<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+</pre>
+</div></li>
+<li>&amp;allow-other-keys : 允许未定义的关键字参数 并收集于此</li>
+<li>&#x2014;</li>
+<li>参数数量上限
+<ul class="org-ul">
+<li>call-arguments-limit</li>
+<li>lambda-parameters-limit</li>
+</ul></li>
+<li>&#x2014;</li>
+<li>组合使用问题
+<ul class="org-ul">
+<li>Order: required &amp;optional &amp;rest &amp;key
+<ul class="org-ul">
+<li><p>
+&amp;rest and &amp;key
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">&amp;rest + &amp;key : &#21482;&#33021;&#20351;&#29992;key</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> rest <span style="color: #afd8af;">&amp;key</span> a b c<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list rest a b c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 1 <span style="color: #4c83ff;">:b</span> 2 <span style="color: #4c83ff;">:c</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ((:A 1 :B 2 :C 3) 1 2 3)</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ((:A 1) 1 NIL NIL)</span>
+<span style="color: #8b0000;">(</span>foo 1 2<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; Error</span>
+<span style="color: #8b0000;">(</span>foo 1 2 <span style="color: #4c83ff;">:a</span> 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; Error</span>
+<span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 2 1 2<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; Error</span>
+</pre>
+</div></li>
+</ul></li>
+<li>Avoid
+<ul class="org-ul">
+<li><p>
+&amp;optional + &amp;key
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x <span style="color: #afd8af;">&amp;optional</span> y <span style="color: #afd8af;">&amp;key</span> z<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+  <span style="color: #8b0000;">(</span>foo 1 2 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3)</span>
+  <span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span>        <span style="color: #8B8989; font-style: italic;">;-&gt; (1 nil nil) </span>
+  <span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; Error</span>
+  <span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 :Z 3)</span>
+</pre>
+</div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a1a3a2" class="outline-3">
+<h3 id="org7a1a3a2"><span class="section-number-3">3.3</span> Return Value</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>返回值 Return value : 默认返回最后一个表达式的值</li>
+<li><p>
+返回多值 Return Multi-Values : values values-list (多返回值作为参数 只有第一个被使用)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>values 'a nil <span style="color: #006400;">(</span>+ 1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span><span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; a , -&gt; nil , -&gt; 3</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span> 
+   <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #00ff00;">()</span> <span style="color: #00ff00;">(</span>values 1 2<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 , -&gt; 2</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x <span style="color: #ffff00;">(</span>values 1 2<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> x<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">(values) &#25918;&#22312;&#34920;&#36798;&#24335;&#26368;&#21518;&#26469;&#19981;&#36820;&#22238;&#20540;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my</span> <span style="color: #006400;">()</span>
+  <span style="color: #006400;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; NIL</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my</span> <span style="color: #006400;">()</span>
+  <span style="color: #006400;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>values<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">&#21015;&#34920;&#20316;&#20026;&#21442;&#25968;</span>
+<span style="color: #8b0000;">(</span>values-list '<span style="color: #006400;">(</span>1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 2</span>
+</pre>
+</div></li>
+<li>处理多返回值
+<ul class="org-ul">
+<li><p>
+多值绑定 : multipel-value-bind
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3 2<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b c<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span> c<span style="color: #8b0000;">)</span>       <span style="color: #8B8989; font-style: italic;">;-&gt; nil</span>
+</pre>
+</div></li>
+<li><p>
+多值作为函数参数 : multiple-value-call
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>funcall #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+<span style="color: #8b0000;">(</span>multiple-value-call #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 21</span>
+
+<span style="color: #8b0000;">(</span>multiple-value-call #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+</pre>
+</div></li>
+<li><p>
+多值转列表 : multiple-value-list
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">  <span style="color: #8b0000;">(</span>multiple-value-list <span style="color: #006400;">(</span>values 'a 'b 'c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbd94d26" class="outline-3">
+<h3 id="orgbd94d26"><span class="section-number-3">3.4</span> Closures</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li><p>
+闭包 Closures : 捕捉创建时的环境信息 : 捕获的是变量 不是值
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>setf fn <span style="color: #006400;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span>i 3<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span> #'<span style="color: #ff1493;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ffff00;">(</span>x<span style="color: #ffff00;">)</span> <span style="color: #ffff00;">(</span>+ x i<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>funcall *fn*<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+<span style="color: #8b0000;">(</span>funcall *fn*<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 2</span>
+<span style="color: #8b0000;">(</span>funcall *fn*<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>count 0<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list
+   #'<span style="color: #ff1493;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ffff00;">()</span> <span style="color: #ffff00;">(</span>incf count<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+   #'<span style="color: #ff1493;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ffff00;">()</span> <span style="color: #ffff00;">(</span>decf count<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+   #'<span style="color: #ff1493;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ffff00;">()</span> count<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org9410d2e" class="outline-2">
+<h2 id="org9410d2e"><span class="section-number-2">4</span> 特殊操作符</h2>
+</div>
+<div id="outline-container-orgb4f58f5" class="outline-2">
+<h2 id="orgb4f58f5"><span class="section-number-2">5</span> 宏</h2>
+</div>
+<div id="outline-container-org4f4de29" class="outline-2">
+<h2 id="org4f4de29"><span class="section-number-2">6</span> 控制流</h2>
 </div>
 </div>
 </body>

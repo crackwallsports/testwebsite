@@ -35,9 +35,8 @@ Live 活着的
     - 特殊形式 : 各自特定的规则
       - 不求值 : quote
     - 宏 : 参数不求值
-
-*** Comment
-风格
+      
+*** Comment 注释
 #+BEGIN_SRC lisp
 ;;;; File header
 
@@ -79,6 +78,223 @@ Live 活着的
   - 等等
 
 * 函数
+- Lambda : 匿名函数
+  #+BEGIN_SRC lisp
+(lambda (n) (/ n 2))                   
+;;-> #<Anonymous Function #x302000DB47EF>
+
+;; Call
+(funcall #'(lambda (x y) (+ x y)) 2 3) ;-> 5
+((lambda (x y) (+ x y)) 2 3)           ;-> 5
+((lambda () 42))                       ;-> 42
+  #+END_SRC
+- Name 命名
+  - Global: defun
+    #+BEGIN_SRC lisp
+(defun name (arguments)
+  "Optional document string"
+  body-form)
+
+(defun six () (+ 3 3))
+(six) ;-> 6
+    #+END_SRC
+  - Local: flet labels(call another|recursion)
+    #+BEGIN_SRC lisp
+(flet ((f (n)
+         (+ n 10))
+       (g (n)
+         (- n 3)))
+  (g (f 5)))
+;;-> 12
+
+(labels ((a (n)
+           (+ n 5))
+         (b (n)
+           (+ (a n) 6)))
+  (b 10))
+;;-> 21
+    #+END_SRC
+- Function Object: function (sugar:#')
+  #+BEGIN_SRC lisp
+;; 引用 符号命名的函数 (通常为 defun全局定义的)
+(function car) ;-> #<Compiled-function CAR #x3000000FC18F>
+#'car          ;-> #<Compiled-function CAR #x3000000FC18F>
+  #+END_SRC
+- 函数 既可以作为 定义抽象的方式 来产生抽象 也可以 作为一个抽象来使用
+  - Higher-Order (first-class fun) : as paramater or return-value
+
+** Call
+- apply | funcall
+  #+BEGIN_SRC lisp
+;; (最后一个参数需要是一个列表)
+(apply (function car) '((x y))) ;-> X
+(apply #'+ '(1 2 3 4 8))        ;-> 18
+(apply #'+ 1 2 '(3))            ;-> 6
+
+(funcall #'+ 1 3 5)    ;-> 9
+(funcall #'car '(x y)) ;-> X
+
+  #+END_SRC
+- 局部函数的调用问题
+  - 先局部(FLET LABELS) 后全局(DEFUN)
+  - 若使用 符号 而不是#' 则 引用全局函数
+  - Ex.
+    #+BEGIN_SRC lisp
+  (defun foo (x) (+ x 42)) ;-> FOO
+  (flet ((foo (x) (1+ x)))
+    (list (funcall 'foo 0) ; 全局
+          (funcall #'foo 0) ; 局部
+  ))
+  ;;-> (42 1)
+  (funcall #'foo 0) ;-> 42 
+
+  #+END_SRC
+** Paramater list
+- &optional
+  #+BEGIN_SRC lisp
+;;; Optional
+(defun foo (a b &optional c d) (list a b c d))
+(foo 1 2)     ;-> (1 2 NIL NIL) 
+(foo 1 2 3)   ;-> (1 2 3 NIL)
+(foo 1 2 3 4) ;-> (1 2 3 4)  
+  #+END_SRC
+- &key
+  #+BEGIN_SRC lisp
+;;; Keyword 
+(defun foo (&key a b (c 3)) (list a b c))
+(foo)                ;-> (NIL NIL 3)
+(foo :b 1)           ;-> (NIL 1 3)
+(foo :a 1 :b 2 :c 3) ;-> (1 2 3)
+
+;; 区分外部和内部调用名
+(defun foo (&key ((:apple a)) ((:box b) 0)) (list a b))
+(foo :apple 1 :box 2)  
+
+;; 关键字名 可不为 关键字
+(defun baz (&key ((foo bar) 42))
+           (list bar))
+(baz 'foo 23) ;-> (23)
+  #+END_SRC
+- Default value
+  #+BEGIN_SRC lisp
+;;; Default Value
+(defun foo (a &optional (b 10)) (list a b))
+(foo 1 2) ;-> (1 2)
+(foo 1) ;-> (1 10)
+
+;; value 可以是任何 lisp 表达式
+
+;; ? 可依赖前面的参数
+(defun make-rectangle (width &optional (height width)) ...)
+  #+END_SRC
+- supplied-p : 用于判断是否提供了实参
+  #+BEGIN_SRC lisp
+;;; supplied-p
+(defun foo (a &optional (c 3 c-supplied-p)) 
+  (list a c c-supplied-p))
+(foo 1)   ;-> (1 3 NIL)
+(foo 1 3) ;-> (1 3 T)  
+  #+END_SRC
+- &rest
+  #+BEGIN_SRC lisp
+;;; rest 
+(defun my+ (&rest nums)
+  (apply #'+ nums))  
+  #+END_SRC
+- &aux : define auxiliary local variables
+  #+BEGIN_SRC lisp
+;;; auxiliary
+(defun average (&rest args
+                &aux (len (length args)))
+  (/ (reduce #'+ args) len 1.0))  
+  #+END_SRC
+- &allow-other-keys : 允许未定义的关键字参数 并收集于此
+- ---
+- 参数数量上限
+  - call-arguments-limit 
+  - lambda-parameters-limit
+- ---
+- 组合使用问题
+  - Order: required &optional &rest &key
+    - &rest and &key
+      #+BEGIN_SRC lisp
+;;; &rest + &key : 只能使用key
+(defun foo (&rest rest &key a b c) (list rest a b c))
+(foo :a 1 :b 2 :c 3) ;-> ((:A 1 :B 2 :C 3) 1 2 3)
+(foo :a 1) ;-> ((:A 1) 1 NIL NIL)
+(foo 1 2) ;-> Error
+(foo 1 2 :a 1) ;-> Error
+(foo :a 2 1 2) ;-> Error
+      #+END_SRC
+  - Avoid
+    - &optional + &key
+      #+BEGIN_SRC lisp
+  (defun foo (x &optional y &key z) (list x y z))
+  (foo 1 2 :z 3) ;-> (1 2 3)
+  (foo 1)        ;-> (1 nil nil) 
+  (foo 1 :z 3)   ;-> Error
+  (foo 1 :z :z 3) ;-> (1 :Z 3)
+      #+END_SRC
+** Return Value
+- 返回值 Return value : 默认返回最后一个表达式的值
+- 返回多值 Return Multi-Values : values values-list (多返回值作为参数 只有第一个被使用)
+  #+BEGIN_SRC lisp
+(values 'a nil (+ 1 2));;-> a , -> nil , -> 3
+((lambda () 
+   ((lambda () (values 1 2))))) ;;-> 1 , -> 2
+(let ((x (values 1 2))) x) ;-> 1
+
+;;; (values) 放在表达式最后来不返回值
+(defun my ()
+  (format t "~a" 1))
+;;-> 1
+;;-> NIL
+(defun my ()
+  (format t "~a" 1)
+  (values))
+;;-> 1
+
+;;; 列表作为参数
+(values-list '(1 2))
+;;-> 1
+;;-> 2
+  #+END_SRC
+- 处理多返回值
+  - 多值绑定 : multipel-value-bind
+    #+BEGIN_SRC lisp
+(multiple-value-bind (a b) (values 2 3) (* a b))   ;-> 6
+(multiple-value-bind (a b) (values 2 3 2) (* a b)) ;-> 6
+(multiple-value-bind (a b c) (values 2 3) c)       ;-> nil
+    #+END_SRC
+  - 多值作为函数参数 : multiple-value-call
+    #+BEGIN_SRC lisp
+(funcall #'+ (values 1 2 3) (values 4 5 6)) ;-> 5
+(multiple-value-call #'+ (values 1 2 3) (values 4 5 6)) ;-> 21
+
+(multiple-value-call #'+ (values 1 2 3)) ;-> 6
+    #+END_SRC
+  - 多值转列表 : multiple-value-list
+    #+BEGIN_SRC lisp
+  (multiple-value-list (values 'a 'b 'c))
+    #+END_SRC
+
+** Closures
+- 闭包 Closures : 捕捉创建时的环境信息 : 捕获的是变量 不是值
+  #+BEGIN_SRC lisp
+(setf fn (let ((i 3)) #'(lambda (x) (+ x i))))
+(funcall *fn*) ;-> 1
+(funcall *fn*) ;-> 2
+(funcall *fn*) ;-> 3
+
+(let ((count 0))
+  (list
+   #'(lambda () (incf count))
+   #'(lambda () (decf count))
+   #'(lambda () count)))
+  #+END_SRC
+
+
+
 * 特殊操作符
 * 宏
 * 控制流
