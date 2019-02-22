@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2019 2 21"
+(("2019 2 22"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2.21")
+          (span (:class "badge badge-success") "每日追踪-2019.2.22")
           (pre ()
                (small () "法治基金")
                (small () "王健之死")
@@ -16,20 +16,19 @@
   "Common Lisp Note - 笔记整理 (草稿)"
   (div ()
        ""
-       ;; (span (:class "badge badge-success") " 更新-1.10")
-       ))
+       (span (:class "badge badge-success") " 更新-2019.2.21")))
  ("2019 1 8"
   "/testwebsite/articles/box-ImageMagick-note.html"
   "ImageMagick Note - 笔记整理 (草稿)"
   (div ()
        ""
-       (span (:class "badge badge-success") " 更新-1.10")))
+       (span (:class "badge badge-success") " 更新-2019.1.10")))
  ("2018 11 7"
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
   (div ()
-       "Emacs - 基础"
-       (span (:class "badge badge-success") " 更新-2019.2.20")))
+       (span (:class "badge badge-success") " 更新-2019.2.20")
+       (pre () "Emacs - 基础")))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
   "学习 C 语言 - 笔记整理 (草稿)"
