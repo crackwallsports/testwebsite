@@ -24,7 +24,7 @@
 Live 活着的
 - 交互能力 实时修改 快速反馈
 - REPL : 读 求值 打印 循环
-
+  
 ** 自身
 - 语法 : S-表达式 :
   - 原子 (列表以外的)
@@ -77,7 +77,390 @@ Live 活着的
   - 数学计算 : + - * / sin
   - 等等
 
-* 函数
+* 表示
+** Number 数
+*** Rational 有理数
+- Literal
+  #+BEGIN_SRC lisp
+;;; Integer
+123         ;-> 123
+-123        ;-> -123
+1.          ;-> 1
+15511210043330985984000000 ; probably a bignum
+
+#b100       ;-> 4
+#o777       ;-> 511
+#xD         ;-> 13
+;; #nr : base 2~36
+#36rABC     ;-> 13368 
+  
+
+;;; Ratio
+3/7         ;-> 3/7
+4/6         ;-> 2/3
+6/3         ;-> 2
+#b1010/1011 ;-> 10/11  
+  #+END_SRC
+
+  
+**** Integer 整数
+- 类型 : fixnum bignum
+  #+BEGIN_SRC lisp
+(typep 1 'fixnum) ;-> t
+(typep (1+ most-positive-fixnum) 'bignum) ;-> t
+  #+END_SRC
+- 整数大小无限制 : 内部会自动在必要时分配存储 从而转换到大数表示
+- fixnum范围
+  #+BEGIN_SRC lisp
+(list most-positive-fixnum
+      most-negative-fixnum)
+;; ( 1152921504606846975
+;;  -1152921504606846976)
+
+(expt 2 60) ;-> 1152921504606846976
+(expt 2 61) ;-> 2305843009213693952
+  #+END_SRC
+  
+**** Ratio 比值
+- Rational canonicalization 规约化 : 6/3 -> 2, 12/6 -> 4/3
+- GET : numerator denominator
+  #+BEGIN_SRC lisp
+(numerator 3/5) ;-> 3
+(denominator 3/5) ;-> 5
+  #+END_SRC
+
+*** Float 浮点数
+- 实现依赖 [CCL]
+- 类型 (precisions, sizes) :  s(short) f(float) d(double) l(long)
+- Literal
+  #+BEGIN_SRC lisp
+1.0      ;-> 1.0
+1e0 1s0 1f0      ;-> 1.0
+1d0      ;-> 1.0d0
+
+;; float
+0.123    ;-> 0.123
+.123     ;-> 0.123
+123e-3   ;-> 0.123
+123E-3   ;-> 0.123
+0.123e20 ;-> 1.23e+19
+1.33232332329032 ;-> 1.3323233
+
+;; doble
+123d23   ;-> 1.23d+25
+1.33232332329032d0 ;-> 1.33232332329032D0
+
+2.0/3    ; Error: 2.0/3 被当作一个 symbol name
+2/3.0    ;-> 0.6666667
+  #+END_SRC
+- 范围 (格式:m-s-f) : most-[positive|negative]-long-float
+  #+BEGIN_SRC lisp
+(list most-negative-short-float
+      most-positive-short-float
+      most-negative-single-float
+      most-positive-single-float
+      most-negative-double-float
+      most-positive-double-float
+      most-negative-long-float
+      most-positive-long-float)
+;; (-3.4028235E+38 3.4028235E+38
+;;  -3.4028235E+38 3.4028235E+38
+;;  -1.7976931348623157D+308 1.7976931348623157D+308
+;;  -1.7976931348623157D+308 1.7976931348623157D+308)
+  #+END_SRC
+  
+*** Complex 复数
+- Literal
+  #+BEGIN_SRC lisp
+#c(2 1)       ;-> #c(2 1)
+#c(2/3 3/4)   ;-> #c(2/3 3/4)
+
+#c(2 1.0)     ;-> #c(2.0 1.0)
+#c(2.0 1.0d0) ;-> #c(2.0d0 1.0d0)
+#c(1/2 1.0)   ;-> #c(0.5 1.0)
+
+;; complex canonicalization
+#c(3 0)       ;-> 3  
+#c(1/2 0)     ;-> 1/2
+#c(3.0 0.0)   ;-> #c(3.0 0.0)
+  #+END_SRC
+- GET : realpart imgpart
+
+** Character 字符
+- Literal
+  #+BEGIN_SRC lisp
+#\x      ;-> #\x
+
+;; #\char-name for no-printing (:imp-d)
+;;-| Space, Newline, Tab, Page, Rubout, Linefeed, Return, Backspace  
+#\Space ;-> #\ 
+
+;; Unicode (实现依赖)
+#\U4E91  ; [SBCL]
+#\U+4E91 ; [CCL]
+;;
+#\云 ;-> #\U+4E91  
+  #+END_SRC
+- 转换 (实现依赖)
+  - code-char char-code
+  - char-name name-char
+    #+BEGIN_SRC lisp
+(char-name #\return) ;-> "Return"
+(char-name #\U+0) ;-> "Null"
+(char-name #\U+123) ;-> "Latin_Small_Letter_G_With_Cedilla"
+
+(name-char "Return") ;-> #\Return
+(name-char "Null") ;-> #\Null
+(name-char "Latin_Small_Letter_G_With_Cedilla")
+;;-> #\Latin_Small_Letter_G_With_Cedilla
+    #+END_SRC
+** String 字符串
+- 表示基于 : Vector-Char : 字符向量
+- 创建 : Literal | make-string | make-array(:e-t='character)
+  #+BEGIN_SRC lisp
+"String"
+;; \ : 用于转义 "" \ 
+"Str\"ing" ;-> "Str\"ing"
+"Str\\ing" ;-> "Str\\ing"
+
+;; 不支持插值语法 和 \n(换行)等转义语法
+"Stri\ng"  ;-> "String" 
+
+;; Make
+(make-string 3 :initial-element #\c) ;->  "ccc"
+(make-array 5 :fill-pointer 0 :adjustable :element-type 'character) ;-> ""
+  #+END_SRC  
+- 字面值是否可变 ? 实现依赖
+  #+BEGIN_SRC lisp
+(eq "abc" "abc") ;-> NIL
+(setf s0 "abc")
+(setf s1 "abc")
+(setf (char s0 0) #\1)
+(list s0 s1) ;; ("1bc" "abc")
+
+(setf s0 "abc")
+(setf s1 s0)
+(setf (char s0 0) #\1)
+(list s0 s1) ;; ("1bc" "1bc")
+  #+END_SRC
+
+*** GET
+- 单个元素 : char Vec.schar Arr.aref Seq.elt
+  #+BEGIN_SRC lisp
+(char "abc" 1) ;-> #\b
+(char "云" 0) ;-> #\U+4E91
+  #+END_SRC
+- 子字符串 : Seq.subseq
+- 长度 : Seq.length
+  #+BEGIN_SRC lisp
+(length "1234567") ;-> 7
+(length "一二三四五六七") ;-> 7
+(length "ÄÖÜ1") ;-> 4
+  #+END_SRC
+*** Split & Concat & Join & Trim
+- 分隔 Split : cl-ppcre:split
+  #+BEGIN_SRC lisp
+(split "" "hel lo") ;-> ("h" "e" "l" " " "l" "o")
+
+(split "\\s+" "foo   bar baz frob")
+;;-> ("foo" "bar" "baz" "frob")
+(ppcre:split "(\\s+)" "foo   bar baz frob" :with-registers-p t)
+;;-> ("foo" "   " "bar" " " "baz" " " "frob")
+
+(split "(,)|(;)" "foo,bar;baz" :with-registers-p t)
+;;-> ("foo" "," NIL "bar" NIL ";" "baz") ;; ("," nil == mach(,) nomach(;))
+(split "(,)|(;)" "foo,bar;baz" :with-registers-p t :omit-unmatched-p t)
+;;-> ("foo" "," "bar" ";" "baz")
+
+(split ":" "a:b:c:d:e:f:g::") ;-> ("a" "b" "c" "d" "e" "f" "g")
+(split ":" "a:b:c:d:e:f:g::" :limit 0)
+;;-> ("a" "b" "c" "d" "e" "f" "g")
+(split ":" "a:b:c:d:e:f:g::" :limit 2)
+;;-> ("a" "b:c:d:e:f:g::")
+(split ":" "a:b:c:d:e:f:g::" :limit 3)
+;;-> ("a" "b" "c:d:e:f:g::") 
+  #+END_SRC
+- 连接 Concat : Imp.concat
+  #+BEGIN_SRC lisp
+(defun concat (&rest s)
+  (apply #'concatenate 'string s))
+  #+END_SRC
+- 加入 Join : Imp.join
+  #+BEGIN_SRC lisp
+(defun join (strs &optional (separator " "))
+  (reduce (lambda (acc next)
+            (format nil "~a~a~a" acc separator next))
+       strs))  
+  #+END_SRC
+- 修剪 Trim : string-trim-[left right]
+  #+BEGIN_SRC lisp
+(string-trim "abc" "abcaakaaakabcaaa") ;->  "kaaak"
+(string-trim '(#\Space #\Tab #\Newline) " garbanzo beans") ;->  "garbanzo beans"
+(string-trim " (*)" " ( *three (silly) words* ) ") ;->  "three (silly) words"
+
+(string-left-trim " (*)" " ( *three (silly) words* ) ") ;->  "three (silly) words* ) "
+  #+END_SRC
+
+*** Search & Replace
+- 匹配 : Seq.(find position) Seq.(search mismatch) cl-ppcre:(scan-[to-strings] all-matches-[as-strings])
+  #+BEGIN_SRC lisp
+;; 返回 项 或 NIL
+(find #\a "foobarbaz") ;-> #\a
+
+;; 返回 位置 或 NIL
+(position #\a "foobarbaz") ;-> 4
+
+;; 匹配的第一个位置
+(search "bar" "foobarbaz") ;-> 3
+(search "Bar" "foobarbaz" :test #'string=) ;-> NIL
+
+;; 不匹配的第一个位置
+(mismatch "foobarbaz" "foom")            ;-> 3
+;; 不匹配的第一个位置索引+1
+(mismatch "foobarbaz" "baz" :from-end t) ;-> 6
+
+;; scan -> match:(start end) register-match:(start end)
+(scan "(a)*b" "xaaabd") ;-> 1 ;-> 5 ;-> #(3) ;-> #(4)
+(scan-to-strings "(([^b])*)b" "aaabd") ;-> "aaab" ;-> #("aaa" "a")
+
+;; all-matches -> match:(start end)
+(all-matches "a" "foo bar baz") ;-> (5 6 9 10)
+(all-matches-as-strings "\\d" "bar 3 baz 5") ;-> ("3" "5")
+  #+END_SRC
+- 替代 : Seq.substitute cl-ppcre:regex-replace-[all]  (破坏 : Seq.replace Seq.fill)
+  #+BEGIN_SRC lisp
+(substitute #\c #\a "abababab") ;-> "cbcbcbcb"
+(substitute #\c #\A "abababab" :test 'string=) ;-> "abababab"
+
+(regex-replace "fo+" "foo bar" "frob")     ;-> "frob bar" ;-> T
+;; 忽略大小写匹配
+(regex-replace "(?i)fo+" "FOO bar" "frob") ;-> "frob bar" ;-> T
+;; 保留目标字符串大小写样式
+(regex-replace "(?i)fo+" "Foo bar" "frob" :preserve-case t)
+;;-> "Frob bar" ;-> T
+(regex-replace-all "(?i)fo+" "foo Fooo FOOOO bar" 
+                   "frob" :preserve-case t)
+;;-> "frob Frob FROB bar" ;-> T
+  #+END_SRC
+*** Compare
+- 大小写敏感 : string[= /= < > <= >=]
+- 不敏感 : string-[equal not-equal lessp greaterp not-greaterp not-lessp]
+- 前缀 和 后缀 : Imp.(prefixp suffixp)
+  #+BEGIN_SRC lisp
+(defun prefixp (start s &key (test #'string=))
+  (let ((m (mismatch start s :test test)))
+    (or (null m) (= m (length start)))))
+
+
+(prefixp "foo" "foobarbaz" ) ;-> T
+(prefixp "foo" "foo" ) ;-> T
+(prefixp "foo" "barbaz" ) ;-> NIL
+
+(defun suffixp (end s &key (test #'string=))
+  (case (mismatch end s :from-end t :test test)
+    ((0 nil) t)
+    (t nil)))
+
+(suffixp "baz" "foobaz" ) ;-> T
+
+  #+END_SRC
+*** Regex
+- Lib:cl-ppcre
+*** Coding
+- Lib:[[https://github.com/cl-babel/babel][babel]]
+
+*** Other
+- string-[upcase downcase capitalize]
+  #+BEGIN_SRC lisp
+(string-upcase "abcde") ;->  "ABCDE"
+(string-downcase "ABCDE") ;->  "abcde"
+(string-capitalize "hello Good MORING") ;-> "Hello Good Moring"
+(string-capitalize 'kludgy-hash-search) ;->  "Kludgy-Hash-Search"
+(string-capitalize "DON'T!") ;->  "Don'T!" ;: not "Don't!"  
+  #+END_SRC
+* 基础
+** 变量 和 常量
+Variable 变量
+- Global (Dynamic) : defparameter defvar  (命名约定: ~*name*~)
+  #+BEGIN_SRC lisp
+;;; defparameter
+(defparameter *foo* 5)
+(defparameter *foo* (+ 1 2))            ; *foo* == 3
+
+;;; defvar
+(defvar *bar* 5) ; *bar* = 5
+;; 重定义不改变之前定义时的值
+(defvar *bar* 6) ; *bar* == 5
+;; 定义时可以不设置值
+(defvar *bar*) ; *bar* == Unbound
+    #+END_SRC      
+- Local : let let*(可引用变量列表中早先引入的变量)
+  #+BEGIN_SRC lisp
+;; let
+(let ((a 5) 􏰅
+      (b 6))
+  (+ a b))
+;;-> 11
+
+;; let*
+(let* ((a 5)
+       (b (+ a 2)))
+  b)
+;;-> 7
+      #+END_SRC
+
+Constant 常量
+- defconstant (命名约定: ~+name+~)
+  #+BEGIN_SRC lisp
+(defconstant +name+ initial-value-form (doucmentation-string))  
+  #+END_SRC
+
+
+Dynamic (Special) Variable  (!!! 注意命名)
+- all global variable are dynamic variable  
+- Lexical scope & Dynamic extent variable 词法范围 和 动态作用域 变量
+  #+BEGIN_SRC lisp
+;; Lexical scope variable
+(let ((x 3))
+  (defun test () x))
+(test)                ;-> 3
+(let ((x 5)) (test))  ;-> 3
+
+;; Dynamic extent variable
+(defvar *special* 3)
+(defun test () *special*)
+(test) ;-> 3
+(let ((*special* 5)) (test)) ;-> 5
+
+
+;; !!! 注意命名 : 否则难以分清 可导致使用错误
+(defparameter x 3)
+
+(defun test () x)
+(test) ;-> 3
+(let ((x 0)) (test))  ;-> 0
+
+(let ((x 1))
+  (defun test () x))
+(test) ;-> 3
+(let ((x 0)) (test)) ;-> 0
+    #+END_SRC
+- Special: (declare (special ..))
+  #+BEGIN_SRC lisp
+(let ((y 1))
+  (defun test () y))
+(test) ;-> 1
+(let ((y 1))
+  (defun test ()
+    (declare (special y))
+    y))
+(test)  ;-> Error: Unbound y
+(progn (defparameter y 3)
+       (test))
+;;-> 3
+  #+END_SRC
+
+** 函数
 - Lambda : 匿名函数
   #+BEGIN_SRC lisp
 (lambda (n) (/ n 2))                   
@@ -123,7 +506,7 @@ Live 活着的
 - 函数 既可以作为 定义抽象的方式 来产生抽象 也可以 作为一个抽象来使用
   - Higher-Order (first-class fun) : as paramater or return-value
 
-** Call
+*** Call
 - apply | funcall
   #+BEGIN_SRC lisp
 ;; (最后一个参数需要是一个列表)
@@ -133,24 +516,23 @@ Live 活着的
 
 (funcall #'+ 1 3 5)    ;-> 9
 (funcall #'car '(x y)) ;-> X
-
   #+END_SRC
-- 局部函数的调用问题
-  - 先局部(FLET LABELS) 后全局(DEFUN)
-  - 若使用 符号 而不是#' 则 引用全局函数
-  - Ex.
-    #+BEGIN_SRC lisp
-  (defun foo (x) (+ x 42)) ;-> FOO
-  (flet ((foo (x) (1+ x)))
-    (list (funcall 'foo 0) ; 全局
-          (funcall #'foo 0) ; 局部
-  ))
-  ;;-> (42 1)
-  (funcall #'foo 0) ;-> 42 
+- 局部函数的调用问题 : 先 局部  若使用 符号 而不是 #' 则 全局
+  #+BEGIN_SRC lisp
+(defun foo (x) (+ x 42))
+(foo 0) ;-> 42
+(funcall 'foo 0)                        ;-> 42
+(funcall #'foo 0) ;-> 42
 
+(flet ((foo (x) (1+ x)))
+  (list (foo 0)                         ; Local
+        (funcall 'foo 0)                ; Global
+        (funcall #'foo 0)               ; Local
+        ))
+;;-> (1 42 1)
   #+END_SRC
-** Paramater list
-- &optional
+*** Paramater list
+- &optional 可选
   #+BEGIN_SRC lisp
 ;;; Optional
 (defun foo (a b &optional c d) (list a b c d))
@@ -158,7 +540,7 @@ Live 活着的
 (foo 1 2 3)   ;-> (1 2 3 NIL)
 (foo 1 2 3 4) ;-> (1 2 3 4)  
   #+END_SRC
-- &key
+- &key 关键字
   #+BEGIN_SRC lisp
 ;;; Keyword 
 (defun foo (&key a b (c 3)) (list a b c))
@@ -175,7 +557,7 @@ Live 活着的
            (list bar))
 (baz 'foo 23) ;-> (23)
   #+END_SRC
-- Default value
+- Default value 默认值
   #+BEGIN_SRC lisp
 ;;; Default Value
 (defun foo (a &optional (b 10)) (list a b))
@@ -184,8 +566,10 @@ Live 活着的
 
 ;; value 可以是任何 lisp 表达式
 
-;; ? 可依赖前面的参数
-(defun make-rectangle (width &optional (height width)) ...)
+;; 可依赖前面的参数
+(defun foo (a &optional (b a)) (list a b))
+(foo 1 2) ;-> (1 2)
+(foo 1) ;-> (1 1)
   #+END_SRC
 - supplied-p : 用于判断是否提供了实参
   #+BEGIN_SRC lisp
@@ -206,79 +590,90 @@ Live 活着的
 ;;; auxiliary
 (defun average (&rest args
                 &aux (len (length args)))
-  (/ (reduce #'+ args) len 1.0))  
+  (/ (reduce #'+ args) len 1.0))
+(average 1 2 3) ;-> 2.0
   #+END_SRC
 - &allow-other-keys : 允许未定义的关键字参数 并收集于此
-- ---
-- 参数数量上限
-  - call-arguments-limit 
-  - lambda-parameters-limit
-- ---
-- 组合使用问题
-  - Order: required &optional &rest &key
-    - &rest and &key
-      #+BEGIN_SRC lisp
-;;; &rest + &key : 只能使用key
+
+参数数量上限  
+- call-arguments-limit
+- lambda-parameters-limit
+
+组合使用问题
+- Order: required &optional &rest &key
+  - &rest and &key
+    #+BEGIN_SRC lisp
+  ;;; &rest + &key : 只能使用key
 (defun foo (&rest rest &key a b c) (list rest a b c))
 (foo :a 1 :b 2 :c 3) ;-> ((:A 1 :B 2 :C 3) 1 2 3)
 (foo :a 1) ;-> ((:A 1) 1 NIL NIL)
 (foo 1 2) ;-> Error
 (foo 1 2 :a 1) ;-> Error
 (foo :a 2 1 2) ;-> Error
-      #+END_SRC
-  - Avoid
-    - &optional + &key
-      #+BEGIN_SRC lisp
-  (defun foo (x &optional y &key z) (list x y z))
-  (foo 1 2 :z 3) ;-> (1 2 3)
-  (foo 1)        ;-> (1 nil nil) 
-  (foo 1 :z 3)   ;-> Error
-  (foo 1 :z :z 3) ;-> (1 :Z 3)
-      #+END_SRC
-** Return Value
+    #+END_SRC
+- Avoid
+  - &optional + &key
+    #+BEGIN_SRC lisp
+(defun foo (x &optional y &key z) (list x y z))
+(foo 1 2 :z 3) ;-> (1 2 3)
+(foo 1)        ;-> (1 nil nil) 
+(foo 1 :z 3)   ;-> Error: Incorrect keyword arguments in (3) .
+(foo 1 :z :z 3) ;-> (1 :Z 3)
+    #+END_SRC
+*** Return Value
 - 返回值 Return value : 默认返回最后一个表达式的值
-- 返回多值 Return Multi-Values : values values-list (多返回值作为参数 只有第一个被使用)
+- 返回多值 Return Multi-Values : values values-list
   #+BEGIN_SRC lisp
-(values 'a nil (+ 1 2));;-> a , -> nil , -> 3
-((lambda () 
-   ((lambda () (values 1 2))))) ;;-> 1 , -> 2
-(let ((x (values 1 2))) x) ;-> 1
-
-;;; (values) 放在表达式最后来不返回值
-(defun my ()
-  (format t "~a" 1))
-;;-> 1
-;;-> NIL
-(defun my ()
-  (format t "~a" 1)
-  (values))
-;;-> 1
-
-;;; 列表作为参数
+;;; Return Multi-Values
+(values 'a nil (+ 1 2));;-> a ;-> nil ;-> 3
+;; 列表作为参数
 (values-list '(1 2))
-;;-> 1
-;;-> 2
+;;-> 1 ;-> 2
+
+;; 返回值 传递
+((lambda () 
+   ((lambda () (values 1 2))))) ;;-> 1 ;-> 2
+;; 多返回值作为参数 只有第一个被使用
+((lambda (x) x)
+  (values 1 2)) ;-> 1
+
+;; 若不需要使用返回值
+((lambda () (format t "~a" 1)))
+;;-> 1 ;-> NIL
+((lambda ()
+   (format t "~a" 1)
+   (values)))
+;;-> 1 ;-> ; No value
+
+;; (values) 不是 不返回值
+(+) ;->0
+(+ (values)) ; Error: The value NIL is not of the expected type NUMBER.
+(null (values)) ;-> T
   #+END_SRC
 - 处理多返回值
   - 多值绑定 : multipel-value-bind
     #+BEGIN_SRC lisp
-(multiple-value-bind (a b) (values 2 3) (* a b))   ;-> 6
-(multiple-value-bind (a b) (values 2 3 2) (* a b)) ;-> 6
-(multiple-value-bind (a b c) (values 2 3) c)       ;-> nil
+(multiple-value-bind (a b) (values 2 3)
+  (* a b))   ;-> 6
+(multiple-value-bind (a b) (values 2 3 2)
+  (* a b)) ;-> 6
+(multiple-value-bind (a b c) (values 2 3)
+  c)       ;-> nil
     #+END_SRC
   - 多值作为函数参数 : multiple-value-call
     #+BEGIN_SRC lisp
+(funcall #'+ (values 1 2 3)) ;->1
+(multiple-value-call #'+ (values 1 2 3)) ;-> 6
+
 (funcall #'+ (values 1 2 3) (values 4 5 6)) ;-> 5
 (multiple-value-call #'+ (values 1 2 3) (values 4 5 6)) ;-> 21
-
-(multiple-value-call #'+ (values 1 2 3)) ;-> 6
     #+END_SRC
-  - 多值转列表 : multiple-value-list
+  - 多值->列表 : multiple-value-list
     #+BEGIN_SRC lisp
-  (multiple-value-list (values 'a 'b 'c))
+(multiple-value-list (values 'a 'b 'c)) ;-> (A B C)
     #+END_SRC
 
-** Closures
+*** Closures
 - 闭包 Closures : 捕捉创建时的环境信息 : 捕获的是变量 不是值
   #+BEGIN_SRC lisp
 (setf fn (let ((i 3)) #'(lambda (x) (+ x i))))
@@ -294,7 +689,6 @@ Live 活着的
   #+END_SRC
 
 
-
-* 特殊操作符
-* 宏
-* 控制流
+** 特殊操作符
+** 宏
+** 控制流

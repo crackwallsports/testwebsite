@@ -16,7 +16,7 @@
   "Common Lisp Note - 笔记整理 (草稿)"
   (div ()
        ""
-       (span (:class "badge badge-success") " 更新-2019.2.21")))
+       (span (:class "badge badge-success") " 更新-2019.2.24")))
  ("2019 1 8"
   "/testwebsite/articles/box-ImageMagick-note.html"
   "ImageMagick Note - 笔记整理 (草稿)"

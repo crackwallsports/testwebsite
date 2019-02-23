@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-02-21 Thu 23:39 -->
+<!-- 2019-02-24 Sun 00:12 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Common Lisp - 笔记整理 (草稿)</title>
@@ -62,35 +62,63 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgabcb1a8">1. 准备</a></li>
-<li><a href="#org229be13">2. 开始</a>
+<li><a href="#org31f91a1">1. 准备</a></li>
+<li><a href="#orgd07b6bd">2. 开始</a>
 <ul>
-<li><a href="#orgfda2aba">2.1. 自身</a>
+<li><a href="#org6fd6273">2.1. 自身</a>
 <ul>
-<li><a href="#orgac65a8b">2.1.1. Comment 注释</a></li>
+<li><a href="#orgdfc1e8a">2.1.1. Comment 注释</a></li>
 </ul>
 </li>
-<li><a href="#org6392722">2.2. 表示 和 操作</a></li>
+<li><a href="#org729be61">2.2. 表示 和 操作</a></li>
 </ul>
 </li>
-<li><a href="#org76b3cfe">3. 函数</a>
+<li><a href="#org0acaaa6">3. 表示</a>
 <ul>
-<li><a href="#orgb699169">3.1. Call</a></li>
-<li><a href="#orga139935">3.2. Paramater list</a></li>
-<li><a href="#org7a1a3a2">3.3. Return Value</a></li>
-<li><a href="#orgbd94d26">3.4. Closures</a></li>
+<li><a href="#org3268adf">3.1. Number 数</a>
+<ul>
+<li><a href="#org10da4db">3.1.1. Rational 有理数</a></li>
+<li><a href="#orga5544de">3.1.2. Float 浮点数</a></li>
+<li><a href="#org1cd3f71">3.1.3. Complex 复数</a></li>
 </ul>
 </li>
-<li><a href="#org9410d2e">4. 特殊操作符</a></li>
-<li><a href="#orgb4f58f5">5. 宏</a></li>
-<li><a href="#org4f4de29">6. 控制流</a></li>
+<li><a href="#org71dfb12">3.2. Character 字符</a></li>
+<li><a href="#org3f09079">3.3. String 字符串</a>
+<ul>
+<li><a href="#org057c326">3.3.1. GET</a></li>
+<li><a href="#org23d2cab">3.3.2. Split &amp; Concat &amp; Join &amp; Trim</a></li>
+<li><a href="#org226c826">3.3.3. Search &amp; Replace</a></li>
+<li><a href="#org6687de6">3.3.4. Compare</a></li>
+<li><a href="#orgce6d446">3.3.5. Regex</a></li>
+<li><a href="#org2a38092">3.3.6. Coding</a></li>
+<li><a href="#org500e5c9">3.3.7. Other</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge190e6b">4. 基础</a>
+<ul>
+<li><a href="#org6e0eb9b">4.1. 变量 和 常量</a></li>
+<li><a href="#org2538d2f">4.2. 函数</a>
+<ul>
+<li><a href="#org31e32d2">4.2.1. Call</a></li>
+<li><a href="#orgbcd442a">4.2.2. Paramater list</a></li>
+<li><a href="#org08c7317">4.2.3. Return Value</a></li>
+<li><a href="#org97219f3">4.2.4. Closures</a></li>
+</ul>
+</li>
+<li><a href="#org3a65a93">4.3. 特殊操作符</a></li>
+<li><a href="#orge0d0b72">4.4. 宏</a></li>
+<li><a href="#org27fd10a">4.5. 控制流</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgabcb1a8" class="outline-2">
-<h2 id="orgabcb1a8"><span class="section-number-2">1</span> 准备</h2>
+<div id="outline-container-org31f91a1" class="outline-2">
+<h2 id="org31f91a1"><span class="section-number-2">1</span> 准备</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>实现
@@ -108,8 +136,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org229be13" class="outline-2">
-<h2 id="org229be13"><span class="section-number-2">2</span> 开始</h2>
+<div id="outline-container-orgd07b6bd" class="outline-2">
+<h2 id="orgd07b6bd"><span class="section-number-2">2</span> 开始</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Live 活着的
@@ -120,8 +148,8 @@ Live 活着的
 </ul>
 </div>
 
-<div id="outline-container-orgfda2aba" class="outline-3">
-<h3 id="orgfda2aba"><span class="section-number-3">2.1</span> 自身</h3>
+<div id="outline-container-org6fd6273" class="outline-3">
+<h3 id="org6fd6273"><span class="section-number-3">2.1</span> 自身</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>语法 : S-表达式 :
@@ -144,8 +172,8 @@ Live 活着的
 </ul>
 </div>
 
-<div id="outline-container-orgac65a8b" class="outline-4">
-<h4 id="orgac65a8b"><span class="section-number-4">2.1.1</span> Comment 注释</h4>
+<div id="outline-container-orgdfc1e8a" class="outline-4">
+<h4 id="orgdfc1e8a"><span class="section-number-4">2.1.1</span> Comment 注释</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;;; </span><span style="color: #8B8989; font-style: italic;">File header</span>
@@ -168,8 +196,8 @@ Live 活着的
 </div>
 </div>
 
-<div id="outline-container-org6392722" class="outline-3">
-<h3 id="org6392722"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
+<div id="outline-container-org729be61" class="outline-3">
+<h3 id="org729be61"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>表示
@@ -212,9 +240,574 @@ Live 活着的
 </div>
 </div>
 
-<div id="outline-container-org76b3cfe" class="outline-2">
-<h2 id="org76b3cfe"><span class="section-number-2">3</span> 函数</h2>
+<div id="outline-container-org0acaaa6" class="outline-2">
+<h2 id="org0acaaa6"><span class="section-number-2">3</span> 表示</h2>
 <div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org3268adf" class="outline-3">
+<h3 id="org3268adf"><span class="section-number-3">3.1</span> Number 数</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-org10da4db" class="outline-4">
+<h4 id="org10da4db"><span class="section-number-4">3.1.1</span> Rational 有理数</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li><p>
+Literal
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Integer</span>
+123         <span style="color: #8B8989; font-style: italic;">;-&gt; 123</span>
+-123        <span style="color: #8B8989; font-style: italic;">;-&gt; -123</span>
+1.          <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+15511210043330985984000000 <span style="color: #8B8989; font-style: italic;">; probably a bignum</span>
+
+#b100       <span style="color: #8B8989; font-style: italic;">;-&gt; 4</span>
+#o777       <span style="color: #8B8989; font-style: italic;">;-&gt; 511</span>
+#xD         <span style="color: #8B8989; font-style: italic;">;-&gt; 13</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">#nr : base 2~36</span>
+#36rABC     <span style="color: #8B8989; font-style: italic;">;-&gt; 13368 </span>
+  
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Ratio</span>
+3/7         <span style="color: #8B8989; font-style: italic;">;-&gt; 3/7</span>
+4/6         <span style="color: #8B8989; font-style: italic;">;-&gt; 2/3</span>
+6/3         <span style="color: #8B8989; font-style: italic;">;-&gt; 2</span>
+#b1010/1011 <span style="color: #8B8989; font-style: italic;">;-&gt; 10/11  </span>
+</pre>
+</div></li>
+</ul>
+</div>
+
+
+<ol class="org-ol"><li><a id="org83b6b73"></a>Integer 整数<br><div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li><p>
+类型 : fixnum bignum
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>typep 1 'fixnum<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; t</span>
+<span style="color: #8b0000;">(</span>typep <span style="color: #006400;">(</span>1+ most-positive-fixnum<span style="color: #006400;">)</span> 'bignum<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; t</span>
+</pre>
+</div></li>
+<li>整数大小无限制 : 内部会自动在必要时分配存储 从而转换到大数表示</li>
+<li><p>
+fixnum范围
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>list most-positive-fixnum
+      most-negative-fixnum<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">( 1152921504606846975</span>
+<span style="color: #8B8989; font-style: italic;">;;  </span><span style="color: #8B8989; font-style: italic;">-1152921504606846976)</span>
+
+<span style="color: #8b0000;">(</span>expt 2 60<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1152921504606846976</span>
+<span style="color: #8b0000;">(</span>expt 2 61<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 2305843009213693952</span>
+</pre>
+</div></li>
+</ul>
+</div></li>
+
+<li><a id="org5950688"></a>Ratio 比值<br><div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>Rational canonicalization 规约化 : 6/3 -&gt; 2, 12/6 -&gt; 4/3</li>
+<li><p>
+GET : numerator denominator
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>numerator 3/5<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span>denominator 3/5<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+</pre>
+</div></li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orga5544de" class="outline-4">
+<h4 id="orga5544de"><span class="section-number-4">3.1.2</span> Float 浮点数</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>实现依赖 [CCL]</li>
+<li>类型 (precisions, sizes) :  s(short) f(float) d(double) l(long)</li>
+<li><p>
+Literal
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">1.0      <span style="color: #8B8989; font-style: italic;">;-&gt; 1.0</span>
+1e0 1s0 1f0      <span style="color: #8B8989; font-style: italic;">;-&gt; 1.0</span>
+1d0      <span style="color: #8B8989; font-style: italic;">;-&gt; 1.0d0</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">float</span>
+0.123    <span style="color: #8B8989; font-style: italic;">;-&gt; 0.123</span>
+.123     <span style="color: #8B8989; font-style: italic;">;-&gt; 0.123</span>
+123e-3   <span style="color: #8B8989; font-style: italic;">;-&gt; 0.123</span>
+123E-3   <span style="color: #8B8989; font-style: italic;">;-&gt; 0.123</span>
+0.123e20 <span style="color: #8B8989; font-style: italic;">;-&gt; 1.23e+19</span>
+1.33232332329032 <span style="color: #8B8989; font-style: italic;">;-&gt; 1.3323233</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">doble</span>
+123d23   <span style="color: #8B8989; font-style: italic;">;-&gt; 1.23d+25</span>
+1.33232332329032d0 <span style="color: #8B8989; font-style: italic;">;-&gt; 1.33232332329032D0</span>
+
+2.0/3    <span style="color: #8B8989; font-style: italic;">; Error: 2.0/3 &#34987;&#24403;&#20316;&#19968;&#20010; symbol name</span>
+2/3.0    <span style="color: #8B8989; font-style: italic;">;-&gt; 0.6666667</span>
+</pre>
+</div></li>
+<li><p>
+范围 (格式:m-s-f) : most-[positive|negative]-long-float
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>list most-negative-short-float
+      most-positive-short-float
+      most-negative-single-float
+      most-positive-single-float
+      most-negative-double-float
+      most-positive-double-float
+      most-negative-long-float
+      most-positive-long-float<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(-3.4028235E+38 3.4028235E+38</span>
+<span style="color: #8B8989; font-style: italic;">;;  </span><span style="color: #8B8989; font-style: italic;">-3.4028235E+38 3.4028235E+38</span>
+<span style="color: #8B8989; font-style: italic;">;;  </span><span style="color: #8B8989; font-style: italic;">-1.7976931348623157D+308 1.7976931348623157D+308</span>
+<span style="color: #8B8989; font-style: italic;">;;  </span><span style="color: #8B8989; font-style: italic;">-1.7976931348623157D+308 1.7976931348623157D+308)</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1cd3f71" class="outline-4">
+<h4 id="org1cd3f71"><span class="section-number-4">3.1.3</span> Complex 复数</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li><p>
+Literal
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">#c<span style="color: #8b0000;">(</span>2 1<span style="color: #8b0000;">)</span>       <span style="color: #8B8989; font-style: italic;">;-&gt; #c(2 1)</span>
+#c<span style="color: #8b0000;">(</span>2/3 3/4<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; #c(2/3 3/4)</span>
+
+#c<span style="color: #8b0000;">(</span>2 1.0<span style="color: #8b0000;">)</span>     <span style="color: #8B8989; font-style: italic;">;-&gt; #c(2.0 1.0)</span>
+#c<span style="color: #8b0000;">(</span>2.0 1.0d0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #c(2.0d0 1.0d0)</span>
+#c<span style="color: #8b0000;">(</span>1/2 1.0<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; #c(0.5 1.0)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">complex canonicalization</span>
+#c<span style="color: #8b0000;">(</span>3 0<span style="color: #8b0000;">)</span>       <span style="color: #8B8989; font-style: italic;">;-&gt; 3  </span>
+#c<span style="color: #8b0000;">(</span>1/2 0<span style="color: #8b0000;">)</span>     <span style="color: #8B8989; font-style: italic;">;-&gt; 1/2</span>
+#c<span style="color: #8b0000;">(</span>3.0 0.0<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; #c(3.0 0.0)</span>
+</pre>
+</div></li>
+<li>GET : realpart imgpart</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71dfb12" class="outline-3">
+<h3 id="org71dfb12"><span class="section-number-3">3.2</span> Character 字符</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><p>
+Literal
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">#\x      <span style="color: #8B8989; font-style: italic;">;-&gt; #\x</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">#\char-name for no-printing (:imp-d)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-| Space, Newline, Tab, Page, Rubout, Linefeed, Return, Backspace  </span>
+#\Space <span style="color: #8B8989; font-style: italic;">;-&gt; #\ </span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Unicode (&#23454;&#29616;&#20381;&#36182;)</span>
+#\U4E91  <span style="color: #8B8989; font-style: italic;">; [SBCL]</span>
+#\U+4E91 <span style="color: #8B8989; font-style: italic;">; [CCL]</span>
+<span style="color: #8B8989; font-style: italic;">;;</span>
+#\&#20113; <span style="color: #8B8989; font-style: italic;">;-&gt; #\U+4E91  </span>
+</pre>
+</div></li>
+<li>转换 (实现依赖)
+<ul class="org-ul">
+<li>code-char char-code</li>
+<li><p>
+char-name name-char
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>char-name #\return<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Return"</span>
+<span style="color: #8b0000;">(</span>char-name #\U+0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Null"</span>
+<span style="color: #8b0000;">(</span>char-name #\U+123<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Latin_Small_Letter_G_With_Cedilla"</span>
+
+<span style="color: #8b0000;">(</span>name-char <span style="color: #61CE3C;">"Return"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #\Return</span>
+<span style="color: #8b0000;">(</span>name-char <span style="color: #61CE3C;">"Null"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #\Null</span>
+<span style="color: #8b0000;">(</span>name-char <span style="color: #61CE3C;">"Latin_Small_Letter_G_With_Cedilla"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; #\Latin_Small_Letter_G_With_Cedilla</span>
+</pre>
+</div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f09079" class="outline-3">
+<h3 id="org3f09079"><span class="section-number-3">3.3</span> String 字符串</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>表示基于 : Vector-Char : 字符向量</li>
+<li><p>
+创建 : Literal | make-string | make-array(:e-t='character)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #61CE3C;">"String"</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">\ : &#29992;&#20110;&#36716;&#20041; "" \ </span>
+<span style="color: #61CE3C;">"Str\"ing"</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Str\"ing"</span>
+<span style="color: #61CE3C;">"Str\\ing"</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Str\\ing"</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#19981;&#25903;&#25345;&#25554;&#20540;&#35821;&#27861; &#21644; \n(&#25442;&#34892;)&#31561;&#36716;&#20041;&#35821;&#27861;</span>
+<span style="color: #61CE3C;">"Stri\ng"</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; "String" </span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Make</span>
+<span style="color: #8b0000;">(</span>make-string 3 <span style="color: #4c83ff;">:initial-element</span> #\c<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "ccc"</span>
+<span style="color: #8b0000;">(</span>make-array 5 <span style="color: #4c83ff;">:fill-pointer</span> 0 <span style="color: #4c83ff;">:adjustable</span> <span style="color: #4c83ff;">:element-type</span> 'character<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ""</span>
+</pre>
+</div></li>
+<li><p>
+字面值是否可变 ? 实现依赖
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>eq <span style="color: #61CE3C;">"abc"</span> <span style="color: #61CE3C;">"abc"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; NIL</span>
+<span style="color: #8b0000;">(</span>setf s0 <span style="color: #61CE3C;">"abc"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>setf s1 <span style="color: #61CE3C;">"abc"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>setf <span style="color: #006400;">(</span>char s0 0<span style="color: #006400;">)</span> #\1<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>list s0 s1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">("1bc" "abc")</span>
+
+<span style="color: #8b0000;">(</span>setf s0 <span style="color: #61CE3C;">"abc"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>setf s1 s0<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>setf <span style="color: #006400;">(</span>char s0 0<span style="color: #006400;">)</span> #\1<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>list s0 s1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">("1bc" "1bc")</span>
+</pre>
+</div></li>
+</ul>
+</div>
+
+<div id="outline-container-org057c326" class="outline-4">
+<h4 id="org057c326"><span class="section-number-4">3.3.1</span> GET</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li><p>
+单个元素 : char Vec.schar Arr.aref Seq.elt
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>char <span style="color: #61CE3C;">"abc"</span> 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #\b</span>
+<span style="color: #8b0000;">(</span>char <span style="color: #61CE3C;">"&#20113;"</span> 0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #\U+4E91</span>
+</pre>
+</div></li>
+<li>子字符串 : Seq.subseq</li>
+<li><p>
+长度 : Seq.length
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>length <span style="color: #61CE3C;">"1234567"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 7</span>
+<span style="color: #8b0000;">(</span>length <span style="color: #61CE3C;">"&#19968;&#20108;&#19977;&#22235;&#20116;&#20845;&#19971;"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 7</span>
+<span style="color: #8b0000;">(</span>length <span style="color: #61CE3C;">"&#196;&#214;&#220;1"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 4</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23d2cab" class="outline-4">
+<h4 id="org23d2cab"><span class="section-number-4">3.3.2</span> Split &amp; Concat &amp; Join &amp; Trim</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li><p>
+分隔 Split : cl-ppcre:split
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">""</span> <span style="color: #61CE3C;">"hel lo"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ("h" "e" "l" " " "l" "o")</span>
+
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">"\\s+"</span> <span style="color: #61CE3C;">"foo   bar baz frob"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("foo" "bar" "baz" "frob")</span>
+<span style="color: #8b0000;">(</span>ppcre:split <span style="color: #61CE3C;">"(\\s+)"</span> <span style="color: #61CE3C;">"foo   bar baz frob"</span> <span style="color: #4c83ff;">:with-registers-p</span> t<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("foo" "   " "bar" " " "baz" " " "frob")</span>
+
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">"(,)|(;)"</span> <span style="color: #61CE3C;">"foo,bar;baz"</span> <span style="color: #4c83ff;">:with-registers-p</span> t<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("foo" "," NIL "bar" NIL ";" "baz") ;; ("," nil == mach(,) nomach(;))</span>
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">"(,)|(;)"</span> <span style="color: #61CE3C;">"foo,bar;baz"</span> <span style="color: #4c83ff;">:with-registers-p</span> t <span style="color: #4c83ff;">:omit-unmatched-p</span> t<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("foo" "," "bar" ";" "baz")</span>
+
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">":"</span> <span style="color: #61CE3C;">"a:b:c:d:e:f:g::"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ("a" "b" "c" "d" "e" "f" "g")</span>
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">":"</span> <span style="color: #61CE3C;">"a:b:c:d:e:f:g::"</span> <span style="color: #4c83ff;">:limit</span> 0<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("a" "b" "c" "d" "e" "f" "g")</span>
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">":"</span> <span style="color: #61CE3C;">"a:b:c:d:e:f:g::"</span> <span style="color: #4c83ff;">:limit</span> 2<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("a" "b:c:d:e:f:g::")</span>
+<span style="color: #8b0000;">(</span>split <span style="color: #61CE3C;">":"</span> <span style="color: #61CE3C;">"a:b:c:d:e:f:g::"</span> <span style="color: #4c83ff;">:limit</span> 3<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ("a" "b" "c:d:e:f:g::") </span>
+</pre>
+</div></li>
+<li><p>
+连接 Concat : Imp.concat
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">concat</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> s<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>apply #'concatenate 'string s<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+加入 Join : Imp.join
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">join</span> <span style="color: #006400;">(</span>strs <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>separator <span style="color: #61CE3C;">" "</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>reduce <span style="color: #ff1493;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ffff00;">(</span>acc next<span style="color: #ffff00;">)</span>
+            <span style="color: #ffff00;">(</span>format nil <span style="color: #61CE3C;">"~a~a~a"</span> acc separator next<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+       strs<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+</pre>
+</div></li>
+<li><p>
+修剪 Trim : string-trim-[left right]
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>string-trim <span style="color: #61CE3C;">"abc"</span> <span style="color: #61CE3C;">"abcaakaaakabcaaa"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "kaaak"</span>
+<span style="color: #8b0000;">(</span>string-trim '<span style="color: #006400;">(</span>#\Space #\Tab #\Newline<span style="color: #006400;">)</span> <span style="color: #61CE3C;">" garbanzo beans"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "garbanzo beans"</span>
+<span style="color: #8b0000;">(</span>string-trim <span style="color: #61CE3C;">" (*)"</span> <span style="color: #61CE3C;">" ( *three (silly) words* ) "</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "three (silly) words"</span>
+
+<span style="color: #8b0000;">(</span>string-left-trim <span style="color: #61CE3C;">" (*)"</span> <span style="color: #61CE3C;">" ( *three (silly) words* ) "</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "three (silly) words* ) "</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org226c826" class="outline-4">
+<h4 id="org226c826"><span class="section-number-4">3.3.3</span> Search &amp; Replace</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li><p>
+匹配 : Seq.(find position) Seq.(search mismatch) cl-ppcre:(scan-[to-strings] all-matches-[as-strings])
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#36820;&#22238; &#39033; &#25110; NIL</span>
+<span style="color: #8b0000;">(</span>find #\a <span style="color: #61CE3C;">"foobarbaz"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #\a</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#36820;&#22238; &#20301;&#32622; &#25110; NIL</span>
+<span style="color: #8b0000;">(</span>position #\a <span style="color: #61CE3C;">"foobarbaz"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 4</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#21305;&#37197;&#30340;&#31532;&#19968;&#20010;&#20301;&#32622;</span>
+<span style="color: #8b0000;">(</span>search <span style="color: #61CE3C;">"bar"</span> <span style="color: #61CE3C;">"foobarbaz"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span>search <span style="color: #61CE3C;">"Bar"</span> <span style="color: #61CE3C;">"foobarbaz"</span> <span style="color: #4c83ff;">:test</span> #'string=<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; NIL</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#19981;&#21305;&#37197;&#30340;&#31532;&#19968;&#20010;&#20301;&#32622;</span>
+<span style="color: #8b0000;">(</span>mismatch <span style="color: #61CE3C;">"foobarbaz"</span> <span style="color: #61CE3C;">"foom"</span><span style="color: #8b0000;">)</span>            <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#19981;&#21305;&#37197;&#30340;&#31532;&#19968;&#20010;&#20301;&#32622;&#32034;&#24341;+1</span>
+<span style="color: #8b0000;">(</span>mismatch <span style="color: #61CE3C;">"foobarbaz"</span> <span style="color: #61CE3C;">"baz"</span> <span style="color: #4c83ff;">:from-end</span> t<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">scan -&gt; match:(start end) register-match:(start end)</span>
+<span style="color: #8b0000;">(</span>scan <span style="color: #61CE3C;">"(a)*b"</span> <span style="color: #61CE3C;">"xaaabd"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1 ;-&gt; 5 ;-&gt; #(3) ;-&gt; #(4)</span>
+<span style="color: #8b0000;">(</span>scan-to-strings <span style="color: #61CE3C;">"(([</span><span style="color: #61CE3C;">^</span><span style="color: #61CE3C;">b])*)b"</span> <span style="color: #61CE3C;">"aaabd"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "aaab" ;-&gt; #("aaa" "a")</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">all-matches -&gt; match:(start end)</span>
+<span style="color: #8b0000;">(</span>all-matches <span style="color: #61CE3C;">"a"</span> <span style="color: #61CE3C;">"foo bar baz"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (5 6 9 10)</span>
+<span style="color: #8b0000;">(</span>all-matches-as-strings <span style="color: #61CE3C;">"\\d"</span> <span style="color: #61CE3C;">"bar 3 baz 5"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ("3" "5")</span>
+</pre>
+</div></li>
+<li><p>
+替代 : Seq.substitute cl-ppcre:regex-replace-[all]  (破坏 : Seq.replace Seq.fill)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>substitute #\c #\a <span style="color: #61CE3C;">"abababab"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "cbcbcbcb"</span>
+<span style="color: #8b0000;">(</span>substitute #\c #\A <span style="color: #61CE3C;">"abababab"</span> <span style="color: #4c83ff;">:test</span> 'string=<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "abababab"</span>
+
+<span style="color: #8b0000;">(</span>regex-replace <span style="color: #61CE3C;">"fo+"</span> <span style="color: #61CE3C;">"foo bar"</span> <span style="color: #61CE3C;">"frob"</span><span style="color: #8b0000;">)</span>     <span style="color: #8B8989; font-style: italic;">;-&gt; "frob bar" ;-&gt; T</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#24573;&#30053;&#22823;&#23567;&#20889;&#21305;&#37197;</span>
+<span style="color: #8b0000;">(</span>regex-replace <span style="color: #61CE3C;">"(?i)fo+"</span> <span style="color: #61CE3C;">"FOO bar"</span> <span style="color: #61CE3C;">"frob"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "frob bar" ;-&gt; T</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#20445;&#30041;&#30446;&#26631;&#23383;&#31526;&#20018;&#22823;&#23567;&#20889;&#26679;&#24335;</span>
+<span style="color: #8b0000;">(</span>regex-replace <span style="color: #61CE3C;">"(?i)fo+"</span> <span style="color: #61CE3C;">"Foo bar"</span> <span style="color: #61CE3C;">"frob"</span> <span style="color: #4c83ff;">:preserve-case</span> t<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; "Frob bar" ;-&gt; T</span>
+<span style="color: #8b0000;">(</span>regex-replace-all <span style="color: #61CE3C;">"(?i)fo+"</span> <span style="color: #61CE3C;">"foo Fooo FOOOO bar"</span> 
+                   <span style="color: #61CE3C;">"frob"</span> <span style="color: #4c83ff;">:preserve-case</span> t<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; "frob Frob FROB bar" ;-&gt; T</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6687de6" class="outline-4">
+<h4 id="org6687de6"><span class="section-number-4">3.3.4</span> Compare</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>大小写敏感 : string[= /= &lt; &gt; &lt;= &gt;=]</li>
+<li>不敏感 : string-[equal not-equal lessp greaterp not-greaterp not-lessp]</li>
+<li><p>
+前缀 和 后缀 : Imp.(prefixp suffixp)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">prefixp</span> <span style="color: #006400;">(</span>start s <span style="color: #afd8af;">&amp;key</span> <span style="color: #ff1493;">(</span>test #'string=<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span>m <span style="color: #00ff00;">(</span>mismatch start s <span style="color: #4c83ff;">:test</span> test<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+    <span style="color: #ff1493;">(</span>or <span style="color: #ffff00;">(</span>null m<span style="color: #ffff00;">)</span> <span style="color: #ffff00;">(</span>= m <span style="color: #00ff00;">(</span>length start<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+
+<span style="color: #8b0000;">(</span>prefixp <span style="color: #61CE3C;">"foo"</span> <span style="color: #61CE3C;">"foobarbaz"</span> <span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; T</span>
+<span style="color: #8b0000;">(</span>prefixp <span style="color: #61CE3C;">"foo"</span> <span style="color: #61CE3C;">"foo"</span> <span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; T</span>
+<span style="color: #8b0000;">(</span>prefixp <span style="color: #61CE3C;">"foo"</span> <span style="color: #61CE3C;">"barbaz"</span> <span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; NIL</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">suffixp</span> <span style="color: #006400;">(</span>end s <span style="color: #afd8af;">&amp;key</span> <span style="color: #ff1493;">(</span>test #'string=<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">case</span> <span style="color: #ff1493;">(</span>mismatch end s <span style="color: #4c83ff;">:from-end</span> t <span style="color: #4c83ff;">:test</span> test<span style="color: #ff1493;">)</span>
+    <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span>0 nil<span style="color: #ffff00;">)</span> t<span style="color: #ff1493;">)</span>
+    <span style="color: #ff1493;">(</span>t nil<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8b0000;">(</span>suffixp <span style="color: #61CE3C;">"baz"</span> <span style="color: #61CE3C;">"foobaz"</span> <span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; T</span>
+
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce6d446" class="outline-4">
+<h4 id="orgce6d446"><span class="section-number-4">3.3.5</span> Regex</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<ul class="org-ul">
+<li>Lib:cl-ppcre</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a38092" class="outline-4">
+<h4 id="org2a38092"><span class="section-number-4">3.3.6</span> Coding</h4>
+<div class="outline-text-4" id="text-3-3-6">
+<ul class="org-ul">
+<li>Lib:<a href="https://github.com/cl-babel/babel">babel</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org500e5c9" class="outline-4">
+<h4 id="org500e5c9"><span class="section-number-4">3.3.7</span> Other</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<ul class="org-ul">
+<li><p>
+string-[upcase downcase capitalize]
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>string-upcase <span style="color: #61CE3C;">"abcde"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "ABCDE"</span>
+<span style="color: #8b0000;">(</span>string-downcase <span style="color: #61CE3C;">"ABCDE"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "abcde"</span>
+<span style="color: #8b0000;">(</span>string-capitalize <span style="color: #61CE3C;">"hello Good MORING"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "Hello Good Moring"</span>
+<span style="color: #8b0000;">(</span>string-capitalize 'kludgy-hash-search<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "Kludgy-Hash-Search"</span>
+<span style="color: #8b0000;">(</span>string-capitalize <span style="color: #61CE3C;">"DON'T!"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  "Don'T!" ;: not "Don't!"  </span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge190e6b" class="outline-2">
+<h2 id="orge190e6b"><span class="section-number-2">4</span> 基础</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-org6e0eb9b" class="outline-3">
+<h3 id="org6e0eb9b"><span class="section-number-3">4.1</span> 变量 和 常量</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Variable 变量
+</p>
+<ul class="org-ul">
+<li><p>
+Global (Dynamic) : defparameter defvar  (命名约定: <code>*name*</code>)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">defparameter</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">*foo*</span> 5<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">*foo*</span> <span style="color: #006400;">(</span>+ 1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>            <span style="color: #8B8989; font-style: italic;">; *foo* == 3</span>
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">defvar</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defvar</span> <span style="color: #ff69b4;">*bar*</span> 5<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">; *bar* = 5</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#37325;&#23450;&#20041;&#19981;&#25913;&#21464;&#20043;&#21069;&#23450;&#20041;&#26102;&#30340;&#20540;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defvar</span> <span style="color: #ff69b4;">*bar*</span> 6<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">; *bar* == 5</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#23450;&#20041;&#26102;&#21487;&#20197;&#19981;&#35774;&#32622;&#20540;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defvar</span> <span style="color: #ff69b4;">*bar*</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">; *bar* == Unbound</span>
+</pre>
+</div></li>
+<li><p>
+Local : let let*(可引用变量列表中早先引入的变量)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">let</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 5<span style="color: #ff1493;">)</span> &#1113093;
+      <span style="color: #ff1493;">(</span>b 6<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>+ a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 11</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">let*</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let*</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 5<span style="color: #ff1493;">)</span>
+       <span style="color: #ff1493;">(</span>b <span style="color: #ffff00;">(</span>+ a 2<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  b<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 7</span>
+</pre>
+</div></li>
+</ul>
+
+<p>
+Constant 常量
+</p>
+<ul class="org-ul">
+<li><p>
+defconstant (命名约定: <code>+name+</code>)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defconstant</span> <span style="color: #ff69b4;">+name+</span> initial-value-form <span style="color: #006400;">(</span>doucmentation-string<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+</pre>
+</div></li>
+</ul>
+
+
+<p>
+Dynamic (Special) Variable  (!!! 注意命名)
+</p>
+<ul class="org-ul">
+<li>all global variable are dynamic variable</li>
+<li><p>
+Lexical scope &amp; Dynamic extent variable 词法范围 和 动态作用域 变量
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Lexical scope variable</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x 3<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #ff1493;">()</span> x<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span>                <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x 5<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>test<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Dynamic extent variable</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defvar</span> <span style="color: #ff69b4;">*special*</span> 3<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #006400;">()</span> *special*<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>*special* 5<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>test<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">!!! &#27880;&#24847;&#21629;&#21517; : &#21542;&#21017;&#38590;&#20197;&#20998;&#28165; &#21487;&#23548;&#33268;&#20351;&#29992;&#38169;&#35823;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">x</span> 3<span style="color: #8b0000;">)</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #006400;">()</span> x<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x 0<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>test<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; 0</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x 1<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #ff1493;">()</span> x<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 3</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x 0<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>test<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 0</span>
+</pre>
+</div></li>
+<li><p>
+Special: (declare (special ..))
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>y 1<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #ff1493;">()</span> y<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>y 1<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">test</span> <span style="color: #ff1493;">()</span>
+    <span style="color: #ff1493;">(</span><span style="color: #4c83ff;">declare</span> <span style="color: #ffff00;">(</span>special y<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span>
+    y<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>test<span style="color: #8b0000;">)</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; Error: Unbound y</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">progn</span> <span style="color: #006400;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">y</span> 3<span style="color: #006400;">)</span>
+       <span style="color: #006400;">(</span>test<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 3</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2538d2f" class="outline-3">
+<h3 id="org2538d2f"><span class="section-number-3">4.2</span> 函数</h3>
+<div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><p>
 Lambda : 匿名函数
@@ -279,9 +872,9 @@ Function Object: function (sugar:#')
 </ul>
 </div>
 
-<div id="outline-container-orgb699169" class="outline-3">
-<h3 id="orgb699169"><span class="section-number-3">3.1</span> Call</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org31e32d2" class="outline-4">
+<h4 id="org31e32d2"><span class="section-number-4">4.2.1</span> Call</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li><p>
 apply | funcall
@@ -294,37 +887,34 @@ apply | funcall
 
 <span style="color: #8b0000;">(</span>funcall #'+ 1 3 5<span style="color: #8b0000;">)</span>    <span style="color: #8B8989; font-style: italic;">;-&gt; 9</span>
 <span style="color: #8b0000;">(</span>funcall #'car '<span style="color: #006400;">(</span>x y<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; X</span>
-
 </pre>
 </div></li>
-<li>局部函数的调用问题
-<ul class="org-ul">
-<li>先局部(FLET LABELS) 后全局(DEFUN)</li>
-<li>若使用 符号 而不是#' 则 引用全局函数</li>
 <li><p>
-Ex.
+局部函数的调用问题 : 先 局部  若使用 符号 而不是 #' 则 全局
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp">  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>+ x 42<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; FOO</span>
-  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">flet</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>foo <span style="color: #ffff00;">(</span>x<span style="color: #ffff00;">)</span> <span style="color: #ffff00;">(</span>1+ x<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
-    <span style="color: #006400;">(</span>list <span style="color: #ff1493;">(</span>funcall 'foo 0<span style="color: #ff1493;">)</span> <span style="color: #8B8989; font-style: italic;">; &#20840;&#23616;</span>
-          <span style="color: #ff1493;">(</span>funcall #'foo 0<span style="color: #ff1493;">)</span> <span style="color: #8B8989; font-style: italic;">; &#23616;&#37096;</span>
-  <span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
-  <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (42 1)</span>
-  <span style="color: #8b0000;">(</span>funcall #'foo 0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 42 </span>
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>+ x 42<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 42</span>
+<span style="color: #8b0000;">(</span>funcall 'foo 0<span style="color: #8b0000;">)</span>                        <span style="color: #8B8989; font-style: italic;">;-&gt; 42</span>
+<span style="color: #8b0000;">(</span>funcall #'foo 0<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 42</span>
 
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">flet</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>foo <span style="color: #ffff00;">(</span>x<span style="color: #ffff00;">)</span> <span style="color: #ffff00;">(</span>1+ x<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list <span style="color: #ff1493;">(</span>foo 0<span style="color: #ff1493;">)</span>                         <span style="color: #8B8989; font-style: italic;">; Local</span>
+        <span style="color: #ff1493;">(</span>funcall 'foo 0<span style="color: #ff1493;">)</span>                <span style="color: #8B8989; font-style: italic;">; Global</span>
+        <span style="color: #ff1493;">(</span>funcall #'foo 0<span style="color: #ff1493;">)</span>               <span style="color: #8B8989; font-style: italic;">; Local</span>
+        <span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (1 42 1)</span>
 </pre>
 </div></li>
-</ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga139935" class="outline-3">
-<h3 id="orga139935"><span class="section-number-3">3.2</span> Paramater list</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-orgbcd442a" class="outline-4">
+<h4 id="orgbcd442a"><span class="section-number-4">4.2.2</span> Paramater list</h4>
+<div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li><p>
-&amp;optional
+&amp;optional 可选
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Optional</span>
@@ -335,7 +925,7 @@ Ex.
 </pre>
 </div></li>
 <li><p>
-&amp;key
+&amp;key 关键字
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Keyword </span>
@@ -355,7 +945,7 @@ Ex.
 </pre>
 </div></li>
 <li><p>
-Default value
+Default value 默认值
 </p>
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Default Value</span>
@@ -365,8 +955,10 @@ Default value
 
 <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">value &#21487;&#20197;&#26159;&#20219;&#20309; lisp &#34920;&#36798;&#24335;</span>
 
-<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">? &#21487;&#20381;&#36182;&#21069;&#38754;&#30340;&#21442;&#25968;</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">make-rectangle</span> <span style="color: #006400;">(</span>width <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>height width<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> ...<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#21487;&#20381;&#36182;&#21069;&#38754;&#30340;&#21442;&#25968;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>a <span style="color: #afd8af;">&amp;optional</span> <span style="color: #ff1493;">(</span>b a<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 1 2<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2)</span>
+<span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 1)</span>
 </pre>
 </div></li>
 <li><p>
@@ -396,18 +988,24 @@ supplied-p : 用于判断是否提供了实参
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">auxiliary</span>
 <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">average</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> args
                 <span style="color: #afd8af;">&amp;aux</span> <span style="color: #ff1493;">(</span>len <span style="color: #ffff00;">(</span>length args<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
-  <span style="color: #006400;">(</span>/ <span style="color: #ff1493;">(</span>reduce #'+ args<span style="color: #ff1493;">)</span> len 1.0<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+  <span style="color: #006400;">(</span>/ <span style="color: #ff1493;">(</span>reduce #'+ args<span style="color: #ff1493;">)</span> len 1.0<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>average 1 2 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 2.0</span>
 </pre>
 </div></li>
 <li>&amp;allow-other-keys : 允许未定义的关键字参数 并收集于此</li>
-<li>&#x2014;</li>
-<li>参数数量上限
+</ul>
+
+<p>
+参数数量上限  
+</p>
 <ul class="org-ul">
 <li>call-arguments-limit</li>
 <li>lambda-parameters-limit</li>
-</ul></li>
-<li>&#x2014;</li>
-<li>组合使用问题
+</ul>
+
+<p>
+组合使用问题
+</p>
 <ul class="org-ul">
 <li>Order: required &amp;optional &amp;rest &amp;key
 <ul class="org-ul">
@@ -415,7 +1013,7 @@ supplied-p : 用于判断是否提供了实参
 &amp;rest and &amp;key
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">&amp;rest + &amp;key : &#21482;&#33021;&#20351;&#29992;key</span>
+<pre class="src src-lisp">  <span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">&amp;rest + &amp;key : &#21482;&#33021;&#20351;&#29992;key</span>
 <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;rest</span> rest <span style="color: #afd8af;">&amp;key</span> a b c<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list rest a b c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
 <span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 1 <span style="color: #4c83ff;">:b</span> 2 <span style="color: #4c83ff;">:c</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ((:A 1 :B 2 :C 3) 1 2 3)</span>
 <span style="color: #8b0000;">(</span>foo <span style="color: #4c83ff;">:a</span> 1<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ((:A 1) 1 NIL NIL)</span>
@@ -431,46 +1029,51 @@ supplied-p : 用于判断是否提供了实参
 &amp;optional + &amp;key
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp">  <span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x <span style="color: #afd8af;">&amp;optional</span> y <span style="color: #afd8af;">&amp;key</span> z<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
-  <span style="color: #8b0000;">(</span>foo 1 2 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3)</span>
-  <span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span>        <span style="color: #8B8989; font-style: italic;">;-&gt; (1 nil nil) </span>
-  <span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; Error</span>
-  <span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 :Z 3)</span>
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">foo</span> <span style="color: #006400;">(</span>x <span style="color: #afd8af;">&amp;optional</span> y <span style="color: #afd8af;">&amp;key</span> z<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>list x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>foo 1 2 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 3)</span>
+<span style="color: #8b0000;">(</span>foo 1<span style="color: #8b0000;">)</span>        <span style="color: #8B8989; font-style: italic;">;-&gt; (1 nil nil) </span>
+<span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; Error: Incorrect keyword arguments in (3) .</span>
+<span style="color: #8b0000;">(</span>foo 1 <span style="color: #4c83ff;">:z</span> <span style="color: #4c83ff;">:z</span> 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 :Z 3)</span>
 </pre>
 </div></li>
-</ul></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7a1a3a2" class="outline-3">
-<h3 id="org7a1a3a2"><span class="section-number-3">3.3</span> Return Value</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org08c7317" class="outline-4">
+<h4 id="org08c7317"><span class="section-number-4">4.2.3</span> Return Value</h4>
+<div class="outline-text-4" id="text-4-2-3">
 <ul class="org-ul">
 <li>返回值 Return value : 默认返回最后一个表达式的值</li>
 <li><p>
-返回多值 Return Multi-Values : values values-list (多返回值作为参数 只有第一个被使用)
+返回多值 Return Multi-Values : values values-list
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp"><span style="color: #8b0000;">(</span>values 'a nil <span style="color: #006400;">(</span>+ 1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span><span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; a , -&gt; nil , -&gt; 3</span>
-<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span> 
-   <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #00ff00;">()</span> <span style="color: #00ff00;">(</span>values 1 2<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 , -&gt; 2</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>x <span style="color: #ffff00;">(</span>values 1 2<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> x<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
-
-<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">(values) &#25918;&#22312;&#34920;&#36798;&#24335;&#26368;&#21518;&#26469;&#19981;&#36820;&#22238;&#20540;</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my</span> <span style="color: #006400;">()</span>
-  <span style="color: #006400;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
-<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
-<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; NIL</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my</span> <span style="color: #006400;">()</span>
-  <span style="color: #006400;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #006400;">)</span>
-  <span style="color: #006400;">(</span>values<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
-<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
-
-<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">&#21015;&#34920;&#20316;&#20026;&#21442;&#25968;</span>
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Return Multi-Values</span>
+<span style="color: #8b0000;">(</span>values 'a nil <span style="color: #006400;">(</span>+ 1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span><span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; a ;-&gt; nil ;-&gt; 3</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#21015;&#34920;&#20316;&#20026;&#21442;&#25968;</span>
 <span style="color: #8b0000;">(</span>values-list '<span style="color: #006400;">(</span>1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
-<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
-<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 2</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 ;-&gt; 2</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#36820;&#22238;&#20540; &#20256;&#36882;</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span> 
+   <span style="color: #ff1493;">(</span><span style="color: #ffff00;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #00ff00;">()</span> <span style="color: #00ff00;">(</span>values 1 2<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 ;-&gt; 2</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#22810;&#36820;&#22238;&#20540;&#20316;&#20026;&#21442;&#25968; &#21482;&#26377;&#31532;&#19968;&#20010;&#34987;&#20351;&#29992;</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">(</span>x<span style="color: #ff1493;">)</span> x<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>values 1 2<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#33509;&#19981;&#38656;&#35201;&#20351;&#29992;&#36820;&#22238;&#20540;</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span> <span style="color: #ff1493;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 ;-&gt; NIL</span>
+<span style="color: #8b0000;">(</span><span style="color: #006400;">(</span><span style="color: #4c83ff;">lambda</span> <span style="color: #ff1493;">()</span>
+   <span style="color: #ff1493;">(</span>format t <span style="color: #61CE3C;">"~a"</span> 1<span style="color: #ff1493;">)</span>
+   <span style="color: #ff1493;">(</span>values<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1 ;-&gt; ; No value</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(values) &#19981;&#26159; &#19981;&#36820;&#22238;&#20540;</span>
+<span style="color: #8b0000;">(</span>+<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;0</span>
+<span style="color: #8b0000;">(</span>+ <span style="color: #006400;">(</span>values<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">; Error: The value NIL is not of the expected type NUMBER.</span>
+<span style="color: #8b0000;">(</span>null <span style="color: #006400;">(</span>values<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; T</span>
 </pre>
 </div></li>
 <li>处理多返回值
@@ -479,26 +1082,30 @@ supplied-p : 用于判断是否提供了实参
 多值绑定 : multipel-value-bind
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3 2<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
-<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b c<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span> c<span style="color: #8b0000;">)</span>       <span style="color: #8B8989; font-style: italic;">;-&gt; nil</span>
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>   <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3 2<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>* a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">multiple-value-bind</span> <span style="color: #006400;">(</span>a b c<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 2 3<span style="color: #006400;">)</span>
+  c<span style="color: #8b0000;">)</span>       <span style="color: #8B8989; font-style: italic;">;-&gt; nil</span>
 </pre>
 </div></li>
 <li><p>
 多值作为函数参数 : multiple-value-call
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp"><span style="color: #8b0000;">(</span>funcall #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
-<span style="color: #8b0000;">(</span>multiple-value-call #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 21</span>
-
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>funcall #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;1</span>
 <span style="color: #8b0000;">(</span>multiple-value-call #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 6</span>
+
+<span style="color: #8b0000;">(</span>funcall #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 5</span>
+<span style="color: #8b0000;">(</span>multiple-value-call #'+ <span style="color: #006400;">(</span>values 1 2 3<span style="color: #006400;">)</span> <span style="color: #006400;">(</span>values 4 5 6<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 21</span>
 </pre>
 </div></li>
 <li><p>
-多值转列表 : multiple-value-list
+多值-&gt;列表 : multiple-value-list
 </p>
 <div class="org-src-container">
-<pre class="src src-lisp">  <span style="color: #8b0000;">(</span>multiple-value-list <span style="color: #006400;">(</span>values 'a 'b 'c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>multiple-value-list <span style="color: #006400;">(</span>values 'a 'b 'c<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (A B C)</span>
 </pre>
 </div></li>
 </ul></li>
@@ -506,9 +1113,9 @@ supplied-p : 用于判断是否提供了实参
 </div>
 </div>
 
-<div id="outline-container-orgbd94d26" class="outline-3">
-<h3 id="orgbd94d26"><span class="section-number-3">3.4</span> Closures</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org97219f3" class="outline-4">
+<h4 id="org97219f3"><span class="section-number-4">4.2.4</span> Closures</h4>
+<div class="outline-text-4" id="text-4-2-4">
 <ul class="org-ul">
 <li><p>
 闭包 Closures : 捕捉创建时的环境信息 : 捕获的是变量 不是值
@@ -532,15 +1139,15 @@ supplied-p : 用于判断是否提供了实参
 </div>
 
 
-
-<div id="outline-container-org9410d2e" class="outline-2">
-<h2 id="org9410d2e"><span class="section-number-2">4</span> 特殊操作符</h2>
+<div id="outline-container-org3a65a93" class="outline-3">
+<h3 id="org3a65a93"><span class="section-number-3">4.3</span> 特殊操作符</h3>
 </div>
-<div id="outline-container-orgb4f58f5" class="outline-2">
-<h2 id="orgb4f58f5"><span class="section-number-2">5</span> 宏</h2>
+<div id="outline-container-orge0d0b72" class="outline-3">
+<h3 id="orge0d0b72"><span class="section-number-3">4.4</span> 宏</h3>
 </div>
-<div id="outline-container-org4f4de29" class="outline-2">
-<h2 id="org4f4de29"><span class="section-number-2">6</span> 控制流</h2>
+<div id="outline-container-org27fd10a" class="outline-3">
+<h3 id="org27fd10a"><span class="section-number-3">4.5</span> 控制流</h3>
+</div>
 </div>
 </div>
 </body>
