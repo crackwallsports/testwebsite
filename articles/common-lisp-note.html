@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-02-24 Sun 00:12 -->
+<!-- 2019-02-25 Mon 18:35 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Common Lisp - 笔记整理 (草稿)</title>
@@ -62,54 +62,70 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org31f91a1">1. 准备</a></li>
-<li><a href="#orgd07b6bd">2. 开始</a>
+<li><a href="#org469f49f">1. 准备</a></li>
+<li><a href="#org7ba47ba">2. 开始</a>
 <ul>
-<li><a href="#org6fd6273">2.1. 自身</a>
+<li><a href="#org7bfa37e">2.1. 自身</a>
 <ul>
-<li><a href="#orgdfc1e8a">2.1.1. Comment 注释</a></li>
+<li><a href="#org03d5e1f">2.1.1. Comment 注释</a></li>
+<li><a href="#orgad23d4e">2.1.2. Reader &amp; Printer 读取器 和 打印器 :?:</a></li>
+<li><a href="#orgcfabb8d">2.1.3. Quote 引用</a></li>
+<li><a href="#org20c54f7">2.1.4. Special 特殊操作符</a></li>
+<li><a href="#orgafc9d31">2.1.5. Type System 类型系统</a></li>
+<li><a href="#orgd8cec6d">2.1.6. Symbol 符号</a></li>
+<li><a href="#orge4d0457">2.1.7. Name 名字</a></li>
+<li><a href="#org865b1eb">2.1.8. Package</a></li>
+<li><a href="#org9e2fadc">2.1.9. Assignment 赋值</a></li>
+<li><a href="#org77f2d11">2.1.10. Macro 宏</a></li>
+<li><a href="#orgb58cbcc">2.1.11. Feature 特性</a></li>
+<li><a href="#org78b0401">2.1.12. Error :?:</a></li>
+<li><a href="#org6d17e2f">2.1.13. Debug :?:</a></li>
+<li><a href="#orgefa25c1">2.1.14. Help</a></li>
 </ul>
 </li>
-<li><a href="#org729be61">2.2. 表示 和 操作</a></li>
+<li><a href="#org62bfec1">2.2. 表示 和 操作</a></li>
 </ul>
 </li>
-<li><a href="#org0acaaa6">3. 表示</a>
+<li><a href="#orge0e0f4e">3. 表示</a>
 <ul>
-<li><a href="#org3268adf">3.1. Number 数</a>
+<li><a href="#org29b34f4">3.1. Number 数</a>
 <ul>
-<li><a href="#org10da4db">3.1.1. Rational 有理数</a></li>
-<li><a href="#orga5544de">3.1.2. Float 浮点数</a></li>
-<li><a href="#org1cd3f71">3.1.3. Complex 复数</a></li>
+<li><a href="#orgbc699a4">3.1.1. Rational 有理数</a></li>
+<li><a href="#orgf2da0aa">3.1.2. Float 浮点数</a></li>
+<li><a href="#org8aedbca">3.1.3. Complex 复数</a></li>
 </ul>
 </li>
-<li><a href="#org71dfb12">3.2. Character 字符</a></li>
-<li><a href="#org3f09079">3.3. String 字符串</a>
+<li><a href="#org08b47ea">3.2. Character 字符</a></li>
+<li><a href="#orgc3ce72f">3.3. String 字符串</a>
 <ul>
-<li><a href="#org057c326">3.3.1. GET</a></li>
-<li><a href="#org23d2cab">3.3.2. Split &amp; Concat &amp; Join &amp; Trim</a></li>
-<li><a href="#org226c826">3.3.3. Search &amp; Replace</a></li>
-<li><a href="#org6687de6">3.3.4. Compare</a></li>
-<li><a href="#orgce6d446">3.3.5. Regex</a></li>
-<li><a href="#org2a38092">3.3.6. Coding</a></li>
-<li><a href="#org500e5c9">3.3.7. Other</a></li>
+<li><a href="#orged0f03a">3.3.1. GET</a></li>
+<li><a href="#org808f4ea">3.3.2. Split &amp; Concat &amp; Join &amp; Trim</a></li>
+<li><a href="#orgf4aa4c5">3.3.3. Search &amp; Replace</a></li>
+<li><a href="#org706fca5">3.3.4. Compare</a></li>
+<li><a href="#orgbb6e0f8">3.3.5. Regex</a></li>
+<li><a href="#org855039a">3.3.6. Coding</a></li>
+<li><a href="#org3e5f2a5">3.3.7. Other</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orge190e6b">4. 基础</a>
+<li><a href="#orgab059b7">4. 基础</a>
 <ul>
-<li><a href="#org6e0eb9b">4.1. 变量 和 常量</a></li>
-<li><a href="#org2538d2f">4.2. 函数</a>
+<li><a href="#orgab79f52">4.1. 变量 和 常量</a></li>
+<li><a href="#orgef41884">4.2. 函数</a>
 <ul>
-<li><a href="#org31e32d2">4.2.1. Call</a></li>
-<li><a href="#orgbcd442a">4.2.2. Paramater list</a></li>
-<li><a href="#org08c7317">4.2.3. Return Value</a></li>
-<li><a href="#org97219f3">4.2.4. Closures</a></li>
+<li><a href="#org65bcb6e">4.2.1. Call</a></li>
+<li><a href="#org8c9378c">4.2.2. Paramater list</a></li>
+<li><a href="#orga77c479">4.2.3. Return Value</a></li>
+<li><a href="#org4313bf9">4.2.4. Closures</a></li>
 </ul>
 </li>
-<li><a href="#org3a65a93">4.3. 特殊操作符</a></li>
-<li><a href="#orge0d0b72">4.4. 宏</a></li>
-<li><a href="#org27fd10a">4.5. 控制流</a></li>
+<li><a href="#org08b3465">4.3. 控制流</a></li>
+</ul>
+</li>
+<li><a href="#org60bb998">5. 概念</a>
+<ul>
+<li><a href="#org4adaf2a">5.1. Scope &amp; Extent 作用域 和 生命周期</a></li>
 </ul>
 </li>
 </ul>
@@ -117,8 +133,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org31f91a1" class="outline-2">
-<h2 id="org31f91a1"><span class="section-number-2">1</span> 准备</h2>
+<div id="outline-container-org469f49f" class="outline-2">
+<h2 id="org469f49f"><span class="section-number-2">1</span> 准备</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>实现
@@ -136,8 +152,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-orgd07b6bd" class="outline-2">
-<h2 id="orgd07b6bd"><span class="section-number-2">2</span> 开始</h2>
+<div id="outline-container-org7ba47ba" class="outline-2">
+<h2 id="org7ba47ba"><span class="section-number-2">2</span> 开始</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Live 活着的
@@ -148,32 +164,39 @@ Live 活着的
 </ul>
 </div>
 
-<div id="outline-container-org6fd6273" class="outline-3">
-<h3 id="org6fd6273"><span class="section-number-3">2.1</span> 自身</h3>
+<div id="outline-container-org7bfa37e" class="outline-3">
+<h3 id="org7bfa37e"><span class="section-number-3">2.1</span> 自身</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
-<li>语法 : S-表达式 :
+<li>语法 : S-表达式
 <ul class="org-ul">
 <li>原子 (列表以外的)</li>
 <li>列表 (括号括起来的)</li>
 </ul></li>
 <li>求值
 <ul class="org-ul">
-<li>求值规则
+<li>atom =&gt; self (自求值 : 返回自身)
 <ul class="org-ul">
-<li>函数 : 参数从左到右先求值 再传入函数求值</li>
-<li>特殊形式 : 各自特定的规则
+<li>Symbol =&gt; value  (: 符号引用对象)
+<ul class="org-ul">
+<li>t nil :keyword =&gt; self</li>
+</ul></li>
+</ul></li>
+<li>list (根据第一个元素)
+<ul class="org-ul">
+<li>function 函数 : 参数从左到右先求值 再传入函数求值</li>
+<li>special 特殊形式 : 各自特定的规则
 <ul class="org-ul">
 <li>不求值 : quote</li>
 </ul></li>
-<li>宏 : 参数不求值</li>
+<li>macro 宏 : 参数不求值</li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="outline-container-orgdfc1e8a" class="outline-4">
-<h4 id="orgdfc1e8a"><span class="section-number-4">2.1.1</span> Comment 注释</h4>
+<div id="outline-container-org03d5e1f" class="outline-4">
+<h4 id="org03d5e1f"><span class="section-number-4">2.1.1</span> Comment 注释</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
 <pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;;; </span><span style="color: #8B8989; font-style: italic;">File header</span>
@@ -194,10 +217,635 @@ Live 活着的
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgad23d4e" class="outline-4">
+<h4 id="orgad23d4e"><span class="section-number-4">2.1.2</span> Reader &amp; Printer 读取器 和 打印器 :?:</h4>
+</div>
+<div id="outline-container-orgcfabb8d" class="outline-4">
+<h4 id="orgcfabb8d"><span class="section-number-4">2.1.3</span> Quote 引用</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>Homoiconicity 同象性 : 程序 &amp; 数据</li>
+<li>引用 : quote (sugar: ')
+<ul class="org-ul">
+<li>符号作为数据 : 'foo</li>
+<li>程序(列表)作为数据 : '(+ 1 2)</li>
+<li><p>
+Ex.
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(quote ...) == '(...)</span>
+'<span style="color: #8b0000;">(</span>x y z<span style="color: #8b0000;">)</span>                  <span style="color: #8B8989; font-style: italic;">;-&gt; (X Y Z)</span>
+<span style="color: #8b0000;">(</span>quote x<span style="color: #8b0000;">)</span>                 <span style="color: #8B8989; font-style: italic;">;-&gt; X</span>
+<span style="color: #8b0000;">(</span>list 'quote 1<span style="color: #8b0000;">)</span>           <span style="color: #8B8989; font-style: italic;">;-&gt; '1  ;== (quote 1)</span>
+<span style="color: #8b0000;">(</span>list 'quote 'y<span style="color: #8b0000;">)</span>          <span style="color: #8B8989; font-style: italic;">;-&gt; 'Y</span>
+</pre>
+</div></li>
+</ul></li>
+<li>反引用
+<ul class="org-ul">
+<li><p>
+backquote (sugar: `)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">`<span style="color: #8b0000;">(</span>x <span style="color: #006400;">(</span>+ 3 3<span style="color: #006400;">)</span> y<span style="color: #8b0000;">)</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; (X (+ 3 3) Y)</span>
+`<span style="color: #8b0000;">(</span>x ,<span style="color: #006400;">(</span>+ 3 3<span style="color: #006400;">)</span> y<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (X 6 Y)</span>
+`<span style="color: #8b0000;">(</span>x <span style="color: #006400;">(</span>x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>    <span style="color: #8B8989; font-style: italic;">;-&gt; (X (X Y Z))</span>
+`<span style="color: #8b0000;">(</span>x ,@'<span style="color: #006400;">(</span>x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (X X Y Z)</span>
+`<span style="color: #8b0000;">(</span>x . ,'<span style="color: #006400;">(</span>x y z<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (X X Y Z)</span>
+</pre>
+</div></li>
+</ul></li>
+</ul>
+</div>
 </div>
 
-<div id="outline-container-org729be61" class="outline-3">
-<h3 id="org729be61"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
+<div id="outline-container-org20c54f7" class="outline-4">
+<h4 id="org20c54f7"><span class="section-number-4">2.1.4</span> Special 特殊操作符</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>25个</li>
+<li>词法环境 : let let* setq progv</li>
+<li>函数 : function labels flet</li>
+<li>宏 : macrolet symbol-macrolet</li>
+<li>控制流
+<ul class="org-ul">
+<li>if</li>
+<li>progn</li>
+<li>block return-from return</li>
+<li>tagbody go</li>
+<li>catch throw</li>
+<li>unwind-protect</li>
+</ul></li>
+<li>多值 : multiple-value-call multiple-value-prog1</li>
+<li>求值 : quote eval-when load-time-value
+<ul class="org-ul">
+<li>load-time-value : 若编译则只求值一次</li>
+</ul></li>
+<li>类型 : locally the</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgafc9d31" class="outline-4">
+<h4 id="orgafc9d31"><span class="section-number-4">2.1.5</span> Type System 类型系统</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>动态类型 : 运行时检测 名字 可关联 任何类型的对象</li>
+<li>强类型 : 所有的类型错误都会被检测</li>
+<li>Class 可作为 Type 使用 (相反不可) : 定义 class 时 会自动定义一个同名的 Type</li>
+<li>名字(变量)没有类型  只有值才有类型</li>
+</ul>
+
+<p>
+操作
+</p>
+<ul class="org-ul">
+<li>Case : typecass ctypecase etypecase</li>
+<li><p>
+Determining : type-of
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>type-of 'x<span style="color: #8b0000;">)</span>  <span style="color: #8B8989; font-style: italic;">;-&gt; SYMBOl</span>
+<span style="color: #8b0000;">(</span>type-of '<span style="color: #006400;">(</span>+ 1<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; CONS</span>
+<span style="color: #8b0000;">(</span>type-of nil<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; NULL</span>
+</pre>
+</div></li>
+<li><p>
+Check : check-type typep
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my-sqrt</span> <span style="color: #006400;">(</span>x<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #ff69b4;">check-type</span> x <span style="color: #ff1493;">(</span>real 0<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span> 
+  <span style="color: #006400;">(</span>sqrt x<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>  
+<span style="color: #8b0000;">(</span>my-sqrt -9<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Error: TYPE-ERROR</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">my-sqrt</span> <span style="color: #006400;">(</span>list<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #ff69b4;">check-type</span> <span style="color: #ff1493;">(</span>first list<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>real 0<span style="color: #ff1493;">)</span> <span style="color: #61CE3C;">"a non-negative real number"</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>sqrt <span style="color: #ff1493;">(</span>first list<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="orge2582c4"></a>Type Specifier 类型标识符 :?:<br></li></ol>
+</div>
+<div id="outline-container-orgd8cec6d" class="outline-4">
+<h4 id="orgd8cec6d"><span class="section-number-4">2.1.6</span> Symbol 符号</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<ul class="org-ul">
+<li>符号的内部结构
+<ul class="org-ul">
+<li>name     : symbol-name</li>
+<li>package  : symbol-package := home package | nil(uninterned)</li>
+<li>value    : symbol-value</li>
+<li>function : symbol-function</li>
+<li><p>
+plist    : symbol-plist
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>setf <span style="color: #006400;">(</span>get 'a 'ss<span style="color: #006400;">)</span> 1<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>symbol-plist 'a<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (SS 1)</span>
+<span style="color: #8b0000;">(</span>get 'a 'ss<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+</pre>
+</div></li>
+</ul></li>
+<li>命名
+<ul class="org-ul">
+<li>大小写不敏感 保持大小写使用"||"包围</li>
+<li>不能
+<ul class="org-ul">
+<li>只有: 数字 或 "."</li>
+<li>含有: Whitespace [()"'`,:;\|]</li>
+</ul></li>
+<li>使用不被允许的字符
+<ul class="org-ul">
+<li>Escape : \</li>
+<li><p>
+Surrounding : ||
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp">|lisp 3|
+| | 
+|abc|      
+</pre>
+</div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4d0457" class="outline-4">
+<h4 id="orge4d0457"><span class="section-number-4">2.1.7</span> Name 名字</h4>
+<div class="outline-text-4" id="text-2-1-7">
+<ul class="org-ul">
+<li>基于: 符号</li>
+<li>约定
+<ul class="org-ul">
+<li>全局变量 : <b>name</b></li>
+<li>常量 : <del>name</del></li>
+<li>特别低层的函数 : 前缀 %|%%</li>
+<li>分隔名字 : -</li>
+<li>谓词 : 后缀 p|-p</li>
+</ul></li>
+<li><p>
+函数和变量 使用不同 名称空间
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">fn</span> <span style="color: #006400;">()</span> 2<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">fn</span> 1<span style="color: #8b0000;">)</span>
+fn <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+<span style="color: #8b0000;">(</span>fn<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 2</span>
+#'fn <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Compiled-function FN #x3020033714EF&gt;</span>
+
+<span style="color: #8b0000;">(</span>symbol-value 'fn<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+<span style="color: #8b0000;">(</span>symbol-function 'fn<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Compiled-function FN #x3020033714EF&gt;</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org865b1eb" class="outline-4">
+<h4 id="org865b1eb"><span class="section-number-4">2.1.8</span> Package</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<ul class="org-ul">
+<li>包 : 符号的集合 用于名称空间</li>
+<li><p>
+创建 : make-package defpackage
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(make-package name &amp;key nicknames use)</span>
+<span style="color: #8b0000;">(</span>make-package <span style="color: #4c83ff;">:package-test</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "PACKAGE-TEST"&gt;</span>
+<span style="color: #8b0000;">(</span>make-package #<span style="color: #4c83ff;">:package-test</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "PACKAGE-TEST"&gt;</span>
+<span style="color: #8b0000;">(</span>make-package 'package-test<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "PACKAGE-TEST"&gt;</span>
+<span style="color: #8b0000;">(</span>make-package <span style="color: #61CE3C;">"package-test"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "package-test"&gt;</span>
+<span style="color: #8b0000;">(</span>make-package '|package-test|<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "package-test"&gt;</span>
+
+<span style="color: #8b0000;">(</span>make-package <span style="color: #4c83ff;">:my-package</span> <span style="color: #4c83ff;">:nicknames</span> '<span style="color: #006400;">(</span><span style="color: #4c83ff;">:myp</span> <span style="color: #61CE3C;">"myp"</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>make-package <span style="color: #61CE3C;">"my-package"</span> <span style="color: #4c83ff;">:use</span> '<span style="color: #006400;">(</span><span style="color: #4c83ff;">:cl</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(defpackage ...)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defpackage</span> <span style="color: #afd8af;">:my-package</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:nicknames</span> <span style="color: #4c83ff;">:myp</span> <span style="color: #61CE3C;">"my-pkg"</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:use</span> <span style="color: #4c83ff;">:cl</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:shadow</span> #<span style="color: #4c83ff;">:car</span> #<span style="color: #4c83ff;">:cdr</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:shadowing-import-from</span> <span style="color: #4c83ff;">:cl</span> #<span style="color: #4c83ff;">:cons</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:import-from</span> <span style="color: #4c83ff;">:pkgname</span> #<span style="color: #4c83ff;">:bye</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:intern</span> #<span style="color: #4c83ff;">:hi</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">:export</span> #<span style="color: #4c83ff;">:egg</span> #<span style="color: #4c83ff;">:milk</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+删除 : delete-package
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>delete-package <span style="color: #4c83ff;">:my-pkg</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+改变当前包 : in-package 
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">in-package</span> <span style="color: #4c83ff;">:my-pkg</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+重命名 : rename-package
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(rename-package :oldname :newname '(:nickname))</span>
+<span style="color: #8b0000;">(</span>make-package <span style="color: #4c83ff;">:temp</span> <span style="color: #4c83ff;">:nicknames</span> '<span style="color: #006400;">(</span><span style="color: #4c83ff;">:tp</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>rename-package <span style="color: #4c83ff;">:temp</span> <span style="color: #4c83ff;">:temps</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  #&lt;PACKAGE "TEMPS"&gt;</span>
+<span style="color: #8b0000;">(</span>package-name <span style="color: #4c83ff;">:temp</span><span style="color: #8b0000;">)</span>          <span style="color: #8B8989; font-style: italic;">;-&gt; There is no package named "TEMP" .</span>
+<span style="color: #8b0000;">(</span>package-nicknames <span style="color: #4c83ff;">:temps</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  ()</span>
+</pre>
+</div></li>
+<li><p>
+Use | Import | Export 
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">use-package : inherit all external symbol</span>
+<span style="color: #8b0000;">(</span>use-package <span style="color: #4c83ff;">:cl</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>use-package <span style="color: #4c83ff;">:cl</span> <span style="color: #4c83ff;">:temp</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">in TEMP use CL</span>
+<span style="color: #8b0000;">(</span>unuse-package <span style="color: #4c83ff;">:cl</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">import : add symbol to internal of package</span>
+<span style="color: #8b0000;">(</span>import 'cl:car <span style="color: #006400;">(</span>make-package <span style="color: #4c83ff;">:temp</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">shadowing-import</span>
+<span style="color: #8b0000;">(</span>shadowing-import 'cl::car <span style="color: #4c83ff;">:temp</span><span style="color: #8b0000;">)</span> 
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">export | unexport</span>
+<span style="color: #8b0000;">(</span>export 'temp::temp-sym <span style="color: #4c83ff;">:temp</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>unexport 'temp::temp-sym <span style="color: #4c83ff;">:temp</span><span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+Intern : intern unintern
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">intern : enter symbol named string into package</span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"Never-Before"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  |Never-Before|, NIL</span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"Never-Before"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  |Never-Before|, :INTERNAL </span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"NEVER-BEFORE"</span> <span style="color: #61CE3C;">"KEYWORD"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  :NEVER-BEFORE, NIL</span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"NEVER-BEFORE"</span> <span style="color: #61CE3C;">"KEYWORD"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt;  :NEVER-BEFORE, :EXTERNAL</span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"AAAA"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; AAAA</span>
+<span style="color: #8b0000;">(</span>intern <span style="color: #61CE3C;">"aaa"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; |aaa|</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">unintern</span>
+<span style="color: #8b0000;">(</span>unintern <span style="color: #61CE3C;">"Never-Before"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; T</span>
+<span style="color: #8b0000;">(</span>find-symbol <span style="color: #61CE3C;">"Never-Before"</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; NIL, NIL </span>
+</pre>
+</div></li>
+<li><p>
+屏蔽符号 : shadow
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#23631;&#34109;&#22312;&#24403;&#21069;&#21253;</span>
+<span style="color: #8b0000;">(</span>shadow 'sym<span style="color: #8b0000;">)</span> 
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#23631;&#34109;&#20854;&#23427;&#21253;&#20013;&#23548;&#20837;&#30340; </span>
+<span style="color: #8b0000;">(</span>shadow 'pkg:sym<span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#22312;:pkg&#21253;&#20013;&#23631;&#34109;&#31526;&#21495;</span>
+<span style="color: #8b0000;">(</span>shadow 'sym <span style="color: #4c83ff;">:pkg</span><span style="color: #8b0000;">)</span>  
+</pre>
+</div></li>
+<li><p>
+包信息 : <b>package</b> list-all-packages find-package package-[name nicknames]
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Packge</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Name</span>
+<span style="color: #8b0000;">(</span>package-name <span style="color: #4c83ff;">:cl</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; "COMMON-LISP"</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Nickname </span>
+<span style="color: #8b0000;">(</span>package-nicknames <span style="color: #4c83ff;">:common-lisp</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ("CL")</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">All registered package</span>
+<span style="color: #8b0000;">(</span>list-all-packages<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Current-pkg </span>
+<span style="color: #8b0000;">(</span>print *package*<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">find-package</span>
+<span style="color: #8b0000;">(</span>find-package <span style="color: #4c83ff;">:cl</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;PACKAGE "COMMON-LISP"&gt;</span>
+</pre>
+</div></li>
+<li><p>
+包与包关系 : package-[use used-by]-lisp
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Use | Used package</span>
+<span style="color: #8b0000;">(</span>make-package <span style="color: #4c83ff;">:new-pkg</span> <span style="color: #4c83ff;">:use</span> '<span style="color: #006400;">(</span><span style="color: #4c83ff;">:my-pkg</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>package-use-list <span style="color: #4c83ff;">:new-pkg</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (#&lt;Package "MY-PKG"&gt;)</span>
+<span style="color: #8b0000;">(</span>package-used-by-list <span style="color: #4c83ff;">:my-pkg</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (#&lt;Package "NEW-PKG"&gt;)</span>
+</pre>
+</div></li>
+<li><p>
+包内符号
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">Symbol</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">(find-symbol string &amp;optional package)</span>
+<span style="color: #8b0000;">(</span>find-symbol <span style="color: #61CE3C;">"CAR"</span> <span style="color: #4c83ff;">:cl-user</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; CAR, :INHERITED</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">find-all-symbols : searche every registered package</span>
+<span style="color: #8b0000;">(</span>find-all-symbols '+<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (:+ + XT3.OOP::+)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Symbol in package</span>
+<span style="color: #8b0000;">(</span>symbol-package 'car<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; #&lt;Package "COMMON-LISP"&gt;</span>
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">package-shadowing-symbols</span>
+<span style="color: #8b0000;">(</span>package-shadowing-symbols <span style="color: #006400;">(</span>make-package <span style="color: #4c83ff;">:temp</span><span style="color: #006400;">)</span><span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ()</span>
+</pre>
+</div></li>
+<li><p>
+迭代包内符号 : loop do-[all external]-symbols
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">List all Symbol in Package</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">loop</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">loop</span> for s
+   being each external-symbol|symbol|present-symbol of <span style="color: #4c83ff;">:cl</span>
+   count s<span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">do-symbols</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">do-symbols</span> <span style="color: #006400;">(</span>s <span style="color: #ff1493;">(</span>find-package <span style="color: #4c83ff;">:cl-user</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>print s<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">do-external-symbols</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">do-external-symbols</span> <span style="color: #006400;">(</span>s <span style="color: #ff1493;">(</span>find-package <span style="color: #4c83ff;">:cl-user</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>print s<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">do-all-symbols : iterates on every registered package</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>lst <span style="color: #ffff00;">()</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>                                                     
+  <span style="color: #006400;">(</span><span style="color: #4c83ff;">do-all-symbols</span> <span style="color: #ff1493;">(</span>s lst<span style="color: #ff1493;">)</span>
+    <span style="color: #ff1493;">(</span><span style="color: #4c83ff;">when</span> <span style="color: #ffff00;">(</span>eq <span style="color: #00ff00;">(</span>find-package <span style="color: #4c83ff;">:temp</span><span style="color: #00ff00;">)</span> <span style="color: #00ff00;">(</span>symbol-package s<span style="color: #00ff00;">)</span><span style="color: #ffff00;">)</span>
+      <span style="color: #ffff00;">(</span>push s lst<span style="color: #ffff00;">)</span><span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  lst<span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org9e2fadc" class="outline-4">
+<h4 id="org9e2fadc"><span class="section-number-4">2.1.9</span> Assignment 赋值</h4>
+<div class="outline-text-4" id="text-2-1-9">
+<ul class="org-ul">
+<li><p>
+setf : (setf name|place value)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>setf *x* <span style="color: #006400;">(</span>list 1 2 3<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>n 3<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>setf n 33<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Place</span>
+<span style="color: #8b0000;">(</span>setf <span style="color: #006400;">(</span>car *x*<span style="color: #006400;">)</span> 9<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">*x* = (9 2 3)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#22810;&#20010;&#36171;&#20540;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 1<span style="color: #ff1493;">)</span>
+      <span style="color: #ff1493;">(</span>b 2<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>setf a 5
+        b a<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (5 5)</span>
+</pre>
+</div></li>
+<li><p>
+setq psetq(平行) : (setq name value)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 1<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>b 2<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>setq a 3 b <span style="color: #ff1493;">(</span>+ a 1<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (3 4)</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 1<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>b 2<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>psetq a b b a<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list a b<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; (2 1)</span>
+</pre>
+</div></li>
+<li><p>
+set : (set symbol value)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>set 'x 1<span style="color: #8b0000;">)</span>
+x <span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a 3<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>set 'a 1<span style="color: #006400;">)</span>
+  a<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 3</span>
+</pre>
+</div></li>
+<li><p>
+multiple-value-setq
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">let</span> <span style="color: #006400;">(</span>a b c<span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>multiple-value-setq <span style="color: #ff1493;">(</span>a b c<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>values 1 2<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list a b c<span style="color: #006400;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (1 2 NIL)</span>
+  <span style="color: #006400;">(</span>multiple-value-setq <span style="color: #ff1493;">(</span>a b<span style="color: #ff1493;">)</span> <span style="color: #ff1493;">(</span>values 4 5 6<span style="color: #ff1493;">)</span><span style="color: #006400;">)</span>
+  <span style="color: #006400;">(</span>list a b c<span style="color: #006400;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; (4 5 NIL)</span>
+  <span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li><p>
+rotatef shiftf  (修改宏 参数只求值一次)
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>setf a 0<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>setf b 1<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>rotatef a b<span style="color: #8b0000;">)</span>
+a <span style="color: #8B8989; font-style: italic;">;-&gt; 1</span>
+b <span style="color: #8B8989; font-style: italic;">;-&gt; 0</span>
+
+<span style="color: #8b0000;">(</span>shiftf a b 10<span style="color: #8b0000;">)</span>
+a <span style="color: #8B8989; font-style: italic;">;-&gt; 0 </span>
+b <span style="color: #8B8989; font-style: italic;">;-&gt; 10</span>
+</pre>
+</div></li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="orga19ccbe"></a>Setf Place<br><div class="outline-text-5" id="text-2-1-9-1">
+<ul class="org-ul">
+<li><p>
+定义 : (setf name) | defsetf | define-setf-expander
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">(setf name) </span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#23450;&#20041; : (defun (setf name) (new-val obj))</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-| Can #'(setf name)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&#35843;&#29992; : (setf (name obj) new-val)</span>
+</pre>
+</div></li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org77f2d11" class="outline-4">
+<h4 id="org77f2d11"><span class="section-number-4">2.1.10</span> Macro 宏</h4>
+<div class="outline-text-4" id="text-2-1-10">
+<ul class="org-ul">
+<li><p>
+定义 : defmacro
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defmacro</span> <span style="color: #ff1493;">name</span> <span style="color: #006400;">(</span>parameter*<span style="color: #006400;">)</span>
+  <span style="color: #FBDE2D;">"Optional doc string"</span>
+  body-form*<span style="color: #8b0000;">)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&amp;body : &#19982;&amp;rest&#31561;&#20215; &#20294;&#35768;&#22810;&#24320;&#21457;&#29615;&#22659;&#20250;&#26681;&#25454;&#20854;&#20462;&#25913;&#23439;&#32553;&#36827;</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">&amp;whole</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defmacro</span> <span style="color: #ff1493;">tfun</span> <span style="color: #006400;">(</span><span style="color: #afd8af;">&amp;whole</span> form <span style="color: #afd8af;">&amp;rest</span> body<span style="color: #006400;">)</span> `<span style="color: #006400;">(</span>list ',form ,@body<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>tfun 1 2 3<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;-&gt; ((TFUN 1 2 3) 1 2 3)</span>
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">Destructuring parameter list &#35299;&#26500;&#24418;&#21442;&#21015;&#34920;</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defmacro</span> <span style="color: #ff1493;">macro</span> <span style="color: #006400;">(</span>vars <span style="color: #afd8af;">&amp;body</span> body<span style="color: #006400;">)</span> ...<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defmacro</span> <span style="color: #ff1493;">macro</span> <span style="color: #006400;">(</span><span style="color: #ff1493;">(</span>a b c<span style="color: #ff1493;">)</span> <span style="color: #afd8af;">&amp;body</span> body<span style="color: #006400;">)</span> ...<span style="color: #8b0000;">)</span>
+</pre>
+</div></li>
+<li>展开 : macroexpand-1(一层) macroexpand</li>
+<li>!! 注意
+<ul class="org-ul">
+<li>多重求值问题</li>
+<li>变量定义顺序</li>
+<li>重名 (gensym)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb58cbcc" class="outline-4">
+<h4 id="orgb58cbcc"><span class="section-number-4">2.1.11</span> Feature 特性</h4>
+<div class="outline-text-4" id="text-2-1-11">
+<ul class="org-ul">
+<li>用于区分运行环境</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-lisp">*features*
+
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">#+|- | #+|-(and|or|not ..)</span>
+
+<span style="color: #8B8989; font-style: italic;">;;; </span><span style="color: #8B8989; font-style: italic;">a in impl A, b in impl B</span>
+<span style="color: #8b0000;">(</span>cons <span style="color: #8B8989; font-style: italic;">#+a "more"</span> #-b <span style="color: #61CE3C;">"little"</span> x<span style="color: #8b0000;">)</span> 
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">in impl A ;-&gt; (cons "more" x)</span>
+<span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">in impl B ;-&gt; (cons "little" x)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org78b0401" class="outline-4">
+<h4 id="org78b0401"><span class="section-number-4">2.1.12</span> Error :?:</h4>
+</div>
+
+<div id="outline-container-org6d17e2f" class="outline-4">
+<h4 id="org6d17e2f"><span class="section-number-4">2.1.13</span> Debug :?:</h4>
+</div>
+<div id="outline-container-orgefa25c1" class="outline-4">
+<h4 id="orgefa25c1"><span class="section-number-4">2.1.14</span> Help</h4>
+<div class="outline-text-4" id="text-2-1-14">
+<ul class="org-ul">
+<li><p>
+apropos
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8B8989; font-style: italic;">;; </span><span style="color: #8B8989; font-style: italic;">opt second argument : limit search in particular package</span>
+<span style="color: #8b0000;">(</span>apropos <span style="color: #61CE3C;">"MAP"</span> <span style="color: #4c83ff;">:cl</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">..-&gt; MAPC, Def: FUNCTION</span>
+</pre>
+</div></li>
+<li><p>
+describe
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>describe 'length<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Symbol: LENGTH</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Function</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; EXTERNAL in package: #&lt;Package "COMMON-LISP"&gt;</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Print name: "LENGTH"</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Value: #&lt;Unbound&gt;</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Function: #&lt;Compiled-function LENGTH #x34C39B6&gt;</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Arglist: (SEQUENCE)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Plist: (:ANSI-CL-URL "fun_length.html")</span>
+
+<span style="color: #8b0000;">(</span>describe <span style="color: #61CE3C;">"LENGTH"</span><span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; "LENGTH"</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Type: (SIMPLE-BASE-STRING 6)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Class: #&lt;BUILT-IN-CLASS SIMPLE-BASE-STRING&gt;</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Length: 6</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 0: #\L</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 1: #\E</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 2: #\N</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 3: #\G</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 4: #\T</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; 5: #\H</span>
+
+<span style="color: #8b0000;">(</span>describe 3<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Fixnum: 3</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Scientific: 3.00E+0</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Log base 2: 1.5849625</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Binary: #b11</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Octal: #o3</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Decimal: 3.</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Hex: #x3</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Roman: III</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Character: #\ETX</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; Abbreviated: 3</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; As time: 8:00:03 Monday, 1 January, 1900</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; MOST-POSITIVE-FIXNUM: 1152921504606846975.</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; ; No value</span>
+</pre>
+</div></li>
+<li><p>
+inspect : 交互型describe 
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defparameter</span> <span style="color: #ff69b4;">*thing*</span>
+              <span style="color: #006400;">(</span>vector <span style="color: #4c83ff;">:lp</span> <span style="color: #ff1493;">(</span>list 20 <span style="color: #61CE3C;">"Hotels"</span><span style="color: #ff1493;">)</span> 1971<span style="color: #006400;">)</span><span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>inspect *thing*<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-:</span>
+1 <span style="color: #8B8989; font-style: italic;">;: go one level deeper</span>
+<span style="color: #8b0000;">(</span>list $ $$<span style="color: #8b0000;">)</span> <span style="color: #8B8989; font-style: italic;">;: $ $$ $$$ work like * </span>
+<span style="color: #8b0000;">(</span>setf <span style="color: #006400;">(</span>first $<span style="color: #006400;">)</span> 200<span style="color: #8b0000;">)</span>
+<span style="color: #4c83ff;">:s</span> 0 #\M  <span style="color: #8B8989; font-style: italic;">;: :s setf</span>
+<span style="color: #4c83ff;">:q</span>
+</pre>
+</div></li>
+<li><p>
+documentation
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #8b0000;">(</span>documentation 'length 'function<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; "returns the number of elements in sequence."</span>
+
+<span style="color: #8b0000;">(</span><span style="color: #4c83ff;">defun</span> <span style="color: #ff1493;">docstring</span> <span style="color: #006400;">()</span>
+  <span style="color: #FBDE2D;">"This is docstring."</span>
+  t<span style="color: #8b0000;">)</span>
+<span style="color: #8b0000;">(</span>documentation 'docstring 'function<span style="color: #8b0000;">)</span>
+<span style="color: #8B8989; font-style: italic;">;;</span><span style="color: #8B8989; font-style: italic;">-&gt; "This is docstring."</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>second argument
+<ul class="org-ul">
+<li>'variable : defvar, defparameter, defconstant</li>
+<li>'function : defun, defmacro, special form</li>
+<li>'structure : defstruct</li>
+<li>'type : deftype</li>
+<li>'setf : defsetf</li>
+<li>'compiler-macro : define-compiler-macro</li>
+<li>'method-combination : define-method-combination</li>
+<li>t : returned depends upon type of first argument.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62bfec1" class="outline-3">
+<h3 id="org62bfec1"><span class="section-number-3">2.2</span> 表示 和 操作</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>表示
@@ -240,14 +888,14 @@ Live 活着的
 </div>
 </div>
 
-<div id="outline-container-org0acaaa6" class="outline-2">
-<h2 id="org0acaaa6"><span class="section-number-2">3</span> 表示</h2>
+<div id="outline-container-orge0e0f4e" class="outline-2">
+<h2 id="orge0e0f4e"><span class="section-number-2">3</span> 表示</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-org3268adf" class="outline-3">
-<h3 id="org3268adf"><span class="section-number-3">3.1</span> Number 数</h3>
+</div><div id="outline-container-org29b34f4" class="outline-3">
+<h3 id="org29b34f4"><span class="section-number-3">3.1</span> Number 数</h3>
 <div class="outline-text-3" id="text-3-1">
-</div><div id="outline-container-org10da4db" class="outline-4">
-<h4 id="org10da4db"><span class="section-number-4">3.1.1</span> Rational 有理数</h4>
+</div><div id="outline-container-orgbc699a4" class="outline-4">
+<h4 id="orgbc699a4"><span class="section-number-4">3.1.1</span> Rational 有理数</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li><p>
@@ -278,7 +926,7 @@ Literal
 </div>
 
 
-<ol class="org-ol"><li><a id="org83b6b73"></a>Integer 整数<br><div class="outline-text-5" id="text-3-1-1-1">
+<ol class="org-ol"><li><a id="org0a914ed"></a>Integer 整数<br><div class="outline-text-5" id="text-3-1-1-1">
 <ul class="org-ul">
 <li><p>
 类型 : fixnum bignum
@@ -305,7 +953,7 @@ fixnum范围
 </ul>
 </div></li>
 
-<li><a id="org5950688"></a>Ratio 比值<br><div class="outline-text-5" id="text-3-1-1-2">
+<li><a id="org9a5bdd6"></a>Ratio 比值<br><div class="outline-text-5" id="text-3-1-1-2">
 <ul class="org-ul">
 <li>Rational canonicalization 规约化 : 6/3 -&gt; 2, 12/6 -&gt; 4/3</li>
 <li><p>
@@ -320,8 +968,8 @@ GET : numerator denominator
 </div></li></ol>
 </div>
 
-<div id="outline-container-orga5544de" class="outline-4">
-<h4 id="orga5544de"><span class="section-number-4">3.1.2</span> Float 浮点数</h4>
+<div id="outline-container-orgf2da0aa" class="outline-4">
+<h4 id="orgf2da0aa"><span class="section-number-4">3.1.2</span> Float 浮点数</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li>实现依赖 [CCL]</li>
@@ -372,8 +1020,8 @@ Literal
 </div>
 </div>
 
-<div id="outline-container-org1cd3f71" class="outline-4">
-<h4 id="org1cd3f71"><span class="section-number-4">3.1.3</span> Complex 复数</h4>
+<div id="outline-container-org8aedbca" class="outline-4">
+<h4 id="org8aedbca"><span class="section-number-4">3.1.3</span> Complex 复数</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li><p>
@@ -399,8 +1047,8 @@ Literal
 </div>
 </div>
 
-<div id="outline-container-org71dfb12" class="outline-3">
-<h3 id="org71dfb12"><span class="section-number-3">3.2</span> Character 字符</h3>
+<div id="outline-container-org08b47ea" class="outline-3">
+<h3 id="org08b47ea"><span class="section-number-3">3.2</span> Character 字符</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><p>
@@ -441,8 +1089,8 @@ char-name name-char
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f09079" class="outline-3">
-<h3 id="org3f09079"><span class="section-number-3">3.3</span> String 字符串</h3>
+<div id="outline-container-orgc3ce72f" class="outline-3">
+<h3 id="orgc3ce72f"><span class="section-number-3">3.3</span> String 字符串</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>表示基于 : Vector-Char : 字符向量</li>
@@ -482,8 +1130,8 @@ char-name name-char
 </ul>
 </div>
 
-<div id="outline-container-org057c326" class="outline-4">
-<h4 id="org057c326"><span class="section-number-4">3.3.1</span> GET</h4>
+<div id="outline-container-orged0f03a" class="outline-4">
+<h4 id="orged0f03a"><span class="section-number-4">3.3.1</span> GET</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <ul class="org-ul">
 <li><p>
@@ -507,8 +1155,8 @@ char-name name-char
 </ul>
 </div>
 </div>
-<div id="outline-container-org23d2cab" class="outline-4">
-<h4 id="org23d2cab"><span class="section-number-4">3.3.2</span> Split &amp; Concat &amp; Join &amp; Trim</h4>
+<div id="outline-container-org808f4ea" class="outline-4">
+<h4 id="org808f4ea"><span class="section-number-4">3.3.2</span> Split &amp; Concat &amp; Join &amp; Trim</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <ul class="org-ul">
 <li><p>
@@ -569,8 +1217,8 @@ char-name name-char
 </div>
 </div>
 
-<div id="outline-container-org226c826" class="outline-4">
-<h4 id="org226c826"><span class="section-number-4">3.3.3</span> Search &amp; Replace</h4>
+<div id="outline-container-orgf4aa4c5" class="outline-4">
+<h4 id="orgf4aa4c5"><span class="section-number-4">3.3.3</span> Search &amp; Replace</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <ul class="org-ul">
 <li><p>
@@ -622,8 +1270,8 @@ char-name name-char
 </ul>
 </div>
 </div>
-<div id="outline-container-org6687de6" class="outline-4">
-<h4 id="org6687de6"><span class="section-number-4">3.3.4</span> Compare</h4>
+<div id="outline-container-org706fca5" class="outline-4">
+<h4 id="org706fca5"><span class="section-number-4">3.3.4</span> Compare</h4>
 <div class="outline-text-4" id="text-3-3-4">
 <ul class="org-ul">
 <li>大小写敏感 : string[= /= &lt; &gt; &lt;= &gt;=]</li>
@@ -653,16 +1301,16 @@ char-name name-char
 </ul>
 </div>
 </div>
-<div id="outline-container-orgce6d446" class="outline-4">
-<h4 id="orgce6d446"><span class="section-number-4">3.3.5</span> Regex</h4>
+<div id="outline-container-orgbb6e0f8" class="outline-4">
+<h4 id="orgbb6e0f8"><span class="section-number-4">3.3.5</span> Regex</h4>
 <div class="outline-text-4" id="text-3-3-5">
 <ul class="org-ul">
 <li>Lib:cl-ppcre</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a38092" class="outline-4">
-<h4 id="org2a38092"><span class="section-number-4">3.3.6</span> Coding</h4>
+<div id="outline-container-org855039a" class="outline-4">
+<h4 id="org855039a"><span class="section-number-4">3.3.6</span> Coding</h4>
 <div class="outline-text-4" id="text-3-3-6">
 <ul class="org-ul">
 <li>Lib:<a href="https://github.com/cl-babel/babel">babel</a></li>
@@ -670,8 +1318,8 @@ char-name name-char
 </div>
 </div>
 
-<div id="outline-container-org500e5c9" class="outline-4">
-<h4 id="org500e5c9"><span class="section-number-4">3.3.7</span> Other</h4>
+<div id="outline-container-org3e5f2a5" class="outline-4">
+<h4 id="org3e5f2a5"><span class="section-number-4">3.3.7</span> Other</h4>
 <div class="outline-text-4" id="text-3-3-7">
 <ul class="org-ul">
 <li><p>
@@ -690,11 +1338,11 @@ string-[upcase downcase capitalize]
 </div>
 </div>
 </div>
-<div id="outline-container-orge190e6b" class="outline-2">
-<h2 id="orge190e6b"><span class="section-number-2">4</span> 基础</h2>
+<div id="outline-container-orgab059b7" class="outline-2">
+<h2 id="orgab059b7"><span class="section-number-2">4</span> 基础</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-org6e0eb9b" class="outline-3">
-<h3 id="org6e0eb9b"><span class="section-number-3">4.1</span> 变量 和 常量</h3>
+</div><div id="outline-container-orgab79f52" class="outline-3">
+<h3 id="orgab79f52"><span class="section-number-3">4.1</span> 变量 和 常量</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Variable 变量
@@ -805,8 +1453,8 @@ Special: (declare (special ..))
 </div>
 </div>
 
-<div id="outline-container-org2538d2f" class="outline-3">
-<h3 id="org2538d2f"><span class="section-number-3">4.2</span> 函数</h3>
+<div id="outline-container-orgef41884" class="outline-3">
+<h3 id="orgef41884"><span class="section-number-3">4.2</span> 函数</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><p>
@@ -872,8 +1520,8 @@ Function Object: function (sugar:#')
 </ul>
 </div>
 
-<div id="outline-container-org31e32d2" class="outline-4">
-<h4 id="org31e32d2"><span class="section-number-4">4.2.1</span> Call</h4>
+<div id="outline-container-org65bcb6e" class="outline-4">
+<h4 id="org65bcb6e"><span class="section-number-4">4.2.1</span> Call</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li><p>
@@ -909,8 +1557,8 @@ apply | funcall
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbcd442a" class="outline-4">
-<h4 id="orgbcd442a"><span class="section-number-4">4.2.2</span> Paramater list</h4>
+<div id="outline-container-org8c9378c" class="outline-4">
+<h4 id="org8c9378c"><span class="section-number-4">4.2.2</span> Paramater list</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li><p>
@@ -1040,8 +1688,8 @@ supplied-p : 用于判断是否提供了实参
 </ul>
 </div>
 </div>
-<div id="outline-container-org08c7317" class="outline-4">
-<h4 id="org08c7317"><span class="section-number-4">4.2.3</span> Return Value</h4>
+<div id="outline-container-orga77c479" class="outline-4">
+<h4 id="orga77c479"><span class="section-number-4">4.2.3</span> Return Value</h4>
 <div class="outline-text-4" id="text-4-2-3">
 <ul class="org-ul">
 <li>返回值 Return value : 默认返回最后一个表达式的值</li>
@@ -1113,8 +1761,8 @@ supplied-p : 用于判断是否提供了实参
 </div>
 </div>
 
-<div id="outline-container-org97219f3" class="outline-4">
-<h4 id="org97219f3"><span class="section-number-4">4.2.4</span> Closures</h4>
+<div id="outline-container-org4313bf9" class="outline-4">
+<h4 id="org4313bf9"><span class="section-number-4">4.2.4</span> Closures</h4>
 <div class="outline-text-4" id="text-4-2-4">
 <ul class="org-ul">
 <li><p>
@@ -1139,14 +1787,29 @@ supplied-p : 用于判断是否提供了实参
 </div>
 
 
-<div id="outline-container-org3a65a93" class="outline-3">
-<h3 id="org3a65a93"><span class="section-number-3">4.3</span> 特殊操作符</h3>
+<div id="outline-container-org08b3465" class="outline-3">
+<h3 id="org08b3465"><span class="section-number-3">4.3</span> 控制流</h3>
 </div>
-<div id="outline-container-orge0d0b72" class="outline-3">
-<h3 id="orge0d0b72"><span class="section-number-3">4.4</span> 宏</h3>
 </div>
-<div id="outline-container-org27fd10a" class="outline-3">
-<h3 id="org27fd10a"><span class="section-number-3">4.5</span> 控制流</h3>
+
+<div id="outline-container-org60bb998" class="outline-2">
+<h2 id="org60bb998"><span class="section-number-2">5</span> 概念</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-org4adaf2a" class="outline-3">
+<h3 id="org4adaf2a"><span class="section-number-3">5.1</span> Scope &amp; Extent 作用域 和 生命周期</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Scope (space) &amp; Extent (time) : Visibility &amp; Lifetime
+<ul class="org-ul">
+<li>lexical 词法</li>
+<li>dynamic 动态</li>
+</ul></li>
+<li>Shadowing
+<ul class="org-ul">
+<li>同名 : 后者可能屏蔽前者</li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div>
 </div>

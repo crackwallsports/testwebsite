@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-02-20 Wed 16:30 -->
+<!-- 2019-02-25 Mon 17:43 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>学习 C 语言 - 笔记整理 (草稿)</title>
@@ -62,78 +62,89 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge326838">1. 开始前</a>
+<li><a href="#org4fa93d6">1. 开始前</a>
 <ul>
-<li><a href="#org5e60ca8">1.1. 我们要做什么?</a></li>
-<li><a href="#org993caff">1.2. 准备</a></li>
+<li><a href="#org35e1f9f">1.1. 我们要做什么?</a></li>
+<li><a href="#org2b2758c">1.2. 准备</a></li>
 </ul>
 </li>
-<li><a href="#org06ac34e">2. 开始</a>
+<li><a href="#orgec4a161">2. 开始</a>
 <ul>
-<li><a href="#orgabff1a7">2.1. 第一步</a></li>
-<li><a href="#orga110a72">2.2. 稍息</a></li>
-<li><a href="#org4822149">2.3. 第二步</a></li>
+<li><a href="#orgd64e25d">2.1. 第一步</a></li>
+<li><a href="#org162a846">2.2. 稍息</a></li>
+<li><a href="#org776f48f">2.3. 第二步</a></li>
 </ul>
 </li>
-<li><a href="#orgbedc81e">3. 基础</a>
+<li><a href="#org7ce4821">3. 基础</a>
 <ul>
-<li><a href="#orgee4e27c">3.1. 类型</a>
+<li><a href="#org44e4b2b">3.1. 类型</a>
 <ul>
-<li><a href="#orgd71f23e">3.1.1. 表示范围</a></li>
-<li><a href="#orgd65cdfe">3.1.2. 定长整型</a></li>
-<li><a href="#org75c6b02">3.1.3. 类型别名</a></li>
+<li><a href="#orgc6a2cf9">3.1.1. 表示范围</a></li>
+<li><a href="#org6872fde">3.1.2. 定长整型</a></li>
+<li><a href="#org69eeabf">3.1.3. 类型别名</a></li>
 </ul>
 </li>
-<li><a href="#orgd6a76b6">3.2. 变量</a></li>
-<li><a href="#org07dd00d">3.3. 数</a></li>
-<li><a href="#org9658f30">3.4. 真值</a></li>
-<li><a href="#orge83dd53">3.5. 字符</a></li>
-<li><a href="#org2f337f8">3.6. 数组</a></li>
-<li><a href="#org7c4e7f6">3.7. 字符串</a></li>
-<li><a href="#org7392e41">3.8. 指针</a></li>
-<li><a href="#orgbc9c5b0">3.9. 数组 与 指针</a></li>
-<li><a href="#org405d626">3.10. Operators 运算符</a>
+<li><a href="#org3907e28">3.2. 变量</a></li>
+<li><a href="#org7174a72">3.3. 数</a></li>
+<li><a href="#orgc21514c">3.4. 真值</a></li>
+<li><a href="#orgf858a14">3.5. 字符</a></li>
+<li><a href="#org5bd4b5e">3.6. 数组</a></li>
+<li><a href="#org368b149">3.7. 字符串</a></li>
+<li><a href="#orgad4abdb">3.8. 指针</a></li>
+<li><a href="#org791626a">3.9. 数组 与 指针</a></li>
+<li><a href="#orge42bc13">3.10. 运算符</a>
 <ul>
-<li><a href="#orgb505fca">3.10.1. Arithmetic 算术</a></li>
-<li><a href="#orga158a1a">3.10.2. Bitwise 位运算</a></li>
-<li><a href="#org60888b7">3.10.3. Logical 逻辑</a></li>
-<li><a href="#org06bb6ce">3.10.4. Relational 关系 (比较)</a></li>
-<li><a href="#org753c667">3.10.5. Data 数据</a></li>
+<li><a href="#org2c7ee7d">3.10.1. Arithmetic 算术</a></li>
+<li><a href="#org26e758b">3.10.2. Bitwise 位运算</a></li>
+<li><a href="#org8ad02ba">3.10.3. Logical 逻辑</a></li>
+<li><a href="#orgb2c0a93">3.10.4. Relational 关系 (比较)</a></li>
+<li><a href="#orgdf30948">3.10.5. Data 数据</a></li>
 </ul>
 </li>
-<li><a href="#orgaeb09cb">3.11. 控制流程</a></li>
-<li><a href="#org07fdf2f">3.12. 函数</a></li>
-<li><a href="#org160015d">3.13. 结构 共用 枚举</a>
+<li><a href="#orge74be72">3.11. 控制流程</a></li>
+<li><a href="#org971065f">3.12. 函数</a>
 <ul>
-<li><a href="#org27c27fe">3.13.1. Enum 枚举</a></li>
-<li><a href="#org25ff82b">3.13.2. Struct 结构</a></li>
-<li><a href="#orgb0fe593">3.13.3. Union 共用</a></li>
+<li><a href="#org90048f6">3.12.1. 函数指针</a></li>
 </ul>
 </li>
-<li><a href="#orgd896624">3.14. 动态内存分配</a></li>
-</ul>
-</li>
-<li><a href="#org0ed69ec">4. 高级</a>
+<li><a href="#org4af2163">3.13. 结构 共用 枚举</a>
 <ul>
-<li><a href="#orgb9a93cb">4.1. IO</a>
+<li><a href="#orgcedc698">3.13.1. Enum 枚举</a></li>
+<li><a href="#org47a54e3">3.13.2. Struct 结构</a></li>
+<li><a href="#org80b14da">3.13.3. Union 共用</a></li>
+</ul>
+</li>
+<li><a href="#org1bb6875">3.14. 动态内存分配</a></li>
+</ul>
+</li>
+<li><a href="#org8d635de">4. 高级</a>
 <ul>
-<li><a href="#orgc009d36">4.1.1. 标准输入输出</a></li>
-<li><a href="#orgcf2d3d0">4.1.2. 文件</a></li>
+<li><a href="#org911c4de">4.1. IO</a>
+<ul>
+<li><a href="#org0d6d620">4.1.1. 标准输入输出</a></li>
+<li><a href="#orgd22bc51">4.1.2. 文件</a></li>
 </ul>
 </li>
+<li><a href="#orgc65bed5">4.2. Process</a></li>
+<li><a href="#orgfa0eaf2">4.3. String</a></li>
+<li><a href="#org6e3656e">4.4. 预处理</a></li>
 </ul>
 </li>
-<li><a href="#org1bc1bd5">5. 概念</a></li>
+<li><a href="#orgecde0a4">5. 概念</a>
+<ul>
+<li><a href="#org63fbb9e">5.1. 声明</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orge326838" class="outline-2">
-<h2 id="orge326838"><span class="section-number-2">1</span> 开始前</h2>
+<div id="outline-container-org4fa93d6" class="outline-2">
+<h2 id="org4fa93d6"><span class="section-number-2">1</span> 开始前</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-org5e60ca8" class="outline-3">
-<h3 id="org5e60ca8"><span class="section-number-3">1.1</span> 我们要做什么?</h3>
+</div><div id="outline-container-org35e1f9f" class="outline-3">
+<h3 id="org35e1f9f"><span class="section-number-3">1.1</span> 我们要做什么?</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>将 脑子里想的东西 和 解决问题的方法 翻译成 程序</li>
@@ -176,8 +187,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org993caff" class="outline-3">
-<h3 id="org993caff"><span class="section-number-3">1.2</span> 准备</h3>
+<div id="outline-container-org2b2758c" class="outline-3">
+<h3 id="org2b2758c"><span class="section-number-3">1.2</span> 准备</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>开发环境
@@ -235,11 +246,11 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </div>
 
 
-<div id="outline-container-org06ac34e" class="outline-2">
-<h2 id="org06ac34e"><span class="section-number-2">2</span> 开始</h2>
+<div id="outline-container-orgec4a161" class="outline-2">
+<h2 id="orgec4a161"><span class="section-number-2">2</span> 开始</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgabff1a7" class="outline-3">
-<h3 id="orgabff1a7"><span class="section-number-3">2.1</span> 第一步</h3>
+</div><div id="outline-container-orgd64e25d" class="outline-3">
+<h3 id="orgd64e25d"><span class="section-number-3">2.1</span> 第一步</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>? 我想让程序 输出 一些文字
@@ -284,8 +295,8 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </ul>
 </div>
 </div>
-<div id="outline-container-orga110a72" class="outline-3">
-<h3 id="orga110a72"><span class="section-number-3">2.2</span> 稍息</h3>
+<div id="outline-container-org162a846" class="outline-3">
+<h3 id="org162a846"><span class="section-number-3">2.2</span> 稍息</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 基础 就像是一块块不同的积木 我们要做的就是 把它们组合成 我们所希望的样子
@@ -321,8 +332,8 @@ touch code.c <span style="color: #8B8989; font-style: italic;"># </span><span st
 </div>
 
 
-<div id="outline-container-org4822149" class="outline-3">
-<h3 id="org4822149"><span class="section-number-3">2.3</span> 第二步</h3>
+<div id="outline-container-org776f48f" class="outline-3">
+<h3 id="org776f48f"><span class="section-number-3">2.3</span> 第二步</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>? 输入温度(华氏 或 摄氏) -转换- 输出结果
@@ -496,11 +507,11 @@ F = (9*C)/5+32;
 </div>
 </div>
 
-<div id="outline-container-orgbedc81e" class="outline-2">
-<h2 id="orgbedc81e"><span class="section-number-2">3</span> 基础</h2>
+<div id="outline-container-org7ce4821" class="outline-2">
+<h2 id="org7ce4821"><span class="section-number-2">3</span> 基础</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgee4e27c" class="outline-3">
-<h3 id="orgee4e27c"><span class="section-number-3">3.1</span> 类型</h3>
+</div><div id="outline-container-org44e4b2b" class="outline-3">
+<h3 id="org44e4b2b"><span class="section-number-3">3.1</span> 类型</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>? 类型 : 代表 分配的内存空间大小 将实际大小进行抽象</li>
@@ -527,8 +538,8 @@ F = (9*C)/5+32;
 </ul>
 </div>
 
-<div id="outline-container-orgd71f23e" class="outline-4">
-<h4 id="orgd71f23e"><span class="section-number-4">3.1.1</span> 表示范围</h4>
+<div id="outline-container-orgc6a2cf9" class="outline-4">
+<h4 id="orgc6a2cf9"><span class="section-number-4">3.1.1</span> 表示范围</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li>&lt;limit.h&gt;
@@ -543,8 +554,8 @@ F = (9*C)/5+32;
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd65cdfe" class="outline-4">
-<h4 id="orgd65cdfe"><span class="section-number-4">3.1.2</span> 定长整型</h4>
+<div id="outline-container-org6872fde" class="outline-4">
+<h4 id="org6872fde"><span class="section-number-4">3.1.2</span> 定长整型</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li>&lt;stdint.h&gt;</li>
@@ -554,8 +565,8 @@ F = (9*C)/5+32;
 </ul>
 </div>
 </div>
-<div id="outline-container-org75c6b02" class="outline-4">
-<h4 id="org75c6b02"><span class="section-number-4">3.1.3</span> 类型别名</h4>
+<div id="outline-container-org69eeabf" class="outline-4">
+<h4 id="org69eeabf"><span class="section-number-4">3.1.3</span> 类型别名</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li><p>
@@ -595,11 +606,11 @@ Typedef
 </div>
 </div>
 
-<div id="outline-container-orgd6a76b6" class="outline-3">
-<h3 id="orgd6a76b6"><span class="section-number-3">3.2</span> 变量</h3>
+<div id="outline-container-org3907e28" class="outline-3">
+<h3 id="org3907e28"><span class="section-number-3">3.2</span> 变量</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
-<li>? 变量 : 内存地址 编译时将变量名替换为地址</li>
+<li>变量 : 内存地址 编译时将变量名替换为地址</li>
 <li>Identifier 标识符 : 名字
 <ul class="org-ul">
 <li>数字:0~9 大小写:A~Za~z 下划线:_ (非数字开头)</li>
@@ -657,8 +668,8 @@ restrict : 声明时 告诉编译器 指针没有别名
 </div>
 </div>
 
-<div id="outline-container-org07dd00d" class="outline-3">
-<h3 id="org07dd00d"><span class="section-number-3">3.3</span> 数</h3>
+<div id="outline-container-org7174a72" class="outline-3">
+<h3 id="org7174a72"><span class="section-number-3">3.3</span> 数</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li><p>
@@ -688,16 +699,16 @@ restrict : 声明时 告诉编译器 指针没有别名
 </ul>
 </div>
 </div>
-<div id="outline-container-org9658f30" class="outline-3">
-<h3 id="org9658f30"><span class="section-number-3">3.4</span> 真值</h3>
+<div id="outline-container-orgc21514c" class="outline-3">
+<h3 id="orgc21514c"><span class="section-number-3">3.4</span> 真值</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>非0即真</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge83dd53" class="outline-3">
-<h3 id="orge83dd53"><span class="section-number-3">3.5</span> 字符</h3>
+<div id="outline-container-orgf858a14" class="outline-3">
+<h3 id="orgf858a14"><span class="section-number-3">3.5</span> 字符</h3>
 <div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>字符 : 'a'</li>
@@ -781,8 +792,8 @@ printf(<span style="color: #61CE3C;">"%d %d %d"</span>, <span style="color: #61C
 </div>
 </div>
 
-<div id="outline-container-org2f337f8" class="outline-3">
-<h3 id="org2f337f8"><span class="section-number-3">3.6</span> 数组</h3>
+<div id="outline-container-org5bd4b5e" class="outline-3">
+<h3 id="org5bd4b5e"><span class="section-number-3">3.6</span> 数组</h3>
 <div class="outline-text-3" id="text-3-6">
 <ul class="org-ul">
 <li><p>
@@ -824,8 +835,8 @@ c = {1,2,3}; <span style="color: #8B8989; font-style: italic;">// </span><span s
 </div>
 </div>
 
-<div id="outline-container-org7c4e7f6" class="outline-3">
-<h3 id="org7c4e7f6"><span class="section-number-3">3.7</span> 字符串</h3>
+<div id="outline-container-org368b149" class="outline-3">
+<h3 id="org368b149"><span class="section-number-3">3.7</span> 字符串</h3>
 <div class="outline-text-3" id="text-3-7">
 <ul class="org-ul">
 <li>字符串 : '\0' 结尾的字符序列</li>
@@ -848,8 +859,8 @@ c = {1,2,3}; <span style="color: #8B8989; font-style: italic;">// </span><span s
 </div>
 </div>
 
-<div id="outline-container-org7392e41" class="outline-3">
-<h3 id="org7392e41"><span class="section-number-3">3.8</span> 指针</h3>
+<div id="outline-container-orgad4abdb" class="outline-3">
+<h3 id="orgad4abdb"><span class="section-number-3">3.8</span> 指针</h3>
 <div class="outline-text-3" id="text-3-8">
 <ul class="org-ul">
 <li>声明 定义 使用</li>
@@ -858,8 +869,8 @@ c = {1,2,3}; <span style="color: #8B8989; font-style: italic;">// </span><span s
 </div>
 </div>
 
-<div id="outline-container-orgbc9c5b0" class="outline-3">
-<h3 id="orgbc9c5b0"><span class="section-number-3">3.9</span> 数组 与 指针</h3>
+<div id="outline-container-org791626a" class="outline-3">
+<h3 id="org791626a"><span class="section-number-3">3.9</span> 数组 与 指针</h3>
 <div class="outline-text-3" id="text-3-9">
 <ul class="org-ul">
 <li>数组名(数组变量) : 数组的起始地址 (使用&amp;运算符 结果是其本身 &amp;s == s)
@@ -884,6 +895,10 @@ c = {1,2,3}; <span style="color: #8B8989; font-style: italic;">// </span><span s
 </ul></li>
 <li>退化(信息的丢失) : 数组赋给指针变量 指针变量只会包含数组的起始地址</li>
 <li>数组 还是 指针 ?: 函数参数的形式声明 则为指针</li>
+<li>[] 语法糖 : p[i] -&gt; *(p+i)
+<ul class="org-ul">
+<li>p[i] == i[p] (可以 但不要这么做)</li>
+</ul></li>
 </ul>
 
 <p>
@@ -927,8 +942,8 @@ Example
 </div>
 </div>
 
-<div id="outline-container-org405d626" class="outline-3">
-<h3 id="org405d626"><span class="section-number-3">3.10</span> Operators 运算符</h3>
+<div id="outline-container-orge42bc13" class="outline-3">
+<h3 id="orge42bc13"><span class="section-number-3">3.10</span> 运算符</h3>
 <div class="outline-text-3" id="text-3-10">
 <ul class="org-ul">
 <li>, : 逗链的值 为 最后表达式的值
@@ -944,8 +959,8 @@ Example
 </ul>
 </div>
 
-<div id="outline-container-orgb505fca" class="outline-4">
-<h4 id="orgb505fca"><span class="section-number-4">3.10.1</span> Arithmetic 算术</h4>
+<div id="outline-container-org2c7ee7d" class="outline-4">
+<h4 id="org2c7ee7d"><span class="section-number-4">3.10.1</span> Arithmetic 算术</h4>
 <div class="outline-text-4" id="text-3-10-1">
 <ul class="org-ul">
 <li>+ Add</li>
@@ -961,8 +976,8 @@ Example
 </ul>
 </div>
 </div>
-<div id="outline-container-orga158a1a" class="outline-4">
-<h4 id="orga158a1a"><span class="section-number-4">3.10.2</span> Bitwise 位运算</h4>
+<div id="outline-container-org26e758b" class="outline-4">
+<h4 id="org26e758b"><span class="section-number-4">3.10.2</span> Bitwise 位运算</h4>
 <div class="outline-text-4" id="text-3-10-2">
 <ul class="org-ul">
 <li>逻辑
@@ -984,8 +999,8 @@ Example
 </ul>
 </div>
 </div>
-<div id="outline-container-org60888b7" class="outline-4">
-<h4 id="org60888b7"><span class="section-number-4">3.10.3</span> Logical 逻辑</h4>
+<div id="outline-container-org8ad02ba" class="outline-4">
+<h4 id="org8ad02ba"><span class="section-number-4">3.10.3</span> Logical 逻辑</h4>
 <div class="outline-text-4" id="text-3-10-3">
 <ul class="org-ul">
 <li>&amp;&amp; (And)</li>
@@ -995,8 +1010,8 @@ Example
 </ul>
 </div>
 </div>
-<div id="outline-container-org06bb6ce" class="outline-4">
-<h4 id="org06bb6ce"><span class="section-number-4">3.10.4</span> Relational 关系 (比较)</h4>
+<div id="outline-container-orgb2c0a93" class="outline-4">
+<h4 id="orgb2c0a93"><span class="section-number-4">3.10.4</span> Relational 关系 (比较)</h4>
 <div class="outline-text-4" id="text-3-10-4">
 <ul class="org-ul">
 <li>== (Equal)</li>
@@ -1008,8 +1023,8 @@ Example
 </ul>
 </div>
 </div>
-<div id="outline-container-org753c667" class="outline-4">
-<h4 id="org753c667"><span class="section-number-4">3.10.5</span> Data 数据</h4>
+<div id="outline-container-orgdf30948" class="outline-4">
+<h4 id="orgdf30948"><span class="section-number-4">3.10.5</span> Data 数据</h4>
 <div class="outline-text-4" id="text-3-10-5">
 <ul class="org-ul">
 <li>sizeof()</li>
@@ -1021,7 +1036,7 @@ Example
 </ul>
 </div>
 
-<ol class="org-ol"><li><a id="orgfb66274"></a>sizeof<br><div class="outline-text-5" id="text-3-10-5-1">
+<ol class="org-ol"><li><a id="org40a9ed7"></a>sizeof<br><div class="outline-text-5" id="text-3-10-5-1">
 <ul class="org-ul">
 <li>sizeof : 在存储器中占 多少字节 (编译器 根据 类型的大小 或 变量声明的类型的大小 来返回相应的值)
 <ul class="org-ul">
@@ -1062,8 +1077,8 @@ Ex.
 </div></li></ol>
 </div>
 </div>
-<div id="outline-container-orgaeb09cb" class="outline-3">
-<h3 id="orgaeb09cb"><span class="section-number-3">3.11</span> 控制流程</h3>
+<div id="outline-container-orge74be72" class="outline-3">
+<h3 id="orge74be72"><span class="section-number-3">3.11</span> 控制流程</h3>
 <div class="outline-text-3" id="text-3-11">
 <ul class="org-ul">
 <li>顺序 分支 循环(递归)</li>
@@ -1082,23 +1097,52 @@ Ex.
 </div>
 </div>
 
-<div id="outline-container-org07fdf2f" class="outline-3">
-<h3 id="org07fdf2f"><span class="section-number-3">3.12</span> 函数</h3>
+<div id="outline-container-org971065f" class="outline-3">
+<h3 id="org971065f"><span class="section-number-3">3.12</span> 函数</h3>
 <div class="outline-text-3" id="text-3-12">
 <ul class="org-ul">
-<li>把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用</li>
+<li>把 部分程序 封装起来 并 给一个名字 方便重复使用</li>
 <li>定义</li>
-<li>调用</li>
+<li>调用
+<ul class="org-ul">
+<li>在调用之前 先定义 或 显示声明</li>
+<li>参数的 计算顺序 不确定 (依赖:编译器)</li>
+</ul></li>
 <li>返回值</li>
 </ul>
 </div>
+
+<div id="outline-container-org90048f6" class="outline-4">
+<h4 id="org90048f6"><span class="section-number-4">3.12.1</span> 函数指针</h4>
+<div class="outline-text-4" id="text-3-12-1">
+<p>
+Example
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #afd8af;">int</span> (*name)(<span style="color: #afd8af;">int</span>, <span style="color: #afd8af;">int</span>) = someFunc;
+name(1, 2);
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">name == &amp;name</span>
+
+<span style="color: #4c83ff;">typedef</span> <span style="color: #afd8af;">int</span> (*<span style="color: #afd8af;">f_name</span>) (<span style="color: #afd8af;">int</span>, <span style="color: #afd8af;">int</span>);
+<span style="color: #afd8af;">f_name</span> <span style="color: #ff69b4;">name</span> = someFunc;
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#20989;&#25968;&#25351;&#38024;&#25968;&#32452;</span>
+<span style="color: #afd8af;">int</span> (*names[12])(<span style="color: #afd8af;">int</span>, <span style="color: #afd8af;">int</span>) = {<span style="color: #96CBFE;">NULL</span>};
+<span style="color: #8B8989; font-style: italic;">//</span><span style="color: #8B8989; font-style: italic;">or:</span>
+<span style="color: #4c83ff;">typedef</span> <span style="color: #afd8af;">int</span> (*<span style="color: #afd8af;">name</span>) (<span style="color: #afd8af;">int</span>, <span style="color: #afd8af;">int</span>);
+<span style="color: #afd8af;">name</span> <span style="color: #ff69b4;">names</span>[12] = {<span style="color: #96CBFE;">NULL</span>};
+</pre>
+</div>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org160015d" class="outline-3">
-<h3 id="org160015d"><span class="section-number-3">3.13</span> 结构 共用 枚举</h3>
+<div id="outline-container-org4af2163" class="outline-3">
+<h3 id="org4af2163"><span class="section-number-3">3.13</span> 结构 共用 枚举</h3>
 <div class="outline-text-3" id="text-3-13">
-</div><div id="outline-container-org27c27fe" class="outline-4">
-<h4 id="org27c27fe"><span class="section-number-4">3.13.1</span> Enum 枚举</h4>
+</div><div id="outline-container-orgcedc698" class="outline-4">
+<h4 id="orgcedc698"><span class="section-number-4">3.13.1</span> Enum 枚举</h4>
 <div class="outline-text-4" id="text-3-13-1">
 <ul class="org-ul">
 <li><p>
@@ -1122,8 +1166,8 @@ emu <span style="color: #afd8af;">animal</span> <span style="color: #ff69b4;">se
 </ul>
 </div>
 </div>
-<div id="outline-container-org25ff82b" class="outline-4">
-<h4 id="org25ff82b"><span class="section-number-4">3.13.2</span> Struct 结构</h4>
+<div id="outline-container-org47a54e3" class="outline-4">
+<h4 id="org47a54e3"><span class="section-number-4">3.13.2</span> Struct 结构</h4>
 <div class="outline-text-4" id="text-3-13-2">
 <ul class="org-ul">
 <li>值类型 : 赋值时拷贝</li>
@@ -1163,7 +1207,7 @@ pc-&gt;x
 </ul>
 </div>
 
-<ol class="org-ol"><li><a id="orgede3856"></a>结构数组<br><div class="outline-text-5" id="text-3-13-2-1">
+<ol class="org-ol"><li><a id="orgaaca0ff"></a>结构数组<br><div class="outline-text-5" id="text-3-13-2-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #4c83ff;">struct</span> <span style="color: #afd8af;">complex_struct</span> {
     <span style="color: #afd8af;">double</span> <span style="color: #ff69b4;">x</span>, <span style="color: #ff69b4;">y</span>;
@@ -1171,7 +1215,7 @@ pc-&gt;x
 </pre>
 </div>
 </div></li>
-<li><a id="orgc14df37"></a>bitfield 位段(位域)<br><div class="outline-text-5" id="text-3-13-2-2">
+<li><a id="orge2b1df3"></a>bitfield 位段(位域)<br><div class="outline-text-5" id="text-3-13-2-2">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #4c83ff;">struct</span> <span style="color: #afd8af;">Name</span> {
   <span style="color: #afd8af;">unsigned</span> <span style="color: #ff69b4;">vname1</span>:bit1;
@@ -1188,7 +1232,7 @@ pc-&gt;x
 </pre>
 </div>
 </div></li>
-<li><a id="org6cb5d00"></a>包含自指向的指针<br><div class="outline-text-5" id="text-3-13-2-3">
+<li><a id="orga3c3635"></a>包含自指向的指针<br><div class="outline-text-5" id="text-3-13-2-3">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">Errro</span>
 <span style="color: #4c83ff;">typedef</span> <span style="color: #4c83ff;">struct</span> {
@@ -1217,7 +1261,7 @@ pc-&gt;x
 </pre>
 </div>
 </div></li>
-<li><a id="orgb170c40"></a>域 在 结构中的字节偏移量<br><div class="outline-text-5" id="text-3-13-2-4">
+<li><a id="orgf5f6d7e"></a>域 在 结构中的字节偏移量<br><div class="outline-text-5" id="text-3-13-2-4">
 <ul class="org-ul">
 <li>&lt;stddef.h&gt; : offsetof() : offsetof(structs, f)</li>
 <li><p>
@@ -1233,8 +1277,8 @@ Imp
 </div></li></ol>
 </div>
 
-<div id="outline-container-orgb0fe593" class="outline-4">
-<h4 id="orgb0fe593"><span class="section-number-4">3.13.3</span> Union 共用</h4>
+<div id="outline-container-org80b14da" class="outline-4">
+<h4 id="org80b14da"><span class="section-number-4">3.13.3</span> Union 共用</h4>
 <div class="outline-text-4" id="text-3-13-3">
 <ul class="org-ul">
 <li><p>
@@ -1256,8 +1300,8 @@ printf(<span style="color: #61CE3C;">"Char:%c"</span>, some.c);
 </div>
 </div>
 
-<div id="outline-container-orgd896624" class="outline-3">
-<h3 id="orgd896624"><span class="section-number-3">3.14</span> 动态内存分配</h3>
+<div id="outline-container-org1bb6875" class="outline-3">
+<h3 id="org1bb6875"><span class="section-number-3">3.14</span> 动态内存分配</h3>
 <div class="outline-text-3" id="text-3-14">
 <ul class="org-ul">
 <li>在堆上分配空间</li>
@@ -1300,28 +1344,257 @@ printf(<span style="color: #61CE3C;">"Char:%c"</span>, some.c);
 </div>
 </div>
 
-
-
-
-
-
-<div id="outline-container-org0ed69ec" class="outline-2">
-<h2 id="org0ed69ec"><span class="section-number-2">4</span> 高级</h2>
+<div id="outline-container-org8d635de" class="outline-2">
+<h2 id="org8d635de"><span class="section-number-2">4</span> 高级</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgb9a93cb" class="outline-3">
-<h3 id="orgb9a93cb"><span class="section-number-3">4.1</span> IO</h3>
+</div><div id="outline-container-org911c4de" class="outline-3">
+<h3 id="org911c4de"><span class="section-number-3">4.1</span> IO</h3>
 <div class="outline-text-3" id="text-4-1">
-</div><div id="outline-container-orgc009d36" class="outline-4">
-<h4 id="orgc009d36"><span class="section-number-4">4.1.1</span> 标准输入输出</h4>
+</div><div id="outline-container-org0d6d620" class="outline-4">
+<h4 id="org0d6d620"><span class="section-number-4">4.1.1</span> 标准输入输出</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>字符 : getchar, putchar</li>
+<li>字符串 : gets, puts</li>
+<li>格式化 : scanf, printf, sscanf, sprintf</li>
+</ul>
 </div>
-<div id="outline-container-orgcf2d3d0" class="outline-4">
-<h4 id="orgcf2d3d0"><span class="section-number-4">4.1.2</span> 文件</h4>
+</div>
+
+<div id="outline-container-orgd22bc51" class="outline-4">
+<h4 id="orgd22bc51"><span class="section-number-4">4.1.2</span> 文件</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>&lt;stdio.h&gt;</li>
+<li>表示 : FILE型
+<ul class="org-ul">
+<li>stdin, stdout, stderr 都是指向 FILE型 的指针</li>
+</ul></li>
+<li>开关: fopen, fclose
+<ul class="org-ul">
+<li>方式 : r, w, a, rb, wb, ab,  r+, w+, a+, rb+, wb+, ab+
+<ul class="org-ul">
+<li>r|rb (read) : 读 文件需存在</li>
+<li>w|wb (write) : 写 文件需不存在</li>
+<li>a|ab (append) : 追加 文件需不存在</li>
+<li>r+|rb+ : 读 写从头</li>
+<li>w+|wb+ : 读 写覆盖整个文件</li>
+<li>a+|ab+ : 读 追加写</li>
+</ul></li>
+<li><p>
+Ex.
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #afd8af;">FILE</span> *<span style="color: #ff69b4;">fp</span>;
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#25171;&#24320; : fopen(fname, mode)</span>
+fp = fopen(<span style="color: #61CE3C;">"abc"</span>, <span style="color: #61CE3C;">"r"</span>);
+
+<span style="color: #4c83ff;">if</span>(fp == null)
+  <span style="color: #ff1493;">error</span>();
+<span style="color: #4c83ff;">else</span>
+  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#20851;&#38381;</span>
+  fclose(fp);
+</pre>
+</div></li>
+</ul></li>
+<li>读写 : fscanf, fprintf; fgetc, fputc, fgets, fread, fwrite
+<ul class="org-ul">
+<li><p>
+Ex.
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">/// </span><span style="color: #8B8989; font-style: italic;">&#23383;&#31526;&#35835;&#20889;</span>
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#21333;&#20010;&#23383;&#31526;</span>
+<span style="color: #ff1493;">fgetc</span>(fp);
+fputc(<span style="color: #61CE3C;">'a'</span>, fp);
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#26684;&#24335;&#21270; &#35835;&#20889;</span>
+<span style="color: #ff1493;">fscanf</span>(fp, <span style="color: #61CE3C;">"%d"</span>, &amp;x);
+<span style="color: #ff1493;">fprintf</span>(fp, <span style="color: #61CE3C;">"%d"</span>, x);
+
+<span style="color: #8B8989; font-style: italic;">/// </span><span style="color: #8B8989; font-style: italic;">&#20108;&#36827;&#21046;&#35835;&#20889;</span>
+<span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">x</span> = 3;
+fwrite(&amp;x, <span style="color: #4c83ff;">sizeof</span>(<span style="color: #afd8af;">int</span>), 1, fp);
+fread(&amp;x, <span style="color: #4c83ff;">sizeof</span>(<span style="color: #afd8af;">int</span>), 1, fp);
+<span style="color: #afd8af;">int</span> <span style="color: #ff69b4;">a</span>[10];
+<span style="color: #ff1493;">fwrite</span>(a, <span style="color: #4c83ff;">sizeof</span>(<span style="color: #afd8af;">int</span>), 10, fp);
+<span style="color: #ff1493;">fread</span>(a, <span style="color: #4c83ff;">sizeof</span>(<span style="color: #afd8af;">int</span>), 10, fp);
+</pre>
+</div></li>
+</ul></li>
+<li>定位 : fseek, ftell, rewind
+<ul class="org-ul">
+<li>fseek(文件指针, 移动的字节数(字面量时需加后缀"L"), 起始点(首:SEEK-SET:0, 当前:SEEK-CUR:1, 尾:SEEK-END:2))</li>
+<li>ftell : 当前位置(位移量)</li>
+<li>rewind : 文件的位置指针 重回文件开头</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc65bed5" class="outline-3">
+<h3 id="orgc65bed5"><span class="section-number-3">4.2</span> Process</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>fork, waitpid, exec</li>
+<li>signal</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfa0eaf2" class="outline-3">
+<h3 id="orgfa0eaf2"><span class="section-number-3">4.3</span> String</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>&lt;string.h&gt;</li>
+<li>长度 : strlen</li>
+<li>比较 : strcmp, strncmp, memcmp (返回值: +:s1&gt;s2 -:s1&lt;s2, 0:s1==s2, )</li>
+<li>复制 : strcpy(D,S), strncpy, memcpy, memmove, strdup</li>
+<li>连接 : strcat(D,S), strncat</li>
+<li>搜索 : strchr, strrchr, strstr, index, rindex</li>
+<li>填充 : memset</li>
+<li>分割 : strtok, strtok<sub>r</sub></li>
+<li>转换
+<ul class="org-ul">
+<li>大小写 : strupr strlwr</li>
+<li>-&gt;(int|long, double) : atoi, atof</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org6e3656e" class="outline-3">
+<h3 id="org6e3656e"><span class="section-number-3">4.4</span> 预处理</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>预定义名
+<ul class="org-ul">
+<li>_<sub>LINE</sub>__ : 当前编译行的行号</li>
+<li>_<sub>FILE</sub>__ : 文件名</li>
+<li>_<sub>DATA</sub>__ : 程序创建日期</li>
+<li>_<sub>TIME</sub>__ : 程序创建时间</li>
+<li>_<sub>STDC</sub>__ : 当前编译器 是否符合标准C  是:1</li>
+</ul></li>
+<li>头文件 : #include : 会读取头文件中内容 插入主文件
+<ul class="org-ul">
+<li>&lt;&gt; : 在存放 C库函数头文件 的目录 中找</li>
+<li>"" : 优先在当前目录找 (或指定路径)</li>
+</ul></li>
+<li>宏
+<ul class="org-ul">
+<li>创建 : #define</li>
+<li>撤销#define的定义 : #undef</li>
+<li>编译前被替换掉 运行时无法改变</li>
+<li><p>
+对象式宏(变量式)
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #919191;">#define</span> <span style="color: #ff69b4;">PI</span> 3.14    
+</pre>
+</div></li>
+<li><p>
+函数式宏
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#26368;&#22806;&#23618;&#25324;&#21495; &#29992;&#20110; &#20445;&#35777;&#20248;&#20808;&#32423;</span>
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">ADD_ONE</span>(<span style="color: #ff69b4;">x</span>) ((x) + 1)  <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">((3) + 1) &lt;- ADD_ONE(3)</span>
+
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">putsa</span>(<span style="color: #ff69b4;">str</span>) ( putchar(<span style="color: #61CE3C;">'\a'</span>), puts(str); )
+<span style="color: #4c83ff;">if</span> (na)
+  putsa(<span style="color: #61CE3C;">"a"</span>);
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">-&gt; ( putchar('\a'), puts("a") );</span>
+
+<span style="color: #8B8989; font-style: italic;">//</span>
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">device_init_wakeup</span>(<span style="color: #ff69b4;">dev</span>,<span style="color: #ff69b4;">val</span>)             \
+  <span style="color: #4c83ff;">do</span> {                                          \
+    device_can_wakeup(dev) = !!(val);           \
+    device_set_wakeup_enable(dev,val);          \
+  } <span style="color: #4c83ff;">while</span>(0)
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#24102;&#21487;&#21464;&#21442;&#25968; : ... &#21644; #__VA_ARGS__ (? ##__VA_ARGS__)</span>
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">showlist</span>(...) printf(#__VA_ARGS__)
+</pre>
+</div>
+<ul class="org-ul">
+<li>规则
+<ul class="org-ul">
+<li>1 外部使用括号 保证优先级</li>
+<li>2 内部 所有参数出现的地方 使用括号</li>
+<li>3 出现多次 要考虑 可能被多次求值 是否有副作用</li>
+</ul></li>
+</ul></li>
+<li><p>
+运算符 : #, ## , defined()
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">#&#36816;&#31639;&#31526; : &#29992;&#20110;&#21019;&#24314;&#23383;&#31526;&#20018; (&#21482;&#29992;&#20110; &#20989;&#25968;&#24335;&#23439;)</span>
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">#&#36816;&#31639;&#31526;&#21518;&#38754;&#24212;&#35813;&#36319;&#19968;&#20010;&#24418;&#21442; &#20013;&#38388;&#21487;&#26377;&#31354;&#26684;&#25110;Tab    </span>
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">STR</span>(<span style="color: #ff69b4;">s</span>) #s
+<span style="color: #ff1493;">STR</span>(<span style="color: #afd8af;">hello</span>   <span style="color: #ff69b4;">world</span>) <span style="color: #8B8989; font-style: italic;">//  </span><span style="color: #8B8989; font-style: italic;">"hello   world"</span>
+STR(123\\12) <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">"123\12"</span>
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">##&#36816;&#31639;&#31526; : &#25226;&#21069;&#21518;&#20004;&#20010;&#39044;&#22788;&#29702;Token &#36830;&#25509;&#25104;&#19968;&#20010;</span>
+<span style="color: #919191;">#define</span> <span style="color: #ff1493;">CONCAT</span>(<span style="color: #ff69b4;">a</span>, <span style="color: #ff69b4;">b</span>) a##b
+<span style="color: #ff1493;">CONCAT</span>(con, cat)
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">&#23637;&#24320;&#25104;&#20004;&#20010;#&#21495;</span>
+<span style="color: #919191;">#define</span> <span style="color: #ff69b4;">HASH_HASH</span> # ## #
+</pre>
+</div></li>
+</ul></li>
+<li><p>
+条件编译 : #if, #else, #elif, #ifdef, #ifndef, #endif
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #919191;">#ifdef</span> SPANISH
+<span style="color: #afd8af;">char</span> *<span style="color: #ff69b4;">greeting</span> = <span style="color: #61CE3C;">"Hola"</span>;
+<span style="color: #919191;">#else</span>
+<span style="color: #afd8af;">char</span> *<span style="color: #ff69b4;">greeting</span> = <span style="color: #61CE3C;">"Hello"</span>;
+<span style="color: #919191;">#endif</span>
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">SPANISH&#23439;&#23450;&#20041;&#19982;&#21542;&#20250;&#25913;&#21464;&#36825;&#27573;&#20195;&#30721;&#30340;&#32534;&#35793;&#26041;&#24335;</span>
+
+<span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">defined() : &#39044;&#22788;&#29702;&#25805;&#20316;&#31526;</span>
+<span style="color: #919191;">#if</span> !<span style="color: #919191;">defined</span>(AIR)
+<span style="color: #919191;">#endif</span>
+
+<span style="color: #919191;">#define</span> <span style="color: #ff69b4;">RED</span> 1
+<span style="color: #919191;">#define</span> <span style="color: #ff69b4;">BLUE</span> 2
+
+<span style="color: #919191;">#if</span> COLOR == RED
+<span style="color: #8B8989; font-style: italic;">//</span><span style="color: #8B8989; font-style: italic;">...</span>
+<span style="color: #919191;">#elif</span> COLOR == BLUE
+<span style="color: #8B8989; font-style: italic;">//</span><span style="color: #8B8989; font-style: italic;">...</span>
+<span style="color: #919191;">#endif</span>
+</pre>
+</div></li>
+<li><p>
+改变行号 : #line
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">#line &#34892;&#21495;["&#25991;&#20214;&#21517;"]</span>
+<span style="color: #919191;">#line</span> 30<span style="color: #61CE3C;">"text.c"</span>
+printf(<span style="color: #61CE3C;">"%d"</span>, __LINE__); <span style="color: #8B8989; font-style: italic;">// </span><span style="color: #8B8989; font-style: italic;">30</span>
+</pre>
+</div></li>
+<li>设定编译器状态 : #progma 参数
+<ul class="org-ul">
+<li>message参数 : 编译信息输出窗口中输出的相信</li>
+<li>code<sub>seg</sub> : 设置程序中 函数代码 存放的代码段</li>
+<li>once : 保证头文件被编译一次</li>
+</ul></li>
+<li>编译器报错退出 : #error : #error UNKNOWN TARGET MACHINE
+<ul class="org-ul">
+<li>编译器遇到这个预处理指示就报错退出 错误信息就是UNKNOWN TARGET MACHINE</li>
+</ul></li>
+<li>#warning</li>
+</ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1bc1bd5" class="outline-2">
-<h2 id="org1bc1bd5"><span class="section-number-2">5</span> 概念</h2>
+
+<div id="outline-container-orgecde0a4" class="outline-2">
+<h2 id="orgecde0a4"><span class="section-number-2">5</span> 概念</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>头文件
@@ -1334,6 +1607,45 @@ printf(<span style="color: #61CE3C;">"Char:%c"</span>, some.c);
 <li>关键字 保留字</li>
 <li>变量</li>
 </ul>
+</div>
+
+<div id="outline-container-org63fbb9e" class="outline-3">
+<h3 id="org63fbb9e"><span class="section-number-3">5.1</span> 声明</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>理解
+<ul class="org-ul">
+<li>从 名字 开始读 然后 根据优先级顺序读</li>
+<li>优先级 从 高到低
+<ul class="org-ul">
+<li>括号内</li>
+<li>后缀操作符
+<ul class="org-ul">
+<li>() : 函数</li>
+<li>[] : 数组</li>
+</ul></li>
+<li>前缀操作符 : * : 表示 指向 某某 的指针</li>
+</ul></li>
+<li>const, volatile 后跟
+<ul class="org-ul">
+<li>类型说明符 则作用于 类型说明符</li>
+<li>其它情况 作用于 左边紧邻的指针星号</li>
+</ul></li>
+</ul></li>
+<li>Ex.
+<ul class="org-ul">
+<li>char * const *(*next)()
+<ul class="org-ul">
+<li>名字 -&gt; 变量名 next</li>
+<li>括号内 -&gt; next 是 一个指针</li>
+<li>后缀 -&gt; next 是 一个 函数 指针</li>
+<li>前缀 -&gt; next 是 一个函数指针  返回 一个指针</li>
+<li>剩下 -&gt; next 是 一个函数指针 返回一个指针(指向 一个 类型为char 的常量指针)</li>
+</ul></li>
+<li>int (*hoge)[3] : hoge是指针 指向int数组(3个元素)</li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div>
 </div>

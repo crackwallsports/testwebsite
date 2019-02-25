@@ -26,15 +26,18 @@ Live 活着的
 - REPL : 读 求值 打印 循环
   
 ** 自身
-- 语法 : S-表达式 :
+- 语法 : S-表达式
   - 原子 (列表以外的)
   - 列表 (括号括起来的)
 - 求值
-  - 求值规则
-    - 函数 : 参数从左到右先求值 再传入函数求值 
-    - 特殊形式 : 各自特定的规则
+  - atom => self (自求值 : 返回自身)
+    - Symbol => value  (: 符号引用对象)
+      - t nil :keyword => self
+  - list (根据第一个元素)
+    - function 函数 : 参数从左到右先求值 再传入函数求值
+    - special 特殊形式 : 各自特定的规则
       - 不求值 : quote
-    - 宏 : 参数不求值
+    - macro 宏 : 参数不求值
       
 *** Comment 注释
 #+BEGIN_SRC lisp
@@ -53,6 +56,446 @@ Live 活着的
     |#
 |#
 #+END_SRC
+
+*** Reader & Printer 读取器 和 打印器 :?:
+*** Quote 引用
+- Homoiconicity 同象性 : 程序 & 数据
+- 引用 : quote (sugar: ')
+  - 符号作为数据 : 'foo
+  - 程序(列表)作为数据 : '(+ 1 2)
+  - Ex.
+    #+BEGIN_SRC lisp
+;; (quote ...) == '(...)
+'(x y z)                  ;-> (X Y Z)
+(quote x)                 ;-> X
+(list 'quote 1)           ;-> '1  ;== (quote 1)
+(list 'quote 'y)          ;-> 'Y
+    #+END_SRC
+- 反引用
+  - backquote (sugar: `)
+    #+BEGIN_SRC lisp
+`(x (+ 3 3) y)  ;-> (X (+ 3 3) Y)
+`(x ,(+ 3 3) y) ;-> (X 6 Y)
+`(x (x y z))    ;-> (X (X Y Z))
+`(x ,@'(x y z)) ;-> (X X Y Z)
+`(x . ,'(x y z)) ;-> (X X Y Z)
+    #+END_SRC
+
+*** Special 特殊操作符
+- 25个
+- 词法环境 : let let* setq progv
+- 函数 : function labels flet
+- 宏 : macrolet symbol-macrolet
+- 控制流
+  - if
+  - progn
+  - block return-from return
+  - tagbody go
+  - catch throw
+  - unwind-protect
+- 多值 : multiple-value-call multiple-value-prog1
+- 求值 : quote eval-when load-time-value
+  - load-time-value : 若编译则只求值一次
+- 类型 : locally the
+*** Type System 类型系统
+- 动态类型 : 运行时检测 名字 可关联 任何类型的对象
+- 强类型 : 所有的类型错误都会被检测
+- Class 可作为 Type 使用 (相反不可) : 定义 class 时 会自动定义一个同名的 Type 
+- 名字(变量)没有类型  只有值才有类型
+
+操作
+- Case : typecass ctypecase etypecase
+- Determining : type-of
+  #+BEGIN_SRC lisp
+(type-of 'x)  ;-> SYMBOl
+(type-of '(+ 1)) ;-> CONS
+(type-of nil) ;-> NULL
+   #+END_SRC
+- Check : check-type typep
+  #+BEGIN_SRC lisp
+(defun my-sqrt (x)
+  (check-type x (real 0)) 
+  (sqrt x))  
+(my-sqrt -9) ;; Error: TYPE-ERROR
+
+(defun my-sqrt (list)
+  (check-type (first list) (real 0) "a non-negative real number")
+  (sqrt (first list)))
+  #+END_SRC
+
+**** Type Specifier 类型标识符 :?:
+*** Symbol 符号
+- 符号的内部结构
+  - name     : symbol-name
+  - package  : symbol-package := home package | nil(uninterned)
+  - value    : symbol-value
+  - function : symbol-function
+  - plist    : symbol-plist
+    #+BEGIN_SRC lisp
+(setf (get 'a 'ss) 1)
+(symbol-plist 'a) ;;-> (SS 1)
+(get 'a 'ss) ;-> 1
+    #+END_SRC
+- 命名
+  - 大小写不敏感 保持大小写使用"||"包围
+  - 不能
+    - 只有: 数字 或 "."
+    - 含有: Whitespace [()"'`,:;\|]
+  - 使用不被允许的字符
+    - Escape : \
+    - Surrounding : ||
+      #+BEGIN_SRC lisp
+|lisp 3|
+| | 
+|abc|      
+      #+END_SRC
+*** Name 名字
+- 基于: 符号
+- 约定
+  - 全局变量 : *name*
+  - 常量 : +name+
+  - 特别低层的函数 : 前缀 %|%%
+  - 分隔名字 : -
+  - 谓词 : 后缀 p|-p
+- 函数和变量 使用不同 名称空间
+  #+BEGIN_SRC lisp
+(defun fn () 2)
+(defparameter fn 1)
+fn ;-> 1
+(fn) ;-> 2
+#'fn ;-> #<Compiled-function FN #x3020033714EF>
+
+(symbol-value 'fn) ;-> 1
+(symbol-function 'fn) ;-> #<Compiled-function FN #x3020033714EF>
+  #+END_SRC
+
+*** Package
+- 包 : 符号的集合 用于名称空间
+- 创建 : make-package defpackage
+  #+BEGIN_SRC lisp
+;; (make-package name &key nicknames use)
+(make-package :package-test) ;-> #<Package "PACKAGE-TEST">
+(make-package #:package-test) ;-> #<Package "PACKAGE-TEST">
+(make-package 'package-test) ;-> #<Package "PACKAGE-TEST">
+(make-package "package-test") ;-> #<Package "package-test">
+(make-package '|package-test|) ;-> #<Package "package-test">
+
+(make-package :my-package :nicknames '(:myp "myp"))
+(make-package "my-package" :use '(:cl))
+
+;; (defpackage ...)
+(defpackage :my-package
+  (:nicknames :myp "my-pkg")
+  (:use :cl)
+  (:shadow #:car #:cdr)
+  (:shadowing-import-from :cl #:cons)
+  (:import-from :pkgname #:bye)
+  (:intern #:hi)
+  (:export #:egg #:milk))
+  #+END_SRC
+- 删除 : delete-package
+  #+BEGIN_SRC lisp
+(delete-package :my-pkg)
+  #+END_SRC
+- 改变当前包 : in-package 
+  #+BEGIN_SRC lisp
+(in-package :my-pkg)
+    #+END_SRC
+- 重命名 : rename-package
+  #+BEGIN_SRC lisp
+;; (rename-package :oldname :newname '(:nickname))
+(make-package :temp :nicknames '(:tp))
+(rename-package :temp :temps) ;->  #<PACKAGE "TEMPS">
+(package-name :temp)          ;-> There is no package named "TEMP" .
+(package-nicknames :temps) ;->  ()
+    #+END_SRC
+- Use | Import | Export 
+  #+BEGIN_SRC lisp
+;; use-package : inherit all external symbol
+(use-package :cl)
+(use-package :cl :temp) ;; in TEMP use CL
+(unuse-package :cl)
+
+;; import : add symbol to internal of package
+(import 'cl:car (make-package :temp))
+
+;; shadowing-import
+(shadowing-import 'cl::car :temp) 
+
+;; export | unexport
+(export 'temp::temp-sym :temp)
+(unexport 'temp::temp-sym :temp)
+#+END_SRC
+- Intern : intern unintern
+  #+BEGIN_SRC lisp
+;; intern : enter symbol named string into package
+(intern "Never-Before") ;->  |Never-Before|, NIL
+(intern "Never-Before") ;->  |Never-Before|, :INTERNAL 
+(intern "NEVER-BEFORE" "KEYWORD") ;->  :NEVER-BEFORE, NIL
+(intern "NEVER-BEFORE" "KEYWORD") ;->  :NEVER-BEFORE, :EXTERNAL
+(intern "AAAA") ;-> AAAA
+(intern "aaa") ;-> |aaa|
+
+;; unintern
+(unintern "Never-Before") ;-> T
+(find-symbol "Never-Before") ;-> NIL, NIL 
+    #+END_SRC
+- 屏蔽符号 : shadow
+  #+BEGIN_SRC lisp
+;; 屏蔽在当前包
+(shadow 'sym) 
+
+;; 屏蔽其它包中导入的 
+(shadow 'pkg:sym)
+
+;; 在:pkg包中屏蔽符号
+(shadow 'sym :pkg)  
+  #+END_SRC
+- 包信息 : *package* list-all-packages find-package package-[name nicknames]
+  #+BEGIN_SRC lisp
+;;; Packge
+;; Name
+(package-name :cl) ;-> "COMMON-LISP"
+;; Nickname 
+(package-nicknames :common-lisp) ;-> ("CL")
+
+;; All registered package
+(list-all-packages)
+;; Current-pkg 
+(print *package*)
+;; find-package
+(find-package :cl) ;-> #<PACKAGE "COMMON-LISP">
+   #+END_SRC
+- 包与包关系 : package-[use used-by]-lisp
+  #+BEGIN_SRC lisp
+;; Use | Used package
+(make-package :new-pkg :use '(:my-pkg))
+(package-use-list :new-pkg) ;-> (#<Package "MY-PKG">)
+(package-used-by-list :my-pkg) ;-> (#<Package "NEW-PKG">)
+  #+END_SRC
+- 包内符号
+  #+BEGIN_SRC lisp
+;;; Symbol
+;; (find-symbol string &optional package)
+(find-symbol "CAR" :cl-user) ;-> CAR, :INHERITED
+;; find-all-symbols : searche every registered package
+(find-all-symbols '+) ;-> (:+ + XT3.OOP::+)
+;; Symbol in package
+(symbol-package 'car) ;-> #<Package "COMMON-LISP">
+;;; package-shadowing-symbols
+(package-shadowing-symbols (make-package :temp)) ;-> ()
+  #+END_SRC
+- 迭代包内符号 : loop do-[all external]-symbols
+  #+BEGIN_SRC lisp
+;;; List all Symbol in Package
+;; loop
+(loop for s
+   being each external-symbol|symbol|present-symbol of :cl
+   count s)
+
+;; do-symbols
+(do-symbols (s (find-package :cl-user))
+  (print s))
+;; do-external-symbols
+(do-external-symbols (s (find-package :cl-user))
+  (print s))
+;; do-all-symbols : iterates on every registered package
+(let ((lst ()))                                                     
+  (do-all-symbols (s lst)
+    (when (eq (find-package :temp) (symbol-package s))
+      (push s lst)))
+  lst)
+      #+END_SRC
+
+
+*** Assignment 赋值
+- setf : (setf name|place value)
+  #+BEGIN_SRC lisp
+(setf *x* (list 1 2 3))
+(let ((n 3))
+  (setf n 33))
+
+;; Place
+(setf (car *x*) 9)
+;; *x* = (9 2 3)
+
+;; 多个赋值
+(let ((a 1)
+      (b 2))
+  (setf a 5
+        b a)
+  (list a b))
+;;-> (5 5)
+  #+END_SRC
+- setq psetq(平行) : (setq name value)
+  #+BEGIN_SRC lisp
+(let ((a 1) (b 2))
+  (setq a 3 b (+ a 1))
+  (list a b))
+;;-> (3 4)
+
+(let ((a 1) (b 2))
+  (psetq a b b a)
+  (list a b))
+;;-> (2 1)
+  #+END_SRC
+- set : (set symbol value)
+  #+BEGIN_SRC lisp
+(set 'x 1)
+x ;;-> 1
+
+(let ((a 3))
+  (set 'a 1)
+  a)
+;;-> 3
+  #+END_SRC
+- multiple-value-setq
+  #+BEGIN_SRC lisp
+(let (a b c)
+  (multiple-value-setq (a b c) (values 1 2))
+  (list a b c) ;-> (1 2 NIL)
+  (multiple-value-setq (a b) (values 4 5 6))
+  (list a b c) ;-> (4 5 NIL)
+  )
+  #+END_SRC
+- rotatef shiftf  (修改宏 参数只求值一次)
+  #+BEGIN_SRC lisp
+(setf a 0)
+(setf b 1)
+(rotatef a b)
+a ;-> 1
+b ;-> 0
+
+(shiftf a b 10)
+a ;-> 0 
+b ;-> 10
+  #+END_SRC
+
+**** Setf Place
+- 定义 : (setf name) | defsetf | define-setf-expander
+  #+BEGIN_SRC lisp
+;;; (setf name) 
+;; 定义 : (defun (setf name) (new-val obj))
+;;-| Can #'(setf name)
+;; 调用 : (setf (name obj) new-val)
+  #+END_SRC
+
+*** Macro 宏
+- 定义 : defmacro
+  #+BEGIN_SRC lisp
+(defmacro name (parameter*)
+  "Optional doc string"
+  body-form*)
+
+;; &body : 与&rest等价 但许多开发环境会根据其修改宏缩进
+;; &whole
+(defmacro tfun (&whole form &rest body) `(list ',form ,@body))
+(tfun 1 2 3) ;-> ((TFUN 1 2 3) 1 2 3)
+
+;; Destructuring parameter list 解构形参列表
+(defmacro macro (vars &body body) ...)
+(defmacro macro ((a b c) &body body) ...)
+    #+END_SRC
+- 展开 : macroexpand-1(一层) macroexpand
+- !! 注意
+  - 多重求值问题 
+  - 变量定义顺序
+  - 重名 (gensym)
+
+*** Feature 特性
+- 用于区分运行环境
+#+BEGIN_SRC lisp
+*features*
+
+;; #+|- | #+|-(and|or|not ..)
+
+;;; a in impl A, b in impl B
+(cons #+a "more" #-b "little" x) 
+;; in impl A ;-> (cons "more" x)
+;; in impl B ;-> (cons "little" x)
+#+END_SRC
+
+*** Error :?:
+
+*** Debug :?:
+*** Help
+- apropos
+  #+BEGIN_SRC lisp
+;; opt second argument : limit search in particular package
+(apropos "MAP" :cl)
+;;..-> MAPC, Def: FUNCTION
+  #+END_SRC
+- describe
+  #+BEGIN_SRC lisp
+(describe 'length)
+;;-> Symbol: LENGTH
+;;-> Function
+;;-> EXTERNAL in package: #<Package "COMMON-LISP">
+;;-> Print name: "LENGTH"
+;;-> Value: #<Unbound>
+;;-> Function: #<Compiled-function LENGTH #x34C39B6>
+;;-> Arglist: (SEQUENCE)
+;;-> Plist: (:ANSI-CL-URL "fun_length.html")
+
+(describe "LENGTH")
+;;-> "LENGTH"
+;;-> Type: (SIMPLE-BASE-STRING 6)
+;;-> Class: #<BUILT-IN-CLASS SIMPLE-BASE-STRING>
+;;-> Length: 6
+;;-> 0: #\L
+;;-> 1: #\E
+;;-> 2: #\N
+;;-> 3: #\G
+;;-> 4: #\T
+;;-> 5: #\H
+
+(describe 3)
+;;-> Fixnum: 3
+;;-> Scientific: 3.00E+0
+;;-> Log base 2: 1.5849625
+;;-> Binary: #b11
+;;-> Octal: #o3
+;;-> Decimal: 3.
+;;-> Hex: #x3
+;;-> Roman: III
+;;-> Character: #\ETX
+;;-> Abbreviated: 3
+;;-> As time: 8:00:03 Monday, 1 January, 1900
+;;-> MOST-POSITIVE-FIXNUM: 1152921504606846975.
+;;-> ; No value
+  #+END_SRC
+- inspect : 交互型describe 
+  #+BEGIN_SRC lisp
+(defparameter *thing*
+              (vector :lp (list 20 "Hotels") 1971))
+(inspect *thing*)
+;;-:
+1 ;: go one level deeper
+(list $ $$) ;: $ $$ $$$ work like * 
+(setf (first $) 200)
+:s 0 #\M  ;: :s setf
+:q
+  #+END_SRC
+- documentation
+  #+BEGIN_SRC lisp
+(documentation 'length 'function)
+;;-> "returns the number of elements in sequence."
+
+(defun docstring ()
+  "This is docstring."
+  t)
+(documentation 'docstring 'function)
+;;-> "This is docstring."
+  #+END_SRC
+  - second argument
+    - 'variable : defvar, defparameter, defconstant
+    - 'function : defun, defmacro, special form
+    - 'structure : defstruct
+    - 'type : deftype
+    - 'setf : defsetf
+    - 'compiler-macro : define-compiler-macro
+    - 'method-combination : define-method-combination
+    - t : returned depends upon type of first argument.
 
 ** 表示 和 操作
 - 表示
@@ -689,6 +1132,13 @@ Dynamic (Special) Variable  (!!! 注意命名)
   #+END_SRC
 
 
-** 特殊操作符
-** 宏
 ** 控制流
+
+* 概念
+** Scope & Extent 作用域 和 生命周期
+- Scope (space) & Extent (time) : Visibility & Lifetime
+  - lexical 词法
+  - dynamic 动态
+- Shadowing
+  - 同名 : 后者可能屏蔽前者
+

@@ -16,7 +16,7 @@
   "Common Lisp Note - 笔记整理 (草稿)"
   (div ()
        ""
-       (span (:class "badge badge-success") " 更新-2019.2.24")))
+       (span (:class "badge badge-success") " 更新-2019.2.25")))
  ("2019 1 8"
   "/testwebsite/articles/box-ImageMagick-note.html"
   "ImageMagick Note - 笔记整理 (草稿)"
@@ -33,7 +33,7 @@
   "/testwebsite/articles/box-learn-c.html"
   "学习 C 语言 - 笔记整理 (草稿)"
   (div ()
-     (span (:class "badge badge-success") "更新-2019.2.20")
+     (span (:class "badge badge-success") "更新-2019.2.25")
      (pre () "
 C 语言学习的笔记整理 不是单纯的修剪笔记 而是 重构
 重新思考 如何一点点引导 将整个知识串接在一起

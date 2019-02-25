@@ -315,7 +315,7 @@ iptr a, b; // a和b 同型
   #+END_SRC
 
 ** 变量
-- ? 变量 : 内存地址 编译时将变量名替换为地址
+- 变量 : 内存地址 编译时将变量名替换为地址
 - Identifier 标识符 : 名字
   - 数字:0~9 大小写:A~Za~z 下划线:_ (非数字开头)
 - 作用域 生命周期
@@ -459,6 +459,8 @@ char str[] = {'\0'} //== {0}
       - &arr : rows*cols个 int数组的 指针
 - 退化(信息的丢失) : 数组赋给指针变量 指针变量只会包含数组的起始地址
 - 数组 还是 指针 ?: 函数参数的形式声明 则为指针
+- [] 语法糖 : p[i] -> *(p+i)
+  - p[i] == i[p] (可以 但不要这么做)
 
 Example
 #+BEGIN_SRC c
@@ -496,7 +498,7 @@ int main(){
 }
   #+END_SRC
 
-** Operators 运算符
+** 运算符
 - , : 逗链的值 为 最后表达式的值
   - a=(1+2, 3+3, 3+8); // a=11
 - Assignment 赋值
@@ -586,10 +588,30 @@ sizeof(*ss);     // 8
 - 跳转 : goto (label)
 
 ** 函数
-- 把 部分程序 封装起来 并 给一个名字 (这个也叫: 定义) 方便重复使用
+- 把 部分程序 封装起来 并 给一个名字 方便重复使用
 - 定义
 - 调用
+  - 在调用之前 先定义 或 显示声明
+  - 参数的 计算顺序 不确定 (依赖:编译器)
 - 返回值
+
+*** 函数指针
+Example
+#+BEGIN_SRC C
+int (*name)(int, int) = someFunc;
+name(1, 2);
+
+// name == &name
+
+typedef int (*f_name) (int, int);
+f_name name = someFunc;
+
+// 函数指针数组
+int (*names[12])(int, int) = {NULL};
+//or:
+typedef int (*name) (int, int);
+name names[12] = {NULL};
+#+END_SRC
 
 ** 结构 共用 枚举
 *** Enum 枚举
@@ -737,16 +759,172 @@ free(i);
 
   #+END_SRC
 
-
-  
-
-
-
 * 高级
 
 ** IO
 *** 标准输入输出
+- 字符 : getchar, putchar
+- 字符串 : gets, puts
+- 格式化 : scanf, printf, sscanf, sprintf  
+
 *** 文件
+- <stdio.h>
+- 表示 : FILE型
+  - stdin, stdout, stderr 都是指向 FILE型 的指针
+- 开关: fopen, fclose
+  - 方式 : r, w, a, rb, wb, ab,  r+, w+, a+, rb+, wb+, ab+
+    - r|rb (read) : 读 文件需存在
+    - w|wb (write) : 写 文件需不存在
+    - a|ab (append) : 追加 文件需不存在
+    - r+|rb+ : 读 写从头
+    - w+|wb+ : 读 写覆盖整个文件
+    - a+|ab+ : 读 追加写
+  - Ex.
+    #+BEGIN_SRC c
+FILE *fp;
+// 打开 : fopen(fname, mode)
+fp = fopen("abc", "r");
+
+if(fp == null)
+  error();
+else
+  // 关闭
+  fclose(fp);
+    #+END_SRC
+- 读写 : fscanf, fprintf; fgetc, fputc, fgets, fread, fwrite
+  - Ex.
+    #+BEGIN_SRC c
+/// 字符读写
+// 单个字符
+fgetc(fp);
+fputc('a', fp);
+// 格式化 读写
+fscanf(fp, "%d", &x);
+fprintf(fp, "%d", x);
+
+/// 二进制读写
+int x = 3;
+fwrite(&x, sizeof(int), 1, fp);
+fread(&x, sizeof(int), 1, fp);
+int a[10];
+fwrite(a, sizeof(int), 10, fp);
+fread(a, sizeof(int), 10, fp);
+    #+END_SRC
+- 定位 : fseek, ftell, rewind
+  - fseek(文件指针, 移动的字节数(字面量时需加后缀"L"), 起始点(首:SEEK-SET:0, 当前:SEEK-CUR:1, 尾:SEEK-END:2))
+  - ftell : 当前位置(位移量)
+  - rewind : 文件的位置指针 重回文件开头
+** Process
+- fork, waitpid, exec
+- signal
+
+** String
+- <string.h>
+- 长度 : strlen
+- 比较 : strcmp, strncmp, memcmp (返回值: +:s1>s2 -:s1<s2, 0:s1==s2, )
+- 复制 : strcpy(D,S), strncpy, memcpy, memmove, strdup
+- 连接 : strcat(D,S), strncat
+- 搜索 : strchr, strrchr, strstr, index, rindex
+- 填充 : memset
+- 分割 : strtok, strtok_r
+- 转换
+  - 大小写 : strupr strlwr
+  - ->(int|long, double) : atoi, atof
+
+
+** 预处理
+- 预定义名
+  - __LINE__ : 当前编译行的行号
+  - __FILE__ : 文件名
+  - __DATA__ : 程序创建日期
+  - __TIME__ : 程序创建时间
+  - __STDC__ : 当前编译器 是否符合标准C  是:1
+- 头文件 : #include : 会读取头文件中内容 插入主文件
+  - <> : 在存放 C库函数头文件 的目录 中找
+  - "" : 优先在当前目录找 (或指定路径)
+- 宏
+  - 创建 : #define
+  - 撤销#define的定义 : #undef
+  - 编译前被替换掉 运行时无法改变
+  - 对象式宏(变量式)
+    #+BEGIN_SRC c
+#define PI 3.14    
+    #+END_SRC
+  - 函数式宏
+    #+BEGIN_SRC c
+// 最外层括号 用于 保证优先级
+#define ADD_ONE(x) ((x) + 1)  // ((3) + 1) <- ADD_ONE(3)
+
+#define putsa(str) ( putchar('\a'), puts(str); )
+if (na)
+  putsa("a");
+// -> ( putchar('\a'), puts("a") );
+
+//
+#define device_init_wakeup(dev,val)             \
+  do {                                          \
+    device_can_wakeup(dev) = !!(val);           \
+    device_set_wakeup_enable(dev,val);          \
+  } while(0)
+
+// 带可变参数 : ... 和 #__VA_ARGS__ (? ##__VA_ARGS__)
+#define showlist(...) printf(#__VA_ARGS__)
+    #+END_SRC
+    - 规则
+      - 1 外部使用括号 保证优先级
+      - 2 内部 所有参数出现的地方 使用括号
+      - 3 出现多次 要考虑 可能被多次求值 是否有副作用
+  - 运算符 : #, ## , defined()
+    #+BEGIN_SRC c
+// #运算符 : 用于创建字符串 (只用于 函数式宏)
+// #运算符后面应该跟一个形参 中间可有空格或Tab    
+#define STR(s) #s
+STR(hello 	world) //  "hello 	world"
+STR(123\\12) // "123\12"
+
+// ##运算符 : 把前后两个预处理Token 连接成一个
+#define CONCAT(a, b) a##b
+CONCAT(con, cat)
+
+// 展开成两个#号
+#define HASH_HASH # ## #
+    #+END_SRC
+- 条件编译 : #if, #else, #elif, #ifdef, #ifndef, #endif
+  #+BEGIN_SRC c  
+#ifdef SPANISH
+char *greeting = "Hola";
+#else
+char *greeting = "Hello";
+#endif
+// SPANISH宏定义与否会改变这段代码的编译方式
+
+// defined() : 预处理操作符
+#if !defined(AIR)
+#endif
+
+#define RED 1
+#define BLUE 2
+
+#if COLOR == RED
+//...
+#elif COLOR == BLUE
+//...
+#endif
+  #+END_SRC
+- 改变行号 : #line
+  #+BEGIN_SRC c
+// #line 行号["文件名"]
+#line 30"text.c"
+printf("%d", __LINE__); // 30
+  #+END_SRC
+- 设定编译器状态 : #progma 参数
+  - message参数 : 编译信息输出窗口中输出的相信
+  - code_seg : 设置程序中 函数代码 存放的代码段
+  - once : 保证头文件被编译一次
+- 编译器报错退出 : #error : #error UNKNOWN TARGET MACHINE
+  - 编译器遇到这个预处理指示就报错退出 错误信息就是UNKNOWN TARGET MACHINE
+- #warning
+
 
 * 概念
 - 头文件
@@ -757,6 +935,27 @@ free(i);
 - 关键字 保留字
 - 变量
 
+** 声明
+- 理解
+  - 从 名字 开始读 然后 根据优先级顺序读
+  - 优先级 从 高到低
+    - 括号内
+    - 后缀操作符
+      - () : 函数
+      - [] : 数组
+    - 前缀操作符 : * : 表示 指向 某某 的指针
+  - const, volatile 后跟
+    - 类型说明符 则作用于 类型说明符
+    - 其它情况 作用于 左边紧邻的指针星号
+- Ex.
+  - char * const *(*next)()
+    - 名字 -> 变量名 next
+    - 括号内 -> next 是 一个指针
+    - 后缀 -> next 是 一个 函数 指针
+    - 前缀 -> next 是 一个函数指针  返回 一个指针
+    - 剩下 -> next 是 一个函数指针 返回一个指针(指向 一个 类型为char 的常量指针)
+  - int (*hoge)[3] : hoge是指针 指向int数组(3个元素)
+  
 
 * COMMENT Test
 #+BEGIN_SRC C
