@@ -307,7 +307,6 @@ fn ;-> 1
   lst)
       #+END_SRC
 
-
 *** Assignment 赋值
 - setf : (setf name|place value)
   #+BEGIN_SRC lisp
@@ -658,8 +657,8 @@ b ;-> 10
 ;;-> #\Latin_Small_Letter_G_With_Cedilla
     #+END_SRC
 ** String 字符串
-- 表示基于 : Vector-Char : 字符向量
-- 创建 : Literal | make-string | make-array(:e-t='character)
+- 基于 : Vector-Char (字符向量)
+- 创建 : Literal make-string make-array(:e-t='character)
   #+BEGIN_SRC lisp
 "String"
 ;; \ : 用于转义 "" \ 
@@ -673,7 +672,7 @@ b ;-> 10
 (make-string 3 :initial-element #\c) ;->  "ccc"
 (make-array 5 :fill-pointer 0 :adjustable :element-type 'character) ;-> ""
   #+END_SRC  
-- 字面值是否可变 ? 实现依赖
+- 字面值是否可变 ~?:~ 实现依赖
   #+BEGIN_SRC lisp
 (eq "abc" "abc") ;-> NIL
 (setf s0 "abc")
@@ -821,6 +820,353 @@ b ;-> 10
 (string-capitalize 'kludgy-hash-search) ;->  "Kludgy-Hash-Search"
 (string-capitalize "DON'T!") ;->  "Don'T!" ;: not "Don't!"  
   #+END_SRC
+** Boolean Value 布尔值
+- 真|假(Ture|False) : t | nil  (非空 == t)
+- t nil 是 符号常量 求值到自身
+** Empty(Nothing) 空
+- () == nil
+** CONS
+- 创建 : cons
+  #+BEGIN_SRC lisp
+(cons 'a 'b)           ;-> (a . b)
+(cons 'a nil)          ;-> (a)
+(cons 'a '(b c))       ;-> (a b c)
+(cons 'a (cons b nil)) ;-> (a b)  
+(cons 1 2) ;-> (1 . 2) 
+(cons 1 (cons 2 3))   ;-> (1 2 . 3) 
+  #+END_SRC
+- 访问 : car|first cdr|rest
+- 修改 : (破坏 rplaca rplacd)
+  #+BEGIN_SRC lisp
+(defparameter *some-list* (list* 'one 'two 'three 'four))
+
+(rplaca *some-list* 'uno) ;->  (UNO TWO THREE . FOUR)
+*some-list* ;->  (UNO TWO THREE . FOUR)
+
+(rplacd (last *some-list*) (list 'IV)) ;->  (THREE IV)
+*some-list* ;->  (UNO TWO THREE IV)    
+
+;; (rplaca cons object) == (setf (car cons) object)
+;; (rplacd cons object) == (setf (cdr cons) object)
+
+;;; Create circular lists
+(let ((l (list 1)))
+    (rplacd l l)  
+    l) ; l=(1 . l)
+;-> (1 1 1 1 1 1 1 1 ... ; Continues until interrupt or stack overflow 
+
+(let ((l (list 2))) 
+    (rplaca l l)
+    l) ; l=(l . nil)
+;;-> (((((((((((((((( ... ; Continues until interrupt or stack overflow 
+  #+END_SRC
+
+** List 列表
+- 表示基于 : [[CONS]]-Chain
+  #+BEGIN_SRC lisp
+(1) == (1 . nil) == (cons 1 nil)            
+(1 2) == (cons 1 (cons 2 nil)) 
+(1 2 3) == (cons 1 (cons 2 (cons 3 nil)))
+(1 (2 3) 4) == (cons 1 
+                     (cons (cons 2 
+                                 (cons 3 nil)) 
+                           (cons 4 nil)))
+
+;; tail nil can ignore
+(1 . (2 . (3 . nil))) == (1 . (2 . (3))) == (1 2 3)
+  #+END_SRC
+- 创建 : Literal list|list* make-list cons
+  #+BEGIN_SRC lisp
+;;; Literal
+() ; 空列表 
+'(1 2 3)
+;; !! (New Obj? 实现依赖)
+(eq '(1 2 3) '(1 2 3)) ;-> nil (Most imp)
+(eq (cdr '(1 2 3))
+    (cdr '(1 2 3)))
+;;-> nil (Most imp)
+
+;;; Make
+;; Proper list
+(cons 1 (cons 2 nil)) ;-> (1 2)
+(list 1 2 3)
+(list 'my (+ 2 1) "Sons") ;-> (MY 3 "Sons")
+(list* 'a 'b 'c '(d e f)) ;->  (A B C D E F)
+
+;; Dotted list
+(cons 1 (cons 2 3)) ;-> (1 2 . 3)
+(list* 'a 'b 'c 'd) ;== (cons 'a (cons 'b (cons 'c 'd))) 
+;;-> (A B C . D)
+
+;; 重复列表
+(make-list 3) ;-> (nil nil nil)
+(make-list 3 :initial-element 3) ;-> (3 3 3)
+  #+END_SRC
+*** 种类
+- Proper list (true list) : NIL结尾
+- Dotted list : 非NIL结尾
+- Circular list 循环列表
+  #+BEGIN_SRC lisp
+;; Circular list
+#1=(1 2 3 . #1#) 
+;! 求值导致无限循环
+;! (length ..) (:imp-d, most: infinite loop)
+
+;; 打印: *print-circle* = t ->  #1=(A B C . #1#)
+(setf *print-circle* t)
+(defparameter foo '(1 2 3))
+(setf (cdddr foo) foo)      ;-> #1=(1 2 3 . #1#)
+#+END_SRC
+
+*** GET
+- 长度 : Seq.length
+- 单个元素 : first~tenth ca*r nth(索引) Seq.elt
+  #+BEGIN_SRC lisp
+(nth 0 '(a b c))    ;-> A
+  #+END_SRC
+- 子列表 : (共享: rest cd*r (索引: nthcdr) (范围: last butlast)) Seq.subseq
+  #+BEGIN_SRC lisp
+(nthcdr 2 '(a b c)) ;-> (C)
+
+(last '(a b)) ;-> (B)
+(last '(1 2 3 4 5) 3) ;-> (3 4 5)
+
+;; (butlast list n) == (ldiff list (last list n))
+(setf lst '(1 2 3))
+(butlast lst) ;->  (1 2)
+(butlast lst 2) ;->  (1)
+(butlast lst 5) ;->  NIL
+
+(subseq '(1 2 3 4 5) 0 2) ;-> (1 2)
+  #+END_SRC
+- 删除 : Seq.remove Seq.remove-duplicates (单个 索引: Imp.remove-at)
+  #+BEGIN_SRC lisp
+;;; Usa
+(remove-at '(a b c d) 2) ;-> (A B D)
+(remove-at '(a b c d) 10) ;-> (A B C D)
+
+;;; Imp
+(defun remove-at (l loc)
+  (loop for x in l and i from 0
+     unless (= i loc)
+     collect x))
+  #+END_SRC
+- 反转 : Seq.reverse
+*** Concat
+- 追加 Append : append revappend 
+  #+BEGIN_SRC lisp
+(append (list 1 2) (list 3 5)) ;-> (1 2 3 5)
+(revappend (list 1 2) (list 3 6)) ;-> (2 1 3 6)
+  #+END_SRC
+
+*** Search
+- member[-if[-not]] Seq.Search
+  #+BEGIN_SRC lisp
+;; (:test eql)
+(member a '(c a e)) ;-> (a e)
+ #+END_SRC
+*** Destruct
+- destructuring-bind
+  #+BEGIN_SRC lisp
+(destructuring-bind (x y z) (list 1 2 3) (list :x x :y y :z z))
+;-> (:X 1 :Y 2 :Z 3)
+(destructuring-bind (x (y1 &optional y2) z) (list 1 (list 2) 3) (list :x ..))
+;-> (:x 1 :y1 2 :y2 nil :z 3)
+(destructuring-bind (&key x y) (list :y 1 :x 2) ..)
+;-> (:x 2 :y 1)
+(destructuring-bind (&whole whole &key x y) (list :y 2 :x 1) (list :x x :y y :whole whole))
+;-> (:x 1 :y 2 :whole (:y 2 :x 1))
+  #+END_SRC
+*** Map
+- mapcar maplist  mapc mapl  Seq.map
+  #+BEGIN_SRC lisp
+(mapcar (lambda (x) x) '(1 2 3))  ;-> (1 2 3)
+(maplist (lambda (x) x) '(1 2 3)) ;-> ((1 2 3) (2 3) (3))
+
+;; (only for side effect)
+(mapc '+ '(1 2 3)) ;-> (1 2 3)
+(mapc #'(lambda (x y) (format t "~a~a " x y)) '(a b c) '(e f d))
+ ;;-> AE BF CD ;;-> (A B C)
+ (mapl #'(lambda (x) (format t "~a " x)) '(a b c))
+;;-> (A B C) (B C) (C) ;;-> (A B C)
+  #+END_SRC
+*** Flatten
+- Imp.my-flatten
+  #+BEGIN_SRC lisp
+;;; Usa
+;; 1
+(my-flatten '(a (b (c d) e))) ;-> (A B C D E)
+;; 1+
+(my-flatten '((1 2 (3)) a (b (c (m (d e) f) d) e)) :floor 1)
+;;-> (1 2 (3) A B (C (M (D E) F) D) E)
+(my-flatten '((1 2 (3)) a (b (c (m (d e) f) d) e)) :floor 2)
+;;-> (1 2 3 A B C M (D E) F D E)
+
+;;; Imp
+;; A (1)
+(defun my-flatten (l)
+  (cond ((null l) nil)
+        ((atom l) (list l))
+        (t (append (my-flatten (car l)) (my-flatten (cdr l))))))
+
+;; B (1+)
+(defun my-flatten (l &key floor)
+  (cond ((null l) nil)
+        ((atom l) (list l))
+        ((and (not (null floor)) (zerop floor)) l)
+        (t (if (null floor)
+               (append (my-flatten (car l)) (my-flatten (cdr l)))
+               (append (my-flatten (car l) :floor (1- floor))
+                       (my-flatten (cdr l) :floor floor))))))
+  #+END_SRC
+*** Split
+- Imp.split-group
+  #+BEGIN_SRC lisp
+;;; Usa
+(split-group '(a b c d e f g h i k) '(2))
+(split-group '(a b c d e f g h i k) '(2 3 4)) 
+;;-> ((A B) (C D E) (F G H I) (K)))  
+
+;;; Imp
+(defun split-group (l g)
+  (cond ((null l) nil)
+        ((null g) (list l))
+        (t (cons (subseq l 0 (car g))
+                 (split-group (nthcdr (car g) l) (cdr g))))))  
+  #+END_SRC
+*** Traversing
+- loop dolist dotimes
+*** Replace
+- 替代元素 : (单个: subst[-if]) (多个: sublis) Seq.substitute
+  #+BEGIN_SRC lisp
+(subst 10 1 '(1 2 (3 2 1) ((1 1) (2 2))))
+;-> (10 2 (2 3 10) ((10 10) (2 2)))
+
+(sublis '((x . 100) (z . zprime))
+         '(plus x (minus g z x p) 4 . x))
+;;-> (PLUS 100 (MINUS G ZPRIME 100 P) 4 . 100)    
+  #+END_SRC
+
+** Tree 树
+- 基于 : [[List 列表]]
+** Stack 栈
+- 基于 : [[List 列表]]
+- 入栈 : (共享: cons) (破坏: push pushnew(使用:Set.adjoin))
+  #+BEGIN_SRC lisp
+(let ((l (list 3 5)))
+  (push 5 l)
+  l)
+;;-> (5 3 5)
+
+(let ((l (list 3 5)))
+  (pushnew 3 l)
+  (pushnew 6 l)
+  l)
+;;-> (6 3 5)
+
+(let ((l (list 3 5)))
+  (cons 3 l)
+  (cons 6 l)
+  l)
+;;-> (3 5)
+  #+END_SRC
+- 出栈 : (共享: car+cdr) (破坏: pop)
+  #+BEGIN_SRC lisp
+(let ((l (list 1 2 3)))
+  (pop l)                               ;-> 1
+  l)
+;;-> (2 3)
+
+(let ((l (list 1 2 3)))
+  (car l)
+  (setf l (cdr l))
+  l)
+;;-> (2 3)
+
+  #+END_SRC
+** Set 集合
+- 交并差补 属于 大小
+
+- 基于 : [[List 列表]]
+- 添加元素 : adjoin
+  #+BEGIN_SRC lisp
+(adjoin 1 ()) ;-> (1)
+(adjoin 1 '(3 5 6)) ;-> (1 3 5 6)
+
+(let ((l (list 1 2 3)))
+  (adjoin 5 l)
+  (adjoin 1 l)
+  l)
+;;-> (1 2 3)
+ #+END_SRC
+- 操作 : intersection union set-difference set-exclusive-or
+  #+BEGIN_SRC lisp
+(union '(1 2) '(3 5)) ;-> (2 1 3 5)
+(set-difference '(1 2 3 5 6) '(3 5)) ;-> (6 2 1)
+  #+END_SRC
+- 属于 : List.member
+- 大小 : Seq.length
+** alist 关联表
+- 基于 : [[List 列表]]
+- 创建 : List pairlis
+  #+BEGIN_SRC lisp
+;; ((k1 v1) (k2 v2) ... (kN vN))
+'((a . 1) (b . 2) (c . 3))
+'((a 1) (b 2) (c 3))
+
+(pairlis '(a b) '(1 2)) ;-> ((b . 2) (a . 1)) or ((a . 1) (b .2))
+  #+END_SRC
+- 访问 : assoc[-if] rassoc[-if]
+  #+BEGIN_SRC lisp
+;; Default(:key car :test #'eql) 
+(assoc 'a '((a . 1) (b . 2))) ;-> (a . 1)
+(assoc 'a '((a 1) (b 2)))     ;-> (a 1)
+(assoc "two" '((1 . a) ("two" . b) (three . c)) 
+       :test #'equal)
+;;-> ("two" . B)
+
+;; Default(:key cdr)      
+(rassoc "two" '((1 . "one") (2 . "two") (3 . 3))
+        :test 'equal)
+;;-> (2 . "two")
+  #+END_SRC  
+- 添加 : acons
+  #+BEGIN_SRC lisp
+;; (acons 'nk 'nv alist) == (cons (cons 'nk 'nv) alist)
+(acons 'd 4 '((a . 1) (b . 2) (c . 3)))
+;;-> ((D . 4) (A . 1) (B . 2) (C . 3))
+  #+END_SRC
+
+** plist 属性表
+- 基于 : [[List 列表][List 列表]]
+- 创建 : List
+  #+BEGIN_SRC lisp
+;; (k1 v1 k2 v2 ... kN vN)
+'(a 1 b 2 c 3)
+  #+END_SRC
+- 访问 : getf get-properties
+  #+BEGIN_SRC lisp
+;; 比较基于 : eq 
+(getf '(a 2 c 3 d c) 'a) ;-> 2
+(getf '(a 2 c 3 d c) 'd) ;-> c
+(getf '(1 2 4 5) 1)      ;-> 2
+(getf (list 1 :a 'two :b "three" :c) "three") ;-> NIL
+(getf '(1 2 3 4 5 nil) 6) ;-> NIL
+(getf '(1 2 3 4 5 nil) 6 "nothing") ;-> "nothing"
+
+(get-properties '(a 1 b 2 c 3 d 4) (list 'b))
+;;-> B
+;;-> 2
+;;-> (B 2 C 3 D 4)
+  #+END_SRC
+- 移除 : (破坏: remf)
+  #+BEGIN_SRC lisp
+(let ((pl (list :a 1 :b 2 :c 3)))
+  (remf pl :b)
+  pl)
+;;-> (:A 1 :C 3) ;;-> T
+  #+END_SRC
+
 * 基础
 ** 变量 和 常量
 Variable 变量
@@ -1130,7 +1476,6 @@ Dynamic (Special) Variable  (!!! 注意命名)
    #'(lambda () (decf count))
    #'(lambda () count)))
   #+END_SRC
-
 
 ** 控制流
 

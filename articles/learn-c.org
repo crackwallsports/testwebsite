@@ -250,13 +250,10 @@ int main(int argc, char *argv[]){
 }
     #+END_SRC
 
-
-!!! 干脆做视频 动态的表示 会更好 写出来太麻烦了 
-
 * 基础
 
 ** 类型
-- ? 类型 : 代表 分配的内存空间大小 将实际大小进行抽象
+- 类型 : 代表 分配的内存空间大小 将实际大小进行抽象
 - 类型
   - 基本
     - 整 : int (short, long) ([un]signed 默认有符号)
@@ -272,20 +269,14 @@ int main(int argc, char *argv[]){
     - 共用
 - Modifiers 修饰符 : unsigned, signed, short, long
 
-*** 表示范围
+表示范围
 - <limit.h>
-  - char (编译器为 无|有符号)
-    - CHAR_MIN == 0|SCHAR_MIN 
-    - CHAR_MAX == UCHAR_MAX|SCHAR_MAX
-  - ...
-*** 定长整型
+
+定长整型
 - <stdint.h>
-- [u]int(BITS)_t : int8_t, uint8_t, ...
-- [U]INT(BITS)_MAX, ...
-- int_least(BITS)_t, ...
-*** 类型别名
-- Typedef 
-  #+BEGIN_SRC C
+
+类型别名 : Typedef
+#+BEGIN_SRC C
 typedef unsigned char byte;
 
 int* a[10];
@@ -515,17 +506,6 @@ int main(){
   - 正 % 正 -> 正 (其它取决于 编译器)
 - ++ Increment
 - -- Decrement
-*** Bitwise 位运算
-- 逻辑
-  - & (and 与)
-  - | (or 或)
-  - ^ (xor 异或)
-  - ~ (one's complement 取反) 
-- 位移
-  - << (shift left 左移)
-  - >> (shift right 右移)
-    - 算术右移: 补1
-    - 逻辑右移: 补0
 *** Logical 逻辑
 - && (And)
 - || (Or)
@@ -538,6 +518,17 @@ int main(){
 - <  (Less than)
 - >= (Greater than equal)
 - <= (Less than equal)
+*** Bitwise 位运算
+- 逻辑
+  - & (and 与)
+  - | (or 或)
+  - ^ (xor 异或)
+  - ~ (one's complement 取反) 
+- 位移
+  - << (shift left 左移)
+  - >> (shift right 右移)
+    - 算术右移: 补1
+    - 逻辑右移: 补0
 *** Data 数据
 - sizeof()
 - [] : array subscript
@@ -547,7 +538,8 @@ int main(){
 - . : Structure reference
 
 **** sizeof
-- sizeof : 在存储器中占 多少字节 (编译器 根据 类型的大小 或 变量声明的类型的大小 来返回相应的值)
+- sizeof : 在存储器中占 多少字节
+  - 编译器 根据 类型的大小 或 变量声明的类型的大小 来返回相应的值
   - 只是 向编译器询问 所以只在编译器知道对象大小的情况下使用
 - 参数: 类型名|变量名 Ex.(sizeof(char))
 - 返回值: size_t (unsigned int)
@@ -575,10 +567,9 @@ sizeof(ssa)/sizeof(ssa[0]); // length == 3
 char **ss = {"abc","def","ghi"};
 sizeof(ss);     // 8
 sizeof(*ss);     // 8
-
 #+END_SRC
 ** 控制流程
-- 顺序 分支 循环(递归)
+顺序 分支 循环(递归)
 - 条件分支 : if switch
   - switch
     - 条件: 整型表达式(可包含: 运算符 函数调用)
@@ -713,12 +704,6 @@ typedef struct node* Node;
 #+END_SRC
 **** 域 在 结构中的字节偏移量
 - <stddef.h> : offsetof() : offsetof(structs, f)
-- Imp
-  #+BEGIN_SRC c
-// (&0)->f - 0
-#define offsetof(type, f) ((size_t)             \
-  ((char*) &((type*)0)->f - (char*)(type*)0))
-#+END_SRC
 
 *** Union 共用
 - 声明 定义 初始化 使用
