@@ -99,49 +99,7 @@ Assist
 | 退出 Emacs | confirm-kill-emacssave-buffers-kill-terminal | C-x C-c |
 | 取消       | keyboard-quit            | C-g 或 ESC ESC ESC |
 | 执行 命令  | execute-extended-command | M-x                |
-| 求值 Elisp   | eval-expression | M-: (C-u .. : 结果插入缓冲 |
-
-Buffer 缓冲区 (?? 待整理)
-- 打开-文件
-  - C-x C-f == find-file
-  - C-x C-r == find-file-read-only
-- 替换-打开的错误文件
-  - C-x C-v == find-alternate-file
-- 切换
-  - C-x b
-  - C-x C-b  // 列出全部
-  - C-x <left|right> == [previous next]-buffer
-- 杀死
-  - C-x k == kill-buffer
-  - M-x kill-[some matching]-buffers
-  - M-x clean-buffer-list (未修改>=3天)
-- Forget that the current buffer has been changed 
-  - M-~ == not-modified
-- 保存
-  - C-x s  // 所有未保存 
-  - C-x C-s == save-buffer  // 当前
-- 另存为
-  - C-x C-w == write-file
-- 重命名
-  - M-x set-visited-file-name
-  - M-x rename-[buffer uniquely]
-- 只读
-  - C-x C-q == vc-toggle-read-only
-- 恢复
-  - M-x revert-buffer  // 恢复到上一次存盘时
-  - M-x recover-file  // 从自动保存恢复
-  - M-x recover-session
-- 更新绘制屏幕+当前行放到中间
-  - C-l == recenter- (recenter-positions)
-- 不自动选择编码和转换换行符
-  - M-x find-file-literally
-- 编辑缓存区列表
-  - M-x buffer-menu-[other-window]
-- Indirect Buffers : shares the text of some other buffer
-  - M-x [make clone]-indirect-buffer
-  - C-x 4 c == clone-indirect-buffer-other-window
-
-
+| 求值 Elisp   | eval-expression | M-: (C-u .. : 结果插入缓冲) |
 
 ** Help 帮助
 - Tutorial : C-h t
@@ -162,7 +120,79 @@ Buffer 缓冲区 (?? 待整理)
 
 Key bindings
 - [[https://github.com/kai2nenobu/guide-key][guide-key]]
+** Buffer 缓冲区
+- 打开-文件
+  - find-file ~==~ C-x C-f
+  - find-file-read-only ~==~ C-x C-r 
+  - 替换: find-alternate-file ~==~ C-x C-v (替换缓冲区关联的文件)
+- 切换
+  - switch-to-buffer ~==~ C-x b (-> Helm-mini)
+  - switch-to-buffer-other-(window|frame) ~==~ C-x (4|5) b
+  - list-buffers ~==~ C-x C-b (-> helm-buffers-list)
+  - (previous|next)-buffer ~==~ C-x (left|right) 
+- 杀死
+  - kill-buffer ~==~ C-x k
+  - M-x kill-(some|matching)-buffers
+  - M-x clean-buffer-list (未修改>=3天)
+- 保存
+  - 全部: save-some-buffers ~==~ C-x s
+  - 当前: save-buffer ~==~ C-x C-s
+- 另存为
+  - write-file ~==~ C-x C-w
+- 重命名
+  - M-x rename-(buffer|uniquely)
+- 只读
+  - read-only-mode ~==~ C-x C-q
+- 恢复
+  - M-x revert-buffer  (恢复到上一次存盘时)
+  - M-x recover-file  (从自动保存恢复)
+  - M-x recover-session
+- 重定位
+  - recenter-top-bottom ~==~ C-l
+- Indirect Buffers : shares the text of some other buffer
+  - M-x (make|clone)-indirect-buffer
+  - clone-indirect-buffer-other-window ~==~ C-x 4 c
 
+Assist
+- 缓冲列表: [[https://github.com/emacs-helm/helm][Helm]]
+  - C-x b ~=>~ Helm-mini
+  - C-x C-b ~=>~ helm-buffers-list
+
+** Window & Frame 窗口和框架
+Window
+- 打开-文件
+  - find-file-other-window ~==~ C-x 4 f
+  - find-file-read-only-other-window ~==~ C-x 4 r
+- 划分-垂直|水平
+  - split-window-(below|vertically) ~==~ C-x 2
+  - split-window-(right|horizontally) ~==~ C-x 3
+- 关闭
+  - 当前: delete-window ~==~ C-x 0
+  - 其它: delete-other-windows ~==~ C-x 1
+  - 当前窗口及其缓冲区: kill-buffer-and-window ~==~ C-x 4 0
+- 滚动
+  - scroll-other-window ~==~ C-M-v
+- 调整大小
+  - enlarge-window ~==~ C-x ^
+  - (enlarge|shrink)-window-horizontally ~==~ C-x (}|{)
+  - shrink-window-if-larger-than-buffer ~==~ C-x -
+  - 平衡-所有可见窗口大小: balance-windows ~==~ C-x +
+
+Frame
+- 打开-文件
+  - find-file-other-frame ~==~ C-x 5 f
+  - find-file-read-only-other-frame ~==~ C-x 5 r
+- 新建
+  - make-frame-command ~==~ C-x 5 2
+- 切换
+  - other-frame ~==~ C-x 5 o
+  - switch-to-buffer-other-frame ~==~ C-x 5 b
+- 删除
+  - 当前: delete-frame ~==~ C-x 5 0
+  - 其它: delete-other-frames ~==~ C-x 5 1
+
+Assist
+- [[Window][Hydra-window]]
 ** Server 服务
 - 开启服务 : M-x server-start
   - 初始文件 <<
@@ -713,7 +743,7 @@ Highlight 高亮
 * Programming
 ** C
 ** Lisp
-* hydra
+* Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
 ** Window
