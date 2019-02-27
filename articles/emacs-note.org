@@ -632,27 +632,28 @@ Assist
 - 词数
   - count-words-region ~==~ M-=  (缓冲: C-u ..)
   - M-x count-words (缓冲|区域)
-- 行数: M-x count-lines-region
+- 行数
+  - M-x count-lines-region
 - 字符信息
   - what-cursor-position ~==~ C-x =  (编码 第几个字符 第几列)
   - M-x describe-char  (详细信息)
 
 ** Keyboard Macro 键盘宏
 - 开始|结束
-  - (start|end)-kbd-macro == C-x (|) | <F3>|<F4>
+  - (start|end)-kbd-macro ~==~ C-x (|) ~==~ <F3>|<F4>
   - 追加: C-u C-x (
 - 执行 
-  - call-last-kbd-macro == C-x e | <F4>
+  - call-last-kbd-macro ~==~ C-x e ~==~ <F4>
   - M-x (Macro Name) | helm-execute-kmacro
 - 终止
   - C-g
 - 命名 
   - M-x name-last-kbd-macro
-** Abbrev 缩写
+** Abbrev 缩写 (待整理..)
 - 添加
-  - 全局: add-global-abbrev == C-x a g
-  - 当前主要模式: C-x a l == add-mode-abbrev
-  - inverse-add-(global|mode)-abbrev == C-x a i (g|l)
+  - 全局: add-global-abbrev ~==~ C-x a g
+  - 当前主要模式: add-mode-abbrev ~==~ C-x a l
+  - inverse-add-(global|mode)-abbrev ~==~ C-x a i (g|l)
   - M-x define-(global|mode)-abbrev
   - 前缀
     - 0 : region as expansion
@@ -661,8 +662,8 @@ Assist
   - Arg: C-u -
   - 全部: M-x kill-all-abbrevs
 - 扩展
-  - abbrev-prefix-mark == M-'  (Ex. cnst -expands-into-> construction)
-  - expand-abbrev == C-x a e 
+  - abbrev-prefix-mark ~==~ M-'
+  - expand-abbrev ~==~ C-x a e 
   - M-x expand-region-abbrevs
   - M-x unexpand-abbrev
 - 查看和编辑
@@ -674,8 +675,8 @@ Assist
   - M-x define-abbrevs
   - M-x insert-abbrevs
 
-** Register 寄存器
-- 寄存器 : 存储 文本 矩形区块 位置 值 设置
+** Register 寄存器 (待整理..)
+寄存器 : 存储 文本 矩形区块 位置 值 设置
 - View
   - M-x view-register <RET>
 - Jump
@@ -701,8 +702,8 @@ Assist
 - Keyboard Macro
   - Save: kmacro-to-register ==  C-x C-k x
   - Exe: C-x r j
-** Bookmark 书签
-- 书签 : 保存缓冲区中位置
+** Bookmark 书签 (待整理..)
+书签 : 保存缓冲区中位置
 - 设置-光标位置
   - bookmark-set == C-x r m
   - bookmark-set-no-overwrite == C-x r M
@@ -721,7 +722,7 @@ Assist
 - 插入
   - 文件内容: bookmark-insert
   - 文件名字: bookmark-insert-location
-** Other
+** Other 其它
 Highlight 高亮
 - 光标所在行
   - hl-line-mode (当前缓冲)  [[Highlight Line][config]]
@@ -734,15 +735,117 @@ Highlight 高亮
   - 重开: M-1 ..
 
 * Special Mode
-** Dired
+** Dired (待整理..)
+[[Dired Config][Config]]
+  
+打开  
+- dired ~==~ C-x d ~==~ C-x C-f [Dir]
+- dired-other-(window | frame) ~==~ C-x (4 | 5) d
+- list-directory ~==~ C-x C-d
+
+Mode
+- 退出: q
+- 父目录: ^
+- 执行 Shell 命令
+  - dired-do-(async)-shell-command ~==~ ! | (&)
+- 刷新
+  - revert-buffer ~==~ g
+  - dired-do-redisplay ~==~ l
+- 排序-时间|文件名-(默认按文件名排序)
+  - s == dired-sort-toggle-or-edit
+  - C-u s
+    - c : last modification time.
+    - u : access time.
+    - S : file size.
+    - X : file extension.
+- 移动
+  - 下|上
+    - Space == C-n == n	
+    - Del == C-p == p
+  - Jump : dired-goto-file == j 
+- 只读&查看-文件内容 : dired-view-file == v
+  - C-c == q  // 返回目录清单窗口
+  - s	  // search
+  - Enter	  // 前进到下一行
+  - =	  // 显示光标在哪一行
+  - e	  // 编辑文件
+- 打开-文件
+  - e == f == RET == dired-find-file
+  - o == dired-find-file-other-window
+  - C-o == dired-display-file		// 光标不动
+  - ! open 		// Mac: open in default app 
+  - ! open .	// Mac: Finder
+  - dired-advertised-find-file ?
+- 标记
+  - m                                 // 加上待操作标记
+  - (N) m                             // 文件和后面的 N个文件加上待操作标记
+  - %m | * % // Regex 添加	
+  - ---
+  - u|<del>  == dired-unmark-[backward] // 去掉标记
+  - U == dired-unmark-all-marks // 去掉所有标记
+  - Esc Del == dired-unmark-all-files // 询问&去掉所有标记
+  - ---
+  - x  == dired-do-flagged-delete // 执行
+  - ---
+  - Flag all auto-save files : dired-flag-auto-save-files == #
+  - all backup files : ~
+  - excess numeric backup files for deletion : dired-clean-directory == .
+  - deletion all files with certain kinds of names which suggest : % &
+  - deletion all files whose names match the regular expression : % d regexp
+  - dired-mark-executables == * *
+  - dired-mark-symlinks == * @
+  - dired-mark-directories == * /
+  - dired-mark-subdir-files == * s
+  - dired-toggle-marks == t | * t
+  - dired-mark-files-containing-regexp == % g regexp
+- 新建|删除|复制|重命名-文件
+  - ADD(+) == dired-create-directory
+  - S	 // 符号链接
+  - H	 // 硬链接
+  - --- 
+  - D	 // 立即删除
+  - d	 == dired-flag-file-deletion // add 待删标记
+  - *	 // 为所有自动保存文件加上待删标记
+  - ~	 // 为所有备份文件加上待删标记
+  - ---
+  - C	 == dired-do-copy // 复制文件
+  - (N) C    // 将复制光标位置上的文件和其后N个
+  - ---
+  - R	 // 重命名或移动文件 == mv
+- 修改-权限|用户|用户组|时间戳
+  - M                   // Mode
+  - O                   // owner
+  - G == dired-do-chgrp 
+  - T                   // Timestamp
+- 压缩|解压缩-文件
+  - Z == dired-do-compress	// 已压缩则执行解压缩
+  - c == dired-do-compress-to
+- 搜索
+  - A == dired-do-search 		// search files (M-, == tags-loop-continue)
+  - dired-isearch-filenames == M-s f C-s
+  - dired-isearch-filenames-regexp == M-s f M-C-s
+  - find : find-name-dired
+- 查询替换 
+  - Q == dired-do-query-replace
+  
 ** Org
 ** Shell
 ** Git
+
+Assist
 - [[http://magit.github.io/][Magit]]
+  - magit-status ~==~ C-c g
+  - Help: ?
 
 * Programming
 ** C
 ** Lisp
+
+Assist
+- Redshank
+- Slime
+- ParEdit
+- Lispy
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -891,3 +994,19 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 #+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
 #+END_SRC
+
+** Dired 
+<<Dired Config>>
+#+BEGIN_SRC emacs-lisp
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
+;; (setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+(setq dired-isearch-filenames 'dwim)
+(setq-default diredp-hide-details-initially-flag nil
+              dired-dwim-target t)
+
+(use-package dired+)
+(use-package dired-sort)
+#+END_SRC
+

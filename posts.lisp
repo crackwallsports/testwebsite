@@ -27,7 +27,7 @@
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
   (div ()
-       (span (:class "badge badge-success") " 更新-2019.2.20")
+       (span (:class "badge badge-success") " 更新-2019.2.27")
        (pre () "Emacs - 基础")))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
