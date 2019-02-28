@@ -841,11 +841,211 @@ Assist
 ** C
 ** Lisp
 
+Common Lisp
+- [[https://common-lisp.net/project/slime/][Slime]] [[Slime][Config]]
+- Doc
+  #+BEGIN_SRC emacs-lisp
+(setq common-lisp-hyperspec-root
+      (concat "file://" (expand-file-name "~/.emacs.d/HyperSpec/")))    
+
+(setq common-lisp-hyperspec-symbol-table
+      (concat common-lisp-hyperspec-root "Data/Map_Sym.txt"))
+
+(use-package w3m)
+(setq browse-url-browser-function
+      '(("/HyperSpec" . w3m-browse-url)
+        ("." . browse-url-default-browser)))
+#+END_SRC
+
 Assist
-- Redshank
-- Slime
-- ParEdit
-- Lispy
+- [[http://www.emacswiki.org/emacs/ParEdit][Paredit]] [[Paredit][Config]]
+- [[https://github.com/abo-abo/lispy][lispy]] [[Lispy][Config]]
+- [[https://github.com/Fanael/rainbow-delimiters][rainbow-delimiters]] : Rainbow parentheses [[Rainbow delimiters][Config]]
+
+*** Lispy (待整理..)
+View
+- lispy-(narrow | widen) ~==~ (N | W)
+- lispy-view ~==~ v (重定位到第一行)
+
+Move & Jump
+- List: lispy-(backward | forward) ~==~ [ | ]
+- l | C-3 : lispy-right : up-list
+- ) :  lispy-right-nostring == lispy-right (except self-inserts in strings and comments)
+- h : lispy-left
+- j : lispy-down
+- k : lispy-up
+- f : lispy-flow
+- d : lispy-different (Switch side of sexp)
+- b : lispy-back  (previous position in lispy-back history)
+- ---
+- ---
+- z : lispy-knight
+  - leftmost parens on each line 每行最左边的括号(上下移动) : k j
+- C-e : lispy-move-end-of-line
+  - ? case1 inside string : Move to the end of the string.
+  - case2 otherwise : Return starting position.
+- ----
+    k 
+[ h f l) ]
+    j
+   
+Position
+- A : lispy-beginning-of-defun
+- --- Ace --- 
+  - q : lispy-ace-paren
+  - Q : lispy-ace-char
+  - a : lispy-ace-symbol
+  - - : lispy-ace-subword
+
+Nav
+- --- Definition ---
+  - F : lispy-follow  (jump to definition)
+    - region is active -> marked symbol
+    - Otherwise -> first symbol in current sexp
+  - M-. : lispy-goto-symbol
+  - D|M-, : pop-tag-mark  (jump back, M-* in default Emacs)
+- --- Tag ---
+  - g|G : lispy-goto  (whole directory | current file)
+  - 0g|ogp : lispy-goto-projectile
+    
+Select & Mark
+- C-M-, : lispy-mark (smallest comment|string|list includes point,  repeated -> expand region)
+- m : lispy-mark-list
+- M-m : lispy-mark-symbol
+- i : lispy-mark-car  (Region Active)
+
+Edit
+- C-q :  insert a single character frome the pair
+- " : lispy-quotes
+  - " | " -> "\"\""
+  - region -> "region"
+  - C-u " : "word" -> word
+- ; : lispy-comment
+- Undo : u == lispy-undo
+- Newline : C-8 == lispy-parens-down
+  - (foo|) -> (foo) \n (|)
+- --- Pair ---
+  - ( == lispy-parens
+    - Prefix:
+      - M-n( num -> M-1( : |() -> (())  M-2( : |() () -> (() ()) ...
+      - M-0( rest -> (foo |bar baz quux) -> (foo (|bar baz quux))
+      - M--( line rest -> (foo |bar baz \n quux) -> (foo (|bar baz) \n quux)
+  - { : lispy-braces
+  - } : lispy-brackets
+- --- Copy,Cut,Paste ---
+  - C-, : lispy-kill-at-point (最内层括号和其内容)
+  - H : lispy-ace-symbol-replace
+  - n : lispy-new-copy  (Copy sexp|region -> kill ring)
+  - C-y : lispy-yank
+  - P : lispy-paste
+  - C-k : lispy-kill
+  - M-k : lsipy-kill-sentence
+  - C-d : lispy-delete
+  - DEL : lispy-delete-backward
+  - M-d : lispy-kill-word
+  - M-DEL : lispy-backward-kill-word
+- --- List ---
+  - c : lispy-clone
+  - / : lispy-splice  (list -> parent list)
+    - (|(a) (b) (c)) -> (a |(b) (c))
+  - > : lispy-slurp
+  - < : lispy-barf
+  - r : lispy-raise
+  - R : lispy-raise-some
+  - w : lispy-move-up
+  - s : lispy-move-down
+  - oh : lispy-move-left
+  - ol : lispy-move-right
+  - ok : lispy-up-slurp
+  - oj : lispy-down-slurp
+  - t : lispy-teleport (Move sexp|region -lispy-ace-paren-> location)
+  - C : lispy-convolute
+    - (a b (c (d e) |(move)) f g) -> (c (d e) (a b (move) f g))
+- --- Transform ---
+  - ; : lispy-comment
+  - xb : lispy-bind-variable
+    - M-m to finish
+  - xu : lispy-unbind-variable
+  - xl | C-4 l : lispy-to-lambda  (defun -> lambda)
+  - xd | C-4 d : lispy-to-defun   (lambda -> defun)
+  - xi : lispy-to-ifs  (cond -> if)
+  - xc : lispy-to-cond (if -> cond)
+  - xf : lispy-flatten  (Inline function|macro)
+  - S : lispy-stringify  (sexp -> string)
+  - ---
+  - i : special-lispy-tab  (otherwise: Indent and prettify code)
+  - O :  (sexp -> one line)
+  - M :  (sexp -> multiple lines)
+  - M-o : lispy-string-oneline  (muli-line-string -> one line (message "foo\nbar\nbaz"|))
+- --- Muli-Cursor ---
+  - M-i : lispy-iedit (多光标编辑)
+    
+Search
+- y : lispy-occur
+
+Compile Eval Debug Test
+- e : lispy-eval  (region|sexp, result in minibuffer)
+- E : lispy-eval-and-insert
+- xr : lispy-eval-and-replace
+- xh : lispy-describe   (function|variable)
+- p : lispy-eval-other-window (Eval sexp in context of other window)
+- --- Edebug ---
+  - xe : lispy-edebug
+    - 2xe :  eval current defun instead
+  - xj : lispy-debug-step-in
+  - Z|q : lispy-edebug-stop
+- --- Test ---
+  - T : lispy-ert
+
+Help Assist
+- digit-argument
+  - [>0] : - [arg] (99j)
+  - 0 : all
+  - M-- : current line
+- x | C-4 : prefix
+- o : lispy-other-mode
+  - h : lispy-move-left
+  - l : lispy-move-right
+  - j : lispy-down-slurp
+  - k : lispy-up-slurp
+  - SPACE
+  - g
+    - a : special-lispy-goto-def-ace
+    - b : special-pop-tag-mark
+    - d : special-lispy-goto (当前文件所有符号)
+    - e : special-lispy-goto-elisp-commands
+    - f : special-lispy-follow
+    - j : special-lispy-goto-def-down
+    - l : special-lispy-goto-local
+    - p : special-lispy-goto-projectile
+    - r : lispy-goto-recursive | special-lispy-goto-recursive
+    - q : special-lispy-quit
+- --- Help ---
+  - C-1 : lispy-describe-inline
+  - C-2 : lispy-arglist-inline
+- --- Outline ---
+  #+begin_src elisp
+;;* Level 1
+;;** Level 2
+;;*** Level 3
+  #+end_src
+  - I : lispy-shifttab (Toggles on/off an org-mode-like outline.)
+  - J : lispy-outline-next  (on outline : j)
+  - K : lispy-outline-prev  (on outline : k)
+  - i : lispy-tab  (on outline)
+  - M-RET : lispy-meta-return  (new outline)
+  - M-R|L : lispy-meta-right|left
+- --- Project --- 
+  - V : lispy-visit  (Visit another file within this project)
+    - Default: projectile or find-file-in-project
+      - V : projectile-find-file
+      - 2V : projectile-find-file-other-window. 
+    - Customize: lispy-visit-method
+- --- Ediff ---
+  - xB : lispy-store-region-and-buffer
+  - B : lispy-ediff-regions
+
+
 * Hydra
 聚合功能 更方便输入 并且 辅助记忆差 手速低 的我
 
@@ -995,7 +1195,7 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 (global-hl-line-mode 1)
 #+END_SRC
 
-** Dired 
+** Dired
 <<Dired Config>>
 #+BEGIN_SRC emacs-lisp
 (add-hook 'dired-mode-hook 'auto-revert-mode)
@@ -1010,3 +1210,68 @@ _bw_: balance      ^<Jump>^         ^^^^       _df_:del-frame
 (use-package dired-sort)
 #+END_SRC
 
+** Rainbow delimiters
+<<Rainbow delimiters>>
+
+#+BEGIN_SRC emacs-lisp
+(use-package rainbow-delimiters)
+#+END_SRC
+
+** Slime
+<<Slime>>
+#+BEGIN_SRC emacs-lisp
+(use-package slime
+  :config
+  (require 'slime-autoloads)
+  ;; (setq inferior-lisp-program "~/ccl/dx86cl64")
+  (slime-setup '(slime-fancy))
+  
+  (when (executable-find "sbcl")
+    (add-to-list 'slime-lisp-implementations
+                 '(sbcl ("sbcl") :coding-system utf-8-unix)))
+  (when (executable-find "ccl64")
+    (add-to-list 'slime-lisp-implementations
+                 '(ccl ("ccl64") :coding-system utf-8-unix)))
+
+  (setq slime-default-lisp 'ccl)       ; select : M-- M-x slime ccl
+
+  (setq slime-net-coding-system 'utf-8-unix)
+  ;; We tell slime to not load failed compiled code
+  (setq slime-load-failed-fasl 'never)
+  (setq slime-complete-symbol*-fancy t))
+#+END_SRC
+
+** Paredit
+<<Paredit>>
+
+#+BEGIN_SRC emacs-lisp
+(use-package paredit)
+#+END_SRC
+
+** Lispy
+<<Lispy>>
+#+BEGIN_SRC emacs-lisp
+(use-package lispy
+  :config
+  ;; slime-repl
+  (defun xt3/newline-and-indent ()
+    (interactive)
+    (if (eq major-mode 'slime-repl-mode)
+        (slime-repl-newline-and-indent)
+      (lispy-newline-and-indent)))
+
+  (substitute-key-definition 'lispy-newline-and-indent
+                             'xt3/newline-and-indent
+                             lispy-mode-map)
+  ;; Colon no space
+  (defun xt3/lisp-colon ()
+    "Insert :."
+    (interactive)
+    (insert ":"))
+  (substitute-key-definition 'lispy-colon 'xt3/lisp-colon lispy-mode-map)
+
+  (add-to-list 'lispy-goto-symbol-alist
+               '(slime-repl-mode lispy-goto-symbol-lisp le-lisp))
+  :bind
+  ("C-M-," . lispy-mark))
+#+END_SRC
