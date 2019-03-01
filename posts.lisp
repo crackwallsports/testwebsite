@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2019 2 27"
+(("2019 3 1"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2019.2.27")
+          (span (:class "badge badge-success") "每日追踪-2019.3.1")
           (pre ()
                (small () "法治基金")
                (small () "王健之死")
@@ -27,7 +27,7 @@
   "/testwebsite/articles/box-emacs-note.html"
   "Emacs Note - 笔记整理 (草稿)"
   (div ()
-       (span (:class "badge badge-success") " 更新-2019.2.27")
+       (span (:class "badge badge-success") " 更新-2019.2.28")
        (pre () "Emacs - 基础")))
  ("2018 10 27"
   "/testwebsite/articles/box-learn-c.html"
