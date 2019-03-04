@@ -736,7 +736,7 @@ Highlight 高亮
 
 * Special Mode
 ** Dired (待整理..)
-[[Dired Config][Config]]
+Dired (Directory Edit) [[Dired Config][Config]]
   
 打开  
 - dired ~==~ C-x d ~==~ C-x C-f [Dir]
