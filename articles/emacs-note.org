@@ -745,7 +745,6 @@ Dired (Directory Edit) [[Dired Config][Config]]
 
 Mode
 - 退出: q
-- 父目录: ^
 - 执行 Shell 命令
   - dired-do-(async)-shell-command ~==~ ! | (&)
 - 刷新
@@ -762,71 +761,53 @@ Mode
   - 下|上
     - Space == C-n == n	
     - Del == C-p == p
-  - Jump : dired-goto-file == j 
-- 只读&查看-文件内容 : dired-view-file == v
-  - C-c == q  // 返回目录清单窗口
-  - s	  // search
-  - Enter	  // 前进到下一行
-  - =	  // 显示光标在哪一行
-  - e	  // 编辑文件
+  - 子目录: dired-(next | prev)-dirline  ~==~ > | <
+  - Jump : dired-goto-file ~==~ j 
+  - 父目录: dired-up-directory ~==~ ^
 - 打开-文件
-  - e == f == RET == dired-find-file
-  - o == dired-find-file-other-window
-  - C-o == dired-display-file		// 光标不动
-  - ! open 		// Mac: open in default app 
-  - ! open .	// Mac: Finder
-  - dired-advertised-find-file ?
+  - dired-find-file ~==~ <RET> ~==~ f
+  - dired-find-file-other-window ~==~ o
+  - dired-display-file	~==~ C-o (光标不动)
+  - 只读: dired-view-file ~==~ v
+    - C-c ~==~ q  // 返回目录清单窗口
+    - s	  // search
+    - Enter	  // 前进到下一行
+    - =	  // 显示光标在哪一行
+    - e	  // 编辑文件
 - 标记
-  - m                                 // 加上待操作标记
-  - (N) m                             // 文件和后面的 N个文件加上待操作标记
-  - %m | * % // Regex 添加	
-  - ---
-  - u|<del>  == dired-unmark-[backward] // 去掉标记
-  - U == dired-unmark-all-marks // 去掉所有标记
-  - Esc Del == dired-unmark-all-files // 询问&去掉所有标记
-  - ---
-  - x  == dired-do-flagged-delete // 执行
-  - ---
-  - Flag all auto-save files : dired-flag-auto-save-files == #
-  - all backup files : ~
-  - excess numeric backup files for deletion : dired-clean-directory == .
-  - deletion all files with certain kinds of names which suggest : % &
-  - deletion all files whose names match the regular expression : % d regexp
-  - dired-mark-executables == * *
-  - dired-mark-symlinks == * @
-  - dired-mark-directories == * /
-  - dired-mark-subdir-files == * s
-  - dired-toggle-marks == t | * t
-  - dired-mark-files-containing-regexp == % g regexp
-- 新建|删除|复制|重命名-文件
-  - ADD(+) == dired-create-directory
+  - dired-mark ~==~ m                                
+    - 后面的 N 个:  (N) m
+  - Regex: dired-mark-files-regexp ~==~ % m
+  - 去掉: dired-unmark-(backward) ~==~ u | <del>
+  - 去掉所有: dired-unmark-all-marks ~==~ U
+- 执行
+  - dired-do-flagged-delete ~==~ x
+- 新建
+  - dired-create-directory ~==~ +
   - S	 // 符号链接
   - H	 // 硬链接
-  - --- 
-  - D	 // 立即删除
-  - d	 == dired-flag-file-deletion // add 待删标记
-  - *	 // 为所有自动保存文件加上待删标记
-  - ~	 // 为所有备份文件加上待删标记
-  - ---
-  - C	 == dired-do-copy // 复制文件
-  - (N) C    // 将复制光标位置上的文件和其后N个
-  - ---
-  - R	 // 重命名或移动文件 == mv
+- 复制
+  - dired-do-copy ~==~ C
+    - (N) C    // 将复制光标位置上的文件和其后N个
+- 删除
+  - 立即: dired-do-delete ~==~ D
+  - 待删标记: dired-flag-file-deletion ~==~ d
+- 重命名或移动
+  - R
 - 修改-权限|用户|用户组|时间戳
   - M                   // Mode
   - O                   // owner
-  - G == dired-do-chgrp 
+  - dired-do-chgrp ~==~ G
   - T                   // Timestamp
 - 压缩|解压缩-文件
-  - Z == dired-do-compress	// 已压缩则执行解压缩
-  - c == dired-do-compress-to
+  - dired-do-compress ~==~ Z (已压缩 则 解压缩)
+  - dired-do-compress-to ~== c
 - 搜索
-  - A == dired-do-search 		// search files (M-, == tags-loop-continue)
-  - dired-isearch-filenames == M-s f C-s
-  - dired-isearch-filenames-regexp == M-s f M-C-s
-  - find : find-name-dired
-- 查询替换 
-  - Q == dired-do-query-replace
+  - dired-do-search ~==~ A
+  - dired-isearch-filenames ~==~ M-s f C-s
+  - dired-isearch-filenames-regexp ~==~ M-s f M-C-s
+- 查询替换
+  - dired-do-query-replace ~==~ Q
   
 ** Org
 ** Shell
