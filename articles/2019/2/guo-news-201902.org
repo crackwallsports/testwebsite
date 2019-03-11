@@ -1416,7 +1416,7 @@ DOJ George Higginbotham Indictment"))
  (->html
   (layout-template
    nil
-   :title "郭文贵 2019.1"
+   :title "郭文贵 2019.2"
    :links `((link (:rel "stylesheet" :href "/testwebsite/css/bootstrap.min.css"))
             (link (:rel "stylesheet" :href "/testwebsite/css/font-awesome.min.css"))
             (link (:rel "stylesheet" :href "/testwebsite/css/style.css")))

@@ -141,7 +141,9 @@ z-index:100;
                (u (:- `(cite () 
                              ,(@ "https://www.youtube.com/watch?v=8k-zgNYwl2E"
                                  "3月7日文贵报平安视频。因为母亲住院，近期文贵会很少发视频和回答战友们的私信。谢谢大家的理解。")
-                             (small () "Youtube"))))))))
+                             (small () "Youtube")))))
+           (:- "郭文(视频 捐款留言): " (@ "https://www.guo.media/posts/180864")
+               '(q () (pre () "衷心感谢！不会辜负你们的鼓励和希望！"))))))
  *news-topics-guo*)
 
 (push
@@ -392,7 +394,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.03.09 20:46:50"
+ "2019.03.11 16:17:43"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -403,6 +405,14 @@ z-index:100;
            (:- '(span (:class "badge badge-secondary") "修改增加: ") "反对以假治国")))
     (:- "蓝金黄 3F美国计划")
     (:- "海航 王健之死")
+    (:- "蓝色光标")
+    (:- "法治基金"
+        (u (:- `(cite () "RULE OF LAW FOUNDATION "
+                      ,(@ "https://rolfoundation.org")))
+           (:- `(cite () "RULE OF LAW SOCIETY "
+                      ,(@ "https://rolsociety.org")))
+           (:- `(cite () "法治基金常問問題 "
+                      ,(@ "https://rolfoundation.org/faq-chinese.php")))))
     (apply #':- "主要内容跟踪" (nreverse *news-topics-guo*))))
 
 (news-to-topic
@@ -520,21 +530,6 @@ The great Chinese storyteller Lu Xun often lamented that his country, and he wro
                          (:- "长远 (我: 只看自己 认为人不会死 故作死, 你看 要死了吧)"
                              '(q () (pre () "
 “Men see only the present, but heaven sees the future.”")))))))))))
-
-(news-to-topic
- "中共国" ;; (human-date (get-universal-time) )
- "2018.10.30 12:02:11"
- (u (:- "事件"
-        (u (:- '(small () "2018.10.20")
-               "澳门中联办主任 郑晓松 死亡"
-               (u (:- '(pre () "郭文贵: 是被杀 他与孟宏伟是好哥们"))
-                  (:- '(pre () "中共官方: 中央人民政府驻澳门特别行政区联络办公室主任 郑晓松同志 因患抑郁症 于2018年10月20日晚 在其澳门住所 坠楼身亡")))))
-        (u (:- "孟宏伟")))
-    (:- "国外"
-        (u (:- '(small () "2018.10.26")
-               (@ "https://www.cbc.ca/news/politics/mcccallum-china-trade-human-rights-1.4878455"
-                  "Canada prepared to stall trade deal with China until its behaviour is 'more reasonable'")
-               '(small () "CBC"))))))
 
 (news-to-topic
  "美国" ;; (human-date (get-universal-time))
@@ -661,102 +656,48 @@ So together, let us choose a future of patriotism, prosperity, and pride. Let us
 Thank you. God bless you. And God bless the nations of the world.")))))))
 
 (news-to-topic
- "当前关注自媒体" ;; (human-date (get-universal-time) )
- "2019.03.09 21:08:46"
+ "当前关注" ;; (human-date (get-universal-time) )
+ "2019.03.11 16:39:50"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
- (u (:- "Youtube"
-        (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
-                  "路德社"))
-           (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
-                  "战友之声"))
-           (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
-                  "David大卫"))
-           (:- (@ "https://www.youtube.com/channel/UC0JPw1DKfJLj6nbwzUCI7mw"
-                  "Oz Media"))
-           (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
-                  "木蘭訪談"))
-           (:- (@ "https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g"
-                  "南十字星"))
-           (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
-                  "Inty"))
-           (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
-                  "政事直播(政事小哥)"))))))
+ (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
+           "路德社")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
+           "战友之声")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
+           "David大卫")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UC0JPw1DKfJLj6nbwzUCI7mw"
+           "Oz Media")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
+           "木蘭訪談")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g"
+           "南十字星")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
+           "Inty")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
+           "政事直播(政事小哥)")
+        '(small () "Youtube"))
+    (:- (@ "https://discord.gg/ZhGK3EA"
+           "战友之声") 
+        '(small () "Discord") )))
 
 (news-to-topic
- "中共国 供应链 恶意芯片植入 事件" ;; (human-date (get-universal-time))
- "2018.10.24 12:51:54"
- (u (:- "主"
-        (u (:- '(small () "2018.10.22")
-               (@ "https://www.reuters.com/article/us-china-cyber-super-micro-comp/super-micro-to-review-hardware-for-malicious-chips-idUSKCN1MW1GK?feedType=RSS&feedName=technologyNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+reuters%2FtechnologyNews+%28Reuters+Technology+News%29"
-                  "Super Micro to review hardware for malicious chips")
-               '(q () (pre () "
-“Despite the lack of any proof that a malicious hardware chip exists, we are undertaking a complicated and time-consuming review to further address the article,” the server and storage manufacturer said in a letter to its customers, dated Oct. 18.
-...
-Super Micro denied the allegations made in the report.
+ "事件" ;; (human-date (get-universal-time) )
+ "2019.03.11 16:23:24"
+ (u (:- '(small () "2018.10.4-") " "
+        (@ "/testwebsite/articles/2018/10/ChinaTinyChip.html"
+           "中共国 供应链 恶意芯片植入 事件") " "
+        '(span (:class "badge badge-success") "状态: 未决"))))
 
-The company said the design complexity makes it practically impossible to insert a functional, unauthorized component onto a motherboard without it being caught by the checks in its manufacturing and assembly process.
-"))))
-        (u (:- '(small () "2018.10.19")
-               (@ "https://www.buzzfeednews.com/article/johnpaczkowski/apple-tim-cook-bloomberg-retraction"
-                  "Apple CEO Tim Cook Is Calling For Bloomberg To Retract Its Chinese Spy Chip Story")
-               '(q () (pre () "
-“There is no truth in their story about Apple,” Cook told BuzzFeed News in a phone interview. \"They need to do that right thing and retract it.\"
-...
-“We turned the company upside down,” Cook said. “Email searches, data center records, financial records, shipment records. We really forensically whipped through the company to dig very deep and each time we came back to the same conclusion: This did not happen. There’s no truth to this.”
-"))))
-        (u (:- '(small () "2018.10.9")
-               (@ "https://www.bloomberg.com/news/articles/2018-10-09/new-evidence-of-hacked-supermicro-hardware-found-in-u-s-telecom?srnd=premium"
-                  "New Evidence of Hacked Supermicro Hardware Found in U.S. Telecom")
-               '(q () (pre () "
-The security expert, Yossi Appleboum, provided documents, analysis and other evidence ...
-...
-Unusual communications from a Supermicro server and a subsequent physical inspection revealed an implant built into the server’s Ethernet connector, a component that's used to attach network cables to the computer, Appleboum said.
-") )))
-        (u (:- '(small () "2018.10.4")
-               (@ "https://aws.amazon.com/blogs/security/setting-the-record-straight-on-bloomberg-businessweeks-erroneous-article/"
-                  "Setting the Record Straight on Bloomberg BusinessWeek’s Erroneous Article")
-               '(q () (pre () "
-At no time, past or present, have we ever found any issues relating to modified hardware or malicious chips in SuperMicro motherboards in any Elemental or Amazon systems. Nor have we engaged in an investigation with the government.
-"))))
-        (u (:- '(small () "2018.10.4")
-               (@ "https://www.apple.com/newsroom/2018/10/what-businessweek-got-wrong-about-apple/"
-                  "What Businessweek got wrong about Apple")
-               '(q () (pre () "
-Apple has never found malicious chips \“hardware manipulations\” or vulnerabilities purposely planted in any server. Apple never had any contact with the FBI or any other agency about such an incident. We are not aware of any investigation by the FBI, nor are our contacts in law enforcement."))))
-        (u (:- '(small () "2018.10.4")
-               (@ "https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies"
-                  "The Big Hack: How China Used a Tiny Chip to Infiltrate U.S. Companies")
-               '(q () (img (:class "zoom" :src "/testwebsite/articles/resource/thebighack.jpg" :width "50px")) "The Big Hack!"))))
-    (:- "相关"
-        (u (:- '(small () "2018.10.22")
-               (@ "https://www.servethehome.com/investigating-implausible-bloomberg-supermicro-stories/"
-                  "Investigating Implausible Bloomberg Supermicro Stories")))
-        (u (:- '(small () "2018.10.11")
-               (@ "https://www.macrumors.com/2018/10/11/kaspersky-lab-questions-supermicro-allegations/"
-                  "Kaspersky Lab Says Report Claiming China Hacked Apple's Former Server Supplier is Likely 'Untrue'")
-               '(q () (pre () "
-The stories published by Bloomberg in October 2018 had a significant impact. For Supermicro, it meant a 40% stock valuation loss. For businesses owning Supermicro hardware, this can be translated into a lot of frustration, wasted time, and resources. Considering the strong denials from Apple and Amazon, the history of inaccurate articles published by Bloomberg, including but not limited to the usage of Heartbleed by U.S. intelligence prior to the public disclosure, as well as other facts from these stories, we believe they should be taken with a grain of salt."))))
-        (u (:- '(small () "2018.10.8")
-               (@ "https://9to5mac.com/2018/10/08/chinese-spy-chip-2/"
-                  "Comment: Four more reasons it’s now inconceivable Apple lied about Chinese spy chips")
-               (u (:- "Reasons:"
-                      (u (:- "1. " (@ "https://9to5mac.com/2018/10/05/spy-chip/" "GCHQ statement"))
-                         (:- "2. " (@ "https://9to5mac.com/2018/10/07/department-of-homeland-security-apple-spy-chip/"
-                                      "Department Homeland Security echoed"))
-                         (:- "3. " (@ "https://www.reuters.com/article/us-china-cyber-apple/apple-tells-congress-it-found-no-signs-of-hacking-attack-idUSKCN1MH0YQ"
-                                      "Reuters reports"))
-                         (:- "4. " (@ "https://krebsonsecurity.com/2018/10/supply-chain-security-is-the-whole-enchilada-but-whos-willing-to-pay-for-it/"
-                                      "security researcher Brian Krebs said")))))))
-        (u (:- '(small () "2017.2.23")
-               (@ "https://www.theinformation.com/articles/apple-severed-ties-with-server-supplier-after-security-concern?jwt=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYWR4dDNAZ21haWwuY29tIiwiZXhwIjoxNTcwMjIwNzkyLCJuIjoiR3Vlc3QiLCJzY29wZSI6WyJzaGFyZSJdfQ.ls8yD0SpK1SYLoC7TAaPBL8GPEu9Nd8mutWz0EEdU6o&unlock=ac889c2a9c7ed1fa"
-                  "Apple Severed Ties with Server Supplier After Security Concern"))))
-    (:- "补充"
-        (u (:- '(small () "事件相关的 硬件骇客技术的 可能性和方法:")
-               `(p ()
-                   ,(@ "https://www.servethehome.com/investigating-implausible-bloomberg-supermicro-stories/"
-                      "Investigating Implausible Bloomberg Supermicro Stories")
-                   (small () "2018.10.22"))
-               `(p ()
-                   ,(@ "https://www.lawfareblog.com/china-supermicro-hack-about-bloomberg-report"
-                       "The China SuperMicro Hack: About That Bloomberg Report")
-                   (small () "2018.10.4")))))))
+(news-to-topic
+ "我兔" ;; (human-date (get-universal-time) )
+ "2019.03.11 15:26:06"
+ (u (:- ""
+        (u (:- '(small () "2018.10.20")
+               "")))))
