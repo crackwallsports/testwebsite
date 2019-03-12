@@ -697,7 +697,51 @@ Thank you. God bless you. And God bless the nations of the world.")))))))
 
 (news-to-topic
  "我兔" ;; (human-date (get-universal-time) )
- "2019.03.11 15:26:06"
- (u (:- ""
-        (u (:- '(small () "2018.10.20")
-               "")))))
+ "2019.03.12 16:20:18"
+ (u (:- "未来"
+        (u (:- '(small () "2019.3.26")
+               (@ "https://www.apple.com/apple-events/"
+                  "Apple Special Event")
+               '(small () " The Steve Jobs Theater in Cupertino. March 25, 2019, at 10:00 a.m."))))
+    (:- "视"
+        (u (:- '(small () "2019.3.10")
+               "埃塞俄比亚客机坠毁"
+               (u (:- `(cite () ,(@ "https://cn.nytimes.com/world/20190312/boeing-737-max-which-airlines/"
+                                    "哪些航空公司使用波音737 Max执飞航线？")
+                             (small () "2019.3.12 纽约时报中文网")))
+                  (:- `(cite () ,(@ "https://cn.nytimes.com/business/20190311/boeing-737-max/"
+                                    "埃航坠机波音再受质疑，中国航空公司停飞737 Max")
+                             (small () "2019.3.11 纽约时报中文网")))
+                  (:- `(cite () ,(@ "https://www.bbc.com/zhongwen/simp/world-47517133"
+                                    "埃塞俄比亚客机坠毁157人遇难 机上确认有8名中国公民")
+                             (small () "2019.3.10 BBC中文")))
+                  (:- "其它"
+                      (u (:- `(cite ()
+                                    ,(@ "https://www.nytimes.com/interactive/2018/12/26/world/asia/lion-air-crash-12-minutes.html"
+                                        "In 12 Minutes, Everything Went Wrong - How the pilots of Lion Air Flight 610 lost control.")
+                                    (small () "2018.12.26 The New York Times"))))))))
+        (u (:- '(small () "2019.3.6")
+               "Tim "
+               (u (:- `(cite () "Donald J. Trump @realDonaldTrump : "
+                             ,(@ "https://twitter.com/realDonaldTrump/status/1105109329290686464")
+                             (small () "2019.3.11 Twitter"))
+                      '(q () (pre () "
+At a recent round table meeting of business executives, & long after formally introducing Tim Cook of Apple, I quickly referred to Tim + Apple as Tim/Apple as an easy way to save time & words. The Fake News was disparagingly all over this, & it became yet another bad Trump story!")))
+                  (:- '(pre () "(3.8) 媒体过于娱乐化了 川普总统 说 ”... Tim Apple” 的语境 更可能的意思是 “Tim and Apple”"))
+                  (:- `(cite () "(26:50) \".. We apprecite it very much, Tim Apple.\" "
+                             ,(@ "https://www.youtube.com/watch?v=b3hT5AUa57A"
+                                 "President Trump Participates in an American Workforce Policy Advisory Board Meeting")
+                             (small () "2019.3.6 Youtube: The White House")))
+                  (:- '(pre () "(3.8) 库克参加的这次会议(美国劳工政策顾问委员会) 是关于美国劳工的 帮助他们提升技能和教育 应对自动化和编程等 新环境"))
+                  (:- `(cite () ,(@ "https://www.commerce.gov/sites/default/files/2019-03/AdvisoryBoardGoals.pdf"
+                                    "American Workforce Policy Advisory Board Mission and Goals")
+                             (small () "PDF: U.S. Department of Commerce")))
+                  (:- `(cite () ,(@ "https://www.commerce.gov/americanworker/american-workforce-policy-advisory-board"
+                                    "American Workforce Policy Advisory Board")
+                             (small () "U.S. Department of Commerce")))
+                  (:- `(cite () ,(@ "https://www.whitehouse.gov/pledge-to-americas-workers/"
+                                    "Pledge to America’s Workers")
+                             (small () "The White House")))
+                  (:- `(cite () ,(@ "https://www.whitehouse.gov/presidential-actions/executive-order-establishing-presidents-national-council-american-worker/"
+                                    "Executive Order Establishing the President’s National Council for the American Worker")
+                             (small () "2018.7.19 The White House")))))))))
