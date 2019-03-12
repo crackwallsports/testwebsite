@@ -5,7 +5,7 @@
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2019.3.9")
+          (span (:class "badge badge-success") "每日追踪-2019.3.12")
           (pre ()
                (small () "郭先生 母亲逝世  守丧 🕯")
                (small () "法治基金")
