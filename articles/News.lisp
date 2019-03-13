@@ -121,6 +121,25 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.3.13")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/182438")
+               '(q () (pre () "
+感谢亲爱的可爱的义工团队翻译组战友们！你们太棒了！精装版今天已经快递给卢比奥议员！一切都是刚刚开始！💪💪💪💪💪💪💪—— 王雁平"))
+               (u (:- `(cite () "PDF:"
+                             ,(@ "https://www.rubio.senate.gov/public/_cache/files/0acec42a-d4a8-43bd-8608-a3482371f494/262B39A37119D9DCFE023B907F54BF03.02.12.19-final-sbc-project-mic-2025-report.pdf"
+                                 "Made in China 2025 and the Future of American Industry.")))
+                  (:- `(cite () "战友之声 中文翻译 PDF下载: "
+                             ,(@ "https://cdn.discordapp.com/attachments/455062882992914434/547697154332950528/2025.pdf"
+                                 "中国制造2025 与 美国产业未来")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/182428")
+               '(q () (pre () "
+尊敬的战友们好： 3月8日（上周五），PAX（全名Pacific Alliance Asia Opportunity Fund L.P.）第三次试图在Sherry公寓上设立attachment的动议，被法官当庭再次驳回！同时法官提出最后一次面见有关Sherry公寓的证人，因为PAX在失败了的三次尝试中，提供的证据理由被证明是彻底站不住脚的！—— 而且在过去几个月内，PAX已经连续失败了两次！ 往回看所谓的PAX案件和这些人，在背后和海航控制如出一辙 —— 威吓、恐吓、造谣！但是太多的造谣已经被人忘记，同时这些人还在天天说追求正义、要求真相，这种卑鄙可耻的流氓行径一定会受到法律的制裁和惩罚！ 以上信息来自郭先生法律团队")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/182422")
+               '(q () (pre () "
+尊敬的战友们好： 这是郭先生在纽约再次起诉郭宝胜、叶宁、赵岩后，郭先生的律师成功送达郭宝胜的送达凭证。 近期郭宝胜还找了警察报案，说郭先生公布了他的护照信息，警察昨天联系了郭先生的律师，问清楚了情况，了解到是郭宝胜自己把自己的护照信息提交到法院的，民事案件的法律文件在被提交后，是对公众开放的，任何人都能查到！警察和郭先生的律师说，郭宝胜就是在浪费警察的时间！这在美国就是蓄意骚扰警察！ 所有的问题往回看，他们每次公告全都是假的，每次新闻也全都是假的。 对郭宝胜等这些造谣诽谤分子，我们绝不放过任何一个，一定会让他们受到美国最严厉的惩罚！ 以上信息来自郭先生法律团队"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.3.12")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/182252")
                '(q () (pre () "
@@ -450,7 +469,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.03.11 16:17:43"
+ "2019.03.13 21:17:46"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
