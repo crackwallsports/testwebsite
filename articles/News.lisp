@@ -121,6 +121,13 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.3.14")
+        (u (:- "视频(捐款留言): " (@ "https://www.youtube.com/watch?v=gW9Fn5KZ4Io"
+                           "在此衷心的感谢留言的战友们 以及所有匿名的捐赠者们对法治基金的支持 2019年3月13日")
+               '(small () "Youtube")))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.3.13")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/182438")
                '(q () (pre () "
@@ -469,7 +476,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.03.13 21:17:46"
+ "2019.03.14 20:40:55"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -772,12 +779,52 @@ Thank you. God bless you. And God bless the nations of the world.")))))))
 
 (news-to-topic
  "我兔" ;; (human-date (get-universal-time) )
- "2019.03.12 16:20:18"
+ "2019.03.14 20:40:41"
  (u (:- "未来"
         (u (:- '(small () "2019.3.26")
                (@ "https://www.apple.com/apple-events/"
                   "Apple Special Event")
                '(small () " The Steve Jobs Theater in Cupertino. March 25, 2019, at 10:00 a.m."))))
+    (:- "思"
+        (u (:- "人权"
+               (u (:- `(cite () ,(@ "https://www.state.gov/secretary/remarks/2019/03/290320.htm"
+                                    "Remarks on the Release of the 2018 Country Reports on Human Rights Practices")
+                             (small () "2019.3.13  U.S. Department of State"))
+                      (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=4Pkzo3mf83U"
+                                           "Release of the 2018 Country Reports on Human Rights Practices")
+                                    (small () "Youtube")))
+                         (:- `(cite () ,(@ "https://china.usembassy-china.org.cn/zh/remarks-on-the-release-of-the-2018-country-reports-on-human-rights-practices/"
+                                           "发布《2018年度各国人权报告》的讲话")
+                                    (small () "2019.3.14 美国驻华大使馆和领事馆")))
+                         (:- `(cite () ,(@ "http://www.state.gov/j/drl/rls/hrrpt/humanrightsreport/index.htm?year=2018&dlid=289037"
+                                           "Country Reports on Human Rights Practices for 2018 - China (includes Tibet, Hong Kong, and Macau)")
+                                    (small () "2019.3.13 U.S. Department of State")))))
+                  (:- '(pre () "中共国 有 针对 美国 的人权记录   由于不太规范 很麻烦 顾 感兴趣的自己去搜寻整理吧 我就不浪费时间了"))
+                  (:- "我的看法"
+                      '(q () (pre () "
+美国的人权问题也很严重 不过 世界上就没有完美的国家
+对于我来说 中共国的人权问题关乎我的切身利益 所以 更关心
+
+面对已经存在的问题 真正关键的是如何去解决
+美国人如何去解决他们的人权问题呢?
+在中共国 我们又有什么方法去解决呢?
+
+在中共国 通过 媒体 游行 运动 等 获得社会关注 引发公众 讨论 思考 行动  可行? 如何做呢?
+在中共国 游说人大代表 推动立法 这可能吗?
+
+你知道吗 中共国的人权问题 主要就是
+政府对自由言论 媒体 社会运动的打压
+司法不公 肆意执法 打压人权律师
+新疆西藏 宗教信仰的迫害
+等等
+所以 想要通过正常途径 维护自己的权利 非常困难
+这种矛盾 真是很逗  本应维护人权的 却是对人权迫害最严重的
+
+中共国的人权问题恶化的主要因素 就是 中共极权政府(立法 司法 执法 宣传 等 都是它们说了算)
+美国的人权问题 他们国内国外都以大大方方的讨论和批评
+然而 中共国 国内难以公开自由的讨论 国外谈论就成了干预内政
+内部不能制衡 外部的压力也不起作用 
+")))))))
     (:- "视"
         (u (:- '(small () "2019.3.10")
                "埃塞俄比亚客机坠毁"
