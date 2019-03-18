@@ -181,6 +181,48 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 3
+- 18
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.3.18")
+        (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183155")
+               '(q () (pre () "3月17日：【海航的基金的钱那来的】媒体工作组，感谢明湾战友的制作，一切都是刚刚开始。"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=LVNtNUk7gtk"
+                                 "3月17日：【海航的基金的钱那来的】媒体工作组，感谢明湾战友的制作，一切都是刚刚开始。")
+                             (small () "Youtube")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183155")
+               '(q () (pre () "3月17日：【为什么不抓不查海航】媒体工作组，感谢明湾战友的制作。一切都是刚刚开始。"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=MNWajWRR80w"
+                                 "3月17日：【为什么不抓不查海航】媒体工作组，感谢明湾战友的制作。一切都是刚刚开始。")
+                             (small () "Youtube")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183154")
+               '(q () (pre () "媒体工作组，感谢明湾战友的制作。一切都是刚刚开始。"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=gaoLfafnguw"
+                                 "3月17日：【盗国贼的私生子】媒体工作组，感谢明湾战友的制作。一切都是刚刚开始。")
+                             (small () "Youtube")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183142")
+               '(q () (pre () "
+3月17号：我们的媒体组，将最近有关我们国家发生的学校毒食堂事件的所有信息，整理后给了郭先生。郭先生希望战友们能够广泛地在媒体上传播和揭露，这个腐败体制导致的整个社会的道德败坏的本质和真相！ 一切都是刚刚开始。")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/183139")
+               '(q () (pre () "
+3月17号：尊敬的战友好，文贵先生拜请所有的战友们积极在社交媒体上继续揭露海航盗国及王建之死的真相。我向他转达了战友们对他的问候及关心，他说我们都是承担拯救14亿人民的使命与责任的，我们应该全力以赴的去争取最快的时间实现我们的＂喜马拉雅的目标＂只有实现了法治中国，我们才不再活在恐惧中，我们才有资格拥有幸福的家庭，所以我们会战胜一切艰难险阻。一切都是刚刚开始。（王雁萍）"))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 17
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.3.17")
+        (u (:- "郭文(图片): " (@ "https://www.guo.media/posts/183019")
+               '(q () (pre () "
+3月16号：尊敬的战友们好，郭先生让我代他转达感谢战友们对他的关心与问候，他一切都好！他拜托战友们要更加积极主动的与盗国贼，欺民贼的战斗，祝战友们周末愉快。一切都是刚刚开始！（王雁萍）")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183017")
+               '(q () (pre () "3月16日：尊敬的战友们周末愉快，一切都是刚刚开始。"))
+               (u (:- '(pre () "郭文视频内容: 猴子与狗")))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 16
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -690,7 +732,7 @@ z-index:100;
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.03.16 19:52:39"
+ "2019.03.18 20:22:13"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
@@ -1089,6 +1131,11 @@ Thank you. God bless you. And God bless the nations of the world.")))))))
 然而 中共国 国内难以公开自由的讨论 国外谈论就成了干预内政
 内部不能制衡 外部的压力也不起作用 
 ")))))))
+    (:- "知"
+        (u (:- "5G"
+               (@ "https://www.youtube.com/watch?v=GEx_d0SjvS0"
+                  "Everything You Need to Know About 5G")
+               '(small () "2017.2.6 Youtube"))))
     (:- "视"
         (u (:- '(small () "2019.3.10")
                "埃塞俄比亚客机坠毁"
