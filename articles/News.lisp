@@ -121,6 +121,29 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.3.19")
+        (u (:- "郭文(视频): " (@ "https://www.guo.media/posts/183335")
+               '(q () (pre () "
+3月18日：🙏🙏🙏【藏传佛教精神领袖达赖喇嘛3月18日在达兰萨拉他的办公室接受了路透社的专访： 他说：将来可能会有两个达赖喇嘛，一个来自这里，一个自由的国家；一个是中国人挑选的，那么就没有人会相信，也没有人会尊重（那个由中国挑选的） 他警告说:任何由中国指定的继任者都不会受到尊重。】（媒体组）"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.reuters.com/article/us-china-tibet-dalai-lama-exclusive-idUSKCN1QZ1NS"
+                                 "Exclusive: Dalai Lama contemplates Chinese gambit after his death")
+                             (small () "2019.3.18 Reuters")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/183332")
+               '(q () (pre () "
+3月18日：衷心感谢🙏🙏🙏 【#抖音版爆料革命 #楚门看世界 #明湾 大家可以发现一个规律，只要胡舒立这个吃人饭不拉人屎，说人话不办人事儿的垃圾出来，那么必定是王岐山要害人了。 胡舒立三板斧 1.这当官儿的女人多，上千个 2.钱多得去了，钱可淹死人 3.侵占罪，神秘资金 她出来咬人说明王岐山要杀人了 为啥你胡舒立不去爆海航呀？】（媒体组）")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/183331")
+               '(q () (pre () "
+3月18日：😭😭😭【第一个反抗恶魔的伟大英雄】黃立众，安徽人，56年考入北大。因在学校散布农村饿死人的谣言，被开除。回家后，看到众多乡亲被饿死，愤而组织中国劳动党，不到3个月发展119人，准备武裝暴動，61年被捕后被枪決。生前曾写詩：饿死千千萬，家家无鼠粮，感时天落泪，悲來风癲狂，大道埋枪炮，羊肠伏虎狼。（媒体组）")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/183292")
+               '(q () (pre () "3月18号：尊敬的战友们好！万分感谢《好奇的蚂蚁》战友，翻译的班农先生在日本的演讲。一切都是刚刚开始。（媒体组）"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=CUwwkiIfIPI"
+                                 "3月18号：尊敬的战友们好！万分感谢《好奇的蚂蚁》战友，翻译的班农先生在日本的演讲。一切都是刚刚开始。（媒体组）")
+                             (small () "Youtube"))))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.3.18")
         (u (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183155")
                '(q () (pre () "3月17日：【海航的基金的钱那来的】媒体工作组，感谢明湾战友的制作，一切都是刚刚开始。"))
@@ -549,8 +572,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.03.18 20:22:13"
+ "郭文贵"      ;; (twb::human-date (get-universal-time))
+ "2019.03.19 22:12:13"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
