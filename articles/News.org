@@ -181,6 +181,34 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 3
+- 20
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.3.20")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/183485")
+               '(q () (pre () "
+3月19日：纽约时报记者，傅才德先生的文章总是很夸张，我们团队与他打过交道后发现这个人很不诚实。 此人与财新杂志胡舒立，及中共，所谓海外华人社团，的关系，及政治立场，非常复杂。 他喜欢危言耸听，一心想搞大新闻。 郭先生在去年在马阿拉哥，再次被至今为止都不知道是谁的神秘力量保护。 成功的躲过了王岐山，孟建柱，孙力军，在哪里布下的陷阱。 相关细节适当时机，我们会公布与众，那时大家会明白辛迪．杨，到底是谁！ 这篇文章将是个大笑话。 一切都是刚刚开始。 媒体组"))
+               (u (:- `(cite ()
+                             ,(@ "https://cn.nytimes.com/usa/20190318/cindy-yang-trump-donations/"
+                                 "起底辛蒂·杨：与特朗普合影的华裔女商人")
+                             (small () "2019.3.18 纽约时报中文网")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/183446")
+               '(q () (pre () "
+3月19日：万分感谢《全民挺郭联盟》这个釆访班农先生的视频一 班农接受专访片段，谈对英国现任和未来领导人的看法。班农非常有风度，双眼炯炯有神，潇洒的发型，极快的语速，女记者敏捷地提问，班农对答如流。特别是提到博里斯爆减体重，令他跃跃欲试。 中英文字幕。 媒体组y"))
+               (u (:- `(cite  () ,(@ "https://www.youtube.com/watch?v=tBePwwDqp78"
+                                     "班农接受专访片段，谈对英国现任和未来领导人的看法。班农非常有风度，双眼炯炯有神，潇洒的发型，极快的语速，女记者敏捷地提问，班农对答如流。特别是提到博里斯爆减体重，令他跃跃欲试。 中英文字幕。")
+                              (small () "2019.3.19 Youtube: 全民挺郭联盟")))
+                  (:- `(cite  () ,(@ "https://www.youtube.com/watch?v=wIo3hGY0pbA"
+                                     "Exclusive - Steve Bannon: Mexican border is 'ticking time bomb'")
+                              (small () "2019.3.18 Youtube: Sky News")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/183442")
+               '(q () (pre () "
+3月19日：尊敬的战友们好！ 【不敢让民众知道他们曾经说过的话，因为骗子都怕自己被揭穿： 周恩来1944年在延安的演讲：我们认为欲实行宪政，必须先实行宪改的先决条件。我认为最重要的先决条件有三个：一是保障人民民主自由；二是开放党禁；三是实行地方自治。目前全国人民最迫切需要的自由，是集会结社的自由，是言论出版的自由。】媒体组"))
+               (u (:- `(cite () "东方 @DongFang_USA : "
+                             ,(@ "https://twitter.com/DongFang_USA/status/1107957160649076736")
+                             (small () "2019.3.19 Twitter"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 19
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -757,7 +785,7 @@ z-index:100;
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
  "郭文贵"      ;; (twb::human-date (get-universal-time))
- "2019.03.19 22:12:13"
+ "2019.03.20 20:15:25"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
