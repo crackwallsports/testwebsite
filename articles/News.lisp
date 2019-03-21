@@ -121,6 +121,45 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.3.21")
+        (u (:- "郭文(视频): " (@ "https://www.guo.media/posts/183729") " .. " (@ "https://www.guo.media/posts/183648")
+               '(q () (pre () "
+2019文贵看春晚4 孟建柱要干掉达赖喇嘛，共产党信奉马列邪教抢夺百姓财产及的宗教信仰人权的自由
+2019文贵看春晚3 采访达赖喇嘛
+2019文贵看春晚2 香港已经被沦陷
+2019文贵看春晚1 杨澜找钥匙，凯琳谈人生观，班农先生在推广平民主义运动"))
+               (u (:- `(cite () "视频在郭先生Youtube频道 : " ,(@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured?disable_polymer=1" )))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/183693")
+               '(q () (pre () "
+3月20日：万分感谢战友之声，和战友文琅 【#战友之声 #抖音版爆料革命 #楚门看世界 #文琅 现在再回过头去看王岐山当副主席，大家说是好事儿还是坏事儿？现在老王坐在那椅子上就如同坐在火上烤！下又下不来，上又上不去，想上去就要干掉习近平，想下来，就一定会被人整！咋整捏？看看老王有没有那个胆量在中南坑发起政变！】 媒体组")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/183687") " "
+               (@ "https://www.guo.media/posts/183639")
+               '(q () (pre () "
+3月20日：尊敬的战友们好，纽约时间明天3月21日，纽约时间中午12点整，北京时间晚上零点，罗马下午时间，班农先生本人在郭媒体直播。 全程使用英语没有即时翻译，我们暂不了解直播内容。请战友们关注！一切，都是刚刚开始。媒体组
+
+March 21, 5PM CET: Broadcast with Steve Bannon from Rome “The Algorithms of Information” 3月21日，下午5时：看班农先生在罗马直播“信息算法”")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/183635")
+               '(q () (pre () "
+3月20日： 【戰友們，來看看啥叫爆料革命傳播的藝術🤣🤣🤣 聽完之後是不是覺得這位戰友的智慧，你不得不服啊😄👍】 媒体组"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=5IZU9ipmbTc"
+                                    "3月20日：【戰友們，來看看啥叫爆料革命傳播的藝術🤣🤣🤣 聽完之後是不是覺得這位戰友的智慧，你不得不服啊😄👍】媒体组")
+                             (small () "Youtube")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/183624")
+               '(q () (pre () "
+3月20日：郭先生每天见面的人数，他的工作效率和行动力，是我们所有媒体组的成员从来没有见过的。 他的朋友中有很多都是像STEVE BANNON 班先生这样世界上最有影响力，最年轻，最有魅力，最有理想的人……！ 我们媒体工作人员在经郭先生允许的情况下，会接受路徳访谈或战友之声的釆访谈一下这方面的感受。 【Who is Steve Bannon? Filmmakers of Upcoming Bannon Documentary Discuss youtu.be/lPW7w6QFOMQ via @YouTube 全球公映的班农影片有七哥，”the whistle blower” and rule of law foundation!!! 31” 女导演特别强调事实。拍摄期间，班农每次去纽约必去七哥住所。出行经常乘坐七哥的私人飞机。】 媒体组"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.rfa.org/cantonese/news/hna-03192019082813.html"
+                                 "海航集团债务危机升级　持股被冻结员工遭欠薪")
+                             (small () "2019.3.19 自由亚洲电台粤语部")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/183612")
+               '(q () (pre () "
+3月20日：万分感谢您，面具先生。 【面具先生精心制作，几夜未眠分析郭先生爆料绝对用了全心💞💞💞 回顾郭文贵爆料 探秘南普陀与刘承杰他爹和郭文贵爆料之间的关系 片尾有彩蛋🥰感谢所有战友的支持🙏🙏🙏我们一定会赢 我们一定要赢 我们必须赢✊✊✊为... youtu.be/o6nJ9cTiMVA via @YouTube】 媒体组")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/183599")
+               '(q () (pre () "
+3月20日：感谢《战友之声》及战友文郎。 【#战友之声 #抖音版爆料革命 #楚门看世界 #文琅 吴小晖被抓，绝对的是刚刚开始，吴小晖太天真，太把邓家当回事儿，他很会用中国的政治，但是他不懂中国政治的本质。本质就是下一代人报上一代人的仇！邓小平得罪了那么多人，王岐山，江泽民都在摩拳擦掌要干掉邓家人！】 媒体组"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.3.20")
         (u (:- "郭文: " (@ "https://www.guo.media/posts/183485")
                '(q () (pre () "
@@ -598,8 +637,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵"      ;; (twb::human-date (get-universal-time))
- "2019.03.20 20:15:25"
+ "郭文贵" ;; (twb::human-date (get-universal-time))
+ "2019.03.21 20:38:15"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
