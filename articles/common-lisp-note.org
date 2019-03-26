@@ -19,13 +19,35 @@
   - Slime
   - lispy
 
-
 * 开始
 Live 活着的
 - 交互能力 实时修改 快速反馈
 - REPL : 读 求值 打印 循环
+
+表示 和 操作
+- 表示
+  - 数字 : 1 -1 3.14159 3/2 #b1001 #o777 #xAC53
+    - 12345678901012345678902012345678903012345678901
+  - 字符串 : "我们彼此看着对方" "Hello World"
+    - 字符 : #\x #\云  (编码: ASCII Unicode UTF-8)
+    - "Hello" == #(#\H #\e #\l #\l #\o)
+  - 真值 : t nil
+    - 非nil 都为真
+  - 名字(变量) : 关联一个对象
+    - 比起使用变量这个术语 我更喜欢用名字或标签
+    - 变量和常量 : 可不可以修改 名字与对象的关联 (是否可以把名字用到别的对象上) 
+    - 符号
+  - 过程 : 函数
+    - 匿名函数(深藏功与名) : lambda
+    - 关联一个名字 : defun
+    - 返回值
+  - 控制流程 : 顺序 条件分支if cond 循环
+  - 复杂对象 : list array hash-table structure class(CLOS)
+- 操作
+  - 数学计算 : + - * / sin
+  - 等等
   
-** 自身
+* 自身
 - 语法 : S-表达式
   - 原子 (列表以外的)
   - 列表 (括号括起来的)
@@ -39,7 +61,7 @@ Live 活着的
       - 不求值 : quote
     - macro 宏 : 参数不求值
       
-*** Comment 注释
+** Comment 注释
 #+BEGIN_SRC lisp
 ;;;; File header
 
@@ -57,8 +79,8 @@ Live 活着的
 |#
 #+END_SRC
 
-*** Reader & Printer 读取器 和 打印器 :?:
-*** Quote 引用
+** Reader & Printer 读取器 和 打印器 :?:
+** Quote 引用
 - Homoiconicity 同象性 : 程序 & 数据
 - 引用 : quote (sugar: ')
   - 符号作为数据 : 'foo
@@ -81,7 +103,7 @@ Live 活着的
 `(x . ,'(x y z)) ;-> (X X Y Z)
     #+END_SRC
 
-*** Special 特殊操作符
+** Special 特殊操作符
 - 25个
 - 词法环境 : let let* setq progv
 - 函数 : function labels flet
@@ -97,7 +119,7 @@ Live 活着的
 - 求值 : quote eval-when load-time-value
   - load-time-value : 若编译则只求值一次
 - 类型 : locally the
-*** Type System 类型系统
+** Type System 类型系统
 - 动态类型 : 运行时检测 名字 可关联 任何类型的对象
 - 强类型 : 所有的类型错误都会被检测
 - Class 可作为 Type 使用 (相反不可) : 定义 class 时 会自动定义一个同名的 Type 
@@ -123,8 +145,8 @@ Live 活着的
   (sqrt (first list)))
   #+END_SRC
 
-**** Type Specifier 类型标识符 :?:
-*** Symbol 符号
+*** Type Specifier 类型标识符 :?:
+** Symbol 符号
 - 符号的内部结构
   - name     : symbol-name
   - package  : symbol-package := home package | nil(uninterned)
@@ -149,7 +171,7 @@ Live 活着的
 | | 
 |abc|      
       #+END_SRC
-*** Name 名字
+** Name 名字
 - 基于: 符号
 - 约定
   - 全局变量 : *name*
@@ -169,7 +191,7 @@ fn ;-> 1
 (symbol-function 'fn) ;-> #<Compiled-function FN #x3020033714EF>
   #+END_SRC
 
-*** Package
+** Package
 - 包 : 符号的集合 用于名称空间
 - 创建 : make-package defpackage
   #+BEGIN_SRC lisp
@@ -307,7 +329,7 @@ fn ;-> 1
   lst)
       #+END_SRC
 
-*** Assignment 赋值
+** Assignment 赋值
 - setf : (setf name|place value)
   #+BEGIN_SRC lisp
 (setf *x* (list 1 2 3))
@@ -370,7 +392,7 @@ a ;-> 0
 b ;-> 10
   #+END_SRC
 
-**** Setf Place
+*** Setf Place
 - 定义 : (setf name) | defsetf | define-setf-expander
   #+BEGIN_SRC lisp
 ;;; (setf name) 
@@ -379,7 +401,7 @@ b ;-> 10
 ;; 调用 : (setf (name obj) new-val)
   #+END_SRC
 
-*** Macro 宏
+** Macro 宏
 - 定义 : defmacro
   #+BEGIN_SRC lisp
 (defmacro name (parameter*)
@@ -401,7 +423,7 @@ b ;-> 10
   - 变量定义顺序
   - 重名 (gensym)
 
-*** Feature 特性
+** Feature 特性
 - 用于区分运行环境
 #+BEGIN_SRC lisp
 *features*
@@ -414,10 +436,10 @@ b ;-> 10
 ;; in impl B ;-> (cons "little" x)
 #+END_SRC
 
-*** Error :?:
+** Error :?:
 
-*** Debug :?:
-*** Help
+** Debug :?:
+** Help
 - apropos
   #+BEGIN_SRC lisp
 ;; opt second argument : limit search in particular package
@@ -495,29 +517,6 @@ b ;-> 10
     - 'compiler-macro : define-compiler-macro
     - 'method-combination : define-method-combination
     - t : returned depends upon type of first argument.
-
-** 表示 和 操作
-- 表示
-  - 数字 : 1 -1 3.14159 3/2 #b1001 #o777 #xAC53
-    - 12345678901012345678902012345678903012345678901
-  - 字符串 : "我们彼此看着对方" "Hello World"
-    - 字符 : #\x #\云  (编码: ASCII Unicode UTF-8)
-    - "Hello" == #(#\H #\e #\l #\l #\o)
-  - 真值 : t nil
-    - 非nil 都为真
-  - 名字(变量) : 关联一个对象
-    - 比起使用变量这个术语 我更喜欢用名字或标签
-    - 变量和常量 : 可不可以修改 名字与对象的关联 (是否可以把名字用到别的对象上) 
-    - 符号
-  - 过程 : 函数
-    - 匿名函数(深藏功与名) : lambda
-    - 关联一个名字 : defun
-    - 返回值
-  - 控制流程 : 顺序 条件分支if cond 循环
-  - 复杂对象 : list array hash-table structure class(CLOS)
-- 操作
-  - 数学计算 : + - * / sin
-  - 等等
 
 * 表示
 ** Number 数
@@ -1166,6 +1165,555 @@ b ;-> 10
   pl)
 ;;-> (:A 1 :C 3) ;;-> T
   #+END_SRC
+** Array 数组
+- 创建 : Literal make-array
+  #+BEGIN_SRC lisp
+;;; Literal
+#(2 3) ;-> #(2 3)
+;; #n(..)
+#5(1 2 3) ;-> #(1 2 3 3 3)
+#3() ;-> Error (最少要有一个对象)
+#3(1) ;-> #(1 1 1)
+;; 维度 : #nA(..)
+#0A()
+#1A(1 2 3) ;-> #(1 2 3)
+#2A((2) (3)) ;-> #2A((2) (3))
+#2A((1 2) (3 3))
+#3A(((1 2) (3 4)) ((5 6) (7 8)))
+
+;;; Make
+(make-array 0)                      ;-> #()
+(make-array 3)                      ;-> #(0 0 0)
+(make-array '(2 3)) ;-> #2A((0 0 0) (0 0 0))
+
+(make-array 5 :element-type 'bit)   ;-> #*00000
+(make-array 3 :initial-element nil) ;-> #(NIL NIL NIL)
+(make-array '(2 4) :initial-contents '((0 1 2 3) (3 2 1 0)))
+;;-> #2A((0 1 2 3) (3 2 1 0))
+
+(make-array 3 :fill-pointer 0) ;-> #()
+(make-array 3 :adjustable t) ;-> #()
+;;; displaced-to, displaced-index-offset
+  #+END_SRC
+- 打印 : *print-array*
+  - t : #nA(...)
+  - nil : #<ARRAY NxM, simple>
+- CONSTANT
+  - array-dimension-limit
+  - array-rank-limit
+  - array-total-size-limit
+
+*** GET
+- 大小 : array-total-size Seq.length(1D, observe fill pointers)
+  #+BEGIN_SRC lisp
+(let ((a (make-array 10 :fill-pointer 3)))
+  (list (array-total-size a)
+        (length a)))
+;;-> (10 3)
+  #+END_SRC
+- 维度 : array-(dimension|dimensions)
+  #+BEGIN_SRC lisp
+;; 维数==括号层数
+;; 返回列表的长度==秩 每个元素的值==每维的大小
+(array-dimensions #1A(1 2 3));-> (3)
+(array-dimensions (make-array 3));-> (3)
+
+(array-dimensions #2A((1 2 3) (1 2 3))) ;-> (2 3)
+(array-dimensions (make-array '(2 3))) ;-> (2 3)
+
+(array-dimensions #3A((((1 2 3)))));-> (1 1 1)
+(array-dimensions #3A((((1 2 3)) ((1 2 3))))) ;-> (1 2 1)
+(array-dimensions #3A((((1 2 3) (1 2 3)))
+                      (((1 2 3) (1 2 3)))))
+;; (2 1 2)
+
+
+;; 某一维的大小 (从0起 0表示一维)
+(array-dimension (make-array 3) 0) ;-> 3
+(array-dimension (make-array '(2 3)) 1) ;-> 3
+  #+END_SRC  
+- 秩 : array-rank
+  #+BEGIN_SRC lisp
+(array-rank #0A())
+(array-rank (make-array '()))
+;;->  0
+
+(array-rank #1A(1))
+(array-rank #1A(1 2 3))
+(array-rank (make-array '(3)))
+;;-> 1
+
+(array-rank #2A((1)))
+(array-rank (make-array '(2 3)))
+;;-> 2
+   #+END_SRC
+- 填充指针值 : fill-pointer
+- 成员类型 : array-element-type
+- array-displacement
+- 行列索引 -> 行主索引 : array-row-major-index
+  #+BEGIN_SRC lisp
+;; '(2 5)=(() ()) : [1, 2] : Index=1*5+2=7
+(array-row-major-index #2A((1 2 3 4 5) (3 4 5 6 7)) 1 2) ;-> 7
+  #+END_SRC
+- 索引元素 : aref row-major-aref
+  #+BEGIN_SRC lisp
+(aref #(1 2 3) 1)           ;-> 2 
+(aref #2A((1 2) (3 4)) 0 1) ;-> 2
+
+;; 行主索引 : 当作一行来索引
+(row-major-aref #(1 2) 1) ;-> 2
+(row-major-aref #2A((1 2) (3 4)) 3) ;-> 4
+  #+END_SRC
+- 子数组 : Seq.subseq
+  
+*** ADJUST
+- adjust-array upgraded-array-element-type
+
+** Vector 向量
+- 表示基于 : 1D-[[Array 数组]]
+- 创建 : Literal vector
+  #+BEGIN_SRC lisp
+;;; Literal
+#(1 2)
+
+;;; 
+(vector)                            ;-> #()
+(vector 1 2)                        ;-> #(1 2)
+  #+END_SRC
+- 访问 : svref
+  #+BEGIN_SRC lisp
+(svref #(1 2) 0) ;-> 1
+  #+END_SRC
+- 添加和删除元素 : vector-push vector-pop  vector-push-extend
+  #+BEGIN_SRC lisp
+;; 向量需有填充指针
+(let ((v (make-array 3 :fill-pointer 0)))
+  (vector-push 1 v)
+  (vector-push 2 v)
+  (vector-push 3 v)
+  v)
+;; #(1 2 3)
+(let ((v (make-array 3 :fill-pointer t :initial-contents '(1 2 3))))
+  (vector-pop v)
+  v)
+;; #(1 2)
+
+;; 向量需可调整
+(let ((v (make-array 3
+                     :fill-pointer t
+                     :adjustable t
+                     :initial-contents '(1 2 3))))
+  (vector-push 5 v)
+  v                                     ;-> #(1 2 3)
+  (vector-push-extend 5 v)
+  v)
+;;-> #(1 2 3 5)
+  #+END_SRC
+  
+** Sequence 序列
+- 抽象从 ([[Vector 向量]] [[List 列表]])
+- 创建 : make-sequence
+  #+BEGIN_SRC lisp
+(make-sequence 'list 0) ;->  ()
+(make-sequence 'string 3 :initial-element #\.) ;->  "..."
+(make-sequence '(vector double-float) 2 :initial-element 1d0) ;->  #(1.0d0 1.0d0)
+  #+END_SRC
+
+*** 函数名与参数 特定
+- Keyword Paramater
+  - :key            : 应用至每个元素的函数 ; identity
+  - :test|:test-not : 用于比较的函数      ; eql
+  - :start	  : 起始位置           ; 0
+  - :end	          : 给定 或 结束位置   ; nil
+  - :from-end	  : 若为真 则反向    ; nil
+  - :count          : 数字代表需要移除或替换的元素个数 nil代表全部 ; nil
+  - :intial-value   : for reduce
+- -if & -if-not (count position remove find substitute)
+  - -if-not 不再使用 用 complement 替代
+
+*** GET
+- 大小 : length
+  #+BEGIN_SRC lisp
+(length (vector 1 2 3)) ;-> 3
+  #+END_SRC
+- 单个元素 : elt
+  #+BEGIN_SRC lisp
+(elt (vector 1 2) 0)          ;-> 1
+(setf (elt (vector 1 2) 0) 2)
+  #+END_SRC
+- 子序列 : subseq remove remove-duplicates
+  #+BEGIN_SRC lisp
+(subseq "foobarbaz" 3)   ;-> "barbaz"
+(subseq "foobarbaz" 3 5) ;-> "ba"
+
+(remove 1 #(1 2 3)) ;-> #(2 3)
+
+(remove-duplicates #(1 2 1 2 3 1 2 3 4)) ;-> #(1 2 3 4)
+
+  #+END_SRC
+- 反转 : reverse
+  #+BEGIN_SRC lisp
+(reverse '(a b c)) ;-> (c b a)
+  #+END_SRC
+- 计数 : count[-if]
+  #+BEGIN_SRC lisp
+(count 1 #(1 2 1)) ;-> 2
+(count-if #'evenp #(1 2 3)) ;-> 1
+    #+END_SRC
+
+*** Replace
+- 替换单个元素 : substitute[-if]
+  #+BEGIN_SRC lisp
+(substitute 10 1 #(1 3 1)) ;-> #(10 3 10)
+(substitute 10 1 '(1 2 1 3 1)) ;-> (10 2 10 3 10)
+(substitute #\c #\a "abababab") ;-> "cbcbcbcb"
+(substitute #\c #\A "abababab" :test 'string=) ;-> "abababab"
+  #+END_SRC 
+*** Sort
+- (破坏: sort stable-sort) 
+  #+BEGIN_SRC lisp
+(sort '(0 2 1 3 8) #'>)                     ;-> (8 3 2 1 0)
+(sort (vector "foo" "bar" "baz") #'string<) ;-> #("bar" "baz" "foo")
+;; Vector-Char(String)
+(sort "cdba" #'char<) ;-> "abcd"
+  #+END_SRC
+*** Concat & Merge 
+- 连接 : concatenate
+  #+BEGIN_SRC lisp
+(concatenate 'vector #(1 2) '(3 5))   ;-> #(1 2 3 5)
+(concatenate 'string "abc" "efg")     ;-> "abcefg"
+(concatenate 'string "aa" '(#\f #\s)) ;-> "aafs"
+
+(let* ((l1 (list 1 2))
+       (l2 (list 3 4))
+       (l3 (list 5 6))
+       (nl (concatenate 'list l1 l2 l3)))
+  (setf (second l1) 22)
+  (setf (second l3) 66)
+  (list l1 l2 l3 nl))
+;; ((1 22)
+;;  (3 4)
+;;  (5 66)
+;;  (1 2 3 4 5 6))
+
+  #+END_SRC
+- 合并 : merge
+  #+BEGIN_SRC lisp
+(merge 'list #(1 2) #(3 4) #'<) ;-> (1 2 3 4)
+  #+END_SRC
+
+*** Split
+- Lib:[[http://quickdocs.org/split-sequence/][split-sequence]]
+  #+BEGIN_SRC lisp
+(split-sequence #\Space "A stitch in time saves nine.")
+;;-> ("A" "stitch" "in" "time" "saves" "nine.") ;;-> 28  
+
+;; split-sequence-if | split-sequence-if-not
+  #+END_SRC
+
+*** Map
+- 映射 Map : map map-into
+  #+BEGIN_SRC lisp
+(map 'vector #'* #(1 2 3) #(2 2 2)) ;-> #(2 4 6)
+
+(map-into a #'+ a b c)
+(setf x #(0))                   ;-> #(1)
+(map-into x #'+ #(1) #(2) #(3)) ;-> #(6)
+  #+END_SRC  
+- 累积 Reduce : reduce
+  #+BEGIN_SRC lisp
+(reduce #'+ #(1 2 3))   ;-> 6
+(reduce #'max #(1 2 3)) ;-> 3
+(reduce #'+ #(1 2) :initial-value 3)
+(reduce (lambda (acc next)
+          (format t "~a,~a " acc next) (+ acc next))
+        (list 1 2 3 5))
+;;-> 1,2 3,3 6,5 ;-> 11
+  #+END_SRC
+- 过滤 Filter : remove[-if]
+  #+BEGIN_SRC lisp
+(remove 1 #(1 2 3)) ;-> #(2 3)
+(remove-if #'(lambda (x) (char/= (elt x 0) #\f))
+           #("foo" "bar" "baz" "foom")) 
+;;-> #("foo" "foom")
+  #+END_SRC    
+
+*** Search
+- 单元素 : find[-if] position[-if]
+  #+BEGIN_SRC lisp
+;; 返回 项或NIL
+(find 1 #(1 2 3)) ;-> 1
+
+;;; 返回 位置
+(position 1 #(2 1 2)) ;-> 1
+  #+END_SRC
+- 子序列 : search mismatch
+  #+BEGIN_SRC lisp
+;;; 匹配的第一个位置
+(search "bar" "foobarbaz") ;-> 3
+
+;;; 不匹配的第一个位置
+(mismatch "foobarbaz" "foom")            ;-> 3
+(mismatch "foobarbaz" "baz" :from-end t) ;-> 6
+  #+END_SRC
+
+*** 破坏
+- 修改元素 : (setf elt)
+  #+BEGIN_SRC lisp
+(setf l0 (list 1 2 3))
+(setf (elt l0 1) 9) ;-> 9
+l0  ;-> (1 9 3)
+  #+END_SRC
+- 修改子序列 : (setf subseq) replace fill
+  #+BEGIN_SRC lisp
+;;; subseq
+;; shorter length determines number of element that replaced
+(defparameter str "hello")
+(setf (subseq str 3) "1112") ; str == hel11
+
+;;; replace
+(replace "abcdefghij" "0123456789" :start1 4 :end1 7 :start2 4) 
+;;-> "abcd456hij"
+(setq lst "012345678")
+(replace lst lst :start1 2 :start2 0) ;->  "010123456"
+lst ;->  "010123456"
+
+;;; fill
+(setf s0 "abcdefgh")
+(fill s0 #\f) ;-> "ffffffff"
+s0 ;-> "ffffffff"
+(fill s0 #\0 :start 1 :end 5) ;; 1..<5
+s0 ;-> "f0000fff"
+  #+END_SRC
+- 交换 Swap place : rotatef shiftf
+  #+BEGIN_SRC lisp
+;;; rotatef : 逆时针(向左)旋转
+(let ((l '(1 2 3)))
+  (rotatef (first l) (second l))        ;; (a2 a1 a3)
+  (rotatef (third l) (first l))         ;; (a3 a1 a2)
+  l)
+;; (3 1 2)
+(let ((l '(1 2 3)))
+  ;; (a1=1 a2=2 a3=3)
+  (rotatef (first l)  
+           (second l) ;; a1<=a2 (a2 a2 a3)
+           (third l)  ;; a2<=a3 (a2 a3 a3)
+           (first l)  ;; a1=>a3 (a2 a3 a1)
+           ;; a1=>a1 (a1 a3 a1)
+           )
+  l)
+;; (1 3 1)
+
+;;; shiftf : 左移
+(let ((l '(1 2 3)))
+  (shiftf (first l) (second l)) ;; (2 2 3)
+  (shiftf (first l) (second l) 5) ;; (2 5 3)
+  (shiftf (first l)
+          (second l)                    ;; (5 5 3)
+          (third l)                     ;; (5 3 3)
+          6)                            ;; (5 3 6)
+  l)
+;;-> (5 3 6)
+  #+END_SRC
+** Hash Table 哈希表
+- Key-Value
+- 创建 : make-hash-table
+  #+BEGIN_SRC lisp
+;; (&Key: test size rehash-size rehash-threshold)
+(make-hash-table)
+
+;; hash-function
+(make-hash-table :test 'char-equal
+                 :hash-function (lambda (char)
+                                  (char-code
+                                   (char-downcase char))))
+  #+END_SRC
+
+*** GET
+- 键对应的值 : gethash
+  #+BEGIN_SRC lisp
+(gethash 'foo h) ;-> NIL NIL
+  #+END_SRC
+- 键组 和 值组
+  #+BEGIN_SRC lisp
+;;; Keys
+(defun hash-keys (ht)
+  (loop for key being the hash-keys of ht
+     collect key))
+;;; Values
+(defun hash-values (ht)
+  (loop for value being the hash-valuess of ht
+     collect value))
+  #+END_SRC
+- 遍历 : maphash loop Lib:iterate with-hash-table-iterator
+  - maphash
+    #+BEGIN_SRC lisp
+(let ((ht (make-hash-table)))
+  (setf (gethash "a" ht) 1)
+  (setf (gethash "b" ht) 1)
+  (setf (gethash "c" ht) 1)
+  (setf (gethash "d" ht) 1)
+  (maphash #'(lambda (k v) (format nil "~a = ~a~%" k v)) ht))
+    #+END_SRC  
+  - loop
+    #+BEGIN_SRC lisp
+;; for key|value being each|the hash-keys|hash-key|hash-values|hash-value of
+(loop for key being the hash-keys of *my-hash*
+   do (print key))
+;;-> KEY
+
+(loop for key being the hash-keys of *my-hash*
+   using (hash-value value)
+   do (format t "The value associated with the key ~S is ~S~%" key value))
+;;-> The value associated with the key KEY is VALUE 
+;;-> NIL
+
+(loop for value being the hash-values of *my-hash*
+   using (hash-key key)
+   do (format t "~&~A -> ~A" key value))
+;;-> KEY -> VAlUE
+;;-> NIL
+    #+END_SRC
+  - with-hash-table-iterator
+    #+BEGIN_SRC lisp
+  (with-hash-table-iterator (my-iterator *my-hash*)
+    (loop
+      (multiple-value-bind (entry-p key value)
+          (my-iterator)
+        (if entry-p
+            (print-hash-entry key value)
+            (return)))))
+    #+END_SRC
+  - !! 迭代哈希表过程中修改哈希表 行为结果不确定 但是 setf(gethash) 和 remhash 可以安全使用
+- 信息 : hash-table-[count size rehash-size rehash-threshold test]
+  #+BEGIN_SRC common-lisp
+(hash-table-count *my-hash*) ;-> 0
+(hash-table-test (make-hash-table)) ;-> EQL
+ #+END_SRC
+- 哈希编码 : sxhash(return hash code for object)
+
+*** 破坏
+- 键对应的值 : setf(gethash)
+  #+BEGIN_SRC lisp
+;;; gethash
+(setf (gethash 'foo ht) 'qc)
+(gethash 'foo h) ;-> qc
+  #+END_SRC
+- 移除 : remhash clrhash
+  #+BEGIN_SRC lisp
+;;; 移除项
+(remhash 'foo ht)
+
+;;; 移除全部
+(clrhash ht)
+  #+END_SRC
+
+** Bits 位组
+*** 基于 Integer
+#+BEGIN_SRC lisp
+#b111
+#+END_SRC
+- 按位运算
+  - 逻辑 : logand ... | boole(前者的包装)
+  - 移位 : ash
+    #+BEGIN_SRC lisp
+(ash 11 1) ;-> 22
+(ash 11 -1) ;-> 5
+  #+END_SRC
+*** 基于 Bit-Vector
+- : [[Vector 向量]]-0|1
+- 创建 : Literal | make-array(:e-t='bit)
+  #+BEGIN_SRC lisp
+;;; Literal
+#*10110     ; 5 bit
+#*          ; empty
+
+;;; 
+(make-array 5 :element-type 'bit) ;-> #*00000
+(make-array 5 :element-type 'bit :initial-contents '(1 0 1 1 1)) ;-> #*10111
+  #+END_SRC
+- 访问 : bit sbit
+  #+BEGIN_SRC lisp
+(bit #*01101 0) ;-> 0
+
+;; Simple-bit-vector : sbit
+(sbit #*100111 3)
+  #+END_SRC
+- 按位运算
+  - 逻辑 : bit-..
+    #+BEGIN_SRC lisp
+;; 非 : bit-not
+(bit-not #*11010) ;-> #*00101
+
+;; 与 : bit-and bit-andc1 bit-andc2
+;; 或 : bit-ior bit-nor bit-orc1 bit-orc2
+;; 异或 : bit-xor
+;; 与非 : bit-nand
+;; bit-eqv
+(bit-eqv #*11001 #*10011) ;-> #*10101
+    
+    #+END_SRC
+  - 移位
+
+** Byte 字节
+- 字节指示符 : byte byte-size byte-position
+  #+BEGIN_SRC lisp
+;; byte 位数 偏移
+(format nil "0b~B ~:*0x~X" (byte 8 0)) ;-> "0b11111111 0xFF"
+(format nil "0b~B ~:*0x~X" (byte 8 8)) ;-> "0b1111111100000000 0xFF00"
+(format nil "0b~B ~:*0x~X" (byte 16 8)) ;-> "0b111111111111111100000000 0xFFFF00"
+(format nil "0b~B ~:*0x~X" (byte 5 10)) ;-> "0b111110000000000 0x7C00"
+
+;; 位数 : byte-size (1的个数)
+;; (byte-size (byte j k)) == j
+(byte-size (byte 10 13)) ;-> 10
+(byte-size #b10011) ;-> 3
+
+;; 偏移 : byte-position (0的个数)
+;; (byte-position (byte j k)) == k
+(byte-position (byte 10 13)) ;-> 13
+(byte-position #b010010010)  ;-> 5  
+  #+END_SRC
+- 加载 : ldb
+  #+BEGIN_SRC lisp
+;; ldb
+(format nil "0x~X" (ldb (byte 8 0) #xABCD)) ;-> "#xCD"
+(format nil "0x~X" (ldb (byte 8 8) #xABCD)) ;-> "0xAB"
+
+;; !!! Danger
+(let ((a (list 8)))
+  (setf (ldb (byte 2 1) (car a)) 1)
+  a)
+;;-> (10)
+
+;; ldb-test
+;; 所指示位 任何一位为0 则 False
+(ldb-test (byte 3 0) #b1111010)
+(ldb-test (byte 3 0) #b1111000)
+
+  #+END_SRC
+- 放置 : dpb
+  #+BEGIN_SRC lisp
+;; dpb : 放置
+(format nil "0b~,,' ,8:B, ~:*0x~X" (dpb 0 (byte 8 0) #xABCD))
+;;-> "0b10101011 00000000, 0xAB00"
+(format nil "0b~,,' ,8:B, ~:*0x~X" (dpb 1 (byte 8 8) #xABCD))
+;;-> "0b1 11001101, 0x1CD"
+(format nil "0b~,,' ,8:B, ~:*0x~X" (dpb -2 (byte 8 8) #xABCD))
+;;-> "0b11111110 11001101, 0xFECD"
+(format nil "0b~,,' ,8:B, ~:*0x~X" (dpb #b10101 (byte 8 8) #xABCD))
+;;-> "0b10101 11001101, 0x15CD"
+  #+END_SRC
+- Field
+  #+BEGIN_SRC lisp
+;; mask-field
+(format nil "0x~X" (mask-field (byte 8 0) #xABCD)) ;-> "0xCD"
+(format nil "0x~X" (mask-field (byte 8 8) #xABCD)) ;-> "0xAB00"
+
+;; deposit-field
+(format nil "0x~X" (deposit-field 0 (byte 8 0) #xABCD)) ;-> "0xAB00"  
+  #+END_SRC
+
 
 * 基础
 ** 变量 和 常量
@@ -1478,6 +2026,433 @@ Dynamic (Special) Variable  (!!! 注意命名)
   #+END_SRC
 
 ** 控制流
+*** Flow 顺序流程
+- progn prog1 multiple-value-prog1 prog2
+  #+BEGIN_SRC lisp
+;;; 返回最后值
+(progn
+  (format t "a")
+  (format t "b")
+  (+ 3 3))
+;;-> ab
+;;-> 6
+
+;;; 返回第一个形式的值
+(prog1 1 2 3) ;-> 1
+(prog1 (values 1 2) 3) ;-> 1
+;; 返回多值
+(multiple-value-prog1 (values 1 2) 3) ;-> 1 ;-> 2
+
+;;; 返回第二个形式的值 == (progn a (prog1 b c ... z))
+(prog2 (open-a-file) (process-the-file) (close-the-file)) 
+  #+END_SRC
+
+*** Conditional 条件
+- if
+  #+BEGIN_SRC lisp
+(if (= (+ 1 2) 3)
+    'yes
+    'no)
+;;-> yes
+  #+END_SRC
+- when | unless
+  #+BEGIN_SRC lisp
+(when (oddp 5) (prin1 "a") (prin1 "b")) ;-> "a""b"
+(unless (oddp 4) (prin1 "a") (prin1 "b")) ;-> "a""b"
+  #+END_SRC
+- cond
+  #+BEGIN_SRC lisp
+(cond ((= 3 5) '=)
+      ((> 3 3) '>)
+      (t))
+;;-> T
+
+;;; 没有表达式则会返回条件式的值
+(cond (99)) ;-> 99
+  #+END_SRC
+
+*** Case 匹配
+- case ccase ecase
+  #+BEGIN_SRC lisp
+;; 键值 被视为常量 不被求值 需要则使用 "#."
+;; Compare : eql
+;; 缺省子句的键值可以 : t|otherwise
+(defun month-length (mon)
+  (case mon
+    ((jan mar may jul aug oct dec) 31)
+    ((apr jun sep nov) 30)
+    (feb (if (leap-year) 29 28))
+    (otherwise "unknown month")))
+(month-length 'mar) ;-> 31
+
+;;; 如果没有子句符合时 | 子句只包含键值时 , 返回 nil
+(case 99 (99)) ;-> NIL 
+
+;; ecase : 没有匹配时报错 (e: error|exhaustive)
+  #+END_SRC
+- typecase ctypecase etypecase
+  #+BEGIN_SRC lisp
+;;; typecase
+;; 每个子句中的键值 : 类型修饰符(type specifiers)
+;; 键值比较 : typep
+(typecase x
+  (number #'+)
+  (list #'append)
+  (t #'list))
+  #+END_SRC
+*** Block 区块
+- block
+  #+BEGIN_SRC lisp
+  (block name ...)
+  ;; name 是词法解析的 定义时被绑定 返回时不会被其它同名块劫持
+  #+END_SRC
+- Return from block : return-from return
+  #+BEGIN_SRC lisp
+;;; return-from
+(block test
+  (return-from test "end")
+  "see me")
+;;-> "end"
+
+;;; return : (return-from nil ..) 的语法糖 
+(block nil (return 3)) ;-> 3
+    #+END_SRC
+- 隐式包裹在块中
+  #+BEGIN_SRC lisp
+;;; defun : 块名同函数名
+(defun return-from-func ()
+  (return-from return-from-func "R")
+  "NR")
+(return-from-func) ;-> "R"
+
+(defun foo (n)
+  (dotimes (i 10)
+    (dotimes (j 10)
+      (when (> (* i j) n)
+        (return-from foo (list i j))))))
+
+;;; loop dotimes : 块名NIL 
+(let ((i 0))
+  (loop
+     (when (> i 5)
+       (return))
+     (incf i))
+  i)
+;;-> 6
+(dotimes (i 10)
+  (when (>= i 3)
+    (return i)))
+;;-> 3
+  #+END_SRC
+
+*** Goto 跳转
+- tagbody go
+  #+BEGIN_SRC lisp
+;; Label 必须在顶层
+;; go : to labels
+(tagbody
+ top ;: Label
+   (if (< (random 20) 10) (go top))
+ s1 (if (> (random 3) 1) (go s2))
+ s2 (if (> (random 3) 2) (go s3))
+ s3 (list "End"))
+;;-> NIL
+  #+END_SRC
+
+*** Loop 循环 :?:
+- All are macro built on TAGBODY and GO
+- do | do*
+  #+BEGIN_SRC lisp
+(do (var-def*)
+    (end-test-form result-form*)
+ statement*)
+(var init-form step-form) ; var-def
+
+(do ((n 0 (1+ n))
+     (cur 0 next)
+     (next 1 (+ cur next)))
+    ((= 10 n) cur))
+  #+END_SRC
+- dolist
+  #+BEGIN_SRC lisp
+(dolist (x '(1 2 3) 'done) (print x))
+;;-> 1 ;;-> 2 ;;-> 3 ;;-> Done
+  #+END_SRC
+- dotimes
+  #+BEGIN_SRC lisp
+(dotimes (i 3) (print "a"))
+;;-> a ;;-> a ;;-> a ;;-> NIL
+  #+END_SRC
+- loop
+  - Basic
+    #+BEGIN_SRC lisp
+(loop) ;-> Infinite Loop   
+
+;; do
+(loop for x from 0 to 3 
+   do (princ x)) ;-> 0123
+
+;; collect -> (list ... )
+(loop for x from 0 to 3 collect x) ;-> (0 1 2 3)
+
+;; repeat
+(loop repeat 10 collect 1) ;-> (1 1 1 1 1 1 1 1 1 1)
+
+;; named
+(loop named a for i below 2
+   do (loop named b for j below 2
+         do (print j)
+         when (= j 1) do (return-from a 'done)))
+;;-> 0 ;;-> 1 ;;-> done
+
+;; initially 
+(loop initially (print 'begin)
+   for x below 3 collect x)
+;;-> begin ;;-> (0 1 2)
+
+;; finally
+(loop for x below 3 do (print x)
+   finally (print 'end))
+;;-> 0 ;;-> 1 ;;-> 2 ;;-> end ;;-> nil
+(loop for x below 3 collect x
+   finally (print 'end))
+;;-> end ;;-> (0 1 2)
+
+;; end
+(loop for i below 5 when (oddp i) collect i
+   end collect " ")
+;;-> (" " 1 " " " " 3 " " " ")
+
+    #+END_SRC
+  - For-in
+    #+BEGIN_SRC lisp
+;;; for|as
+;; from|upfrom|downfrom to|upto|downto by 
+(loop for x from 0 to 3 collect x) ;-> (0 1 2 3)
+(loop for x from 0 to 5 by 2 collect x) ;-> (0 2 4)
+;; below
+(loop for i below 3 collect i) ;-> (0 1 2)
+;; then
+(loop for i = 0 then (1+ i)
+   when (= i 3) return 'done
+   do (print i)) ;;-> 0 ;;-> 1 ;;-> 2 ;;-> done
+(loop repeat 3 for x = 0 then (1+ x) collect x) ;-> (0 1 2)
+;; in|on  always|never|thereis  (List)
+(loop for x in '(1 2 3) collect (+ x 1)) ;-> (2 3 4)
+(loop for x in '(0 2 4) always (evenp x)) ;-> t
+(loop for x in '(0 2 4) never (oddp x)) ;-> t
+(loop for x in '(1 2 3) thereis (evenp x)) ;-> t
+;; across (Array)
+(loop for x across #(1 2 3) collect (+ x 1)) ;; (2 3 4)
+;; and
+(loop
+   for x from 1 to 3
+   for y from 1 to 3
+   collect (list x y))
+(loop for x from 1 to 3 and y from 1 to 3 collect (list x y))
+;;-> ((1 1) (2 2) (3 3))
+;; count
+(loop for i in '(1 2 3) count i) ;-> 3
+;; sum
+(loop for i in '(1 2 3) sum i) ;-> 6
+(loop for i from 1 to 3 sum i) ;-> 6
+;; minimize|maximize
+(loop for i in '(1 2 3) maximize i) ;-> 3
+;; append|nconc
+(loop for i in '(1 2 3) append (list 0 i)) ;-> (0 1 0 2 0 3)
+;; destructure
+(loop for (a b) in '((x 1) (y 2) (z 3))
+   collect (list b a) )
+;;-> ((1 X) (2 Y) (3 Z))
+(loop for (x . y) in '((1 . 1) (2 . 4) (3 . 9)) collect y)
+;;-> (1 4 9)
+(loop for (key value) on args by #'cddr
+   collect (list (intern (symbol-name key)) value))
+    #+END_SRC
+  - Condition: when unless while until if-else
+    #+BEGIN_SRC lisp
+  ;; when 
+  (loop for i below 5
+     when (= i 3) return 'done
+     do (print i))
+  ;;-> 0 ;;-> 1 ;;-> 2 ;;-> done
+  (loop for i below 5
+     when (= i 3) do (print i)
+     collect i)
+  ;;-> 3 ;;-> (0 1 2 3 4)
+  (loop for i in '(0 1 2 3)
+     when (evenp i) collect i)
+  ;;-> (0 2)
+
+  ;; unless
+  (loop for i in '(0 1 2 3)
+     unless (evenp i) collect i)
+  ;;-> (1 3)
+
+  ;; while
+  (loop for i in '(0 1 2 3)
+     while (evenp i) return 'done)
+  ;;-> done
+  (loop for i in '(0 1 2 3)
+     while (evenp i) do (print i) collect i)
+  ;;-> 0 ;;-> (0)
+  (loop for i in '(0 1 2 3)
+     while (evenp i) collect i)
+  ;;-> (0)
+
+  ;; until
+  (loop for i from 0 collect i until (> i 3))
+  ;;-> (0 1 2 3 4)
+
+  ;; if else
+  (loop for i below 3
+     if (oddp i) collect i
+     do (print i))
+  ;;-> 0 ;;-> 1 ;;-> 2 ;;-> (1)
+  (loop for i below 3
+     if (oddp i) collect i
+     else do (print i)
+     do (print "done"))
+  ;;-> 0 ;;-> "done" ;;-> "done" ;;-> 2 ;;-> "done" ;;-> (1)
+  
+    #+END_SRC
+  - Variable
+    #+BEGIN_SRC lisp
+  ;;; with
+  (loop with x = (+ 1 1) repeat 3 collect x)
+  ;;-> (2 2 2)
+
+  ;;; Into
+  (loop for i in '(1 2 3)
+     minimize i into lowest
+     maximize i into biggest
+     finally (return (cons lowest biggest)))  
+    #+END_SRC
+  - Hash Table
+    #+BEGIN_SRC lisp
+  ;; being each|the hash-keys|hash-key|hash-values|hash-value of
+  (defparameter ht (make-hash-table))
+  (setf (gethash 'a ht) 1)
+  (setf (gethash 'b ht) 2)
+  (loop for key being the hash-keys of ht
+     collect key)
+  ;;-> (B A)
+  
+    #+END_SRC
+  - Return: loop-finish return
+    #+BEGIN_SRC lisp
+(loop for i in ’(3 7 8 1)
+   do (print i)
+   when (evenp i)
+   do (loop-finish)
+   finally (print :done))
+;;-> 3 ;-> 7 ;-> 8 ;-> :DONE ;-> NIL
+    
+    #+END_SRC
+- Lib:[[https://common-lisp.net/project/iterate/doc/index.html][Iterate]] : similar to built in loop
+
+*** Break 中断
+- catch, throw : escape from anywhere
+- 中断保护(打断时 剩下的表达式仍会被求值) : unwind-protect
+  #+BEGIN_SRC lisp
+(setf x 1) ;-> 1
+(catch 'abort
+  (unwind-protect
+       (throw 'abort 99)
+    (setf x 2)))
+;;-> 99,  x = 2
+  #+END_SRC
+
+** Compare 比较
+*** GENERAL : eq eql equal equalp
+- eq : compare memory addresse of object (最好只用来比较符号)
+- eql : retain eq, extend to identical number and character
+- equal : true for print same
+- equalp : ignore number type and character case
+  - true : if element are EQUALP(ture)
+    - Array
+    - Structure
+    - Hash Table
+
+#+BEGIN_SRC lisp
+;;; eq
+(eq 'h 'h)          ;-> T
+(eq "h" "h")        ;-> NIL
+(eq '(1 2) '(1 2))  ;-> NIL
+;; by implementation
+(eq 3 3)            ;-> T
+(eq 3.0 3)          ;-> NIL
+(eq #\a #\a)        ;-> T
+
+;;; eql
+;; retain eq
+(eq 'h 'h)          ;-> T
+(eq "h" "h")        ;-> NIL
+(eq '(1 2) '(1 2))  ;-> NIL
+;; extend eq
+(eql 3 3.0)         ;-> NIL 
+(eql 3.3 3.3)       ;-> T
+(eql #\a #\a)       ;-> T
+
+;;; equal
+(equal 'apple 'apple) ;-> T
+(equal '(a b) '(a b)) ;-> T
+(equal 5 5)           ;-> T
+(equal 2.5 2.5)       ;-> T
+(equal 3 3.0)         ;-> NIL
+(equal "foo" "foo")   ;-> T
+(equal #\a #\a)       ;-> T
+
+;;; equalp
+;; diff equal
+(equalp "Bob Smith" "bob smith") ;-> T
+(equalp 0 0.0)                   ;-> T
+#+END_SRC
+
+*** Number
+- = /= < > <= >=
+  #+BEGIN_SRC lisp
+(= 1 1)                       ;-> T
+(= 10 20/2)                   ;-> T
+(= 1 1.0 #c(1.0 0.0) #c(1 0)) ;-> T
+
+(/= 1 1)                      ;-> NIL
+(/= 1 2)                      ;-> T
+(/= 1 2 1)                    ;-> NIL
+  #+END_SRC
+- max min
+  #+BEGIN_SRC lisp
+(max 1 2 3) ;-> 3
+(min 1 2 3) ;-> 1
+  #+END_SRC
+- 复数
+  #+BEGIN_SRC lisp
+(eql 3 #c(3 0)) ;-> T
+(eql 3.0 #c(3.0 0.0)) ;-> NIL
+(equalp 3.0 #c(3.0 0.0)) ;-> T
+  #+END_SRC
+*** Character
+- 大小写敏感 : char[= /= < > <= >=]
+- 不敏感 : char-[equal not-equal lessp greaterp not-greaterp not-lessp]
+- 范围 : 如 (char<= #\0 CHAR #\9)
+
+*** String
+- 大小写敏感 : string[= /= < > <= >=]
+- 不敏感 : string-[equal not-equal lessp greaterp not-greaterp not-lessp]
+
+*** List
+- tree-equal ldiff(差集)
+  #+BEGIN_SRC lisp
+(defparameter *a* '(42 "3" 5.3 :x #\u :a 23/12))
+(ldiff *a* (member-if 'symbolp *a*)) ;-> (42 "3" 5.3)   
+  #+END_SRC
+- Set : Imp:set-equal | Lib:ALEXANDRIA{set-equal}
+  #+BEGIN_SRC lisp
+(defun set-equal (a b)
+    (null (set-exclusive-or a b)))
+
+(set-equal '(1 2 2 3) '(3 3 1 1 2)) ;-> t  
+  #+END_SRC
 
 * 概念
 ** Scope & Extent 作用域 和 生命周期
