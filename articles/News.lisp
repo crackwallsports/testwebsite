@@ -121,11 +121,23 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- '(small () "2019.3.26")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/184436")
+               '(q () (pre () "
+3月25日：尊敬的贤二先生好！郭先生所有的手机都在我们这里，我们法务．媒体．安保．小组每天向他汇报一次，所有的信息由郭先生口头指示我们代发。在三七守孝期间，郭先生末与任何战友及朋友联糸或见面，只接受了欧洲．日本．等几个国家的亲戚们打给家里的电话，某几个国家领导人派来的代表们的当面的慰问。郭先生将在28或29号开始使用手机，并直播，请大家等候我们的通知。🙏🙏🙏 一切都是刚刚开始 媒体组"))
+               (u (:- `(cite () "鳩文真賢二 @SqQAKez3xOg2meJ : "
+                             ,(@ "https://twitter.com/SqQAKez3xOg2meJ/status/1110178817983700994")
+                             (small () "2019.3.26 Twitter")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/184423")
+               '(q () (pre () "
+3月25日：感谢战友之声楚门战友提供的视频和内容！ #抖音版爆料革命 #战友之声 #楚门看世界 我们经常听说散户投资股票会被割韭菜，大股东也一样会被割，只要这个体制不改变，任何一个人都会成为下一波韭菜！北大方正集团的李友，胡舒立就是靠骗骗骗！骗一个又一个投资人进去，然后这些钱全部占为己有！强盗呀！强盗！就是这一小撮人把中国搞得乌烟瘴气！ 一切都是刚刚开始！媒体组")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/184418")
+               '(q () (pre () "3月25日：感谢战友之声郭啸天战友！ #啸天点评 感谢战友郭啸天激情制作！ 再也无人可以阻挡以美灭共✊！ 一切都是刚刚开始！媒体组"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.3.25")
-        (u (:- "郭文: " (@ "")
-               '(q () (pre () ""))
-               (u (:- '(pre () ""))))
-           (:- "郭文(视频): " (@ "https://www.guo.media/posts/184260")
+        (u (:- "郭文(视频): " (@ "https://www.guo.media/posts/184260")
                '(q () (pre () "
 3月24日：感谢战友之声抖音组文多战友制作！ #抖音版爆料革命 #战友之声 #楚门看世界 #文多 张健，说真的，你彻底颠覆了我对人的看法，你太贱了！你尽然恬不知耻的那你们那种要饭的行当跟公益法治基金相提并论。张贱贱。出卖自己的灵魂和原则并不丢人，丢人的是没能卖一个好价钱。 一切都是刚刚开始！媒体组")))
            (:- "郭文(图片): " (@ "https://www.guo.media/posts/184244")
@@ -133,7 +145,12 @@ z-index:100;
 3月24日：尊敬的战友们好；这个委员会的成立是中美关系40年来的第三件大事，一是两国建交，二是签WTO中国入世，三是这个委员会的成立。 你们会看到法治基金在与这个委员会的深度合作！💪💪💪这是CCp灭亡的真正的开始！ 这是灭共革命在国际战场中最大的胜利 再也无人可以阻挡以美灭共！一切都是刚刚开始 媒体组
 
 【美当前危险委员会成立】针对中共对自由世界日益增大的威胁，美国一批中国专家、国家安全从业人士、商界领袖、人权和宗教自由活动家等拟下周一启动第四届当前危险委员会Committee on the Present Danger: China (CPDC)；前三届委员会分别针对苏共和恐怖主义，本届集中消除中共对美的最严峻威胁。"))
-               (u (:- `(cite () "CPD(Committee on the Present Danger) "
+               (u (:- `(cite () "CPDC(Committee on the Present Danger: China) "
+                             ,(@ "https://presentdangerchina.org")
+                             " "
+                             ,(@ "https://www.youtube.com/watch?v=Bedfr_uM_yc"
+                                 "Brian Kennedy -- The Committee on the Present Danger: China")))
+                  (:- `(cite () "CPD(Committee on the Present Danger) "
                              ,(@ "https://en.wikipedia.org/wiki/Committee_on_the_Present_Danger"
                                  "Wiki")
                              " "
@@ -728,7 +745,7 @@ March 21, 5PM CET: Broadcast with Steve Bannon from Rome “The Algorithms of In
 
 (news-to-topic
  "郭文贵" ;; (twb::human-date (get-universal-time))
- "2019.03.25 21:00:48"
+ "2019.03.26 20:54:17"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
