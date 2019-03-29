@@ -1,11 +1,11 @@
 ;; (Date Ref Title Intro)
-(("2019 3 26"
+(("2019 3 29"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2019.3.26")
+          (span (:class "badge badge-success") "每日追踪-2019.3.29")
           (pre ()
                (small () "郭先生 母亲逝世  守丧 🕯")
                (small () "法治基金")
