@@ -181,13 +181,79 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 5
+- 19
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.5.19")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "郭文(照片 健身): " (@ "https://www.guo.media/posts/196429")
+               '(q () (pre () "5月18日：尊敬的战友们好．你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/196360")
+               '(q () (pre () "美国国会共和党参议员苏利文：共和党和民主党都对中国不断反悔承诺的容忍度已降为零！"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.youtube.com/watch?v=ppAXy-618BU"
+                                 "白宫下达华为禁令 国会两党议员表示力挺")
+                             (small () "2019.5.16 Youtube: 美国之音中文网")))))
+           (:- "郭文(视频 法治基金捐款留言): " (@ "https://www.guo.media/posts/196359") " "
+               (@ "https://www.guo.media/posts/196345")
+               '(q () (pre () "
+
+Appreciate all the donors to Rule of Law Foundation and Society!
+
+5月1 8号：尊敬的战友们好．文贵将战友们在对法制基金捐款时的极少部分留言！做成视频发给大家！衷心的感谢战友们的支持建设一个属于我们共同的家．法制基金．法治基金的同士们正在全力以赴，与各个战线的战友们共同作战！实现喜马拉雅的使命！一切都是刚刚开始！")))
+           (:- "郭文(图片): "
+               (@ "https://www.guo.media/posts/196329") " "
+               (@ "https://www.guo.media/posts/196324")
+               '(q () (pre () "
+5月18日：这些照片中的人与王健被杀什么关系！之二．（战友们的敏感度不够了……
+
+5月18日：这些照片中的人与王健被杀什么关系！"))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 18
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019.5.18")
-        (u (:- "视频: " (@ "" "")
-               '(small () "")
-               (u (:- '(pre () ""))))
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=JIjvAMOG0BU"
+                           "5月18日：文贵谈台湾保护法、香港自贸协定区、华为在美国被禁止、李嘉诚的500亿假烂账与江志诚的盗国关系、亚洲文化节开幕！钓鱼后首次公布王健被谋杀前酒店高清视频！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "开头视频: CCP恶魔开始绑架全中国人民对美国以及世界进行核讹诈 核恐吓   邓小平1974联合国大会演讲   2019.5.11香港立法会建制派与民主派 就修改\"逃犯条例\"大打出手")
+                      (u (:- '(pre () "视频结尾 打脸了 扯淡前 先把你们偷的钱还回来 让你们子女回来保卫你们的国 (我: 笑而不语)"))))
+                  (:- '(pre () "花粉敏感 药 黑接骨木"))
+                  (:- '(pre () "台湾保护法 以及 重新审核香港自贸区协定 的重大意义"))
+                  (:- '(pre () "(18:00) 华为及相关70家企业在美被惩罚   用一个故事来解释"))
+                  (:- '(pre () "买卖不成仁义在"))
+                  (:- '(pre () "任志强"))
+                  (:- '(pre () "举报 社交媒体 限制 政治言论")
+                      (u (:- `(cite () "The White House @WhiteHouse : "
+                                    ,(@ "https://twitter.com/WhiteHouse/status/1128765001223663617")
+                                    (small () "2019.5.15 Twitter")
+                                    (q () (pre () "
+The Trump Administration is fighting for free speech online.
+ 
+No matter your views, if you suspect political bias has caused you to be censored or silenced online, we want to hear about it! 
+
+http://wh.gov/techbias
+"))))
+                         (:- `(cite () ,(@ "https://whitehouse.typeform.com/to/Jti9QH")
+                                    (small () "whitehouse.typeform.com")))
+                         (:- `(cite () ,(@ "https://www.youtube.com/watch?v=QKi_KjbkqhY" "《青年热线》第5期。重磅直播：Trump特朗普白宫推出一个在线门户网站，收集已被禁止和/或被暂停社交媒体平台的用户的故事。手把手教你怎么投诉！我们拿回属于我们的言论权")
+                                    (small () "2019.5.15 Youtube: Inty")))))
+                  (:- '(pre () "(33:00) 李嘉诚 张子强 5000万 屈臣氏 江志成 新加坡淡马锡何晶   遣返条例  因果报应"))
+                  (:- '(pre () "郭七条 梦中郭九条"))
+                  (:- '(pre () "中国银行 阿里巴巴  崩塌"))
+                  (:- '(pre () "亚洲文化节"))
+                  (:- '(pre () "胡锡进 CCTV 骂 班农  欺软怕硬"))
+                  (:- '(pre () "当下危机委员会 川普总统  民间机构 搞大了"))
+                  (:- '(pre () "(1:00:00) 中国人民是大地的盐  不可或缺"))
+                  (:- '(pre () "华为在英国是0"))
+                  (:- '(pre () "中国人是好的 但被中共绑架 毁坏了国人的形象和声誉"))
+                  (:- '(pre () "(1:12:00) 王健之死  视频  钓鱼  手机"))
+                  (:- '(pre () "王健身边人 死 泰国旅游 船难  台湾关系"))
+                  (:- '(pre () "私人企业们"))
+                  (:- '(pre () "祈福"))))
            (:- "郭文(图片): " (@ "https://www.guo.media/posts/196147")
                '(q () (pre () "
 5月18号：尊敬的战友们好！两个小时以后的直播．没有什么惊天动地的事儿，就是有关最近，大连法院，北京法院对我们员工和家人进行的以法抢劫的一个小回应……有些小承诺兑现一小点点而已！请大家不要抱期望值太高，文贵就是和大家聊聊天，文贵从来不愿意．搞标题党．耸人听闻的事情．就是一个正常的星期六直播，希望不要影响到大家的周末休息！一切都是刚刚开始！"))
