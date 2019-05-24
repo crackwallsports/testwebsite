@@ -181,13 +181,119 @@ z-index:100;
  ,*news-topics-guo*)
 #+END_SRC
 **** 5
+- 24
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.5.24")
+        (u (:- "郭文(视频): " (@ "https://www.guo.media/posts/197612")
+               '(q () (pre () "
+5月24号：从这个视频看来．＂美国川普总统．和美国人民．班农先生，真的要搬起石头砸自己的脚＂好害怕哟，听到这个视频中的播音员和他的逻辑．这个世界上只有一个伟大的共产党才能成功的领导全人类……爹亲娘亲不如共产党亲．这个伟大的思想，应该让全世界人接受成为人类新的文明．唯一的信仰！全世界的土地．水．女人．金钱．都应该归由共产党所有……让全世界的．天和地．生殖器．都要服务伟大的共产党，这才是人类唯一的真理……剩下的世界上一切麻烦都是＂美帝国主义制造的……资本主义的错误＂……天哪……天哪……CCP快疯了……真快成了南朝鲜了！衷心地感谢战友之声的战友们家上的字母和翻译……一切都是刚刚开始！"))
+               (u (:- '(pre () "(我: 哈哈哈哈哈哈 打是死 不打也是死 不过 打得话 死得会难看一些)"))))
+           (:- "视频: " "鲁仁达先生与文贵在线互访直播 : "
+               (@ "https://www.youtube.com/watch?v=zvWs6Tv7Z5s"
+                  "Guo Media Broadcast (Chinese): Chinese language based Broadcast")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "鲁仁达 讲述 经历 对中共的看法 婚姻"))
+                  (:- '(pre () "中美关系 夫妻关系 贸易协定 要求保护自己国民"))
+                  (:- '(pre () "爆料革命 以后 美国正在醒来"))
+                  (:- '(pre () "班农先生  背后还有千百人以上 以反共 作为毕生事业"))
+                  (:- '(pre () "台湾人 中共国人 区别  优秀文化被洗没了"))
+                  (:- '(pre () "宗教信仰"))
+                  (:- '(pre () "中共 对 台湾 要有一点动作"))
+                  (:- '(pre () "民运 欺民贼  男人不提菜  绝食  护照 政庇  (我: 隔着十万八千里 绝食 有屁用啊)"))
+                  (:- '(pre () "放马过来 (我: 放成马屁了 都拍领导脸上了)"))
+                  (:- '(pre () "爆料革命 接下来 应该 主要做什么 ?"))
+                  (:- '(pre () "海外华人形象"))
+                  (:- '(pre () "一颗老鼠屎不能坏两锅汤"))
+                  (:- '(pre () "信心"))
+                  (:- '(pre () "祈福"))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/197492")
+               '(q () (pre () "5月23日：这速度太慢啦……丢人了……选时间好好试试！一切都是刚刚开始！")))
+           (:- "郭文(视频 法治基金捐款留言): " (@ "https://www.guo.media/posts/197489")
+               '(q () (pre () "
+5月23日 法治基金团队衷心感谢所有的捐款者和支持者！ 5/23 The Rule of Law Foundation Team heartfully thanks all of our supporters and donors!")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/197476")
+               '(q () (pre () "
+5月23号：尊敬的战友们好，你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！文贵建议战友打开下面的链接，这个是龚小夏博士．献给六四的最好的礼物《瞬间倒下的红色帝国》的视频．
+https://youtu.be/OEY5qbHbuIM"))
+               (u (:- `(cite () 
+                             ,(@ "https://www.youtube.com/watch?v=OEY5qbHbuIM&feature=youtu.be"
+                                 "红色帝国崩溃的瞬间")
+                             (small () "2019.5.22 Youtube: Sasha Gong"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 23
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.5.23")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=Wsy3J3dcoz4"
+                           "5月23日：爆料革命已经进入了全球共同灭CCP的关键时刻！CCP对台湾香港可能要搞点事情……😄😄😄")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "全世界 自动爆料 自动灭共"))
+                  (:- '(pre () "纽约 康城 威彻斯特 秘密会议"))
+                  (:- '(pre () "没饭吃可不绝食嘛 (我: 哈哈哈哈哈)"))
+                  (:- '(pre () "32家公司 金融界 上市公司 中共官员  惩罚"))
+                  (:- '(pre () "港币 卡尔巴斯"))
+                  (:- '(pre () "台湾 大动作"))
+                  (:- '(pre () "祈福")))))))
+ ,*news-topics-guo*)
+#+END_SRC
+- 22
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.5.22")
+        (u (:- "郭文: " (@ "https://www.guo.media/posts/197246")
+               '(q () (pre () "郭九条（双语版）"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=jSCAuUgeIPE")
+                             (small () "Youtube: 郭文贵")))))
+           (:- "郭文(短视频 报平安): " (@ "https://www.guo.media/posts/197237")
+               '(q () (pre () "5月22号：尊敬的战友们好，你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！"))
+               (u (:- '(pre () "国际战场 熊熊烈火"))))
+           (:- "郭文: "
+               (@ "https://www.guo.media/posts/197218") " "
+               (@ "https://www.guo.media/posts/197217") 
+               
+               '(q () (pre () "
+5月22：香港港币的噩梦！终结版！的《英文版》的分析！来了！衷心感谢在木兰倾心打造的视频，一切都是刚刚开始！
+
+5月22：香港港币的噩梦！终结版！的中文版的分析！来了！衷心感谢在木兰倾心打造的视频，一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=1JKiEcu8G70"
+                                    "May 22: Hong Kong's \"Chinese version\" of the \"Chinese version\" of the \"Heart Orchid\" heart orchid \"")
+                             (small () "Youtube: 郭文贵")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=y9dXmYvdpjw"
+                                    "5月22香港港币的噩梦终结版的中文版来了。")
+                             (small () "Youtube: 郭文贵")))
+                  (:- `(cite () "中文翻译(PDF) : "
+                             ,(@ "https://cdn.discordapp.com/attachments/552637676914868257/580870235788148736/af0b53cc8b7f4c9d.pdf")
+                             (small () "Discord: 战友之声"))))))))
+ ,*news-topics-guo*)
+#+END_SRC
 - 21
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019.5.21")
-        (u (:- "视频: " (@ "" "")
-               '(small () "")
-               (u (:- '(pre () ""))))
+        (u (:- "郭文(视频): " (@ "https://www.guo.media/posts/197103")
+               '(q () (pre () "2017年BBC采访郭先生（中英文版）"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=pIrEaChcz-o")
+                             (small () "Youtube: 郭文贵")))))
+           (:- "郭文(): " (@ "https://www.guo.media/posts/197091")
+               '(q () (pre () "5月21日：看了．川普总统被侮辱这个视频……感慨良多呀，一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=HwPnCKEWRM8")
+                             (small () "Youtube: 郭文贵")))))
+           (:- "郭文(): " (@ "https://www.guo.media/posts/197074")
+               '(q () (pre () "5月21号：港币会很快完蛋的最可信赖的证据……和数据，一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=bmr_tBaaXwU")
+                             (small () "Youtube: 郭文贵")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=QKJ6saCV29Y"
+                           "2019年5月21日：中共天机又来了……还要延续政权30年？")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "中南坑 派人 游说美方"))
+                  (:- '(pre () "中共寄望 伊朗 中东之乱"))
+                  (:- '(pre () "中共想排最后"))
+                  (:- '(pre () "骂班农先生 美国右翼 有钱了  班农之流"))
+                  (:- '(pre () "懦夫 指望命运"))
+                  (:- '(pre () "华为 土耳其教授 蓝金黄"))
+                  (:- '(pre () "祈福"))))
            (:- "郭文(视频): " (@ "https://www.guo.media/posts/196998")
                '(q () (pre () "
 5月20号：过去的半年．每当西方国家朋友问我关于华为的时候，我都推荐他们观看这个视频．这个视频可以快速了解华为企业文化……视频中的．服装．建筑．音乐．身体语言．装饰．等等……都是国家级的标准！但是是抄袭另外一个国家的标准．竟然完全抄袭俄罗斯总统就职典礼的一切！这样的企业文化这样的企业家能有创新吗？在中国哪个企业家刚玩这游戏！哪个企业家有这样的本事敢做这样的事情更！华为在过去的几个月想尽办法在网络上删除这个视频是因为什么呢？更夸张的是，这个华为奉为最最重要的教授！ERADL ARIKAN竟然是土耳其籍的＂维族人＂这个教授有没有被．蓝．金．黄．？曾经发生过什么事？华为付他多少钱？华为是怎么招待＂他＂的？文贵会在一定的时间和战友们爆料！保证大家都会比＂权力的游戏＂电视剧．还刺激！一切都是刚刚开始！"))
