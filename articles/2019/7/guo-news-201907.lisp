@@ -11,10 +11,193 @@
  *news-topics-guo*)
 
 (push
- (u (:- '(small () "2019.7.22")
+ (u (:- '(small () "2019.7.24")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=xy_xspZ1afo"
+                           "2019:7:23 郭文贵先生直播[完整版] 李鹏为什么一见人就问 89年当时你在哪？为了啥？")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218255")
+               '(q () (pre () "
+7月24日：零晨四点．学习西行小宝推文后的感想．我们的战友之情和现在社交网络上存在的任何关系都不一样……我们爆料革命的战友之情……战友关系．是最纯洁，最高尚的……很多人还没有感受到他的真正的意义……和价值……随着一个个大事件的发生……大家会明白．这是一个聚集智慧．能量．使命，重塑自我．人生升华．的一个巨大自然力量的天然组合！！！这是人类历史上前所未有的一个十几亿人口．被长期压迫．威胁到生存后，一个自然反抗的邪恶力量．和追求希望．及宗教．信仰．哲学，生活方式．政治，军事．艺术．科技．文明．人类的快乐安全需要本能的结合．将诞生新的人类生活方式．新的文明……这是一次真正的为了文明，希望和美好的神圣的战争……一切都是刚刚开始！(睡觉了）"))
+               (u (:- `(cite () "西行小宝 @htommy998 : "
+                             ,(@ "https://twitter.com/htommy998/status/1153830488496148480")
+                             (small () "2019.7.24 Twitter")
+                             (q () (pre () "
+7/23 今天赶上文贵聊天直播。提到小宝的Chinglish，小宝感到很悦悦呀😄😄😄 最近2年跟七哥学到的东西真的太多了！包括如何看待小到个人，大到国家国际政治。他的勇气，毅力，乐观，幽默，还有如何生活，以及如何度过36000天，深深影响了小宝！真的非常庆幸，非常感恩文贵🙏
+"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218206")
+               '(q () (pre () "
+【郭文贵先生7月22日报平安直播摘要】
+https://www.youtube.com/watch?v=933Zvh7vluQ
+
+26：46 – 43：00经韩连潮介绍认识的沃特和帕瑞丝及他们的调查公司是个骗子公司。以及沃特行骗计划未能得逞。郭文贵对她起诉，她反诉败诉后与博讯熊宪民、夏业良、李洪宽、叶宁等联合在一起，在媒体上造谣郭文贵先生是双面间谍。
+45：00郭文贵网络上展示给习近平的信，事实上是由刘彦平、孙力军叫安全部的人事先写好、让郭文贵签字的。后者拒绝签字，并把信件推到了公众媒体上。中共出于报复对郭文贵员工和家人进行迫害。
+48：54郭文贵的“四个原则”: 1）不加入任何组织； 2）不接受中国任何方式的荣誉和授衔； 3）不在中国往外拿一分钱； 4）不做任何政治角色
+55：54Waller 和 Paris 利用华尔街日报污蔑和诽谤郭文贵：1）说郭是“双面间谍”2） 郭尝试给当前危机委员会提供资金行贿，试图控制美国国家决策。郭文贵会继续跟沃特、帕瑞丝等人对致公堂，法庭上见。
+1：17：41--韦石、吴征、马蕊强奸案用同一个律师事务所，背后共产党为他们付钱，美国FBI、CIA一定会追查这背后的动机。
+1：19：30--谷歌帮凶中共被调查了，孟建柱在洛杉矶的绿地企业被调查了。
+1：22：00IBM的量子电脑正式开始试营运行，亚马逊的三千多个卫星WIFI和马斯克的卫星WIFI已经上天，意味着防火墙很快将不复存在。
+1：29：28黄志峰的“港独”言行不得香港人心。
+1：31：40法治基金捐款的名单，将会成为新中国成立时候放在墙上的永远纪念的名单。【GM12】【GM10】"))
+               (u (:- '(pre () ""))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218183")
+               '(q () (pre () "The CCP forced demolition, the people were unable to resist and cried out for help 7/24/2019")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/218180")
+               '(q () (pre () "
+7月23号：纽约时间．下午7:00稍后．我会在郭媒体．测试新软件，请大家不需要关注．浪费时间．一切都是刚刚开始")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218166")
+               '(q () (pre () "What exactly is Hainan Cihang Charity Foundation?-An Insight")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218162")
+               '(q () (pre () "鲍里斯约翰逊当选英国首相实况")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218124")
+               '(q () (pre () "
+【新闻】2019年7月23日美国FBI大老板发话中国对美国的反情报威胁比俄罗斯更严重
+ 
+Wray提到美国联邦调查局已对1000多起试图盗窃知识产权的案件展开公开调查，“几乎都指向中国” 美国司法部国家安全官员去年提起了多起涉及中国经济间谍活动的案件，其中包括本月宣布的一起针对一名男子的案件，他被指控从一家美国机车公司窃取信息。【GM18】
+信息来源：https://www.marketwatch.com/story/fbi-chief-wray-says-china-is-a-more-serious-counterintelligence-threat-to-us-tha"))
+               (u (:- `(cite () ""
+                             ,(@ "https://www.marketwatch.com/story/fbi-chief-wray-says-china-is-a-more-serious-counterintelligence-threat-to-us-than-russia-2019-07-23"
+                                 "FBI chief Wray deflects Russia questions and suggests China is now a bigger counterintelligence threat to U.S.")
+                             (small () "2019.7.23 Market Watch")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218119")
+               '(q () (pre () "盧比奧議員透過香港看中共")))
+           (:- "郭文(短视频 表情): " (@ "https://www.guo.media/posts/218115")
+               '(q () (pre () "7月23号：试试郭媒体．下一步升级后的小功能．太好玩了，一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218104")
+               '(q () (pre () "
+7月23号：从这个最普通真实的视频里．我们能看到共产党的以黑治国．以警治国．将此黑术百分之百现在移到了香港……一国两制在哪呢……法律．正义在哪里呢……Yuen Long riot shocked civilians - police arrived at the riot scene after all monsters are gone. Can we still rely on them? Youtube link: youtu.be/ABfo7BHXjA4"))
+               (u (:- `(cite () ""
+                             ,(@ "https://www.youtube.com/watch?v=ABfo7BHXjA4&feature=youtu.be"
+                                 "Yuen Long riot shocks civilians")
+                             (small () "2019.7.22 Youtube: Chun Yue Li")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218103")
+               '(q () (pre () "
+【翻译】中國問題專家批評尼爾·布什(Neil Bush)支持中共政權，反對川普
+https://spark.adobe.com/page/lUT2SP6DgLyVj/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/lUT2SP6DgLyVj/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218102")
+               '(q () (pre () "
+【翻译】美国科技公司CEO支持川普对华为限制  
+https://spark.adobe.com/page/bnHAafDquNbTf/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/bnHAafDquNbTf/")))))
+           (:- "郭文(图片): "
+               (@ "https://www.guo.media/posts/218101")
+               " .. "
+               (@ "https://www.guo.media/posts/218094")
+               '(q () (pre () "
+These are two swindlers who are trying every trick to mislead the public. They claim that they are the contractor for the Defence Department and Blackwater with super investigation teams which working for the CIA. They themselves are the biggest republican election committee fundraiser in DC. But the fact is that their company is a shell company, a completely non-functioning company, with no employees. This is a pure fraud，a contract fraud. They are habitual swindlers. The fraud case against them has been filed. Their case against me has been dismissed. They are two authentic American swindlers of DC ! How many more such advanced swindlers like them in Washington! Their names are:
+ 
+J. Michael Waller          French Wallop
+
+这是两个大骗子，到处招摇撞骗! 他们声称他们是国防部的承包商，黑水公司的承包商，拥有超级的调查团队，给CIA工作。他们自己在DC是共和党最大的选举委员会筹款人。然而事实上他们完全是一个空壳公司，完全没有运作的公司，没有一个员工，纯属诈骗和合同欺骗，而且是惯骗。 欺诈案件正在受理中。他俩乱诉我的案子已经被驳回。这是两个地道的美国DC的骗子！像这样的高级的骗子在华盛顿还有多少！他们的名字是：J. Michael Waller 和 French Wallop！
+")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/218093")
+               '(q () (pre () "Mr. Spalding 警醒美国被中共华为等不公平的全球性渗透")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218062")
+               '(q () (pre () "
+【翻译】“状况空前”！香港三合会成员攻击支持民主抗议者，暴力冲突卷土重来
+https://spark.adobe.com/page/5c3oCkgNEfKby/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/5c3oCkgNEfKby/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/218061")
+               '(q () (pre () "
+【翻译】共产主义中国有”2百万大军”监控互联网   
+https://spark.adobe.com/page/RKGfdD4a94Oim/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/RKGfdD4a94Oim/")))))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/218059")
+               '(q () (pre () "7月23日：尊敬的战友们好！你们认为C C C的坦克．真的敢碾压香港人民吗？一切都是刚刚开始！"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.7.23")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=VlnO6oAuKEc"
+                           "7月23号尊敬的战友们好！你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/217954")
+               '(q () (pre () "2019年7月22号美国国务卿彭培奥宣布对CCP控制企业的新制裁")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217907")
+               '(q () (pre () "
+【新闻】美国动用“爱国者法案”调查违反对朝鲜制裁的中国银行并对其实施金融“死刑”
+对外关系杂志7月21号发表了标题为“美国正在调查中国银行：使用金融”死刑“可能是过分和危险的”新闻报道。该报道称华盛顿联邦法院3月18日命令中国金融巨头上海浦东发展银行和另外两家中资银行，接受根据“美国爱国者法案”对其发出的传票，并要求将违反美国对朝鲜制裁相关的香港公司的银行记录移交给美国当局。由于上海浦东发展银行拒绝配合这一要求。联邦法院于6月25日认定该银行藐视法庭命令，并授权美国财政部长和司法部长终止上海浦东发展银行在美国的相关账户，根据“爱国者法案”第319条，此举将终止上海浦东银行进行以美元计价的交易能力。在以美元为主导的全球金融体系中，这样的制裁被称为金融“死刑”。
+该报道称这项由美国联邦法院针对中国银行的裁决可能会打开贸易战和科技展之外的另一条新的广阔战线，同时这也将波及依赖这些银行的的数千家企业。文章还称这项裁决使美国总统川普政府拥有一项对付中国政策的包括全方位手段的有力新武器 – 即利用所有可用的权力机构，包括执法，监管和外交手段，推进美国的国家安全和外交政策。【GM12】
+信息来源：对外国政策杂志（Foreign Policy）7月21号新闻https://foreignpolicy.com/2019/07/21/the-united-states-is-going-after-chinas-banks/"))
+               (u (:- `(cite () ,(@ "https://foreignpolicy.com/2019/07/21/the-united-states-is-going-after-chinas-banks/"
+                                    "The United States Is Going After China’s Banks")
+                             (small () "2019.7.21 Foreign Policy")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217906")
+               '(q () (pre () "
+【新闻】中国隔夜债券回购利率短暂冲高至1000%。市场信心崩溃一发不可收拾，股市也狂泻难止！
+据金融分析博客zerohedge7月19日消息，当日下午上海证券交易所中国4天债券回购利率曾短暂冲高至1000%（即10倍于原票面利率），收盘前回落为3.1%。说明某银行急需融资并愿意支付天价利率。交易所就此次利率的异常波动未能给出合理解释。中国通过政府债券做抵押进行融资的成本节节攀升。5月底中国包商银行倒闭及之后的一系列事件，包括政府突然接管该行并宣布无法保证偿还所有债务等，都给融资市场造成恐慌，导致拆借利率急剧提升，这甚至会影响到优质企业。澳新银行信贷部主管Owen Gallimore表示，银行倒闭事件总是会引起后续更大的恐慌，因为这是系统性风险。
+近期中国经济四面楚歌，经济增速跌至历史最低、影子银行去杠杆、贸易战、内需经济疲软以及经常项目首次出现赤字等。此外，自2018年初央行实施宽松货币政策后， 2019年一季度净融资规模高达74万亿人民币（10.7万亿美元），比上年同期增加近50%。华尔街日报的分析家们一再警告，过度融资会给金融市场及实体经济的稳定性造成很大的冲击。投资者认为中国已经处在“雷曼事件”的边缘。【麻辣土豆】
+来源：https://www.zerohedge.com/news/2019-07-19/something-just-broke-china-repo-rate-soars-1000-overnight"))
+               (u (:- `(cite () ,(@ "https://www.zerohedge.com/news/2019-07-19/something-just-broke-china-repo-rate-soars-1000-overnight"
+                                    "Something Just Broke In China As Repo Rate Soars To 1,000% Overnight")
+                             (small () "2019.7.19 Zero Hedge")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217905")
+               '(q () (pre () "
+【新闻】美学者揭露中共暗中操纵新加坡。 
+共产党一天不灭，它就会一步一步地输出红色基因给全世界。
+知名美国智库学者萧良其(Russell Hsiao)7月16日发表文章,综合阐述了中国共产党如何在新加坡开展统战工作，以达到暗中控制新加坡的目的。该文章谈及了三种操纵方式。
+一，    根据新加坡华人多的特点，成立老乡会和文化交流促进会。共产党大外宣出资给会员提供免费的中国红色旅游，红歌音乐会和故乡探访等机会。成立“中国文化中心”，用赚钱机会和文化认同感吸引年轻华人。
+二，    控制新加坡商人。由于新加坡经济依赖于中国，若商人不和共产党合作，则给其生意制造各种壁垒来使其就范。同时这些商人也成为了中共在新加坡政府的说客。
+三，    媒体控制。在新加坡发行《联合早报》等中文报纸，同时收买新加坡老一辈华人喜欢看的电视节目的母公司，使其提供亲共的内容等。(GM09)
+新闻来源：https://jamestown.org/program/a-preliminary-survey-of-ccp-influence-operations-in-singapore/"))
+               (u (:- `(cite () ,(@ "https://jamestown.org/program/a-preliminary-survey-of-ccp-influence-operations-in-singapore/"
+                                    "A Preliminary Survey of CCP Influence Operations in Singapore")
+                             (small () "2019.7.16 The Jamestown Foundation")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217904")
+               '(q () (pre () "
+文字版：2019年7月21日 爆料革命进入全球灭共的新时代  
+https://spark.adobe.com/page/hc3mku64ztgUQ/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/hc3mku64ztgUQ/"))))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.7.22")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=933Zvh7vluQ"
+                           "7/22/2019 郭文贵先生直播：谈谈华尔街日报的报道")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/217869")
+               '(q () (pre () "
+2019年7月22日，美国总统川普接受记者采访时评论香港游行：表示他看过黑帮殴打香港市民的视频，称习主席很负责任，并希望习主席能够做出正确的决策，毫无疑问这场抗议已经持续太久了，")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/217854")
+               '(q () (pre () "CCP Foreign Ministry Spokesperson Geng Shuang's remarks on Hong Kong's affairs")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/217849")
+               '(q () (pre () "
+7月22号：共产党对文贵及爆料革命又发起了新的一轮的大外宣造谣．抹黑。此次的造谣抹黑的中心点．文贵是双面间谍．文贵从过去被CCP魔鬼化的名字……*********．*********．已经过度到了郭双谍……Waller French 这两个美国低级骗子．是我见过在西方世界最丑陋最低级的谎言家因为我们的好朋友韩连潮先生四次给我及我们反共盟友．做个人担保……我们才被这种低级的人物所欺骗，这可能是我人生中遇到最低级的最荒唐的被骗的事件……但是我相信朋友的处事原则永不改变……Waller French 一定会在美国的法庭法官面前．受到严惩！他们知道自已将输掉告他们的官司！这两个骗子正在试图与海外欺民贼联合一起．扰乱视听．造谣转移视线．企图希望文贵妥协．那是白日做梦！美国没有任何人可以利用媒体将自己脱罪……阳谷莘县．县搭县！最后在法庭的审判结果看！文贵等了几天他们的新的一波的行动……让我兴奋不己……骗子和盗国贼欺民贼的恐惧就是我们的武器．当我一看到叶大律师．和屍诺与他们在一起的时候……我就更加兴奋，那是一个必输的一败涂地的组合．伟大的美国的伟大之处，就是他拥有法律系统，CC P与这些低级烂人的造谣会让世人更加了解真实的文贵……及文贵与战友们为中国法治付出的巨大代价．和不可动摇的灭共决心……他们试图再次挑起习郭斗．川郭斗．美郭斗不会得逞！稍后我们将公布这两个低级骗子的相关视频一切都是刚刚开始")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/217843")
+               '(q () (pre () "7月22号．当前危机委员会演讲中……中共用假药的价格．干灭美国医药行业！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217810")
+               '(q () (pre () "
+【新闻 】　川普总统亲自出手灭华为，😼😼😼华为秘密帮助朝鲜建造、维护无线网络。美国川普总统表示，我们必须找出关于华为与朝鲜的关系。【2019年7月22日】 美该公司秘密帮助朝鲜建设和维护其商业无线网络，据《华盛顿邮报》报道，这家中国电信巨头与中国国有企业熊猫国际信息技术有限公司(Panda International Information Technology Co . Ltd .)合作，在过去至少八年的时间里在朝鲜开展了一系列项目。据《华盛顿邮报》报道，这一举动将引发外界对华为是否违反美国出口管制向朝鲜提供设备的质疑。华为在零部件中使用了美国技术。《华盛顿邮报》周一引用华为内部消息文件报道此事。【GM18】
+信息来源：
+1: https://www.reuters.com/article/us-huawei-tech-northkorea/huawei-secretly-helped-north-korea-build-maintain-wireless-network-washington-post-idUSKCN1UH1GO
+2: https://www.reuters.com/article/us-huawei-tech-northkorea-trump/trump-we-will-have-to-find-out-about-huaweis-rela"))
+               (u (:- `(cite () ,(@ "https://www.reuters.com/article/us-huawei-tech-northkorea/huawei-secretly-helped-north-korea-build-maintain-wireless-network-washington-post-idUSKCN1UH1GO"
+                                    "Huawei secretly helped North Korea build, maintain wireless network: Washington Post")
+                             (small () "2019.7.22 Reuters")))
+                  (:- `(cite () ,(@ "https://www.reuters.com/article/us-huawei-tech-northkorea-trump/trump-we-will-have-to-find-out-about-huaweis-relationship-with-north-korea-idUSKCN1UH1YQ"
+                                    "Trump: 'We will have to find out' about Huawei's relationship with North Korea")
+                             (small () "2019.7.22 Reuters")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/217805")
+               '(q () (pre () "
+【翻译】泄露出来的文件披露出华为在建设朝鲜的无线网络的机密行动
+https://spark.adobe.com/page/1eCmbdQRoJCCP/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/1eCmbdQRoJCCP/")))))
+           (:- "郭文(图片): "
+               (@ "https://www.guo.media/posts/217798")
+               " .. "
+               (@ "https://www.guo.media/posts/217797")
+               '(q () (pre () "
+2019年5月纽约联邦法院驳回Strategic Vision反诉郭先生的判决！
+
+关于 Strategic Vision 指控的正式声明 Official Statement from Mr. Guo about Strategic Vision counterclaims")))
+           (:- "郭文(报平安视频): " (@ "https://www.guo.media/posts/217787")
+               '(q () (pre () "7月22号尊敬的战友你好，你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！")))
            (:- "郭文: " (@ "https://www.guo.media/posts/217674")
                '(q () (pre () "
 【翻译】中国的抨击者无法左右美国的政策   

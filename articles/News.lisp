@@ -161,8 +161,8 @@ z-index:100;
  *news-topics-guo*)
 
 (news-to-topic
- "郭文贵" ;; (twb::human-date (get-universal-time))
- "2019.07.22 21:11:39"
+ "郭文贵"  ;; (twb::human-date (get-universal-time))
+ "2019.07.24 21:19:54"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
