@@ -121,6 +121,10 @@ z-index:100;
 (defparameter *news-topics-guo* nil)
 
 (push
+ (u (:- (@ "/testwebsite/articles/2019/8/guo-news-201908.html" "2019.8")))
+ *news-topics-guo*)
+
+(push
  (u (:- (@ "/testwebsite/articles/2019/7/guo-news-201907.html" "2019.7.14-")))
  *news-topics-guo*)
 
@@ -162,7 +166,7 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"  ;; (twb::human-date (get-universal-time))
- "2019.07.29 22:18:24"
+ "2019.08.01 20:26:48"
  (u (:- "信息源"
         (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
