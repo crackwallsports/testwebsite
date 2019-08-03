@@ -26,18 +26,198 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
+- 3
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.3")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ""))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221040")
+               '(q () (pre () "
+翻译】工会领袖说，星期一举行更大规模罢工以寻找说法 
+https://spark.adobe.com/page/rKoBH4RLmf5my/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/rKoBH4RLmf5my/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221039")
+               '(q () (pre () "
+8月1日，白宫安全顾问表态伊朗外交部长不能代表伊朗人民，下一个会是王毅吗？（突突小分队译制）")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221001")
+               '(q () (pre () "
+【新闻】数百名员工参加了下周举行全市罢工的呼吁，反对政府对香港最近抗议活动的处理。
+ 
+据香港多家报纸报道，来自34家银行的财务人员加入了一个由95个公共和私营部门工会组成的伞状组织，支持周一的罢工计划。工会联合会  (CTU) 主席Carol Ng Man-yee说:“我们希望所有的工作人员都能参加，并加入到7场罢工中来。”
+ 
+她指的是星期一在金钟、旺角、沙田、荃湾、大埔、黄大仙及屯门举行的集会。该报无法确定该计划背后的组织者，也无法确定是否有人向警方申请了许可。来自34家金融机构的近400名员工发起了一项匿名请愿，支持周一的罢工，并计划周四晚上在遮打花园（Chater Garden）举行简短的抗议活动。汇丰银行、渣打银行、花旗银行、德意志银行、摩根大通和瑞银集团的员工都支持这个号召。 【GM31】
+出处：
+https://www.finews.asia/finance/29285-hong-kong-bank-staff-joined-calls-for-citywide-strike"))
+               (u (:- `(cite () ""
+                             ,(@ "https://www.finews.asia/finance/29285-hong-kong-bank-staff-joined-calls-for-citywide-strike"
+                                 "Hong Kong Bank Staff Join Calls for Strike")
+                             (small () "2019.8.1 Finews.asia")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220978")
+               '(q () (pre () "
+8月2日：纽约邮报：流亡的中國億萬富翁起訴CNN主播和華納傳媒稱其為「間諜」 【中英双语版】
+https://spark.adobe.com/page/1ZSpxzG3dItyF/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/1ZSpxzG3dItyF/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220972")
+               '(q () (pre () "8月2日：为香港人工作的行政管理人员……响彻天际捍卫香港安法治．安全的声音再次震撼了全世界！顽强不屈的精神，香港加油，港胞必胜！正义必胜！")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/220966")
+               '(q () (pre () "
+8月2日：郭文貴先生起诉以下公司和个人！ 👇👇👇戰略願景美國有限責任公司 J.邁克爾.沃勒 法蘭西.瓦洛普 愛德華艾迪格雷姆 華爾街日報的擁有者和分銷商道瓊斯公司 華爾街日報記者阿魯納.維斯瓦納塔 和 凱特.奧基夫 一切都是剛剛開始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220951")
+               '(q () (pre () "
+8月1日: 川普談香港、華為及對華新增關稅
+ 
+Aug 1: President Trump’s remarks on Hong Kong, Huawei and Trade War with China")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220949")
+               '(q () (pre () "
+8月2日：【翻译】成千上万的香港公务员集会，抗议浪潮此起彼伏
+https://spark.adobe.com/page/ep9Vgxfwq9T29/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/ep9Vgxfwq9T29/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220868")
+               '(q () (pre () "
+【翻译】蓬佩奧就湄公河流域水坝抨击中国 
+
+https://spark.adobe.com/page/T8xsAlTEhK1NT/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/T8xsAlTEhK1NT/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220861")
+               '(q () (pre () "8月2日：我思念的痘痘终于被小哥释放了……"))
+               (u (:- `(cite () "力量小哥2✊🏻✊🏻✊🏿✊🏿✊🏽✊🏽✊✊ @IukhHSIC0lGjCeh : "
+                             ,(@ "https://twitter.com/IukhHSIC0lGjCeh/status/1157312022540779520?s=20")
+                             (small () "2019.7.3 Twitter")
+                             (q () (pre () "
+战友们看看这个小姐姐是谁终于让我找到了😄最近跑哪去了😄😂🙏原来变身了 给你们一次机会猜猜他是谁？🤔"))))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/220858")
+               '(q () (pre () "
+8月2日：与89年6月4日坦克辗压学生以前说的一模一样……谁要是再改口谁是孙子……【俄罗斯卫星通讯社北京8月2日电 中国外交部发言人华春莹8月2日在例行记者会上对有关中国驻港部队将对香港实施戒严的传言作出回应，称这完全是谣言，用心非常险恶，是想制造恐慌。】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220853")
+               '(q () (pre () "7月31号 班农边界接受BBC采访谈中共威胁和“5国邪恶联盟”")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220852")
+               '(q () (pre () "
+Aug. 3 Steve Bannon talks about the meaning of the China-US trade war. 8月3号 班农先生谈中美贸易战的意义"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 2
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.2")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=OjrOGbsFPlE"
+                           "2019-8-1 即將對香港戒嚴的緊急通告 An emergency declaration of martial law in Hong Kong is expected on August 4th")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(报平安 视频): " (@ "https://www.guo.media/posts/220816")
+               '(q () (pre () "8月2号：尊敬的战友们好，今天不健身．休息……向大家报平安！一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220779")
+               '(q () (pre () "2019年8月1日緊急直播 August 1, 2019 Urgent Broadcast")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220778")
+               '(q () (pre () "
+【新闻】中共教科书中不准出现“上帝”“圣经”等字眼
+据8月1日国内微博疯传，中共为强抓意识形态“洗脑从娃娃抓起”，除在国内强拆教堂与禁售《圣经》外，如今开始在教科书中展开“灭上帝”运动，教科书中不准出现“上帝”“圣经”等字眼……在新版的中共教材《卖火柴的小女孩》中，把“灵魂与上帝同在”改为“人离开了世界”，凡是与基督教有关的词汇语句尽量替换规避，让孩子从小不得接触基督文化。【GM30】
+引自：
+https://m.weibo.cn/status/I0aliD5KB?jumpfrom=weibocom"))
+               (u (:- `(cite () "(!!!警告: 中共国网站链接) " ,(@ "https://m.weibo.cn/status/I0aliD5KB?jumpfrom=weibocom")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220776")
+               '(q () (pre () "
+【新闻】中国开发银行原董事长因贪污被调查
+北京（路透社）(Bobby Yip) - 该国反贪机构周三表示，中国国家开发银行原董事长胡怀邦因涉嫌严重违纪行为，目前正受到调查。
+中央纪律检查委员会（CCDI）没有详细说明（胡怀邦）可能触犯的法规或法律，打给银行新闻办公室的电话也无人接听。
+胡自2013年出任此银行董事长，同时兼任党委书记。 他于去年9月辞职。
+其后的一个月，胡的名字出现在王三云的高调贪污审判案中，王三云曾在2011年至2017年期间担任甘肃省党委书记。
+在中国官方央视去年10月对上述案件的报道中，检察官指称，胡在担任交通银行（601328.SS）（3328.HK）董事长期间曾代表叶简明贿赂王，叶简明曾一度出任高调的华信能源集团董事长 。
+在胡担任银行董事长时，王还被指控帮助华信能源集团旗下子公司海南华信从国家开发银行获得了48亿美元的融资。
+无法立即联系到银行，以获得置评。
+中国国家开发银行是中国最大的政策性银行，其资金用于支持政府的经济战略。国家开发银行年度报告称， 2018年底其总资产达到16.18万亿人民币（2.35万亿美元）。
+一度快速增长的华信能源集团公司，去年债券违约，其前董事长叶先生被当局调查。 多宗依靠贷款购买的海外资产被抛售。
+自2012年上任以来，习近平主席一直在推行反腐运动，导致多名高官落马。
+2018年4月公布的另一起反贪案件称，赖小民正在接受调查，他曾担任华融资产管理股份公司董事长，旗下资产超过2800亿美元。
+今年二月，中纪委表示，另一位前国家开发银行高管郭林因“违纪”被开除党籍。
+ 
+信息来源：
+https://www.reuters.com/article/us-china-corruption/former-chairman-of-china-development-bank-in-probe-over-discipline-violations-idUSKCN1UQ0M3?feedType=RSS&feedName=worldNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Reuters%2FworldNews+%28Reuters+World+News%29"))
+               (u (:- `(cite () ,(@ "https://www.reuters.com/article/us-china-corruption/former-chairman-of-china-development-bank-in-probe-over-discipline-violations-idUSKCN1UQ0M3?feedType=RSS&feedName=worldNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Reuters%2FworldNews+%28Reuters+World+News%29"
+                                    "Ex-chairman of China Development Bank under probe by graft-buster")
+                             (small () "2019.7.31 Reuters")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220775")
+               '(q () (pre () "台灣如何被CCP事實上統一CCP如何操縱台灣選舉"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
 - 1
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019.8.1")
-        (u (:- "视频: " (@ "" "")
-               '(small () "")
-               (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=1Rr3rtFyJLc"
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=1Rr3rtFyJLc"
                            "2019-07-31 文贵报平安直播 ：乱聊上海西郊宾馆 开启CCP死亡第二战场")
                '(small () "Youtube: 郭文贵")
                (u (:- `(cite () "7月31号郭先生直播摘要: " ,(@ "https://www.guo.media/posts/220442")))
                   (:- '(pre () "..."))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/220649")
+               '(q () (pre () "
+8月1日：又让文贵蒙对了，衷心的感谢．舍生忘死在C C P内部为香港同胞提前通报这些重大信息的伟大的战友，一切都是刚刚开始！【四．驻港部队实施戒严的同时，香港警察将对6月九日以来的和平抗议的人士进行大抓捕……】栽赃嫁祸……CCP的一贯风格！")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/220615")
+               '(q () (pre () "
+8月1号：川普总统的这个决定．证明了我们几天前向战友们的预测……世界将巨变……灭共第二战场是上海西郊宾馆……一切都是刚刚开始！"))
+               (u (:- `(cite () "Donald J. Trump @realDonaldTrump : "
+                             ,(@ "https://twitter.com/realDonaldTrump/status/1156979443900067841?s=20")
+                             (small () "2019.8.2 Twitter")
+                             (q () (pre () "
+Our representatives have just returned from China where they had constructive talks having to do with a future Trade Deal. We thought we had a deal with China three months ago, but sadly, China decided to re-negotiate the deal prior to signing. More recently, China agreed to...
+
+<-|
+...buy agricultural product from the U.S. in large quantities, but did not do so. Additionally, my friend President Xi said that he would stop the sale of Fentanyl to the United States – this never happened, and many Americans continue to die! Trade talks are continuing, and...
+
+<-|
+..during the talks the U.S. will start, on September 1st, putting a small additional Tariff of 10% on the remaining 300 Billion Dollars of goods and products coming from China into our Country. This does not include the 250 Billion Dollars already Tariffed at 25%...
+
+<-|
+...We look forward to continuing our positive dialogue with China on a comprehensive Trade Deal, and feel that the future between our two countries will be a very bright one!"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220596")
+               '(q () (pre () "
+8月4號 即將對香港戒嚴的緊急通告
+An emergency declaration of martial law in Hong Kong is expected on August 4th
+
+一．共產黨：將在8月4號宣佈根據解放軍駐港法．國家安全法．由香港政府申請·駐港部隊對香港戒嚴。
+1. The communist party: will announce on August 4th that based upon the PLA Garrison Law and National security laws, the Hong Kong government has requested martial law be enforced by the PLA army stationed in Hong Kong.
+ 
+二．戒嚴條例將規定．對香港．社會治安．人員進出由戒嚴指揮部統一指揮。
+2.  The safety of Hong Kong, public order. and the entry and exit of personnel shall all be under the unified direction of the martial law command.
+ 
+三．戒嚴指揮部將對香港的人員進出大規模限制，基本上是只許出不許進，並將定向清理美國和歐洲國家在香港的駐港機構及持有美英護照的外籍人士。
+3. The martial law command will impose massive restrictions on the movement of people in and out of Hong Kong, essentially barring them from entering but allowing them to leave the territory freely. They will also clean up U.S. and European institutions based in Hong Kong and foreigners with U.S. and British passports.
+ 
+四．駐港部隊實施戒嚴的同時，香港警察將對6月九日以來的和平抗議的人士進行大抓捕……
+4. The Hong Kong police will make many arrests associated with the peaceful protests which have occurred since June 9, as troops stationed in HongKong impose martial law.
+
+https://spark.adobe.com/page/RPtb5WpXMNiUK/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/RPtb5WpXMNiUK/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220595")
+               '(q () (pre () "
+香港人走上街的原因
+Why are Hong Kong people  protesting on streets now？")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220594")
+               '(q () (pre () "
+到底中国人是奴隶还是吃人尸丸的人？
+Are Chinese slaves or the people who eat human corpse pills?")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/220592")
+               '(q () (pre () "
+老百姓的钱去哪了？
+Where has the Chinese people's money gone?")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220589")
+               '(q () (pre () "
+【新闻】台湾大选前，中国暂停赴台自由行
+ 
+7月31日，中共政府宣布暂停发放大陆居民赴台个人游许可，此举似乎意在在即将到来的大选前，影响这个台湾的政治形势，该举措将于8月1日周四生效，中共借此表达对台湾政府的不满。该政策的宣布正直中美新一轮贸易谈判期间，与此同时北朝鲜发射了两枚短程弹道导弹，此前，中共政府指责美国是干涉台湾，香港事务的“背后黑手”，今年7月美国批准对台22亿没有的军事装备，预计还将批准另一份包括战绩在内的80亿美元一揽子军售计划。【GM01】
+来源：
+https://cn.nytimes.com/asia-pacific/20190801/taiwan-china-tourist-visas/"))
+               (u (:- `(cite () 
+                             ,(@ "https://cn.nytimes.com/asia-pacific/20190801/taiwan-china-tourist-visas/"
+                                 "台湾大选前，中国暂停赴台自由行")
+                             (small () "2019.8.1 纽约时报中文网")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/220521")
+               '(q () (pre () "
+8月1号：1小时左右，文贵在郭媒体直播……紧急向香港同胞通告……未来几天的共匪的疯狂……行动，一切都是刚刚开始！")))
            (:- "郭文(视频): " (@ "https://www.guo.media/posts/220500")
                '(q () (pre () "
 8月1号：中午12:00将和几个香港命运有关的人开会……香港的命运现在处在关键的时刻……望我们所有的志在灭共的战友们．在自己安全．能力．能承受的情况下，全力以赴通过各种手段支持香港同胞们……一切都是刚刚开始！")))
