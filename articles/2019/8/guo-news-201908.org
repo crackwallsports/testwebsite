@@ -26,16 +26,121 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
+- 4
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.4")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=3bszXx39OOo"
+                           "关注香港即将发生的大事；聊聊关于起诉华尔街日报 CNN CNBC 迈阿密先驱报 SV公司.....")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(视频 报平安): " (@ "https://www.guo.media/posts/221413")
+               '(q () (pre () "
+8月4号：尊敬的战友们好．你们健身了吗？你们往身上泼水了吗？文贵被熊．夏．孟．张．江．宝胜郭．CNN．WSj……CNBC……J. Michael Waller French Wallop等吓得一夜睡不着，精神恍惚……现在向大家报平安．一切都是刚刚开始！"))
+               (u (:- '(pre () "关注香港"))))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/221409")
+               '(q () (pre () "
+8月4日：【北京正准备在香港进行大屠杀：西方将人权置于自由贸易之……】猫步庄．失去的记忆……"))
+               (u (:- `(cite () ,(@ "https://nypost.com/2019/08/03/beijing-is-prepping-for-a-massacre-in-hong-kong-time-for-the-west-to-put-human-rights-ahead-of-free-trade/"
+                                    "Beijing is prepping for a massacre in Hong Kong: time for the West to put human rights ahead of free trade")
+                             (small () "2019.8.3 New York Post")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/221402")
+               '(q () (pre () "
+8月4日：又让文贵蒙对了……瑞银公布的7.8万亿元只是盗国贼．盗取中国财富的冰山一角……瑞银是中国盗国贼的帮凶之一……江．王．孟．朱……家的钱窖子之三！天亮了就都看清楚了🧐……一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.theguardian.com/world/2019/aug/03/china-suspends-cooperation-with-france-on-police-affairs-interpol-meng-hongwei"
+                                    "China suspends cooperation with France on police affairs, says report")
+                             (small () "2019.8.3 The Guardian")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/221375")
+               '(q () (pre () "
+8月4日：香港警察成为世界上最守法最专业．最受人尊重．的警察形象，花了一百年……仅仅不到几年时间．共产党就将香港警察．变成了香港公安．成为了世界上惟一一个．公开和黑社会合作，殴打老人．妇孺儿童的警察……这和人种．及民族素质没任何关系……这都是共产党的流氓体制，黑社会统治手段……黑帮文化．所形成的这种毒瘤作用……任何一个国家和民族，遇到这种黑帮流氓文化只有两个选择……要么被他奴役．要么我们消灭他们……香港正在消灭这种流氓文化．黑帮文化的征程中……我们一定要和香港同胞站在一起，尽我们所能帮助他们……让世界了解此时此刻的香港真相……否则我们都将被共产党消灭……或欺压……一切都是刚刚开始！")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/221333")
+               '(q () (pre () "
+8月2日：郭文貴先生起诉以下公司和个人！
+👇👇👇
+
+戰略願景美國有限責任公司
+J.邁克爾.沃勒
+法蘭西.瓦洛普
+愛德華.艾迪.格雷姆
+華爾街日報的擁有者和分銷商道瓊斯公司
+華爾街日報記者阿魯納.維斯瓦納塔 和 凱特.奧基夫
+ 
+一切都是剛剛開始！
+
+Guo V. SV 中文翻译 最终版(更新）")))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/221314")
+               '(q () (pre () "【旧庄随手拍】2019-07-31 郭文贵先生直播照片")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221306")
+               '(q () (pre () "
+【新闻】美国防长考虑在亚洲部署中程导弹
+ 
+华盛顿正式退出《中导条约》（INF）翌日，新任五角大楼负责人马克·埃斯帕（Mark Esper）周六（8月3日）称，他倾向于在相对较快的时间内在亚洲部署陆基中程导弹。预计未来数周内，五角大楼将试验陆基巡航导弹；今年11月将试射中程弹道导弹。两项试验均使用常规弹头，而非核弹头。
+ 
+美国和前苏联于1987年签署的《中导条约》全面禁止生产、部署、使用射程在500至5500公裡之间的陆基弹道导弹和巡航导弹。美国迄今能依靠从舰艇或战机发射中程导弹的能力来取得对华平衡。不过，赞同美国保持陆基导弹能力的负责人士指出，部署陆基中程导弹是阻止中国人动用其强大陆基导弹部队的最佳途径。
+ 
+埃斯帕此度出访亚洲，距离其前任马蒂斯巡访亚洲仅仅相隔几个月。这被认为体现出五角大楼对亚太地区的重视，并且释放出对抗中国的一个信号。埃斯帕没有说明，他考虑在亚洲的什么地方部署导弹，不过，预期他将在此次亚洲之行中会晤该地区多名领导人。【GM31】
+出处：
+https://www.dw.com/zh/%E7%BE%8E%E5%9B%BD%E9%98%B2%E9%95%BF%E8%80%83%E8%99%91%E5%9C%A8%E4%BA%9A%E6%B4%B2%E9%83%A8%E7%BD%B2%E4%B8%AD%E7%A8%8B%E5%AF%BC%E5%BC%B9/a-49879227"))
+               (u (:- `(cite ()
+                             ,(@ "https://www.dw.com/zh/%E7%BE%8E%E5%9B%BD%E9%98%B2%E9%95%BF%E8%80%83%E8%99%91%E5%9C%A8%E4%BA%9A%E6%B4%B2%E9%83%A8%E7%BD%B2%E4%B8%AD%E7%A8%8B%E5%AF%BC%E5%BC%B9/a-49879227"
+                                 "美防长称中国破坏印太稳定 考虑部署中程导弹")
+                             (small () "2019.8.4 德国之声中文版")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221304")
+               '(q () (pre () "
+【新闻】八九六四后香港油麻地骚乱30年后　催泪弹再现旺角
+ 
+据香港媒体报道，香港民众反对修订《逃犯条例》的争议持续，8月3日旺角再游行后，示威者与警方在尖沙咀、旺角等地对峙，警方用催泪弹在这两个地方驱散。
+ 
+翻查历时资料，这次是警方继1989年6月7日碧街事变后，再次在旺角施放催泪弹。
+ 
+1989年，解放军镇压北京民运，六四凌晨流血收场，香港支联会发起在6月7日罢工罢课罢市，并计划当日集会和游行悼念死难者。
+ 
+但在6月6日深夜至7日凌晨，旺角碧街有内地来港的人滋事，警方用催泪弹驱散，支联会因此紧急叫停罢工。而2016年年初二凌晨旺角骚乱，警方亦无使用催泪弹。【GM06】
+来源：
+https://www.hk01.com/%E7%A4%BE%E6%9C%83%E6%96%B0%E8%81%9E/359837/%E6%97%BA%E8%A7%92%E9%81%8A%E8%A1%8C-%E5%85%AD%E5%9B%9B%E6%B2%B9%E9%BA%BB%E5%9C%B0%E9%A8%B7%E4%BA%8230%E5%B9%B4%E5%BE%8C-%E5%82%AC%E6%B7%9A%E5%BD%88%E5%86%8D%E7%8F%BE%E6%97%BA%E8%A7%92"))
+               (u (:- `(cite () ,(@ "https://www.hk01.com/%E7%A4%BE%E6%9C%83%E6%96%B0%E8%81%9E/359837/%E6%97%BA%E8%A7%92%E9%81%8A%E8%A1%8C-%E5%85%AD%E5%9B%9B%E6%B2%B9%E9%BA%BB%E5%9C%B0%E9%A8%B7%E4%BA%8230%E5%B9%B4%E5%BE%8C-%E5%82%AC%E6%B7%9A%E5%BD%88%E5%86%8D%E7%8F%BE%E6%97%BA%E8%A7%92"
+                                    "【旺角遊行】六四油麻地騷亂30年後　催淚彈再現旺角")
+                             (small () "2019.8.3 香港01")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221285")
+               '(q () (pre () "Chinese FM is turning things upside down on Hong Kong issues, again!
+香港问题，中国外交部又颠倒黑白！"))
+               (u (:- '(pre () "(我: 华姥姥 年纪大 眼花了)"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221279")
+               '(q () (pre () "
+【翻译】中国稀土贸易的隐性成本  
+https://spark.adobe.com/page/grhvWNdjR8YNx/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/grhvWNdjR8YNx/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221275")
+               '(q () (pre () "
+8月2日，川普总统表示：对中国的关税，我可以使劲的加！
+August，2，  President Trump: I could increase it to a much higher number!")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221244")
+               '(q () (pre () "
+8月3号：15分钟左右．文贵直播乱聊．谈谈，这两天对我们速告的几个案子，一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221173")
+               '(q () (pre () "
+8月3日：史蒂芬班農：香港人会不會讓六四天安門大屠殺重演？共产党太操蛋了……一心对付自己的人民！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221172")
+               '(q () (pre () "
+8月3日：Chinese Army sends warnings to Hong Kong 駐港部隊發聲發視頻警告香港民众......臉書評論：大開眼界，從未見過有國家軍隊宣傳片係宣傳鎮壓自己國民。")))
+           (:- "郭文(短视频): " (@ "https://www.guo.media/posts/221150")
+               '(q () (pre () "8月3号：尊敬的战友们好．你们健身了吗？你们往身上泼水了吗？一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
 - 3
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019.8.3")
-        (u (:- "视频: " (@ "" "")
-               '(small () "")
-               (u (:- '(pre () ""))))
-           (:- "郭文: " (@ "")
-               '(q () (pre () ""))
-               (u (:- `(cite () ""))))
+        (u (:- "郭文(图片): " (@ "https://www.guo.media/posts/221084")
+               '(q () (pre () "
+8月3号：香港人民的安危，现在是岌岌可危……共产党绑架式统治中国人民70年……靠的就是欺骗……凶残…… 但愿香港同胞不要低估了共产党的狠和坏．共产党正在全面实施，他们以定好的戒严计划……天佑香港！一切都是刚刚开始！"))
+               (u (:- `(cite ()
+                             ,(@ "https://cn.nytimes.com/china/20181226/yuan-mu-dead/"
+                                 "中共宣传官员袁木去世，曾为“六四”镇压辩护")
+                             (small () "2018.12.26 纽约时报中文网")))))
            (:- "郭文: " (@ "https://www.guo.media/posts/221040")
                '(q () (pre () "
 翻译】工会领袖说，星期一举行更大规模罢工以寻找说法 
@@ -148,7 +253,13 @@ https://www.reuters.com/article/us-china-corruption/former-chairman-of-china-dev
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019.8.1")
-        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=1Rr3rtFyJLc"
+        (u (:- "视频: " 
+               '(small () "Youtube: 郭文贵")
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=BdVwJjnURx4"
+                                    "2019年8月1日 法治社会每周捐款留言精选集 weekly Rule of Law Society donor’s messages collection")))
+                  (:- `(cite () ,(@ "https://www.youtube.com/watch?v=f5AkehaIL-0"
+                                    "2019年8月1日 法治基金每周捐款留言精选集 weekly Rule of Law Foundation donor’s messages collection")))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=1Rr3rtFyJLc"
                            "2019-07-31 文贵报平安直播 ：乱聊上海西郊宾馆 开启CCP死亡第二战场")
                '(small () "Youtube: 郭文贵")
                (u (:- `(cite () "7月31号郭先生直播摘要: " ,(@ "https://www.guo.media/posts/220442")))
