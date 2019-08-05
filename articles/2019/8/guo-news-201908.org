@@ -26,17 +26,135 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
-- 4
+- 5
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019.8.4")
+ (u (:- '(small () "2019.8.5")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=3bszXx39OOo"
-                           "关注香港即将发生的大事；聊聊关于起诉华尔街日报 CNN CNBC 迈阿密先驱报 SV公司.....")
-               '(small () "Youtube: 郭文贵")
-               (u (:- '(pre () "..."))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221747")
+               '(q () (pre () "
+8月5日：共产党的周密的设计……共产党解放军出手前，必须先有的动作挑起祸端，就像北京八九年一样，自己烧自己的一个军人……然后将尸体挂在树上上一模一样的手段……看来共军来了……一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221723")
+               '(q () (pre () "
+8月5号上午6:39分：共军来了……元朗有車撞人．共产党解放军出手前，必须先有的动作挑起祸端，就像北京八九年一样，自己烧自己的一个军人……然后将尸体挂在树上上一模一样的手段……看来共军来了……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221720")
+               '(q () (pre () "
+8月4日：【Hong Kong protesters use flashmob tactics to evade police．香港年轻人在香港打游击战】香港年轻人的智慧影响了世界，不论他们的勇敢，还是他们的勇气．都是中国人学习得好晚呀，历史时刻即将到来，一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://www.theguardian.com/world/2019/aug/04/hong-kong-protesters-return-streets-day-after-violent-clashes"
+                                    "Hong Kong protesters use flashmob tactics to evade police")
+                             (small () "2019.8.4 The Guardian")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221653")
+               '(q () (pre () "
+香港警方捣毁武器库展示证物，称有人鼓吹使用“强力激光炮” 
+
+Title: After raiding two armories, Hong Kong Police said they found evidence of people promoting the use of “powerful laser cannons”.  
+
+https://spark.adobe.com/page/toehDtvC0Nub3/
+"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/toehDtvC0Nub3/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221638")
+               '(q () (pre () "Aug 4. CCTV threats Hong Kongers, “it will come soon.”")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221612")
+               '(q () (pre () "
+文字版：2019年8月3日关注香港即将发生的大事  
+https://spark.adobe.com/page/ALh8ZRyIny447/
+"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/ALh8ZRyIny447/")))))
+           (:- "郭文(视频）: " (@ "https://www.guo.media/posts/221607")
+               '(q () (pre () "8月1日，自由灯塔比尔格茨接受美国人气主播采访精简版，中共底裤被扒！丑态一览无余！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221600")
+               '(q () (pre () "
+【新闻】中共扩张行为严重危及国际安全局势！
+据国会山报8月4日讯，美国国防部长马克·埃斯佩尔于周日指出中共正在危及印度洋-太平洋地区，任何国家不应该主导该地区，美国正在与盟友国家基于保障该地区安全需要而深化合作。
+ 
+马克表明美国坚决反对中共不利于国际安全局势的激进行为，包括军事化全球公共资源、通过“债务陷阱”掠夺他国主权、偷窃他国知识产权等。
+ 
+马克还提及中共日益扩大对南海的影响，不断在国际水域建设岛屿并主张主权。美国已将保护国际海上运输线路及公共资源作为其国家战略的一部分。
+ 
+马克的讲话更增加贸易战紧张局势。在原有2500亿美元的商品征收25%关税基础上，川普总统对另外3000亿美元的商品征收10%关税（9月1日生效），将覆盖中国对美出口所有商品类别。【GM29】
+来源：
+https://thehill.com/policy/defense/456124-new-pentagon-chief-says-chinas-destabilizing-behavior-is-disturbing"))
+               (u (:- `(cite () ,(@ "https://thehill.com/policy/defense/456124-new-pentagon-chief-says-chinas-destabilizing-behavior-is-disturbing"
+                                    "New Pentagon chief says China's 'destabilizing behavior' is 'disturbing'")
+                             (small () "2019.8.4 The Hill")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221558")
+               '(q () (pre () "
+8月4号：如果连香港上街抗议的真相都不了解……却批判香港的有史以来最大最文明的抗议……要么是本性魔鬼👹或是愚蠢至极……一切皆因．香港部分官员和共产党勾兑．欲用违法的．所谓的将港人随时可以抓送到中共手里的．《送中法．》目的就是要绑架全香港人的安全……威胁全香港人的法治．自由……财产生命！香港人以法上街游行！却被港府加罪伤害．定为暴动罪……和平抗议的孩子．老人．被香港警察殴打抓捕……天理何在呀？……一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221554")
+               '(q () (pre () "
+8月3日 美國國務卿彭佩奧：美國壹定會贏貿易戰 
+ August 3, Secretary of State Pompeo on WINNING the Trade-War with China")))
+           (:- "郭文(短视频 郭先生): " (@ "https://www.guo.media/posts/221533")
+               '(q () (pre () "8月4号：香港正在战斗后．短暂的沉寂中走向爆发……天佑香港🇭🇰……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221506")
+               '(q () (pre () "
+【新闻】8月3号郭文贵先生纽约直播继续挺香港：中共戒严在即，香港要小心！
+ 
+8月3号：继续支持港人的上街抗议行动。郭文贵将共产党的新闻发言人，比作“万能插座”，也就是只要是共产党的谎话，不论有多荒谬都可以“插播”都可以“发炎”。华春莹最近经常“发炎”，说香港即将实施戒严是谣言、是别有用心。让人想起30年前，六四前夕同样的国家级的撒谎。
+ 
+“厉害”国媒体天天报道“重大消息”，说解放军不会开进天安门，不会对学生下手，结果坦克上街直接碾压学生。郭文贵把共产党比作国家机器、流氓、黑社会三者杂交，生出的后代“人性的骡子”: 长得像个人，其实是畜生，干了也都是断子绝孙的龌龊事。
+ 
+所以相信共产党会灭亡的人真都是正常的人。郭文贵还通过投资者分析数据，说爆料革命传出的信息，准确度大概在百分之七十多。而且过半用户来之中国国内。他还抨击了传统媒体失去真正的判断能力，硬装信息平衡，玩中立，其实他们都是不了解中共，更怕说中共，因为共产党在西方的渗透影响力，惹不起。郭说“为什么在西方、在媒体界看不到有价值的报道，是什么力量让这些媒体全部闭嘴？香港事件让我们认清世界”。
+ 
+郭在视频中再次强调，8月4日到6日之间共产党一定会戒严，对此百分之九十的把握。“发生或不发生都不是我们需要的，我们需要少死人少流血”，郭说“香港的金融发生了啥事，大陆倾尽全力维持香港恒生指数，而且绝不允许在香港占了60%的几十万亿的大陆的国有公司、私人公司出售，说救市救经济和香港平暴一样重要”。
+ 
+由于共产党对香港进行了，媒体控制和信息封锁。“外国人在过去一周里走掉了40%，悄无声息，不是他们怕了，是共产党提前找各种理由让一些有影响力的美欧人士离开香港。大家接下来看香港报道，外国人在香港发生了什么，8964一样。这就是我为什么确定共产党真要动手了。”郭直播说。
+ 
+郭文贵还给观众解释了，他为什么最近对海外主流媒体包括华尔街日报，美国有线新闻网， CNBC的起诉。他引用了美国宪法第一修正案，并解释言论自由不是想干啥就干啥，而是对你说的话要负责任。昨天起诉书遍地开花，他就是要让世界看到真相，让说谎，造谣的付出代价。
+ 
+郭最后呼吁，关注今天晚上和明天的事态，对香港非常重要，看看共产党是用什么理由什么名声进入香港的【GM12】【GM32】【GM10】
+https://www.youtube.com/watch?v=3bszXx39OOo"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=3bszXx39OOo"
+                                    "关注香港即将发生的大事；聊聊关于起诉华尔街日报 CNN CNBC 迈阿密先驱报 SV公司.....")
+                             '(small () "Youtube: 郭文贵")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/221498")
+               '(q () (pre () "
+香港8月5日大罢工💪💪💪
+百折不挠的香港同胞💪💪💪
+香港必胜！正义必胜！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221497")
+               '(q () (pre () "
+【新闻】香港抗议者击退警察暴力围攻
+ 
+据华尔街日报8月4日讯，本周六香港抗议人群与警察之间的冲突在六个区爆发，多个警局遭到围堵，几百名抗议者击退施暴警察。
+ 
+尽管中共不断施压，但香港警方对连续八周以来日益升级的抗议活动束手无策。预计前一周被捕的抗议者有可能被判入狱（最高10年）。
+ 
+部分民众认为最终结局取决于警方的态度，暴力镇压必然导致更激烈的反抗。本周五上千名公务员集会并抗议政府暴力行为。全港大罢工将于周一进行。【GM29】
+来源：
+https://www.wsj.com/articles/hong-kong-protesters-gather-in-district-with-history-of-violent-clashes-11564815313?mod=hp_lead_pos7"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/hong-kong-protesters-gather-in-district-with-history-of-violent-clashes-11564815313?mod=hp_lead_pos7"
+                                    "Hong Kong Protesters Square Off With Police With No Sign of Solution to Unrest")
+                             (small () "2019.8.3 The Wall Street Journal")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/221494")
+               '(q () (pre () "
+【新闻】中共对香港抗议的“容忍”只是暂时的
+ 
+据泰晤士报8月4日讯，在幕后操纵香港22年后的中共终于揭开面具，公开施压林郑尽快镇压抗议。抗议活动开展从每周升级至每天，双方不断调整战术，警方试手多种武器却束手无策，抗议者时而直面攻击，时而腾挪闪躲，犹如如李小龙描述的“无形之水”。
+ 
+周五万名公务员集会，周六抗议转战至旺角，周一大罢工正式登场。
+ 
+中共发言人不断指责“国外势力煽动香港”，意在将矛头指向他国，与“六四”时官宣有异曲同工之妙。中共正在掂量派军镇压的负面因素，如国际谴责对70周年建国大庆的影响、贸易战、台湾选举，甚至包括触及盗国贼集团在港利益等。
+ 
+1989年社会主义倒台席卷苏联及东欧时，岌岌可危的共产党头目们对自己即将来临的末日其实早已心如明镜。【GM29】
+来源：
+https://www.thetimes.co.uk/edition/world/china-pulls-its-punches-on-hong-kong-protests-for-now-x8c20brxj"))
+               (u (:- `(cite () ,(@ "https://www.thetimes.co.uk/edition/world/china-pulls-its-punches-on-hong-kong-protests-for-now-x8c20brxj"
+                                    "China pulls its punches on Hong Kong protests — for now")
+                             (small () "2019.8.4 The Times")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221492")
+               '(q () (pre () "
+8月2日，班农先生：世界不会容许中共在香港重演天安门广场屠杀！
+
+Aug., 2,  Mr. Bannon:  I don’t think the world’s prepared to have another Tiananmen Square!")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/221477")
+               '(q () (pre () "
+8月4日：【89年6月3日晚，北京电台，电视台，不停地反复播报，要求市民呆在家中.... 看来今天晚上...】千万别让文贵蒙对了吧……🙏🙏🙏🙏🙏🙏🙏🙏🙏")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/221438")
+               '(q () (pre () "
+8月4日：我没听清楚……让谁放下屠刀？吓死宝宝了……👇👇👇👇👇👉👉👉👉😿😿😿😿😿😿")))
            (:- "郭文(视频 报平安): " (@ "https://www.guo.media/posts/221413")
                '(q () (pre () "
 8月4号：尊敬的战友们好．你们健身了吗？你们往身上泼水了吗？文贵被熊．夏．孟．张．江．宝胜郭．CNN．WSj……CNBC……J. Michael Waller French Wallop等吓得一夜睡不着，精神恍惚……现在向大家报平安．一切都是刚刚开始！"))
@@ -46,7 +164,17 @@
 8月4日：【北京正准备在香港进行大屠杀：西方将人权置于自由贸易之……】猫步庄．失去的记忆……"))
                (u (:- `(cite () ,(@ "https://nypost.com/2019/08/03/beijing-is-prepping-for-a-massacre-in-hong-kong-time-for-the-west-to-put-human-rights-ahead-of-free-trade/"
                                     "Beijing is prepping for a massacre in Hong Kong: time for the West to put human rights ahead of free trade")
-                             (small () "2019.8.3 New York Post")))))
+                             (small () "2019.8.3 New York Post"))))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 4
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.4")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=3bszXx39OOo"
+                           "关注香港即将发生的大事；聊聊关于起诉华尔街日报 CNN CNBC 迈阿密先驱报 SV公司.....")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
            (:- "郭文(图片): " (@ "https://www.guo.media/posts/221402")
                '(q () (pre () "
 8月4日：又让文贵蒙对了……瑞银公布的7.8万亿元只是盗国贼．盗取中国财富的冰山一角……瑞银是中国盗国贼的帮凶之一……江．王．孟．朱……家的钱窖子之三！天亮了就都看清楚了🧐……一切都是刚刚开始！"))
