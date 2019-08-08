@@ -26,16 +26,554 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
-- 6
+- 8
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019.8.6")
+ (u (:- '(small () "2019.8.8")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
            (:- "郭文: " (@ "")
                '(q () (pre () ""))
                (u (:- `(cite () ""))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222592")
+               '(q () (pre () "
+8月8日：美国人又搬起石头了……又蚍蜉撼树了……又自不量力了……结果是上海，香港股市疼的到这个样子了……共产党这个超级骗子……人类至古前所未有．时候到了……大家睁大眼睛看着吧，还有几根王岐山的杂毛股票……立着呢，能把14亿人的国家变成一个笑话，肥皂剧．喜剧．也不是一件容易的事儿，
+【🔴 🔵王岐山的香港梦 如特區政府不能改變香港現狀 中央將設定香港為直轄市
+2019年底取消香港特區身份證及護照，統一更換中華人民共和國身份證及護照（目的是解決非香港籍人員問題！英籍丶越籍，美籍丶加籍等持多 籍香港人是港獨的主力軍）;
+2019年底央行接管香港金管局，取消港幣，按國際港幣匯率兌換成人民幣，取消匯豐，渣打銀行發行貨幣權利;   改組香港稅務體制。
+武警總部直管機動師入駐香港，擬從廣東省抽調10000名人民警察加入香港警隊，直屬公安部;擬從各地抽調2000警員入駐香港海關，直屬海關總暑;
+中央駐港聯辦代行中央之責，擬成立中共香港市委，成立人大，政協，改組原香港兩院;
+擬從各監委抽調500名幹警加入香港廉暑，港廉暑直屬監察部。
+教育部牽頭，在內地高校抽調5000名教授，講師及教育工作者入駐香港各小中大院校，香港現教科書停用，統一使用廣東省教材！
+暫時停止內地居民入港旅遊！
+按中華人民共和國憲法制定香港臨時管制條例！依法捍衛國旗，國徽，國歌及國家尊嚴！依法維護】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222589")
+               '(q () (pre () "
+8月8日：【细丝揭开PAG LOGO隐含纳粹符号】
+https://www.google.com/url?sa=i&source=web&cd=&ved=2ahUKEwjY55Hu8vLjAhXDdN8KHeShB58Qjhx6BAgBEAI&url=https%3A%2F%2Fwww.techinasia.com%2Fcompanies%2Fpag&psig=AOvVaw21wki6uyMS6j--ta4YGhcQ&ust=1565340727618846")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222588")
+               '(q () (pre () "
+8月8号：凌晨4:30．看到香港接下来的抗议时间安排，看来这些可能都发生不了了，✊✊✊👉👉👉一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222578")
+               '(q () (pre () "
+【新闻】8月8日台湾自由时报报导
+美金融大鱷：王岐山家族據傳在曼哈頓擁有1000多套公寓
+美中貿易戰越演越烈，導致全球金融市場動盪加劇，不過橋水基金（Bridgewater）創辦人達里歐（Ray Dalio）6日建議，投資人現在應該美國、中國2方都要投資。
+ 
+對此，美國知名對沖基金大鱷巴斯（Kyle Bass）7日質疑達里歐「為中國政府管理多少錢」，更點名中國國家副主席王岐山，指王岐山家族據傳光是在紐約曼哈頓就擁有超過1000套公寓。
+https://ec.ltn.com.tw/article/breakingnews/2878398"))
+               (u (:- `(cite () ,(@ "https://ec.ltn.com.tw/article/breakingnews/2878398"
+                                    "美金融大鱷：王岐山家族據傳在曼哈頓擁有1000多套公寓")
+                             (small () "2019.8.8 自由時報")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222573")
+               '(q () (pre () "
+【翻译】推特冻结了麦康奈尔的竞选账号，说他发布了抗议者暴力威胁视频
+ https://spark.adobe.com/page/7RZsjhqyXjUqT/"))
+               (u (:- `(cite () ,(@ " https://spark.adobe.com/page/7RZsjhqyXjUqT/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222570")
+               '(q () (pre () "
+8月1号 中国外交部指责美国插手香港事务 
+August 1, China blames US for mass demonstrations in Hong Kong 【GM36】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222565")
+               '(q () (pre () "
+【翻译】负责美国政府采购的机构发布了一项临时规定，禁止联邦从包括华为在内的五家中国公司购买电信设备。
+https://spark.adobe.com/page/XZ0Excis6ylfc/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/XZ0Excis6ylfc/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222555")
+               '(q () (pre () "【翻译】贸易战会引发货币战吗？  https://spark.adobe.com/page/UTbcrZXMcqCqc/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/UTbcrZXMcqCqc/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222520")
+               '(q () (pre () "
+【新闻】8月7日，台灣撐香港！在台募集600多頂安全帽已抵港
+爲聲援香港「反送中」運動，有在台港人透過網路社群發起蒐集二手安全帽活動，盼民眾捐贈，以實際行動撐香港，獲得許多民眾熱情響應，分別於7月25日、28日兩天在台北市定點各募集到188頂、400多頂安全帽。
+ 
+在台港生臉書粉絲頁「香港邊城青年」今（7）日表示，總共600多頂安全帽已於日前安全送達香港，部分已到達平安抵達物資中心，「再一次感謝台灣朋友的心意！」【GM15】
+引自: https://newtalk.tw/news/view/2019-08-07/282940"))
+               (u (:- `(cite () ,(@ "https://newtalk.tw/news/view/2019-08-07/282940"
+                                    "台灣撐香港！在台募集600多頂安全帽已抵港")
+                             (small () "2019.8.7 新頭殼newtalk")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222508")
+               '(q () (pre () "
+【新闻】8月7日：美国农民好样的！贸易战打不散挺川普的决心
+8月7日CNBC新闻报道，最近的民意调查显示，即使贸易战伤害到美国的农业，加之持续的关税升级，中西部农民依然强烈支持川普在贸易战中的决策。专家分析，美国农民很可能在2020川普连任上起到决定性的影响。【GM12】
+消息来源CNBC新闻
+https://www.cnbc.com/2019/08/07/us-china-trade-war-is-hurting-farmers-but-theyre-sticking-with-trump.html"))
+               (u (:- `(cite () ,(@ "https://www.cnbc.com/2019/08/07/us-china-trade-war-is-hurting-farmers-but-theyre-sticking-with-trump.html"
+                                    "US-China trade war is hurting farmers, but they’re sticking with Trump")
+                             (small () "2019.8.7 CNBC")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222507")
+               '(q () (pre () "
+8月7号：白宫首席经济顾问库德罗说，贸易战不会让全球经济衰退；川普总统表示中国伤害我们经济的时代结束了【GM12】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222506")
+               '(q () (pre () "
+【新闻】8月7日，经济濒临崩溃，中共欲盖弥彰
+据日经新闻8月7日讯，今年2月中共喉舌人民日报高调宣布春节期间，全国零售及餐饮消费首次突破1万亿人民币（1450亿美金），并指责悲观派。
+ 
+然而歌舞升平的中共官宣难掩GDP暴跌、政府及企业天量社会债务雪球、汽车销售及工业制造出口数据低迷的事实。中共用纳税人的钱滋养全世界最大的新闻媒体信息控制与审核体系，拥有最庞大的防火墙。
+ 
+5月份曾大量删除社交媒体中有关川普推特欲加税的信息，但无孔不入的消息导致A股暴跌5.6%，破近三年记录。
+ 
+中共最怕民众知道真相，神圣万能的共产党形象绝不能毁。习近平更加推行党高于一切，铁腕控制舆论，只能传播“正能量”。市场新闻、娱乐八卦等媒体领域也难逃政治审核魔爪。经济要实现可持续发展，首先要实现信息自由传播，否则企业如何正确快速决策？【GM29】
+来源：https://asia.nikkei.com/Opinion/Silencing-bad-news-won-t-help-China-s-economy"))
+               (u (:- `(cite () ,(@ "https://asia.nikkei.com/Opinion/Silencing-bad-news-won-t-help-China-s-economy"
+                                    "Silencing bad news won't help China's economy")
+                             (small () "2019.8.7 Nikkei")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222492")
+               '(q () (pre () "
+【新闻】8月7日，中共正加紧四处活动妄图争取全球支持他们处理香港抗议活动,中共驻欧洲大使呼吁谴责香港的暴力，试图说服欧洲各国站在中共的一边。
+ 
+中共已经使用各种阴谋诡计来争取国际社会支持他们在抗议活动中的立场。上周,国家通讯社新华社发表了一系列采访"外国专家"的文章,批评其他国家对香港的"不负责任的言论"。
+ 
+这些被采访的包括肯尼亚、墨西哥和阿富汗在内的各国分析家，这些人都在采访中支持中共的理论,即暴力是"外国势力"试图破坏中国主权的结果。
+ 
+中共的这些诡计不再有用，纷纷被各大新闻媒体披露！【GM33】
+信息来源https://www.scmp.com/news/china/diplomacy/article/3021835/chinas-envoys-try-rally-europe-beijings-side-hong-kong"))
+               (u (:- `(cite () ,(@ "https://www.scmp.com/news/china/diplomacy/article/3021835/chinas-envoys-try-rally-europe-beijings-side-hong-kong"
+                                    "China’s envoys try to rally Europe to Beijing’s side on Hong Kong protests")
+                             (small () "2019.8.7 South China Morning Post")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222489")
+               '(q () (pre () "8月6日，BBC 驻香港记者报导：香港局势正在升级，中共渐渐露出獠牙【GM37】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222487")
+               '(q () (pre () "
+【新闻】越南加强商品生产地审核，力阻中共国转口贸易
+据日经新闻8月8日讯，今年上半年越南向美国出口商品比上年同期激增30%，对美形成顺差，川普总统暗示越南要采取措施阻断转口贸易。越南已加强原产地审核，规定他国商品在越南再加工必须增值30%以上方可标记“越南制造”。【GM29】
+来源：https://asia.nikkei.com/Economy/Trade-war/Hanoi-narrows-made-in-Vietnam-to-block-Chinese-detours"))
+               (u (:- `(cite () ,(@ "https://asia.nikkei.com/Economy/Trade-war/Hanoi-narrows-made-in-Vietnam-to-block-Chinese-detours"
+                                    "Hanoi narrows 'made in Vietnam' to block Chinese detours")
+                             (small () "2019.8.8 Nikkei")))))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/222463")
+               '(q () (pre () "
+8月7日：被我偶遇．凯琳在中国七．七夕情人节．偷偷给旧庄送甜品🍮……这是什么意思……什么情况😳一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222462")
+               '(q () (pre () "
+【新闻】8月7号中共港澳办高管拒绝对香港骚乱开展独立调查
+8月7号彭博社政治栏目的一则消息称，中共负责港澳事务的一名高级官员周三拒绝了，来自商业领袖和支持港府人士对当下香港骚乱进行独立调查的请求。尽管中共当局承认这是自回归以来最糟糕的一次民众抗议，但北京的回应依然显示其强硬姿态，拒绝向民众“双普选”等诉求妥协。
+ 
+香港市民抗议“送中”条例的上街活动，已经持续了两个月。局面依然僵持不下。更有消息称，在中港边界集结了大批的武装警察和军车，随时入港戒严。中共30年前，在天安门血腥镇压学生的和平请愿运动。
+ 
+如今总总迹象表明，尽管美国等西方国家密切关注香港的事态发展，北京采取当年血腥镇压的可能非常大。【GM12】
+消息来源彭博社
+https://www.bloomberg.com/news/articles/2019-08-07/china-rejects-one-demand-that-could-help-ease-hong-kong-protests"))
+               (u (:- `(cite () ,(@ "https://www.bloomberg.com/news/articles/2019-08-07/china-rejects-one-demand-that-could-help-ease-hong-kong-protests"
+                                    "China Rejects One Demand That Could Help Ease Hong Kong Protests")
+                             (small () "2019.8.8 Bloomberg")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222445")
+               '(q () (pre () "
+【翻译】亲爱的总统先生，
+我们写这封信是关于香港市民正在因反对一项引渡法案而举行的抗议活动。如该法案通过，将使居住在香港或途经香港的任何人引渡到中国大陆进行审判和执行。而这项被搁置的法案对美国的安全和经济利益以及美国人的安全也构成了直接威胁。抗议者遭到暴力袭击，北京却指责是美国煽动的暴乱。因此，我们敦促白宫发表一份严正声明，谴责北京破坏香港自治，置在港的美国居民于危险境地，以及中共涉嫌雇佣暴徒镇压香港人民的抗议活动。
+ 
+自2019年3月底以来，香港特别行政区(特区)人民纷纷走上街头 。继而，商界和民间社会领袖和数百万香港居民在2019年6月9日、6月12日和6月16日举行了示威活动，和平地抗议该法案的通过。虽然香港特别行政区政府因为公众的反对暂停了引渡法案的通过，但并没有撤销。因此和平示威仍在继续。而警方与示威者发生暴力冲突后，香港警务处一再以记者为目标，在毫无必要的情况下，不正当地使用非致命的人群控制设备，严重危及了抗议者的生命。
+ 
+2019年7月22日周日晚，疑似有组织的犯罪嫌疑人可能受到中国共产党的指使在元朗地铁站袭击示威者和普通市民。虽然有嫌疑人被捕，但香港警方并没有采取措施制止暴力，也没有追究肇事者责任。北京似乎只在加剧香港紧张局势。据报道，中国官员对美国外交官和香港居民发出了含蓄的警告，并暗示中国人民解放军可能有理由地干预香港事务。我们认为，这种说法是不能接受的，需要美国和国际社会作出强有力的反应。不回应北京的威胁只会助长中共肆无忌惮的迫害。
+ 
+香港特别行政区政府事宜不是中国内政。中国必须完全遵守1984年《中英联合声明》的宗旨和原则。这是一项具有法律效力的条约，保证香港在治理问题上不受大陆的影响。如果香港自治权进一步受到侵犯则会损害到美国利益。中国政府是否愿意履行其国际承诺，直接关系到能否信任与北京达成的任何协议，尤其是贸易协议。
+ 
+作为《香港人权及民主法》的提案国，我们随时准备在这项重大事件上与您配合。
+ 
+真诚地
+（联名参议员）
+马可卢比奥
+美国参议员
+ 
+本杰明.L.卡丁
+美国参议员
+ 
+詹姆斯.P.麦克郭文
+美国众议员
+ 
+克里斯托弗·h·史密斯
+美国众议员 
+【GM10】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222440")
+               '(q () (pre () "
+Doesn't He Know We Are Living in the 21st Century?😂😂😂 Well-known Chinese Professor swears that \"China is ready to fight the United States!\", He also ridicules the Taiwan military, calling them dead meat. 中国知名大学教授狂言中国有实力跟美国开战！， 嘲笑台军20万是肉堆摆设！ [GM35]"))
+               (u (:- '(pre () "(我: 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈 不要认为它们敢不敢 需要做好准备"))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222439")
+               '(q () (pre () "
+【翻译】中国最大的芯片制造商仍然落后于其全球竞争对手
+https://spark.adobe.com/page/437g5Ut4Kj6F3/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/437g5Ut4Kj6F3/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222438")
+               '(q () (pre () "
+【翻译】中共警告香港：如果局势恶化，中共将进行干预  
+https://spark.adobe.com/page/ihxMn94gkgF5n/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/ihxMn94gkgF5n/")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222434")
+               '(q () (pre () "
+8月7日战友们来看看叶宁这个丑陋的所谓律师的真面目！！ 他为了跟一起生活了几十年的妻子离婚，竟然说从结婚第一天就不存在合法性！！！他竟然还是个律师！真是侮辱了律和师这俩字！这样的人居然要代表中国搞民主，法治！！！太荒唐了！！ 咱们必须看清这个丑陋的所谓律师的真面目！！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222425")
+               '(q () (pre () "
+【CCP news Aug. 6】 US will suffer labeling China “currency manipulator.” Said by Chinese Treasury Department. 中国人民银行发布关于美国财政部将中国列为汇率操纵国的声明说美国会自食恶果，看看中共此时此刻还在蒙骗人民！！(GM38)")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222424")
+               '(q () (pre () "
+【CCP新闻】8月7日中共媒体力挺委内瑞拉邪恶政权 中国最大的搜索引擎，最大的新闻平台百度的头条新闻力挺委内瑞拉的马杜罗独裁政权。 发表题为委内瑞拉怒斥(美国)的新闻。 委内瑞拉外交部的表演和中国外交部一模一样，不愧为一丘之貉。(GM09)")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222421")
+               '(q () (pre () "
+【香港逆權抗爭快報】8.7.2019
+8.5林鄭率高官出來開記者會，配合國務院和中央電視台口吻，指【遊行示威已經嚴重威脅一國兩制，把香港推向不歸路】，回避記者有關【會不會撤回逃犯修例】，拒絕回答【會不會成立獨立調查委員會】......
+ 
+香港的律政司司長選擇性執法,，對元朗無差別攻擊市民的疑犯以【非法集結控罪】，而對在近日遊行被抓捕的市民，在沒有立案調查情況下卻急速控告【暴動罪】。今天，法律界再度上街，他們對律政司鄭若驊【選擇性執法】的行為強烈遣責，因為此舉嚴重動搖了法制的根基。
+ 
+警方的選擇性執法表現在對元朗721當天攻擊市民的人沒有任何抓捕，但對遊行市民的行動已見逐步升級，昨天（8.6）浸大學生會會長在街上鋪頭買觀星筆被便衣警員指【涉藏攻擊性武器】而被抓，當市民自發聚在警署門口要求放人時，警員又武力清場。迄今已抓捕超過500名市民，包括在校學生和職場人士，其中更有在現場帮手救援的休班醫護人員。
+ 
+另一方面，8.5黑社會人士在北角用長棍和鎅刀襲擊市民，當時警察也姍姍來遲，理由是【警署被人包圍出不了車】。
+ 
+以上種種跡象很明顯地看到中共對香港正在實施【六四】行動前的準備措施：政策上定性，宣傳上統一口徑和洗腦，司法執法工具的掌控，黑道上的默契配合，然後不斷分化市民，鼓勵群眾內鬥......
+ 
+香港的街頭運動在經歷過【雨傘運動】【魚蛋革命】後，他們總結出【沒有大台】【BE WATER】【去中心化】，在社交平台上把問題丟出讓大家投票，然後自發行動；當發現行動有很多負面回饋時他們會馬上做出調整，包括向市民道歉......他們利用社交媒體平台傳播真相，統計，分析回饋數據，再制定下一步方案......這已然是平民運動的雏形，整個過程是由民意主導著大方向。這是信息的時代，他們追求的是天賦的權利－－－－自由，民主，法制！這一權利不可剝奪。
+VOG　粵語組
+https://www.facebook.com/RTHKVNEWS/videos/2090287604601009/
+購觀星筆被指涉藏攻擊性武器　浸大學生會會長被捕送院
+https://www.facebook.com/RTHKVNEWS/videos/2090287604601009/
+【法律界黑衣遊行】現場直播
+https://www.facebook.com/RTHKVNEWS/videos/379724049394987/
+【人大政協代表出席「香港局勢座談會」後見記者】深圳現場直播"))
+               (u (:- `(cite () ,(@ "https://www.facebook.com/RTHKVNEWS/videos/2090287604601009/")))
+                  (:- `(cite () ,(@ "https://www.facebook.com/RTHKVNEWS/videos/2090287604601009/")))
+                  (:- `(cite () ,(@ "https://www.facebook.com/RTHKVNEWS/videos/379724049394987/"))))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 7
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.7")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=XAl6r24vusE"
+                           "2019-08-07 郭文贵先生【爆料直播】 王岐山和德国前副总理-菲利浦什么关系. PAG太盟投资与海航王岐山什么关系. 为什么太盟投资和林郑月娥.菲利浦.陈峰.王岐山走在一起")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222346")
+               '(q () (pre () "郭文贵先生向麥克萊奇公司，瑪塔·奧利弗·克拉維亞托
+和莎拉·布拉斯基提出投訴和控告，並要求金錢賠償
+被告瑪塔·奧利弗·克拉維亞托 是《邁阿密先驅報》的記者，該報由被告麥克拉奇擁有和經營
+Plaintiff, Guo Wengui a/k/a Miles Kwok (“Guo” or “Plaintiff”), for his complaint and action for money damages against Defendants The McClatchy Company, Marta Oliver Craviatto, and Sarah Blaskey")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/222345")
+               '(q () (pre () "
+文字版：2019年8月6日 谈美国将中共定位汇率操纵国的意义 
+https://spark.adobe.com/page/McqxaYNyStz4U/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/McqxaYNyStz4U/")))))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/222343")
+               '(q () (pre () "
+文字版：2019年8月5日 香港大劫在即······希望香港的四个不要脸群体，能站在正义的一边帮助上街的孩子们
+https://spark.adobe.com/page/CD0KlNyXLJZg2/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/CD0KlNyXLJZg2/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222335")
+               '(q () (pre () "
+8月5号 中国问题专家透露：在中共眼里，川普是最坏的【GM38】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222313")
+               '(q () (pre () "
+【新闻】人民日报“狂吠”美国“无事生非”“背信弃义”！
+8月7日，中共党媒人民日报钟声发表了一篇“无事生非的荒唐逻辑（钟声）--评美国一些人的背信弃义”的文章，强烈谴责美国“谎言重复千遍依然是谎言”。
+ 
+文章中称，中国今年上半年经济保持中高速增长，国内生产总值同比增长6.3%，而一些美国人胡说中国经济非常糟糕。中国严格实施芬太尼类物质整类列管，美方诬陷中方是美国的芬太尼类物质主要来源地。
+ 
+还声称美国四处离间，妄称“中国通过胁迫手段阻止南海开发”等四处散播“中国威胁论”内容。希望美方尊重事实，遵守道义。
+ 
+众所都知，中共党媒整日胡言乱语，谎话连篇，上帝欲其灭亡，必先使其疯狂。人民日报这则“钟声狂吠篇”从一方面也显示了中共灭亡前的垂死挣扎。【GM30】
+引自：https://news.sina.cn/2019-08-07/detail-ihytcerm9075608.d.html?from=wap"))
+               (u (:- `(cite () "(!!!中共国网站链接)"
+                             ,(@ "https://news.sina.cn/2019-08-07/detail-ihytcerm9075608.d.html?from=wap"
+                                 "人民日报钟声：无事生非的荒唐逻辑")
+                             (small () "2019.8.7 新浪新闻")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222311")
+               '(q () (pre () "
+【新闻】8月6日，在香港警察居住的大院外面发生了示威群众与警察的冲突。警察向人群发射了数枚橡皮子弹。
+ 
+其中一位在现场采访的记者被子弹击碎了放毒面具。他表示当时突然感到有橡皮子弹射到了脸上，幸好有面具的保护，脸部才没有受伤。他在推特上展示被击碎的防毒面具和子弹，并提醒大家一定要小心！【GM39】
+图片来自@StephenMcDonell 推特"))
+               (u (:- `(cite () "Stephen McDonell @StephenMcDonell : "
+                             ,(@ "https://twitter.com/StephenMcDonell/status/1158315599346335746?s=20")
+                             (small () "2019.8.5 Twitter")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222310")
+               '(q () (pre () "
+【翻译】中国警告：如果华为被封禁，印度会遭“反向制裁”  
+https://spark.adobe.com/page/lBArUS3MRChbv/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/lBArUS3MRChbv/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222309")
+               '(q () (pre () "
+8月6日新闻报导说彭斯副总统表示美国计划制裁侵犯人权的中国高官。
+一位中国宗教自由倡导者周一在白宫会见了彭斯，他透露，副总统彭斯已经暗示川普政府会根据《全球马格尼茨基法案》去制裁中国新疆的高级官员。【GM33】
+https://www.zerohedge.com/news/2019-08-06/vp-pence-signals-us-plans-sanction-top-china-officials-over-human-rights-abuse"))
+               (u (:- `(cite () ,(@ "https://www.zerohedge.com/news/2019-08-06/vp-pence-signals-us-plans-sanction-top-china-officials-over-human-rights-abuse"
+                                    "VP Pence Signals US Plans To Sanction Top China Officials Over Human Rights Abuse")
+                             (small () "2019.8.6 Zero Hedge")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222285")
+               '(q () (pre () "
+【新闻】8月7日，社交媒体成为中共政府疯狂煽动民族主义的工具! 近日中共控制的社交媒体疯狂煽动民族主义，在微信中微信公众号媛媛说的文章《香港问题的来龙去脉》和《台湾问题的来龙去脉》被许多人转载，带有明显舆论引导痕迹，没有指出香港问题的本质是反对共产党体制。 微博中人民日报发起的#港澳办回应香港下一步怎么办#话题阅读1.6亿，#461人在香港暴力冲突中受伤#话题阅读4.7亿。#新闻联播再次正告乱港暴徒#阅读1.6亿。#我在这里守护国旗#话题阅读2.3亿。所有话题引用片面或曲解视频片段，使用语言极具煽动性。【GM01】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222284")
+               '(q () (pre () "
+8月6日华尔街日报报导：在新闻发布会上,中国负责香港事务的最高领导对香港当局进一步惩治“暴力”和“维护法治”给予了默许。
+而香港抗议者不惧来自政府的暴力镇压，他们不顾生命危险舍生忘死，釆用更决绝的方式对抗中共！
+
+https://www.wsj.com/articles/prepared-to-die-hong-kong-protesters-embrace-hard-core-tactics-challenge-beijing-11565038264"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/prepared-to-die-hong-kong-protesters-embrace-hard-core-tactics-challenge-beijing-11565038264"
+                                    "‘Prepared to Die’: Hong Kong Protesters Embrace Hard-Core Tactics, Challenge Beijing")
+                             (small () "2019.8.6 The Wall Street Journal")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222276")
+               '(q () (pre () "
+【翻译】川普不屑對貿易戰的擔憂；中國預警金融市場混亂  https://spark.adobe.com/page/kfCIbcjn7xpHU/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/kfCIbcjn7xpHU/" )))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222275")
+               '(q () (pre () "
+【翻译】解放軍駐港部隊司令表達強硬立場
+  https://spark.adobe.com/page/ybPoLEFs7hrgV/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/ybPoLEFs7hrgV/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222246")
+               '(q () (pre () "
+【国际新闻】08月06日 白宫经济顾问表示 中国经济正“摇摇欲坠” 
+
+白宫经济顾问莱瑞 库德罗(Larry Kudlow)08月06日接受CNBC采访。分析了中国目前的经济形势，他表示：“所有对中国的长线投资和一系列的中国经济指标都在单向下行。”
+
+“如今，中国经济已经\‘摇摇欲坠\’，不似20年前那样强大”。 CNBC的采访同时提到，中国的经济数据正处于27年来的最低点。(GM09) 新闻来源： https://www.cnbc.com/2019/08/06/trump-economic-advisor-larry-kudlow-says-chinas-economy-is-crumbling.html"))
+               (u (:- `(cite () ,(@ "https://www.cnbc.com/2019/08/06/trump-economic-advisor-larry-kudlow-says-chinas-economy-is-crumbling.html"
+                                    "Trump economic advisor Larry Kudlow says China’s economy ‘is crumbling’")
+                             (small () "2019.8.6 CNBC")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/222229")
+               '(q () (pre () "
+8月6日：尊敬的战友们好……8月7日纽约时间上午10点到12:00左右，文贵在郭媒体爆王岐山和海航．太平投资PAG姚依林私生孙的小料直播……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222215")
+               '(q () (pre () "
+【新闻】中国深圳公安8月6日举行大练兵
+据深圳市公安局官方微博报道,深圳公安在8月6日10:30，在宝安区海滨广场举行“广东公安夏季大练兵\‘深圳亮剑\’行动”。
+ 
+此次练兵是为了新中国成立70周年国庆做准备，模拟了特警演练和应急处置突发事件。
+ 
+今天模拟了1500人警力面对2000名示威者的场面。大批特警人员一字排开，手持长盾牌组成多个分队，应对身穿黑色衣服、戴上头盔、口罩，以及手持标语的示威者。
+ 
+示威者随后冲击不断升级，他们高叫口号，用砖头、木棒、铁马和火烧手推车，冲击特警的防线，又扔“汽油弹”。特警其后向天施放催泪烟和防暴枪，驱散示威者， 并拘捕部分人，成功处置暴力骚乱事件。【GM21】
+新闻来源:https://www.zaobao.com.sg/realtime/china/story20190806-978733"))
+               (u (:- `(cite () ,(@ "https://www.zaobao.com.sg/realtime/china/story20190806-978733"
+                                    "【图集】深圳公安大练兵 模拟处置暴力骚乱事件")
+                             (small () "2019.8.6 早报")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222212")
+               '(q () (pre () "
+Aug 5: Kyle Bass’ insight into China-US relationship, Hong Kong situation and the war plan against CCP.
+8月5日 凱爾巴斯談中美關係，香港局勢：中美經濟戰將使中共癱瘓，因為所有的牌都在美國手中。[GM35]")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222208")
+               '(q () (pre () "
+8月6日：(笑谈CCP)中共派出了史上最强的团队．去戒严消灭香港🇭🇰【中共．为进一步凝聚警心、砥砺担当、练兵备战，6日，广东省深圳公安与人民解放军．举行了“深圳亮剑”夏季大练兵，？？？名警力军力．参加，全警种上阵，海陆空联合演习，一起感受震撼现场。随时接管香港……香港不听话的人该害怕了吧……30万平暴部队到达之时……就是消灭你们之日……总指挥．王歧山．孟建柱．孙力军．冮志成．吴征．钥匙杨．……】一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 6
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.8.6")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=zyFjtpuuvSc" 
+                           "2019-08-06 郭文贵先生直播 谈美国将中共定位汇率操纵国的意义")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222199")
+               '(q () (pre () "
+【新闻】中美货币战引世界关注！！世界大变局到啦！
+据日经新闻8月7日讯，中共操控人民币汇率破7，川普总统随即宣布中共国为汇率操纵国（1994年以来全世界首次），中美紧张局势立即触发货币战。中共黔驴技穷，为抵消关税影响，贬值人民币已是最后一招。为了不激怒华府，中共不断加强在岸人民币交易管制，同时拟在港发售300亿人民币（42.8亿美元）央行票据以紧缩流通，避免人民币狂泻不止。人民币离岸市场交易不受国内在岸市场行政干预，这更是中共的软肋。同时，离岸发人民币债券，会进一步影响市场信誉，继而引起更多的资本外流。【GM29】
+来源：https://asia.nikkei.com/Economy/Trade-war/World-braces-for-dangerous-US-China-currency-standoff"))
+               (u (:- `(cite ()
+                             ,(@ "https://asia.nikkei.com/Economy/Trade-war/World-braces-for-dangerous-US-China-currency-standoff"
+                                 "World braces for dangerous US-China currency standoff")
+                             (small ( ) "2019.8.7 Nikkei")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222197")
+               '(q () (pre () "
+【新闻】川普总统谴责中共恶意操控人民币贬值
+据日经新闻8月6日讯，周一人民币“双破7”，川普总统谴责中共恶意贬值人民币以增强出口能力，抵消关税负面影响，但这也会损害中国经济。而中共央行含沙射影，指责他国贸易保护主义导致人民币贬值，宣称中国不会操控汇率。
+中国经济6月下行至历史低点，受贸易战影响，制造业及外来投资均大幅下滑。恶意贬值人民币不仅会打击投资者对中国市场的信心，也会引起大范围的货币战争。人民币自2015年之后突然顶住贬值压力，这只“看不见的手”也导致中共4万亿美元外汇储备狂泻25%。市场恐慌会继续，投资者会不断抛售人民币资产，最终汇率操控一定会成为无米之炊，继而引发货币崩盘。【GM29】
+来源：https://asia.nikkei.com/Economy/Trade-war/Trump-bashes-currency-manipulation-as-Beijing-lets-yuan-slide"))
+               (u (:- `(cite () ,(@ "https://asia.nikkei.com/Economy/Trade-war/Trump-bashes-currency-manipulation-as-Beijing-lets-yuan-slide"
+                                    "Asia stocks slide after US labels China a currency manipulator")
+                             (small () "2019.8.6 Nikkei")))))
+           (:- "郭文(视频): "
+               (@ "https://www.guo.media/posts/222194")
+               " .. "
+               (@ "https://www.guo.media/posts/222194")
+               '(q () (pre () "
+8月5号  2) 卡尔巴斯：人民币将会崩盘  August 5, Kyle Bass RMB is collapsing(part 2) 【GM36】
+8月5号  1) 卡尔巴斯：人民币将会崩盘  August 5, Kyle Bass RMB is collapsing(part 1) 【GM36】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222190")
+               '(q () (pre () "
+8月5号 纳瓦罗：标记中国为货币操纵国是川普对中共不会继续容忍的反制【GM12】")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/222188")
+               '(q () (pre () "
+2019年8月6日郭文贵先生直播21条！！！
+第一，最重要的是，中共經濟滲透美國的真實力量。這次川普總統通過貨幣操縱國他能感受得到。西方能感受到到底中共有多大的滲透力量在西方。特別是美國的賣國集團。
+ 
+第二，讓美國和西方看到中共的真正的經濟實力。到底中共對他有多大的威脅，他多在乎。
+ 
+第三，美國內部誰是賣國集團。
+ 
+第四，美元在市場的力量到底有多大。現在美元在世界上的實際價值和他的信用度是多少。經過中共這18年的WTO較量之後，美元在世界影響力有多大。
+ 
+第五，是一次絕對的中美之間經濟實力，和經濟價值和貨幣淨值的真實較量。
+ 
+第六，貨幣操縱國的意義在於什麼，全面瞭解中共的海外實力。
+ 
+第七，美國能做什麼？停止貨幣結算在全球， 停止使用美元貨幣結算。
+ 
+第八，美國能做什麼？停止（撤回）美國機構和個人對中共的投資。
+ 
+第九，中共的偷盜，通姦和美國賣國集團一起的經濟，這次將大白於天下。
+ 
+第十、這個時間點，把中共列為貨幣操縱國和香港的反送中運動和港幣聯繫在一起，形成金融領域最可怕的信心喪失。
+ 
+第十一，形成共產黨後門被掏肛，前面被槍頂著，後面被掏肛的感覺。他只能左右。左，就是共產黨賴以生存的兩個核心武器，叫做政治空間。第一個，中華人民共和國共產黨綁架了十四億人民的單一的，絕對的政治體制，所謂他認為，中國人民同仇敵愾，共同反美的愛國主義，所建立的中國國內的單一市場經濟。這個他認為的第一個武器。
+ 
+第十二，第二個他認為的武器是，現在由於美國內部的政治鬥爭，和川普總統受到了內部的挑戰，和共產黨在西方埋下的盜國集團和賣國集團的核心利益對他的威脅。這叫做所謂的美國政治風險。
+這倆武器。等你犯錯，你要死，我內部全都愛我，老百姓都愛我，老百姓都對付你。這是他的核心兩條。這核心兩條正好相反，連個屁都不是。
+ 
+第十三，共產党最相信的五國聯盟，形成一個經濟共同體，抱團取暖，通過這次摧毀式打擊。
+ 
+第十四， 打開美國內部政治兩黨競爭一個新局面，今年大選前把中共給滅了。
+ 
+第十五，美國將開始弱勢美元。美國明搶共產黨暗偷，因為你沒有人民的支持！你是為了盜國賊不超過10個家族服務。但美國這次會公開弱美元，加強美國內需，擴大美國市場。一球一世界。
+ 
+第十六， 美日台韓歐洲，所有政治經濟合作，一個新的世界經濟體誕生。
+ 
+第十七，美國的賣國集團徹底醒過來。美國將用5G，AI, 生物科技，新能源 ...等產生新的集團，新的經濟模式。讓美國更偉大，世界更和平。
+第十八，把中共定位货币操纵国绝不是总统一时兴起，绝不是跟你玩点什么贸易。爆料革命和我們所有戰友親眼看到川普總統要摧毀共產黨體制是發自內心的。
+ 
+第十九，為什麼我們說在7月20號左右，在7月27日後，世界將徹底改變，中共將以光的速度滅亡。在沒有上海西郊賓館談判時，我就說西郊賓館是中美關係的葬送地！當共產黨決定這個會議的模式後，他們等於失靈了。美國向全世界證明，中共是騙子。
+據說沒有一樣超出美國預期。這可能是美國對中國最有效的一次情報分析。
+提前降息，然後一系列的決定就此開始。
+ 
+第二十，美國指數變化，讓美國看到，中共在美國和賣國集團合作的能力和滲透深度。
+中共向利用股市讓川普停下來。大量拋售，造成股市恐慌。沒想到早在安排之中。這次傷害到的只有中共和美國賣國集團。給美國市場降溫
+ 
+第二十一，美國房產什麼情況，美國房產又到了2008年之前，瘋狂。")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222184")
+               '(q () (pre () "
+【新闻】8月6号国务卿庞培奥宣布“美国对前马杜罗政权施加最大压力”
+8月6号：刚刚几分钟前，庞培奥宣布，美国对前马杜罗政权将施加最大压力，开启了美国对这个独裁的，让百姓失去生存权的，非法政府的全面制裁。
+
+也就在昨天，8月5日，美国总统川普签署了这一项行政命令，正式全面查封委内瑞拉政府在美国境内的的所有财产和权益。美国政府行动一旦开启，就不会停止！委内瑞拉只是刚刚开始！接着会有更多的，包括共产党在内的暴政被制裁被打击。
+【GM12】
+消息来源：庞培奥国务卿官方推特号和美国国务院官网
+https://twitter.com/SecPompeo/status/1158854591657730049?s=20
+https://www.state.gov/the-united-states-imposes-maximum-pressure-on-former-maduro-regime/"))
+               (u (:- `(cite () "Secretary Pompeo  @SecPompeo : "
+                             ,(@ "https://twitter.com/SecPompeo/status/1158854591657730049")
+                             (small () "2019.8.6")
+                             (q () (pre () "
+On August 5, the United States imposed full blocking sanctions on the Government of #Venezuela, to target the former Maduro regime and those who support it. General licenses enable humanitarian aid and protect the government led by @JGuaido."))))
+                  (:- `(cite () ,(@ "https://www.state.gov/the-united-states-imposes-maximum-pressure-on-former-maduro-regime/"
+                                    "The United States Imposes Maximum Pressure on Former Maduro Regime")
+                             (small () "2019.8.6 U.S.Department of State")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222174")
+               '(q () (pre () "
+20190805.【大埔】警方欲進入大埔超級城被拒. 勇敢正气的香港同胞在全副武装的爆警面前正气凛然！体现出法治社会的人民该有的自信！！！ 所以这次抗争必胜！因为一旦被中共得逞，那么将会沦为强权下的奴隶！！【GM33】【GM06】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222167")
+               '(q () (pre () "
+【新闻】香港市民手機拍片即遭警搜身　被恐嚇襲警藏毒
+香港昨日多區出現警民衝突，警方多次施放催淚彈，更拘捕大批人士，被捕人士當中有多人稱自己只是街坊途經，更有多名途人手無寸鐵下，僅以手機拍攝後即被警方恐嚇「懷疑襲警」，被質疑濫捕。【GM15】
+引自: https://tw.news.appledaily.com/international/realtime/20190806/1612589/"))
+               (u (:- `(cite () ,(@ "https://tw.news.appledaily.com/international/realtime/20190806/1612589/"
+                                    "香港市民手機拍片即遭警搜身　被恐嚇襲警藏毒")
+                             (small () "2019.8.6 蘋果日報")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222166")
+               '(q () (pre () "
+【新闻】8月6日中国大陆网络宣传黑化香港游行 鼓动暴力压制香港游行
+继中国中央电视台、环球时报等官方媒体连日播发新闻宣称香港港独暴乱，香港各界呼吁特区政府尽快将狂徒暴徒迅速缉拿归案之后。8月6日，大陆微博、微信公众号、朋友圈大量推送转发两篇网文，宣称8月5日晚香港北角发生的黑社会暴徒殴打游行人群事件为港独极端分子清洗福建帮。鼓动消费大陆不明真相民众的爱国情绪，公开宣扬暴力压制香港抗议人群。
+ 
+在一篇为《香港突发！今天，我们把头条留给牛逼的福建人！》网文里，通过香港北角是福建籍人士聚居地切入，把殴打游行人群的黑社会人员描述成不堪骚扰奋起反击的福建籍北角居民。鼓动不明真相群众的乡土热情，把游行人员描述成“港独废青”，需要教训。跟贴里为黑社会人员“打了回去”欢呼，甚至有跟贴扬言“打死这群废青”、“打死港独”。
+文章附有大量未经核实的微博跟贴宣称：“有福建的人员连夜出发”，“福建晋江石狮那边已经集合上千人，坐船过去”，“从澳门包船过去”，“泉州去香港的连机票都没了”。鼓吹暴力打击香港抗议人群。
+ 
+在另一篇二十多名福建人抵抗四百多港独分子！的网文中，把香港的抗议游行称为“港独极端分子”去北角”清洗福建帮“，引发与福建籍人士互殴。网文还配上一张难辨真伪的图片，模糊不清的图片显示一群黑衣人坐在一块写着“清洗福建帮”字样的广告牌前。
+这篇网文，以微信聊天记录截图为讲述载体，鼓吹福建人比较团结，比较有打架经验，并称同乡会有分配，每个乡里都要出人，称“可能会死人”“福建人好多是战斗英雄”。内容跟上一篇网文相互呼应。
+ 
+两篇网文的截图消息未经核实，且在中国大陆目前高压维稳，大力“扫黑除恶”运动势态下，民间自发组织大量人员跨越千里参与暴力活动可能性极低。但通过这种流言方式传播大陆地区有人去香港维持秩序、维护统一的消息，有制造舆论氛围、为后续派兵镇压创造想象空间的嫌疑。【GM30】
+https://mp.weixin.qq.com/s/cShVl7UZ1vtU8aH3u5jmvQ"))
+               (u (:- `(cite () "(!!!中共国网站链接)"
+                             ,(@ "https://mp.weixin.qq.com/s/cShVl7UZ1vtU8aH3u5jmvQ")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222164")
+               '(q () (pre () "
+8月6日参议员汤姆科顿在警告中共！！！ 如果中共对香港实施戒严,或采取其他激进的行动,打击和违反1984年中英联合声明规定的义务,那将是一个无法弥补的违规行为，极端美中关系。如果发生这种情况, 我建议我们采取30年前天安门广场大屠杀后应该采取的行动停止贸易谈判,制裁中共高级官员,吊销他们的签证,把他们踢出国际组织,并重新考虑《香港政策法》。【GM33】 https://www.hughhewitt.com/senator-tom-cotton-on-google-and-facebook-and-with-a-warning-for-the-prc-re-hong-kong/"))
+               (u (:- `(cite () ,(@ "https://www.hughhewitt.com/senator-tom-cotton-on-google-and-facebook-and-with-a-warning-for-the-prc-re-hong-kong/"
+                                    "Senator Tom Cotton on Google and Facebook, and with a Warning for the PRC re Hong Kong")
+                             (small () "2019.8.6 Hughhewitt")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222161")
+               '(q () (pre () "
+美东时间：2019.8.6. 14:30 . 班农与文贵先生连线直播
+郭媒体中英文双频道 同声翻译同时直播 
+
+1.班农与文贵先生谈美国将中共定位汇率操纵国的意义 
+2.香港抗议运动 会得到美国和西方的支持吗？
+3.什么时间共产党会对香港实施戒严 管制
+4.如果中共对香港采取戒严管制 美国会做什么 
+5.班农先生与爆料革命 会为戒严管制香港做些什么
+
+1. Mr. Bannon and Guo Wengui discuss the significance of the US designating China a currency manipulator.
+2. Will the Hong Kong protest movement receive the support of the US and the West?
+3. When will the CCP impose martial law in Hong Kong?
+4. If the CCP imposes martial law in Hong Kong,   how will the US respond?
+5. How will Mr. Bannon and the Exposé Revolution respond to the imposition of martial law in Hong Kong?")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222160")
+               '(q () (pre () "
+【新闻】8月6日华尔街日报报导称，在贸易战中,中国的强硬立场面临巨大的经济风险；中国领导人发出了一个强烈的信息:人民币在贸易战中可能被用作武器。【GM33】 https://www.nytimes.com/2019/08/06/world/asia/china-xi-jingping-trade.html"))
+               (u (:- `(cite () ,(@ "https://www.nytimes.com/2019/08/06/world/asia/china-xi-jingping-trade.html"
+                                    "In Trade War, China’s Hard-Line Stance Risks Economy")
+                             (small () "2019.8.6 The New York Times")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222154")
+               '(q () (pre () "
+【视频翻译】8月2日CNBC采访班农......中国一直在钻空子。9月1日，美国将向所有从中国进口的商品征收关税。
+Aug 2: Bannon on Trade War：It’s remarkable how China tried to “game the system”【GM35】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/222139")
+               '(q () (pre () "
+8月5日，美国防部长明确表态希望几个月内在亚洲部署中程导弹。 Aug. 5, The US Defense Secretary said he's keen to quickly deploy new missiles in Asia.（GM37）")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222136")
+               '(q () (pre () "
+【新闻】黑帮组织成为中共政府的雇佣兵 8月6日纽约时报观点文章指出香港黑帮成为中共政府的雇佣兵，上周一中共港澳事务办公室发言人打破沉默的发言表示了中共不仅支持香港警察暴力执法，有需要时还会对犯罪组织提供支持。 7月21日，香港黑社会在元朗袭击香港市民，甚至殴打孕妇记者，香港警方没有出面干预，甚至有些黑社会成员事后钻进警车。近日，一贯为中共卖力的黑社会福建帮在香港北角使用棍棒殴打香港示威者，中共在大陆控制的社交媒体力量给予了舆论支持。【GM01】 https://cn.nytimes.com/opinion/20190806/hong-kong-protests-triads-gang-china/"))
+               (u (:- `(cite () ,(@ "https://cn.nytimes.com/opinion/20190806/hong-kong-protests-triads-gang-china/"
+                                    "香港黑帮成为政府雇佣兵")
+                             (small () "2019.8.6 纽约时报中文网")))))
+           (:- "郭文(短视频 食物): " (@ "https://www.guo.media/posts/222135")
+               '(q () (pre () "8月6号：文贵开始要吃大餐了，与战友们分享……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222133")
+               '(q () (pre () "
+【翻译】中国货币举措扰乱市场, 美中贸易战在周一进入了一个更危险的阶段!
+https://spark.adobe.com/page/lde7GUQqRaCXY/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/lde7GUQqRaCXY/")))))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/222131")
+               '(q () (pre () "
+8月6号：尊敬的战友们好．文贵将和身在美墨边境的班农先生．在纽约时间今天下午2:00至5:00之间随时直播，乱聊，这几天在香港和中美之间发生的一系列重大事件……并有同声翻译……一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222127")
+               '(q () (pre () "Breaking news.
+https://www.zerohedge.com/news/2019-08-06/vp-pence-signals-us-plans-sanction-top-china-officials-over-human-rights-abuse"))
+               (u (:- `(cite () ,(@ "https://www.zerohedge.com/news/2019-08-06/vp-pence-signals-us-plans-sanction-top-china-officials-over-human-rights-abuse"
+                                    "VP Pence Signals US Plans To Sanction Top China Officials Over Human Rights Abuse")
+                             (small () "2019.8.6 Zero Hedge")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222122")
+               '(q () (pre () "
+https://www.google.com/amp/s/thehill.com/policy/international/asia-pacific/456301-china-warns-of-financial-chaos-after-us-labels-it-a%3famp"))
+               (u (:- `(cite () ,(@ "https://thehill.com/policy/international/asia-pacific/456301-china-warns-of-financial-chaos-after-us-labels-it-a"
+                                    "China warns of financial chaos after US labels it a currency manipulator")
+                             (small () "2019.8.6 The Hill")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222115")
+               '(q () (pre () "
+https://www.google.com/amp/s/thehill.com/policy/international/asia-pacific/456306-china-wont-stand-idly-by-if-us-puts-missiles-in-asia%3famp"))
+               (u (:- `(cite () ,(@ "https://thehill.com/policy/international/asia-pacific/456306-china-wont-stand-idly-by-if-us-puts-missiles-in-asia"
+                                    "China 'won't stand idly by' if US puts missiles in Asia-Pacific region")
+                             (small () "2019.8.6 The Hill")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222109")
+               '(q () (pre () "
+https://www.google.com/amp/s/www.cnbc.com/amp/2019/08/06/trump-economic-advisor-larry-kudlow-says-chinas-economy-is-crumbling.html"))
+               (u (:- `(cite () ,(@ "https://www.cnbc.com/2019/08/06/trump-economic-advisor-larry-kudlow-says-chinas-economy-is-crumbling.html"
+                                    "Trump economic advisor Larry Kudlow says China’s economy ‘is crumbling’")
+                             (small () "2019.8.6 CNBC")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222105")
+               '(q () (pre () "
+https://www.hughhewitt.com/senator-tom-cotton-on-faceapp-facebook-google-and-big-tech-generally/"))
+               (u (:- `(cite () ,(@ "https://www.hughhewitt.com/senator-tom-cotton-on-faceapp-facebook-google-and-big-tech-generally/"
+                                    "Senator Tom Cotton On “FaceApp,” Facebook, Google And Big Tech Generally")
+                             (small () "2019.7.18 Hugh Hewitt")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222095")
+               '(q () (pre () "
+https://www.google.com/amp/s/www.wsj.com/amp/articles/u-s-expands-sanctions-against-venezuela-into-an-embargo-11565053782"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/u-s-expands-sanctions-against-venezuela-into-an-embargo-11565053782"
+                                    "U.S. Expands Sanctions Against Venezuela Into an Embargo")
+                             (small () "2019.8.6 The Wall Street Journal")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/222071")
+               '(q () (pre () "
+https://www.reuters.com/article/us-hongkong-protests-china-office/china-warns-hong-kong-protesters-not-to-mistake-restraint-for-weakness-idUSKCN1UW0L3"))
+               (u (:- `(cite () ,(@ "https://www.reuters.com/article/us-hongkong-protests-china-office/china-warns-hong-kong-protesters-not-to-mistake-restraint-for-weakness-idUSKCN1UW0L3"
+                                    "China warns Hong Kong protesters not to 'play with fire'")
+                             (small () "2019.8.6 Reuters")))))
            (:- "郭文: " (@ "https://www.guo.media/posts/222031")
                '(q () (pre () "
 8月6号台湾自由时报报道：2週前就預告美對中將有大動作！郭文貴笑稱「又矇對了」
