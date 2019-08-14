@@ -14,6 +14,290 @@
  *news-topics-guo*)
 
 (push
+ (u (:- '(small () "2019.8.14")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=phSIIEdPOAg"
+                           "08-13-2019 郭文贵先生 就香港问题直播")
+               '(small () "Youtube: Rolfoundation法治基金")
+               (u (:- '(pre () "..."))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ""))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224827")
+               '(q () (pre () "
+【新聞】8月13日德國銷量最大報紙《圖片報》(bild.de)報導：德國政界也已被驚醒！
+ 
+基督教民主聯盟(CDU/CSU)人權與人道主義援助工作組主席Manfred Brand談到：“目前中國在香港的壓迫升級證實了所有悲觀的預測：“中國正在徹底卸掉他的偽裝，越來越公開挑戰(他們在)國際上承諾過的對香港民主憲法的保證。 ”
+ 
+現在需要的是西方捍衛自由和人的尊嚴的堅定態度。因為它關係到繼香港之後中國是否會進而繼續對台灣以及其它國家實施他的極權主義壓力.
+ 
+人權專家Manfred Brand警告說：“如果歐洲繼續被動，那麼亞洲民主的多米諾骨牌將會倒下，極權主義的中國將會攻擊其下一個目標，一直到歐洲。” 【德语新闻】
+ 
+https://www.bild.de/bild-plus/politik/inland/politik-inland/hongkong-krise-wie-experten-die-gefahr-fuer-die-welt-einschaetzten-63932704.bild.html"))
+               (u (:- `(cite () ,(@ "https://www.bild.de/bild-plus/politik/inland/politik-inland/hongkong-krise-wie-experten-die-gefahr-fuer-die-welt-einschaetzten-63932704.bild.html"
+                                    "Wie gefährlich wird die Hongkong-Krise für die Welt?")
+                             (small () "2019.8.13 Bild")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224800")
+               '(q () (pre () "
+8月14日：Call for Official Recognition of the Chinese Communist Party as a Terrorist Organization
+请全世界把“中国共产党”列为非法组织和恐怖组织！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224793")
+               '(q () (pre () "
+【新闻】8月14日：在香港持续动荡的背景下，中国官员拒绝了两艘美国海军船只到访香港港口的请求
+ 
+周二，美国海军太平洋舰队副发言人、海军中校内特·克里斯坦森(Nate Christensen)在一份声明中说:“中国政府拒绝了绿湾号(USS Green Bay)和伊利湖号(USS Lake Erie)停靠香港的请求，这两艘军舰原定于未来几周抵达香港。”美国“绿湾”号两栖运输舰定于8月17日访问香港，美国“伊利湖”号导弹巡洋舰定于下月访问香港。
+ 
+“美国海军在成功访问香港港口方面有悠久的历史，我们预计这种情况将继续下去。建议你向中国政府了解更多关于他们为什么拒绝这一要求的原因，”克里斯坦森说。
+ 
+这并不是中国官员第一次拒绝美国的船只访问香港的请求。中国同样在2018年取消了对美国港口的访问，此前，美国将中国从一场大型军事演习中驱逐出去，以报复中国向南海有争议的人工岛部署军事装备。
+ 
+美国总统川普星期二在推特上说，“我们的情报告诉我们，中国政府正在向香港边境调遣军队。每个人都应该保持冷静和安全。“【GM31】
+来源：https://edition.cnn.com/2019/08/13/politics/china-us-navy-port-visit/index.html"))
+               (u (:- `(cite () ,(@ "https://edition.cnn.com/2019/08/13/politics/china-us-navy-port-visit/index.html"
+                                    "China rejects US Navy request for Hong Kong port visits amid protests")
+                             (small () "2019.8.14 CNN")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224786")
+               '(q () (pre () "
+【新闻】8月14日，中共公安部开展全警实战大练兵！中共为维护他们的权力，吃奶的劲都使出来了！！
+ 
+8月14日，中共人日官微发文，公安部日前印发《关于2019年至2022年开展全警实战大练兵的指导意见》，部署在全国公安机关开展全警实战大练兵。全警岗位练兵、警种专业练兵、一线实战练兵…召之即来、来之能战、战之必胜！关键时刻拉得出、冲得上、打得赢！
+ 
+随着香港事态加剧，国内矛盾也日趋紧张，中共为了强力维稳将要开展新一期的全警大练兵！【GM30】
+引自：https://m.weibo.cn/detail/4405147885010480")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224785")
+               '(q () (pre () "
+【新闻】8月14日：（ 法律被CCP捏在手里，法院自然是听从CCP的！）香港机场管理局(Airport Authority)表示，已获得一项临时禁令，禁止任何人非法及蓄意妨碍或干扰香港国际机场的正常运行。“除机场管理局指定的区域外，任何人不得在机场内参加或参与任何示威、抗议或公共秩序活动，”机场管理局在周三上午的一份声明中表示。
+ 
+截至周三凌晨，大部分抗议者已经离开，工人们在夜间将现场血迹和瓦砾清理干净，重新开放登记柜台让彻夜等候航班旅客排队。机场的网站显示，数十架航班在夜间起飞，并列出了数百架计划在整个周三起飞的航班，不过许多航班被延误。然而，目前尚不清楚这些抗议者是否会返回机场，这些抗议者没有公共领导人，他们通过社交媒体组织起来。
+ 
+现年35岁的迪基在机场抗议了两天多，他说，尽管人们对政府和警察感到愤怒，而且三合会团伙袭击了一些抗议者，但如果禁令意味着他们必须离开，那么抗议者就会遵守。“我们看到政府逮捕了许多人，许多人受伤，一些人自杀。他说:“我们将继续为我们应得的一切而奋斗，否则一切都将是徒劳的。”另一名抗议者表示“机场是我们最后的谈判筹码。”【GM31】
+ 
+消息来源：
+https://www.channelnewsasia.com/news/asia/hong-kong-airport-flights-wednesday-protests-court-injunction-11806876
+https://www.hongkongairport.com/tc/important-notice/index.page?noticeid=1565759853171-1"))
+               (u (:- `(cite () ,(@ "https://www.channelnewsasia.com/news/asia/hong-kong-airport-flights-wednesday-protests-court-injunction-11806876"
+                                    "Hong Kong airport gets court injunction to stop protesters from obstructing operations")
+                             (small () "2019.8.14 CNA")))
+                  (:- `(cite () ,(@ "https://www.hongkongairport.com/tc/important-notice/index.page?noticeid=1565759853171-1"
+                                    "禁止任何人非法地及有意圖地故意阻礙或干擾香港國際機場的正常使用的法庭臨時禁制令")
+                             (small () "2019.8.14")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224782")
+               '(q () (pre () "8月14日：哈德逊研究所白邦瑞”美国密切监视香港抗议活动，香港抗议也关乎美国自身利益“【GM12】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/224780")
+               '(q () (pre () "
+【新闻】8月14号：中共喉舌无处谴责，“洋品牌”躺枪！
+中共官媒深夜发文称，因错误标注香港台湾，一些国际品牌相继道歉。不论无心之失，还是有意为之，事关“一个中国”原则，国人眼里容不得沙子。在中国就要遵守中国法律，这是底线。洋品牌道歉快，更要长记性。倘若一意孤行，恐怕就不仅是明星解约、舆论谴责。须知，任何损害国家利益的行为，我们绝不姑息容忍！
+ 
+中共官媒一向以胡言乱骂趾高气扬的姿态示人，今夜竟然放低了姿态拿“洋品牌”开刀，从而悄悄引出一个中国的观点，如此的谨小慎微，真是有失中共官媒以往的泼妇风格。可见中共怕了，无处谴责只能拿“洋品牌”来出气。
+ 
+更有五毛排队跟帖留言：快救，大陆记者！港人的抗争已让中共捉襟见肘难以应对，甚至上演了一出中共记者高喊支持港共恶警而被打的闹剧，如此下三滥的手段都能使出，中共真是穷途末路，洋相百出！
+ 
+中共真正在乎的只有手中的权力，岂是那为党献身的小记者，五毛们，醒醒吧！你们热爱的党也不会在乎你们的！【GM30】
+引自：https://m.weibo.cn/detail/4404977608427610")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224778")
+               '(q () (pre () "
+8月13日：川普谈香港： “香港的情形非常棘手！我認為會得到解決。我希望「自由」能夠獲勝！我希望每個人包括中國都成為贏家！我希望有和平的解決方式，沒有人受傷，沒有人死亡！ “【GM35】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224772")
+               '(q () (pre () "
+【翻译】8月13日：乍一看，香港不断加剧的抗议活动,似乎与中美不断升级的贸易战没有什么共同之处。然而，两者都有相似处，其根植于北京的世界观——中国领导人专注于提升自己的权力，难以照顾他人的利益。他们常说合作“共赢”惠及各方，但其对待世界的态度归根结底是损人利己。
+【GM47】【GM31】
+https://spark.adobe.com/page/yOchmMAJi3lUr/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/yOchmMAJi3lUr/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224748")
+               '(q () (pre () "8月13日，CNN实况报道香港机场：防暴警察尚不敢冒然进入，抗议者的游击战术取得一定成功。【GM37】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224727")
+               '(q () (pre () "8月13日 美反共作家章家敦“香港街头抗议是对抗中共侵蚀民主和自治的前线“")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224719")
+               '(q () (pre () "
+【新闻】8月13日：川普總統获得情报中共正在向香港邊境部署軍隊！！总统在搭乘空軍一號前，在新澤西州接受媒體採訪！他说依據美方的情報顯示，中國解放軍正在調動軍隊前往香港。总统隨後還轉貼一則歐洲議會自由黨團（ALDE）資深顧問柯勞思（Alexandre Krauss）的影片——解放軍在深圳移動的影片。
+ 
+川普总统說，「香港處於非常艱難的局面，非常艱難。讓我們看看事情如何發展，但我相信它會解決，我希望大家會有共識，包括中國在內的所有人會满意。」
+ 
+媒體問到有關解放軍集結的消息，川普指出，「這是一個非常棘手的情況，我認為它會獲得解決，我希望它以自由的方式，以及有利包括中國的各方在內的所有人解決問題。我希望它以和平的方式解決，我希望沒有人受傷，我希望沒有人被殺。」【GM39】
+https://youtu.be/fzGGdhxBhPk
+https://twitter.com/realdonaldtrump/status/1161325870516264961?s=12"))
+               (u (:- `(cite () ,(@ "https://youtu.be/fzGGdhxBhPk"
+                                    "President Trump Delivers Remarks Upon Departure")
+                             (small () "2019.8.13 Youtube: The White House")))
+                  (:- `(cite () "Donald J. Trump @realDonaldTrump : "
+                             ,(@ "https://twitter.com/realDonaldTrump/status/1161325870516264961")
+                             (small () "2019.8.13 Twitter")
+                             (q () (pre () "
+Our Intelligence has informed us that the Chinese Government is moving troops to the Border with Hong Kong. Everyone should be calm and safe!"))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224711")
+               '(q () (pre () "8月13日：警方夜晚衝進香港國際機場清場 看這架勢情緒有點失控-CAMPUS TV 【GM46】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224708")
+               '(q () (pre () "
+【新闻】8月13 日德国《时代周报》DIE ZEIT报道，根据联合国人权局的说法，在香港的示威游行中，安全部队已经危及抗议者的生命。日内瓦办事处表示，有可靠的证据表明，安全部队直接向示威者发射了多种催泪瓦斯。这可以导致“死亡和严重伤害的重大风险”。
+联合国人权办公室说，安全部队的行动违反了国际标准。联合国人权事务高级专员Michelle Bachelet呼吁当局调查事件并确保安全部队不违反国际标准。【德语新闻】
+https://www.zeit.de/politik/ausland/2019-08/proteste-hongkong-flughafen-polizeigewalt-demonstration"))
+               (u (:- `(cite () ,(@ "https://www.zeit.de/politik/ausland/2019-08/proteste-hongkong-flughafen-polizeigewalt-demonstration"
+                                    "UN kritisieren Verhalten der Polizei in Hongkong")
+                             (small () "2019.8.13 Zeit")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224687")
+               '(q () (pre () "
+【新闻】8月13日: 香港「反送中」抗爭不斷升級，從全民罷工、醫護罷工到癱瘓機場，現在更有香港網民要在8月16日發動銀行擠兌潮。 金管會主委顧立雄12日表示，香港是金融中心，全球主要國家銀行業都在此有設點，我國銀行在香港曝險僅兆元，相較其他國家低，而且主要業務並非消金，台資銀行不會是唯一受衝擊的，全球都會關注。美國對沖基金巨頭巴斯（Kyle B***）日前曾表示，只需4%到5%的香港人擠兌銀行，即可摧毀香港金融體系。 【GM35】
+出處：https://www.chinatimes.com/amp/newspapers/20190813000051-260301"))
+               (u (:- `(cite () ,(@ "https://www.chinatimes.com/amp/newspapers/20190813000051-260301"
+                                    "港網民發動16日銀行擠兌 癱瘓金融")
+                             (small () "2019.8.13 中時電子報")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224686")
+               '(q () (pre () "
+【新闻】8月13日: 彭定康再评香港局势：如果中共暴力干预香港民众和平游行后果将是灾难性的 彭定康（Chris Patten）周二（8月13日）在接受BBC电台访问时表示，如果抗议不停止而中国政府动用\"另外方式\"，将适得其反。\"对于中国，那将是一场灾难，当然也将是香港的灾难"。" 彭定康还表示，英国首相约翰逊应该说服本周到访的美国国家安全顾问博尔顿（John Bolton）同意以下说法，即如果中共干预香港，将出现\"灾难性\"后果，\"尽管抗议持续了10周，我仍特别希望中国政府以及习近平主席能够建立起将人民团结起来的道路。\" 彭定康说，\"事情令人沮丧和愤怒，港府拒绝给出任何合理解释，这可能引发了更多暴力\"，\"我不信，任何一个在林郑这个位置上的富有理性思考的人，会反对成立调查委员会\"。\"现在特别需要的是开启和解程序。这是（让事件）告一段落从而恢复香港和平与稳定的唯一途径。\"【GM01】
+来源：https://www.bbc.com/zhongwen/simp/uk-49334503"))
+               (u (:- `(cite () ,(@ "https://www.bbc.com/zhongwen/simp/uk-49334503"
+                                    "彭定康再评香港局势：如果中国干预将是“灾难性的”")
+                             (small () "2019.8.13 BBC")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224685")
+               '(q () (pre () "8月13号 凯尔·巴斯：解放军很快会正式开进香港 残暴镇压游行学生  August 13,  Kyle Bass: PLA is moving in Hong Kong and brutalizing the protesters【GM36】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/224683")
+               '(q () (pre () "8月13号：尊敬的战友们好．文贵将在1小时内直播．谈谈未来两天将发生什么大事儿，一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224633")
+               '(q () (pre () "8月13日：斯伯丁將軍接受CNBC採訪： 中国军队最终将冲破香港示威者！香港抗議運動肯定会遭到中共镇压。结局已定中共会出兵！！同时香港給台灣的獨立力量壯膽。【GM35】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224631")
+               '(q () (pre () "8月13日:尊敬的战友们！郭媒体可以更新了！发现BUG请跟帖反馈✍️✍️✍️✍️🙏🙏🙏万分感谢💕")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224619")
+               '(q () (pre () "
+【新闻】8月14日：詹姆斯·卡拉凡诺——香港骚乱让全世界知道中共对其他国家的计划！！700多万香港人民的苦难给我们上了重要的一课，让我们了解到中共对世界其他国家的看法 —— 情况相当的不妙！
+ 
+毫无疑问，北京正在进行一场怒不可遏的战争。上个月，中共在与香港的边境集结了军队和装备，还开始播放军队训练镇压城市骚乱的视频。这些都充分说明了中国政府对待本国人民的那份残酷无情和冷嘲热讽。许多观察家担心北京会介入并镇压示威者，毕竟苏联的灭亡并没有阻止解放军将坦克开进天安门广场。
+ 
+香港对中国经济的意义远不如20年前，至于香港人的福祉和未来，这是北京最不关心的，只要“亲民主”示威不蔓延到内地城市，北京方面可能不会太担心香港作为一个稳定、可靠的商业场所的地位会下降。
+ 
+此外，中国人更愿意看到，投资流向广州和上海等更受政权控制的内地城市。大多数中国大陆人似乎对抗议活动漠不关心，许多人嫉妒香港人长期享有的特权，并乐于看到港人生活水平下降了一个档次，而不是迫切要求类似的自由。
+ 
+这进一步证明，希望中国向世界开放，并鼓励北京顺利融入一个公平、自由、以规则为基础的秩序，那只不过是一种神奇的想法。
+ 
+我们还有一些教训。中共对香港的侵犯是共产党政权违背的一连串承诺中的又一个。他们违反了对联合国海洋法公约的承诺，违反了联合国对朝鲜的制裁（尽管他们投了赞成票)，并通过“一带一路”倡议带来了债务和腐败而不是承诺的繁荣。总而言之，北京方面对规则的反复无常是有名无实的，而其对香港的行为只会强化他们这种名声。
+ 
+中共宣称香港示威活动是由CIA策划的，这种高调宣传更能反映出中共的轻蔑态度了，他们知道世界上没有一个思维正常的人会相信这一点，但他们不在乎，他们知道中国人民会接受这种解释，毕竟，他们不会听到其他解释，而这就是他们想要的！
+ 
+中共表现得像一个全球恶霸，像大多数欺凌弱小者那样会继续这样做下去 ——直到世界不再容忍北京那不可容忍的行为。香港是对世界的一个警告，全世界都应该注意到这一点。【GM31】
+ 
+来源：https://www.foxnews.com/opinion/james-carafano-what-hong-kong-unrest-tells-us-about-chinas-plans-for-the-rest-of-the-world"))
+               (u (:- `(cite () ,(@ "https://www.foxnews.com/opinion/james-carafano-what-hong-kong-unrest-tells-us-about-chinas-plans-for-the-rest-of-the-world"
+                                    "James Carafano: What Hong Kong unrest tells us about China's plans for the rest of the world")
+                             (small () "2019.8.14 Fox News")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/224613")
+               '(q () (pre () "
+8月11号 警方残暴使用武力  August 11, The police brutality in Hong Kong 【GM36】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224602")
+               '(q () (pre () "
+8月13日：Trump总统发推——我们的情报告诉我们，中国政府正在向香港边境调遣军队。每个人都应该保持冷静和安全! 【GM31】"))
+               (u (:- `(cite () "Donald J. Trump @realDonaldTrump : "
+                             ,(@ "https://twitter.com/realDonaldTrump/status/1161325870516264961")
+                             (small () "2019.8.13 Twitter")
+                             (q () (pre () "
+Our Intelligence has informed us that the Chinese Government is moving troops to the Border with Hong Kong. Everyone should be calm and safe!"))))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/224591")
+               '(q () (pre () "【图组】香港学生！九月罢课！【GM30】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224590")
+               '(q () (pre () "
+【新闻】8月13日：香港滑向深渊还是奔向自由？将滑向无底深渊的是中共，港人不屈的抗争将迎来自由美好的明天！
+ 
+近日，香港深水埗、尖沙咀、铜锣湾、葵涌、太古等地爆发大规模的示威，香港中联办负责人12日发表声明，严厉谴责香港极少数暴力违法分子采取的极端暴力行径，形容如任由恐怖暴行蔓延，“香港将滑向无底深渊”。
+ 
+中联办还特别重申：坚定支持特区政府和香港警队止暴制乱、恢复秩序，共同维护香港法治和社会安全。
+ 
+镇压！维稳！一向是中共的老套路！只解决游行表达诉求的民众，而从不解决民众游行所诉求的问题。中联办此次发文狂哮，实则害怕之极，他们防着人民，害怕人民，尤其害怕香港如此团结坚强不屈的人民。
+【GM30】
+引自：http://news.dwnews.com/hongkong/news/2019-08-12/60145019.html"))
+               (u (:- `(cite () "中联办谴责暴力示威 香港将滑向无底深渊 " (small () "2019.8.12 多维新闻网")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224586")
+               '(q () (pre () "
+【新闻】8月13日：英国颇具影响力的下议院外交事务委员会(Commons foreign affairs committee)主席汤姆·图根达特(Tom Tugendhat)表示，在当前与北京方面的对峙中，英国应赋予香港公民完全的英国国籍，以此作为一种保证。他表示，此举将是为了安抚香港人民，而不是对抗中共的威胁。
+ 
+图根达特说:“英国在1997年以前就对香港公民负有义务，延长海外公民身份是一个错误，从很多方面来说，这是一种二等公民身份。我认为这是一个应该纠正的错误。在香港局势明显紧张之际，英国可以让许多香港市民放心，他们现有权利得到了英国的承认，也得到了重视。我认为关键是英国有机会纠正错误，给一个对未来显然非常紧张的人民以信心，这点是可以理解的，我认为这是正确的做法，所有这些（情况）现在都汇在一起。我不知道未来会是什么样子，我无法预测。但我能说的是，一段时间的平静对每个人都是有益的。解决这一问题的唯一途径是进行政治对话，这不会通过街头暴力或类似事情得到解决。”
+ 
+图根达特的委员会在今年3月的一份报告中表示，中共对香港日益增加的干预，有可能导致“一国两制”被\"一国半制\"取代。【GM31】
+ 
+来源：https://www.theguardian.com/politics/2019/aug/13/uk-british-nationality-hong-kong-citizens-tom-tugendhat "))
+               (u (:- `(cite () ,(@ "https://www.theguardian.com/politics/2019/aug/13/uk-british-nationality-hong-kong-citizens-tom-tugendhat"
+                                    "UK should give British nationality to Hong Kong citizens, Tugendhat says")
+                             (small () "2019.8.13 The Guardian")))))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/224584")
+               '(q () (pre () "
+文字版：2019年8月12日報平安 香港人現在遭遇比當年日本鬼子還壞
+https://spark.adobe.com/page/pNX6GtPA2rM3g/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/pNX6GtPA2rM3g/")))))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/224577")
+               '(q () (pre () "
+文字版：2019年8月11日文貴船上直播高度關注香港🙏
+https://spark.adobe.com/page/tiRIrxFbAUlhI/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/tiRIrxFbAUlhI/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224573")
+               '(q () (pre () "
+【新闻】8月13日：香港股市暴跌，抗议活动遍地开花，中国愤怒情绪高涨！！！长期的示威活动对香港经济产生了影响，至关重要的购物行业受到重创——数据显示，6月份零售销售额同比下降6.7%，远高于预期。第二季度中国经济仅增长0.6%，远低于预期。
+ 
+香港股市周二(8月13日)大跌，震动香港两个多月来的抗议活动，加剧了政治和经济的不确定性，中国日益增长的挫败感导致人们担心，它将会采取更强硬的立场。
+林郑月娥(Carrie Lam)已排除做出让步的可能性，她于周二警告，暴力将推动香港走上“不归之路”，而此前一天，中国称暴力抗议为“恐怖主义”，这引发了投资者的担忧。
+VM Markets管理合伙人斯蒂芬•英尼斯(Stephen Innes)表示:“（恐怖主义）这个词尤其令人不安，因为它确实表明中国内地做出了积极反应，但它也引发了全球市场的避险浪潮。\"
+ 
+今天恒生指数收盘下跌逾2%。交通方面，国泰航空(Cathay Pacific)股价下跌逾4%, 香港地铁公司(MTR Corp)股价下跌3.87%。赌场运营商受到游客人数担忧的影响，银河娱乐(Galaxy Entertainment)下跌5.84%，金沙中国(Sands China)下跌3.59%。房地产巨头也遭受了巨大损失。
+ 
+信和置业(Sino Land)下跌1.77%，恒基兆业(Henderson Land)下跌2.81%，新世界发展(New World Development)下跌1.60%。腾讯(Tencent)下跌1.76%，友邦保险(AIA)下跌2.97%。
+【GM31】
+来源：https://www.channelnewsasia.com/news/business/hong-kong-stocks-dive-as-protests-rumble-china-anger-builds-11804602
+"))
+  
+               (u (:- `(cite () ,(@ "https://www.channelnewsasia.com/news/business/hong-kong-stocks-dive-as-protests-rumble-china-anger-builds-11804602"
+                                    "Hong Kong stocks dive as protests rumble, China anger builds")
+                             (small () "2019.8.13 CNA")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224567")
+               '(q () (pre () "
+8月13日：台湾自由时报：郭文贵先生直播说傳遞香港將戒嚴情報的中共內部戰友已經被抓！
+ 
+中國反共富豪郭文貴1日曾直播宣稱，1名中共內部消息人士冒著生命危險聯繫他，告知香港將於8月4日至6日起實施戒嚴，但至今並未發生。不過郭文貴10日又稱，中共已派出數萬名便衣潛入香港，自己情報無誤。郭文貴近日則透露，先前向他傳遞香港將戒嚴情報的這名中共內部戰友已經被抓，而這名洩密者的真實身份是1名解放軍大校。【GM45】
+https://ec.ltn.com.tw/article/breakingnews/2883109"))
+               (u (:- `(cite () ,(@ "https://ec.ltn.com.tw/article/breakingnews/2883109"
+                                    "郭文貴：傳遞香港將戒嚴情報的中共內部戰友已經被抓")
+                             (small () "2019.8.13 自由時報")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224559")
+               '(q () (pre () "
+【新闻】8月13日：林郑月娥警告是否忍心将香港推向粉身碎骨的\"深渊\"
+ 
+周二，香港行政长官林郑月娥(Carrie Lam)警告称，任何人行使、或纵容暴力，只会把香港推上不归路，更呼吁市民思考“是否要把香港推下粉身碎骨的深渊？”
+ 
+面对当地记者的激烈提问，林呼吁大家保持冷静，\"过去一星期，目前香港社会的焦虑，已达危险境地，这个城市，这个家，大家是不是忍心将它推向粉身碎骨的深渊？”林说，尽管她再次拒绝向抗议者做出任何让步。
+ 
+香港最后一任总督彭定康(Chris Patten)对BBC表示，如果中国干预香港，这对中国当然对香港来说，将是一场灾难。如果抗议不停止，中国人警告“其他方法”是适得其反的。“我非常希望，即使抗议经过了10周，政府和习主席仍能明白，建立一个真正把人民团结在一起的方法的意义。”彭定康还称，英国首相鲍里斯•约翰逊(Boris Johnson)应该要求，本周在伦敦的美国国家安全顾问约翰•博尔顿(John Bolton)应该让华盛顿同意——如果中国干预香港，那将是一场“灾难”。
+ 
+川普政府的一名不愿透漏姓名的高级官员敦促“各方”，避免在香港发生暴力事件，并表示“当不同的政治观点得到尊重，并且能够自由、和平地表达出来时，社会才会得到最好的服务。”【GM31】
+来源：https://www.theguardian.com/world/2019/aug/13/hong-kong-airport-reopens-as-trudeau-urges-china-to-address-serious-concerns"))
+               (u (:- `(cite () ,(@ "https://www.theguardian.com/world/2019/aug/13/hong-kong-airport-reopens-as-trudeau-urges-china-to-address-serious-concerns"
+                                    "Hong Kong riot police clash with airport protesters")
+                             (small () "2019.8.13 The Guardian")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224553")
+               '(q () (pre () "
+【新闻】8月13日，法国议员联署公开信支持香港，盲目镇压绝不会促进社会进步！约20名法国国民议会议员关注香港公民运动，他们透过公开信表示，希望对话胜过暴力，也希望像中国这样的大国无须畏惧自由及人民意见，盲目镇压不会促使社会进步。
+ 
+中央社发自巴黎报道：香港民众因反对逃犯条例修订草案而发起抗议及罢工行动持续两月。香港民众强烈反对该法案，要求撤回草案，调查警察暴力，释放被捕抗议人士等5项诉求。欧美国家对此相当关注。
+ 
+信中表示，身为经由普选选出的法国国民议会议员及与亚洲国家友好的小组成员，在此刻香港发生的事件之前，他们无法保持沉默;当攸关世界平衡的重要事件发生，应该有所回应时，法国政治阶层的缄默反而相当刺耳。
+ 
+公开信表示：眼前摆着3项事实：法国是中国的朋友;民主在中华文化中完全可实行，台湾就是一个重要例子;香港有自己的活跃政治及民主经历，早在1997年年回归中国之前就开始，之后也延续。【GM01】
+来源：世界之声")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/224551")
+               '(q () (pre () "
+【新闻】8月13日:「美軍到香港支援」白宮連署請願火速過關！！香港反送中抗爭自6月初開始至今，先後經歷過警方施放催淚彈、橡膠子彈，又傳有港府聯合黑道痛毆市民，接著警方更直接持警棍暴打、持槍射瞎示威者；有民眾在美國白宮官網發起連署，要求美方派軍隊至香港支援，連署已火速通關。
+ 
+美國白宮「WE the PEOPLE」網站8月10日經署名「WS」的民眾發起連署，提案題旨是「請派醫療軍隊到香港，香港正處於人道災難之下」，內容還提到，北京控制的香港特區政府不斷襲擊、試圖殺死所有香港平民，包括示威者、記者或是含兒童在內的居民。
+ 
+提案內容顯示，香港政府在人口密集的商業、住宅區，連續數月向民眾發射過期、致命的催淚瓦斯，在香港，甚至連為受害者提供人道主義援助的專業衛生人員也受傷或被捕，由於港府過度使用催淚瓦斯，導致大多數的平民出現嚴重的健康問題，此現象需要立刻受到緩解。
+ 
+請願書最後寫道，大多數受害者無法前往當地醫院接受治療，因為醫院管理部門會向北京當地的警察局透露病患個人資料，使受害者的安全受到威脅。因此，香港迫切需要美國派出醫療軍隊為受害者提供醫療援助。【GM15】
+引自: https://news.ltn.com.tw/news/world/breakingnews/2882460
+https://img.ltn.com.tw/Upload/liveNews/BigPic/600_phpadJktp.jpg"))
+               (u (:- `(cite () ,(@ "https://news.ltn.com.tw/news/world/breakingnews/2882460"
+                                    "反送中》「美軍到香港支援」白宮連署請願火速過關")
+                             (small () "2019.8.13 自由時報")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/224516")
+               '(q () (pre () "8月13号：伟大的美国有了伟大的决定，将在这关键的时刻与正义，自由法治的香港人民．和勇敢的香港同胞站在一起，美国将和欧洲联合一起，在证明解放军或大陆警察在香港出现．并镇压学生．就会马上取消中共最惠国待遇地位．香港自贸区协议。并对香港和大陆的官员进行制裁，查封他们在海外所有资产，这是一个伟大的时刻感恩美国干人万佛万神，🙏🙏🙏🙏🙏🙏一切都是刚刚开始。【Sanctions; removal of free trade status ; capital controls miles This is a decision that has already been formed. This is the United States that can help Hong Kong now. I hope that you will be satisfied.】"))))))
+ *news-topics-guo*)
+
+(push
  (u (:- '(small () "2019.8.13")
         (u (:- "视频: " (@ "https://www.youtube.com/watch?v=g6ytn1Nr03A"
                            "08-12-2019 郭文贵先生车上直播中：【共产党在香港的镇压问题上-原形毕露】")
