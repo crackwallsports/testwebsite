@@ -1,16 +1,19 @@
 ;; (Date Ref Title Intro)
-(("2019 8 19"
+(("2019 8 21"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
      (div ()
           (span () "郭文贵")
-          (span (:class "badge badge-success") "每日追踪-2019.8.19")
+          (span (:class "badge badge-success") "每日追踪-2019.8.21")
           (pre ()
                (small () "法治基金")
-               (small () "王健之死")
-               (small () "关注香港")
-               (small () "联合国")))))
+               (small () "王健之死"))
+          (span () "关注香港") (br)
+          (span () "白宫请愿: "
+                (small ()
+                       (a (:href "https://petitions.whitehouse.gov/petition/call-official-recognition-chinese-communist-party-terrorist-organization")
+                          "Call for Official Recognition of the Chinese Communist Party as a Terrorist Organization"))))))
  ("2019 1 30"
   "/testwebsite/articles/box-common-lisp-note.html"
   "Common Lisp Note - 笔记整理 (草稿)"
