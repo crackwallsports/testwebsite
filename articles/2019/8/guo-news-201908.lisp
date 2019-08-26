@@ -16,19 +16,226 @@
  *news-topics-guo*)
 
 (push
- (u (:- '(small () "2019.8.25")
+ (u (:- '(small () "2019.8.26")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=Us23-E6NP40&feature=youtu.be"
-                           "郭文贵8月24日:又有大好事即将发生,美英联合灭共,特别行政执法权开始执行…")
-               '(small () "Youtube: Oz Media")
-               (u (:- '(pre () "..."))))
            (:- "郭文: " (@ "")
                '(q () (pre () ""))
                (u (:- `(cite () ,(@ ""
                                     "")
                              (small () "")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228494")
+               '(q () (pre () "
+Highlights of Mr. Guo wengui's live broadcast on August 23: Fentanyl is used to weaken the United States; The CCP has given sex drugs as gifts to leaders in the Middle East and Africa
+8月23日郭文贵先生直播精彩片段： 芬太尼是用来弱化美国；中共将性药做为礼物送给中东和非洲领导人
+【GM18】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228492")
+               '(q () (pre () "
+【中文字幕】8月26日：班农和卡尔巴斯对谈：中共破坏了中国的金融体系，又去扰乱世界的经济秩序。美国和西方的精英看懂却不出来制止，因为他们从中获利。
+【GM36】【GM38】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228484")
+               '(q () (pre () "
+8月26日台湾自由时报报导：親中台媒剉咧等！郭文貴爆：誰收中共錢 美國都有監控。
+《路透》9日曾報導，中國當局至少付錢給台灣5個媒體集團，以收買台灣人心。中國反共富豪郭文貴美東時間23日直播提及香港局勢時表示，一些台灣媒體在報導時附和中共的宣傳口徑，令他非常憤怒，他還爆料任何台灣媒體拿中共的錢「美國都是有監控的」。
+https://ec.ltn.com.tw/article/breakingnews/2896088"))
+               (u (:- `(cite () ,(@ "https://ec.ltn.com.tw/article/breakingnews/2896088"
+                                    "親中台媒剉咧等！郭文貴爆：誰收中共錢 美國都有監控")
+                             (small () "2019.8.26 自由時報")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228481")
+               '(q () (pre () "
+8月26日：中共昨晚給美國貿易高層打電話，希望重回談判桌。並且表示這次談判他們要做出改變。川普總統說：「他們傷得很重，但他們明白要做正確的事。我對習保持尊重，也對談判保持尊重，因為這對世界是一個積極的促進」。 評：如果傷得不重，不會在還沒動手，就跪地求饒了。但這次籌碼又要加高了！【GM49】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228477")
+               '(q () (pre () "8月25日 ，班爺为新電影《红龙之手》造势，接受媒体采访谈为什么要制作这部华为电影 （第一集) [GM12]")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228475")
+               '(q () (pre () "
+台湾自由时报报导：郭文貴揭中共高官荒淫內幕 爆周永康靠「這」提升性能力！
+美國總統川普日前抨擊，主要由中國大量輸往美國的類鴉片止痛劑芬太尼（Fentanyl）每年造成10萬名美國人死亡，但習近平並未履行打擊芬太尼的承諾。
+中國反共富豪郭文貴近日表示，芬太尼是中共用來毀滅美國的「毒武器」，自然不可能遵守承諾，他還爆料稱，前中共政法委書記周永康、前重慶市委書記薄熙來，都喝由製造安非他命的原料「麻黃鹼」所提煉而成的藥物來提升性能力。【GM45】
+https://ec.ltn.com.tw/article/breakingnews/2896327"))
+               (u (:- `(cite () ,(@ "https://ec.ltn.com.tw/article/breakingnews/2896327"
+                                    "郭文貴揭中共高官荒淫內幕 爆周永康靠「這」提升性能力")
+                             (small () "2019.8.26 自由時報 ")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228463")
+               '(q () (pre () "
+【新闻】荃湾两名小粉红被四名“香港警察”围殴
+2019年8月25日下午5点30分荃湾一间Partyroom走出两名撑警女子闻到很浓烈的催泪弹气味，警察在对面叫他朋友走，她回答：“马上走等朋友来接我。”警察过来推人，她和朋友强调我们支持警察，但别推我。4个警察突然马上围住他们俩个开始将粗口“你俩是臭鸡”等粗暴言语，并且开始对两名女子不停攻击。
+ 
+编者按：香港警察居然听不懂粤语和香港话？大陆警察？支持警察的也被打，小粉红们醒醒吧，你不是中南海特殊家庭，你含赵量太低，你只是“中南海赵太爷”眼里和平时期的一个奴隶、战争时期威胁欧美国家的人质与肉票、希望这次“警棍教子”能让小粉红们快速清醒，转向加入反送中队伍，从新认识CCP魔爪下的香港警察并不是以前的遵守法律的香港警察了，而是被CCP从新“刷机”出厂的CHINAZI。【GM22】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228462")
+               '(q () (pre () "
+【评论】  读完链接文章“….还警于民…”这是香港同胞喉咙里发出最深痛的声音!遥想当年97前的香港警察是什么样的形象？当年雷厉风行、刚正不阿、廉政公署的精英们，当年那些英姿勃发的、热情的、乐于助人的、温和的、守法的香港阿Sir们到哪去了？那些如邻家兄长般的阿Sir到哪去了？看看现在香港街头充斥的是什么？ 满街的下手毒辣的“黑警”要么是共匪秘密潜入的“解放军”假扮的“黑警”，他们对香港同胞的下手之毒、用力之猛几乎招招致命！“还警于民”这声音可见香港同胞对97年前的香港警察是多么的怀念！！【GM11】
+https://www.google.com/amp/s/www.bbc.com/zhongwen/trad/amp/chinese-news-49466336"))
+               (u (:- `(cite () ,(@ "https://www.bbc.com/zhongwen/trad/chinese-news-49466336"
+                                    "香港示威衝突有武力升級跡象，首現實彈槍聲和水炮車")
+                             (small () "2019.8.26 BBC")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228454")
+               '(q () (pre () "2019年8月25日 法治基金和法治社会每周捐款留言精选集 weekly Rule of Law Foundation and Rule of Law Society donors messages collection")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228434")
+               '(q () (pre () "
+【新闻】8月26日：人民币汇率创新低，急挫675点！
+人民币大幅下跌，在岸人民币急挫675点，低时见7.15人民币兑1美元，创下了11年半以来的新低。
+离岸人民币亦显著受压，初段下跌逾0.7%，跌至7.1858人民币兑1美元的新低。【GM30 】"))
+               (u (:- '(pre () ""))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228433")
+               '(q () (pre () "
+【新闻】8月26：香港！真的爱你！
+提到香港你能想到什么，记忆中的香港是什么样的？港式甜点，哥哥张国荣，金庸武侠，粤语歌，维多利亚的烟火等等，太多太多的记忆！
+中共祸港，生死一线！为了不让那记忆中的香港被赤色涂染，港人在用生命抗争着。昨夜枪响了，中共恶警开出了第一枪。枪声如血共的咆哮划过天际，手无寸铁的港人却没有退缩。这是港人英勇的举动，这是用生命写下的壮歌！
+真的爱你！正如歌声里唱的真的爱你！假如你真的爱香港，请站出来传播真相，为港人发声！【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228431")
+               '(q () (pre () "
+【新闻】8月26日：惊呆了！中共假民意搞出诉港五条。
+据央视报道，香港警方凌晨召开记者会：香港警方26日凌晨1点30分紧急召开记者会。警方称，25日有警员被众多抗议民众袭击；针对警员开枪一事，警方称，有6名警员拔枪戒备，其中一人向天开枪；25日共有15名警员受伤。
+香港事态严重升级，恶警甚至有了开枪的举动，中共为了给自己的恶行找借口舆论上引导墙内民众，假扮民众在网络上搞了个内地群众诉港五条。
+ 
+内地群众对香港五大诉求: 1、收回司法权，不得任命外籍法官 2、收回教育权，推行爱党爱国教育，无条件推广普通话 3、双国籍人士或家属为英美籍人士不得担任公职、议员 4、整治香港大财团大资本家大地产党，实行社会良性改造 5、驱逐从事和支持香港分裂活动外国人员，严惩非法集会的暴乱分子和反华媒体。
+ 
+港人的五大诉求，中共是不会答应的。但中共假扮民意对香港的五大诉求，可是彻彻底底的暴露了中共的野心！【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228430")
+               '(q () (pre () "
+【新闻】肉价保卫战，福建下月限购猪肉要重回粮票时代？
+福建莆田市荔城区人民政府于上周二（20日）发出通知，表示启动农副产品平价商店销售政策，自9月6日起，名单内平价商店所供应的猪肉每公斤补贴4元人民币，凭身份证每人限购2公斤，包括腿肉、腩肉、瘦肉和排骨，结束时间视区域食品价格走势而定。
+ 
+大陆输港的活猪也供不应求，鲜肉零售价近日由约90港元一斤升至120港元，升逾30%，本港业界人士预料今年底至明年初，市民仍要“捱贵猪肉”。
+ 
+肉价不断创出历史高位，这就是共党振振有词的“为人民服务”下的社会，人民即将进入民不聊生的状态一点也不夸张！【战友来稿LH】
+新闻来源：https://www.bannedbook.org/bnews/cbnews/20190825/1180302.html/amp")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228428")
+               '(q () (pre () "
+【香港逆權抗爭】8.26.2019
+TVB炒廿名支持【反送中】遊行的員工，樹立「逆我者亡」的寒蟬效應；醫管局警告醫護人員若不配合警察聯絡被捕者家屬會惹刑罪；物業管理公司更為虎作倀，為了配合警方抓捕示威回家的市民臨時更改大廈門口密碼，由看更「認人放行」阻止市民收留勇武義士.....
+中共現在的【裸奔】已經晒在全世界人民面前,而他們也顧不了了,所做的一切都是垂死前的掙扎而已！香港人卻淪為了這魔鬼垂死前的犧牲，只是港人「寧為玉碎不為瓦全」的不屈意志絕對不會屈服在中共的淫威之下，不達目的絕不罷休！【五大訴求缺一不可】　　　　
+【GM42】
+https://hk.news.appledaily.com/local/realtime/article/20190823/59964382
+https://thestandnews.com/politics/%E8%98%8B%E6%9E%9C-%E7%B4%84-20-%E5%90%8D-tvb-%E5%93%A1%E5%B7%A5%E8%A2%AB%E7%82%92-%E5%9B%A0%E7%B6%B2%E4%B8%8A%E7%99%BC%E8%A1%A8%E5%8F%8D%E9%80%81%E4%B8%AD%E8%A8%80%E8%AB%96/?fbclid=IwAR35MvQ5iUCaAUDMUuMzbt4ZhL8xJxD3jLr-7PScTm324vrwygWAsj2q7z4"))
+               (u (:- `(cite () ,(@ "https://hk.news.appledaily.com/local/realtime/article/20190823/59964382"
+                                    "【逆權運動】醫管局警告醫護若無警員同意 聯絡被捕者家屬或有刑事責任")
+                             (small () "2019.8.23 蘋果日報")))
+                  (:- `(cite () ,(@ "https://thestandnews.com/politics/%E8%98%8B%E6%9E%9C-%E7%B4%84-20-%E5%90%8D-tvb-%E5%93%A1%E5%B7%A5%E8%A2%AB%E7%82%92-%E5%9B%A0%E7%B6%B2%E4%B8%8A%E7%99%BC%E8%A1%A8%E5%8F%8D%E9%80%81%E4%B8%AD%E8%A8%80%E8%AB%96/?fbclid=IwAR35MvQ5iUCaAUDMUuMzbt4ZhL8xJxD3jLr-7PScTm324vrwygWAsj2q7z4"
+                                    "蘋果：約 20 名 TVB 員工被炒　因網上發表反送中言論")
+                             (small () "2019.8.23 立場新聞")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228426")
+               '(q () (pre () "
+「視頻」多角度呈现警察暴行!开真枪!踹翻跪地市民! 8月25日晚荃灣沙咀道示威人群與警察發生衝突,警方在毫無警示的情況下,突然開真槍.隨後有至少三名警察拔槍指向示威群眾.並且一個警察踢翻了一位跪地請求不要開槍的市民.本視頻從多角度呈現了這一幕. 香港警察對待示威群眾的暴行愈演愈烈. 從高樓施放催淚瓦斯到布袋彈近距離爆頭! 現在警察又開了真槍! 下一步難道中共真要把坦克開到香港麼?! 【GM50】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228371")
+               '(q () (pre () "
+【推文】8月25日凯尔巴斯推文：中共和其他外国政府雇佣美国的类似Capitol Counsel这样的大公司替他们游说，请花点时间好好看看这份FARA文件，中共他们还提供资金以及政治捐款来找人帮他们游说，我XXX！？？所以中共和一些国家实际上间接的为我们的政治人物提供资金，并资助他们利用文化交流计划（Mutual Educational and Cultural Exchange Act）免费旅行！这太疯狂了！【GM01】"))
+               (u (:- `(cite ()  "Kyle Bass @Jkylebass : "
+                             ,(@ "https://twitter.com/Jkylebass/status/1165743689689456640")
+                             (small () "2019.8.25 Twitter")
+                             (q () (pre () "
+china and other foreign governments hire US firms like Capitol Counsel to lobby on their behalf.Take the time to read through this FARA filing and see that they also take some money and MAKE POLITICAL CONTRIBUTIONS to those they are lobbying. WTF?!?  https://efile.fara.gov/docs/6328-Supplemental-Statement-20190628-7.pdf …
+
+|<-
+So...china and other foreign governments ACTUALLY INDIRECTLY GIVE US POLITICIANS MONEY FOR THEIR CAMPAIGNS AND GET FREE TRAVEL UNDER MECEA. This is absolutely effing nuts. #china #paytoplay #liecheatsteal"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228368")
+               '(q () (pre () "
+【推文】8月25日斯伯丁将军推文：美国商会是中国共产党雇佣的骗子。很长时间内美国人就认识到美国商会更关心是让中共开心，其次才是为美国公民创造就业机会。是时候投资美国了！【GM01】"))
+               (u (:- `(cite () "Gen (Ret) Rob Spalding @robert_spalding : "
+                             ,(@ "https://twitter.com/robert_spalding/status/1165669470335066117")
+                             (small () "2019.8.26 Twitter")
+                             (q () (pre () "
+The U.S. Chamber of Commerce is a shill for the Chinese Communist Party. It is long past time Americans recognized that the US Chamber is more concerned about making the CCP happy then creating jobs for American citizens. Time to invest in America!"))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228362")
+               '(q () (pre () "
+【中文字幕】8月25日 ，班爺為其新電影《红龙之手》造勢，并且不忘鼓勵香港人民：華爲是中共解放軍的一部分，西方可以在30天内讓華爲停擺；香港人民是最勤勞的人群，你們已經在貧瘠之地創造了奇跡并將會再一次創造奇跡！【GM37】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228336")
+               '(q () (pre () "【翻译】香港警察向游行抗议者发动水炮，发射催泪弹。 https://spark.adobe.com/page/dfC7dvheFqYdE/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/dfC7dvheFqYdE/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228325")
+               '(q () (pre () "
+【新闻】2019年8月25日下午港警两部水炮车赶赴前方准备支援香港警察镇压示威者
+在2014年香港占中事件发生后香港警方在2015年4月13日在《财政预算案》中申请2700万港币购买了三台水炮车每台水炮车900万港币价格购入，当时时任警务处处长曾伟雄歪理解释：购买水炮车是希望人群控制时提供更多武力选择。
+ 
+2018年5月22日斥资2700万港币的水炮车到港。
+ 
+2019年7月29日港警在训练场调试水炮车，8月12日港警邀请媒体参加水炮车展示活动。8月25日下午水炮车赶赴前方准备支援香港警察镇压香港示威者，8月25日下午6点25分两部水炮车在荃湾追赶示威者喷射。【GM22】
+引子：https://twitter.com/hjjohnson17/status/1165566538298138624"))
+               (u (:- `(cite () "子弹飞 @hjjohnson17 : "
+                             ,(@ "https://twitter.com/hjjohnson17/status/1165566538298138624")
+                             (small () "2019.8.26")
+                             (q () (pre () "水車炮進來了，香港人不要硬拼，遠離水炮射程，能撤就撤！"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228324")
+               '(q () (pre () "
+【翻译】香港正迎来一场“人民战争” 香港几乎用尽了一切和平手段，来抵御中国大陆削弱香港半自治地位的系统行动。是否采取非和平行动成了一个主要争论焦点。【GM47】
+https://spark.adobe.com/page/0vXXSPBrCXmPC/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/0vXXSPBrCXmPC/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228315")
+               '(q () (pre () "【新闻快讯】8月25号川普总统咣咣咣转四推：咱们农民的苞米不愁卖了！老铁安倍桑同意买买买啦”
+8月25号快讯，正在法国参加G7首脑会议的川普总统，高调宣布跟日本首相安倍的会谈有巨大滴收获……！推文大意是因为中国没有按照承诺，购买我们的玉米，过剩的苞米愁死我了，更愁坏咱们的农民！现在好了，伟大的日本首相安倍！代表伟大的日本人民将购买所有的玉米，没错！是所有的！这对美国和我们的农民来说是一笔巨大的交易。太伟大了！同时日本还同意进口20亿美元的牛肉。
+ 
+美国贸易谈判代表莱特西泽在记者见面会上，回应了这个消息。同时还透露同日本的贸易公告包括三个部分 - 农业，工业关税和数字贸易......这将打开一个价值超过70亿美元的产品市场。中共一直用进口美国农产品作为贸易谈判的筹码，胁迫川普尽快达成贸易协议。日本作为铁杆盟友，这次算是帮助川普政府解掉了，来自中共利用农产品扼颈的枷锁！太给力了！【GM12】
+消息来源川普总统的官方推特
+https://twitter.com/WhiteHouse/status/1165637531263782912?s=20"))
+               (u (:- `(cite () "The White House @WhiteHouse : "
+                             ,(@ "https://twitter.com/WhiteHouse/status/1165637531263782912?s=20")
+                             (small () "2019.8.25")
+                             (q () (pre () "
+\"We have excess corn in various parts of our country with our farmers because China did not do what they said they were going to do. And Prime Minister @AbeShinzo, on behalf of Japan, they're going to be buying all of that corn.\" — President @realDonaldTrump"))))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228314")
+               '(q () (pre () "
+【新闻】8月25日：香港！不可动摇的国际金融中心！
+今日墙内一条评论香港的微博：上海永远赶不上香港！香港不要担心，国际金融中心的不是GDP，不是你的港口、机场，不是你的电脑系统有多发达，不是你的办公大楼有多少。造就国际金融中心的是什么？是软实力，是法律体系、是监管体系、是信用、国际化的信用，是和国际操作的接轨，是国际化的人才，是国际化的business process。
+笔者写的很赞很中肯，如今香港的抗争只不过是历史长河中的一个重要的小桥段。不管现在的香港怎样，只要港人的人心不变，香港的软实力不变，哪怕中共的黑手搅的再乱，未来的香港依然是东方的明珠！【GM30】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228313")
+               '(q () (pre () "8月25日：美國共和黨和民主黨 軍方等各界領袖力挺香港 他們正義的聲音必將被歷史所銘記【GM41】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228311")
+               '(q () (pre () "【中文字幕】8月25日 基于华为真实事件创作 人性 面对强大的中共 面对蓝金黄 是选择良知 还是？？？班爷带你走进电影《红龙之手》 【GM09】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228310")
+               '(q () (pre () "
+Aug 25: Remarks by Geng Shuang, Chinese Foreign Ministry on August 23: China has spoken on behalf of the world and said that American politicians are challenging the intelligence of people around the world 8月23日中国外交部耿爽发言： 中国又代表全世界发言说美国政要是挑战全世界人民的智商")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/228300")
+               '(q () (pre () "
+8月25日: 卡尔巴斯发推怼中国官媒：中共如果血腥镇压香港，后果会非常严重——美国将通过制裁你的银行、切掉华为和中兴这两个毒瘤、遣送你的“学生”回国、并取消香港自由贸易港来阻碍你，让你的美元全部耗尽！【GM10】
+来源：https://twitter.com/jkylebass/status/1165455197130432512?s=21"))
+               (u (:- `(cite ()
+                             "Kyle Bass @Jkylebass : "
+                             ,(@ "https://twitter.com/jkylebass/status/1165455197130432512?s=21")
+                             (small () "2019.8.24 Twitter")
+                             (q () (pre () "
+If china invades HK with the bloody hand,they will suffer dire consequences. US will hobble you by sanctioning your banks,cutting the tumors (huawei and zte) from America, sending your “students” home, and removing HK’s special status. You will run out of $. #killccp @chinaorgcn
+
+|-> China.org.cn @chinaorgcn : 
+Hong Kong is part of China and its affairs are China's internal affairs. We will not allow the US to meddle and wreak havoc."))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228288")
+               '(q () (pre () "
+Aug 25: At least three police officers took out their pistols.  The protester begged for not to shoot him while he was kneeling on the ground... The police then approached and kicked him.
+ It seemed like the police has fired his pistol. It is unclear at this moment what he aimed at and where he opened that fire.  BUT one thing is for sure that this is the VERY first gunshot the HK riot police has fired since this three-month ongoing demonstration.")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228283")
+               '(q () (pre () "
+白宫官网的邮件服务完全被弄掉了，证据如下：
+白宫官方网站的DNS下面不见了MX设置，也就是说现在这个网站域名之下的邮件服务就没有了。你提交1000万签名，签名的人都收不到邮件。
+这个在who.is下面输入 whitehouse.gov, 就会出来
+感谢战友提供资讯【GM33】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228278")
+               '(q () (pre () "
+8月25日：香港荃湾至少三名警员掏出手枪，市民跪地请求不要开枪，被踢开。警方疑似开了真枪，自抗议活动以来，第一枪！【GM44】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228274")
+               '(q () (pre () "8月25日：速龙小队新购置的装备INVISIO® V60 通话器Petzl strix   救援灯【GM22】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228263")
+               '(q () (pre () "8月25号，班农：香港人是和平 伟大的爱国者  August 25, Mr. Bannon: The Hong Kong’s free men and women are great patriots【GM36】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228262")
+               '(q () (pre () "8月25日：警方疑似開真槍(啪一聲)【GM46】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/228260")
+               '(q () (pre () "8月25日：香港警察在自身無危險下舉槍指向市民【GM46】"))
+               (u (:- '(pre () "8月25日：黑警是这样对待平民的！【GM46】"))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228255")
+               '(q () (pre () "
+【香港突发】 2019年8月25日晚上六时起，荃湾游行的示威群众与警方发生激烈冲突，警方动用水炮车驱赶示威群众，有数名警员在沙咀道近大坡坊与示威者冲突，混乱期间，3名警员拔手枪指向示威者，并传出疑似枪声。在现场採访的媒体，追问警员为何开枪，要求曾朝记者开枪的警察有个交代。大批防暴警察接到通知到场增援，解救被围困的警员，在场记者与负责媒体联络的香港警员交涉期间爆发激烈口角。随后，香港警方传媒联络队员到场调停，联络队员回应指出，传媒稍后可向警方新闻室查询。据悉，警察使用的手枪是军警型38左轮手枪。 【GM10】 新闻来源：https://money.udn.com/money/story/5603/4009753"))
+               (u (:- `(cite () ,(@ "https://money.udn.com/money/story/5603/4009753"
+                                    "荃葵青遊行 傳出香港警方對示威者開槍")
+                             (small () "2019.8.25 經濟日報")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/228254")
+               '(q () (pre () "8月25日香港黑警水炮车攻击市民【GM46】"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.8.25")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=Us23-E6NP40&feature=youtu.be"
+                           "郭文贵8月24日:又有大好事即将发生,美英联合灭共,特别行政执法权开始执行…")
+               '(small () "Youtube: Oz Media")
+               (u (:- '(pre () "..."))))
            (:- "郭文(视频): " (@ "https://www.guo.media/posts/228206")
                '(q () (pre () "
 Highlights of Mr. Guo wengui's live broadcast on August 23: President Xi Jinping does not regard President Trump as a friend,and imposed $75 billion of tariffs  on the United States
