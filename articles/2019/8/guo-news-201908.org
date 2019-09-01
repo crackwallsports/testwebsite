@@ -2,6 +2,9 @@
 #+AUTHOR: Xt3
 
 
+
+
+
 * Load
 #+BEGIN_SRC lisp
 (load "./articles/2019/8/guo-news-201908.lisp")
@@ -12,6 +15,40 @@
 #+END_SRC
 * 2019.8
 - 0
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019..")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ,(@ ""
+                                    "")
+                             (small () "")))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- '(pre () "")))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 31
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019..")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ,(@ ""
+                                    "")
+                             (small () "")))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- '(pre () "")))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 30
   #+BEGIN_SRC lisp :tangle yes
 (push
  (u (:- '(small () "2019..")
