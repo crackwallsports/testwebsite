@@ -29,15 +29,15 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
-- 1
+- 2
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019.9.1")
+ (u (:- '(small () "2019.9.2")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=qrvE0SGURhk"
-                           "8月31日文贵与班农先生直播，关注831香港！")
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=xZuMFNsP3b0"
+                           "9月1日文贵与班农先生直播：习近平与王岐山的攻台计划！")
                '(small () "Youtube: 郭文贵")
                (u (:- '(pre () "..."))))
            (:- "郭文: " (@ "")
@@ -45,6 +45,139 @@
                (u (:- `(cite () ,(@ ""
                                     "")
                              (small () "")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230604")
+               '(q () (pre () "
+https://www.google.com/amp/s/www.cbsnews.com/amp/news/hong-kong-protest-today-airport-blockade-strike-action-china-warns-end-is-coming-2019-09-01/"))
+               (u (:- `(cite () ,(@ "https://www.cbsnews.com/news/hong-kong-protest-today-airport-blockade-strike-action-china-warns-end-is-coming-2019-09-01/"
+                                    "As Hong Kong protests grind on, China warns \"the end is coming\"")
+                             (small () "2019.9.2 CBS")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230599")
+               '(q () (pre () "【关注香港】9月2日：香港时间下午17：45分爱丁堡广场学生罢课现场照片。年轻人对未来的担忧，对自由法治的捍卫，必定得到正义的支持！【GM22】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230589")
+               '(q () (pre () "
+【新闻】9月2日：今天是许多香港学生“返学”的第一天，但许多学生没有去上课，而是选择抵制和抗议。
+ 
+成千上万的学生聚集在新界的香港中文大学里举行抗议活动，雨伞和横幅像海洋一样覆盖着整个校园。与此同时，数千名高中生则聚集在几英里外的香港岛，在金钟的抗议活动中，高中生坐在地上，许多人穿着校服，戴着口罩——抗议者经常戴口罩来隐藏自己的身份。原本今天可能预示着这场由年轻人主导的夏季抗议活动的结束，但许多人没有去上课，而是决定继续为了香港的民主、自由继续抗议。【GM31】
+ 
+来源：https://www.cnn.com/asia/live-news/hong-kong-student-strike-live-blog-sept-2-intl-hnk/index.html"))
+               (u (:- `(cite () ,(@ "https://www.cnn.com/asia/live-news/hong-kong-student-strike-live-blog-sept-2-intl-hnk/index.html"
+                                    "Hong Kong students strike on first day of school")
+                             (small () "2019.9.2 CNN")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230580")
+               '(q () (pre () "
+【翻译】9月2日：从亚洲最好到香港最恨 —— 香港警察的堕落之路！ 1974年成立的廉政公署标志着从那一刻开始，港人和当局开始建立起了信任，而2019年的元朗事件中，警方角色发生了转变，曾经保护公民的警察现在守卫着政府，警察违反了其与公民之间的道德契约。香港公众花了40多年才信任香港警方，而警方仅仅几分钟就将这种尊重付之一炬并成为人民公敌。【GM31】
+https://spark.adobe.com/page/JuMsUqDeAXyFs/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/JuMsUqDeAXyFs/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230568")
+               '(q () (pre () "【中英文字幕】8月31日 郭先生和班农先生直播剪辑：五大诉求代表着自由  香港人在给全世界争取自由【GM38】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230566")
+               '(q () (pre () "【中文字幕】9月1日：在经历了游行以来最严重的警察暴力后 香港游行者今天继续走向机场
+September 1, Protesters target airport after Hong Kong violence 【GM36】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230564")
+               '(q () (pre () "【中英文字幕】9月1日：班农和郭文贵先生直播精彩片段: 在未来美国和西方将要对中国进行哪儿方面的制裁？ Highlights of live broadcast by Mr. Bannon and Miles Kwok on September 1st: What kind of sanctions will the US and the West impose on China in the future? 【GM18】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230557")
+               '(q () (pre () "
+【新聞】9月2日：香港反送中示威活動不斷，港警近期開始抓捕多人。沙田區議會翠嘉選區議員李世鴻1日早上剛在Facebook發表聲明退出新民主同盟，晚上就因高呼「黑警可恥」被拘留在田心警署。此外，東區區議員徐子見的個人臉書專頁小編留言說：「他在接近午夜12時許於柴灣港鐵站內被捕。」
+目前立法會議員有鄭松泰、區諾軒、譚文豪，以及沙田區議員許銳宇均等人被拘捕。【GM40】
+新聞鏈 ：https://www.ettoday.net/news/20190902/1526525.htm?"))
+               (u (:- `(cite () ,(@ "https://www.ettoday.net/news/20190902/1526525.htm?"
+                                    "2名香港區議員李世鴻、徐子見被捕！　民眾聲援高叫「放人」")
+                             (small () "2019.9.2 ETtoday新聞雲")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230554")
+               '(q () (pre () "【翻译】9月1日：美中关系新常态  中美之间一些悬而未决的大问题，包括致命的芬太尼药物对美国的侵蚀，以及中共承诺大规模购买美国农产品后又反悔，使川普的愤怒一天比一天更强烈，如果继续下去，他对待中共的视角将从经贸转向更为严重的国家安全和人权角度。如果到了那天，他的幕僚们也早就准备好了很多强硬的政策，只等他的批准。
+https://spark.adobe.com/page/JoQnS7fjiB2VV/  "))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/JoQnS7fjiB2VV/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230553")
+               '(q () (pre () "
+【翻译】9月2日: 班农先生在8月29日接受采访时说：华为与中共国的威胁会震惊全人类。 华为是美国有史以来面临的最严重的国家安全威胁，甚至超过了核战争。现在，华为实际上就是人民解放军（PLA）派出的前沿部队，接管了几乎全世界的网络和通信组件。如果我们允许这种情况再继续，用不了几年，华为将基本控制西方的通信系统，最后甚至控制整个西方。
+https://spark.adobe.com/page/BfffJMHhlLuC2/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/BfffJMHhlLuC2/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230534")
+               '(q () (pre () "【中文字幕】9月1日：香港前任布政司长陈方安生彭博社开讲“我钦佩香港青年为自己的未来而奋斗，港府应该彻查纵容暴力，回应抗议诉求”【GM12】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230532")
+               '(q () (pre () "
+【新闻】9月2日：港人抗争为自由，墙内宣传为猪肉！
+最近，港人的浴血抗争被中共官媒污化的同时，猪肉价格成为很多人关注的话题。据新浪财经报道，中共开始出台方案，猪肉价格便宜10%每人每日限购2斤 。从今天开始，广西南宁市开始实施猪肉价格临时干预措施，在10大菜市场，实行限量限价销售猪肉。在南宁市淡村综合农贸市场的猪肉销售点，现场的高音喇叭正在循环播放着价格公告。
+ 
+中共为了稳价格，连便宜猪肉都开始限购了。真是港人为自由浴血抗争前方吃紧，中共为猪肉开始限购墙内紧吃！猪肉固然重要，任尔什么宣传，难道墙内人就只求吃一口便宜猪肉吗？大家对自由的渴望跟港人是一样的！
+ 
+更有墙内网友愤怒到：没猪肉吃时养猪是任务，缺乏劳动力时开放二胎是政策！想想！你跟猪有什么二样！中共把人民像猪一样圈养，人民就该站起来把中共毫不犹豫的推翻！【GM30】
+引自：https://finance.sina.cn/2019-09-02/detail-iicezzrq2763586.d.html?from=wap")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230527")
+               '(q () (pre () "【中文字幕】9月1日：周六抗议活动暴力升级；周日香港机场再次受到抗议干扰【GM12】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230518")
+               '(q () (pre () "
+【新闻】9月1日：特朗普政府对华新关税生效
+据华尔街日报报导，美国对中国输美服装等商品加征的关税从周日起生效，贸易战由此升级，预计将直接对消费者构成冲击。
+ 
+美国从9月1日起加征的15%进口关税涉及工具、服装、部分鞋履以及很多电子产品，去年这部分进口商品的价值约为1,110亿美元。美国对从中国进口的智能手机、笔记本电脑、玩具、游戏及其他商品征收15%关税的生效时间已推迟到12月15日，也就是通常为假期季进行商品进口的时间段之后，去年这部分进口商品的价值约为1,560亿美元。
+ 
+特朗普周日在一则推文中表示：“绝对值得，我们不想做中国人的仆人！”他指的是关税举措迫使美国进口商寻找其他供应商的过程。他在另一条推文中补充道，这些关税 “关乎美国的自由”，“没有理由什么都从中国买！”【GM29】
+来源：https://cn.wsj.com/articles/%E7%89%B9%E6%9C%97%E6%99%AE%E6%94%BF%E5%BA%9C%E5%AF%B9%E5%8D%8E%E6%96%B0%E5%85%B3%E7%A8%8E%E7%94%9F%E6%95%88-11567386008"))
+               (u (:- `(cite () ,(@ "https://cn.wsj.com/articles/%E7%89%B9%E6%9C%97%E6%99%AE%E6%94%BF%E5%BA%9C%E5%AF%B9%E5%8D%8E%E6%96%B0%E5%85%B3%E7%A8%8E%E7%94%9F%E6%95%88-11567386008"
+                                    "特朗普政府对华新关税生效")
+                             (small () "2019.9.2 华尔街日报")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230512")
+               '(q () (pre () "【关注香港】香港9月2号今天开始大罢工！世界在支持你们！香港人加油！【GM06】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230506")
+               '(q () (pre () "【网友吐槽】9月1日：中共没人了，估计连炊事班的人员都上阵了！黑警人手不够用了，这些胖子能通过体能测试？平时咋训练的？真是太可笑了！【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230505")
+               '(q () (pre () "【关注香港】9月1日：夜深！香港私家车主们自发义务的把在机场抗议的年轻人送回家！这是爱的汇集，俯瞰公路，车流构成了一条绚烂夺目的黄丝带！🎗️🎗️🎗️【GM30】"))) 
+           (:- "郭文: " (@ "https://www.guo.media/posts/230504")
+               '(q () (pre () "
+【新闻】9月2日：中共官媒叫嚣，港人躲不过月圆之夜！
+随着中共驻港部队的进港，香港恶警越发有了底气，在港人831游行中，警民冲突持续激化，并有投掷燃烧弹，水泡车喷射颜色液体及投掷砖头等行为。冲突中多处出现纵火、架起路障、破坏月台幕门等设施，场面一度混乱！
+ 
+面对中共祸港乱局，中央政法委微信公众号「长安剑」发文，称示威者犯下暴行，不要再幻想蒙面就能躲过；又称「离月圆之夜还有几天」，吁他们自己「掰着手指算一算」。
+ 
+中共官媒《新华社》亦强调，中央绝不会在原则立场问题上让步，法律定要严惩罪行，无论是香港暴乱的参与者还是幕后的策划者、组织者和指挥者，审判就将来到。
+ 
+中共如此叫嚣，称躲得过初一，躲不过十五，离月圆之夜还有几天，港人该自己掰着手指算一算了，似在暗示9月13日中秋节前后中共可能会扩大暴力行动！【GM30】
+引自：https://www.hk01.com/%E8%AD%B0%E4%BA%8B%E5%BB%B3/370439/8-31%E9%81%8A%E8%A1%8C-%E5%AE%98%E5%AA%92-%E9%A6%99%E6%B8%AF%E6%9A%B4%E5%BE%92%E8%BA%B2%E4%B8%8D%E9%81%8E-%E6%9C%88%E5%9C%93%E4%B9%8B%E5%A4%9C-%E5%AF%A9%E5%88%A4%E5%B0%B1%E5%B0%87%E5%88%B0"))
+               (u (:- `(cite () ,(@ "https://www.hk01.com/%E8%AD%B0%E4%BA%8B%E5%BB%B3/370439/8-31%E9%81%8A%E8%A1%8C-%E5%AE%98%E5%AA%92-%E9%A6%99%E6%B8%AF%E6%9A%B4%E5%BE%92%E8%BA%B2%E4%B8%8D%E9%81%8E-%E6%9C%88%E5%9C%93%E4%B9%8B%E5%A4%9C-%E5%AF%A9%E5%88%A4%E5%B0%B1%E5%B0%87%E5%88%B0"
+                                    "【8.31遊行】官媒：香港暴徒躲不過「月圓之夜」　審判就將到")
+                             (small () "2019.9.1 香港01")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230490")
+               '(q () (pre () "【中英文字幕】9月1日班农和郭文贵先生爆猛料： 50万大军就在福建准备对台湾定点打击！ 什么是双菱计划？ On September 1, with Mr. Bannon, Miles Kwok said that 500,000 troops in Fujian were ready to strike Taiwan! What is Operation Double Prism? 【GM18】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230484") " .. " (@ "https://www.guo.media/posts/230483")
+               '(q () (pre () "
+9月1日: 请向全世界传播8月31日在香港，中共指使的恶警们的种种恶行！共24张图！8-14 【GM02】
+
+9月1日: 请向全世界传播8月31日在香港，中共指使的恶警们的种种恶行！共24张图！1-7 【GM02】
+")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230471")
+               '(q () (pre () "【中英文字幕】9月1日班农先生和郭文贵先生向全世界爆猛料！On September 1st, Mr. Bannon and Miles Kwok announced a big news to the whole world! 【GM18】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230457")
+               '(q () (pre () "【新闻】9月1日，外交部驻港公署发言人指出，美国个别国会议员公然美化暴徒，对忍辱负重的香港警察吹毛求疵。难道警察袖手旁观，任香港法治沉沦，才是你们的内心期待？香港是中国的香港，香港事务纯属中国内政。敦促美有关政客立即停止对香港事务指手画脚，否则只会搬起石头砸自己的脚。
+ 
+搬起石头砸自己的脚！根据中共喉舌历来的规律总结，每次美帝搬起石头砸自己的脚，中共都会疼的嗷嗷地叫唤！这次港人的抗争触痛了中共的神经，滔天民意的力量已让中共害怕，中共只能通过骂美帝来散播仇恨，用仇恨来加固墙内洗脑！水能载舟，亦能覆舟！中共这条破船马上就沉了，在真相面前，怎么掩饰也没用了！【GM30】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230455")
+               '(q () (pre () "
+【推文】9 月1号，卡尔巴斯: 这些CCP的懦夫在地铁上残暴对待他们的香港同胞，而失败的香港\"领导\"林郑月娥却对老百姓这样的遭遇置之不理。美国是时候采取法律上的行动了。【GM36】
+https://twitter.com/Jkylebass/status/1168129557863501824?s=19"))
+               (u (:- `(cite () "Kyle Bass @Jkylebass : "
+                             ,(@ "https://twitter.com/Jkylebass/status/1168129557863501824?s=19")
+                             (small () "2019.9.1 Twitter")
+                             (q () (pre () "
+ccp Cowards brutalize HK families on commuter trains while failed HK “leader” carrie lam(b) turns her back on her own people. It’s time for US to take legislative action. @marcorubio @SenatorMenendez @SenatorCardin @SenTomCotton"))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230452")
+               '(q () (pre () "【中文字幕】9月1号 华人的声音！ 林耶凡... 8月31号的警察暴力是国家恐怖主义行为 中共想制造恐怖使港人噤声没那么容易 香港人是在民主自由中长大的  【GM09】【GM22】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230437")
+               '(q () (pre () "【关注香港】9月2日凌晨：裕東路迴旋處大量警車，往北大嶼山公路；柴灣金源樓警車加6防暴戒備；屯門站大批警察推進 【GM02】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230433")
+               '(q () (pre () "【中文字幕】8月31日 郭文贵和班农直播香港 班农先生非常想念香港勇敢的年轻人 今天的警察的行为是巨大的人间悲剧 中共是罪魁祸首 【GM38】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230416")
+               '(q () (pre () "9月1号：尊敬的战友们好．你们传播香港危机真相了吗？今天文贵将在纽约时间．中午12点．北京时间零晨12:00左右．与班农先生直播爆料．共产党的香港之外的另外一个威胁全世界的计划！一切都是刚刚开始！"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 1
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.9.1")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=qrvE0SGURhk"
+                           "8月31日文贵与班农先生直播，关注831香港！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
            (:- "郭文(视频): " (@ "https://www.guo.media/posts/230414")
                '(q () (pre () "
 【新闻】 9月1号 香港已经实质性戒严？无差别化搜包 检查手机 新疆模式已经开启？
