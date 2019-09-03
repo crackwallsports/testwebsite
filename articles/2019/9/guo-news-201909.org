@@ -29,15 +29,15 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
-- 2
+- 3
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019.9.2")
+ (u (:- '(small () "2019.9.3")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=xZuMFNsP3b0"
-                           "9月1日文贵与班农先生直播：习近平与王岐山的攻台计划！")
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=r1yuj_7-J5I"
+                           "9月2日郭文贵先生在图森报平安直播视频")
                '(small () "Youtube: 郭文贵")
                (u (:- '(pre () "..."))))
            (:- "郭文: " (@ "")
@@ -45,6 +45,228 @@
                (u (:- `(cite () ,(@ ""
                                     "")
                              (small () "")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230880")
+               '(q () (pre () "9月3日：北京将真正的对香港开始执行戒严计划……Beijing just paid out plans for martial law一切都是刚刚开始！【September 3: Beijing will truly implement a martial law plan for Hong Kong...miles Beijing just paid out plans for martial law. Everything is just beginning!！】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230879")
+               '(q () (pre () "
+【新闻】9月3日：法不容共！香港检控官斥港警效忠中共公然撒谎！
+据报道称，警方在人大常委会通过限制香港普选的8.31五周年前夕，大举拘捕及检控七名政治人物。法庭检控主任协会向律政司长郑若骅和刑事检控专员梁卓然及全体律政司职员发出电邮，称警方否认故意于当日作出拘捕行动，是公然撒谎。协会续称，警方知道自己说谎，但可能不道这种谎话长远会破坏香港司法制度。
+ 
+中共完全渗透和控制了香港警方，香港警察已完全按中共大陆警方模式运作为恶，把维护中共利益放在第一位，秉承稳定压倒一切的方针。中共恶警稳定压倒一切的运行模式，就是抛开法律公平与人民利益，不惜通过违法来满足统治者的需要！
+ 
+香港检控官斥港警为中共走狗，为中共不惜公然为恶撒谎，让港共恶警在法律面前无地自容。中共可以渗透，可以收买，可以使人为恶，但无法蒙蔽民众雪亮的眼睛。法律审判是你们未来唯一的归途，也是你们最好的出路！【GM30】
+引自：http://cn.rfi.fr/%E6%B8%AF%E6%BE%B3%E5%8F%B0/20190903-%E6%A3%80%E6%8E%A7%E5%AE%98%E6%96%A5%E6%B8%AF%E8%AD%A6%E5%85%AC%E7%84%B6%E6%92%92%E8%B0%8E"))
+               (u (:- `(cite () ,(@ "http://cn.rfi.fr/%E6%B8%AF%E6%BE%B3%E5%8F%B0/20190903-%E6%A3%80%E6%8E%A7%E5%AE%98%E6%96%A5%E6%B8%AF%E8%AD%A6%E5%85%AC%E7%84%B6%E6%92%92%E8%B0%8E"
+                                    "检控官斥港警「公然撒谎」")
+                             (small () "2019.9.3 法广")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230878")
+               '(q () (pre () "
+【新闻】9月2日香港警察在学校扑到学生事件视频【粤语播报 】【中英双字幕】【GM22】
+详情：9月2日 NOW新闻 孔教学院大成何郭佩珍中学校园门外早上有学生及市民聚集，之后警方到场，追截期间有学生受伤。")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230824")
+               '(q () (pre () "【关注香港】9月3日：香港市民让香港黑政府9月13日前回复五大诉求，否则将全面升级抗争运动！【GM06】"))
+               (u (:- '(pre () "给政府的死线 9.13"))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230823")
+               '(q () (pre () "
+【新闻】9月3日：邪共作恶无底线，连13岁的孩子都抓！
+据中共人民日报称，香港警方1日举行记者会，表示：31日在港铁旺角和太子站 ，总计共拘捕63人，年龄为13-36岁之间。
+ 
+年龄最小的13岁，中共黑警真是作恶无底线，连这样的小孩子也忍心下手。你们很多也是为人父母的，就算是你们是执法有这样执法的吗？把中共在大陆的那一套模式放到香港来，港人岂会如此受你们虐待！
+ 
+如此邪恶的抓捕连孩子也不放过，只会使港人的抗争越来越激烈！中国的传统文化讲，幼吾幼以及人之幼！假如那是你们的孩子，在为了正义而抗争，你们会下的去手抓捕吗？【GM30】
+引自：https://m.weibo.cn/detail/4411827595275516")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230819")
+               '(q () (pre () "【中英文字幕】9月1日：郭先生和班农先生直播呼吁所有台湾同胞和中国人民要和香港同胞站在一起，才能彻底灭掉共产党！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230812")
+               '(q () (pre () "
+【关注香港】9月3号，林郑月娥否认昨天路透社的语音😱 大幺蛾子痴人梦语，要带领香港走出困境！ 今天，香港特首林郑月娥在记者会上表示，依然有信心和团队一起带领香港走出困境；首要目标是停止暴力，恢复平静。 万恶之源，高喊除恶！能说出这话得多厚的脸皮。香港不需要你们的带领，没有你们的祸害，港人会过的更好。你们只会把港人引向深渊。港人难道不清楚吗？是谁在把他们送向魔窟！ 真想走出困境就同意的港人的诉求。一群只会制造问题，根本不想去解决矛盾的人，在这里声称走出困局，傻子也不会信啊！还称你们有信心，如今你们的主子中共都快亡了，真不知所谓的信心从何而来！简直是痴人梦语，被中共许诺的高官厚禄烧糊涂了吧！ September, 3 Carrie Lam says she never tendered resignation to China 【GM30】【GM31】【GM36】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230810")
+               '(q () (pre () "
+【关注香港】9月3日：香港人9项可以做到
+1.与共产党合作的商场说不。
+2.有白宫联署有利于香港五大诉求的就签。
+3.游行集会有能力参与的都去参加。
+4.开个Twitter账户对外做宣传。
+5.对中资银行股票说不（不买任何中资银行股票）
+6.MPF转去外国基金。
+7.把港元转换美金现钞。
+8.每天做运动。
+9.手足互相支持。【GM22】
+")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230805")
+               '(q () (pre () "
+【新闻】9月3日：林郑月娥表示“我从来没有向中央人民政府提出辞职”
+ 
+周一路透社公布的林郑月娥音频显示:“如果我有的选，头一件事就是辞职，并深深地道歉，”并指责自己引发了香港的政治危机，造成了“不可饶恕的浩劫”。
+ 
+周二，在每周例行的新闻发布会上被问及音频泄露一事时，林郑月娥说其私下发表的言论被录音并传递给媒体是“完全不可接受的”。她坚称“我从来没有向中央人民政府提出辞职，我甚至没有考虑过与中央人民政府讨论辞职问题。不辞职是我自己的选择。”并希望“在非常困难的情况下帮助香港，为香港人民服务”。
+ 
+林女士表示，她的政府对香港的暴力行为“非常焦虑”，并认为“大多数香港人不想看到它。因此，我们的共同目标是制止暴力，让社会能快速恢复和平。”她承诺将努力与抗议者进行更多对话。
+ 
+此前有人暗示，这一事件可能是精心策划的，目的是重新获得同情，恢复她在过去几周失去的部分公众支持。【GM31】
+来源：https://www.bbc.com/news/world-asia-china-49560487"))
+               (u (:- `(cite () ,(@ "https://www.bbc.com/news/world-asia-china-49560487"
+                                    "Carrie Lam: Hong Kong leader 'never tendered resignation to Beijing'")
+                             (small () "2019.9.3 BBC")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230804")
+               '(q () (pre () "【推文】9月3日，凯尔巴斯推文：香港警察竟然在学校抓人！林郑月娥完全失控了！@卢比奥 是时候通过香港人权法案了！【GM01】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230803")
+               '(q () (pre () "
+【英文字幕】9月2日：香港護士控訴香港警察暴力。香港媒體揭露有示威者在被捕以後又被打成骨折送醫院救治。A Hong Kong nurse exposed police brutality, because she treated many protesters with broken bones. 【GM35】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230785")
+               '(q () (pre () "
+【中文字幕】9月3日，郭先生谈历史，真的发人深省！为什么我们中华民族是对自己同胞最最残忍的一个民族？为什么我们最深层的观念中根本不理解何为平等！只认臣服！【GM01】")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/230780")
+               '(q () (pre () "
+文字版：2019年9月1日文贵与班农先生直播 “現在我呼籲所有的台灣同胞和支持我們爆料革命的人，你們嚴肅認真地對待。應該要求台灣政府給予香港所有人一切可能的支持，並且發動全台灣緊急的作戰命令，與香港人民站在一起。把習近平王岐山這個收復台灣，收復香港的野心和征服世界，要發動第三次世界大戰的行動阻止在香港大門之內，而不燃燒到台灣，為此台灣應該做出一切的準備，做好一切的犧牲。只有這樣才能讓共產黨徹底被消滅，給世界機會，給世界真相，讓世界和香港和台灣站在一起，共同的滅掉共產黨”https://spark.adobe.com/page/oKtWi7ojbJxud/    https://littleantvoice.blogspot.com/2019/09/201991.html "))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/oKtWi7ojbJxud/")))
+                  (:- `(cite () ,(@ "https://littleantvoice.blogspot.com/2019/09/201991.html"
+                                    "文字版：2019年9月1日文贵与班农先生直播")
+                             (small () "2019.9.2 Blogspot: 战友之声")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230778")
+               '(q () (pre () "
+【关注香港】香港时间9月2日:大埔何中事件 校長報警 黑警校園拘捕學生 過程中推倒學生致使受傷流血 嚴然如黑道入侵校園!
+早先經方聲稱大埔何中事件是學生自己跌倒受傷，今天公布影片證明是警察推倒學生以致學生受傷，打臉警方說謊!【GM15】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230762")
+               '(q () (pre () "【关注香港】目睹共产党洗脑的暴警的恶毒手段！谁可以再容忍共产党的统治✊✊✊")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230760")
+               '(q () (pre () "【中文字幕】9月2日：路透社独家透露林郑特首与商界谈话录音完整篇：林郑请求原谅；个人政治空间有限；北京无意香港派军，也无时间表；北京会拖下去！【GM12】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230759")
+               '(q () (pre () "【关注香港】共产党的恶毒手段从来都是没有最残暴只有更残暴✊✊✊灭共是中国人唯一的出路✊✊✊✊")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230722")
+               '(q () (pre () "9月2日：中共傀儡林郑月娥内部讲话录音！担心她现在解决危机的能力“非常有限”，如果有可能，她会“退出”。林郑是上周发表的一份评论录音透露，她已经造成了“不可饶恕的浩劫”，并继续为中共帮腔，推卸责任称“北京无意放解放军上街平息骚乱”。")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230716")
+               '(q () (pre () "
+【关注香港】「英文版」(香港教育部要求校方提供罢课学生名单录音被曝光)School principal confirms in a leaked voice recording that the education bureau requested a list of students who boycotted classes today.(GM02)")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230713")
+               '(q () (pre () "【关注香港】9月2日，震惊！镜头捕捉香港警察疯癫举动！是否在行动前被服用兴奋剂或类似药物？【GM01】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230712")
+               '(q () (pre () "【中文字幕】9月2日，警察上來就是胡椒水伺候，已經不允許有任何合法的集會，香港的抗議者已被頂得沒有退路，這就是香港的現狀--來自香港的連線報導。【GM37】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230709")
+               '(q () (pre () "
+【中文字幕】9月2日：川普绝不放弃对中共的贸易战。他昨天说好几位伟大的经济学家跟他观点一致，贸易战由中共买单。宁可收入减少也要坚决支持川普的美国农民因祸得福，得到农业补贴比卖农产品给中国更实惠。【GM35】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230693")
+               '(q () (pre () "【中文字幕】9月2日：郭文贵先生和班农先生在31号直播说 中共在香港的暴行告诉你：在中共統治下，沒有中國夢，只有中共惡夢！【GM37】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230691")
+               '(q () (pre () "【关注香港】9月2日，香港年轻人质问警察：“你们的良心呢”，然而得到的回复却是一群警察的围捕和随之而来的暴打...【GM01】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230688")
+               '(q () (pre () "【关注香港】9月2日: 香港同胞总结的中共纳粹 CHINAZI 📣📣📣📣📣传播")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230685")
+               '(q () (pre () "【关注香港】6月9日～9月2日：警方使用橡胶子弹.催泪弹…数量跟被捕的示威者人数的粗略统计【GM02】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230681")
+               '(q () (pre () "
+【新闻快讯】9月2号华为欧洲再度被破功！美国和波兰5G合作签协议！
+美联社9月2号消息，为应对华为网络技术在欧洲的扩张和它本身安全性的担忧，美国和波兰周一签署了一项新的5G技术合作协议。中共被报道利用华为通过网络间谍而获取数据，收集情报为中共军事和国家安全服务。对此，美国一直在游说盟友禁止华为进入5G网络。华为否认了这些指控。但今年早先时候，一名在波兰的华为员工因涉嫌从事间谍活动而被捕入狱。尽管华为很快解雇这名员工，撇清干系。同样在年初，美国对华为以涉嫌商业机密盗窃和欺诈行为进行23起诉讼，种种举动验证了华为替中共军方服务的动机，华为本身就是PLA。【GM12】
+消息来源美联社
+https://www.apnews.com/9a90e16d903947709998dd7a2dde8733"))
+               (u (:- `(cite () ,(@ "https://www.apnews.com/9a90e16d903947709998dd7a2dde8733"
+                                    "US and Poland sign agreement to cooperate on 5G technology")
+                             (small () "2019.9.3 AP News")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230673")
+               '(q () (pre () "
+【翻译】9月2日特别报道:香港领导人表示，如有可能林郑月娥将“辞职”，她担心自己现在解决危机的能力“非常有限”
+林郑月娥的言论与路透社周五发布的报道相一致，它揭示了北京领导人在处理香港危机方面是如何有效地发号施令。三位知情人士对路透表示，中国政府拒绝了林郑月娥最近提出的一项化解冲突的提议，其中包括完全撤销引渡法案。
+https://spark.adobe.com/page/UJeBdJHXoFggT/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/UJeBdJHXoFggT/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230672")
+               '(q () (pre () "【关注香港】时间:9月2号晚上11点多,地点:太子，黑警踩女示威者手指 女孩疼的一直喊救命 【GM02】")))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/230665")
+               '(q () (pre () "9月2日：美丽的特别的TUCSON……我会很快回来的！一切都是刚刚开始！"))
+               (u (:- `(cite () ,(@ "https://en.wikipedia.org/wiki/Tucson,_Arizona")
+                             (small () "Wiki")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230664")
+               '(q () (pre () "
+【新闻】9月2日，防暴警察突袭天主教中学(喇沙書院)对学生进行搜捕，如果学生身上携带黑色的口罩，则被当作暴徒抓捕。校方明确对HKFP表示，这些警察不是学校叫来的。是他们主动来的。中共名义上不说戒严，但是它在做着比戒严还要更加恐怖的事情。【GM09】
+ 
+新闻来源：
+https://twitter.com/HongKongFP/status/1168362482429153280"))
+               (u (:- `(cite ()
+                             ,(@ "https://twitter.com/HongKongFP/status/1168362482429153280")
+                             (small () "2019.9.1 Twitter: Hong Kong Free Press @HongKongFP")
+                             (q () (pre () "
+After protesters conducted \"non-cooperative activities\" - such as blocking train doors - at MTR stations including Lok Fu and Lai King, riot police entered and made arrests on Monday morning.
+
+In full: http://bit.ly/extraditionhk . Photo: HK01 screenshot. #hongkong #hongkongprotests
+"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230663")
+               '(q () (pre () "
+【新闻】9月2号 香港 皇后玛丽医院医护人员:link: 人链和平抗议 抗议0831警察阻止医护人员对被警察暴力殴打的示威者进行现场救治 【GM09】
+ 
+新闻来源：
+https://twitter.com/rthk_enews/status/1168466487989788673"))
+               (u (:- `(cite ()
+                             ,(@ "https://twitter.com/rthk_enews/status/1168466487989788673")
+                             (small () "2019.9.2 Twitter: RTHK English News @rthk_enews")
+                             (q () (pre () "
+WATCH: Staff at #HongKong's Queen Mary Hospital form a human chain to protest over the police delaying medical treatment for people they injured during action at an MTR station on Saturday. #ExtraditionBill 
+
+https://news.rthk.hk/rthk/en/component/k2/1478390-20190902.htm?spTabChangeable=0 …"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230662")
+               '(q () (pre () "
+【新闻快讯】9月2号香港乱局升温发酵；林郑月娥撤身要跑？人民不答应！党更会要你命！
+路透社9月2号新闻“特别报道”香港特首林郑日前表示，担心她现在解决危机的能力“非常有限”，如果有可能，她会“退出”。林郑是上周发表的一份评论录音透露，她已经造成了“不可饶恕的浩劫”，并继续为中共帮腔，推卸责任称“北京无意放解放军上街平息骚乱”。林郑此番表态，真正验证了郭文贵先生此前视频里，反复说得“跟中共勾兑，绝无好下场”这句话。中共不仅是恶虎，还是只会耍流氓的泼皮虎。跟这个畜生勾兑，最终让你骑虎难下！林郑勾兑大法了，你家人捞了好处，拿了共产党的大钱，它会放过你？！你被党重点培养，官高一品大员，不给党办完事，搞定遣返法，搞定香港，它会放过你?! 天底下，跟中共有几人落得好下场？完全没有！除非你太天真，还是幻想，那就是找死！你拿了钱，做了官，这些钱和这些权最后都会烧死你，摔死你。 【GM12】
+消息来源路透社“特别报道”
+https://www.reuters.com/article/us-hongkong-protests-carrielam-specialre/special-report-hong-kong-leader-says-she-would-quit-if-she-could-fears-her-ability-to-resolve-crisis-now-very-limited-idUSKCN1VN1DU"))
+               (u (:- `(cite () ,(@ "https://www.reuters.com/article/us-hongkong-protests-carrielam-specialre/special-report-hong-kong-leader-says-she-would-quit-if-she-could-fears-her-ability-to-resolve-crisis-now-very-limited-idUSKCN1VN1DU"
+                                    "Special Report: Hong Kong leader says she would 'quit' if she could, fears her ability to resolve crisis now 'very limited'")
+                             (small () "2019.9.2 Reuters")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230654")
+               '(q () (pre () "
+Chinese Foreign Ministry spokesperson Geng Shuang speaks on September 2:  the central government has given full support to Carrie Lam, just clean up the mess!
+9月2日中国外交部耿爽发言: 中央老爸全力支持林郑月娥，并表示你赶紧把这些烂摊子给我收拾好了！
+【GM18】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230649")
+               '(q () (pre () "
+【新闻】9月2日：中国外交部发言人耿爽主持例行记者会叫嚣当前香港示威已演化为极端暴力行动。
+ 
+在回应欧盟外交官的涉港言论时，耿爽表示，当前在香港发生的游行示威活动已经完全超出了集会游行示威自由的范畴，‌‌已经演化为极端的暴力行动，‌‌严重挑战了香港的法治和社会秩序，‌‌严重威胁到香港市民的生命财产安全，‌‌也严重触犯了“一国两制”的原则底线。‌‌
+ 
+他说道，“如此‌‌严重的暴力违法罪行，‌‌如果发生在欧洲，‌‌相信任何一个欧洲国家‌‌都不会坐视不管。我们希望欧方能够明辨是非，‌‌理解和支持香港特区政府依法止暴制乱，‌‌维护香港的法治‌‌和‌‌繁荣稳定。‌”
+ 
+编者按：
+大量视频证明纵火、开枪、抓捕示威者的是乔装成的示威者的警察，对民众暴力殴打、乱抓乱捕的恰恰是警察，外交部的谎言再也掩盖不住真相，共产党才是真正的极端暴力执行者。【GM21】
+新闻来源：https://www.zaobao.com.sg/realtime/china/story20190902-985879"))
+               (u (:- `(cite () ,(@ "https://www.zaobao.com.sg/realtime/china/story20190902-985879"
+                                    "中国外交部：当前香港示威已演化为极端暴力行动")
+                             (small () "2019.9.2 早报")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230648")
+               '(q () (pre () "
+【新闻】9月2号，香港学生罢课，CCP媒体警告“结束的时刻就要来了”。在新学年的第一天，中学生和大学生在全市范围内开始了罢课。组织者估计，有来自200多间学校，至少9，000名学生参加了罢课。这周的罢课会持续到周二，以后每周会有一天罢课，直到游行者的诉求得到履行。
+ 
+今天，香港有呼吁要罢工。而大陆的CCP媒体则开始污蔑并警告游行者“对那些试图破坏香港的人来说，结束的时刻就要到来了。”
+ 
+在英华书院，学校组织公民课程，有论坛、沙龙来教育年轻人密切关注香港游行。在校门口，许多的学生都在给他们的父母递参加罢课的请假条，让父母签名。学生们说，如果政府继续拒绝香港民众的五大诉求，那么他们会升级行动。现在只是在罢课，如果是升级的行动，他们就不得不让教育机构停止工作。
+ 
+有校友说，“我过去听了很多对香港人的贬低，但我只想和平地生活，我更在乎经济的发展而不是政治，但今天我意识到，一个法治和自由的家园对我来说有多重要。” 【GM36】
+来源：https://www.theguardian.com/world/2019/sep/02/hong-kong-protests-students-boycott-classes-as-chinese-media-warns-end-is-coming"))
+               (u (:- `(cite () ,(@ "https://www.theguardian.com/world/2019/sep/02/hong-kong-protests-students-boycott-classes-as-chinese-media-warns-end-is-coming"
+                                    "Hong Kong students boycott classes as Chinese media warns 'end is coming'")
+                             (small () "2019.9.2 The Guardian")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230647")
+               '(q () (pre () "
+9月2日：香港最大的医院之一……院长．威先生．跪地，感谢医护人员罢工抗议……和反对共产党的抗议。．让我泪奔了……共产党真是狗日的太坏了……让老人．女人．孩子都跪地求饶了！共产党还是要他们承认共产党的恶法．天理何在呀……一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230642")
+               '(q () (pre () "【中文字幕】9月2日： 旷日持久的香港抗议持续进行，中共警告“是时候结束了”【GM12】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230640")
+               '(q () (pre () "9月2号：尊敬的战友们好文贵，马上在这里报平安直播，一切都是刚刚开始！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230639")
+               '(q () (pre () "https://mobile.reuters.com/video/2019/09/02/hk-leader-would-quit-if-she-could?videoId=595215059&videoChannel=117760"))
+               (u (:- `(cite () ,(@ "https://mobile.reuters.com/video/2019/09/02/hk-leader-would-quit-if-she-could?videoId=595215059&videoChannel=117760"
+                                    "HK leader would \‘quit\’ if she could")
+                             (small () "2019.9.3 Reuters")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230633")
+               '(q () (pre () "9月2日：这幅漫画作品真是太棒了👏一切都是刚刚开始！"))
+               (u (:- '(pre () "(我: 皇帝的裸肤)")))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 2
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.9.2")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=5s4aSMrsubg"
+                           "9月1日文贵与班农先生直播：习近平与王岐山的攻台计划！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
            (:- "郭文: " (@ "https://www.guo.media/posts/230604")
                '(q () (pre () "
 https://www.google.com/amp/s/www.cbsnews.com/amp/news/hong-kong-protest-today-airport-blockade-strike-action-china-warns-end-is-coming-2019-09-01/"))
