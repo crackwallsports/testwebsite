@@ -29,15 +29,19 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
-- 3
+- 4
   #+BEGIN_SRC lisp :tangle yes
 (push
- (u (:- '(small () "2019.9.3")
-        (u (:- "视频: " (@ "" "")
-               '(small () "")
-               (u (:- '(pre () ""))))
-           (:- "视频: " (@ "https://www.youtube.com/watch?v=r1yuj_7-J5I"
-                           "9月2日郭文贵先生在图森报平安直播视频")
+ (u (:- '(small () "2019.9.4")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=aorfMFJY9Ng"
+                           "9月3日晚间郭文贵先生华盛顿直播：香港将是东西方大战导火线．什么是中共所谓的新型大国关系！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=geVMDIV29YM"
+                           "郭文贵报平直播 2019年9月3日 解放军将宣布香港戒严")
+               '(small () "Youtube: 郭文贵"))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=EHL_i3ptIXc"
+                           "9月3日郭文贵先生在华盛顿直播，谈9月3号CCP将真正对香港进行戒严计划，目前所有焦点都关注香港！")
                '(small () "Youtube: 郭文贵")
                (u (:- '(pre () "..."))))
            (:- "郭文: " (@ "")
@@ -45,6 +49,176 @@
                (u (:- `(cite () ,(@ ""
                                     "")
                              (small () "")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231119")
+               '(q () (pre () "
+【新闻】据日经新闻9月4日讯，香港特首林郑月娥周三下午约见43名建制派立法人员、中共国务院、全国政协及香港行政院相关代表，据传将正式撤回备受争议的送中条例。
+正式撤回送中条例是香港持续三个月的抗议活动提出的五大诉求之一。其他诉求包括林郑辞职和实施普选、撤回抗议者是暴徒的定性、无条件释放抗议民众、成立独立委员会调查警方滥用职权。
+林郑虽伸出撤回条例的橄榄枝，但抗议者表示抗议不会停止，除非五大诉求均被接受。立法议员Michael Tien Puk-sun声称仅是撤回送中条例是不够的，而且让步来的太晚。民阵表示人民无法接受一个充满警察使用暴力的社会。
+正式撤回送中条例的消息使香港股市小幅上扬，但有投资专家建议近期仍谨慎入市。【GM29】
+来源：https://asia.nikkei.com/Spotlight/Hong-Kong-protests/Hong-Kong-leader-set-to-withdraw-extradition-bill"))
+               (u (:- `(cite () ,(@ "https://asia.nikkei.com/Spotlight/Hong-Kong-protests/Hong-Kong-leader-set-to-withdraw-extradition-bill"
+                                    "Hong Kong leader withdraws extradition bill")
+                             (small () "2019.9.4 Nikkei")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231115")
+               '(q () (pre () "【关注香港】英语，西班牙语配音，香港831 黑警暴力执法镇压和平游行！让世界睁开眼睛看清共产党的邪恶真面目！【GM38】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231106")
+               '(q () (pre () "Highlights of Miles Kwok’s live broadcast on September 3: Hong Kong is officially under martial law! Xi, Wang will be buried in Hong Kong! The CCP will die in Hong Kong!
+9月3日郭先生直播精彩片段： 香港正式戒严了！习王将葬身于香港！ 共产党将葬身于香港！【GM18】")))
+           (:- "郭文(PDF): " (@ "https://www.guo.media/posts/231105")
+               '(q () (pre () "
+文字版：9月3號白宮前直播， 我們越是在這個時候，我們所有的戰友的精力都要在傳播香港的真相上，讓更多的人知道共產黨在香港的事情。讓更多的人知道，香港的黑警，香港的毒警，吸了毒的警察，和對香港人民。大家回頭看6月9號發生一切的，歷史的被視頻記錄的事件，能100%的被世界瞭解到共產黨CCP，香港政府欺騙香港市民，慾望要把香港人民的錢財和安全和未來偷走的計劃。和現在要攻打台灣，徹底控制亞洲，征服世界的野心。
+https://spark.adobe.com/page/bChVN3TEo9EgA/
+https://littleantvoice.blogspot.com/2019/09/93.html "))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/bChVN3TEo9EgA/"))
+                      `(cite () ,(@ "https://littleantvoice.blogspot.com/2019/09/93.html"
+                                    "文字版：9月3號白宮前直播")
+                             (small () "2019.9.4 Blogspot: 战友之声"))
+                      `(cite () ,(@ "https://youtu.be/aorfMFJY9Ng")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231090")
+               '(q () (pre () "
+【新聞】9月4日湯家驊：特首有權委任特務警察　負責事務無界定！行政會議成員、資深大律師湯家驊表示，現時的《公安條例》容許行政長官授權，委任任何人士擔當特務警察，協助處理有關事務。
+ 
+湯家驊表示，條例寫得相當廣濶，沒有界定甚麼人可以做，以及處理甚麼事務，但若有關人士被委任，必須聽命於警務處處長，並遵守所有警察需要遵守的條例、指引及命令。他又說，特務警察是輔助性質，委任誰由行政長官決定，而不用知會行政會議。
+ 
+他說，香港過去從未引用過此條例，不相信也看不到目前有需要引用此條例。由於法庭已就港鐵及機場頒下禁制令，若阻嚇作用無效才再去考慮其他方法。【GM22】
+ 
+编者按：從今日起香港遍地『蓋世太保』，盧偉聰以後又多了一個頭銜：香港的貝利亞。
+引自：https://news.rthk.hk/rthk/ch/component/k2/1478696-20190904.htm"))
+               (u (:- `(cite () ,(@ "https://news.rthk.hk/rthk/ch/component/k2/1478696-20190904.htm"
+                                    "湯家驊：特首有權委任特務警察　負責事務無界定")
+                             (small () "2019.9.4 香港電台網站")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231088")
+               '(q () (pre () "
+【关注香港】这位被恶警抓捕的香港年轻人，在面对窗外的摄像镜头时，选择用唇语表达了他内心的坚定信念：光复香港！
+暴政虽然可以让人噤声，但在无声处也能听到呐喊！【GM30】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231084")
+               '(q () (pre () "
+【新闻】9月4日，人口不足300万的立陶宛政府向当地中共使馆发出严正通知！绝不接受中共大使馆影响当地的支持香港民主游行示威活动，立陶宛在一份外交声明中表示，中共大使馆反对受宪法保障的民主自由以及任何干预公共秩序的行为都是不可接受的！【GM01】
+ 
+新闻来源：https://www.lrt.lt/en/news-in-english/19/1093636/lithuania-hands-note-to-china-over-incident-during-hong-kong-support-rally-in-vilnius"))
+               (u (:- `(cite () ,(@ "https://www.lrt.lt/en/news-in-english/19/1093636/lithuania-hands-note-to-china-over-incident-during-hong-kong-support-rally-in-vilnius"
+                                    "Lithuania hands note to China over incident during Hong Kong support rally in Vilnius")
+                             (small () "2019.9.2 LRT")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231083")
+               '(q () (pre () "
+【香港逆權抗爭快報】Sep 4.2019
+香港歷史上最黑暗的８３１「黑警濫捕」遠遠惡劣過納粹德國蓋世太保，起碼那還是秘密警察，還沒有恬不知恥的公開抓捕，而且在眾目睽睽之下對莘莘學子和市民施加如此暴力！
+大律師公會發聲明，指在過去數月大量傳媒拍攝到警察在驅散及拘捕示威者時使用過份武力，包括不合理地施放催淚彈及近距離向人群肩膊以上位置開槍，部分警員執法時，已偏離警隊一貫高質素執法的標準。上星期六晚(8.31)於太子站內，亦有防暴警察在無合理的情況下以暴力對待市民。大律師公會的會員在向被捕人士提供法律支援時，曾在警署遭受多番無理阻撓，令被捕人士未能適時接觸律師及得到法律代表的協助。聲明譴責任何警隊或警務人員濫用權力。
+另外，法庭檢控主任協會主席向律政司司長鄭若驊以及刑事檢控專員梁卓然發出信件，質疑警方回覆傳媒查詢時說謊，憂慮出庭作供的警員難再獲法庭及陪審團視為誠實可靠的證人，對香港法律制度傷害深遠。而且擔心國泰航空事件遲早將會於律政司發生。
+在中共這個流氓政黨的高壓統治下，香港的司法獨立和行政執法基石已經蕩然無存，國家公器淪為極權統治人民的帮凶！至高的天主！袮聽到香港人的悲慟呼喚嗎？請俯允袮子民的哀禱，早日拯救他們吧！【GM42】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231081")
+               '(q () (pre () "
+【中文字幕】9月4日：美對中新增關稅9月1日開始生效。中共商業部發言人說，因關稅中方通過WTO起訴美國。中共商務部宣稱有權宣佈香港進入緊急狀態。第三季度的中國經濟驟然弱化。
+中共認為香港屬於中共，所以他們會不惜一切代價鎮壓。這是整個事件的悲劇性……
+【GM35】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231068")
+               '(q () (pre () "
+【翻译】有种的香港孩子们高唱着激动人心的《悲惨世界》之歌，歌声淹没了中国国歌 。  画面显示，当学生们唱歌时老师们纹丝不动地站着听：“你听到人民的歌声吗？他们唱着忿怒群众的歌。这是人民的歌声，他们不再甘心为奴。【GM001】【GM31】
+”https://spark.adobe.com/page/ZgU4Ml9jmzN1V/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/ZgU4Ml9jmzN1V/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231057")
+               '(q () (pre () "
+Chinese Foreign Ministry spokesperson Geng Shuang’s remarks on September 3: America, don't be such a snob! Xinjiang vocational education camps are educating those extremist terrorists! You should thank me! 9月3日中国外交部耿爽发言美国，你别没事儿找茬儿！新疆教育营那是在教化那些极端恐怖分子！ 你们应该感谢我！ 【GM18】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231020")
+               '(q () (pre () "【中文字幕】9月3 号： “中国已经在香港发号施令！“ 高级战略分析师 基恩将军（Ret）谈香港最新的抗议活动 【GM12】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231018")
+               '(q () (pre () "
+9月3日晚间郭文贵先生华盛顿直播：香港将是东西方大战导火线．什么是中共所谓的新型大国关系！ 9/3/2019 Guo Wengui's live evening broadcast from Washington D.C. Hong Kong, the fuse that will ignite a major war between East and West. What is the CCP's so-called new model of great power relations?")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231015")
+               '(q () (pre () "
+【国内新闻】9月3号明明是快乐开学季，为何对无辜孩童残暴杀戮！请国内战友们警醒！！香港人为啥决绝抗争！
+福克斯新闻网在今天，9月3号，主页版面“暴”出三大主题：天灾，政乱，人祸。天灾，飓风多里安已登陆美国南部，危及四州，国民出门要当心，守家沙袋要堆紧，狂暴指数5级；政乱，前川普政府国防部长马蒂斯，撕逼前总统奥巴马和副总统拜登，痛骂两者无视伊拉克现状，造成伊斯兰国涂炭生灵，暴虐指数8级。人祸，湖北恩施小学开学第一天，Yu 姓男子持刀连杀8名无辜学童，斩伤2刃。残暴让人无语……美国的大媒体头版头条，播报国内斩杀学童的的新闻。小编内心第一反应，中共治理的当下社会完了，这还有人性吗……全世界的文明社会都在保护妇幼老年，怎么到了国内就成了最容易被施暴的对象！！！ 这是怎样的体制，才会荼毒如此残暴的人性，出现这么多专对妇孺下手的， 阴暗….卑鄙的畜生！！！这已经不单单是痛心……失望….绝望或是愤怒！够了…….这个国家，这个体制，这个残害中国人七十多年的共产党，必须…..铲除，中国家庭才不会继续这样的悲剧, 中国社会才不会像低等动物一样的沦丧！最后借用，微信上传播的一首小诗，去纪念在恩施遇害的学童…….
+天为恩|施哭泣
+我为无辜的孩子哭泣
+我想为他们点一支蜡烛
+送一束花
+让他们在天的幼灵知道
+这世界除了伤害
+还有爱
+………..
+我想记忆却无从记起
+想反思却无从反思
+想防范却无从防范
+换了是彼岸木仓击
+舆论早已铺天盖地
+…………
+社会是一条大船
+一个人的不幸
+就是所有人的灾难
+一个孩子的血
+就是所有母亲的泪
+【GM12】
+消息来源福克斯新闻和互联网
+https://www.foxnews.com/world/china-children-killed-first-day-of-school-attack"))
+               (u (:- `(cite () ,(@ "https://www.foxnews.com/world/china-children-killed-first-day-of-school-attack"
+                                    "Chinese man kills 8 children in attack on first day of school: police")
+                             (small () "2019.9.4 Fox News")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231000")
+               '(q () (pre () "【关注香港】9月3日：Free HK！独具匠心的巧妙宣传，让抗议之声无处不在！红绿灯也为港人加油！【GM30】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230998")
+               '(q () (pre () "
+【推文】美国总统川普9月3日推文再度宣称与中国的贸易谈判，美方的表现超讚的，还说他确认中方希望跟新政府谈判，这样就可以继续每年海削美国6千亿美元。但川普警告北京，等他连任成功后，贸易谈判的条件肯定会更严苛，中国的供应链会崩盘，企业、工作、资金都会外逃。 【GM35】"))
+               (u (:- `(cite () ,(@ "https://twitter.com/realDonaldTrump/status/1168874291376656384")
+                             (small () "2019.9.3 Twitter: Donald J. Trump @realDonaldTrump")
+                             (q () (pre () "
+We are doing very well in our negotiations with China. While I am sure they would love to be dealing with a new administration so they could continue their practice of “ripoff USA”($600 B/year),16 months PLUS is a long time to be hemorrhaging jobs and companies on a long-shot...."))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230997")
+               '(q () (pre () "【中英文字幕】0901郭先生和班农先生直播精选-共产党肯定收复台湾 镇压香港是为收复台湾作掩护【GM35】【GM38】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230996")
+               '(q () (pre () "【中文字幕】9月3日：通用电气鲍勃赖特（BobWright）在8月19日：CCP正在毁坏香港高度完善的商业环境.关于美中贸易他说班农从一开始就是正确的。 【GM36】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230990")
+               '(q () (pre () "
+9月3日：地图板块看中共黑警恶警在香港的暴行！警醒！中共不灭，这视频中所有情景会发生在任何一个地方！！！唯有灭共，才能免于恐惧！才有追求幸福的权力！
+【GM14】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230989")
+               '(q () (pre () "9月3日：文贵一天紧张激烈的工作后．马上就要开始直播．与朋友乱聊一下．……因为太多战友私信无法一一回复-直播中一并感谢大家吧……一切都是刚刚开始！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230981")
+               '(q () (pre () "【中文字幕】9月3日：向偉大無私的香港義工們致敬！兩位素不相識的普通女性，成為急救志願者。白天工作，夜晚冒著受傷與被捕的危險，到處奔波救助警察暴力的受害者。Volunteer first aid workers are on the front lines of the increasingly violent protests night after night. 【GM35】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230977")
+               '(q () (pre () "【中文字幕】9月3日：CCP的残暴只会让香港人更加坚定地反抗  The CCP terrorist force only fuels the HK protests. 【GM36】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230963")
+               '(q () (pre () "通用电气副董事长鲍勃赖特（BobWright）关于美中贸易他说班农从一开始就是正确的。他就香港抗议对国际商业的影响和美中贸易战表示了他的看法 Fmr. GE Vice Chairman Bob Wright on U.S.-China trade: Bannon has been right from the beginning
+https://finance.yahoo.com/video/fmr-ge-vice-chairman-bob-204630852.html【GM33】"))
+               (u (:- `(cite () ,(@ "https://finance.yahoo.com/video/fmr-ge-vice-chairman-bob-204630852.html"
+                                    "Fmr. GE Vice Chairman Bob Wright on U.S.-China trade: Bannon has been right from the beginning")
+                             (small () "2019.8.19 Yahoo!")))))
+           (:- "郭文(视频 PDF): " (@ "https://www.guo.media/posts/230960") " .. " (@ "https://www.guo.media/posts/230958")
+               '(q () (pre () "The Truth of CCPB")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230928")
+               '(q () (pre () "
+【关注香港】香港警察将少年休克疑似颈椎或脊椎受伤，警方冷血拒绝打开手铐方便急救！
+中国时间2019年9月3日午夜凌晨12点10分太子站内的急救员抵达现场时怀疑受伤的少年颈椎或者脊椎骨折，有生命危险，故要求警方揭开伤者的手铐，方便为伤者急救，遭到警察的多次拒绝。警员多次移动该少年，在失去知觉时不断叫他起身，认为他在装死还拖行。【GM22】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230909")
+               '(q () (pre () "
+【关注香港】9月3日: 这就是香港！含蓄而又绅士，纯真而又坚强，对待同胞和友邻永远礼敬相待。但面对中共这个魔党和邪恶港府所发动的残暴屠杀，没有半个人畏惧和退缩，上至白发苍颜下至锦瑟少年同心并力，光复香港，这是一场当之无愧的时代革命。如果不是良心失坏，究竟是谁才会把他们当成暴徒！【GM44】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/230906")
+               '(q () (pre () "【关注香港】又一个恶警的暴行！ 这个视频是在另一名警察介入并挡住摄像机之前，被拍摄下来的。可以看到这名警察正在掰弯这个被他们按在地上的年轻人的手腕，在他毫无对警察的威胁并且已经被控制的情况下，他们还继续扭动他的胳膊并且用警棍敲击他的关节！如此野蛮行为只是发生在香港的种种恶警暴行之一！痛心地看到曾经的东方之珠被乌云遮蔽了光彩，CCP就是制造这暗无天日的黑手！今天你如何摧残年轻人的手腕，明天我们就如何砍下你这双黑手！【GM39】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/230902")
+               '(q () (pre () "
+【新闻】9月3日：香港金管局发布金融机构流动性不足紧急措施。在8月16日反送中运动发起每人提领美元活动，但未传出对香港当局的外汇储备产生威胁，没想到现在金管局终于发布了自反《逃犯条例》以来第一份紧急声明。
+ 
+「防止通过讯息蔓延或通过破坏公众信心」金管局对香港银行发出的最新政策函指出，引入新的解决方案，以规定金融管理专员行使为决议权力机构，金管局为此提供临时港元流动资金（即不具备资本支持性质），以提供被认可的机构（不是所有香港的银行）维持香港货币及金融系统的完整性和稳定性，「金管局可酌情决定提供决议基金，有足够的流动资金来履行其义务。」
+ 
+简单的说，若港元不够的时候，金管局将会印钞票来支持银行的流动性。
+ 
+一名香港的金融人士指称，金管局突然发布此声明绝对不是因为反送中民众小额、小额提款美元并不会导致金融机构「没有钱了」，而是有大型机构汇出才会导致连银行都出现流动性危机。 「而且香港金融机构对一般民众的美元存款保证领回不是领回美元，而是领回港元，所以如果美元不够了，港银行也只能保证给港元。」【GM31】
+来源：
+https://tw.news.yahoo.com/%E6%8B%89%E8%AD%A6%E5%A0%B1-%E9%A6%99%E6%B8%AF%E9%87%91%E7%AE%A1%E5%B1%80%E7%99%BC%E5%B8%83%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E6%B5%81%E5%8B%95%E6%80%A7%E4%B8%8D%E8%B6%B3%E7%B7%8A%E6%80%A5%E6%8E%AA%E6%96%BD-092555957.html"))
+               (u (:- `(cite () ,(@ "https://tw.news.yahoo.com/%E6%8B%89%E8%AD%A6%E5%A0%B1-%E9%A6%99%E6%B8%AF%E9%87%91%E7%AE%A1%E5%B1%80%E7%99%BC%E5%B8%83%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E6%B5%81%E5%8B%95%E6%80%A7%E4%B8%8D%E8%B6%B3%E7%B7%8A%E6%80%A5%E6%8E%AA%E6%96%BD-092555957.html"
+                                    "拉警報！香港金管局發布金融機構流動性不足緊急措施")
+                             (small () "2019.9.2 Yahoo!")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/230888")
+               '(q () (pre () "9月3号：尊敬的战友们好．香港．中国．世界．进入了关键的时刻……文贵马上就要开始直播……一切都是刚刚开始直播！"))))))
+ ,*news-topics-guo*)
+  #+END_SRC
+- 3
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.9.3")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=r1yuj_7-J5I"
+                           "9月2日郭文贵先生在图森报平安直播视频")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
            (:- "郭文(图片): " (@ "https://www.guo.media/posts/230880")
                '(q () (pre () "9月3日：北京将真正的对香港开始执行戒严计划……Beijing just paid out plans for martial law一切都是刚刚开始！【September 3: Beijing will truly implement a martial law plan for Hong Kong...miles Beijing just paid out plans for martial law. Everything is just beginning!！】")))
            (:- "郭文: " (@ "https://www.guo.media/posts/230879")
