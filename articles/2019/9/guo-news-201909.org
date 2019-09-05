@@ -29,6 +29,175 @@
                (u (:- '(pre () "")))))))
  ,*news-topics-guo*)
   #+END_SRC
+- 5
+  #+BEGIN_SRC lisp :tangle yes
+(push
+ (u (:- '(small () "2019.9.5")
+        (u (:- "视频: " (@ "" "")
+               '(small () "")
+               (u (:- '(pre () ""))))
+           (:- "视频: " (@ "https://www.youtube.com/watch?v=Adgz7O8KOfU"
+                           "9月4日郭文贵先生:“林四条”会让香港人民更加团结!香港自贸区即将取消!中共“大湾区”胎死腹中!")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ,(@ ""
+                                    "")
+                             (small () "")))))
+           (:- "郭文: " (@ "")
+               '(q () (pre () ""))
+               (u (:- `(cite () ,(@ ""
+                                    "")
+                             (small () "")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231309")
+               '(q () (pre () "【关注香港】9月5日: 香港同胞英文图片披露林郑月娥花言巧语愚弄港人！传播📣📣📣")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231306")
+               '(q () (pre () "
+Highlights of Mr. Guo Wengui's live broadcast on September 3: One of the three main consequences of the US not killing the CCP in time 郭文贵先生9月3日精彩直播片段：美国不及时灭掉中共的三大后果之一【GM18】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231305")
+               '(q () (pre () "
+【短评】9月5日：中共在建政之前，曾如此拼命的争取”真普选“，这真普选的定义与今天香港民众所抗争的如出一辙！中共，这才是你们的初心！当大权在手后，你们的红心就瞬间变成了黑心。整天喊着不忘初心，看看港人如今抗争的，才是你们曾经的初心应该有的样子。中共已在邪路上走的太远，放下屠刀，回头是岸吧！【GM30】"))
+               (u (:- '(pre () "论选举权 - 新华日报 社论 1944.2.2"))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231300")
+               '(q () (pre () "The Truth of CCPB")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231281")
+               '(q () (pre () "【中文字幕】班农先生跟郭先生8月31日看香港游行直播赞香港的年輕人是在為天賦人權而戰。【GM37】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231277")
+               '(q () (pre () "【关注香港】9月5日: 香港人五项诉求缺一不可游行活动行程安排：")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231275")
+               '(q () (pre () "
+【翻译】9月4日：川普对于中国的贸易报复非常愤怒，想要加倍关税 。 据这三位知情人士透露，总统在8月23日得知中国已经正式决定对美国750亿美元商品加征报复性关税，以应对华盛顿9月1日即将启动的新关税后，感到非常愤怒。当天，他在白宫进行的贸易电话上，与他的幕僚沟通时的第一反应是建议现有关税加倍。
+ https://spark.adobe.com/page/OyCNJdvGIQPvs/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/OyCNJdvGIQPvs/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231271")
+               '(q () (pre () "
+【翻译】9月4日：实时地图警告香港抗议者哪里有高压水枪和防暴警察  使用最广泛的实时抗议地图之一是HKMap.live，它是一个由志愿者运营的众包项目，于8月初正式启动。这是一个动态的香港地图，用户可以放大或缩小，很像谷歌地图。除了详细的街道和建筑的名字外,这个地图最大特点在于它采用了一目了然的各种表情符合来沟通信息:一只狗代表了警察,一个戴黄色安全帽的工人代表抗议者,一只恐龙代表着警察的黑衣特别战术分队,一个白色的讲话泡泡代表着催泪瓦斯,两个感叹号代表危险。  https://spark.adobe.com/page/C4AwmgYiMu5A9/ "))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/C4AwmgYiMu5A9/")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231269")
+               '(q () (pre () "
+【新闻】据CNBC报道：亚洲时间9月5日上午，中国最高贸易谈判代表刘鹤与美国贸易代表罗伯特·莱希泽和财政部长史努文·姆努钦会面，双方同意于下月初在华盛顿特区举行贸易谈判，并将在9月中旬为筹备会议进行磋商。
+此前，美中两国均在八月初对彼此征收了新的关税，标志着这场旷日持久的贸易战再次升级，并有意取消9月份的贸易谈判。
+另据，由于中国表示美国同意参加贸易谈判，道琼斯指数期货上涨超过280点。晚上11:57左右 ET，道琼斯指数期货上涨约280点，表明隐含的开盘涨幅约为287点。标准普尔和纳斯达克的期货也均走高。【GM10】
+新闻来源：https://www.cnbc.com/2019/09/05/dow-futures-jump-as-china-and-us-agree-to-meet-for-trade-talks.html"))
+               (u (:- `(cite () ,(@ "https://www.cnbc.com/2019/09/05/dow-futures-jump-as-china-and-us-agree-to-meet-for-trade-talks.html"
+                                    "Dow futures jump more than 200 points after confirmation of US-China trade talks")
+                             (small () "2019.9.4 CNBC")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231265")
+               '(q () (pre () "
+On September 4, China's foreign ministry Geng Shuang said: the United States should not crack down on Chinese enterprises without evidence. This is immoral.
+9月4日中国外交部耿爽发言： 美国别在没有证据的情况下打压中国企业，这样不道德！ 【GM18】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231255")
+               '(q () (pre () "林郑月娥撤回遣返法案的真正目的解析🙏🙏📣📣📣【GM46】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231254")
+               '(q () (pre () "【中文字幕】9月4号：前美国司法部长副助理-法学教授 柳约翰呼吁美国政府“敞开怀抱，接纳香港人才，资本和香港公司来美国安家”【GM12】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231250")
+               '(q () (pre () "
+郭先生9月4日【直播摘要】
+04：02--香港文锦渡观察站被共党拆除，核心战线第一次被共匪破获，不能低估解放军和共产党。
+06：50—接着讲两个好消息，其一是林郑发布“林四条”对抗港人“五大诉求”。
+09：12—“林四条”愚弄香港，视香港人民为奴隶，暗示共党要有大动作，港人看的明白，这会让香港人民更加团结。
+16：02--西方知道香港执法人员十倍以上来自大陆，香港戒严实际早已在8月1号暗中实施。
+20：00--共产党内部高层已经决定了实施戒严，林郑示弱是找借口，和当年64李鹏的做法一样，以退为进。
+22：39--悬赏一亿美金，如果战友有办法，合法把卢伟聪弄到美国。
+24：45—英国现任首相鲍里森，对中共懦弱，太失望，下一届英国首相Nigel Farage 100%反共和支持香港。 28：02—法治基金目前已和四个国家谈好，给基金帮助的被迫害华人，直接提供黄金护照。并向巴西建议接纳，优秀华人和港人移民巴西，几年之内就把巴西的亚马逊区域建成几个香港，一定是双赢。 31：28--第二个好消息，香港自贸区地位一定很快会被取消，共产党的大湾区计划彻底崩塌。 33：12--亚洲国际人才：2001年前，香港占50-60%，大陆2-3%；。自贸区地位一旦被取消，香港不超过5%，大陆不超过1%，90%的会流失。亚洲贸易会转到台湾、日本、新加坡、韩")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231249")
+               '(q () (pre () "
+【新闻】9月4日：佛罗里达州迈阿密——美国参议员马可·卢比奥（R-FL）对香港政府撤回引渡法案发表评论，该法案允许任何人，包括美国人，被引渡到中国大陆。昨晚，卢比奥在《华盛顿邮报》上写了一篇关于香港问题的专栏，概述了美国可以灵活而有力的回应，并再次呼吁国会接受并通过他的两党香港人权与民主法案。
+ 
+\"香港行政长官林郑月娥撤回了迟迟未提撤回的引渡法案，是值得欢迎的，但是，在政府对港人捍卫民主自由作出暴力回应后，仅仅撤回法案是远远不够的。中国共产党应信守对香港自治的承诺，停止以暴力威胁使局势恶化。
+【GM33】
+https://www.rubio.senate.gov/public/index.cfm?p=Press-Releases&id=2A286861-810D-45F0-93FC-C17D8BE8038F"))
+               (u (:- `(cite () ,(@ "https://www.rubio.senate.gov/public/index.cfm?p=Press-Releases&id=2A286861-810D-45F0-93FC-C17D8BE8038F"
+                                    "Rubio Comments on Withdrawal of Hong Kong Extradition Bill")
+                             (small () "2019.9.4 U.S. Senator for Florida, Marco Rubio")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231245")
+               '(q () (pre () "
+【推文】9月4日：川普狠呛：对中共必须像我一样强硬！
+美国总统川普在当地时间4日在推特上再度呛声，中国人擅长不接受任何事，因此你必须非常强硬，这就是我正在做的事！
+美中贸易战持续延烧，如火如荼，据称有民调显示67％的美国选民认为对中共发动贸易战是必要的。【GM30】"))
+               (u (:- `(cite ()
+                             ,(@ "https://twitter.com/realDonaldTrump/status/1169253298169438208")
+                             (small () "2019.9.4 Twitter: Donald J. Trump @realDonaldTrump")
+                             (q () (pre () "
+“The Chinese are very adept at not accepting anything. You’ve got to be very tough, and that’s what Trump is doing. It’s in China’s interest to correct, and I think we’ll end up with a solution that’s dramatically better than we have today. Frankly, I think the impact of what..."))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231244")
+               '(q () (pre () "【抖音】9月4日：郭先生谈美國國内的滅共目標已經明確，滅共趨勢已經不可逆轉，滅共力量已經集結！")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231229")
+               '(q () (pre () "
+【新闻】9月4日：美国众议院议长南希·佩洛西（Nancy Pelosi）发表了关于撤回香港引渡法案的声明：称香港亲北京的领导层将完全撤回其危险且广受谴责的引渡法案：
+\"撤销这个早就应该撤销的危险的引渡法案是值得欢迎的消息，但必须做更多的工作，才能充分实现有\"一国两制\"保障的香港人的正当愿望。香港人理应享有正义、真正的自治和免于恐惧的未来，他们为之长期勇敢地奋斗着。
+\"香港亲北京的领导层必须确保一个对市民负责的政治制度，包括给予普选和调查警察暴力。 香港当局最近几周对本国人民实施的暴力和使用武力不断升级，导致悲惨的失去生命，现在必须结束。
+\"在美国国会，我们期待迅速推进两党合作的《香港人权和民主法案》，以重申美国面对北京镇压时对民主、人权和法治的承诺。 民主党和共和党继续与香港市民站在一起，要求充满希望、自由和民主的未来，这是他们的权利。【GM33】
+https://www.speaker.gov/newsroom/9419?fbclid=IwAR2lR_hCXemUuyaIJvNHZcKf-S72eivAOMDf_7WKAcOah8fAxiqF_E8kEws"))
+               (u (:- `(cite () ,(@ "https://www.speaker.gov/newsroom/9419?fbclid=IwAR2lR_hCXemUuyaIJvNHZcKf-S72eivAOMDf_7WKAcOah8fAxiqF_E8kEws"
+                                    "Pelosi Statement on Withdrawal of Hong Kong Extradition Bill")
+                             (small () "2019.9.4 Nancy Pelosi Speaker of The House")))))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/231226")
+               '(q () (pre () "
+【新闻】9月5日: 英美人士再發言挺香港　丹麥議員遮右眼合照。香港「反送中」浪潮持續不滅，受到國際矚目。英國首相強生、美國共和黨參議員魯比奧（Marco Rubio）及丹麥議員都表示支持，強生在國會發言時再次強調，英國堅定維護香港奉行「一國兩制」。
+ 
+美國共和黨參議員盧比歐（Marco Rubio）周二則在美國《華盛頓郵報》撰文，指「中共領導人必須尊重香港的自治和法治，或者明白他們不斷升級的侵略，會令他們無可避免面對來自美國及全球迅速、嚴重及持久的後果，今天，他們要作出選擇」。盧比歐更建議美國可對中國作出一連串行動，包括針對性制裁。
+ 
+丹麥「選擇黨」主席伊貝克（Uffe Elbaek）周二在推特上傳該黨國會議員及兩名職員拍攝的「Eye For HongKong」照片，所有人都用右手遮掩右眼，藉此力挺日前在香港示威活動中被射傷右眼的女子，更留言「選擇黨清晰而大聲表明，我們與香港在一起」。
+【GM15】
+引自: https://tw.news.appledaily.com/international/realtime/20190904/1628287/"))
+               (u (:- `(cite () ,(@ "https://tw.news.appledaily.com/international/realtime/20190904/1628287/"
+                                    "英美人士再發言挺香港　丹麥議員遮右眼合照")
+                             (small () "2019.9.4 蘋果日報")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231213")
+               '(q () (pre () "9月4日郭文贵先生:“林四条”会让香港人民更加团结!香港自贸区即将取消!中共“大湾区”胎死腹中! 9/4/2019 Mr. Miles Kwok: Carrie Lam and the four remaining core demands will further unite the people of Hong Kong. The revocation of the free trade zone and the stillbirth of the CCP's Greater Bay Area.")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231205")
+               '(q () (pre () "【关注香港】9月4日: 香港同胞会继续抗争！五项诉求一个不能少！为捍卫人权自由，一步不退让✊✊✊ 9月8日下午2点美国领事馆请愿！【GM02】"))
+               (u (:- '(pre () "HK Human Rights & Democracy Act"))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231194")
+               '(q () (pre () "【关注香港】9月4日: 香港同胞英语图片披露CCP黑警恶行📣📣📣战友们传播！")))
+           (:- "郭文(照片): " (@ "https://www.guo.media/posts/231193")
+               '(q () (pre () "9月4日：白宫旁边的＂总统＂教堂．是华盛顿特区最有代表性教堂之一……为所有的战友及香港同胞祈福平安！🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231191")
+               '(q () (pre () "【关注香港】香港时间凌晨12点多寶琳站有大批警員出動支援镇压示威者。（GM02)")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/231188")
+               '(q () (pre () "【关注香港】香港时间9月5日凌晨，记者全被赶出站外，有大批警员抓捕游行示威者！！有警察便衣一起帮凶！！！！！【GM02】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231176")
+               '(q () (pre () "9月4日：兄弟姐妹们千万别忘了这个重点！一"))
+               (u (:- `(cite ()
+                             ,(@ "https://twitter.com/DTinLosAngeles/status/1169048329176485889")
+                             (small () "2019.9.3 Twitter: DTinLosAngeles @DTinLosAngeles")
+                             (q () (pre () "
+恒生期指，上海A股，所有的code都是方正科技写的，也就是说，人家按一下键盘，要高就高，要骶就低，完全不会显示真实状态！而方正科技是由谁在控制呢？王岐山！
+………七哥2019.9.3第二场直播"))))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231172")
+               '(q () (pre () "
+【关注香港】今天（9月4日）下午香港行政长官林郑妖娥宣布撤销返遣法案，对五大诉求首次作出回应，但撤销返遣法已无任何意义，另外对香港市民的五大诉求只是表面上的回应，没有任何实质性的动作，所以林郑妖娥又是忽悠香港市民，香港市民不会再上当了，肯定要抗争到底！【GM06】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/231169")
+               '(q () (pre () "【关注香港】 9月4日 港人心如明镜 五大诉求 缺一不可 林郑妖娥假惺惺地 撤回遣返法草案 缓兵之计？ 没门！【GM09】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231168")
+               '(q () (pre () "
+【新闻】 9月4号，韩国阿里郎电视台报道，中共将55位来自亚洲各国的明星加入了黑名单。理由是这些明星支持香港的民主运动。被制裁的明星包括，何韵诗，杜汶泽和舒淇等。这就是共产主义的本质，为政府说话，否则你没有选择。中共威胁的不单单是中国人的民主自由，中共通过绑架14亿民众，正在赤裸裸地威胁全世界的民主和自由。【GM09】
+ 
+新闻来源：
+https://www.youtube.com/watch?v=Vq-0vaz7e-s"))
+               (u (:- `(cite () ,(@ "https://www.youtube.com/watch?v=Vq-0vaz7e-s"
+                                    "China reportedly blacklists celebrities for supporting Hong Kong democracy")
+                             (small () "2019.9.3 Youtube: RIRANG NEWS")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231163")
+               '(q () (pre () "
+【新闻】9月4日：香港林郑月娥周三宣布，将撤回引渡法案，但抗议活动组织者并没有庆祝这一逆转，而是认为政府的回应太少、来的太晚了。
+ 
+抗议活动组织者Bonnie Leung说，“我很高兴它终于结束了，但这还不够，五个诉求一个都不能少。如果港府伸出橄榄枝，我们将公开与之讨论，人们如果觉得够了就会回家，这是人民的选择。这场运动可能会平息一些，人民可以平静下来，但我们仍会争取普选。”
+ 
+公众普遍认为此举仅是缓兵之计，为中共10.1营造缓和气氛，后续还会秋后算账，而在实际已经执行紧急状态法的香港，林郑月娥已经错失妥协时机，引渡法撤销与否都已来的太晚太迟了。【GM31】
+来源：https://www.cbsnews.com/news/hong-kong-protest-carrie-lam-withdrawing-china-extradition-bill-too-little-too-late-today-2019-09-04/"))
+               (u (:- `(cite () ,(@ "https://www.cbsnews.com/news/hong-kong-protest-carrie-lam-withdrawing-china-extradition-bill-too-little-too-late-today-2019-09-04/"
+                                    "Hong Kong leader to withdraw China extradition bill, but will it stop the protests?")
+                             (small () "2019.9.4 CBS News")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/231162")
+               '(q () (pre () "
+【翻译】卢比奥：中共在香港展示了其本性，美国不能袖手旁观    通过采用暴力和恐吓来使香港沉默，中国共产党再次展现其真实本性。引渡法案只是中国政府多次违背对香港人民和世界承诺的最新例证。美国和国际社会必须向中共领导人及其权力代理人表明，他们对香港的侵略有可能带来迅速、严重和持久的后果。中国领导人要么必须尊重香港的自治和法治，要么知道他们不断升级的侵略将不可避免地导致，他们面临来自美国和世界的迅速、严重和持久的后果。今天，这是他们的选择。【GM31】
+https://spark.adobe.com/page/EZm5hvYoltfvj/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/EZm5hvYoltfvj/"))))))))
+ ,*news-topics-guo*)
+  #+END_SRC
 - 4
   #+BEGIN_SRC lisp :tangle yes
 (push
@@ -44,11 +213,6 @@
                            "9月3日郭文贵先生在华盛顿直播，谈9月3号CCP将真正对香港进行戒严计划，目前所有焦点都关注香港！")
                '(small () "Youtube: 郭文贵")
                (u (:- '(pre () "..."))))
-           (:- "郭文: " (@ "")
-               '(q () (pre () ""))
-               (u (:- `(cite () ,(@ ""
-                                    "")
-                             (small () "")))))
            (:- "郭文: " (@ "https://www.guo.media/posts/231119")
                '(q () (pre () "
 【新闻】据日经新闻9月4日讯，香港特首林郑月娥周三下午约见43名建制派立法人员、中共国务院、全国政协及香港行政院相关代表，据传将正式撤回备受争议的送中条例。
