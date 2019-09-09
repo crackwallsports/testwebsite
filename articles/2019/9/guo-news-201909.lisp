@@ -16,7 +16,7 @@
  *news-topics-guo*)
 
 (push
- (u (:- '(small () "2019.9.8")
+ (u (:- '(small () "2019.9.9")
         (u (:- "视频: " (@ "" "")
                '(small () "")
                (u (:- '(pre () ""))))
@@ -25,6 +25,256 @@
                (u (:- `(cite () ,(@ ""
                                     "")
                              (small () "")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232325")
+               '(q () (pre () "
+9月8日郭文贵先生直播精彩片段： 中共最担心的就是大陆会展开平民运动。香港给14亿人做出了最好的榜样！ Highlights of Mr. Guo Wengui's live broadcast on September 8:The communist party's biggest fear is that it will lead the mainland people into a populist movement. Hong Kong's campaign has set the best example for 1.4 billion people【GM18】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232324")
+               '(q () (pre () "
+【关注香港】9月8日：“我一定会继续游行 直到他们回应五大诉求”难以相信此语出自这个镜头里稚气未脱13岁年轻人之口！共产党已经彻底输了！在这样的年轻人面前中南坑里的妖魔鬼怪们你们还能如何？共产党以为自己锦衣华服在招摇过市，其实香港的孩子们直言不讳的在喊他们没穿衣服 ，香港同胞已经让共产党浑身瑟瑟发抖，香港同胞已经让世界肃然起敬，共产党你们彻底输了，输在在6.9日爱好自由的香港同胞整齐上街的那一刻！输在这13岁少年面对镜头的那一刻。 光复、革命、灭共这是我们华人、我们战友们使命的召唤。【GM11】
+https://twitter.com/sidiqjmevdw5ghf/status/1170617058196738048?s=21"))
+               (u (:- `(cite () ,(@ "https://twitter.com/sidiqjmevdw5ghf/status/1170617058196738048?s=21")
+                             (small () "2019.9.8 Twitter: 小玥 @sidIqjMEvdW5gHf")
+                             (q () (pre () "
+【9.8香港中环站】
+13岁的男孩毫无畏惧
+我一定会继续游行
+直到他们回应五大诉求"))))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232322")
+               '(q () (pre () "【关注香港】9月9日联校人链🙏🙏🙏看看香港学生的坚强!")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232320")
+               '(q () (pre () "
+【新闻】9月9日：反送中运动的暗夜使者！200位人权律师：谁的身体状况还可以，谁就撑下去！
+自港人发起反送中运动起来，6月、8月，香港法律界两度发起反送中静默游行，要求政府成立独立调查委员会，捍卫法治与自由。这群律师也组成200人义务律师，在第一线营救被捕者！
+ 
+香港特首林郑月娥4日正式宣布将撤回《逃犯条例》修正案，但并未对成立独立调查委员会、撤回暴动定性等其他诉求做出具体响应。警民对峙依旧持续，目前已有逾千人被捕，年纪最小的只有12岁。
+ 
+谁的身体状况还可以，谁就撑下去！当街头沦为战场，平时坐在中环办公室，身穿衬衫、西装的200位「大状」，成了暗夜使者。【GM30】
+引自：https://www.cw.com.tw/amp/article/5096754"))
+               (u (:- `(cite () ,(@ "https://www.cw.com.tw/amp/article/5096754"
+                                    "反送中運動的暗夜使者  200位人權律師：「誰的身體狀況還可以，誰就撐下去」")
+                             (small () "2019.9.8 天下雜誌")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232319")
+               '(q () (pre () "
+【关注香港】9.9联校人链！秀茂坪中学生响应组跨校人链，多个学校联合起来抗争到底，绝不罢休！参与学校包括圣公会何明华会督中学、梁式芝书院及香港道教联合会青松中学！【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232317")
+               '(q () (pre () "【关注香港】中国时间9月8日晚上11点18分铜锣湾家庭主妇，记者，游客因为没有带防毒面具吸入了警方投掷的催泪瓦斯释放出的有毒气体。【GM22】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232314")
+               '(q () (pre () "
+【双语字幕】9月9日，香港集会发言人周日在美国领事馆宣读声明：‘请求美国尽快与香港同胞站在一起，通过香港人权法案，以给前线抗争的香港同胞力量来对付残暴的中共政权！美领馆代表聆听声明并接受请愿信。【GM01】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232300")
+               '(q () (pre () "【关注香港】9.9人链红绿灯！今早有学生和其他抗议者在西营盘组成了一条特殊的交管人链。每当绿灯亮起时，便断开人链让人行横道畅通无阻。而当红灯亮起时，便人链合并阻断交通。
+多么智慧的港人，多么智慧的学生！抗议人链与交通规则相融合，即表达了抗争诉求，又维护了中共祸港下的社会秩序。抗争与秩序本来是相抵触的词汇，但在港人的塑造下是那样的自然，毫无违和感！这就是港人的和平抗争，何来暴力之有！【GM30】【GM09】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232299")
+               '(q () (pre () "【中文字幕】9月8号 黎智英 访谈香港抗议”林郑只是北京的傀儡；我愿意作一个为港人自由，民主而抗争的“叛徒，我把这样称呼当作荣誉”【GM12】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232296")
+               '(q () (pre () "
+【关注香港】中国时间9月9日下午2点香港圣保罗中学门口 一辆警车经过，学生喊着黑警还眼！黑警还眼！（学生们喊：黑警还眼，是 8月11日港警向女子发射布袋弹导致女子右眼永远丧失视觉。）【GM02】【GM22】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232287")
+               '(q () (pre () "
+【英语、西语字幕】9月7日郭先生谈香港的未来
+The future of Hong Kong
+El futuro de Hong Kong
+【文蕾、文戈、子民】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232286")
+               '(q () (pre () "【关注香港】CCP violently suppresses students' peaceful march 【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232283")
+               '(q () (pre () "
+【关注香港】香港时间9月9日， September 9 Secondary school students across Hong Kong are continuing their school boycott, forming human chains across the city this morning. Source: various sources")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232282")
+               '(q () (pre () "
+【关注香港】面具之吻！一对香港年轻情侣带着防毒面具接吻，这一幕触动了太多人的心！这是中共在港造成的悲剧，很伤心！不仅仅是因为防毒面具。如果他们其中一人被黑警抓捕，可能会被送到中共的集中营，在那里一切悲剧都有可能发生，他们可能一辈子都没有机会见到对方了！
+面具之吻，倾情相拥！这不是吻别，而是为了香港的重生！【GM30】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232280")
+               '(q () (pre () "【关注香港】9月9 日：聯校人鏈，聖士提反女子中學學生手持「我雖勢弱言輕 決不虛作無聲」標語 Although I am weak, I am not silent. 【GM22】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232270")
+               '(q () (pre () "
+【9月8日直播摘要】
+6:28--8:21共產黨把人分成三六九等。聲稱自己是無產階級，实际上是全人類最有錢的的無產階級。
+9:03--解放軍在香港有專門抓捕大陸人的假警察
+10:31--中共政府最害怕的是香港在這次運動中影響大陸開展平民運動。
+11:23--西方媒體今日頭版頭條大變臉。
+13:55--西方人在達拉斯會議上已達成共識，承认中共給的錢是吸入身體裡的毒。
+18；15--習近平是比希特勒還嚴重的獨裁。
+19:34-預告將爆料香港金融之父李小佳的秘密
+27：57―共产党的控制货币供应和通货膨胀是核心的问题。拿下香港拿下台湾的核心目的，就是去抢香港和台湾的钱。
+31：06―星期五的宕机和共产党公布外汇又涨了，进出口没受影响，都被郭文贵说中了。
+31：38―中国银行的潘功胜，中国外汇管理局管负责人，每天吃喝嫖赌玩股票。
+33：09―弄掉共产党的在西方的钱包，他就完蛋。香港人权法案，对政府官员，金融官员进行制裁，钱就变成冥币，通货膨胀就控制不住了。
+34：08―灭共的战争从贸易战、科技战过渡到金融战是核心的核心，
+ 35：26―今年年底会开始真正的货币大战。
+36：17―独裁国家完蛋之前的几个特征，稳定货币、通货膨胀、外债危机、内部政治街头运动、粮食危机，最后是走向灾难。
+37：51―香港歌星何韵诗，是一个伟大的女人，香港女人的骄傲，香港女人的缩影。。
+51:45- C4所有程序被批准了，一切合规美国要求。法治基金将是中国人的诺亚方舟。
+54:02- 法治基金与多个国家运作，包括巴西。未来给捐款者及香港人提供护照，签证。
+58:02- 想在巴西建立一个好的大学和美国最好的大学合作，为新中国培养建国精英。
+1:01:40- 将研究如何帮助法治基金捐助者得到黄金护照。
+【二丫】【白杨】【Arthur】
+https://livestream.com/accounts/27235681/events/8197481"))
+               (u (:- `(cite () ,(@ "https://livestream.com/accounts/27235681/events/8197481")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232268")
+               '(q () (pre () "
+SHANGHAI (Reuters) - Hong Kong is an inseparable part of China and any form of secessionism “will be crushed”, state media said on Monday, a day after demonstrators rallied at the U.S. consulate to ask for help in bringing democracy to city.
+
+https://www.reuters.com/article/us-hongkong-protests-china/china-will-not-tolerate-attempts-to-separate-hong-kong-from-china-state-media-idUSKCN1VU00L"))
+               (u (:- `(cite () ,(@ "https://www.reuters.com/article/us-hongkong-protests-china/china-will-not-tolerate-attempts-to-separate-hong-kong-from-china-state-media-idUSKCN1VU00L"
+                                    "China will not tolerate attempts to separate Hong Kong from China: state media")
+                             (small () "2019.9.9 Reuters")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232266")
+               '(q () (pre () "
+HONG KONG: Thousands of Hong Kong protesters on Sunday (Sep 8) chanted the US national anthem and called on US President Donald Trump to "liberate" the Chinese-ruled city, the latest in a series of demonstrations that have gripped the territory for months.
+https://www.channelnewsasia.com/news/asia/hong-kong-protest-donald-trump-liberate-city-china-11884704"))
+               (u (:- `(cite () ,(@ "https://www.channelnewsasia.com/news/asia/hong-kong-protest-donald-trump-liberate-city-china-11884704"
+                                    "Hong Kong protesters call on Trump to 'liberate' the city")
+                             (small () "2019.9.9 CNA")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232264")
+               '(q () (pre () "
+【中文字幕】郭先生和卡尔巴斯在2018年10月5日录制的精彩英文对谈，谈CCP，谈经济（完整版）。其中一些事情都已成为现实。
+【GM小分队】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232258")
+               '(q () (pre () "
+【关注香港】9月8日：看看这视频！天啊 ！共产党彻底疯狂了! 公开用社会主义强奸香港的法制民主和自由！如果香港彻底沦陷，世界任何一个国家和地区都可能成为被社会主义强奸的对象！
+【GM19】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232256")
+               '(q () (pre () "【关注香港】香港时间9月9日08：10 在大埔迦密柏雨中學聲援被捕同學。民主体制教育下的学生们是不会屈服于强权统治的！【GM02】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232255")
+               '(q () (pre () "
+【关注香港】香港时间9月9日：銅鑼灣 聖保祿學校 人鏈 有同學仔面壁係想回應番尋晚popo喺學校門口拉人嘅行動。 学生仔面壁是想回應昨晚黑警在學校門口抓人嘅行動 【GM02】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232253")
+               '(q () (pre () "转发:
+Randal deJong @RandeJong 
+11小时前
+HONG KONG  Pro-democracy protesters made a direct appeal to the U.S. for support in a peaceful m*** rally that took marchers past the American consulate, a new strategy after three months of demonstrations have yielded few concessions from the city’s government.
+https://www.wsj.com/articles/hong-kong-protesters-call-for-u-s-support-11567931423\">https://www.wsj.com/articles/hong-kong-protesters-call-for-u-s-support-11567931423\">https://www.wsj.com/articles/hong-kong-protesters-call-for-u-s-support-11567931423"))
+               (u (:- `(cite () ,(@ "https://www.wsj.com/articles/hong-kong-protesters-call-for-u-s-support-11567931423"
+                                    "Hong Kong Protesters Flood Streets to Call for U.S. Support")
+                             (small () "2019.9.8 The Wall Street Journal")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232229")
+               '(q () (pre () "
+【推文】9月9日，斯伯丁将军最新推文，中共的记者不是记者。他们是受过训练的中共宣传信息战士兵！不幸的是，很多美国记者也加入到了这一队伍。但还是有很多人开始慢慢觉醒【GM01】
+https://twitter.com/robert_spalding"))
+               (u (:- `(cite () ,(@ "https://twitter.com/robert_spalding/status/1170669625710927873")
+                             (small () "2019.9.8 Twitter: Gen (Ret) Rob Spalding @robert_spalding")
+                             (q () (pre () "
+More Gen (Ret) Rob Spalding Retweeted Carrie Lam Hairdresser Balding
+CCP journalists are not journalists. They are information warfare operatives trained to disseminate CCP propaganda. Unfortunately they have coopted some American journalists in their campaign. Thankfully many are waking up to it."))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232225")
+               '(q () (pre () "
+【关注香港】9月8日，疑似解放军伪装香港警察现身街头
+视频显示，香港街头出现一队警员，在港警的护送下进入旺角。这队人马手持警棍和盾牌，只有黑色马褂和头盔印有的警察标志可显示其为警察身份，脱去马甲和头盔便可随意混入人群，疑似是大陆警察和解放军人员。在其行进途中，群众用呐喊和鸣笛表示抗议。【GM32】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232223")
+               '(q () (pre () "【中文字幕】9月8日： 香港抗议者在美国驻港领事馆集会请愿“希望美国通过香港人权和民主方案，帮助香港实现真正双普选”【GM12】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232196")
+               '(q () (pre () "【关注香港】9月8日: 24:16太子 #旺角警署 多名持械警員突然向街到連開多槍， 聽到有近十發槍聲。 #now #蘋果【GM02】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232192")
+               '(q () (pre () "【关注香港】9月8日21：00 旺角警署防暴係冇警告情況下從高處向市民發射橡膠子彈【GM02】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232191")
+               '(q () (pre () "【关注香港】9月8日19:41銅鑼灣警方於東角道高舉藍旗。 防暴警化身人肉錄音機，警告在場市民因未有事向香港警務處申請，故現正參與非法集結。【GM02】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232189")
+               '(q () (pre () "
+【關注香港】9月8日，旺角警署外，一名外国記者被捕。
+在9月6日之後，香港黑警就可以逮捕任何他們不喜歡的人了，因為他們獲得了中共的許可和授意。事實上，香港已經實施戒嚴，但港府不敢正式宣布。【GM37】
+https://twitter.com/kisaragimukuro/status/1170737513901608960?s=12"))
+               (u (:- `(cite () ,(@ "https://twitter.com/kisaragimukuro/status/1170737513901608960?s=12")
+                             (small () "2019.9.8 Twitter: きさらぎむくろ@香港に栄光あれGlorytoHongKong@うつ病再発 @Kisaragimukuro")
+                             (q () (pre () "
+モンコク警察署外で
+フランス人の新聞記者が逮捕されました。"))))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232188")
+               '(q () (pre () "
+【关注香港】9月08日23:30日旺角警察署最少开六枪 女急救员脚部中枪，就当日下午16点示威者随后再转至铜锣湾，但警方卻于示威者不在场时，疯狂向附近居民、记者和急救員发射催泪弹，还误伤一老太，这就是共产党为制造白色恐怖而“无差别”的付诸暴力！就交战国在战场上都是不对敌方的“医务兵”开枪，这也是国际法！为什么定义中国共产党是恐怖组织？共产党在香港事件 的为所欲为的野蛮屠杀就是最好的说明 【GM11】
+https://tw.appledaily.com/column/article/860/rnews/20190908/1629960"))
+               (u (:- `(cite () ,(@ "https://tw.appledaily.com/column/article/860/rnews/20190908/1629960"
+                                    "【香港抗爭】旺角警署清場警開6槍　急救員腳中布袋彈")
+                             (small () "2019.9.8 蘋果日報")))))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232185")
+               '(q () (pre () "
+【关注香港】中国时间9月8日晚间11点50分，香港警察在弥墩道盘查及拘捕现场人士，一名穿Press背心的外国人被香港警察盘查。【GM22】
+引自：https://twitter.com/PassionTimes/status/1170732943376965632"))
+               (u (:- `(cite () ,(@ "https://twitter.com/PassionTimes/status/1170732943376965632")
+                             (small () "2019.9.8 Twitter: 熱血時報 PassionTimes @PassionTimes")
+                             (q () (pre () "【旺角警署現場】警方在彌敦道截查及拘捕現場人士，一名身穿Press背心的外國人被查問。（11:50 PM）"))))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232184")
+               '(q () (pre () "
+9月8日郭文贵先生直播：美国国会山开山“灭共助港”，李小加港交所期货交易当机玩儿大了！中共如何用通货膨胀奴役中国人民！ 9/8/2019 Mr. Guo Wengui's live broadcast: Efforts in the US to aid Hong Kong and vanquish the CCP to begin on Capitol Hill. Li Xiaojia and the futures crash at the Stock Exchange of Hong Kong have upped the ante. How the CCP uses inflation to enslave the Chinese people.")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232181")
+               '(q () (pre () "【中文字幕】9月7日，香港機場如臨大敵，單獨一個中年婦女也會被當作危險分子對待，香港已經徹底淪爲以警治港，港府的聲譽已經蕩然無存。【GM37】")))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232179")
+               '(q () (pre () "
+【新闻】9月8日: 集會遊行喊卡 在百貨公司附近施放催淚彈老人小孩喊救命 警開槍擊中救護員 恐嚇記者「子彈無眼，你在我面前連你一起射！」
+香港人今（8）日發起《香港人權與民主法案》集會以及遊行，促請美國盡快通過《香港人權與民主法案》，希望此法案能帶給香港政府及中國當局壓力。今日下午3點多，中環站內有人破壞港鐵站內的設施，大批防暴警察隨後在站內制伏多名市民。原訂在傍晚6點結束的活動，因主辦單位收到警方指示，在下午4點半就宣佈活動結束。晚間，警方在香港多區進行清場、逮捕行動。
+【17:50】堆積在港鐵中環站出口的雜物遭人放火。消防人員隨後到達現場將火勢撲滅。
+【18:59】警方於銅鑼灣太平洋崇光百貨一帶施放催淚彈，有市民遭催淚彈擊中臉部。根據「RTHK即時新聞」報導，該名受傷的男子表示，自己只是路過，身上沒有任何裝備以及口罩。他表示，自己聽到槍聲後，自己的臉部就遭彈殼擦過。而在禮頓中心對面有人擲汽油彈。
+【20:28】警方在銅鑼灣太平洋崇光百貨附近再度施放催淚彈。
+【20:47】銅鑼灣警方再於軒尼詩道，發射多枚催淚彈，有外藉人士因不知名原因倒地，現場急救員正在急救中。「香港獨立媒體網」報導指，該名南亞裔的男子疑似因吸入催淚煙後產生呼吸困難的症狀，雖經急救員給予空氣罐，但仍然需經救護車送醫治療。有路過的小孩以及老人需要清洗眼睛，更有小孩一度喊「救命」。
+【23:14】旺角警署內，警方舉起橙旗，要求現場人士進速離開，否則開槍，隨即發射至少6發橡膠子彈與布袋彈。有著反光背心的急救人員腳部中槍，隨即送醫治療。
+【23:21】旺角警署內，警方再度舉起橙旗，現場傳出槍聲。示威者在彌敦道靠近旺角警署的位置開傘防禦。根據「香港01」報導，有持槍警員對2公尺前的記者表示：「子彈無眼，你在我面前連你一起射！」【GM15】
+引自: https://news.ltn.com.tw/news/world/breakingnews/2909750"))
+               (u (:- `(cite () ,(@ "https://news.ltn.com.tw/news/world/breakingnews/2909750"
+                                    "反送中》人權及民主集會遊行喊卡 警開槍清場、救護員中彈")
+                             (small () "2019.9.8 自由時報")))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232177")
+               '(q () (pre () "【关注香港】中国时间9月8日下午2点46分香港示威者向美国驻港大使馆工作人员移交请愿信。【GM02】【GM22】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232176")
+               '(q () (pre () "【关注香港】9月8日: 香港爷爷抗议者加入抗议行列！不愿看到年轻人被暴打🙏🙏🙏🙏不愿香港变成广州！")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232173")
+               '(q () (pre () "
+【关注香港】9月8日 晚6时许  香港警察围捕数名示威者，记者欲拍摄遭驱离。
+画面显示，香港中环地区防暴警察围堵数名学生示威者并指挥列队，几位市民和记者与警方对话，随后大量防爆警察入场并将记者驱离，其中一名身穿安全服疑似记者身份的男子被暴力围堵。
+【GM32】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232169")
+               '(q () (pre () "【中文字幕】9月8号： 香港街头抗议者Peggy的简单诉求（二）：香港现在就是以警治港，每天都有警察暴力；我们必须站出来为自己发声！【GM12】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232167")
+               '(q () (pre () "
+【翻译】“守护孩子”：香港爷爷级抗议者拄着拐轻声细语的说道
+做为“守护孩子”组织的成员，黄爷爷几乎每个周末都出现在抗议现场，试图在警方和示威者之间进行调解。黄爷爷说，他理解为什么年轻人觉得他们除了抗议别无选择。“如果中共来到香港，香港将成为广州，当局可以随时把你关起来。我宁愿他们杀老年人也不愿他们打年轻人。我们现在老了，但孩子是香港的未来。”他浑身充满活力地喊道：“孩子们，回家去吧，让老人来照顾你们吧。”【GM31】
+https://spark.adobe.com/page/RvKLxziv9Z0WO/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/RvKLxziv9Z0WO/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232166")
+               '(q () (pre () "【中文字幕】9月7号  美国防部长Esper敦促各国重新审视与中共的合作关系，不要被中共威胁 【GM38】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232165")
+               '(q () (pre () "
+【翻译】9月8日：香港抗议者使用中共无法封锁的网状消息应用程序，其使用量暴增了3685%
+ 
+对抗议者来说，这显然是一个理想化的场景：抗议者试图接触到人们，但不能使用传统的短信、电子邮件或微信，所有这些都受国家监控。得益于San Fransisco初创公司Bridgefy开发的基于蓝牙的消息APP，抗议者以及公众可以绕过政府的互联网审查来相互通信。在很多场合和情况下，没法交流会是个性命攸关的事情，该应用可以通过标准蓝牙连接整个城市的人们，你的消息将简单地通过其他Bridgefy用户的手机“跳转”，直到他们找到你的目标，对于人们来说，它是一种安全的交流方式，基本不存在会被不相关人看到内容的危险。【GM31】
+https://spark.adobe.com/page/0FQcPg6GyKRHG/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/0FQcPg6GyKRHG/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232156")
+               '(q () (pre () "【关注香港】9月8日: 香港同胞和平抗议五项诉求缺一不可！Be water ✊")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232153")
+               '(q () (pre () "【中文字幕】9月8日： 香港街头抗议者Cindy 的简单诉求（一）：我们不要中共控制我们的司法，立法和政府行政；香港不要变成大陆的样子！【GM12】")))
+           (:- "郭文: " (@ "https://www.guo.media/posts/232150")
+               '(q () (pre () "
+【翻译】9月8日：香港抗议者使用中共无法封锁的网状消息应用程序，其使用量暴增了3685%
+ 
+对抗议者来说，这显然是一个理想化的场景：抗议者试图接触到人们，但不能使用传统的短信、电子邮件或微信，所有这些都受国家监控。得益于San Fransisco初创公司Bridgefy开发的基于蓝牙的消息APP，抗议者以及公众可以绕过政府的互联网审查来相互通信。在很多场合和情况下，没法交流会是个性命攸关的事情，该应用可以通过标准蓝牙连接整个城市的人们，你的消息将简单地通过其他Bridgefy用户的手机“跳转”，直到他们找到你的目标，对于人们来说，它是一种安全的交流方式，基本不存在会被不相关人看到内容的危险。【GM31】
+https://spark.adobe.com/page/RvKLxziv9Z0WO/"))
+               (u (:- `(cite () ,(@ "https://spark.adobe.com/page/RvKLxziv9Z0WO/")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232147")
+               '(q () (pre () "
+【关注香港】香港「反送中」示威進入第14週，今天又有最新發展，數以百計港人齊聚市中心準備遊行到美國領事館前，要求美國總統川普解放香港。 昨晚示威活動再傳暴力之後，群眾今天揮舞美國國旗和標語牌遊行籲請美國協助，警方則在一旁戒備。 美國國防部長艾斯培（Mark Esper）昨天促請中國政府對香港問題保持克制。 他在法國巴黎做出上述呼籲之際，港警昨晚連續第2晚對旺角群眾施放催淚瓦斯。【GM40】 新聞鏈接 https://udn.com/news/story/120538/4035897"))
+               (u (:- `(cite () ,(@ "https://udn.com/news/story/120538/4035897"
+                                    "反送中／港人遊行到美國領事館 籲川普解放香港")
+                             (small () "2019.9.8 聯合新聞網")))))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232146")
+               '(q () (pre () "
+【关注香港】9月8号 实景视频 港人聚集在美国领事馆门口 呼吁美国出手
+9月8号下午3点38分实拍的香港美领馆门前游行的港人全景视频。视频中人海人山，美国国旗特别抢眼。美国代表的民主自由法治正是共党通知下的中国所缺乏的。这也就是为什么中国共产党盗国贼盗窃的财富和他们的私生子女们都待在“黑手”美国，而不是他们的“好兄弟”北朝鲜。【GM09】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232145")
+               '(q () (pre () "
+【关注香港】中国时间9月8日晚上9点44分香港警察从地铁铜锣湾站楼梯走上路面时，竟然很随意的将英国Chemring Defence（现为PW Defence）制造的N225型催泪弹打开保险后扔到记者的头盔上！【GM22】")))
+           (:- "郭文(视频): " (@ "https://www.guo.media/posts/232144")
+               '(q () (pre () "
+【关注香港】港人和平抗议提出诉求，本来没有暴乱，都是港共黑警，他们才是真正的暴徒和凶手！愤怒的香港市民今日在港铁中环站，同防暴黑警对峙。有抗争者向黑警大喊：你地抓错人了，抓错人了！抗争民众群声大喊：黑社会！【GM30】"))))))
+ *news-topics-guo*)
+
+(push
+ (u (:- '(small () "2019.9.8")
+        (u (:- "视频: " (@ "https://www.youtube.com/watch?v=s-gDXDfU9tY"
+                           "9月8日郭文贵先生直播：美国国会山开山“灭共助港”，李小加港交所期货交易当机玩儿大了！中共如何用通货膨胀奴役中国人民！")
+               '(small () "Youtube: 郭文贵")
+               (u (:- '(pre () "..."))))
+           (:- "郭文(图片): " (@ "https://www.guo.media/posts/232143")
+               '(q () (pre () "9月8号：尊敬的战友们好！你们健身了吗？你们传播香港危机的真相了吗？文贵在20分钟内报平安直播！一切都是刚刚开始！")))
            (:- "郭文(图片): " (@ "https://www.guo.media/posts/232082")
                '(q () (pre () "
 9月8号：通过直播看到香港人民今天在遮打花园的游行．证明了对人民好的政权和统治人民的集权获得的人性的尊重的完全不同！共产党所犯下的罪行罪恶．到了全世界要跟他算总账的时候了……二十几个小时后，美国国会将会开启历史多个立法的先例，拯救香港．美国人与香港人将坚定地站在一起！让香港真正的成为一个港人治港，依法治港的香港特别时代！一切都是刚刚开始！")))
