@@ -170,9 +170,11 @@ z-index:100;
 
 (news-to-topic
  "郭文贵"     ;; (twb::human-date (get-universal-time))
- "2019.09.23 21:00:28"
+ "2020.01.31 16:27:23"
  (u (:- "信息源"
-        (u (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
+        (u (:- "GNews : " (@ "https://gnews.org/zh-hans/miles-guo/" "郭文贵"))
+           ;; (:- "郭媒体 : " (@ "https://www.guo.media/milesguo" "@milesguo"))
+           (:- "LiveStream : " (@ "https://livestream.com/accounts/27235681/events/8197481" "郭文贵中文直播"))
            (:- "Youtube : " (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw/featured" "郭文贵"))
            (:- "Instagram : " (@ "https://www.instagram.com/guowengui/" "guowengui"))))
     (:- "郭七条"
@@ -182,6 +184,7 @@ z-index:100;
     (:- "蓝金黄 3F美国计划")
     (:- "海航 王健之死")
     (:- "关注 香港 台湾 新疆 西藏")
+    (:- "关注 疫情")
     (:- "法治基金"
         (u (:- `(cite () "RULE OF LAW FOUNDATION "
                       ,(@ "https://rolfoundation.org")))
@@ -190,6 +193,53 @@ z-index:100;
            (:- `(cite () "法治基金常問問題 "
                       ,(@ "https://rolfoundation.org/faq-chinese.php")))))
     (apply #':- "主要内容跟踪" (nreverse *news-topics-guo*))))
+
+(news-to-topic
+ "当前关注" ;; (human-date (get-universal-time) )
+ "2020.01.31 15:49:01"
+ '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
+ (u (:- (@ "https://gnews.org/zh-hans/"
+           "GNews")
+        '(small () "GNews"))
+    (:- (@ "https://livestream.com/accounts/27235681/events/8197481"
+           "郭文贵中文直播")
+        '(small () "GTV"))
+    (:- (@ "https://www.youtube.com/channel/UCfG2D1ZWTfvp5p3gl5PHmmg"
+           "Rolfoundation法治基金")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw"
+           "郭文贵")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
+           "路德社")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
+           "大衛作戰室")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UC5kGYqYH64yhiEm3tATQGTg"
+           "Friday Talks")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
+           "Inty")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
+           "木蘭訪談")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCXRW8TZMpe5Iaf7UsvKwAvg/videos?disable_polymer=1"
+           "MIZ-宙斯小队")
+        '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
+           "战友之声")
+        '(small () "Youtube"))
+    ;; (:- (@ "https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg"
+    ;;        "澳洲新声")
+    ;;     '(small () "Youtube"))
+    ;; (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
+    ;;        "政事直播(政事小哥)")
+    ;;     '(small () "Youtube"))
+    (:- (@ "https://discord.gg/ZhGK3EA"
+           "战友之声") 
+        '(small () "Discord") )))
 
 (news-to-topic
  "中美" ;; (human-date (get-universal-time))
@@ -430,41 +480,6 @@ So together, let us choose a future of patriotism, prosperity, and pride. Let us
 
 谢谢 (我: 同时也希望 中国不用再 CCP bless us)
 Thank you. God bless you. And God bless the nations of the world.")))))))
-
-(news-to-topic
- "当前关注" ;; (human-date (get-universal-time) )
- "2019.03.11 16:39:50"
- '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
- (u (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
-           "路德社")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
-           "战友之声")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
-           "David大卫")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UC0JPw1DKfJLj6nbwzUCI7mw"
-           "Oz Media")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
-           "木蘭訪談")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg"
-           "澳洲新声")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCF8iFfXnkbYIUqykN_xpy8g"
-           "南十字星")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
-           "Inty")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
-           "政事直播(政事小哥)")
-        '(small () "Youtube"))
-    (:- (@ "https://discord.gg/ZhGK3EA"
-           "战友之声") 
-        '(small () "Discord") )))
 
 (news-to-topic
  "事件" ;; (human-date (get-universal-time) )
