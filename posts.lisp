@@ -1,5 +1,5 @@
 ;; (Date Ref Title Intro)
-(("2019 9 23"
+(("2020 1 31"
   "/testwebsite/articles/News.html"
   "News 新鲜事"
   (p ()
@@ -9,11 +9,12 @@
           (pre ()
                (small () "法治基金")
                (small () "王健之死"))
-          (span () "关注香港") (br)
-          (span () "白宫请愿: "
+          (span () "关注 香港 新疆 西藏 台湾") (br)
+          (span () "关注 疫情 (中共国的信息可信度存疑 可能更严重)") (br)
+          (span () "CDC 美国疾病控制与预防中心 : "
                 (small ()
-                       (a (:href "https://petitions.whitehouse.gov/petition/call-official-recognition-chinese-communist-party-terrorist-organization")
-                          "Call for Official Recognition of the Chinese Communist Party as a Terrorist Organization"))))))
+                       (a (:href "https://www.cdc.gov/coronavirus/2019-ncov/about/index.html")
+                          "About 2019 Novel Coronavirus (2019-nCoV)"))))))
  ("2019 1 30"
   "/testwebsite/articles/box-common-lisp-note.html"
   "Common Lisp Note - 笔记整理 (草稿)"
