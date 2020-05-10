@@ -103,7 +103,7 @@ function resizeIframe(obj) {
      (img (:src "/testwebsite/resource/carrot.PNG")))
     (nav (:class "contact" :role "navigation")
      (ul ()
-      (li () (a (:href "https://www.guo.media/xt3") "GUO.MEDIA"))
+      ;; (li () (a (:href "https://www.guo.media/xt3") "GUO.MEDIA"))
       (li () (a (:href "https://twitter.com/iamnotXt3") "Twitter"))
       (li () (a (:href "mailto:crackwallsports@gmail.com") "Email"))))))
 
