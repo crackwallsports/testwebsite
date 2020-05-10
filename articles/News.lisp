@@ -195,8 +195,8 @@ z-index:100;
     (apply #':- "主要内容跟踪" (nreverse *news-topics-guo*))))
 
 (news-to-topic
- "当前关注" ;; (human-date (get-universal-time) )
- "2020.01.31 15:49:01"
+ "当前关注" ;; (twb::human-date (get-universal-time) )
+ "2020.05.10 20:50:33"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
  (u (:- (@ "https://gnews.org/zh-hans/"
            "GNews")
@@ -213,20 +213,17 @@ z-index:100;
     (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
            "路德社")
         '(small () "Youtube"))
+    (:- (@ "https://www.youtube.com/channel/UCSWF9l7qSAcBepLkrggE_MA"
+           "面具先生")
+        '(small () "Youtube"))
     (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
            "大衛作戰室")
         '(small () "Youtube"))
     (:- (@ "https://www.youtube.com/channel/UC5kGYqYH64yhiEm3tATQGTg"
            "Friday Talks")
         '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCA3-DEkClR3G1DG1cq8YbeQ"
-           "Inty")
-        '(small () "Youtube"))
     (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
            "木蘭訪談")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCXRW8TZMpe5Iaf7UsvKwAvg/videos?disable_polymer=1"
-           "MIZ-宙斯小队")
         '(small () "Youtube"))
     (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
            "战友之声")
@@ -234,7 +231,7 @@ z-index:100;
     ;; (:- (@ "https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg"
     ;;        "澳洲新声")
     ;;     '(small () "Youtube"))
-    ;; (:- (@ "https://www.youtube.com/channel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
+    ;; (:- (@ "https://www.youtube.com/chaqnnel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
     ;;        "政事直播(政事小哥)")
     ;;     '(small () "Youtube"))
     (:- (@ "https://discord.gg/ZhGK3EA"

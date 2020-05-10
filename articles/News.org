@@ -372,8 +372,8 @@ z-index:100;
 - 关注
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic
- "当前关注" ;; (human-date (get-universal-time) )
- "2020.01.31 15:49:01"
+ "当前关注" ;; (twb::human-date (get-universal-time) )
+ "2020.05.10 20:50:33"
  '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
  (u (:- (@ "https://gnews.org/zh-hans/"
            "GNews")
