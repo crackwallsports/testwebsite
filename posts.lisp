@@ -1,10 +1,6 @@
 ;; (Date Ref Title Intro)
 (("2020 5 18"
-<<<<<<< HEAD
   "/testwebsite/articles/swift0to1.html"
-=======
-  "/testwebsite/articles/Swift0to1.html"
->>>>>>> origin/master
   "从 Swift 开始"
   (div () ""))
  ("2020 1 31"
