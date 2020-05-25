@@ -1,10 +1,29 @@
-<!DOCTYPE html>
+(in-package :cl-user)
+(defpackage swift0to1
+  (:use :cl :cl-who)
+  ;; (:nicknames :)
+  (:export :generate)
+  )
+(in-package :swift0to1)
 
-  <html lang='en'>
-    <head>
-      <meta charset='utf-8'>
-      <link rel='stylesheet' href='/testwebsite/css/style.css'>
-      <style>
+(setf (html-mode) :html5)
+
+(defun generate ()
+  (->file "articles/swift0to1.html" (site-html)))
+
+(defun ->file (path str)
+  (with-open-file (stream path
+                          :direction :output
+                          :if-exists :supersede
+                          :external-format :utf-8)
+    (format stream str)))
+
+(defun site-html ()
+  (with-html-output-to-string (s nil :indent 2 :prologue t)
+    (:html :lang "en"
+           (:head (:meta :charset "utf-8")
+                  (:link :rel "stylesheet" :href "/testwebsite/css/style.css")
+                  (:style "
 .side-header {
   position: relative;
   margin: 20px auto;
@@ -21,32 +40,34 @@ small {
 }
 html {
   font-size: 90%;
-}
-      </style>
-    </head>
-    <body>
-  <header class='side-header'>
-    <a class='logo' href='/testwebsite/index.html'>
-      <img src='/testwebsite/resource/carrot.PNG'>
-    </a>
-    <nav class='contact' role='navigation'>
-      <ul>
-        <li>
-          <a href='https://twitter.com/iamnotXt3'>Twitter
-          </a>
-        </li>
-        <li>
-          <a href='mailto:crackwallsports@gmail.com'>Email
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class='content'>
-  <div class='topic'>编程
-    <small>关键字: 编程
-    </small>
-    <pre>
+}"))
+           (:body (site-header s)
+                  (site-main s)))))
+
+(defun site-header (stream)
+  (with-html-output (s stream :indent 2)
+    (:header :class "side-header"
+             (:a :class "logo" :href "/testwebsite/index.html"
+                 (:img :src "/testwebsite/resource/carrot.PNG"))
+             (:nav :class "contact" :role "navigation"
+                   (:ul
+                    (:li (:a :href "https://twitter.com/iamnotXt3" "Twitter"))
+                    (:li (:a :href "mailto:crackwallsports@gmail.com" "Email")))))))
+
+(defun site-main (stream)
+  (with-html-output (s stream :indent 2)
+    (:div :class "content"
+          (what-and-how s)
+          :br
+          (swift s)
+          :br)))
+
+(defun what-and-how (stream)
+  (with-html-output (stream nil :indent 2)
+    (:div :class "topic" "编程"
+          (:small "关键字: " "编程")
+          (:pre
+           "
 - 做什么？ 提出问题
 - 如何做？ 写程序 让计算机完成
 - 现实的问题 进行抽象 让人理解 找到解决方法 然后 写成计算机理解方式 让计算机来解决
@@ -64,13 +85,15 @@ html {
       - 把结果 转换为 人类理解的方式
   - 本质 0和1 表示 即二进制
   - 机器语言 - 汇编语言 - 高级语言（Lisp，C，Swift）
-</pre>
-  </div>
-    <br>
-  <div class='topic'>Swift
-    <small>关键字: 语法 程序
-    </small>
-    <pre>
+"
+           ))))
+
+(defun swift (stream)
+  (with-html-output (s stream :indent 2)
+    (:div :class "topic" "Swift"
+          (:small "关键字: " "语法 程序")
+          (:pre
+           "
 - 语法 ：表示的方式 贯穿整个语言
   - 注释
   - 语句 关键字 保留字 分割符
@@ -89,53 +112,21 @@ html {
   - 可选 ：??
     - 可选项绑定 ： If 语句的强制展开
     - 隐式展开
-</pre>
-    <pre>
+")
+          (:pre
+
+           "
 - 程序
   - 数据 ：对象 （数字 文字 逻辑 其他 ?）
     - 基本
       - 数 ： 整数 浮点数
         - 大小范围
-</pre>
-    <ul>
-  <div class='topic'>整数
-    <small>关键字: 整数
-    </small>
-    <ul>字面量
-      <ul>
-        <li>十进制 : 3
-        </li>
-        <li>二进制 (0b) : 0b101
-        </li>
-        <li>八进制 (0o) : 0o21
-        </li>
-        <li>十六进制 (0x) : 0xfa1
-        </li>
-      </ul>
-      <ul>示例: 
-      </ul>
-    </ul>
-    <ul>类型
-      <ul>
-        <li>有符号 : Int
-        </li>
-        <li>无符号 : UInt
-        </li>
-        <li>位数 : 8 16 32 64
-        </li>
-      </ul>
-      <ul>说明: 位数 等同 平台本地字长
-      </ul>
-      <ul>示例: 
-        <pre>
-let signedInt8:Int8 = 127
-let unsignedInt32:UInt32 = 32
-</pre>
-      </ul>
-    </ul>
-  </div>
-    </ul>
-    <pre>
+")
+          ;;:br :hr
+          (:ul (num-integer s))
+          ;;:hr :br 
+          (:pre
+           "
       - 逻辑 ： 真 假
         - Bool ： ture false
       - 字符 字符串
@@ -166,9 +157,27 @@ let unsignedInt32:UInt32 = 32
     - 调试 ：断言 先决条件
   - 库
   - 工具
-</pre>
-  </div>
-    <br>
-  </div>
-    </body>
-  </html>
+"))))
+
+(defun num-integer (stream)
+  (with-html-output (stream nil :indent 2)
+    (:div :class "topic" "整数"
+          (:small "关键字: " "整数")
+          (:ul "字面量"
+               (:ul (:li "十进制 : 3")
+                    (:li "二进制 (0b) : 0b101")
+                    (:li "八进制 (0o) : 0o21")
+                    (:li "十六进制 (0x) : 0xfa1"))
+               (:ul "示例: "
+                    ;; 待实现... 导入示例代码片段 : (ex-code-> "整数 字面量")
+                    ))
+          (:ul "类型"
+               (:ul (:li "有符号 : Int")
+                    (:li "无符号 : UInt")
+                    (:li "位数 : 8 16 32 64"))
+               (:ul "说明: " "位数 等同 平台本地字长")
+               (:ul "示例: "
+                    (:pre "
+let signedInt8:Int8 = 127
+let unsignedInt32:UInt32 = 32
+"))))))
