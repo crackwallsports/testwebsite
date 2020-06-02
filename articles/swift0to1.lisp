@@ -1,3 +1,4 @@
+(ql:quickload :cl-who)
 (in-package :cl-user)
 (defpackage swift0to1
   (:use :cl :cl-who)
@@ -24,10 +25,6 @@
            (:head (:meta :charset "utf-8")
                   (:link :rel "stylesheet" :href "/testwebsite/css/style.css")
                   (:style "
-.side-header {
-  position: relative;
-  margin: 20px auto;
-}
 .content {
  padding: 10px;
 }

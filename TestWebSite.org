@@ -204,12 +204,18 @@ z-index:100;
      ("ul, li" (:list-style "none"
                 :padding-left "8px" :list-style-position "inside"))
      ;; Header
-     (".side-header" (:position "fixed" :margin "20px auto"
-                                :width "200px" :height "200px")
-                     (".logo" (:position "relative" :left "30px"
-                                         :display "block")
+     ;; (".side-header" (:position "fixed" :margin "20px auto"
+     ;;                            :width "200px" :height "200px")
+     ;;                 (".logo" (:position "relative" :left "30px"
+     ;;                                     :display "block")
+     ;;                          (img (:width "120px" :height "120px")))
+     ;;                 (".contact" (:font-size "2rem"  :padding-left "20%")
+     ;;                             (li ()
+     ;;                                 (a (:color "rgba(30, 30, 30, 0.92)")))))
+     (".side-header" (:text-align "center" :margin "20px auto")
+                     (".logo" ()
                               (img (:width "120px" :height "120px")))
-                     (".contact" (:font-size "2rem"  :padding-left "20%")
+                     (".contact" (:font-size "2rem")
                                  (li ()
                                      (a (:color "rgba(30, 30, 30, 0.92)")))))
      ;; Main-Content

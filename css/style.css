@@ -18,23 +18,15 @@ ul, li {
   list-style-position: inside
 }
 .side-header {
-  position: fixed;
-  margin: 20px auto;
-  width: 200px;
-  height: 200px
-}
-.side-header .logo {
-  position: relative;
-  left: 30px;
-  display: block
+  text-align: center;
+  margin: 20px auto
 }
 .side-header .logo img {
   width: 120px;
   height: 120px
 }
 .side-header .contact {
-  font-size: 2rem;
-  padding-left: 20%
+  font-size: 2rem
 }
 .side-header .contact li a {
   color: rgba(30, 30, 30, 0.92)

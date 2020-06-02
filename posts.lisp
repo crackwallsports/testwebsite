@@ -1,5 +1,9 @@
 ;; (Date Ref Title Intro)
-(("2020 5 18"
+(("2020 6 2"
+  "/testwebsite/articles/iMovie-Know.html"
+  "iMovie 学习笔记"
+  (div () ""))
+ ("2020 5 18"
   "/testwebsite/articles/swift0to1.html"
   "从 Swift 开始"
   (div () ""))
