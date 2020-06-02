@@ -10,7 +10,7 @@
 (setf (html-mode) :html5)
 
 (defun generate ()
-  (->file "articles/imovie-know.html" (site-html)))
+  (->file "articles/iMovie-Know.html" (site-html)))
 
 (defun ->file (path str)
   (with-open-file (stream path
