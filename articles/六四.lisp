@@ -58,12 +58,15 @@ html {
           (flag s)
           :br
           (declaration s)
+          :br
+          (music s)
           :br)))
 
 (defun flag (stream)
   (with-html-output (stream nil :indent 2)
-    (:div :class "topic" "旗帜"
-          (:ul (:img :src "resource/new-flag.jpg" :width 754 :height 506)))))
+    (:div :class "topic" :style " text-align: center"
+          "旗帜"
+          (:ul (:img :src "resource/new-flag.jpg"  :style "width: 754; height: 506;")))))
 
 (defun declaration (stream)
   (with-html-output (s stream :indent 2)
@@ -85,3 +88,25 @@ html {
                     (:a :href "https://www.youtube.com/watch?v=qA6TdysBuXI"
                         "2020年6月4日直播6：班农先生朗读英文版宣言")
                     (:small "via Youtube: 上天造灭疫组"))))))
+
+(defun music (stream)
+  (with-html-output (s stream :indent 2)
+    (:div :class "topic" "音乐"
+          (:ul "音乐"
+               (:li ""
+                    (:a :href "https://www.youtube.com/watch?v=PEqnV-YJw84&feature=youtu.be"
+                        "郝海东之后--唐平第一首歌--喜马拉雅自由之巅 ")
+                    (:small "via Youtube: 战友之家Voice of Guo Media"))
+               (:li ""
+                    (:a :href "https://www.youtube.com/watch?v=dBmL5ZBQ3TA&feature=youtu.be"
+                        "班农之后---唐平的第二首歌--香港耶路撒冷 ")
+                    (:small "via Youtube: 战友之家Voice of Guo Media"))
+               (:li ""
+                    (:a :href "https://www.youtube.com/watch?v=DmI1YDlQmP0&feature=youtu.be"
+                        "采访郝海东夫妇之后--唐平第三首歌----wind of change twins ")
+                    (:small "via Youtube: 战友之家Voice of Guo Media"))
+               (:li ""
+                    (:a :href "https://www.youtube.com/watch?v=w1LrTDC--zg&feature=youtu.be"
+                        "参访班农之后--唐平第四首歌---自由")
+                    (:small "via Youtube: 战友之家Voice of Guo Media"))
+               ))))

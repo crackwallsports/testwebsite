@@ -3,8 +3,8 @@
 
 * Generate
 #+BEGIN_SRC lisp
-(progn (load "./articles/iMovie-Know.lisp")
-       (iMovie-Know:generate))
+(load "./articles/iMovie-Know.lisp")
+(iMovie-Know:generate)
 #+END_SRC
 * Prepare
 #+BEGIN_SRC lisp :tangle yes
@@ -319,6 +319,7 @@ html {
     - 覆盖 : 透明度 渐变
     - 蓝绿抠像
     - 分屏
+    - 画中画
 - Speed 速度 (检视器上方)
   - 加减速 (兔子和乌龟) : 保留高音 (减速将调低音频的音高 加速将调高音高 声音失真)
   - 倒转

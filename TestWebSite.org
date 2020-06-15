@@ -19,6 +19,24 @@
 (load "TestWebSite")
 ;; Generate
 (twb:generate)
+
+(progn
+  ;; Load
+  (load "./articles/News")
+
+  ;; Generate
+  (xt3.web.base:->file #P"./articles/News.html" (twb::news-index))
+  nil)
+
+
+(ql:quickload :hunchentoot)
+(defparameter *handle*
+  (let ((*error-output* nil))
+    (make-instance 'hunchentoot:easy-acceptor :port 5000
+                   :document-root "~/Program/Web/")))
+(hunchentoot:start *handle*)
+(hunchentoot:stop *handle*)
+
 #+END_SRC
 * Package
 #+BEGIN_SRC lisp :tangle yes
