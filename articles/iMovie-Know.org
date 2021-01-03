@@ -1,27 +1,24 @@
 #+TITLE: iMovie Know Note
 #+AUTHOR: Xt3
 
-* Generate
+* Use
 #+BEGIN_SRC lisp
-(load "./articles/iMovie-Know.lisp")
-(iMovie-Know:generate)
+(load "iMovie-Know.lisp")
+(3imovie:export-html)
 #+END_SRC
 * Prepare
 #+BEGIN_SRC lisp :tangle yes
 (ql:quickload :cl-who)
-(in-package :cl-user)
-(defpackage imovie-know
+
+(defpackage Xt3.know.imovie
   (:use :cl :cl-who)
-  ;; (:nicknames :)
-  (:export :generate)
+  (:nicknames :3imovie)
+  (:export :export-html)
   )
-(in-package :imovie-know)
+(in-package :Xt3.know.imovie)
 
-(setf (html-mode) :html5)
-
-(defun generate ()
-  (->file "articles/iMovie-Know.html" (site-html)))
 #+END_SRC
+
 * Helper
 - -> helper.lisp
 #+BEGIN_SRC lisp :tangle yes
@@ -32,7 +29,15 @@
                           :external-format :utf-8)
     (format stream str)))
 #+END_SRC
-* Html
+
+* Export
+#+BEGIN_SRC lisp
+(defun export-html ()
+  (setf (html-mode) :html5)
+  (->file "articles/iMovie-Know.html" (site-html)))
+
+#+END_SRC
+** Html
 #+BEGIN_SRC lisp :tangle yes
 (defun site-html ()
   (with-html-output-to-string (s nil :indent 2 :prologue t)
@@ -77,6 +82,7 @@ html {
 #+END_SRC
 * iMovie Know Note
 ** Basic 基础
+*** Outline
 - iMovie : 是 Apple 推出的视频剪辑软件 : https://www.apple.com.cn/imovie/
   - 剪辑支持 : 4K 30fps, 1080p 720p >=30fps
 - Help 帮助 : 自带帮助文档
@@ -197,8 +203,7 @@ html {
   - 显示 片段等 信息
   - 修改 持续时间
 - 分享 导出
-
-
+*** Code
 
 #+BEGIN_SRC lisp :tangle yes
 (defun iMovie (stream)
@@ -357,6 +362,41 @@ html {
     - 切去 浏览头 前或后 : Opt+/
   - 拖动片段复制 : 按Opt 拖动 (不包括吸附)
 - 还原 重置 : F
+
+#+BEGIN_SRC lisp
+
+(obj-to-html
+ (make-obj 'shortcuts
+           '(("keyword" "快捷键")
+             ("content" "
+- 播放 : Space
+  - 从头 : \
+    - 片段 头尾 (时间线) : 方向键 上 下 
+  - 选择的范围 : /
+  - 后退 停止 前进 : j k l  (双击倍速) 
+    - 单帧 : 左右方向键 or 按住 k 按 j 或 l
+  - 循环 (开关) : Cmd+l 
+  - 全屏 : Cmd+F
+- 标记 (标记菜单 Mark) : favorite(喜爱 绿线) reject(拒绝 红线) unrate(取消) : f Del u
+- 设定范围 (时间线 or 片段浏览器)
+  - 入点 出点 : i o
+  - Or: 按住r 并 拖动光标
+  - Or: 拖动黄色边框
+- 剪辑
+  - 插入 (从片段浏览器) : 末尾 浏览头位置 上方 : e w q
+  - 修改B-roll吸附点 : Opt+Cmd 点 B-roll片段
+  - 修剪
+    - 单帧 缩短 延长 : 在边缘 , . (!注意: 英文输入法下) 
+    - 修剪器 (开关: Windwo - Show Clip Trimmer : Cmd+\)
+    - 精确度编辑器 (开关: Windwo - Show Precision Editor : Cmd+/)
+  - 拆分 : Cmd+b
+    - 切去 浏览头 前或后 : Opt+/
+  - 拖动片段复制 : 按Opt 拖动 (不包括吸附)
+- 还原 重置 : F
+"))))
+
+
+#+END_SRC
 
 #+BEGIN_SRC lisp :tangle yes
 (defun shortcuts (stream)

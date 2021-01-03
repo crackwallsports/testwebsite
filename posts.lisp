@@ -1,5 +1,9 @@
 ;; (Date Ref Title Intro)
-(("2020 6 4"
+(("2021 1 3"
+  "/testwebsite/articles/Renascence/Renascence.html"
+  "Renascence 重生"
+  (div () ""))
+ ("2020 6 4"
   "/testwebsite/articles/六四.html"
   "新中国联邦 六四建国宣言"
   (div () ""))
