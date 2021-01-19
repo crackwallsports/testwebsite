@@ -34,8 +34,8 @@
                  (:img :src "/testwebsite/resource/carrot.PNG"))
              (:nav :class "contact" :role "navigation"
                    (:ul
-                    (:li (:a :href "https://web.gtv1.org/web/#/UserInfo?id=5e85cf42ca963f510b635c44" "GTV"))
                     (:li (:a :href "mailto:crackwallsports@gmail.com" "Email"))
+                    (:li (:a :href "https://web.gtv1.org/web/#/UserInfo?id=5e85cf42ca963f510b635c44" "GTV"))
                     (:li (:a :href "https://twitter.com/iamnotXt3" "Twitter")))))))
 
 (defun site-main (stream)
@@ -60,6 +60,8 @@ text-align: left;
 }
 .side-header .contact {
  font-size: 130%}
+.side-header .contact li{
+display: inline}
 .btn-link {
  color: black
 }
@@ -141,6 +143,10 @@ Content
 (defun 3Rabbit (stream)
   (with-html-output (s stream :indent 2)
     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
+          
+          (r-node s "2021.01.19" "@3820050169" "CCP病毒"
+                  (:li "Follow : "
+                       (link s "ccp-virus.html" "CCP病毒")))
           (r-node s "2021.01.12" "@3819448168" "路德社"
                   (:li "Video : "
                        (link s "https://youtu.be/UoyQiZG0wjg")
