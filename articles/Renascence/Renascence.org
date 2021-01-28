@@ -56,7 +56,7 @@
              (:nav :class "contact" :role "navigation"
                    (:ul
                     (:li (:a :href "mailto:crackwallsports@gmail.com" "Email"))
-                    (:li (:a :href "https://web.gtv1.org/web/#/UserInfo?id=5e85cf42ca963f510b635c44" "GTV"))
+                    (:li (:a :href "https://gtv.org/user/5e85cf42ca963f510b635c44"  "G|TV"))
                     (:li (:a :href "https://twitter.com/iamnotXt3" "Twitter")))))))
 
 (defun site-main (stream)
@@ -164,98 +164,123 @@ Content
           (:small :class "node-keys" (node-keys s ,keys))
           ,content)))
 
+
+
+
 (defun 3Rabbit (stream)
   (with-html-output (s stream :indent 2)
     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
-          
-          (r-node s "2021.01.19-2021.01.21" "@3820050169" "CCP病毒"
+          (r-node s "2021.01.28"  "@3820827124" "关注信息源"
                   (:li "Follow : "
-                       (link s "ccp-virus.html" "CCP病毒")))
-          (r-node s "2021.01.12" "@3819448168" "路德社"
-                  (:li "Video : "
-                       (link s "https://youtu.be/UoyQiZG0wjg")
-                       (:small "Youtube:路德社LUDE Media")
-                       (:q (:pre "
-1/11/2021路德时评（路博艾冠谈）：
-习近平1月11日开会照片被揭是12月29日所拍；
-中共威胁蓬佩澳一旦访台，就会派战机入侵台湾意味着什么..."))))
-          (r-node s "2021.01.12" "@3819447903" "郭文贵"
-                  (:li "Video : "
-                       (link s "https://gtv.org/video/id=5ffb0d22f579a75e0bcf7288")
-                       (:small "GTV:郭文贵MILES")
-                       (:q (:pre "2021年1月10日 文贵直播"))))
-          (r-node s "2021.01.06" "@3818928589" "郭文贵"
-                  (:li "Getter (Video) : "
-                       (link s "https://gtv.org/getter/5ff4968787fabe2daf31075b")
-                       (:small "GTV:郭文贵MILES")
-                       (:q (:pre "
-2021年1月5号：北京在过去24小时发生了什么？华尔街为什么出尔反尔……取消对中共的电信公司的制裁，一切都已经开始！
-"))))
-          (R-NODE S "2021.01.05" "@3818929253"  "兔语"
-                  (:LI "X tooo: "
-                       (:Q (:PRE "
-西方 纵容中共
-现在付出的代价
-承受的起 ?
+                       (:ul
+                        (:li "G|TV" (link s "https://gtv.org/" ))
+                        (:li "GNEWS" (link s "https://gnews.org/zh-hans/"))
+                        (:li "郭文贵"
+                             (link s "https://gtv.org/user/5e596957357cc612d35a8044")
+                             (:small "G|TV: 郭文贵MILES"))
+                        (:li "路德"
+                             (:ul
+                              (:li
+                               (link s "https://gtv.org/user/5e890397490f470e21d37b24")
+                               (:small "G|TV: 路德时评"))
+                              (:li
+                               (link s "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured")
+                               (:small "Youtube: 路德社LUDE Media")))))))
+          (r-node s "2021.01.19-2021.01.21" "@3820050169" "CCP病毒"
+                  (:li "Know : "
+                       (link s "ccp-virus.html" "CCP病毒"))))))
 
-以为离得远就没事了 ?
+;; (defun 3Rabbit (stream)
+;;   (with-html-output (s stream :indent 2)
+;;     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
+;;           (r-node s "2021.01.19-2021.01.21" "@3820050169" "CCP病毒"
+;;                   (:li "Follow : "
+;;                        (link s "ccp-virus.html" "CCP病毒")))
+;;           (r-node s "2021.01.12" "@3819448168" "路德社"
+;;                   (:li "Video : "
+;;                        (link s "https://youtu.be/UoyQiZG0wjg")
+;;                        (:small "Youtube:路德社LUDE Media")
+;;                        (:q (:pre "
+;; 1/11/2021路德时评（路博艾冠谈）：
+;; 习近平1月11日开会照片被揭是12月29日所拍；
+;; 中共威胁蓬佩澳一旦访台，就会派战机入侵台湾意味着什么..."))))
+;;           (r-node s "2021.01.12" "@3819447903" "郭文贵"
+;;                   (:li "Video : "
+;;                        (link s "https://gtv.org/video/id=5ffb0d22f579a75e0bcf7288")
+;;                        (:small "GTV:郭文贵MILES")
+;;                        (:q (:pre "2021年1月10日 文贵直播"))))
+;;           (r-node s "2021.01.06" "@3818928589" "郭文贵"
+;;                   (:li "Getter (Video) : "
+;;                        (link s "https://gtv.org/getter/5ff4968787fabe2daf31075b")
+;;                        (:small "GTV:郭文贵MILES")
+;;                        (:q (:pre "
+;; 2021年1月5号：北京在过去24小时发生了什么？华尔街为什么出尔反尔……取消对中共的电信公司的制裁，一切都已经开始！
+;; "))))
+;;           (R-NODE S "2021.01.05" "@3818929253"  "兔语"
+;;                   (:LI "X tooo: "
+;;                        (:Q (:PRE "
+;; 西方 纵容中共
+;; 现在付出的代价
+;; 承受的起 ?
 
-继续纵容 甚至回舔
-代价会消失 ?
-还是中共会偿还代价 ?
+;; 以为离得远就没事了 ?
 
-整个世界 支付代价
-就中共和西方一小部分利益集团Happy ?
+;; 继续纵容 甚至回舔
+;; 代价会消失 ?
+;; 还是中共会偿还代价 ?
 
-追逐利益 却算不清代价 😂
-中共不傻 不会白拿的
+;; 整个世界 支付代价
+;; 就中共和西方一小部分利益集团Happy ?
 
-人类干脆就再见吧
-连地球都没出去呢
-不停原地转圈圈 还乐此不疲
-"))))
-          (r-node s "2021.01.05" "@3818929232" "兔语"
-                  (:li "X tooo: "
-                       (:q (:pre "
-兔子 认为 中共完蛋 没有悬念
+;; 追逐利益 却算不清代价 😂
+;; 中共不傻 不会白拿的
 
-再给中共两年 ?
-你给它 它给不给你呢
-日本炸珍珠港
-明知道打不了 还打
-不是为赢 而为拖时间 增加变数
-若美国发生了别的事
-自然灾害 内乱 等
-而不能继续战斗 也是有可能的
-只是当时没发生
+;; 人类干脆就再见吧
+;; 连地球都没出去呢
+;; 不停原地转圈圈 还乐此不疲
+;; "))))
+;;           (r-node s "2021.01.05" "@3818929232" "兔语"
+;;                   (:li "X tooo: "
+;;                        (:q (:pre "
+;; 兔子 认为 中共完蛋 没有悬念
 
-中共是有目的的
-你给它几年
-它更加隐忍 而“厚积薄发”
-现在的代价都付不起呢
-"))))
-          (r-node s "2021.01.04" "@3818928509" "路德社"
-                  (:li "Video: " (link s "https://youtu.be/X6wQ4zzRs7U")
-                       (:small "Youtube:路德社LUDE Media")
-                       (:q (:pre "
-1/3/2021 路德时评（路博艾冠谈）：
-美国家安全副顾问博明正式告诉英国官员病毒来自中共实验室意味着什么？
-新华社副社长熊向晖之女怎么说？
-更多议员宣布支持克鲁兹的1月6日声明意味着什么？
-"))))
-          (r-node s "2021.01.04" "@3818928498" "郭文贵"
-                  (:li "Getter (Video) : "
-                       (link s "https://gtv.org/getter/5ff1d5fd87fabe2daf2fdc75")
-                       (:small "GTV:郭文贵MILES")
-                       (:q (:pre "
-2021年1月3号：爆料革命又为美国做出了巨大贡献。唯真不破就是爆料革命百战百胜的法宝……爆料革命的跟随者将如海啸般的爆发，一切都已经开始！
-"))))
-          (r-node s "2021.01.03" "@3818928487" "兔语"
-                  (:li "X tooo: "
-                       (:q (:pre "
-兔子 新年问候 😄
-愿人生平等 望众生平安
-希望")))))))
+;; 再给中共两年 ?
+;; 你给它 它给不给你呢
+;; 日本炸珍珠港
+;; 明知道打不了 还打
+;; 不是为赢 而为拖时间 增加变数
+;; 若美国发生了别的事
+;; 自然灾害 内乱 等
+;; 而不能继续战斗 也是有可能的
+;; 只是当时没发生
+
+;; 中共是有目的的
+;; 你给它几年
+;; 它更加隐忍 而“厚积薄发”
+;; 现在的代价都付不起呢
+;; "))))
+;;           (r-node s "2021.01.04" "@3818928509" "路德社"
+;;                   (:li "Video: " (link s "https://youtu.be/X6wQ4zzRs7U")
+;;                        (:small "Youtube:路德社LUDE Media")
+;;                        (:q (:pre "
+;; 1/3/2021 路德时评（路博艾冠谈）：
+;; 美国家安全副顾问博明正式告诉英国官员病毒来自中共实验室意味着什么？
+;; 新华社副社长熊向晖之女怎么说？
+;; 更多议员宣布支持克鲁兹的1月6日声明意味着什么？
+;; "))))
+;;           (r-node s "2021.01.04" "@3818928498" "郭文贵"
+;;                   (:li "Getter (Video) : "
+;;                        (link s "https://gtv.org/getter/5ff1d5fd87fabe2daf2fdc75")
+;;                        (:small "GTV:郭文贵MILES")
+;;                        (:q (:pre "
+;; 2021年1月3号：爆料革命又为美国做出了巨大贡献。唯真不破就是爆料革命百战百胜的法宝……爆料革命的跟随者将如海啸般的爆发，一切都已经开始！
+;; "))))
+;;           (r-node s "2021.01.03" "@3818928487" "兔语"
+;;                   (:li "X tooo: "
+;;                        (:q (:pre "
+;; 兔子 新年问候 😄
+;; 愿人生平等 望众生平安
+;; 希望")))))))
 
 
 #+END_SRC
