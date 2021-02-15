@@ -368,7 +368,7 @@ z-index:100;
     (apply #':- "主要内容跟踪" (nreverse *news-topics-guo*))))
 
 #+END_SRC
-** 当前关注
+** COMMENT 当前关注
 - 关注
 #+BEGIN_SRC lisp :tangle yes
 (news-to-topic

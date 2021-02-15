@@ -120,7 +120,9 @@ small {
           (:small "补充说明: 兔子不是专业人士 目的只是想从一个普通人角度 搞明白相关信息, 对造成的任何理解偏差和后果 兔子当然是不负责任哆啦")
           (:ul "CCP病毒 (一语双关)"
                (:li "别名: 武汉病毒, 新型冠状病毒, SARS-CoV-2, COVID-19")
-               (:li "时间线: " (link s "" "待整理...") "(以下为部分关键点)"
+               (:li "时间线: " (link s "" "待整理...") 
+                    (virus-time-line s))
+               (:li "关键点"
                     (:ul (:li (:small "2020.01.19")
                               "Video: "
                               (link s "https://youtu.be/CLTjg03CPEs")
@@ -130,53 +132,7 @@ small {
 为什么该病毒已经进化具备人传人大爆发强变异？
 为什么中共要不断隐瞒确诊案例？")))
                          (:li (link s ""))))
-               (:li"闫丽梦博士 论文"
-                   (:ul (:li (:small "2020.9.14")
-                             "Unusual Features of the SARS-CoV-2 Genome Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution and Delineation of Its Probable Synthetic Route"
-                             (:ul (:li "获得: "
-                                       (link s "https://zenodo.org/record/4028830")
-                                       (:small "Zenodo"))
-                                  (:li "引文: " (:q (:pre "
-The evidence shows that SARS-CoV-2 should be a laboratory product created by using bat coronaviruses ZC45 and/or ZXC21 as a template and/or backbone.
-
-
-As a coronavirus, SARS-CoV-2 differs significantly from other respiratory and/or zoonotic viruses: it attacks multiple organs; it is capable of undergoing a long period of asymptomatic infection; it is highly transmissible and significantly lethal in high-risk populations; it is well-adapted to humans since the very start of its emergence1; it is highly efficient in binding the human ACE2 receptor (hACE2), the affinity of which is greater than that associated with the ACE2 of any other potential host2,3.
-
-
-The existing scientific publications supporting a natural origin theory rely heavily on a single piece of evidence – a previously discovered bat coronavirus named RaTG13, which shares a 96% nucleotide sequence identity with SARS-CoV-218. However, the existence of RaTG13 in nature and the truthfulness of its reported sequence are being widely questioned6-9,19-21. It is noteworthy that scientific journals have clearly censored any dissenting opinions that suggest a non-natural origin of SARS-CoV-28,22. Because of this censorship, articles questioning either the natural origin of SARS-CoV-2 or the actual existence of RaTG13, although of high quality scientifically, can only exist as preprints5-9,19-21 or other non-peer- reviewed articles published on various online platforms10-13,23. Nonetheless, analyses of these reports have repeatedly pointed to severe problems and a probable fraud associated with the reporting of RaTG136,8,9,19- 21. Therefore, the theory that fabricated scientific data has been published to mislead the world’s efforts in tracing the origin of SARS-CoV-2 has become substantially convincing and is interlocked with the notion that SARS-CoV-2 is of a non-natural origin.
-
-
-1. Has SARS-CoV-2 been subjected to in vitro manipulation?
- We present three lines of evidence to support our contention that laboratory manipulation is part of the history of SARS-CoV-2:
- i. The genomic sequence of SARS-CoV-2 is suspiciously similar to that of a bat coronavirus discovered by military laboratories in the Third Military Medical University (Chongqing, China) and the Research Institute for Medicine of Nanjing Command (Nanjing, China).
- ii. The receptor-binding motif (RBM) within the Spike protein of SARS-CoV-2, which determines the host specificity of the virus, resembles that of SARS-CoV from the 2003 epidemic in a suspicious manner. Genomic evidence suggests that the RBM has been genetically manipulated.
- iii. SARS-CoV-2 contains a unique furin-cleavage site in its Spike protein, which is known to greatly enhance viral infectivity and cell tropism. Yet, this cleavage site is completely absent in this particular class of coronaviruses found in nature. In addition, rare codons associated with this additional sequence suggest the strong possibility that this furin-cleavage site is not the product of natural evolution and could have been inserted into the SARS-CoV-2 genome artificially by techniques other than simple serial passage or multi-strain recombination events inside co-infected tissue cultures or animals.
-
-
-Although 100% identity on the E protein has been observed between SARS-CoV and certain SARS-related bat coronaviruses, none of those pairs simultaneously share over 83% identity on the Orf8 protein32. Therefore, the 94.2% identity on the Orf8 protein, 100% identity on the E protein, and the overall genomic/amino acid-level resemblance between SARS-CoV-2 and ZC45/ZXC21 are highly unusual. Such evidence, when considered together, is consistent with a hypothesis that the SARS-CoV-2 genome has an origin based on the use of ZC45/ZXC21 as a backbone and/or template for genetic gain-of-function modifications.")))
-                                  (:li "问题:"
-                                       (:ul (:li "? " (:small "Q@3820220472") ": " "ACE2, hACE2(受体), RBM(结合座) ?")
-                                            (:li "? " (:small "Q@3820222342") ": " "RaTG13蝙蝠病毒 不存在?")
-                                            (:li "? " (:small "Q@3820222660") ": " "以 蝙蝠冠状病毒 ZC45 和/或 ZXC21为模板和/或骨架 ? 为什么是 和/或, 二者差异?")
-                                            (:li "? " (:small "Q@3820222676") ": " "弗林酶切位点(furin-cleavage site)是?")
-                                            (:li "? " (:small "Q@3820223947") ": " "Orf8, MHC-1, 稳定性 ?")
-                                            (:li "? " (:small "Q@3820224277") ": " "E蛋白, 耐受突变 ?")))))
-                        (:li (:small "2020.10.8")
-                             "SARS-CoV-2 Is an Unrestricted Bioweapon:
-A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
-                             (:ul (:li "获得: "
-                                       (link s "https://zenodo.org/record/4073131")
-                                       (:small "Zenodo"))))
-                        (:li (:small "2020.11.21")
-                             "CNN Used Lies and Misinformation to Muddle the Water on the Origin of SARS-CoV-2"
-                             (:ul (:li "获得: "
-                                       (link s "https://zenodo.org/record/4283480")
-                                       (:small "Zenodo"))))
-                        (:li (:small "2021.01.19")
-                             "Call for the WHO Team to Investigate the Pangolin Coronaviruses and the RmYN02 Bat Coronavirus"
-                             (:ul (:li "获得: "
-                                       (link s "https://zenodo.org/record/4448499")
-                                       (:small "Zenodo"))))))
+               (dr-yan s)
                (:li "理解"
                     (:ul (:li "病毒")
                          (:li "病毒相关知识"
@@ -193,3 +149,109 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
                          (:li "病毒来源")))
                (:li "WHO 与 中共"
                     (:ul (:li (link s ""))))))))
+
+(defun Dr-Yan (stream)
+  (with-html-output (s stream :indent 2)
+    (:li "闫丽梦博士团队 论文"
+         (:ul
+          (:li "闫丽梦博士 " (link s "https://twitter.com/DrLiMengYAN1" "Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
+          (:li (:small "2020.9.14")
+               "Unusual Features of the SARS-CoV-2 Genome Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution and Delineation of Its Probable Synthetic Route"
+               (:ul (:li "获得: "
+                         (link s "https://zenodo.org/record/4028830")
+                         (:small "Zenodo"))
+                    (:li "问题:"
+                         (:ul (:li "? " (:small "Q@3820220472") ": " "ACE2, hACE2(受体), RBM(结合座) ?")
+                              (:li "? " (:small "Q@3820222342") ": " "RaTG13蝙蝠病毒 不存在?")
+                              (:li "? " (:small "Q@3820222660") ": " "以 蝙蝠冠状病毒 ZC45 和/或 ZXC21为模板和/或骨架 ? 为什么是 和/或, 二者差异?")
+                              (:li "? " (:small "Q@3820222676") ": " "弗林酶切位点(furin-cleavage site)是?")
+                              (:li "? " (:small "Q@3820223947") ": " "Orf8, MHC-1, 稳定性 ?")
+                              (:li "? " (:small "Q@3820224277") ": " "E蛋白, 耐受突变 ?")))))
+          (:li (:small "2020.10.8")
+               "SARS-CoV-2 Is an Unrestricted Bioweapon:
+A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
+               (:ul (:li "获得: "
+                         (link s "https://zenodo.org/record/4073131")
+                         (:small "Zenodo"))))
+          (:li (:small "2020.11.21")
+               "CNN Used Lies and Misinformation to Muddle the Water on the Origin of SARS-CoV-2"
+               (:ul (:li "获得: "
+                         (link s "https://zenodo.org/record/4283480")
+                         (:small "Zenodo"))))
+          (:li (:small "2021.01.19")
+               "Call for the WHO Team to Investigate the Pangolin Coronaviruses and the RmYN02 Bat Coronavirus"
+               (:ul (:li "获得: "
+                         (link s "https://zenodo.org/record/4448499")
+                         (:small "Zenodo"))))))))
+
+
+;; (:li "引文: " (:q (:pre "
+;; The evidence shows that SARS-CoV-2 should be a laboratory product created by using bat coronaviruses ZC45 and/or ZXC21 as a template and/or backbone.
+
+
+;; As a coronavirus, SARS-CoV-2 differs significantly from other respiratory and/or zoonotic viruses: it attacks multiple organs; it is capable of undergoing a long period of asymptomatic infection; it is highly transmissible and significantly lethal in high-risk populations; it is well-adapted to humans since the very start of its emergence1; it is highly efficient in binding the human ACE2 receptor (hACE2), the affinity of which is greater than that associated with the ACE2 of any other potential host2,3.
+
+
+;; The existing scientific publications supporting a natural origin theory rely heavily on a single piece of evidence – a previously discovered bat coronavirus named RaTG13, which shares a 96% nucleotide sequence identity with SARS-CoV-218. However, the existence of RaTG13 in nature and the truthfulness of its reported sequence are being widely questioned6-9,19-21. It is noteworthy that scientific journals have clearly censored any dissenting opinions that suggest a non-natural origin of SARS-CoV-28,22. Because of this censorship, articles questioning either the natural origin of SARS-CoV-2 or the actual existence of RaTG13, although of high quality scientifically, can only exist as preprints5-9,19-21 or other non-peer- reviewed articles published on various online platforms10-13,23. Nonetheless, analyses of these reports have repeatedly pointed to severe problems and a probable fraud associated with the reporting of RaTG136,8,9,19- 21. Therefore, the theory that fabricated scientific data has been published to mislead the world’s efforts in tracing the origin of SARS-CoV-2 has become substantially convincing and is interlocked with the notion that SARS-CoV-2 is of a non-natural origin.
+
+
+;; 1. Has SARS-CoV-2 been subjected to in vitro manipulation?
+;;  We present three lines of evidence to support our contention that laboratory manipulation is part of the history of SARS-CoV-2:
+;;  i. The genomic sequence of SARS-CoV-2 is suspiciously similar to that of a bat coronavirus discovered by military laboratories in the Third Military Medical University (Chongqing, China) and the Research Institute for Medicine of Nanjing Command (Nanjing, China).
+;;  ii. The receptor-binding motif (RBM) within the Spike protein of SARS-CoV-2, which determines the host specificity of the virus, resembles that of SARS-CoV from the 2003 epidemic in a suspicious manner. Genomic evidence suggests that the RBM has been genetically manipulated.
+;;  iii. SARS-CoV-2 contains a unique furin-cleavage site in its Spike protein, which is known to greatly enhance viral infectivity and cell tropism. Yet, this cleavage site is completely absent in this particular class of coronaviruses found in nature. In addition, rare codons associated with this additional sequence suggest the strong possibility that this furin-cleavage site is not the product of natural evolution and could have been inserted into the SARS-CoV-2 genome artificially by techniques other than simple serial passage or multi-strain recombination events inside co-infected tissue cultures or animals.
+
+
+;; Although 100% identity on the E protein has been observed between SARS-CoV and certain SARS-related bat coronaviruses, none of those pairs simultaneously share over 83% identity on the Orf8 protein32. Therefore, the 94.2% identity on the Orf8 protein, 100% identity on the E protein, and the overall genomic/amino acid-level resemblance between SARS-CoV-2 and ZC45/ZXC21 are highly unusual. Such evidence, when considered together, is consistent with a hypothesis that the SARS-CoV-2 genome has an origin based on the use of ZC45/ZXC21 as a backbone and/or template for genetic gain-of-function modifications.")))
+
+(defun virus-time-line (stream)
+  (with-html-output (s stream :indent 2)
+    (:ul
+     (:li "...最早...")
+     (:li "闫博士团队 报告")
+     (:li "WHO 武汉之旅")
+     (:li (:small "2021.02.12")
+          "Article: "
+          (link s "https://mediamanipulation.org/case-studies/cloaked-science-yan-reports"
+                "CLOAKED SCIENCE: THE YAN REPORTS")
+          (:small "The Media Manipulation Case Book")
+          (:small " {20210212A1}"))
+     (:li (:small "2021.02.13")
+          "Article: "
+          (link s "https://www.washingtonpost.com/technology/2021/02/12/china-covid-misinformation-li-meng-yan/"
+                "Scientists said claims about China creating the coronavirus were misleading. They went viral anyway.")
+          (:small "The Washington Post")
+          (:small " {20210213A1 20210212A1}"))
+     (:li (:small "2021.02.13")
+          "Video: "
+          (link s "https://youtu.be/Bp-zly4svfk"
+                "2/12/2021 路德时评（路博冠康胡谈嘉宾闫博士）")
+          (:small "Youtube: 路德社LUDE Media")
+          (:small " {20210213V1 20210212A1}")
+          (:q (:pre "怎么看同一天哈佛出报道攻击闫博士，华盛顿邮报出报道替闫博士说话？"))
+          (:ul (:li (:small "2021.02.13")
+                    "Article(中文简述): "
+                    (link s "https://gnews.org/zh-hans/904991/"
+                          "《路德时评》连线闫博士回击哈佛报告，及解读《华盛顿邮报》头版报道闫博士")
+                    (:small "GNEWS")
+                    (:small " {20210213V1A1}"))))
+     (:li (:small "2021.02.13")
+          "Article: "
+          (link s "https://thenationalpulse.com/exclusive/harvard-shorenstein-center-ccp-ties/"
+                "EXC: Harvard Center Attacking COVID Lab Theory Has Extensive Financial And Personnel Links With The Chinese Communist Party.")
+          (:small "The National Pulse.")
+          (:small " {20210213A2 20210212A1}"))
+     (:li (:small "2021.02.14")
+          "Video: "
+          (link s "https://youtu.be/Bp-zly4svfk"
+                "2/14/2021路德时评（路安墨谈）")
+          (:small "Youtube: 路德社LUDE Media")
+          (:small " {20210214V1 20210212A1 20210213A2}")
+          (:q (:pre "
+攻击闫博士的哈佛该研究中心被美媒曝光就是中共资助在美大发酵，哈佛该中心彻底翻车！
+世卫谭德塞首次发声不排除病毒起源任何假设意味着什么？")))
+     (:li (:small "202 . . ")
+          ": "
+          (link s "")
+          (:small "")
+          (:q (:pre ""))))))

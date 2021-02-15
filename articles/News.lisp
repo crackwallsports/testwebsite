@@ -195,50 +195,6 @@ z-index:100;
     (apply #':- "主要内容跟踪" (nreverse *news-topics-guo*))))
 
 (news-to-topic
- "当前关注" ;; (twb::human-date (get-universal-time) )
- "2020.05.10 20:50:33"
- '(p () "这只是部分 我将 增量补充 未来我看了新的视频时 再加入" )
- (u (:- (@ "https://gnews.org/zh-hans/"
-           "GNews")
-        '(small () "GNews"))
-    (:- (@ "https://livestream.com/accounts/27235681/events/8197481"
-           "郭文贵中文直播")
-        '(small () "GTV"))
-    (:- (@ "https://www.youtube.com/channel/UCfG2D1ZWTfvp5p3gl5PHmmg"
-           "Rolfoundation法治基金")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCO3pO3ykAUybrjv3RBbXEHw"
-           "郭文贵")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured"
-           "路德社")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCSWF9l7qSAcBepLkrggE_MA"
-           "面具先生")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCq5haQKrVHnCQ84YmyBn4KA"
-           "大衛作戰室")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UC5kGYqYH64yhiEm3tATQGTg"
-           "Friday Talks")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCkU5hWnORzZMZf9SkFmjF6g"
-           "木蘭訪談")
-        '(small () "Youtube"))
-    (:- (@ "https://www.youtube.com/channel/UCNKpqIqrErG1a-ydQ0D5dcA/featured"
-           "战友之声")
-        '(small () "Youtube"))
-    ;; (:- (@ "https://www.youtube.com/channel/UC66D8Bl3TeNTgyUAG-mcwHg"
-    ;;        "澳洲新声")
-    ;;     '(small () "Youtube"))
-    ;; (:- (@ "https://www.youtube.com/chaqnnel/UCQT2Ai7hQMnnvVTGd6GdrOQ"
-    ;;        "政事直播(政事小哥)")
-    ;;     '(small () "Youtube"))
-    (:- (@ "https://discord.gg/ZhGK3EA"
-           "战友之声") 
-        '(small () "Discord") )))
-
-(news-to-topic
  "中美" ;; (human-date (get-universal-time))
  "2018.12.04 20:10:20"
  (u (:- '(small () "2018.11.30-12.1")
