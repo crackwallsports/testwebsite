@@ -76,7 +76,7 @@ margin: 0;
 font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";
 font-size: 1rem;
 font-weight: 400;
-line-height: 1.5;
+line-height: 1.8;
 text-align: left;
 }
 .side-header .contact {
@@ -150,9 +150,11 @@ small {
                (:li "关键点"
                     (:ul (:li (:small "2020.01.19")
                               "Video: "
-                              (link s "https://youtu.be/CLTjg03CPEs")
+                              (link s "https://youtu.be/CLTjg03CPEs"
+                                    "1/19/2020 路安艾时评：重磅！")
                               (:small "Youtube:路德社LUDE Media")
-                              (:q (:pre "1/19/2020 路安艾时评：重磅！
+                              (:small " {20200119V1}")
+                              (:q (:pre "
 为什么财新胡舒立要一再否认武汉SARS病毒和舟山蝙蝠病毒的关联性？
 为什么该病毒已经进化具备人传人大爆发强变异？
 为什么中共要不断隐瞒确诊案例？")))
@@ -238,42 +240,153 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
 (defun virus-time-line (stream)
   (with-html-output (s stream :indent 2)
     (:ul
+     (:li "注"
+          (:ul (:li (:small "时间 来源于引文中 可能因为时区等原因 会不准确"))))
+     (:li (:small "202 . . ")
+          ": "
+          (link s "")
+          (:small "")
+          (:q (:pre "")))
      (:li "...最早...")
-     (:li "闫博士团队 报告")
+     ;; 2020.1.19
+     (:li (:small "2020.01.19")
+          "Video: "                     ; V1
+          (link s "https://youtu.be/CLTjg03CPEs"
+                "1/19/2020 路安艾时评：重磅！")
+          (:small "Youtube:路德社LUDE Media")
+          (:small " {20200119V1}")
+          (:q (:pre "
+为什么财新胡舒立要一再否认武汉SARS病毒和舟山蝙蝠病毒的关联性？
+为什么该病毒已经进化具备人传人大爆发强变异？
+为什么中共要不断隐瞒确诊案例？")))
+     ;; 2020.9.14
+     (:li (:small "2020.09.14")
+          "Article" (:small "(Report): ") ; A1
+          (link s "https://zenodo.org/record/4028830"
+                "Unusual Features of the SARS-CoV-2 Genome Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution and Delineation of Its Probable Synthetic Route")
+          (:small "Zenodo")
+          (:small " {20200914A1}"))
+     ;; 2020.10.8
+     (:li (:small "2020.10.08")
+          "Article" (:small "(Report): ") ; A1
+          (link s "https://zenodo.org/record/4073131"
+                "SARS-CoV-2 Is an Unrestricted Bioweapon:
+A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud")
+          (:small "Zenodo")
+          (:small " {20201008A1}")
+          (:ul (:li (:small "2020.10.08")
+                    "Video: "           ; V1
+                    (link s "https://youtu.be/VAKlS2oM9EU"
+                          "10/8/2020 路德时评（路博艾冠康胡谈）")
+                    (:small "Youtube:路德社LUDE Media")
+                    (:small " {20201008V1 20201008A1}")
+                    (:q (:pre "
+闫丽梦博士首次用中文解释第二份报告的来龙去脉,揭露中共病毒的超限战生物武器的本质！")))))
+     ;; 2020.11.21
+     (:li (:small "2020.11.21")
+          "Article" (:small "(Report): ") ; A1
+          (link s "https://zenodo.org/record/4283480"
+                "CNN Used Lies and Misinformation to Muddle the Water on the Origin of SARS-CoV-2")
+          (:small "Zenodo")
+          (:small " {20201121A1}"))
+     ;; 2021.1.19
+     (:li (:small "2021.01.19")
+          "Article" (:small "(Report): ") ; A1
+          (link s "https://zenodo.org/record/4448499"
+                "Call for the WHO Team to Investigate the Pangolin Coronaviruses and the RmYN02 Bat Coronavirus")
+          (:small "Zenodo")
+          (:small " {20210119A1}"))
+     ;; 2021.1.29
+     (:li (:small "2021.01.29")
+          "Article" (:small "(Report): ") ; A1
+          (link s "https://zenodo.org/record/4477081"
+                "A Bayesian analysis concludes beyond a reasonable doubt that SARS-CoV-2 is not a natural zoonosis but instead is laboratory derived")
+          (:small "Zenodo")
+          (:small " {20210129A1}"))
+     ;; 2021.2.9
+     (:li (:small "2021.02.09")
+          "Video: "                     ; V1
+          (link s "https://youtu.be/UmoUdW5r5fU"
+                "2/9/2021 路德时评（路博艾冠谈嘉宾闫博士）")
+          (:small "Youtube:路德社LUDE Media")
+          (:small " {20210209V1}")
+          (:q (:pre "
+川普弹劾案参议院通过不违宪投票；
+美国蓬佩澳以及白宫对中共联合世卫的溯源报告纷纷否定意味着什么？
+军事科学院出版的教材揭露一切真相！"))
+          (:ul
+           (:li "Book: "
+                "非典非自然起源和人制人新种病毒基因武器"
+                (:small "主编: 徐德忠 李锋 出版: 军事医学科学出版社 2015.8"))
+           (:li (:small "2021.02.10")
+                "Video: "               ; V1
+                (link s "https://youtu.be/a4oIAEQveOg"
+                      "2/10/2021路德时评（路安墨谈）")
+                (:small "Youtube:路德社LUDE Media")
+                (:small " {20210210V1 20210209V1}")
+                (:q (:pre "
+世卫组织顾问揭露世卫所谓调查内幕；
+再次深入解读2015年出版中共军事科学院出版的教材了第2期；")))
+           (:li (:small "2021.02.10")
+                "Video: "               ; V2
+                (link s "https://youtu.be/V10SKiS1vpc"
+                      "2/10/2021路德时评（路博艾冠谈）")
+                (:small "Youtube:路德社LUDE Media")
+                (:small " {20210210V2 20210209V1}")
+                (:q (:pre "
+拜登和习近平最快今晚通电话会勾兑哪些？
+继续深入挖中共军事科学院教材的内容揭示众多真相（第三期）；")))))
+     ;; 
      (:li "WHO 武汉之旅")
+     ;; 2021.2.10
+     (:li (:small "2021.02.10")
+          "Article: "                   ; A1
+          (link s "https://thenationalpulse.com/exclusive/who-investigators-ccp-covid-ties/"
+                "CONFLICT OF INTEREST: WHO’s COVID Investigator Is Recipient Of Chinese Communist Cash, Worked With Wuhan Lab For 18 Years.")
+          (:small "The National Pulse.")
+          (:small " {20210210A1}"))
+     ;; 2021.2.12
      (:li (:small "2021.02.12")
-          "Article: "
+          "Article: "                   ; A1
           (link s "https://mediamanipulation.org/case-studies/cloaked-science-yan-reports"
                 "CLOAKED SCIENCE: THE YAN REPORTS")
           (:small "The Media Manipulation Case Book")
           (:small " {20210212A1}"))
+     ;; 2021.2.13
      (:li (:small "2021.02.13")
-          "Article: "
+          "Article: "                   ; A1
           (link s "https://www.washingtonpost.com/technology/2021/02/12/china-covid-misinformation-li-meng-yan/"
                 "Scientists said claims about China creating the coronavirus were misleading. They went viral anyway.")
           (:small "The Washington Post")
           (:small " {20210213A1 20210212A1}"))
      (:li (:small "2021.02.13")
-          "Video: "
+          "Video: "                     ; V1
           (link s "https://youtu.be/Bp-zly4svfk"
                 "2/12/2021 路德时评（路博冠康胡谈嘉宾闫博士）")
           (:small "Youtube: 路德社LUDE Media")
           (:small " {20210213V1 20210212A1}")
           (:q (:pre "怎么看同一天哈佛出报道攻击闫博士，华盛顿邮报出报道替闫博士说话？"))
           (:ul (:li (:small "2021.02.13")
-                    "Article(中文简述): "
+                    "Article" (:small "(中文简述): ") ; A3
                     (link s "https://gnews.org/zh-hans/904991/"
                           "《路德时评》连线闫博士回击哈佛报告，及解读《华盛顿邮报》头版报道闫博士")
                     (:small "GNEWS")
-                    (:small " {20210213V1A1}"))))
+                    (:small " {20210213A3 20210213V1}"))))
      (:li (:small "2021.02.13")
-          "Article: "
+          "Article: "                   ; A2
           (link s "https://thenationalpulse.com/exclusive/harvard-shorenstein-center-ccp-ties/"
                 "EXC: Harvard Center Attacking COVID Lab Theory Has Extensive Financial And Personnel Links With The Chinese Communist Party.")
           (:small "The National Pulse.")
-          (:small " {20210213A2 20210212A1}"))
+          (:small " {20210213A2 20210212A1}")
+          (:ul (:li (:small "2021.02.16")
+                    "Article" (:small "(中文翻译): ") ; A1
+                    (link s "https://gnews.org/zh-hans/909498/"
+                          "探究哈佛大学中心与中共的渊源")
+                    (:small "GNEWS")
+                    (:small " {20210216A1 20210213A2}"))))
+     ;; 2021.2.14
      (:li (:small "2021.02.14")
-          "Video: "
+          "Video: "                     ; V1
           (link s "https://youtu.be/Bp-zly4svfk"
                 "2/14/2021路德时评（路安墨谈）")
           (:small "Youtube: 路德社LUDE Media")
@@ -281,7 +394,16 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
           (:q (:pre "
 攻击闫博士的哈佛该研究中心被美媒曝光就是中共资助在美大发酵，哈佛该中心彻底翻车！
 世卫谭德塞首次发声不排除病毒起源任何假设意味着什么？")))
-     (:li (:small "202 . . ")
+     ;; 2021.2.15
+     (:li (:small "2021.02.15")
+          "Article: "                   ; A1
+          (link s "https://thenationalpulse.com/news/exc-who-covid-investigator-is-chinese-cdc-advisor-who-accepted-ccp-research-grants/"
+                "EXC: WHO COVID ‘Investigator’ Is Chinese CDC Advisor Who Accepted CCP Research Grants.")
+          (:small "The National Pulse.")
+          (:small " {20210215A1}"))
+     ;; 2021.2.16
+     
+     (:li (:small "2021. . ")
           ": "
           (link s "")
           (:small "")
