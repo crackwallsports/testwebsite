@@ -241,7 +241,9 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
   (with-html-output (s stream :indent 2)
     (:ul
      (:li "注"
-          (:ul (:li (:small "时间 来源于引文中 可能因为时区等原因 会不准确"))))
+          (:ul (:li (:small "时间 来源于引文中 可能因为时区等原因 会不准确"))
+               (:li (:small "静态内容的呈现 兔子为了自己方便 目前不是按时间序列呈现 而是有层级关系"))
+               (:li (:small "兔子 很懂中文 英文马马虎虎 其它国家语言基本都懂 所以其它语言信息出错 不要惊讶"))))
      (:li (:small "202 . . ")
           ": "
           (link s "")
@@ -403,9 +405,60 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud")
           (:small " {20210215A1}"))
      ;; 2021.2.16
      
-     (:li (:small "2021. . ")
-          ": "
+     (:li (:small "2021.02.16")
+          "Article: "                   ; A1
+          (link s "https://cz.citymedia.network/prague/features/czech-cardinal-calls-coronavirus-chinese-biological-weapon/"
+                "Czech cardinal calls coronavirus “Chinese biological weapon”")
+          (:small "CityMedia : PragueLife! Magazine")
+          (:small " {20210216A1 20210216A2}")
+          (:q (:pre "
+Dominik Duka, cardinal at the Roman Catholic Church and the 36th Arch Bishop of Prague, believes coronavirus is a biological weapon and that the military knows about it. "))
+          (:ul (:li (:small "2021.02.19")
+                    "Article: " (:small "(中文简述): ") ; A1
+                    (link s "https://gnews.org/zh-hans/917024/"
+                          "捷克红衣主教称中共病毒为“中共生物武器”")
+                    (:small "GNEWS")
+                    (:small " {20210219A1 20210216A1}"))
+               (:li (:small "2021.02.16")
+                    "Article: " (:small "(捷克语): ") ; A2
+                    (link s "https://cnn.iprima.cz/duka-koronavirus-je-cinska-biologicka-zbran-vojaci-o-tom-vedi-ale-mlci-19260?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=520010&dop_source_zone_name=hpfeed.sznhp.box&dop_req_id=iO74E7p52JV-202102161031y"
+                          "Duka: Koronavirus je čínská biologická zbraň. Vojáci o tom vědí, ale nic neřeknou")
+                    (:small "CNN Prima News : Czech")
+                    (:small " {20210216A2}"))
+               (:li (:small "2021.02.18")
+                    "Article: " (:small "(中共回应): ") ; A1
+                    (:small " {20210218A1 20210216A2}")
+                    (:ul (:li (link s "https://www.globaltimes.cn/page/202102/1215871.shtml"
+                                    "Czech Cardinal Dominik Duka’s ‘Chinese biological weapon’ remarks groundless slander: embassy")
+                              (:small "Global Times"))
+                         (:li 
+                          (link s "https://world.huanqiu.com/article/41ykMcBTpZW"
+                                "捷克主教声称新冠是中国的“生物武器”，我使馆：立即纠正错误！")
+                          (:small "环球网"))))))
+     ;; 2021.2.19
+     
+     (:li (:small "2021.02.19")
+          "Article: "                   ; A2
+          (link s "https://gnews.org/zh-hans/917482/"
+                "德国汉堡大学：中共病毒来自武汉病毒研究所实验室！")
+          (:small "GNEWS")
+          (:small " {20210219A2 20210218A2}")
+          (:ul (:li (:small "2021.02.18")
+                    "Article: " (:small "(德国汉堡大学原文 德文): ")
+                    (link s "https://www.uni-hamburg.de/newsroom/presse/2021/pm8.html"
+                          "Studie zum Ursprung der Coronavirus-Pandemie veröffentlicht")
+                    (:small "Universität Hamburg")
+                    (:small " {20210218A2 20210215A2}"))
+               (:li (:small "2021.02.15")
+                    "Article" (:small "(Report): ") ; A2
+                    (link s "https://www.researchgate.net/publication/349302406_Studie_zum_Ursprung_der_Coronavirus-Pandemie"
+                          "Studie zum Ursprung der Coronavirus-Pandemie")
+                    (:small "ResearchGate")
+                    (:small " {20210215A2}"))))
+     (:li (:small "2021..")
+          ": " (:small "(): ")
           (link s "")
           (:small "")
+          (:small " {}")
           (:q (:pre ""))))))
 #+END_SRC
