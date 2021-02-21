@@ -212,7 +212,7 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
      (:li "注"
           (:ul (:li (:small "时间 来源于引文中 可能因为时区等原因 会不准确"))
                (:li (:small "静态内容的呈现 兔子为了自己方便 目前不是按时间序列呈现 而是有层级关系"))
-               (:li (:small "兔子 很懂中文 英文马马虎虎 其它国家语言基本都懂 所以其它语言信息出错 不要惊讶"))))
+               (:li (:small "兔子 很懂中文 英文马马虎虎 其它国家语言基本都不懂 所以其它语言信息出错 不要惊讶"))))
      (:li (:small "202 . . ")
           ": "
           (link s "")
@@ -424,6 +424,65 @@ Dominik Duka, cardinal at the Roman Catholic Church and the 36th Arch Bishop of 
                           "Studie zum Ursprung der Coronavirus-Pandemie")
                     (:small "ResearchGate")
                     (:small " {20210215A2}"))))
+     ;; 2021.2.20
+     (:li (:small "2021.02.20")
+          "Video: " (:small "(): ")     ; V1
+          (link s "https://youtu.be/-HucSkjWxjs"
+                "2/20/2021路德时评（路博艾冠谈）")
+          (:small "Youtube: 路德社LUDE Media")
+          (:small " {20210220V1 20210219A3 20210220A2 20210220T1}")
+          (:q (:pre "
+德国最大报纸图片报关于病毒来源让中共必须回答五个问题；
+中共外交部立马表明严正立场回应；"))
+          (:ul (:li (:small "2021.02.20")
+                    "Article: " (:small "(路德社节目简述): ") ; A1
+                    (link s "https://gnews.org/zh-hans/923455/"
+                          "《路德时评》重磅解读德国最大报纸质问中共五个致命问题，及再爆中共长年从事中共病毒研究铁证")
+                    (:small "GNEWS")
+                    (:small " {20210220A1 20210220V1}"))
+               (:li (:small "2021.02.19")
+                    "Article: " (:small "(德文 德国图片报): ") ; A3
+                    (link s "https://www.bild.de/politik/ausland/politik-ausland/herkunft-von-corona-diese-fuenf-fragen-muss-china-jetzt-beantworten-75476194.bild.html#fromWall"
+                          "Diese fünf Fragen MUSS China jetzt beantworten!")
+                    (:small "Bild")
+                    (:small " {20210219A3}")
+                    (:q (:pre "
+Frage1 : Geben Sie Zu, dass das Corona-Virus durch einen Labor-Unfall in die Welt kam? 您同意新冠病毒是从实验室传到世界上的这种说法吗?
+Frige2 : Warum haben Sie die Welt nicht früher gewarnt? 您为什么没有早一点警告这个世界?
+Frige3 : Warum experimentierte China überhaupt mit Corona-Viren? 为什么中国要试验新冠病毒?
+Frige4 : Wann lassen Sie unabhängige Experten in das Labor in Wuhan? 您觉得应该什么时候让外界专家进驻武汉?
+Frige5 : Wie will China die Welt für Corona entschädigen? 中国应该怎么补偿这个世界?")))
+               (:li (:small "2021.02.20")
+                    "Article: " (:small "(中共回应): ") ; A2
+                    (link s "http://de.china-embassy.org/chn/sgyw/t1855406.htm"
+                          "驻德国使馆就德《图片报》再次散布炒作新冠病毒来源等阴谋论表明我严正立场")
+                    (:small "中华人民共和国驻德意志联邦共和国大使馆")
+                    (:small " {20210220A2 20210219A3}")
+                    (:q (:pre "
+...
+《图片报》引用的所谓“报告”并非严谨科学的研究报告，甫一发布即受到德学术界、媒体和民众广泛质疑和批评。
+
+武汉病毒研究所P4实验室具有严格的防护设施和措施。在2019年12月30日接收新冠肺炎患者的首批检测试样前，该所完全没有接触过、研究过或者保存过新冠病毒。
+
+世卫组织派出国际专家组于2021年1月至2月在武汉与中方专家组成联合专家组，共同开展全球溯源中国部分工作。联合专家组对新冠病毒从自然宿主直接传播和通过冷链食品、中间宿主、实验室等四种引入人类途径的可能性进行了科学评估，认为新冠病毒“比较可能”经中间宿主引入人类，也“可能”直接传播或者通过冷链食品引入人类，“极不可能”通过实验室引入人类。
+
+在已经被世界上几乎所有顶级科学家和疾控专家公开否定的情况下，该报仍热衷于散布所谓的“武汉病毒所泄露病毒”等谣言，并在此基础上煞有其事、厚颜无耻地提出所谓“中国应回答的五个问题”，实在令人不齿。
+...")))
+               (:li "项目: " "重要病毒跨种间感染与传播致病的分子机制研究"
+                    (:small "中共国CDC负责人高福 2011年申请的基金标书")
+                    (:ul (:li (:small "2021.02.20")
+                              "Twitter: " (:small "(含标书图片): ") ; T1
+                              (link s "https://twitter.com/jsdfposjpqyuee1/status/1363237028712747008?s=20")
+                              (:small "Twitter: 火来2号 @jsdfposjpqyuee1")
+                              (:small " {20210220T1}")
+                              (:q (:pre "
+@DrLiMengYAN1
+ 
+高福的基金标书2011CB504700，石正丽的研究获得这个基金的支持。研究内容包括（不限于）
+1 对病毒目的基因进行定点突变
+2 获得目的重组病毒
+3 确定影响病毒致病性和传播性的关键基因位点
+")))))))
      (:li (:small "2021..")
           ": " (:small "(): ")
           (link s "")

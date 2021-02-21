@@ -186,9 +186,23 @@ Content
                               (:li
                                (link s "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured")
                                (:small "Youtube: 路德社LUDE Media")))))))
-          (r-node s "2021.01.19-2021.02.19" "@3820050169" "CCP病毒"
-                  (:li "Know : "
-                       (link s "ccp-virus.html" "CCP病毒"))))))
+          
+          (r-node s "2021.01.19-2021.02.21" "@3820050169" "CCP病毒"
+                  (:ul 
+                   (:li "Know : "
+                        (link s "ccp-virus.html" "CCP病毒"))
+                   (:li "See : "
+                        (:ul (:li (link s "https://twitter.com/DrLiMengYAN1"
+                                        "闫丽梦博士 Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
+                             (:li (link s "https://gnews.org/zh-hans/category/ccpvirus-cn/"
+                                        "GNEWS CCP病毒"))
+                             (:li  (link s "https://pandemic.warroom.org/"
+                                         "War room : Pandemic")
+                                   (:ul (:li (link s "https://gtv.org/user/5ed199be2ba3ce32911df7ac"
+                                                   "秘密翻译组")
+                                             (:small "(包含 班农战斗室 中文同声翻译)"))))
+                             (:li (link s "https://www.youtube.com/channel/UCJwXLE6A7WomYVlTHMHgMuQ"
+                                        "上天造灭疫组")))))))))
 
 ;; (defun 3Rabbit (stream)
 ;;   (with-html-output (s stream :indent 2)
