@@ -146,10 +146,10 @@ small {
                          (:li "生物化学相关知识")))
                (:li "治疗 预防 (药物 疫苗)"
                     (:ul (:li (link s ""))))
-               (:li "病毒 与 中共"
+               (:li "中共 与 病毒"
                     (:ul (:li "中共 隐瞒 拖延 欺骗")
                          (:li "病毒来源")))
-               (:li "WHO 与 中共"
+               (:li "中共 与 WHO"
                     (:ul (:li (link s ""))))))))
 
 (defun Dr-Yan (stream)
@@ -322,39 +322,40 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud")
           (link s "https://mediamanipulation.org/case-studies/cloaked-science-yan-reports"
                 "CLOAKED SCIENCE: THE YAN REPORTS")
           (:small "The Media Manipulation Case Book")
-          (:small " {20210212A1}"))
-     ;; 2021.2.13
-     (:li (:small "2021.02.13")
-          "Article: "                   ; A1
-          (link s "https://www.washingtonpost.com/technology/2021/02/12/china-covid-misinformation-li-meng-yan/"
-                "Scientists said claims about China creating the coronavirus were misleading. They went viral anyway.")
-          (:small "The Washington Post")
-          (:small " {20210213A1 20210212A1}"))
-     (:li (:small "2021.02.13")
-          "Video: "                     ; V1
-          (link s "https://youtu.be/Bp-zly4svfk"
-                "2/12/2021 路德时评（路博冠康胡谈嘉宾闫博士）")
-          (:small "Youtube: 路德社LUDE Media")
-          (:small " {20210213V1 20210212A1}")
-          (:q (:pre "怎么看同一天哈佛出报道攻击闫博士，华盛顿邮报出报道替闫博士说话？"))
-          (:ul (:li (:small "2021.02.13")
-                    "Article" (:small "(中文简述): ") ; A3
-                    (link s "https://gnews.org/zh-hans/904991/"
-                          "《路德时评》连线闫博士回击哈佛报告，及解读《华盛顿邮报》头版报道闫博士")
-                    (:small "GNEWS")
-                    (:small " {20210213A3 20210213V1}"))))
-     (:li (:small "2021.02.13")
-          "Article: "                   ; A2
-          (link s "https://thenationalpulse.com/exclusive/harvard-shorenstein-center-ccp-ties/"
-                "EXC: Harvard Center Attacking COVID Lab Theory Has Extensive Financial And Personnel Links With The Chinese Communist Party.")
-          (:small "The National Pulse.")
-          (:small " {20210213A2 20210212A1}")
-          (:ul (:li (:small "2021.02.16")
-                    "Article" (:small "(中文翻译): ") ; A1
-                    (link s "https://gnews.org/zh-hans/909498/"
-                          "探究哈佛大学中心与中共的渊源")
-                    (:small "GNEWS")
-                    (:small " {20210216A1 20210213A2}"))))
+          (:small " {20210212A1}")
+          ;; 2021.2.13
+          (:ul
+           (:li (:small "2021.02.13")
+                "Article: "             ; A1
+                (link s "https://www.washingtonpost.com/technology/2021/02/12/china-covid-misinformation-li-meng-yan/"
+                      "Scientists said claims about China creating the coronavirus were misleading. They went viral anyway.")
+                (:small "The Washington Post")
+                (:small " {20210213A1 20210212A1}"))
+           (:li (:small "2021.02.13")
+                "Video: "               ; V1
+                (link s "https://youtu.be/Bp-zly4svfk"
+                      "2/12/2021 路德时评（路博冠康胡谈嘉宾闫博士）")
+                (:small "Youtube: 路德社LUDE Media")
+                (:small " {20210213V1 20210212A1}")
+                (:q (:pre "怎么看同一天哈佛出报道攻击闫博士，华盛顿邮报出报道替闫博士说话？"))
+                (:ul (:li (:small "2021.02.13")
+                          "Article" (:small "(中文简述): ") ; A3
+                          (link s "https://gnews.org/zh-hans/904991/"
+                                "《路德时评》连线闫博士回击哈佛报告，及解读《华盛顿邮报》头版报道闫博士")
+                          (:small "GNEWS")
+                          (:small " {20210213A3 20210213V1}"))))
+           (:li (:small "2021.02.13")
+                "Article: "             ; A2
+                (link s "https://thenationalpulse.com/exclusive/harvard-shorenstein-center-ccp-ties/"
+                      "EXC: Harvard Center Attacking COVID Lab Theory Has Extensive Financial And Personnel Links With The Chinese Communist Party.")
+                (:small "The National Pulse.")
+                (:small " {20210213A2 20210212A1}")
+                (:ul (:li (:small "2021.02.16")
+                          "Article" (:small "(中文翻译): ") ; A1
+                          (link s "https://gnews.org/zh-hans/909498/"
+                                "探究哈佛大学中心与中共的渊源")
+                          (:small "GNEWS")
+                          (:small " {20210216A1 20210213A2}"))))))
      ;; 2021.2.14
      (:li (:small "2021.02.14")
           "Video: "                     ; V1
@@ -423,7 +424,18 @@ Dominik Duka, cardinal at the Roman Catholic Church and the 36th Arch Bishop of 
                     (link s "https://www.researchgate.net/publication/349302406_Studie_zum_Ursprung_der_Coronavirus-Pandemie"
                           "Studie zum Ursprung der Coronavirus-Pandemie")
                     (:small "ResearchGate")
-                    (:small " {20210215A2}"))))
+                    (:small " {20210215A2}")
+                    (:ul (:li (:small "2021.02.21")
+                              "Article: " (:small "(中文翻译): ")
+                              (:small " {20210221A1 20210215A2}")
+                              (:ul (:li (link s "https://gnews.org/zh-hans/924152/"
+                                              "德国汉堡大学罗兰-维森丹格教授：冠状病毒大流行的起源研究（中文译文）第一部分")
+                                        (:small "GNEWS")
+                                        (:small "2021.02.21"))
+                                   (:li (link s "https://www.gnews.org/zh-hans/927337/"
+                                              "德国汉堡大学罗兰-维森丹格教授：冠状病毒大流行的起源研究（中文译文）第二部分")
+                                        (:small "GNEWS")
+                                        (:small "2021.02.22"))))))))
      ;; 2021.2.20
      (:li (:small "2021.02.20")
           "Video: " (:small "(): ")     ; V1
@@ -483,6 +495,36 @@ Frige5 : Wie will China die Welt für Corona entschädigen? 中国应该怎么�
 2 获得目的重组病毒
 3 确定影响病毒致病性和传播性的关键基因位点
 ")))))))
+     ;; 2021.2.22
+     (:li (:small "2021.02.22")
+          "Video: "                     ; V1
+          (link s "https://www.cbsnews.com/video/former-deputy-national-security-adviser-matt-pottinger-on-face-the-nation/"
+                "Former deputy national security adviser Matt Pottinger on \"Face the Nation\"")
+          (:small "CBS News")
+          (:small " {20210222V1}"))
+     ;; 2021.2.23
+     (:li (:small "2021.02.23")
+          "Article: "                   ; A1
+          (link s "https://www.wsj.com/articles/chinas-reckless-labs-put-the-world-at-risk-11614102828"
+                "China’s Reckless Labs Put the World at Risk")
+          (:small "The Wall Street Journal")
+          (:small " {20210223A1}")
+          (:q (:pre "
+Beijing is obsessed with viruses, but not biosafety. We are paying a high price for its lapses."))
+          (:ul (:li (:small "2021.02.23")
+                    "Article: " (:small "(中文翻译): ") ; A2
+                    (link s "https://gnews.org/zh-hans/929695/"
+                          "迈克·蓬佩奥发新闻 中共病毒来自“武毒所”")
+                    (:small "GNEWS")
+                    (:small " {20210223A2 20210223A1 }"))
+               (:li (:small "2021.02.23")
+                    "Video: "           ; V1
+                    (link s "https://youtu.be/a1ST79I19LE"
+                          "2/23/2021路德时评（路博艾冠谈）")
+                    (:small "Youtube: 路德社LUDE Media")
+                    (:small " {20210223V1 20210223A1 }")
+                    (:q (:pre "
+华尔街日报刊登一篇蓬佩澳和余茂春先生的重磅文章，暗示的很多情报信息和内容与闫博士报告相吻合；")))))
      (:li (:small "2021..")
           ": " (:small "(): ")
           (link s "")
