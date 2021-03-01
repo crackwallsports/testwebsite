@@ -513,11 +513,12 @@ Frige5 : Wie will China die Welt für Corona entschädigen? 中国应该怎么�
 ...")))
                (:li "项目: " "重要病毒跨种间感染与传播致病的分子机制研究"
                     (:small "中共国CDC负责人高福 2011年申请的基金标书")
+                    (:small " {20110101X3823589705}" )
                     (:ul (:li (:small "2021.02.20")
                               "Twitter: " (:small "(含标书图片): ") ; T1
                               (link s "https://twitter.com/jsdfposjpqyuee1/status/1363237028712747008?s=20")
                               (:small "Twitter: 火来2号 @jsdfposjpqyuee1")
-                              (:small " {20210220T1}")
+                              (:small " {20210220T1 20110101X3823589705}")
                               (:q (:pre "
 @DrLiMengYAN1
  
@@ -525,7 +526,13 @@ Frige5 : Wie will China die Welt für Corona entschädigen? 中国应该怎么�
 1 对病毒目的基因进行定点突变
 2 获得目的重组病毒
 3 确定影响病毒致病性和传播性的关键基因位点
-")))))))
+")))
+                         (:li (:small "2021.02.07")
+                              "Article: " (:small "(含标书内容): ") ; T1
+                              (link s "https://gnews.org/zh-hans/935149/"
+                                    "中共用国家基金资助顶级科学家制造跨种间传播，高传染性、高致病性的新型病毒")
+                              (:small "GNEWS")
+                              (:small " {20210227A3823589593 20110101X3823589705}"))))))
      ;; 2021.2.22
      (:li (:small "2021.02.22")
           "Video: "                     ; V1
@@ -556,6 +563,30 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
                     (:small " {20210223V1 20210223A1 }")
                     (:q (:pre "
 华尔街日报刊登一篇蓬佩澳和余茂春先生的重磅文章，暗示的很多情报信息和内容与闫博士报告相吻合；")))))
+     (:li (:small "2021.02.23")
+          "Article: " 
+          (link s "https://www.washingtontimes.com/news/2021/feb/23/facebooks-false-fact-check-protected-a-viable-sour/"
+                "Facebook's false fact check protected a viable source of COVID-19: Wuhan Institute of Virology")
+          (:small "The Washington Times")
+          (:small " {20210223A3823590255}" )
+          (:ul (:li (:small "2021.02.26")
+                    "Article: " (:small "(中文翻译): ")
+                    (link s "https://gnews.org/zh-hans/934228/"
+                          "比尔·戈茨：脸书的虚假事实检查保护了武汉病毒研究")
+                    (:small "GNEWS")
+                    (:small " {20210226A3823590382 20210223A3823590255}" ))))
+     (:li (:small "2021.02.23")
+          "Article: " 
+          (link s "https://www.commdiginews.com/politics-2/hydroxychloroquine-approved-preventative-treatment-covid-19-128426/"
+                "Hydroxychloroquine now approved as a preventative treatment for COVID-19 (Update)")
+          (:small "Communities Digital News")
+          (:small " {20210227A3823591004}" )
+          (:ul (:li (:small "2021.02.27")
+                    "Article: " (:small "(中文翻译): ")
+                    (link s "https://gnews.org/zh-hans/937012/"
+                          "羟氯喹获批成为COVID-19的预防治疗方案")
+                    (:small "GNEWS")
+                    (:small " {20210223A3823591136 20210227A3823591004}"))))
      (:li (:small "2021..")
           ": " (:small "(): ")
           (link s "")
