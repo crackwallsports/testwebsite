@@ -556,9 +556,80 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
                           "羟氯喹获批成为COVID-19的预防治疗方案")
                     (:small "GNEWS")
                     (:small " {20210223A3823591136 20210227A3823591004}"))))
+     (virus-time-line-202103 s)
      (:li (:small "2021..")
           ": " (:small "(): ")
           (link s "")
           (:small "")
           (:small " {}")
           (:q (:pre ""))))))
+
+(defun virus-time-line-202103 (stream)
+  (with-html-output (s stream :indent 2)
+    (:li (:small "2021.03.01")
+         "Article: " 
+         (link s "https://www.judicialwatch.org/press-releases/emails-who-terms/?utm_source=twitter&utm_medium=social&utm_campaign=press_release"
+               "Judicial Watch: New Emails Detail WHO/NIH Accommodations to Chinese Confidentiality ‘Terms’")
+         (:small "Judicial Watch")
+         (:small " {20210301A3823764202}"))
+    (:li (:small "2021.03.01")
+         "Article: " 
+         (link s "https://www.thegatewaypundit.com/2021/03/exclusive-new-evidence-shows-u-s-government-american-scientific-establishment-involved-cover-covid-19s-origin/"
+               "EXCLUSIVE: New Evidence Shows U.S. Government and the American Scientific Establishment Involved in Cover Up of COVID-19’s Origin")
+         (:small "The Gateway Pundit")
+         (:small " {20210301A3823764583}"))
+    (:li (:small "2021.03.02")
+         "Article: " 
+         (link s "https://www.reuters.com/article/us-health-coronavirus-russia-poll/over-60-of-russians-dont-want-sputnik-v-vaccine-see-coronavirus-as-biological-weapon-reuters-poll-idUSKBN2AT2XK"
+               "Over 60% of Russians don't want Sputnik V vaccine, see coronavirus as biological weapon: Reuters poll")
+         (:small "Reuters")
+         (:small " {20210302A3823764715}")
+         (:ul (:li (:small "2021.03.03")
+                   "Article " (:small "(中文翻译):") 
+                   (link s "https://gnews.org/zh-hans/944760/"
+                         "超过60％的俄罗斯人认为冠状病毒就是人造的生物武器")
+                   (:small "GNEWS")
+                   (:small " {20210303A3823765831 20210302A3823764715}"))))
+    (:li (:small "2021.03.02")
+         "Video: " 
+         (link s "https://youtu.be/hl-v5jp9vxQ"
+               "3/1/2021路德时评（路博艾冠谈嘉宾闫丽梦博士）")
+         (:small "Youtube: 路德社LUDE Media")
+         (:small " {20210301V3823765281 20210302A3823764715 20210301A3823764583}")
+         (:q (:pre "
+蓬佩奥再谈全世界必须与中共脱钩；美议员要求拜登指定中共为跨国犯罪组织？美媒体揭露攻击闫博士的都是受中共指使；布林肯再次对中共强硬；")))
+    (:li (:small "2021.03.02")
+         "Video: " 
+         (link s "https://rumble.com/veanff-dr.-navarro-fears-the-ccp-virus-is-a-bioweapon.html"
+               "Dr. Navarro fears the CCP virus is a bioweapon")
+         (:small "Rumble: Bannons War Room")
+         (:small " {20210302V3823765393}")
+         (:ul (:li (:small "2021.03.03")
+                   "Tweet: " 
+                   (link s "https://twitter.com/RealPNavarro/status/1366844639974719493?s=20")
+                   (:small "Twitter: Peter Navarro @RealPNavarro")
+                   (:small " {20210303@3823767219 20210302V3823765393}")
+                   (:q (:pre "
+The #CCPVirus could be a bioweapon - mutations of the virus upsets the whole concept of herd immunity. This is exactly why the Chinese Communist Party needs to be investigated to figure out what exactly happened. Gain of function research? Bioweapon?
+https://rumble.com/veanff-dr.-navarro-fears-the-ccp-virus-is-a-bioweapon.html")))))
+    (:li (:small "2021.03.02")
+         "Video: " 
+         (link s "https://youtu.be/1YCVPv_07fg"
+               "3/2/2021路德时评（路安墨谈）")
+         (:small "Youtube: 路德社LUDE Media")
+         (:small " {20210302V3823767880}")
+         (:q (:pre "
+果不其然，闫博士前上司Malik被出来回归港大巴斯德研究所任荣誉所长；纳瓦罗评论拜登政府是否会延续川普灭共政策？"))
+         (:ul (:li (:small "2021.03.03")
+                   "Article " (:small "(简述):")
+                   (link s "https://gnews.org/zh-hans/943369/"
+                         "《路德时评》重磅解读Malik就任港大巴斯德研究中心名誉所长，及大灭共时代全面加速")
+                   (:small "GNEWS")
+                   (:small " {20210303A3823767991 20210302V3823767880}"))))
+    (:li (:small "2021.03.")
+         "Article " (:small "():")
+         (link s ""
+               "")
+         (:small "")
+         (:small (format nil " {~a~a}" "202103 " (node-id)))
+         (:q (:pre "")))))
