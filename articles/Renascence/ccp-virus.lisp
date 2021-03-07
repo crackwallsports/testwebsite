@@ -14,6 +14,9 @@
                           :external-format :utf-8)
     (format stream str)))
 
+(defun gen-id ()
+  (get-universal-time))
+
 (defun export-html ()
   (setf (html-mode) :html5)
   (->file "articles/Renascence/ccp-virus.html" (site-html)))
@@ -87,9 +90,11 @@ display: inline}
  white-space: pre-wrap;
 }
 .topic li q {
- margin-left: 16px;
+ margin-left: 13px;
 }
-
+ul li {
+padding-left: 6px;
+}
 .content{
  padding-left: 3%;
  padding-right: 3%
@@ -99,6 +104,10 @@ display: inline}
   border: 1px dashed black;
   padding: 3px;
 }
+.content .topic li::before {
+  padding-right: 2px;
+}
+
 small {
 #  font-size: 80%;
 }
@@ -577,7 +586,24 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
          (link s "https://www.thegatewaypundit.com/2021/03/exclusive-new-evidence-shows-u-s-government-american-scientific-establishment-involved-cover-covid-19s-origin/"
                "EXCLUSIVE: New Evidence Shows U.S. Government and the American Scientific Establishment Involved in Cover Up of COVID-19’s Origin")
          (:small "The Gateway Pundit")
-         (:small " {20210301A3823764583}"))
+         (:small " {20210301A3823764583}")
+         (:ul (:li (:small "2021.03.05" " " "Article (中文):" )
+                   (link s "https://gnews.org/zh-hans/952285/"
+                         "多方机构参与了对COVID-19起源的掩盖")
+                   (:small "GNEWS")
+                   (:small " {202103053824112393 20210301A3823764583}"))
+              (:li (:small "2021.03.04")
+                   "Article: "
+                   (link s "https://www.thegatewaypundit.com/2021/03/overwhelming-evidence-origin-covid-19-pandemic-covered-us-government-officials-us-scientific-authorities-chinese-counterparts/"
+                         "The Overwhelming Evidence of the Origin of the COVID-19 Pandemic Was Covered Up by US Government Officials, US Scientific Authorities and Their Chinese Counterparts")
+                   (:small "The Gateway Pundit")
+                   (:small " {20210304A3824096896 20210301A3823764583}")
+                   (:ul (:li (:small "2021.03.07")
+                             "Article " (:small "(中文翻译):")
+                             (link s "https://gnews.org/zh-hans/955995/"
+                                   "美国政府官员，美国科学机构和中共国有关部门掩盖了COVID-19大流行病起源的大量证据")
+                             (:small "GNEWS")
+                             (:small " {20210307@3824097025 20210304A3824096896}"))))))
     (:li (:small "2021.03.02")
          "Article: " 
          (link s "https://www.reuters.com/article/us-health-coronavirus-russia-poll/over-60-of-russians-dont-want-sputnik-v-vaccine-see-coronavirus-as-biological-weapon-reuters-poll-idUSKBN2AT2XK"
@@ -626,10 +652,37 @@ https://rumble.com/veanff-dr.-navarro-fears-the-ccp-virus-is-a-bioweapon.html"))
                          "《路德时评》重磅解读Malik就任港大巴斯德研究中心名誉所长，及大灭共时代全面加速")
                    (:small "GNEWS")
                    (:small " {20210303A3823767991 20210302V3823767880}"))))
-    (:li (:small "2021.03.")
-         "Article " (:small "():")
+    
+    (:li (:small "2021.03.02" " " "Article:")
+         (link s "https://www.thesun.co.uk/news/14147270/wuhan-lab-database-hidden-china-covid-smoking-gun/amp/"
+               "WU-DUNNIT Wuhan lab’s mysterious dark database hidden by China could be Covid cover-up smoking gun, study claims")
+         (:small "The Sun")
+         (:small " {202103023-824113406}")
+         (:ul (:li (:small "2021.03.04" " " "Article (中文):")
+                   (link s "https://gnews.org/zh-hans/949070/"
+                         "研究爆出武汉实验室刻意隐瞒中共病毒关键数据")
+                   (:small "GNEWS")
+                   (:small " {20210304-3824113519 202103023-824113406}"))))
+    (:li (:small "2021.03.04")
+         (:small "Article:")
+         (link s "https://www.nytimes.com/interactive/2021/03/04/us/covid-origins-letter.html"
+               "Letter Seeking International Inquiry Into Origins of the Coronavirus")
+         (:small "The New York Times")
+         (:small " {20210304A3824111025 20210304-3824111190}")
+         (:q (:pre "Some scientists are calling for an investigation independent of that under way by a team of scientists and the World Health Organization into the source of the novel coronavirus outbreak in China."))
+         (:ul (:li (:small "2021.03.04" " PDF (Open Letter):")
+                   (link s "https://int.nyt.com/data/documenttools/covid-origins-letter/5c9743168205f926/full.pdf"
+                         "Call for a Full and Unrestricted International Forensic Investigation into the Origins of COVID-19")
+                   (:small " {20210304-3824111190}"))
+              (:li (:small "2021.03.07" " " "Article (公开信 中文翻译): ")
+                   (link s "https://gnews.org/zh-hans/954606/"
+                         "呼吁对COVID-19的起源进行全面和无限制的国际法医调查的公开信")
+                   (:small "GNEWS")
+                   (:small " {20210307-3824111509 20210304-3824111190}"))))
+    
+    (:li (:small "2021.03." " " "Article ():")
          (link s ""
                "")
          (:small "")
-         (:small (format nil " {~a~a}" "202103 " (node-id)))
+         (:small (format nil " {~a~a}" "202103 " (gen-id)))
          (:q (:pre "")))))
