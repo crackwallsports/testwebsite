@@ -592,6 +592,16 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
                          "多方机构参与了对COVID-19起源的掩盖")
                    (:small "GNEWS")
                    (:small " {202103053824112393 20210301A3823764583}"))
+              (:li (:small "2021.03.02" " " "Article: ")
+                   (link s "https://www.thegatewaypundit.com/2021/03/u-s-scientific-establishment-conducted-de-facto-covid-19-briefings-chinese-military-may-2020/"
+                         "The U.S. Scientific Establishment Conducted De Facto COVID-19 Briefings for the Chinese Military in May 2020")
+                   (:small "The Gateway Pundit")
+                   (:small " {202103023824283275 20210301A3823764583}")
+                   (:ul (:li (:small "2021.03.06" " " "Article (中文翻译):")
+                             (link s "https://gnews.org/zh-hans/954326/"
+                                   "与军方有关联的中方学者参与中美疫情电话交流会")
+                             (:small "GNEWS")
+                             (:small " {202103063824283352 202103023824283275}"))))
               (:li (:small "2021.03.04")
                    "Article: "
                    (link s "https://www.thegatewaypundit.com/2021/03/overwhelming-evidence-origin-covid-19-pandemic-covered-us-government-officials-us-scientific-authorities-chinese-counterparts/"
@@ -679,7 +689,33 @@ https://rumble.com/veanff-dr.-navarro-fears-the-ccp-virus-is-a-bioweapon.html"))
                          "呼吁对COVID-19的起源进行全面和无限制的国际法医调查的公开信")
                    (:small "GNEWS")
                    (:small " {20210307-3824111509 20210304-3824111190}"))))
+
     
+    (:li (:small "2021.03.07" " " "Article: ")
+         (link s "https://nypost.com/2021/03/07/another-failed-who-whitewash-of-chinas-covid-guilt/"
+               "Another failed WHO whitewash of China’s COVID guilt")
+         (:small "New York Post")
+         (:small " {202103073824282577}")
+         (:ul (:li (:small "2021.02.09" " " "Article: ")
+                   (link s "https://nypost.com/2021/02/09/whos-latest-china-virus-whitewash/"
+                         "WHO’s latest China-virus whitewash")
+                   (:small "New York Post")
+                   (:small " {202102093824282663}"))))
+    (:li (:small "2021.03.06" " " "Video: ")
+         (link s "https://pandemic.warroom.org/2021/03/06/dr-li-meng-yan-covid-19-is-an-unrestricted-bioweapon/"
+               "Dr. Li Meng Yan: Covid-19 is an ‘Unrestricted’ Bioweapon")
+         (:small "War Room Pandemic")
+         (:small " {202103063824282939}"))
+    (:li (:small "2021.03.08" " " "Article: ")
+         (link s "https://www.politico.com/news/magazine/2021/03/08/josh-rogin-chaos-under-heaven-wuhan-lab-book-excerpt-474322"
+               "In 2018, Diplomats Warned of Risky Coronavirus Experiments in a Wuhan Lab. No One Listened.")
+         (:small "Politico")
+         (:small " {202103083824283563}")
+         (:ul (:li (:small "2021.03.09" " " "Article (含中文翻译):")
+                   (link s "https://gnews.org/zh-hans/960753/"
+                         "【以毒灭共】闫丽梦“女神节”的两则推特")
+                   (:small "GNEWS")
+                   (:small " {202103093824283689 202103083824283563}"))))
     (:li (:small "2021.03." " " "Article ():")
          (link s ""
                "")
