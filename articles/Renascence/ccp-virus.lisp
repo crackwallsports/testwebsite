@@ -574,6 +574,7 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
           (:q (:pre ""))))))
 
 (defun virus-time-line-202103 (stream)
+
   (with-html-output (s stream :indent 2)
     (:li (:small "2021.03.01")
          "Article: " 
@@ -763,6 +764,58 @@ The CCP knows where this virus came from and they don’t want us to know the tr
          (:small "The National Pulse.")
          (:small " {202103133824697594}"))
 
+    ;; T
+    
+    (:li :class "news"
+         (:small :class "news-time"
+                 "2021.03.17" " ")
+         (:small :class "news-type"
+                 "Article: ")
+         (:span :class "news-title"
+                (link s
+                      "https://www.wsj.com/articles/who-china-hunt-covid-origins-11616004512?mod=e2tw"
+                      "How the WHO’s Hunt for Covid’s Origins Stumbled in China")
+                (:small :class "news-source"
+                        "The Wall Street Journal"))
+         (:small :class "news-id"
+                 " {202103173825405632} "))
+    (:li :class "news group"
+         (:small :class "news-time" "2021.03.19" " ")
+         (:small :class "news-type" "Article: ")
+         (:span :class "news-title"
+                (link s "https://www.washingtonexaminer.com/news/pompeo-casts-doubt-who-china-covid-origins-inquiry"
+                      "EXCLUSIVE: Pompeo casts doubt on WHO-China coronavirus origins inquiry and defends Wuhan lab intelligence")
+                (:small :class "news-source"
+                        "Washington Examiner. "))
+         (:small :class "news-id" " {202103193825490666} ")
+         (:ul (:li :class "news"
+                   (:small :class "news-time" "2021.03.23" " ")
+                   (:small :class "news-type" "Article (中文): ")
+                   (:span :class "news-title"
+                          (link s "https://gnews.org/zh-hans/1004207/"
+                                "蓬佩奥质疑世卫组织中共病毒起源调查")
+                          (:small :class "news-source" "GNEWS"))
+                   (:small :class "news-id" " {202103233825491637 202103193825490666} "))))
+
+    (:li :class "news"
+         (:small :class "news-time" "2021.03.21" " ")
+         (:small :class "news-type" "Video: ")
+         (:span :class "news-title"
+                (link s "https://youtu.be/YBq-LV3Jm1M"
+                      "Wuhan Institute of Virology 'highly probably' the source of COVID-19")
+                (:small :class "news-source" "Youtube: Sky News Australia"))
+         (:small :class "news-id" " {202103213825491465} "))
+    ;; 
+    
+    (:li :class "news"
+         (:small :class "news-time" "2021.03.17" " ")
+         (:small :class "news-type" "Article (): ")
+         (:span :class "news-title"
+                (link s ""
+                      "")
+                (:small :class "news-source" ""))
+         (:small :class "news-id" (format nil " {~a~a} " "202103 " (gen-id)))
+         (:q :class "news-q" (:pre "")))
     (:li (:small "2021.03." " " "Article ():")
          (link s ""
                "")
