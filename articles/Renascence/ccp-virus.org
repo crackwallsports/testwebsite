@@ -148,6 +148,10 @@ small {
     (with-html-output (s stream :indent 2)
       (:a :href link (str tle)))))
 
+(defun link-str (link &optional title)
+  (let ((tle (if title title link)))
+    (with-html-output-to-string (s nil :indent 2)
+      (:a :href link (str tle)))))
 
 (defun 3Rabbit (stream)
   (with-html-output (s stream :indent 2)
@@ -597,18 +601,62 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
                           "羟氯喹获批成为COVID-19的预防治疗方案")
                     (:small "GNEWS")
                     (:small " {20210223A3823591136 20210227A3823591004}"))))
-     (virus-time-line-202103 s)
-     (:li (:small "2021..")
-          ": " (:small "(): ")
-          (link s "")
-          (:small "")
-          (:small " {}")
-          (:q (:pre ""))))))
+     (virus-time-line-202103 s))))
 #+END_SRC
+*** Out News
+#+begin_src lisp :tangle yes
+(defparameter *news-list* nil)
+
+(defun news (&key id rid time type title (link "") source quote child)
+  (push
+   (list :time time
+         :type type
+         :title title
+         :link link
+         :source source
+         :id id
+         :rid rid
+         :quote quote
+         :child child)
+   ,*news-list*)
+  nil)
+
+(defun text-news ()
+  '(news
+    :time ""
+    :type ""
+    :title nil
+    :link ""
+    :source ""
+    :id (gen-id)
+    :rid (list)
+    :quote ""
+    :child (list )))
+
+
+(defun news-to-html (stream)
+  (loop for news in (reverse *news-list*)
+        do (with-html-output (s stream :indent 2)
+             (:li :class "news"
+                  (:small :class "news-time" (str (getf news :time)) " ")
+                  ;; TYPE ():
+                  ;; Article, Video, Getter, Tweet, ...
+                  (:small :class "news-type" (str (getf news :type)) ": ")
+                  (:span :class "news-title" (str (link s (getf news :link)
+                                                        (getf news :title)))
+                         (:small :class "news-source" (str (getf news :source))))
+                  (:small :class "news-id"
+                          (str (format nil " {~a~a} "
+                                       (remove-if (lambda (x) (char= #\. x)) (getf news :time))
+                                       (getf news :id))))
+                  (if (getf news :quote)
+                      (htm (:q :class "news-q" (:pre (str (getf news :quote))))))))))
+#+end_src
+
+
 *** 2021.03
 #+BEGIN_SRC lisp :tangle yes
 (defun virus-time-line-202103 (stream)
-
   (with-html-output (s stream :indent 2)
     (:li (:small "2021.03.01")
          "Article: " 
@@ -813,64 +861,99 @@ The CCP knows where this virus came from and they don’t want us to know the tr
                         "The Wall Street Journal"))
          (:small :class "news-id"
                  " {202103173825405632} "))
-    (:li :class "news group"
-         (:small :class "news-time" "2021.03.19" " ")
-         (:small :class "news-type" "Article: ")
-         (:span :class "news-title"
-                (link s "https://www.washingtonexaminer.com/news/pompeo-casts-doubt-who-china-covid-origins-inquiry"
-                      "EXCLUSIVE: Pompeo casts doubt on WHO-China coronavirus origins inquiry and defends Wuhan lab intelligence")
-                (:small :class "news-source"
-                        "Washington Examiner. "))
-         (:small :class "news-id" " {202103193825490666} ")
-         (:ul (:li :class "news"
-                   (:small :class "news-time" "2021.03.23" " ")
-                   (:small :class "news-type" "Article (中文): ")
-                   (:span :class "news-title"
-                          (link s "https://gnews.org/zh-hans/1004207/"
-                                "蓬佩奥质疑世卫组织中共病毒起源调查")
-                          (:small :class "news-source" "GNEWS"))
-                   (:small :class "news-id" " {202103233825491637 202103193825490666} "))))
-
-    (:li :class "news"
-         (:small :class "news-time" "2021.03.21" " ")
-         (:small :class "news-type" "Video: ")
-         (:span :class "news-title"
-                (link s "https://youtu.be/YBq-LV3Jm1M"
-                      "Wuhan Institute of Virology 'highly probably' the source of COVID-19")
-                (:small :class "news-source" "Youtube: Sky News Australia"))
-         (:small :class "news-id" " {202103213825491465} "))
+    
     ;; 
     
-    (:li :class "news"
-         (:small :class "news-time" "2021.03.17" " ")
-         (:small :class "news-type" "Article (): ")
-         (:span :class "news-title"
-                (link s ""
-                      "")
-                (:small :class "news-source" ""))
-         (:small :class "news-id" (format nil " {~a~a} " "202103 " (gen-id)))
-         (:q :class "news-q" (:pre "")))
-    (:li (:small "2021.03." " " "Article ():")
-         (link s ""
-               "")
-         (:small "")
-         (:small (format nil " {~a~a}" "202103 " (gen-id)))
-         (:q (:pre "")))))
+    (news-to-html s)))
 #+END_SRC
+*** News
+#+begin_src lisp :tangle yes
+(news
+ :time "2021.03.19"
+ :type "Article"
+ :title "EXCLUSIVE: Pompeo casts doubt on WHO-China coronavirus origins inquiry and defends Wuhan lab intelligence"
+ :link "https://www.washingtonexaminer.com/news/pompeo-casts-doubt-who-china-covid-origins-inquiry"
+ :source "Washington Examiner. "
+ :id 3825490666
+ :child (list 3825491637))
+    
+(news
+ :time "2021.03.23"
+ :type "Article (中文)"
+ :title "蓬佩奥质疑世卫组织中共病毒起源调查"
+ :link "https://gnews.org/zh-hans/1004207/"
+ :source "GNEWS"
+ :id 3825491637
+ :rid (list 3825490666))
+    
+(news
+ :time "2021.03.21"
+ :type "Video"
+ :title "Wuhan Institute of Virology 'highly probably' the source of COVID-19"
+ :link "https://youtu.be/YBq-LV3Jm1M"
+ :source "Youtube: Sky News Australia"
+ :id 3825491465)
+    
+(news
+ :time "2021.03.26"
+ :type "Video"
+ :title "Former CDC director believes virus came from lab in China"
+ :link "https://www.cnn.com/videos/health/2021/03/26/sanjay-gupta-exclusive-robert-redfield-coronavirus-opinion-origin-sot-intv-newday-vpx.cnn"
+ :source "CNN"
+ :id 3826098803
+ :child (list 3826098806))
 
-*** W
-#+begin_src lisp
+(news
+ :time "2021.03.26"
+ :type "Article"
+ :title "Ex-CDC Director Robert Redfield believes COVID-19 came from Wuhan lab"
+ :link "https://nypost.com/2021/03/26/ex-cdc-director-believes-covid-19-came-from-wuhan-lab/?utm_campaign=SocialFlow&utm_source=NYPTwitter&utm_medium=SocialFlow"
+ :source "New York Post"
+ :id 3826098806
+ :rid (list 3826098803))
+
+(news
+ :time "2021.03.27"
+ :type "Article"
+ :title "China’s deception over COVID-19’s origins gets more outrageous every day"
+ :link "https://nypost.com/2021/03/27/chinas-deception-over-covid-origins-more-outrageous-every-day/"
+ :source "New York Post"
+ :id 3826099699
+ :rid (list ))
+
+'(news
+  :time ""
+  :type ""
+  :title nil
+  :link ""
+  :source ""
+  :id (gen-id)
+  :rid (list)
+  :quote ""
+  :child (list))
 
 
-(:ul (:li (:small "2021.03." " " "Article ():")
-          (link s ""
-                "")
-          (:small "")
-          (:small (format nil " {~a~a}" "202103 " (gen-id)))
-          (:q (:pre ""))))
+
 #+end_src
+
 ** Test 测试
 #+begin_src lisp
+
+
+(defmacro news (&key id time type title source quote )
+  `(htm
+    (:li :class "news"
+         (:small :class "news-time" ,time " ")
+         ;; TYPE ():
+         ;; Article, Video, Getter, Tweet, ...
+         (:small :class "news-type" ,type ": ")
+         (:span :class "news-title" ,title
+                (:small :class "news-source" ,source))
+         (:small :class "news-id"
+                 ,(format nil " {~a~a} "
+                          (remove-if (lambda (x) (char= #\. x)) time) id))
+         (:q :class "news-q" (:pre ,quote)))))
+
 (defun test (stream)
   (let ((content ""))
     (with-html-output (s stream :indent 2)
