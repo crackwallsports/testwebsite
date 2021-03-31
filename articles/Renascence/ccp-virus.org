@@ -134,6 +134,9 @@ small {
 #  font-size: 80%;
 }
 
+.news {
+margin: 10px 0px
+}
 ")
 
 #+END_SRC
@@ -646,11 +649,16 @@ Beijing is obsessed with viruses, but not biosafety. We are paying a high price 
                                                         (getf news :title)))
                          (:small :class "news-source" (str (getf news :source))))
                   (:small :class "news-id"
-                          (str (format nil " {~a~a} "
-                                       (remove-if (lambda (x) (char= #\. x)) (getf news :time))
-                                       (getf news :id))))
+                          (str (format nil " {~a | ~{~a ~}} "
+                                       ;; (remove-if (lambda (x) (char= #\. x)) (getf news :time))
+                                       (getf news :id)
+                                       (getf news :rid)
+                                       )))
                   (if (getf news :quote)
                       (htm (:q :class "news-q" (:pre (str (getf news :quote))))))))))
+
+;; (format nil "{~{~a ~}}" (list 1 2 3 4 5))
+
 #+end_src
 
 
@@ -921,16 +929,40 @@ The CCP knows where this virus came from and they don’t want us to know the tr
  :id 3826099699
  :rid (list ))
 
-'(news
-  :time ""
-  :type ""
-  :title nil
-  :link ""
-  :source ""
-  :id (gen-id)
-  :rid (list)
-  :quote ""
-  :child (list))
+
+
+#+end_src
+*** 关于 WHO 报告
+#+begin_src lisp :tangle yes
+
+
+(news
+ :time "2021.03.30"
+ :type "Report (PDF)"
+ :title "WHO-convened global study of origins of SARS-CoV-2: China Part"
+ :link "https://www.who.int/publications/i/item/who-convened-global-study-of-origins-of-sars-cov-2-china-part"
+ :source "World Health Organization"
+ :id 3826182484)
+
+(news
+ :time "2021.03.30"
+ :type "Article"
+ :title "Joint Statement on the WHO-Convened COVID-19 Origins Study"
+ :link "https://www.state.gov/joint-statement-on-the-who-convened-covid-19-origins-study/"
+ :source "U.S.DEPARTMENT of STATE"
+ :id 3826182464
+ :rid (list 3826182484))
+
+(news
+ :time "2021.03.30"
+ :type "Tweet"
+ :title nil
+ :link "https://twitter.com/mikepompeo/status/1376885317232386050?s=20"
+ :source "Twitter: Mike Pompeo @mikepompeo"
+ :id 3826183717
+ :rid (list 3826182484)
+ :quote "
+The WHO report is a sham continuation of the CCP-WHO disinformation campaign. It’s why I recommended we leave WHO. Dr. Tedros collaborated with Xi to hide human to human transmission at a CRITICAL juncture. WIV remains the most likely source of the virus — and WHO is complicit.")
 
 
 
