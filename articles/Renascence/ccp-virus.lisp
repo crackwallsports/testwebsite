@@ -200,7 +200,13 @@ A Truth Revealed through Uncovering a Large-Scale, Organized Scientific Fraud"
                "Call for the WHO Team to Investigate the Pangolin Coronaviruses and the RmYN02 Bat Coronavirus"
                (:ul (:li "获得: "
                          (link s "https://zenodo.org/record/4448499")
+                         (:small "Zenodo"))))
+          (:li (:small "2021.03.31")
+               "The Wuhan Laboratory Origin of SARS-CoV-2 and the Validity of the Yan Reports Are Further Proved by the Failure of Two Uninvited \"Peer Reviews\""
+               (:ul (:li "获得: "
+                         (link s "https://zenodo.org/record/4650821")
                          (:small "Zenodo"))))))))
+
 
 
 ;; (:li "引文: " (:q (:pre "
@@ -915,3 +921,11 @@ The CCP knows where this virus came from and they don’t want us to know the tr
  :rid (list 3826182484)
  :quote "
 The WHO report is a sham continuation of the CCP-WHO disinformation campaign. It’s why I recommended we leave WHO. Dr. Tedros collaborated with Xi to hide human to human transmission at a CRITICAL juncture. WIV remains the most likely source of the virus — and WHO is complicit.")
+
+(news
+ :time "2021.03.31"
+ :type "Report"
+ :title "The Wuhan Laboratory Origin of SARS-CoV-2 and the Validity of the Yan Reports Are Further Proved by the Failure of Two Uninvited \"Peer Reviews\"" 
+ :link "https://zenodo.org/record/4650821#.YGW-22QzaAT"
+ :source "Zendo"
+ :id 3826269674)
