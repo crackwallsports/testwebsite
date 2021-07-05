@@ -146,6 +146,10 @@ Content
 (defun 3Rabbit (stream)
   (with-html-output (s stream :indent 2)
     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
+          (r-node s "2021.07.05" "" ""
+                  (:li "Info : "
+                       (:ul
+                        (:li "中英文对照: " (link s "Xi100.html" "在庆祝中国共产党成立100周年大会上的讲话 (Speech at a Ceremony Marking the Centenary of the  Communist Party of China)" )))))
           (r-node s "2021.01.28"  "@3820827124" "关注信息源"
                   (:li "Follow : "
                        (:ul
