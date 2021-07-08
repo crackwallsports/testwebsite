@@ -1,0 +1,60 @@
+.Content {
+    margin : 0px 10px;
+}
+
+.Title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.Text {
+    display: flex;
+    /*padding-left: 5px;*/
+}
+
+.Text-num {
+    display: flex;
+    min-width: 20px;
+    align-items: center;
+    /* border-right: 5px solid orange;*/
+}
+
+.Text-content {
+    /*padding-left: 5px;*/
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.English {
+    padding-top: 3px;
+    padding-left: 5px;
+    font-size: 17px;
+    border-left: 5px solid #99CCFF;
+}
+
+
+.Chinese {
+    border-left: 5px solid #6699CC;
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.Source {
+    
+}
+
+.Source-items {
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Source-item {
+    padding: 5px 10px;
+    font-size: 0.95em;
+}
+
+.Comment-item {
+    padding: 5px 25px;
+    font-size: 0.95em;
+}

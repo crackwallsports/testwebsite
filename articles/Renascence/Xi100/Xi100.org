@@ -1,0 +1,139 @@
+#+TITLE: Xi 100 Speech
+#+AUTHOR: Xt3
+
+* Export
+#+begin_src lisp
+(ql:quickload :cl-who)
+(use-package :cl-who)
+
+(defun ->file ()
+  (let ((cn (make-array 30 :fill-pointer 0 :adjustable t))
+        (en (make-array 30 :fill-pointer 0 :adjustable t)))
+  
+    (mapcar (lambda (v)
+              (destructuring-bind (path lang) v
+                (with-open-file (stream path)
+                  (loop for line = (read-line stream nil 'eof)
+                        until (eql line 'eof)
+                        do (unless (equal line "")
+                             (vector-push-extend line lang))))))
+            (list (list "./Resource/在庆祝中国共产党成立100周年大会上的讲话" cn)
+                  (list "./Resource/SpeechbyXiJinpingatceremonymarkingthecentenaryoftheCPC.txt" en)))
+    (->html cn en)))
+
+
+#+end_src
+* HTML
+#+begin_src lisp
+
+(defun ->html (cn en)
+  (with-open-file (stream "Xi100.html"
+                          :direction :output
+                          :if-exists :supersede)
+    (setf (who:html-mode) :html5)
+    (who:with-html-output (s stream :indent 2 :prologue t)
+      (:html (:head (:meta :charset "utf-8")
+                    (:link :rel "stylesheet" :href "style.css"))
+             (:body (:div :class "Content"
+                          (:div :class "Title" "中英文") (:br)
+
+                          (let ((i 0))
+                            (map 'vector
+                                 (lambda (cn en)
+                                   (htm
+                                    (:div :class "Text"
+                                          (:div :class "Text-num" (str i))
+                                          (:div :class "Text-content"
+                                                (:div :class "Chinese" (str cn))
+                                                (:div :class "English" (str en))) 
+                                          (incf i))
+                                    (:br)))
+                                 cn
+                                 en))
+                          
+                          (:div :class "Source"
+                                "来源(Source) : "
+                                (:div :class "Source-items"
+                                      (:div :class "Source-item" "中文: "
+                                            (:a :href "http://www.xinhuanet.com/2021-07/01/c_1127615334.htm"
+                                                "（受权发布）习近平：在庆祝中国共产党成立100周年大会上的讲话")
+                                            (:small " 2021.07.01 新华网"))
+                                      (:br)
+                                      (:div :class "Source-item" "英文: "
+                                            (:a :href "http://www.xinhuanet.com/english/download/SpeechbyXiJinpingatceremonymarkingthecentenaryoftheCPC.doc"
+                                                "Full Text: Speech by Xi Jinping at a ceremony marking the centenary of the CPC")
+                                            (:small " 2021.07.01 新华网"))))
+                          (:br)
+                          (:div :class "Comment"
+                                "注(Comment) : "
+                                (:div :class "Comment-item"
+                                      "英文文本为对应中文 对部分段落有所合并"))))))
+    nil))
+
+(->file)
+#+end_src
+
+* CSS
+#+begin_src css :tangle style.css
+
+.Content {
+    margin : 0px 10px;
+}
+
+.Title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.Text {
+    display: flex;
+    /*padding-left: 5px;*/
+}
+
+.Text-num {
+    display: flex;
+    min-width: 20px;
+    align-items: center;
+    /* border-right: 5px solid orange;*/
+}
+
+.Text-content {
+    /*padding-left: 5px;*/
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.English {
+    padding-top: 3px;
+    padding-left: 5px;
+    font-size: 17px;
+    border-left: 5px solid #99CCFF;
+}
+
+
+.Chinese {
+    border-left: 5px solid #6699CC;
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.Source {
+    
+}
+
+.Source-items {
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Source-item {
+    padding: 5px 10px;
+    font-size: 0.95em;
+}
+
+.Comment-item {
+    padding: 5px 25px;
+    font-size: 0.95em;
+}
+#+end_src

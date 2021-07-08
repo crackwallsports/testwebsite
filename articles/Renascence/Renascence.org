@@ -43,21 +43,18 @@
   (with-html-output-to-string (s nil :indent 2 :prologue t)
     (:html :lang "en"
            (:head (:meta :charset "utf-8")
-                  (:link :rel "stylesheet" :href "/testwebsite/css/style.css")
-                  (:style (str (site-css))))
+                  ;;(:link :rel "stylesheet" :href "/testwebsite/css/style.css")
+                  (:link :rel "stylesheet" :href "style.css"))
            (:body (site-header s)
-                  (site-main s)))))
+                  (site-main s)
+                  (site-footer s)
+                  ))))
 
 (defun site-header (stream)
   (with-html-output (s stream :indent 2)
     (:header :class "side-header"
              (:a :class "logo" :href "/testwebsite/index.html"
-                 (:img :src "/testwebsite/resource/carrot.PNG"))
-             (:nav :class "contact" :role "navigation"
-                   (:ul
-                    (:li (:a :href "mailto:crackwallsports@gmail.com" "Email"))
-                    (:li (:a :href "https://gtv.org/user/5e85cf42ca963f510b635c44"  "G|TV"))
-                    (:li (:a :href "https://twitter.com/iamnotXt3" "Twitter")))))))
+                 (:img :src "/testwebsite/resource/carrot.PNG")))))
 
 (defun site-main (stream)
   (with-html-output (s stream :indent 2)
@@ -66,72 +63,127 @@
           :br)))
 
 
-
-(defun site-css () nil "
-html {
-  font-size: 90%;
-}
-body {
-margin: 0;
-font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.5;
-text-align: left;
-}
-.side-header .contact {
- font-size: 130%}
-.side-header .contact li{
-display: inline}
-.btn-link {
- color: black
-}
-.btn-link:hover {
- text-decoration:none
-}
-.topic cite {
- font-size: 88%
-}
-.topic q {
- border-left: 5px rgb(210, 212, 212) solid;
- display: block;
- padding: 5px 10px 5px 10px;
- text-align: justify;
-}
- .topic q::before, q::before {
- display: block;
- content: \"\";
-}
-.topic li pre {
- display: inline;
- margin: 0;
- white-space: pre-wrap;
-}
-.topic li q {
- margin-left: 16px;
-}
-
-.content{
- padding-left: 3%;
- padding-right: 3%
-
-}
-.content .topic {
-  border: 1px dashed black;
-  padding: 3px;
-}
-small {
-#  font-size: 80%;
-}
-
-")
+(defun site-footer (stream)
+  (with-html-output (s stream :indent 2)
+    (:footer :class "side-footer"
+             (:div :class "contact"
+                   (:a :href "https://gettr.com/user/xt333"
+                       "Gettr: 3Rabbit @Xt333")
+                   (:br)
+                   (:a :class "twitter" :href "https://twitter.com/iamnotXt3"
+                       "Twitter: @iamnotXt3")
+                   (:br)
+                   (:a :class "email" :href "mailto:crackwallsports@gmail.com"
+                       "crackwallsports@gmail.com")
+                   (:br)
+                   (:a :class "github" :href "https://github.com/crackwallsports"
+                       "Github: crackwallsports"))
+             (:p :class "copyright" "All content copyright © 2017 Xt3"))))
 
 #+END_SRC
+** CSS
+#+begin_src css :tangle style.css
+html {
+    font-size: 100%;
+    background-color: #f9f9f9;
+}
+
+body {
+    margin: 0;
+    
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
+    background-color: white;
+}
+
+small {
+    #  font-size: 80%;
+}
+
+.side-header {
+  text-align: center;
+  padding: 33px 0;
+}
+
+.side-header .logo img {
+  width: 120px;
+  height: 120px
+}
+
+ul.r-node {
+    padding-left: 10px;
+}
+
+ul.r-node ul {
+    padding-left: 20px;
+}
+
+ul.r-node li {
+    #list-style: none;
+  #padding-left: 8px;
+  list-style-position: inside;
+}
+
+
+
+.btn-link {
+    color: black
+}
+.btn-link:hover {
+    text-decoration:none
+}
+.topic cite {
+    font-size: 88%
+}
+.topic q {
+    border-left: 5px rgb(210, 212, 212) solid;
+    display: block;
+    padding: 5px 10px 5px 10px;
+    text-align: justify;
+}
+.topic q::before, q::before {
+    display: block;
+    content: \"\";
+}
+.topic li pre {
+    display: inline;
+    margin: 0;
+    white-space: pre-wrap;
+}
+.topic li q {
+    margin-left: 16px;
+}
+
+
+.content{
+    padding: 10px 20px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+.content .topic {
+}
+
+
+
+
+.side-footer {
+    padding: 10px;
+    text-align: center;
+    /* color: #bbc7cc; */
+    background-color: #f9f9f9;
+    border-top: #ebf2f6 1px solid;
+    line-height: 1.6em;
+    
+}
+
+.side-footer .contact a {
+    color: #858585;
+}
+#+end_src
+
 * Nodes
 #+BEGIN_SRC lisp :tangle yes
-(let ((next 30000000000))
-  (defun gen-id ()
-    (incf next)))
+
 
 (defun node-templete ()
   '(r-node s "2021.time" (node-id) "keys"
@@ -156,13 +208,13 @@ Content
     (with-html-output (s stream :indent 2)
       (:a :href link (str tle)))))
 
-(defmacro r-node (stream timestamp id keys content)
+(defmacro r-node (stream timestamp id keys &rest content)
   `(with-html-output (s ,stream :indent 2)
      (:ul :class "r-node"
           (:small :class "node-ctime" (str ,timestamp))
           (:small :class "node-id" (str ,id))
           (:small :class "node-keys" (node-keys s ,keys))
-          ,content)))
+          ,@content)))
 
 
 
@@ -173,7 +225,7 @@ Content
           (r-node s "2021.07.05" "" ""
                   (:li "Info : "
                        (:ul
-                        (:li "中英文对照: " (link s "Xi100.html" "在庆祝中国共产党成立100周年大会上的讲话 (Speech at a Ceremony Marking the Centenary of the  Communist Party of China)" )))))
+                        (:li "中英文对照: " (link s "Xi100/Xi100.html" "在庆祝中国共产党成立100周年大会上的讲话 (Speech at a Ceremony Marking the Centenary of the  Communist Party of China)" )))))
           (r-node s "2021.01.28"  "@3820827124" "关注信息源"
                   (:li "Follow : "
                        (:ul
@@ -192,113 +244,20 @@ Content
                                (:small "Youtube: 路德社LUDE Media")))))))
           
           (r-node s "2021.01.19-2021.04.01" "@3820050169" "CCP病毒"
-                  (:ul 
-                   (:li "Know : "
-                        (link s "ccp-virus.html" "CCP病毒"))
-                   (:li "See : "
-                        (:ul (:li (link s "https://twitter.com/DrLiMengYAN1"
-                                        "闫丽梦博士 Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
-                             (:li (link s "https://gnews.org/zh-hans/category/ccpvirus-cn/"
-                                        "GNEWS : CCP病毒"))
-                             (:li  (link s "https://pandemic.warroom.org/"
-                                         "War room : Pandemic")
-                                   (:ul (:li (link s "https://gtv.org/user/5ed199be2ba3ce32911df7ac"
-                                                   "秘密翻译组")
-                                             (:small "(包含 班农战斗室 中文同声翻译)"))))
-                             (:li (link s "https://www.youtube.com/channel/UCJwXLE6A7WomYVlTHMHgMuQ"
-                                        "上天造灭疫组")))))))))
-
-;; (defun 3Rabbit (stream)
-;;   (with-html-output (s stream :indent 2)
-;;     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
-;;           (r-node s "2021.01.19-2021.01.21" "@3820050169" "CCP病毒"
-;;                   (:li "Follow : "
-;;                        (link s "ccp-virus.html" "CCP病毒")))
-;;           (r-node s "2021.01.12" "@3819448168" "路德社"
-;;                   (:li "Video : "
-;;                        (link s "https://youtu.be/UoyQiZG0wjg")
-;;                        (:small "Youtube:路德社LUDE Media")
-;;                        (:q (:pre "
-;; 1/11/2021路德时评（路博艾冠谈）：
-;; 习近平1月11日开会照片被揭是12月29日所拍；
-;; 中共威胁蓬佩澳一旦访台，就会派战机入侵台湾意味着什么..."))))
-;;           (r-node s "2021.01.12" "@3819447903" "郭文贵"
-;;                   (:li "Video : "
-;;                        (link s "https://gtv.org/video/id=5ffb0d22f579a75e0bcf7288")
-;;                        (:small "GTV:郭文贵MILES")
-;;                        (:q (:pre "2021年1月10日 文贵直播"))))
-;;           (r-node s "2021.01.06" "@3818928589" "郭文贵"
-;;                   (:li "Getter (Video) : "
-;;                        (link s "https://gtv.org/getter/5ff4968787fabe2daf31075b")
-;;                        (:small "GTV:郭文贵MILES")
-;;                        (:q (:pre "
-;; 2021年1月5号：北京在过去24小时发生了什么？华尔街为什么出尔反尔……取消对中共的电信公司的制裁，一切都已经开始！
-;; "))))
-;;           (R-NODE S "2021.01.05" "@3818929253"  "兔语"
-;;                   (:LI "X tooo: "
-;;                        (:Q (:PRE "
-;; 西方 纵容中共
-;; 现在付出的代价
-;; 承受的起 ?
-
-;; 以为离得远就没事了 ?
-
-;; 继续纵容 甚至回舔
-;; 代价会消失 ?
-;; 还是中共会偿还代价 ?
-
-;; 整个世界 支付代价
-;; 就中共和西方一小部分利益集团Happy ?
-
-;; 追逐利益 却算不清代价 😂
-;; 中共不傻 不会白拿的
-
-;; 人类干脆就再见吧
-;; 连地球都没出去呢
-;; 不停原地转圈圈 还乐此不疲
-;; "))))
-;;           (r-node s "2021.01.05" "@3818929232" "兔语"
-;;                   (:li "X tooo: "
-;;                        (:q (:pre "
-;; 兔子 认为 中共完蛋 没有悬念
-
-;; 再给中共两年 ?
-;; 你给它 它给不给你呢
-;; 日本炸珍珠港
-;; 明知道打不了 还打
-;; 不是为赢 而为拖时间 增加变数
-;; 若美国发生了别的事
-;; 自然灾害 内乱 等
-;; 而不能继续战斗 也是有可能的
-;; 只是当时没发生
-
-;; 中共是有目的的
-;; 你给它几年
-;; 它更加隐忍 而“厚积薄发”
-;; 现在的代价都付不起呢
-;; "))))
-;;           (r-node s "2021.01.04" "@3818928509" "路德社"
-;;                   (:li "Video: " (link s "https://youtu.be/X6wQ4zzRs7U")
-;;                        (:small "Youtube:路德社LUDE Media")
-;;                        (:q (:pre "
-;; 1/3/2021 路德时评（路博艾冠谈）：
-;; 美国家安全副顾问博明正式告诉英国官员病毒来自中共实验室意味着什么？
-;; 新华社副社长熊向晖之女怎么说？
-;; 更多议员宣布支持克鲁兹的1月6日声明意味着什么？
-;; "))))
-;;           (r-node s "2021.01.04" "@3818928498" "郭文贵"
-;;                   (:li "Getter (Video) : "
-;;                        (link s "https://gtv.org/getter/5ff1d5fd87fabe2daf2fdc75")
-;;                        (:small "GTV:郭文贵MILES")
-;;                        (:q (:pre "
-;; 2021年1月3号：爆料革命又为美国做出了巨大贡献。唯真不破就是爆料革命百战百胜的法宝……爆料革命的跟随者将如海啸般的爆发，一切都已经开始！
-;; "))))
-;;           (r-node s "2021.01.03" "@3818928487" "兔语"
-;;                   (:li "X tooo: "
-;;                        (:q (:pre "
-;; 兔子 新年问候 😄
-;; 愿人生平等 望众生平安
-;; 希望")))))))
+                  (:li "Know : "
+                       (link s "ccp-virus.html" "CCP病毒"))
+                  (:li "See : "
+                       (:ul (:li (link s "https://twitter.com/DrLiMengYAN1"
+                                       "闫丽梦博士 Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
+                            (:li (link s "https://gnews.org/zh-hans/category/ccpvirus-cn/"
+                                       "GNEWS : CCP病毒"))
+                            (:li  (link s "https://pandemic.warroom.org/"
+                                        "War room : Pandemic")
+                                  (:ul (:li (link s "https://gtv.org/user/5ed199be2ba3ce32911df7ac"
+                                                  "秘密翻译组")
+                                            (:small "(包含 班农战斗室 中文同声翻译)"))))
+                            (:li (link s "https://www.youtube.com/channel/UCJwXLE6A7WomYVlTHMHgMuQ"
+                                       "上天造灭疫组"))))))))
 
 
 #+END_SRC
