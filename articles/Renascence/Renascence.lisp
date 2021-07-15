@@ -97,32 +97,38 @@ Content
   (with-html-output (s stream :indent 2)
     (:div :class "topic" "3Rabbit 测试 : 兔子 所言 所思 所看 所听 所得"
           (r-node s "2021.07.05" "" ""
-                  (:li "Info : "
+                  (:li "Info : " (:br)
                        (:ul
-                        (:li "中英文对照: " (link s "Xi100/Xi100.html" "在庆祝中国共产党成立100周年大会上的讲话 (Speech at a Ceremony Marking the Centenary of the  Communist Party of China)" )))))
-          (r-node s "2021.01.28"  "@3820827124" "关注信息源"
-                  (:li "Follow : "
+                        (:li "中英文对照: "
+                             (link s "Xi100/Xi100.html"
+                                   "在庆祝中国共产党成立100周年大会上的讲话 (Speech at a Ceremony Marking the Centenary of the  Communist Party of China)" )))))
+          (r-node s "2021.01.28 (Update: 2021.07.15"   "@3820827124" "关注信息源"
+                  (:li "Follow : " (:br)
                        (:ul
+                        (:li "Gettr" (link s "https://gettr.com/" ))
                         (:li "G|TV" (link s "https://gtv.org/" ))
                         (:li "GNEWS" (link s "https://gnews.org/zh-hans/"))
                         (:li "郭文贵"
-                             (link s "https://gtv.org/user/5e596957357cc612d35a8044")
-                             (:small "G|TV: 郭文贵MILES"))
-                        (:li "路德"
-                             (:ul
-                              (:li
-                               (link s "https://gtv.org/user/5e890397490f470e21d37b24")
-                               (:small "G|TV: 路德时评"))
-                              (:li
-                               (link s "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured")
-                               (:small "Youtube: 路德社LUDE Media")))))))
+                             (:ul (:li (link s "https://gettr.com/user/miles")
+                                       (:small "Gettr: MILES GUO @Miles"))
+                                  (:li (link s "https://gtv.org/user/5e596957357cc612d35a8044")
+                                       (:small "G|TV: 郭文贵MILES"))))
+                        ;; (:li "路德"
+                        ;;      (:ul
+                        ;;       (:li
+                        ;;        (link s "https://gtv.org/user/5e890397490f470e21d37b24")
+                        ;;        (:small "G|TV: 路德时评"))
+                        ;;       (:li
+                        ;;        (link s "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/featured")
+                        ;;        (:small "Youtube: 路德社LUDE Media"))))
+                        )))
           
-          (r-node s "2021.01.19-2021.04.01" "@3820050169" "CCP病毒"
-                  (:li "Know : "
-                       (link s "ccp-virus.html" "CCP病毒"))
-                  (:li "See : "
-                       (:ul (:li (link s "https://twitter.com/DrLiMengYAN1"
-                                       "闫丽梦博士 Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
+          (r-node s "2021.01.19 (Update: 2021.07.15)" "@3820050169" "CCP病毒"
+                  ;; (:li "Know : " (:br)
+                  ;;      (link s "ccp-virus.html" "CCP病毒"))
+                  (:li "See : " (:br)
+                       (:ul ;; (:li (link s "https://twitter.com/DrLiMengYAN1"
+                            ;;            "闫丽梦博士 Twitter: Dr. Li-Meng YAN @DrLiMengYAN1"))
                             (:li (link s "https://gnews.org/zh-hans/category/ccpvirus-cn/"
                                        "GNEWS : CCP病毒"))
                             (:li  (link s "https://pandemic.warroom.org/"
@@ -130,5 +136,6 @@ Content
                                   (:ul (:li (link s "https://gtv.org/user/5ed199be2ba3ce32911df7ac"
                                                   "秘密翻译组")
                                             (:small "(包含 班农战斗室 中文同声翻译)"))))
-                            (:li (link s "https://www.youtube.com/channel/UCJwXLE6A7WomYVlTHMHgMuQ"
-                                       "上天造灭疫组"))))))))
+                            ;; (:li (link s "https://www.youtube.com/channel/UCJwXLE6A7WomYVlTHMHgMuQ"
+                            ;;            "上天造灭疫组"))
+                            ))))))

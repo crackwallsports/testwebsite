@@ -18,6 +18,17 @@ small {
     #  font-size: 80%;
 }
 
+a {
+color: #007bff;
+text-decoration: none;
+background-color: transparent;
+}
+
+a:hover {
+color: #0056b3;
+text-decoration: underline;
+}
+
 .side-header {
   text-align: center;
   padding: 33px 0;
@@ -37,14 +48,20 @@ ul.r-node ul {
 }
 
 ul.r-node li {
-    #list-style: none;
+  list-style: none;
   #padding-left: 8px;
   list-style-position: inside;
 }
 
+ul.r-node li:before {
+ content: "-";
+ padding-right: 8px;
+
+}
 
 
-.btn-link {
+
+.Btn-link {
     color: black
 }
 .btn-link:hover {
